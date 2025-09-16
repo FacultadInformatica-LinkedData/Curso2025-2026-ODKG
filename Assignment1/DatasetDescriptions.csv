@@ -1,1 +1,2 @@
 Your name; Your GitHub user; Dataset name; Dataset URL; Dataset brief description
+DIAGNE Mame Absa; iamabsa;Etat du trafic en temps réel; https://data.rennesmetropole.fr/explore/dataset/etat-du-trafic-en-temps-reel/table/; Real-time traffic status. Data provided to Rennes Métropole by the company Autoroutes Trafic.** This data has a **3-minute delay**, so it is normal that at 3:30 PM, the most recent data indicates 3:27 PM. This dataset has been linked to a **specific layer of the RVA** to facilitate reuse.
