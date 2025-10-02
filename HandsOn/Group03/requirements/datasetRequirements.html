@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dataset Requirements Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #2F4F4F;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dataset Requirements Analysis</h1>
+
+    <h2>Selected Datasets</h2>
+    <ul>
+        <li>Bicycles Data 2024</li>
+        <li>Pedestrian Data 2024</li>
+        <li>Traffic Light Data</li>
+        <li>Bike Collision Data 2024</li>
+    </ul>
+
+    <h2>Requirements Satisfaction</h2>
+    <table>
+        <tr>
+            <th>Requirement</th>
+            <th>Bicycles Data 2024</th>
+            <th>Pedestrian Data 2024</th>
+            <th>Traffic Light Data</th>
+            <th>Bike Collision Data 2024</th>
+        </tr>
+        <tr>
+            <td>R1: Smart Cities domain</td>
+            <td>✔ Urban mobility monitoring (bike counts)</td>
+            <td>✔ Pedestrian mobility monitoring</td>
+            <td>✔ Traffic management infrastructure</td>
+            <td>✔ Road safety and accidents</td>
+        </tr>
+        <tr>
+            <td>R2: Available as CSV</td>
+            <td>✔ CSV available</td>
+            <td>✔ CSV available</td>
+            <td>✔ CSV available</td>
+            <td>✔ CSV available</td>
+        </tr>
+        <tr>
+            <td>R3: Open license</td>
+            <td>✔ Open data license</td>
+            <td>✔ Open data license</td>
+            <td>✔ Open data license</td>
+            <td>✔ Open data license</td>
+        </tr>
+        <tr>
+            <td>R4: Linkable to real-world entities</td>
+            <td>✔ Stations/geolocated counters</td>
+            <td>✔ Geolocated pedestrian counters</td>
+            <td>✔ Traffic lights have coordinates</td>
+            <td>✔ Collisions include coordinates</td>
+        </tr>
+        <tr>
+            <td>R5: Documentation (optional)</td>
+            <td>✔ Metadata and description available</td>
+            <td>✔ Metadata and description available</td>
+            <td>✔ Technical documentation provided</td>
+            <td>✔ Metadata and descriptions provided</td>
+        </tr>
+        <tr>
+            <td>R6: Multiple sources (optional)</td>
+            <td>✖ Single source (Madrid City Council)</td>
+            <td>✖ Single source (Madrid City Council)</td>
+            <td>✖ Single source (Madrid City Council)</td>
+            <td>✖ Single source (Madrid City Council)</td>
+        </tr>
+    </table>
+
+    <h2>Entity Linking Across Datasets</h2>
+    <p>Identifies entities that can be linked across datasets based on shared or related attributes:</p>
+    <table>
+        <tr>
+            <th>Dataset</th>
+            <th>Linkable Columns / Entities</th>
+            <th>Possible Cross-Dataset Links</th>
+        </tr>
+        <tr>
+            <td>Bicycles Data 2024</td>
+            <td>tipo_elem, distrito, id, cod_cent, nombre, utm_x, utm_y, longitud, latitud</td>
+            <td>
+                - Link with Pedestrian Data 2024 via distrito and geographic coordinates<br>
+                - Link with Traffic Light Data via geographic coordinates<br>
+                - Link with Bike Collision Data via coordinates of incidents
+            </td>
+        </tr>
+        <tr>
+            <td>Pedestrian Data 2024</td>
+            <td>fecha, hora, identificador, peatones, device_id, Número_distrito, distrito, direccion,
+                observaciones_direccion, latitude, longitude</td>
+            <td>
+                - Link with Bicycles Data 2024 via distrito and geolocation<br>
+                - Link with Traffic Light Data via latitude/longitude<br>
+                - Link with Bike Collision Data for accidents involving pedestrians at nearby locations
+            </td>
+        </tr>
+        <tr>
+            <td>Traffic Light Data</td>
+            <td>tipo_elem, distrito, id, id_cruce, fecha_inst, utm_x, utm_y, longitud, latitud</td>
+            <td>
+                - Link with Bicycles Data 2024 and Pedestrian Data 2024 via coordinates<br>
+                - Link with Bike Collision Data via location coordinates
+            </td>
+        </tr>
+        <tr>
+            <td>Bike Collision Data 2024</td>
+            <td>num_expediente, fecha, hora, localizacion, numero, cod_distrito, distrito, tipo_accidente,
+                estado_meteorológico, tipo_vehiculo, tipo_persona, rango_edad, sexo, cod_lesividad, lesividad,
+                coordenada_x_utm, coordenada_y_utm, positiva_alcohol, positiva_droga</td>
+            <td>
+                - Link with Bicycles Data 2024 via location coordinates<br>
+                - Link with Pedestrian Data 2024 for incidents involving pedestrians<br>
+                - Link with Traffic Light Data via coordinates or nearby intersections
+            </td>
+        </tr>
+    </table>
+
+    <h2>Dataset Links</h2>
+    <ul>
+        <li><a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=695cd64d6f9b9610VgnVCM1000001d4a900aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default" target="_blank">Bicycles & Pedestrian Data 2024</a></li>
+        <li><a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=c13aecf8378f4410VgnVCM1000000b205a0aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default" target="_blank">Traffic Light Data</a></li>
+        <li><a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=20f4a87ebb65b510VgnVCM1000001d4a900aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default" target="_blank">Bike Collision Data 2024 </a></li>
+    </ul>
+</body>
+
+</html>
