@@ -1,0 +1,74 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Assignment 3 — SPARQL on DBpedia\n\nConnect to `https://es.dbpedia.org/sparql` ",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=https://dbpedia.org/sparql]\nASK { ?s ?p ?o }",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### 1. Get all properties that can be applied to instances of the Politician class\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=https://dbpedia.org/sparql]\nPREFIX dbo: <http://dbpedia.org/ontology/>\n\nSELECT DISTINCT ?property WHERE {\n  ?s a dbo:Politician .\n  ?s ?property ?o .\n}\nLIMIT 10",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### 2. Get all properties, except rdf:type, that can be applied to instances of the Politician class",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=https://dbpedia.org/sparql]\nPREFIX dbo: <http://dbpedia.org/ontology/>\n\nSELECT DISTINCT ?property WHERE {\n  ?s a dbo:Politician .\n  ?s ?property ?o .\n  FILTER(?property != rdf:type)\n}\nLIMIT 10",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### 3. Which different values exist for the properties, except for rdf:type, applicable to the instances of Politician?\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=https://dbpedia.org/sparql]\nPREFIX dbo: <http://dbpedia.org/ontology/>\n\nSELECT DISTINCT ?value WHERE {\n  ?s a dbo:Politician .\n  ?s ?property ?value .\n  FILTER(?property != rdf:type)\n}\nLIMIT 10",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### 4. For each applicable property, which different values do they take globally for all instances?\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=https://dbpedia.org/sparql]\nPREFIX dbo: <http://dbpedia.org/ontology/>\n\nSELECT DISTINCT ?property ?value WHERE {\n  ?s a dbo:Politician .\n  ?s ?property ?value .\n  FILTER(?property != rdf:type)\n}\nLIMIT 10",
+    "metadata": {}
+  },
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "### 5. For each applicable property, how many distinct values do they take globally for all instances?\n",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=https://dbpedia.org/sparql]\nPREFIX dbo: <http://dbpedia.org/ontology/>\n\nSELECT ?property (COUNT(DISTINCT ?value) AS ?count) WHERE {\n  ?s a dbo:Politician .\n  ?s ?property ?value .\n  FILTER(?property != rdf:type)\n}\nGROUP BY ?property\nLIMIT 10",
+    "metadata": {}
+  }
+]
