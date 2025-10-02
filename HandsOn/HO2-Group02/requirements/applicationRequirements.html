@@ -1,80 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Application Requirements — Group02</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;max-width:960px;margin:2rem auto;padding:0 1rem;line-height:1.5}
-    h1,h2{margin-top:2rem}
-    section{margin-bottom:1.5rem}
-    code,pre{background:#f5f5f5;padding:.2rem .4rem;border-radius:4px}
-    ol,ul{margin:0 0 1rem 1.25rem}
-    .mock{border:2px dashed #bbb;border-radius:8px;padding:1rem;background:#fcfcfc}
-  </style>
+    <meta charset="UTF-8">
+    <title>Application Requirements - SafeSchool Madrid</title>
 </head>
 <body>
-  <h1>Application Requirements — Group02</h1>
 
-  <section>
-    <h2>1. Visione</h2>
-    <p>Descrivete in poche righe lo scopo dell'applicazione (es. esplorazione di dati di mobilità urbana, mappa di punti d’interesse, dashboard ambientale).</p>
-  </section>
+    <h1>SafeSchool Madrid - Application Requirements</h1>
 
-  <section>
-    <h2>2. Utenti e casi d’uso</h2>
-    <ul>
-      <li><strong>Persona 1</strong>: esigenze principali e obiettivi.</li>
-      <li><strong>Persona 2</strong>: esigenze principali e obiettivi.</li>
-    </ul>
-    <h3>User stories</h3>
-    <ul>
-      <li>Come <em>[ruolo]</em> voglio <em>[azione]</em> così da <em>[beneficio]</em>.</li>
-      <li>…</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>3. Requisiti funzionali</h2>
-    <ol>
-      <li>Ricerca e filtro per posizione/tempo/categoria.</li>
-      <li>Visualizzazione su mappa/tabella/grafico.</li>
-      <li>Dettagli entità con link a dataset esterni.</li>
-      <li>Download/Export risultati (se previsto).</li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>4. Requisiti non funzionali</h2>
-    <ul>
-      <li>Usabilità (responsive, accessibilità di base).</li>
-      <li>Prestazioni (tempo di risposta atteso).</li>
-      <li>Affidabilità e qualità dei dati.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>5. Dati e integrazioni</h2>
-    <ul>
-      <li>Dataset primari: elencare i CSV selezionati.</li>
-      <li>Linking previsto: specificare con quali entità/ontologie esterne.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>6. Mock-up UI</h2>
-    <div class="mock">
-      <p>Inserite qui immagini/wireframe (PNG/JPG/SVG). Potete aggiungere file in <code>requirements/mockups/</code> e referenziarli con <code>&lt;img src="mockups/home.png" alt="Home"&gt;</code>.</p>
+    <div class="section">
+        <h2>General Description</h2>
+        <p>
+            SafeSchool Madrid is a web application designed to map road accidents and speed cameras, and to assess safety risks 
+            around schools (within 150–300 meters). The app highlights "priority zones" where interventions such as new speed cameras, 
+            speed bumps, pedestrian crossings, or human supervision are necessary. Main outputs include interactive maps, school risk rankings, 
+            informative profiles, and exportable reports.
+        </p>
     </div>
-  </section>
 
-  <section>
-    <h2>7. Criteri di accettazione</h2>
-    <ul>
-      <li>Gli utenti possono filtrare e visualizzare i dati secondo i casi d’uso definiti.</li>
-      <li>I collegamenti (linking) con entità esterne sono visibili in UI.</li>
-      <li>I requisiti funzionali 1–N sono dimostrati con dati reali.</li>
-    </ul>
-  </section>
+    <div class="section">
+        <h2>Selected Datasets</h2>
+        <ul>
+            <li>
+                <strong>Educational Centers of the Madrid Community:</strong> geographic information and characteristics of schools.
+                <br><a href="https://datos.gob.es/es/catalogo/a13002908-centros-educativos-de-la-comunidad-de-madrid1" target="_blank">Dataset link</a>
+            </li>
+            <li>
+                <strong>Road Accidents in Madrid:</strong> data on accidents with geographic location and severity.
+                <br><a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=7c2843010d9c3610VgnVCM2000001f4a900aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default" target="_blank">Dataset link</a>
+            </li>
+            <li>
+                <strong>Fixed and Section Speed Cameras:</strong> data on speed control devices.
+                <br><a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?reloadCaptcha=true&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextoid=4678f7de62435510VgnVCM2000001f4a900aRCRD" target="_blank">Dataset link</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Functional Requirements</h2>
+        <ul>
+            <li>Interactive map of schools with accident and speed camera overlays.</li>
+            <li>Risk calculation for each school within 150–300 meters, highlighting priority zones.</li>
+            <li>Ranking of the most at-risk schools.</li>
+            <li>Informative profiles for each school, including accident data, nearby speed cameras, and other safety notes.</li>
+            <li>Export of data in PDF or CSV reports.</li>
+            <li>Filters by school type, neighborhood, and accident severity.</li>
+            <li>Ability to link RDF datasets for advanced analysis and semantic queries.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Non-Functional Requirements</h2>
+        <ul>
+            <li>Responsive web interface compatible with desktop and mobile devices.</li>
+            <li>Map loading time within 3 seconds.</li>
+            <li>Data security with admin-only access.</li>
+            <li>Scalable architecture to handle real-time dataset updates.</li>
+            <li>Multilingual support (initially English and Spanish).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Interface Mock-ups</h2>
+
+        <h3>1. Interactive Map</h3>
+        <div class="mockup">
+            Map of Madrid showing schools, accidents, and speed cameras. Highlights high-risk zones with colors and symbols.
+        </div>
+
+        <h3>2. School Profile</h3>
+        <div class="mockup">
+            Informative card showing school name, address, number of nearby accidents, distance from the closest radar, and risk score.
+        </div>
+
+        <h3>3. School Ranking</h3>
+        <div class="mockup">
+            Table listing schools ranked by risk, with filtering options by neighborhood or school type.
+        </div>
+
+        <h3>4. Exportable Report</h3>
+        <div class="mockup">
+            Section to generate PDF or CSV reports with risk data for selected schools.
+        </div>
+
+    </div>
+
 </body>
 </html>
