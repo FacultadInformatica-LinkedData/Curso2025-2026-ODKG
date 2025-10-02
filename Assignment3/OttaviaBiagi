@@ -1,0 +1,73 @@
+1. Get all the properties that can be applied to instances of the Politician class (<http://dbpedia.org/ontology/Politician>)
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?p
+WHERE {
+  ?x a dbo:Politician .
+  ?x ?p ?o .
+}
+ORDER BY ?p
+
+output: https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fp%0D%0AWHERE+%7B%0D%0A++%3Fx+a+dbo%3APolitician+.%0D%0A++%3Fx+%3Fp+%3Fo+.%0D%0A%7D%0D%0AORDER+BY+%3Fp&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on
+
+2. Get all the properties, except rdf:type, that can be applied to instances of the Politician class
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?p
+WHERE {
+  ?x a dbo:Politician .
+  ?x ?p ?o .
+  FILTER(?p != rdf:type)
+}
+ORDER BY ?p
+
+output: https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fp%0D%0AWHERE+%7B%0D%0A++%3Fx+a+dbo%3APolitician+.%0D%0A++%3Fx+%3Fp+%3Fo+.%0D%0A++FILTER%28%3Fp+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0AORDER+BY+%3Fp%0D%0A&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on
+
+3. Which different values exist for the properties, except for rdf:type, applicable to the instances of Politician?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?o
+WHERE {
+  ?x a dbo:Politician .
+  ?x ?p ?o .
+  FILTER(?p != rdf:type)
+}
+
+output: https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fo%0D%0AWHERE+%7B%0D%0A++%3Fx+a+dbo%3APolitician+.%0D%0A++%3Fx+%3Fp+%3Fo+.%0D%0A++FILTER%28%3Fp+%21%3D+rdf%3Atype%29%0D%0A%7D&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on
+
+4. For each of these applicable properties, except for rdf:type, which different values do they take globally for all those instances?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?p ?o
+WHERE {
+  ?x a dbo:Politician .
+  ?x ?p ?o .
+  FILTER(?p != rdf:type)
+}
+ORDER BY ?p ?o
+
+output: https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fp+%3Fo%0D%0AWHERE+%7B%0D%0A++%3Fx+a+dbo%3APolitician+.%0D%0A++%3Fx+%3Fp+%3Fo+.%0D%0A++FILTER%28%3Fp+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0AORDER+BY+%3Fp+%3Fo&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on
+
+5. For each of these applicable properties, except for rdf:type, how many distinct values do they take globally for all those instances?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?p (COUNT(DISTINCT ?o) AS ?numDistinctValues)
+WHERE {
+  ?x a dbo:Politician .
+  ?x ?p ?o .
+  FILTER(?p != rdf:type)
+}
+GROUP BY ?p
+ORDER BY DESC(?numDistinctValues) ?p
+
+output: https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0A%0D%0ASELECT+%3Fp+%28COUNT%28DISTINCT+%3Fo%29+AS+%3FnumDistinctValues%29%0D%0AWHERE+%7B%0D%0A++%3Fx+a+dbo%3APolitician+.%0D%0A++%3Fx+%3Fp+%3Fo+.%0D%0A++FILTER%28%3Fp+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0AGROUP+BY+%3Fp%0D%0AORDER+BY+DESC%28%3FnumDistinctValues%29+%3Fp%0D%0A&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on
