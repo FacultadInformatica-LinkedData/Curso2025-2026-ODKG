@@ -1,0 +1,61 @@
+# Assignment 3 - SPARQL Queries for DBpedia Politician Analysis
+
+# Query 1: Get all the properties that can be applied to instances of the Politician class
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?property WHERE {
+    ?politician rdf:type dbo:Politician .
+    ?politician ?property ?value .
+}
+ORDER BY ?property
+
+# Query 2: Get all the properties, except rdf:type, that can be applied to instances of the Politician class
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?property WHERE {
+    ?politician rdf:type dbo:Politician .
+    ?politician ?property ?value .
+    FILTER(?property != rdf:type)
+}
+ORDER BY ?property
+
+# Query 3: Which different values exist for the properties, except for rdf:type, applicable to the instances of Politician?
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?property ?value WHERE {
+    ?politician rdf:type dbo:Politician .
+    ?politician ?property ?value .
+    FILTER(?property != rdf:type)
+}
+ORDER BY ?property ?value
+
+# Query 4: For each of these applicable properties, except for rdf:type, which different values do they take globally for all those instances?
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?property ?value WHERE {
+    {
+        SELECT DISTINCT ?property WHERE {
+            ?politician rdf:type dbo:Politician .
+            ?politician ?property ?anyValue .
+            FILTER(?property != rdf:type)
+        }
+    }
+    ?instance ?property ?value
+}
+
+
+# Query 5: For each of these applicable properties, except for rdf:type, how many distinct values do they take globally for all those instances?
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?property (COUNT(DISTINCT ?value) AS ?countDistinctValues) WHERE {
+    ?politician rdf:type dbo:Politician .
+    ?politician ?property ?value .
+    FILTER(?property != rdf:type)
+}
+GROUP BY ?property
+ORDER BY DESC(?countDistinctValues)
