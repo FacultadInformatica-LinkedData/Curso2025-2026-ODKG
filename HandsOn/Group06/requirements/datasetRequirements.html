@@ -103,34 +103,6 @@
     <p>The same model exists for many cities. We can combine different cities (e.g., Rome, Milan, Madrid) or merge with complementary smart-city datasets (traffic counts, air quality) using spatial joins. For this first minimal assignment we will publish Palermo only; adding more cities later is straightforward.</p>
   </section>
 
-  <section class="card">
-    <h2>RDF & Linking Plan (brief)</h2>
-    <ul class="small">
-      <li><strong>Core resources</strong>: Stop, Route, Trip, StopTime, Service (Calendar), Agency.</li>
-      <li><strong>Identifiers</strong>: Use publisher’s native IDs (e.g., <code>stop_id</code>) as local identifiers; mint stable URIs under the group namespace (e.g., <code>https://example.org/palermo/stop/{stop_id}</code>).</li>
-      <li><strong>Geometry</strong>: Represent stops as WGS-84 points; route shapes as LineString (e.g., GeoSPARQL or WKT literals).</li>
-      <li><strong>External links</strong>: Align stops by coordinates/name to OSM/Wikidata/GeoNames; link agency to Wikidata if available.</li>
-      <li><strong>Provenance</strong>: Record source URL, download date, and license in metadata (DC, PROV-O).</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Risks & Mitigations</h2>
-    <ul class="small">
-      <li><strong>License uncertainty</strong> — Confirm terms before publishing RDF. If attribution is required, include it on the dataset page and in metadata.</li>
-      <li><strong>Data quality</strong> — Validate with MobilityData GTFS Validator; fix common issues (e.g., missing shapes, time format) before transformation.</li>
-      <li><strong>Volume</strong> — <code>stop_times.txt</code> can be large; we can first publish a lighter “stops+routes” RDF, then incrementally add trips/times.</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Decision</h2>
-    <p><strong>Proceed</strong> with the GTFS feed as the primary dataset. It clearly satisfies R1, R2, R3, R4, Documentation (R5) is strong; combining with other cities later (R6) is easy.</p>
-  </section>
-
-  <footer class="small dim">
-    <p>Prepared by: Group <em>XX</em> — replace with your group number and members (GitHub handles) in README.md.</p>
-  </footer>
 </main>
 </body>
 </html>
