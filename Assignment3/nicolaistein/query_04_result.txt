@@ -1,0 +1,12 @@
+Virtuoso S1T00 Error SR171: Transaction timed out
+
+SPARQL query:
+define sql:big-data-const 0 
+#output-format:text/html
+define sql:signal-void-variables 1 select ?p (GROUP_CONCAT(DISTINCT STR(?o); separator=" | ") AS ?distinct_values)
+where {
+  ?s rdf:type dbo:Politician .
+  ?s ?p ?o .
+  filter ( ?p != rdf:type )
+}
+group by ?p
