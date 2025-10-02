@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Requirements</title>
+</head>
+<body>
+<h1>Environmental Stations and Institutions in Madrid</h1>
+<h2>Description of the Application</h2>
+<p>This application provides a simple, user-friendly interface for exploring environmental conditions and public institutions across specific 
+    areas of Madrid — for example, a user’s neighbourhood or locations they plan to visit or are interested on. 
+
+    The goal of the application is to give users quick access to up-to-date environmental and institutional information for a selected area of 
+    Madrid. Data is presented in a clear, concise way so users can make informed decisions about safety, accessibility, and environmental quality. 
+    In particular, the application will allow users to access information about:
+</p>
+<ul>
+<li><strong>Environmental Measurements:</strong> Data collected from stations monitoring atmospheric weather conditions, acoustic measurements, 
+    and air quality in different areas of Madrid.</li>
+<li><strong>Institutions in Madrid:</strong> Information about key institutions, such as fire stations, police stations, and government 
+    offices, and their locations across the city.</li>
+</ul>
+<p> All information is linked to geographic references, enabling the aggregation of data from multiple sources to build a comprehensive 
+    profile of any selected area. Users can query the system to obtain results such as the nearest institutions of a given type to a location, 
+    or the monitoring stations reporting the best or worst environmental conditions in a zone. </p>
+<h2>Possible use cases</h2>
+<ul>
+<li>Residents checking local air quality, noise levels and weather conditions before planning activities.</li>
+<li>Visitors or workers identifying the nearest emergency services and government offices in an unfamiliar neighbourhood.</li>
+<li>Helping users identify areas with better or worse conditions and supporting decisions on urban planning and resource allocation.</li>
+</ul>
+ 
+    <h2>Functional Requirements</h2>
+<ul>
+<li><strong>Search and Filter Options:</strong>
+<p>Users should be able to search for specific locations — such as a neighbourhood, district, or a custom area defined by a radius around a 
+    point — and request information about institutions or environmental conditions. The system must support filtering based on these criteria 
+    to deliver relevant, tailored results.</p>
+</li>
+<li><strong>View Environmental Data:</strong>
+<p>Users will have the option to view detailed measurements from environmental stations. This includes data such as:
+<ul>
+<li>Weather conditions (e.g., temperature, humidity, pressure)</li>
+<li>Acoustic levels (e.g., noise pollution)</li>
+<li>Air quality measurements (e.g., NO2, PM10, O3)</li>
+</ul>
+<p>Additionally, the platform could integrate external sources to enrich the data, for example by providing contextual information on 
+    pollutants (e.g. whether they pose health risks for people with asthma or are within normal levels) or by issuing alerts when noise 
+    measurements exceed regulatory thresholds.</p>
+</p>
+</li>
+<li><strong>View Institutions by Location:</strong>
+<p>Users will be able to explore information about institutions (e.g., fire stations, police stations) based on their geographical location 
+    in Madrid. Each institution will display details such as its address, contact information, and type of service provided.</p>
+</li>
+<li><strong>Map Integration:</strong>
+<p>The application will integrate a map (e.g., using Google Maps or OpenStreetMap) to display the locations of environmental stations and 
+    institutions. The map will allow users to click on a location to get more detailed information about the station or institution.</p>
+</li>
+<li><strong>Linkage Between Data Sources:</strong>
+<p>The application should be capable of linking environmental data with institution data based on geographic location. For instance, users 
+    could see the environmental measurements for a specific district alongside the locations of nearby institutions such as fire stations or 
+    government offices.</p>
+</li>
+</ul>
+<h2>Non-Functional Requirements</h2>
+<ul>
+<li><strong>Performance:</strong> The application should load quickly and handle large datasets efficiently, especially when users perform 
+    searches or interact with the map.</li>
+<li><strong>Security:</strong> Ensure that data privacy and security measures are implemented when accessing or storing data. Users should not 
+    be able to access sensitive or unauthorized information.</li>
+<li><strong>Accessibility:</strong> The application should be fully accessible, following best practices for web accessibility (WCAG standards).
+     This includes support for screen readers, keyboard navigation, and mobile responsiveness.</li>
+</ul>
+<h2>Application User Interface</h2>
+<p>
+
+        The user interface will be designed to be simple and intuitive. The following features will be included:
+</p>
+<ul>
+<li><strong>Search Bar:</strong> A prominent search bar at the top of the page to allow users to search for stations and institutions based on 
+    keywords like "Plaza de España" or "temperature measurement".</li>
+<li><strong>Filters:</strong> Filters for narrowing down the search by type of measurement (e.g., acoustic, meteorological, air quality) or type
+     of institution (e.g., fire station, police station, government office).</li>
+<li><strong>Map View:</strong> A map showing the locations of environmental stations and institutions. Clicking on a marker will display more 
+    information about the station or institution.</li>
+<li><strong>Data Display:</strong> Upon selecting a station or institution, users will see a detailed view that includes relevant information, 
+    such as the measurements collected (for stations) or the institution’s services and contact details (for institutions).</li>
+</ul>
+</body>
+</html>
+ 
