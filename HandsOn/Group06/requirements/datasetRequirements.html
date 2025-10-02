@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Dataset Requirements – GTFS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --bg:#0b1020; --card:#121936; --ink:#e8ecff; --muted:#aab4e6; --ok:#22c55e; --warn:#f59e0b; --no:#ef4444; --accent:#8b5cf6;}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    main{max-width:980px;margin:40px auto;padding:0 20px 60px}
+    h1{font-size:1.9rem;margin:0 0 12px}
+    h2{font-size:1.25rem;margin:28px 0 8px;color:#fff}
+    p,li{color:var(--muted)}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px 20px;margin:16px 0}
+    .grid{display:grid;gap:16px}
+    .grid-2{grid-template-columns:1fr 1fr}
+    code, pre{background:#0e1530;color:#cde1ff;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:.15rem .35rem}
+    .badge{display:inline-block;font-size:.8rem;padding:.18rem .5rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);margin-left:.4rem}
+    .ok{color:#052d18;background:linear-gradient(0deg,#19d27f22,#19d27f22);border-color:#19d27f66}
+    .part{color:#3b2605;background:linear-gradient(0deg,#ffb02022,#ffb02022);border-color:#ffb02066}
+    .no{color:#3b0a08;background:linear-gradient(0deg,#ff6a5922,#ff6a5922);border-color:#ff6a5966}
+    a{color:#b9c4ff}
+    table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden}
+    th,td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.06);text-align:left}
+    th{color:#cbd5ff;font-weight:600;background:rgba(255,255,255,.03)}
+    .small{font-size:.92rem}
+    .dim{color:#90a0e6}
+    .callout{border-left:4px solid var(--accent);padding:10px 14px;background:#0f1633;border-radius:10px}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Dataset Requirements Check — GTFS Static Feed</h1>
+    <p class="dim small">
+      Selected dataset: <strong>GTFS static transit feed for cities</strong> (e.g., AMAT Palermo).  
+      This feed consists of multiple text files that are CSV-formatted as per the GTFS specification.
+    </p>
+    <div class="card small">
+      <strong>Documentation used</strong>:
+      <ul>
+        <li>GTFS Specification (Static): <a href="https://gtfs.org/schedule/reference/" target="_blank" rel="noreferrer">gtfs.org/schedule/reference</a></li>
+        <li>GTFS Validator Rules (MobilityData): <a href="https://gtfs-validator.mobilitydata.org/rules.html" target="_blank" rel="noreferrer">gtfs-validator.mobilitydata.org/rules.html</a></li>
+        <li> Official page license (for example Palermo), each cities have different licenses we will check before using the datasets <em>https://opendata.comune.palermo.it/opendata-dataset.php?dataset=1303</em></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="card">
+    <h2>Summary</h2>
+    <p>This GTFS feed represents public transport information for the cities (for example Plaermo). It is a standard open-data format widely used by transit agencies worldwide. It ships as multiple CSV-like text files (e.g., <code>stops.txt</code>, <code>routes.txt</code>, <code>trips.txt</code>, <code>stop_times.txt</code>, <code>calendar.txt</code>, <code>shapes.txt</code>) that are relationally linked by IDs (e.g., <code>stop_id</code>, <code>route_id</code>, <code>trip_id</code>).</p>
+    <div class="grid grid-2 small">
+      <div><strong>Domain</strong>: Smart City — Urban Mobility (Public Transport)</div>
+      <div><strong>Granularity</strong>: Stops, routes, trips, stop-times (schedule-level, with geocoordinates)</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Files present (typical)</h2>
+    <table class="small">
+      <thead><tr><th>File</th><th>Role</th><th>Key fields for linking</th></tr></thead>
+      <tbody>
+        <tr><td><code>stops.txt</code></td><td>List of stops/stations with metadata</td><td><code>stop_id</code>, <code>stop_name</code>, <code>stop_lat</code>, <code>stop_lon</code></td></tr>
+        <tr><td><code>routes.txt</code></td><td>Transit lines</td><td><code>route_id</code>, <code>route_short_name</code>, <code>route_long_name</code>, <code>route_type</code></td></tr>
+        <tr><td><code>trips.txt</code></td><td>Service trips on each route</td><td><code>trip_id</code>, <code>route_id</code>, <code>service_id</code>, <code>shape_id</code></td></tr>
+        <tr><td><code>stop_times.txt</code></td><td>Timetables for each trip and stop</td><td><code>trip_id</code>, <code>stop_id</code>, <code>arrival_time</code>, <code>departure_time</code></td></tr>
+        <tr><td><code>calendar.txt</code>/<code>calendar_dates.txt</code></td><td>Service days & exceptions</td><td><code>service_id</code>, weekdays, dates</td></tr>
+        <tr><td><code>shapes.txt</code></td><td>Polyline geometry of routes</td><td><code>shape_id</code>, <code>shape_pt_lat</code>, <code>shape_pt_lon</code>, sequence</td></tr>
+        <tr><td><code>agency.txt</code></td><td>Agency metadata</td><td>Agency name, URL, timezone</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Requirement Check</h2>
+
+    <h3>R1. Data are in the smart cities domain <span class="badge ok">Satisfied</span></h3>
+    <p>Public transport is a core smart-city vertical (urban mobility). The feed describes transit infrastructure (routes, stops, services) used for routing, planning, and civic applications.</p>
+
+    <h3>R2. Data are available as a CSV file <span class="badge ok">Satisfied</span></h3>
+    <p>Although files use the <code>.txt</code> extension, the GTFS specification defines them as comma-separated text tables (i.e., CSV). Each table can be opened with spreadsheet tools or parsed with CSV readers.</p>
+
+    <h3>R3. Data have an open license so it can be published <span class="badge part"></span></h3>
+    <div class="callout small">
+      <p><strong>Action required:</strong> We have checked for different cities and they all have the right licenses to be published </p>
+      <ul>
+        <li><strong>Accepted examples</strong>: CC0, CC BY (with attribution), Open Government License.</li>
+        <li><strong>Not accepted</strong>: restrictive “developer” licenses that forbid redistribution or derivatives.</li>
+      </ul>
+      <p><em>License:</em> <strong>(insert license name & URL)</strong> — <em>Summary:</em> (state whether redistribution + derivative publication in RDF are allowed; note attribution text if required).</p>
+    </div>
+
+    <h3>R4. Data can be easily linked with generic real-world entities <span class="badge ok">Satisfied</span></h3>
+    <p>The feed includes <code>stop_lat</code>/<code>stop_lon</code> and human-readable names for stations/stops, which can be aligned to generic entities such as places in OpenStreetMap, Wikidata, DBpedia, or GeoNames. Agencies and routes can also be linked to organization and transport entities. Dates in the calendar files can be linked to standard time ontologies.</p>
+
+    <h3>R5. Documentation exists for the data (optional) <span class="badge ok">Satisfied</span></h3>
+    <p>GTFS has extensive public documentation (schema, field constraints, examples) and a well-maintained open-source validator with transparent rules:
+      <a href="https://gtfs.org/schedule/reference/" target="_blank" rel="noreferrer">GTFS Spec</a>,
+      <a href="https://gtfs-validator.mobilitydata.org/rules.html" target="_blank" rel="noreferrer">Validator rules</a>.
+      The publisher’s portal usually includes a short dataset description and version/date.</p>
+
+    <h3>R6. Data can come from multiple data sources (optional) <span class="badge ok">Satisfied / Optional</span></h3>
+    <p>The same model exists for many cities. We can combine different cities (e.g., Rome, Milan, Madrid) or merge with complementary smart-city datasets (traffic counts, air quality) using spatial joins. For this first minimal assignment we will publish Palermo only; adding more cities later is straightforward.</p>
+  </section>
+
+  <section class="card">
+    <h2>RDF & Linking Plan (brief)</h2>
+    <ul class="small">
+      <li><strong>Core resources</strong>: Stop, Route, Trip, StopTime, Service (Calendar), Agency.</li>
+      <li><strong>Identifiers</strong>: Use publisher’s native IDs (e.g., <code>stop_id</code>) as local identifiers; mint stable URIs under the group namespace (e.g., <code>https://example.org/palermo/stop/{stop_id}</code>).</li>
+      <li><strong>Geometry</strong>: Represent stops as WGS-84 points; route shapes as LineString (e.g., GeoSPARQL or WKT literals).</li>
+      <li><strong>External links</strong>: Align stops by coordinates/name to OSM/Wikidata/GeoNames; link agency to Wikidata if available.</li>
+      <li><strong>Provenance</strong>: Record source URL, download date, and license in metadata (DC, PROV-O).</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Risks & Mitigations</h2>
+    <ul class="small">
+      <li><strong>License uncertainty</strong> — Confirm terms before publishing RDF. If attribution is required, include it on the dataset page and in metadata.</li>
+      <li><strong>Data quality</strong> — Validate with MobilityData GTFS Validator; fix common issues (e.g., missing shapes, time format) before transformation.</li>
+      <li><strong>Volume</strong> — <code>stop_times.txt</code> can be large; we can first publish a lighter “stops+routes” RDF, then incrementally add trips/times.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Decision</h2>
+    <p><strong>Proceed</strong> with the GTFS feed as the primary dataset. It clearly satisfies R1, R2, R3, R4, Documentation (R5) is strong; combining with other cities later (R6) is easy.</p>
+  </section>
+
+  <footer class="small dim">
+    <p>Prepared by: Group <em>XX</em> — replace with your group number and members (GitHub handles) in README.md.</p>
+  </footer>
+</main>
+</body>
+</html>
