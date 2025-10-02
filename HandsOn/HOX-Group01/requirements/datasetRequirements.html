@@ -6,30 +6,118 @@
 <title>Dataset Requirements</title>
 </head>
 <body>
-<h1>Dataset Requirements - Madrid's Daily Metereology</h1>
-<h2>Requirement 1: Data are in one of the smart city domains</h2>
+<h1>DATASET REQUIREMENTS</h1>
+
+
+<h2>Madrid Air Quality Daily Measurements</h2>
+<h3>Requirement 1: Data are in one of the smart city domains</h3>
+<p>The dataset contains environmental monitoring time series (air quality) per sampling point within a city. Air quality management is a 
+    coresmart-city domain (urban environment).</p>
+ 
+<h3>Requirement 2: Data are available as a CSV file</h3>
+<p>The selected dataset is available as a CSV file, which is located inside the folder "CSV FILES" uploaded for the first assignment.</p>
+ 
+<h3>Requirement 3: Data have an open license so they can be published</h3>
+<p>The open license of this data can be found in the following link: <a href="https://datos.madrid.es/egob/catalogo/aviso-legal">License Link</a></p>
+ 
+<h3>Requirement 4: Data can be easily linked with generic real-world entities</h3>
+<p>The data can be easily linked with several real-world entities, allowing integration into a Knowledge Graph:</p>
+<ul>
+<li><strong>Administrative areas:</strong> <code>PROVINCIA</code> and <code>MUNICIPIO</code> codes can likely be linked to authoritative identifiers (such as INE codes) and then mapped to external datasets like <em>Wikidata</em> or <em>GeoNames</em>.</li>
+<li><strong>Stations:</strong> <code>ESTACION</code> and <code>MUNICIPIO</code> identifiers may be linked to station metadata in other datasets, such as those from the same open data portal where this dataset comes from.</li>
+<li><strong>Pollutants:</strong> <code>MAGNITUD</code> codes can be mapped to specific pollutants, which are widely represented in <em>Wikidata</em>, such as NO<sub>2</sub>, PM<sub>10</sub>, O<sub>3</sub>, etc.</li>
+</ul>
+ 
+<h3>Requirement 5: Documentation exists for the data (optional)</h3>
+<p>The source portal provides a codebook/metadata that documents all coded fields:</p>
+<ul>
+<li><strong>Administrative codes:</strong> The <code>PROVINCIA</code> and <code>MUNICIPIO</code> codes correspond to postal codes, which are easy to look up and can be linked to external databases like <em>Wikidata</em> or <em>GeoNames</em>.</li>
+<li><strong>Stations:</strong> A CSV file <a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=9e42c… Link">https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=9e42c… Link</a> provides the mapping between <code>ESTACION</code> identifiers and the corresponding station names, enabling easy reference and linkage.</li>
+<li><strong>Pollutant magnitudes:</strong> The <code>MAGNITUD</code> codes are mapped to specific pollutants (e.g., <code>12</code> → NO<sub>2</sub>) and are documented in an external mapping file, which is referenced in the dataset documentation: <a href="https://datos.madrid.es/FWProjects/egob/Catalogo/MedioAmbiente/Aire/Ficheros/Interprete_ficheros_%2… Link">https://datos.madrid.es/FWProjects/egob/Catalogo/MedioAmbiente/Aire/Ficheros/Interprete_ficheros_%2… Link</a></li>
+<li><strong>Measurement techniques:</strong> Similar to pollutants, the codes for measurement techniques are documented in the same document as before.
+<li><strong>Validation flags:</strong> The semantics of <code>Vxx</code> are documented, indicating whether a data point is valid (<code>V</code>) or not (<code>N</code>), and any other validation statuses that may be used in the dataset.</li>
+</ul>
+
+
+<h2>Madrid Facilities and Entities</h2>
+
+<h3>Requirement 1: Data are in one of the smart city domains</h3>
+<p>The selected dataset is related to smart cities because it defines the different entities and facilities in Madrid that are available on the
+     official website www.madrid.es. This means that all the necessary information, such as location, schedules, or public transport access to 
+     each entity, is available online. Therefore, this dataset can be included in the domain of governance and public administration within the 
+     smart cities framework, as it involves electronic administration and the management of open data.</p>
+
+<h3>Requirement 2: Data are available as a CSV file</h3>
+<p>The selected dataset is available as a CSV file, which is located inside the folder "CSV FILES" uploaded for the first assignment</p>
+
+<h3>Requirement 3: Data have an open license so they can be published</h3>
+<p>The open license of this data can be found in the following link: <a href="https://datos.madrid.es/egob/catalogo/aviso-legal">https://datos.madrid.es/egob/catalogo/aviso-legal</a></p>
+
+<h3>Requirement 4:  Data can be easily linked with generic real-world entities</h3>
+<p>In this dataset, which contains information about different entities in Madrid, some of the attributes that can be associated with generic 
+    real-world entities are:</p> 
+<ul>
+    <li>Certain entities, such as "Aeropuerto Adolfo Suárez Madrid-Barajas", "Banco de España", or "Canal de Isabel II"</li>
+    <li>The locations of these entities, including municipality, province, neighborhood, and district</li>
+    <li>n some cases, the nearby subway station of the entity, for example Metro: Retiro or Metro: Ibiza, in the transport attribute.</li>
+</ul>
+
+<h3>Requirement 5: Documentation exists for the data (optional)</h3>
+<p>In this dataset, a brief description is provided, along with keywords, category, language, dataset identifier, last update, and creation 
+    date. This documentation is available at: <a href="https://datos.gob.es/en/catalogo/l01280796-equipamientos-y-entidades-de-la-ciudad-de-madrid-que-hay… ">https://datos.gob.es/en/catalogo/l01280796-equipamientos-y-entidades-de-la-ciudad-de-madrid-que-hay… </a></p>    
+
+<h3>Requirement 6: Data can come from multiple data sources (optional)</h3>
+<p>In this case, the data come just for one simple data source</p>
+
+
+<h2>Madrid Daily Noise Pollution</h2>
+<h3>Requirement 1: Data are in one of the smart city domains</h3>
+<p>These data belong to the Smart Environment domain of smart cities, as they result from the technological implementation of connected sensors 
+    to monitor pollution, in this case, noise pollution. The public release of this information enables analysis that can lead to policies to 
+    improve quality of life. Therefore, it is inderectly related to the Smart Living domain of smart cities.</p>
+ 
+<h3>Requirement 2: Data are available as a CSV file</h3>
+<p>The selected dataset is available as a CSV file, which is located inside the folder "CSV FILES" uploaded for the first assignment</p>
+ 
+<h3>Requirement 3: Data have an open license so they can be published</h3>
+<p>The open license of this data can be found in the following link: <a href="https://datos.madrid.es/egob/catalogo/aviso-legal">https://datos.madrid.es/egob/catalogo/aviso-l…
+ 
+<h3>Requirement 4: Data can be easily linked with generic real-world entities</h3>
+<p>The dataset contains information that can be associated with real-world entities:</p>
+<ul>
+<li><strong>The NMT column:</strong> it is the identifier of the monitoring station. On the same portal  <a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=b8c42…">https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=b8c42…</a> , there is another dataset that provides detailed information about each of these stations (name, location, district, neighborhood, geographic coordinates, and altitude). Therefore, the information from both datasets can be linked. This allows us to obtain complete spatial information that can in turn be linked to external entities (neighborhood, district, street) in Wikidata or DBpedia, or via their geographic coordinates.</li>
+<li><strong>Temporal information:</strong> Year, Month, Day, Period. These attributes can be linked to temporal ontologies, which may enable connections with information such as atmospheric conditions which may be related to the data obtained. For instance, if a specific day is declared a public holiday on the Madrid City Council’s website, an increase in noise could be explained by this factor.</li>
+<li><strong>Recorded acoustic magnitudes (LAeq, L1, L10, L50...):</strong> linkable to sensor ontologies, equivalent vocabularies and standards on noise regulation, or to information about recommended health-related thresholds for noise levels.</li>
+</ul>
+ 
+<h3>Requirement 5: Documentation exists for the data (optional)</h3>
+<p>The file is accompanied by a PDF document that provides a brief overall description of what is being measured, the time span covered (2014–present), and the measurement frequency. In addition, the document includes a table specifying the data type of each column and an explanation of what each represents. It is worth noting that there are two columns (station and period) whose names in the dataset do not match those in the document; however, it is easy to identify that they refer to the same information, so the dataset’s content becomes fully understandable after reading this additional documentation. Moreover, on the portal that hosts the data, an annual aggregated version is also available, and the information about the stations indicates if any of them are currently affected by a specific issue (e.g., station 3 currently affected by construction work).</p>
+
+
+<h2>Madrid Daily Metereology</h2>
+<h3>Requirement 1: Data are in one of the smart city domains</h3>
 <p>The dataset belongs mainly to the Smart Environment domain of Smart Cities, with intersections in Smart Living/Health, 
     since it tracks temperature using geolocated stations over time.</p>
-<h2>Requirement 2: Data are available as a CSV file</h2>
+<h3>Requirement 2: Data are available as a CSV file</h3>
 <p>The selected dataset is available as a CSV file, which is located inside the folder "CSV FILES" uploaded for the first assignment</p>
-<h2>Requirement 3:  Data have an open license so they can be published</h2>
+<h3>Requirement 3:  Data have an open license so they can be published</h3>
 <p>The open license of this data can be found in the following link: <a href="https://datos.madrid.es/egob/catalogo/aviso-legal">https://datos.madrid.es/egob/catalogo/aviso-legal</a>
 </p>
-<h2>Requirement 4: Data can be easily linked with generic real-world entities</h2>
+<h3>Requirement 4: Data can be easily linked with generic real-world entities</h3>
 <p>The dataset can be easily linked with real-world entities such as geographic areas (province, municipality, station) and time 
     (days, months, years). Fields like “PROVINCIA”, “MUNICIPIO” and “ESTACION” directly map to real-world locations, referring to 
     administrative areas and physical meteorological stations. Similarly, “ANO”, “MES”, “D01”, “D02”, etc., represent actual calendar 
     dates, making the dataset directly relatable to external sources such as other meteorological records, climate models, traffic 
     patterns or public health data for the same period.
     In this dataset, which contains meteorological information for Madrid, several attributes can be directly associated with generic
-     real-world entities:
+     real-world entities:</p>
 <ul>
 <li>Measurement stations, such as Plaza España, Escuelas Aguirre, or Cuatro Caminos, which correspond to physical monitoring sites across the city.</li>
 <li>Geographical entities, including province, municipality, and neighborhood, which situate each measurement station in its real location.</li>
 <li>Meteorological variables, such as temperature, humidity, wind direction, or precipitation, which represent physical environmental conditions 
-    that can be observed and compared with global standards.</li></p>
+    that can be observed and compared with global standards.</li>
 </ul>
-<h2>Requirement 5: Documentation exists for the data (optional)</h2>
+<h3>Requirement 5: Documentation exists for the data (optional)</h3>
 <p>The dataset is fully documented by the Dirección General de Sostenibilidad y Control Ambiental.
     It explains the meaning of each field (province, municipality, station, parameter, measurement technique, year, month, day), 
     the coding of meteorological variables (e.g., temperature, humidity, wind speed, precipitation), and the mapping of station 
