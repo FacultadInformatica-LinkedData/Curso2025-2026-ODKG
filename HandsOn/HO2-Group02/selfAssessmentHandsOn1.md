@@ -1,11 +1,18 @@
-# Hands-on assignment 1 — Self assessment (Group02)
+# Hands-on assignment 1 – Self assessment (Group02)
 
 ## Checklist
-- [ ] `README.md` contiene i nomi e gli username GitHub di tutti i membri
-- [ ] Cartella `csv/` contiene **almeno un CSV** del dataset selezionato
-- [ ] `requirements/datasetRequirements.html` spiega come i dataset soddisfano R1–R4 e discute R5–R6
-- [ ] `requirements/applicationRequirements.html` descrive i requisiti e include i **mock-up** dell’interfaccia
-- [ ] Tutti i file sono nella cartella `Group02/` e i percorsi rispettano la struttura richiesta
 
-## Commenti sull’autovalutazione
-_Aggiungere eventuali note, decisioni, e punti aperti._
+**The “README.md” file:**
+- [x] Includes the names and GitHub users of all the members of the group
+
+**The "csv" directory:**
+- [x] Contains at least one CSV file 
+- [x] The CSV files belong to one of the selected domains (smart city: education & transportation)
+
+**The "datasetRequirements.html" file:**
+- [x] Identifies the licenses of all the selected datasets
+- [x] Identifies those entities in the selected datasets that can be linked with entities in other datasets
+- [x] Identifies those entities in other datasets that can be linked with entities in the selected datasets 
+
+**The "applicationRequirements.html” file:**
+- [x] Includes a description of the application user interface
