@@ -1,0 +1,76 @@
+# 1. Get all the properties that can be applied to instances of the Politician class (<http://dbpedia.org/ontology/Politician>)
+# https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=PREFIX+dbo%3A++%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A%0D%0A%23+FROM+%3Chttp%3A%2F%2Fes.dbpedia.org%3E%0D%0ASELECT+DISTINCT+%3Fproperty%0D%0AWHERE+%7B%0D%0A++%3Fs+rdf%3Atype+dbo%3APolitician+%3B%0D%0A+++++%3Fproperty+%3Fo+.%0D%0A%7D%0D%0AORDER+BY+%3Fproperty%0D%0A&should-sponge=&format=text%2Fhtml&timeout=30000&debug=on&run=+Run+Query+
+
+
+PREFIX dbo:  <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?property
+WHERE {
+  ?s rdf:type dbo:Politician ;
+     ?property ?o .
+}
+ORDER BY ?property
+
+
+
+# 2. Get all the properties, except rdf:type, that can be applied to instances of the Politician class
+# https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=%0D%0APREFIX+dbo%3A++%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty%0D%0AWHERE+%7B%0D%0A++%3Fs+rdf%3Atype+dbo%3APolitician+%3B%0D%0A+++++%3Fproperty+%3Fo+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0AORDER+BY+%3Fproperty%0D%0A&should-sponge=&format=text%2Fhtml&timeout=30000&debug=on&run=+Run+Query+
+
+PREFIX dbo:  <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?property
+WHERE {
+  ?s rdf:type dbo:Politician ;
+     ?property ?o .
+  FILTER (?property != rdf:type)
+}
+ORDER BY ?property
+
+
+# 3. Which different values exist for the properties, except for rdf:type, applicable to the instances of Politician?
+# https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=PREFIX+dbo%3A++%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A%0D%0ASELECT+DISTINCT+%3Fvalue%0D%0AWHERE+%7B%0D%0A++%3Fs+rdf%3Atype+dbo%3APolitician+%3B%0D%0A+++++%3Fp+%3Fvalue+.%0D%0A++FILTER+%28%3Fp+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0AORDER+BY+%3Fvalue%0D%0A&should-sponge=&format=text%2Fhtml&timeout=30000&debug=on&run=+Run+Query+
+
+PREFIX dbo:  <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?value
+WHERE {
+  ?s rdf:type dbo:Politician ;
+     ?p ?value .
+  FILTER (?p != rdf:type)
+}
+ORDER BY ?value
+
+# 4. For each of these applicable properties, except for rdf:type, which different values do they take globally for all those instances?
+# https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=%0D%0APREFIX+dbo%3A++%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A++%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A%0D%0A%0D%0ASELECT+DISTINCT+%3Fproperty+%3Fvalue%0D%0AWHERE+%7B%0D%0A++%3Fs+rdf%3Atype+dbo%3APolitician+%3B%0D%0A+++++%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0AORDER+BY+%3Fproperty+%3Fvalue%0D%0A&should-sponge=&format=text%2Fhtml&timeout=30000&debug=on&run=+Run+Query+
+
+PREFIX dbo:  <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo:  <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?property ?value
+WHERE {
+  ?s rdf:type dbo:Politician ;
+     ?property ?value .
+  FILTER (?property != rdf:type)
+}
+ORDER BY ?property ?value
+
+
+# 5. For each of these applicable properties, except for rdf:type, how many distinct values do they take globally for all those instances?
+# https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=%0D%0APREFIX+dbo%3A++%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+rdf%3A++%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0A%0D%0ASELECT+%3Fproperty+%28COUNT%28DISTINCT+%3Fvalue%29+AS+%3FnumDistinctValues%29%0D%0AWHERE+%7B%0D%0A++%3Fs+rdf%3Atype+dbo%3APolitician+%3B%0D%0A+++++%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0AGROUP+BY+%3Fproperty%0D%0AORDER+BY+DESC%28%3FnumDistinctValues%29+%3Fproperty%0D%0A&should-sponge=&format=text%2Fhtml&timeout=30000&debug=on&run=+Run+Query+
+
+PREFIX dbo:  <http://dbpedia.org/ontology/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?property (COUNT(DISTINCT ?value) AS ?numDistinctValues)
+WHERE {
+  ?s rdf:type dbo:Politician ;
+     ?property ?value .
+  FILTER (?property != rdf:type)
+}
+GROUP BY ?property
+ORDER BY DESC(?numDistinctValues) ?property
