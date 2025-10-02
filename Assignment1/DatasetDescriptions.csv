@@ -1,1 +1,6 @@
-Your name; Your GitHub user; Dataset name; Dataset URL; Dataset brief description
+Jingjing Ye; jingye1d; Canadá: Québec: Secrétariat du Conseil du trésor; 
+https://data.open-contracting.org/es/publication/79; 
+This dataset provides procurement notices published by public entities in 
+Québec, Canada, following the Open Contracting Data Standard (OCDS). 
+Each record represents a tendering process and includes identifiers, 
+publication details, process type, and buyer information.
