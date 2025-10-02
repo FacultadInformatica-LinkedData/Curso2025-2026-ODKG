@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dataset Requirements — Assessment</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; line-height: 1.5; }
+    h1 { color: #0b5bd3; }
+    h2 { color: #333; margin-top: 1.5em; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1em; }
+    th, td { border: 1px solid #ccc; padding: 0.5em; text-align: left; }
+    th { background: #f7f7f7; }
+  </style>
+</head>
+<body>
+  <h1>Dataset Requirements</h1>
+  <p>
+    This document discusses whether each selected dataset satisfies the requirements.
+    R1-R4 must be satisfied. R5-R6 are optional and their degree of satisfaction is discussed.
+  </p>
+
+  <h2>Dataset 1 - <em>BiciMAD stations and status</em></h2>
+  <p><strong>File:</strong> <a href="../csv/bikestationbicimad_csv.csv">bikestationbicimad_csv.csv</a></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Req</th>
+        <th>Statement</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Status Discussion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>R1</td>
+        <td>Data belong to a smart city domain.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Urban mobility / transport is a smart city domain.</td>
+      </tr>
+      <tr>
+        <td>R2</td>
+        <td>Data are available as CSV.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Provided as CSV. Available in: <a href="../csv/bikestationbicimad_csv.csv">BiciMad Database</a>.</td>
+      </tr>
+      <tr>
+        <td>R3</td>
+        <td>Open license allows publication.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Open reuse permitted. Use conditions available in: 
+            <a href="https://datos.madrid.es/portal/site/egob/menuitem.3efdb29b813ad8241e830cc2a8a409a0/?vgnextoid=108804d4aab90410VgnVCM100000171f5a0aRCRD&vgnextchannel=b4c412b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default" target="_blank">BiciMad dataset use conditions</a>.
+        </td>
+      </tr>
+      <tr>
+        <td>R4</td>
+        <td>Data can be easily linked with real-world entities.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Linkable via station IDs, station address, district code, district suburb, coordinates.</td>
+      </tr>
+      <tr>
+        <td>R5</td>
+        <td>Documentation exists for the data.</td>
+        <td>Optional</td>
+        <td>Partial</td>
+        <td>Basic field and dataset content descriptions available; no full manual.</td>
+      </tr>
+      <tr>
+        <td>R6</td>
+        <td>Data may come from multiple sources.</td>
+        <td>Optional</td>
+        <td>Not satisfied</td>
+        <td>Ayuntamiento de Madrid is the only publisher.</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
