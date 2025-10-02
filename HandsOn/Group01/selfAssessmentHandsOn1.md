@@ -8,8 +8,8 @@
 
 **The "csv" directory:**
 
-- [] Contains at least one CSV file 
-- [] The CSV files belong to one of the selected domains
+- [X] Contains at least one CSV file 
+- [X] The CSV files belong to one of the selected domains
 
 **The "datasetRequirements.html" file:**
 
@@ -19,4 +19,4 @@
 
 **The "applicationRequirements.html” file:**
 
-- [] Includes a description of the application user interface
+- [X] Includes a description of the application user interface
