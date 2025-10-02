@@ -10,35 +10,58 @@
         <h2>License</h2>
         <p>
             The datasets used for this project are from 
-            <a href="https://datos.madrid.es/portal/site/egob">Portal web del Ayuntamiento de Madrid</a> and 
-            <a href="https://datos.emtmadrid.es/">Open Data Madrid</a>. 
+            <a href="https://datos.madrid.es">Portal web del Ayuntamiento de Madrid</a> and 
+            <a href="https://datos.emtmadrid.es/">EMT Madrid</a>. 
             Their use is governed by 
             <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-19814">Article 3, section 2 of Law 37/2007, of November 16</a> 
             and the 
-            <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>. 
+            <a href="https://opendefinition.org/licenses/cc-by/">Creative Commons Attribution License</a>. 
             These licenses allow reproduction, distribution, public communication and transformation, for both commercial and non-commercial purposes, provided that the original source is properly credited.
         </p>
          
     </div>
 
+
+    <div>
+
+        <h2>Requirements</h2>
+
+        <ul>
+            <li>R1. Data are in the smart cities domain.</li>
+                <p>The objective of this project is to obtain information related to cycling in Madrid, using datasets about bicycle stations, their trips, and the historical availability, in order to promote ecological transportation.</p>
+            <li>R2. Data are available as a CSV file.</li>
+                <p>All datasets obtained from their respective sources have been provided in CSV format.</p>
+            <li>R3. Data have an open license so it can be published.</li>
+                <p>The data are regulated by <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-19814">Article 3, section 2 of Law 37/2007, of November 16</a> and the <a href="https://opendefinition.org/licenses/cc-by/">Creative Commons Attribution License</a>, meaning that they can be freely used as long as the original source is referenced.</p>
+            <li>R4. Data can be easily linked with generic real-world entities (e.g., locations).</li>
+                <p>The data include geographic information (coordinates, addresses), trip information between stations, as well as the time and distance of each trip.</p>
+            <li>R5. Documentation exists for the data.</li>
+                <p>For bicycle availability, documentation exists regarding the CSV structure, while for the rest, only the metadata of the CSV is available.</p>
+            <li>R6. Data can come from multiple data sources.</li>
+                <p>The files have been obtained from two different sources, the <a href="https://datos.madrid.es">Madrid City Council Open Data Portal</a> and <a href="https://datos.emtmadrid.es/">EMT Madrid</a>.</p>
+        </ul>
+
+    </div>
+
     <div>
         <h2>Relations with other datasets</h2>
-        <p>...Explain the project idea...</p>
+        <p>This project aims to analyze and visualize the usage patterns of the bicycle-sharing system in Madrid, leveraging various datasets to gain insights into user behavior, station performance, and overall system efficiency.</p>
 
         <ul>
             <li>
-                <h3>Bicicle Stations</h3>
-                <p>This data provides the localization of bicecle station on Madrid, such as coordinates, description, and a link to this station</p>
+                <h3>Bicycle Stations</h3>
+                <p>Provides information about the location of each station, its status, and the number of available bicycles.</p>
             </li>
             <li>
-                <h3>Travel per Month</h3>
-                <p>Provides data related to all travels made by user using the bicecle of the stations</p>
+                <h3>Travels</h3>
+                <p>Provides information about which bicycle made the trip, including the origin and destination stations, as well as the duration of the trip.</p>
             </li>
             <li>
-                <h3>Bicicle per Station</h3>
-                <p>For each station its provided the data of each bicecle and the travles made with it</p>
+                <h3>Bicycles Availability</h3>
+                <p>Measures the overall availability of bicycles across the entire network, based on usage-related data.</p>
             </li>
         </ul>
+
 
     </div>
 
