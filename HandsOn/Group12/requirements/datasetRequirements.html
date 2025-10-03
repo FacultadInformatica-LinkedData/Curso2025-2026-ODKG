@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Dataset Requirements – ELADESTELLEOGD (Vienna EV Charging) + Transport datasets (data.gv.at)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.5}
+    h1,h2{margin:0.5em 0}
+    table{border-collapse:collapse;width:100%;margin:14px 0}
+    th,td{border:1px solid #ddd;padding:10px;vertical-align:top}
+    th{background:#f7f7f7;text-align:left}
+    .ok{font-weight:700}
+    .ds{background:#f9fcff;border:1px solid #e6f0ff;padding:10px;border-radius:8px}
+    code{background:#f6f6f6;padding:2px 5px;border-radius:4px}
+  </style>
+</head>
+<body>
+
+<h1>Dataset Requirements</h1>
+
+<div class="ds">
+  <p><strong>Main dataset:</strong> <em>ELADESTELLEOGD</em> — Public EV charging stations in Vienna (Open Government Data, data.gv.at).<br/>
+  <strong>Portal URL:</strong> <a href="https://www.data.gv.at/datasets/d99a5b1f-837b-456a-9b8b-14b4535c9517">data.gv.at (dataset page)</a></p>
+
+  <p><strong>Complementary pool:</strong> Transport datasets from data.gv.at (verkehr wien).<br/>
+  <strong>Portal search:</strong> <a href="https://www.data.gv.at/datasets?query=verkehr+wien&locale=de&page=1">data.gv.at search</a></p>
+</div>
+
+<h2>Short description</h2>
+<p>
+<strong>ELADESTELLEOGD</strong> provides the locations and attributes of public e-charging points (e.g., operator, address, geographic coordinates, connector types, nominal power, opening/parking info. Fields vary by release). This enables smart-city applications around <em>smart energy &amp; mobility management</em> (EV infrastructure planning, accessibility, capacity mapping).
+</p>
+<p>
+From the same portal, we will select at least one <em>transport</em> CSV (e.g., traffic count locations, parking facilities/zones, etc) to enrich our application and demonstrate multi-source linking.
+</p>
+
+<h2>R1–R6 Evaluation</h2>
+
+<h3>ELADESTELLEOGD (main dataset)</h3>
+<table>
+  <thead><tr><th>Requirement</th><th>Status</th><th>Evidence / Rationale</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>R1. Smart city domain</strong></td>
+      <td class="ok">Meets</td>
+      <td>EV charging infrastructure is core to <em>smart mobility &amp; energy</em> (electromobility, decarbonization, infrastructure planning).</td>
+    </tr>
+    <tr>
+      <td><strong>R2. CSV availability</strong></td>
+      <td class="ok">Meets</td>
+      <td>The dataset includes downloadable files (CSV is provided).</td>
+    </tr>
+    <tr>
+      <td><strong>R3. Open license</strong></td>
+      <td class="ok">Meets</td>
+      <td>Published under Austria’s OGD terms on data.gv.at </td>
+    </tr>
+    <tr>
+      <td><strong>R4. Linkable to generic entities</strong></td>
+      <td class="ok">Meets</td>
+      <td>Records include lat/lon, address, and station identifiers → linkable to districts (<em>Bezirke</em>), census grids, road network, and external Knowledge Graphs (e.g., Wikidata place items).</td>
+    </tr>
+    <tr>
+      <td><strong>R5. Documentation</strong> (optional)</td>
+      <td class="ok">Meets</td>
+      <td>Portal page provides metadata and field descriptions.</td>
+    </tr>
+    <tr>
+      <td><strong>R6. Multiple sources</strong> (optional)</td>
+      <td class="ok">Meets (enrichable)</td>
+      <td>We will combine with at least one transport dataset (see below).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Transport dataset(s) from data.gv.at (complementary)</h3>
+<p>We will pick one or more of the following <em>CSV</em> datasets from the “Verkehr Wien” search results (exact links and licenses will be recorded in our repo):</p>
+
+<table>
+  <thead><tr><th>Requirement</th><th>Status</th><th>Evidence / Rationale</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>R1. Smart city domain</strong></td>
+      <td class="ok">Meets</td>
+      <td>Transport datasets (traffic, parking, PT stops) are core smart-city mobility resources.</td>
+    </tr>
+    <tr>
+      <td><strong>R2. CSV availability</strong></td>
+      <td class="ok">Meets</td>
+      <td>The dataset includes downloadable files (CSV is provided).</td>
+    </tr>
+    <tr>
+      <td><strong>R3. Open license</strong></td>
+      <td class="ok">Meets</td>
+      <td>Published under OGD terms.</td>
+    </tr>
+    <tr>
+      <td><strong>R4. Linkable to generic entities</strong></td>
+      <td class="ok">Meets</td>
+      <td>All have geospatial attributes (lat/lon or geometry) and/or IDs → linkable to districts, grid cells, road network, etc.</td>
+    </tr>
+    <tr>
+      <td><strong>R5. Documentation</strong> (optional)</td>
+      <td class="ok">Meets</td>
+      <td>Portal pages provide metadata.</td>
+    </tr>
+    <tr>
+      <td><strong>R6. Multiple sources</strong> (optional)</td>
+      <td class="ok">Meets (used for enrichment)</td>
+      <td>These datasets will be used to enrich ELADESTELLEOGD (e.g., traffic intensity near chargers, parking availability context).</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</body>
+</html>
