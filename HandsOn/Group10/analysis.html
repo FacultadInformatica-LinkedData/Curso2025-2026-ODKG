@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Esquemas de Datos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #004d99; /* Azul oscuro */
+            border-bottom: 2px solid #004d99;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #007bff; /* Azul primario */
+            margin-top: 25px;
+        }
+
+        /* Estilos de tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Bordes unidos */
+            margin: 25px 0;
+            font-size: 0.9em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            border-radius: 8px; /* Bordes redondeados */
+            overflow: hidden; /* Para que la sombra y el borde redondeado funcionen bien */
+        }
+
+        thead tr {
+            background-color: #004d99; /* Fondo azul oscuro para el encabezado */
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        th, td {
+            padding: 12px 15px; /* Relleno para espacio interno */
+            border: 1px solid #dddddd; /* Borde de celda ligero */
+            text-align: left;
+            vertical-align: top; /* Alinear contenido arriba en celdas altas */
+        }
+
+        /* Rayado de cebra para mejorar la lectura */
+        tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3; /* Gris muy claro para filas pares */
+        }
+
+        /* Efecto al pasar el ratón (opcional) */
+        tbody tr:hover {
+            background-color: #e0f7fa; /* Un azul muy claro al pasar el ratón */
+        }
+
+        /* Estilo para la columna de Problemas */
+        td:nth-child(4) {
+            color: #cc0000; /* Rojo para destacar problemas */
+            font-weight: 500;
+        }
+
+        /* Estilos para enlaces y código */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        
+        /* Estilo para secciones con fondo */
+        .licensing-section, .uri-section {
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9; /* Fondo gris claro */
+            border: 1px solid #eee;
+        }
+
+        /* Quitar el estilo que tenías en línea en la tabla */
+        .empty-col {
+            display: none; /* Eliminar columna vacía */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Schema Analysis (2025_09_Setembre_BicingNou_INFORMACIO.csv)</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Type</th>
+      <th>Comments/Range (rounded)</th>
+      <th>Problems</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>station_id</td>
+      <td>xsd:integer</td>
+      <td>Integer, sequential (1..n)</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>address</td>
+      <td>xsd:string</td>
+      <td>Street + number</td>
+      <td>Street and number are not separated</td>
+    </tr>
+    <tr>
+      <td>lat</td>
+      <td>xsd:float</td>
+      <td>41.3–41.5</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>lon</td>
+      <td>xsd:float</td>
+      <td>2.1–2.2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>altitude</td>
+      <td>xsd:float</td>
+      <td>0–300 m</td>
+      <td>Some missing/nulls possible</td>
+    </tr>
+    <tr>
+      <td>post_code</td>
+      <td>xsd:string</td>
+      <td>080xx (Barcelona)</td>
+      <td>Not unique, multiple stations per code</td>
+    </tr>
+    <tr>
+      <td>capacity</td>
+      <td>xsd:integer</td>
+      <td>10–60 docks typical</td>
+      <td>None</td>
+    </tr>  
+  </tbody>
+</table>
+
+<hr>
+
+<h1>Schema Analysis – Trams de Carrer (Barcelona)</h1>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Comments / Range (rounded)</th>
+<th>Problems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FID</td>
+<td>Integer</td>
+<td>Identifier (0–n).</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Distric_D</td>
+<td>String</td>
+<td>Name of district (e.g., “Ciutat Vella”).</td>
+<td>Limited to 10 valid district names.</td>
+</tr>
+<tr>
+<td>NDistric_D</td>
+<td>Integer</td>
+<td>District numeric code (e.g., 01–10).</td>
+<td>Check consistency with name.</td>
+</tr>
+<tr>
+<td>NVia_D</td>
+<td>String</td>
+<td>Street name.</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h1>Schema Analysis (opendatabcn_cultura_espais-de-musica-i-copes.csv)</h1>
+
+<h3><strong>Analyse Data Set</strong></h3>
+<p><strong>• Both the data (quantities, value ranges, etc.) and the schema</strong></p>
+<p>This table maps each CSV column to its proposed role and data type within the ontology design.</p>
+<table>
+<thead>
+<tr>
+<th>CSV Column</th>
+<th>Data Type</th>
+<th>Range/Comments</th>
+<th>Problems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the commerce.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>addresses_road_name</td>
+<td>String</td>
+<td>The name of the road.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>addresses_start_street_number</td>
+<td>Integer</td>
+<td>
+<p>The number of the road the commerce is ubicated.</p>
+<p>0-780, but the majority are low numbers.</p>
+</td>
+<td>-</td>
+</tr>
+<tr>
+<td>addresses_district_id</td>
+<td>Integer</td>
+<td>
+<p>The number of the district.</p>
+<p>1-10</p>
+</td>
+<td>-</td>
+</tr>
+<tr>
+<td>addresses_district_name</td>
+<td>String</td>
+<td>The name of the district.</td>
+<td>Maybe the uppercase / lowercase letter when comparing with other datasets.</td>
+</tr>
+<tr>
+<td>geo_epgs_4326_lat</td>
+<td>Float</td>
+<td>
+<p>The LATITUDE</p>
+<p>41.34 — 41.45</p>
+</td>
+<td>-</td>
+</tr>
+<tr>
+<td>geo_epgs_4326_lon</td>
+<td>Float</td>
+<td>
+<p>The LONGITUDE</p>
+<p>2.10 — 2.20</p>
+</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<div class="licensing-section">
+    <h2>Analyse Licensing of the Data Set</h2>
+    <p><strong>• Who is the publisher and the rightsholder?</strong></p>
+    <p><strong>• What is the license?</strong></p>
+    <p><strong>• Which will be the license to be used for the generated dataset?</strong></p>
+    <p>In this cases, the publisher and the rightsholder is the same entity: the **Townhall of Barcelona**.</p>
+    <p>The license is **Creative Commons 4.0** for all the data selected.</p>
+    <p>We will use the same license **Creative Commons 4.0**.</p>
+    <p><a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank">https://creativecommons.org/licenses/by/4.0/deed.es</a></p>
+</div>
+
+<hr>
+
+<div class="uri-section">
+    <h2>Resource Naming Strategy</h2>
+    <p>The namings strategy followed using lowercases and uppercases is as described in the pdf ODKG 08.MGLD - Ontology.pdf.</p>
+
+    <h3>Base URI</h3>
+    <p>The base URI is</p>
+    <p><code><a href="http://www.barnabikes.org/ODKG/handsOn/group10/" target="_blank">http://www.barnabikes.org/ODKG/handsOn/group10/</a></code></p>
+
+    <h3>Classes and Properties, their URIs</h3>
+    <p>We use **hash (#)** to be part of the scheme of the ontology.</p>
+    <p><strong>Classes and Properties URI:</strong></p>
+    <p><code><a href="http://www.barnabikes.org/ODKG/handsOn/group10/ontology#Neighboorhoood" target="_blank">http://www.barnabikes.org/ODKG/handsOn/group10/ontology#Neighboorhoood</a></code></p>
+    <p><code><a href="http://www.barnabikes.org/ODKG/handsOn/group10/ontology#BikingStation" target="_blank">http://www.barnabikes.org/ODKG/handsOn/group10/ontology#BikingStation</a></code></p>
+
+    <h3>URI for Instances (Resources)</h3>
+    <p>**Slash (/)** is used for entities to be unique.</p>
+    <p><strong>Instances</strong></p>
+    <p>For example, to search the locations in district number 10.</p>
+    <p><code><a href="http://www.barnabikes.org/ODKG/handsOn/group10/resource/district/10" target="_blank">http://www.barnabikes.org/ODKG/handsOn/group10/resource/district/10</a></code></p>
+</div>
+
+</body>
+</html>
