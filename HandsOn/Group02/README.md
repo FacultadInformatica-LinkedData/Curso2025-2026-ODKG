@@ -1,5 +1,0 @@
-Celina Hunziker Cadabal - celhunziker
-Sergio Beamonte González - SergioBeamonte
-Lucas Andosilla Herráiz - LucasAH9
-Paula Herrero Míguez - pauhermig02
-Germán Gil Planes - germaangil
