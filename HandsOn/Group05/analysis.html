@@ -176,6 +176,28 @@
 
 		</div>
 
+        <div>
+            <h3>Resource naming strategy</h3>
+
+            <h4>Namespaces</h4>
+            <p>
+                <strong>Ontology namespace:</strong> <code>http://example.org/ns#</code> (prefix <code>ns:</code>) for classes and predicates.<br>
+                <strong>Instance namespace:</strong> <code>http://example.org/resource/</code> (prefix <code>ex:</code>) for individuals.
+            </p>
+
+            <h4>Entity Naming</h4>
+            <p>Each entity has a URI combining a readable type name and a unique identifier or label:</p>
+            <pre><code>http://example.org/resource/[EntityType]_[IdentifierOrName]</code></pre>
+
+            <table border="1">
+                <tr><th>Entity</th><th>Example URI</th></tr>
+                <tr><td>Trip</td><td><code>ex:Trip_52863628Z_7265_2022-01-01T01:46:23</code></td></tr>
+                <tr><td>Bicycle</td><td><code>ex:Bike7265</code></td></tr>
+                <tr><td>Station</td><td><code>ex:Station_MuseoReinaSofia</code></td></tr>
+                <tr><td>Address</td><td><code>ex:Address_AntonMartin</code></td></tr>
+            </table>
+        </div>
+
     </body>
 
 </html>
