@@ -50,11 +50,11 @@ ns:hasAddress rdf:type owl:ObjectProperty ;
 
 ns:hasLockStation rdf:type owl:ObjectProperty ;
     rdfs:domain ns:Travel ;
-    rdfs:range ns:Address .
+    rdfs:range ns:Station .
 
 ns:hasUnLockStation rdf:type owl:ObjectProperty ;
     rdfs:domain ns:Travel ;
-    rdfs:range ns:Address .
+    rdfs:range ns:Station .
 
 ns:hasBike rdf:type owl:ObjectProperty ;
     rdfs:domain ns:Travel ;
