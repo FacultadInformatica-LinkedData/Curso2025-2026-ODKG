@@ -2,272 +2,366 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSV Data Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consolidated CSV Data Analysis</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: white;
-            color: black;
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
         }
 
         h1 {
             text-align: center;
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: black;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #2c3e50;
         }
 
         h3 {
-            font-size: 18px;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #34495e;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        h4 {
+            font-size: 1.3em;
+            font-weight: 400;
+            color: #34495e;
             margin-bottom: 15px;
-            color: black;
         }
 
         .dataset-section {
-            max-width: 900px;
-            background-color: white;
-            padding: 15px 20px;
-            margin: 20px auto;
-            border-radius: 6px;
-            box-shadow: 0 1px 6px black;
+            max-width: 1100px;
+            background-color: #ffffff;
+            padding: 25px 35px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dataset-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
         }
 
         table {
             border-collapse: collapse;
             width: 100%;
-            table-layout: fixed;
-            margin-bottom: 20px;
+            table-layout: auto;
+            margin-bottom: 25px;
         }
 
         th, td {
-            border: 1px solid white;
-            padding: 8px;
+            padding: 12px 15px;
             word-wrap: break-word;
             text-align: left;
-            font-size: 14px;
+            font-size: 15px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         th {
-            background-color: lightgray;
-            color: black;
+            background-color: #3498db;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
         }
 
         tr:nth-child(even) {
-            background-color: white;
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #ecf0f1;
+        }
+        
+        td:first-child {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .notes-table td, .mapping-table td {
+            font-weight: normal;
+        }
+        
+        .mapping-table code {
+            background-color: #e9ecef;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
         }
 
-        @media (max-width: 600px) {
-            th, td {
-                font-size: 12px;
-                padding: 6px;
-            }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            h1 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
+            .dataset-section { padding: 15px; }
         }
     </style>
 </head>
 <body>
 
-<h1>CSV Data Analysis</h1>
+<h1>Consolidated CSV Data Analysis</h1>
 
-<!-- Dataset 1 -->
 <div class="dataset-section">
     <h3>Pedestrian Counting System - Sensor Locations</h3>
-
     <h4>General Information</h4>
     <table>
-        <tr><th>Property</th><th>Value</th></tr>
-        <tr><td>Total Rows</td><td>143</td></tr>
+        <tr><td style="width: 20%;">Total Rows</td><td>143</td></tr>
         <tr><td>Total Columns</td><td>18</td></tr>
         <tr><td>Publisher</td><td>data.melbourne.vic.gov.au</td></tr>
         <tr><td>Rightsholder</td><td>City of Melbourne Open Data Team</td></tr>
         <tr><td>Current license</td><td>CC BY 4.0</td></tr>
-        <tr><td>License to be used</td><td><!-- Fill encoding --></td></tr>
+        <tr><td>License to be used</td><td>CC BY 4.0</td></tr>
     </table>
-
     <h4>Column Overview</h4>
     <table>
-        <tr>
-            <th>Column Name</th>
-            <th>Data Type</th>
-            <th>Value Range</th>
-            <th>Missing Values</th>
-            <th>Non-unique values</th>
-        </tr>
-        <tr>
-            <td>Location_ID</td>
-            <td>Integer</td>
-            <td>0 - 190</td>
-            <td>0</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td>Sensor_Description</td>
-            <td>String</td>
-            <td>NA</td>
-            <td>0</td>
-            <td>14</td>
-        </tr>
-        <tr>
-            <td>Sensor_Name</td>
-            <td>String</td>
-            <td>NA</td>
-            <td>0</td>
-            <td>16</td>
-        </tr>
-        <tr>
-            <td>Installation_Date</td>
-            <td>Date</td>
-            <td>Tue Jan 20 2009 01:00:00 GMT+0100 - Sat Jun 28 2025 02:00:00 GMT+0200</td>
-            <td>0</td>
-            <td>90</td>
-        </tr>
-        <tr>
-            <td>Note</td>
-            <td>String</td>
-            <td>NA</td>
-            <td>110</td>
-            <td>126</td>
-        </tr>
-        <tr>
-            <td>Location_Type</td>
-            <td>Categorical</td>
-            <td>Indoor, Outdoor</td>
-            <td>0</td>
-            <td>Indoor - 34, Outdoor - 109</td>
-        </tr>
-        <tr>
-            <td>Status</td>
-            <td>Categorical</td>
-            <td>A</td>
-            <td>0</td>
-            <td>A - 143</td>
-        </tr>
-        <tr>
-            <td>Direction_1</td>
-            <td>Categorical</td>
-            <td>East, In, North</td>
-            <td>32</td>
-            <td>East - 46, In - 7, North - 58</td>
-        </tr>
-        <tr>
-            <td>Direction_2</td>
-            <td>Categorical</td>
-            <td>InOut, Out, South, West</td>
-            <td>32</td>
-            <td>InOut - 4, Out - 7, South - 54, West - 46</td>
-        </tr>
-        <tr>
-            <td>Latitude</td>
-            <td>Double</td>
-            <td>-37.83 — -37.79</td>
-            <td>0</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td>Longitude</td>
-            <td>Double</td>
-            <td>144.93 — 144.99</td>
-            <td>0</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td>Location</td>
-            <td>Pair(Double,Double)</td>
-            <td>NA</td>
-            <td>0</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <td>Street</td>
-            <td>String</td>
-            <td>NA</td>
-            <td>0</td>
-            <td>124</td>
-        </tr>
-        <tr>
-            <td>HouseNumber</td>
-            <td>Integer</td>
-            <td>0 - 1100</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>PostCode</td>
-            <td>Integer</td>
-            <td>3000 - 3054</td>
-            <td>0</td>
-            <td>143</td>
-        </tr>
-        <tr>
-            <td>City</td>
-            <td>Categorical</td>
-            <td>Carlton, Docklands, East Melbourne, Kensington, Melbourne, North Melbourne, Parkville, South Wharf, Southbank, West Melbourne</td>
-            <td>0</td>
-            <td>Carlton - 3, Docklands - 9, East Melbourne - 2, Melbourne - 113, North Melbourne - 3, Parkville - 2, Southbank - 6, West Melbourne - 3</td>
-        </tr>
-        <tr>
-            <td>Country</td>
-            <td>Categorical</td>
-            <td>Australia</td>
-            <td>0</td>
-            <td>Australia - 143</td>
-        </tr>
-        <tr>
-            <td>FullAdress</td>
-            <td>String</td>
-            <td>NA</td>
-            <td>0</td>
-            <td>29</td>
-        </tr>
+        <tr><th>Column Name</th><th>Data Type</th><th>Missing</th><th>Unique</th><th>Value Range / Top Values</th></tr>
+        <tr><td>Location_ID</td><td>Numeric</td><td>0</td><td>135</td><td>1 — 185</td></tr>
+        <tr><td>Sensor_Description</td><td>Categorical</td><td>0</td><td>134</td><td>Bourke Street Mall (North), Town Hall (West), Victoria Point, Waterfront City, Spencer St-Collins St (North), ...</td></tr>
+        <tr><td>Sensor_Name</td><td>Categorical</td><td>0</td><td>133</td><td>Bou292_T, Swa123_T, BouHbr_T, WatCit_T, Col620_T, ...</td></tr>
+        <tr><td>Installation_Date</td><td>Date</td><td>0</td><td>80</td><td>2009-01-20 — 2025-06-28</td></tr>
+        <tr><td>Note</td><td>Categorical</td><td>109</td><td>21</td><td>Pushbox Upgrade, 25/07/2023, Pushbox Upgrade, 03/08/2023, In 4/12/2019 sensor upgraded, Pushbox Upgrade, 20/07/2023, Replaced - water damaged, ...</td></tr>
+        <tr><td>Location_Type</td><td>Categorical</td><td>0</td><td>2</td><td>Outdoor, Indoor</td></tr>
+        <tr><td>Status</td><td>Categorical</td><td>0</td><td>1</td><td>A</td></tr>
+        <tr><td>Direction_1</td><td>Categorical</td><td>32</td><td>3</td><td>East, North, In</td></tr>
+        <tr><td>Direction_2</td><td>Categorical</td><td>32</td><td>4</td><td>West, South, Out, InOut</td></tr>
+        <tr><td>Latitude</td><td>Numeric</td><td>0</td><td>135</td><td>-37.82590962 — -37.7893527</td></tr>
+        <tr><td>Longitude</td><td>Numeric</td><td>0</td><td>135</td><td>144.9286055 — 144.98638807</td></tr>
+        <tr><td>Location</td><td>Categorical</td><td>0</td><td>135</td><td>-37.81349441, 144.96515323, -37.81487988, 144.9660878, -37.81876474, 144.94710545, -37.81564989, 144.93970694, -37.81887963, 144.95449198, ...</td></tr>
+        <tr><td>street</td><td>Categorical</td><td>0</td><td>47</td><td>Bourke Street Mall, Swanston Street, Bourke Street, Newquay Promenade, Collins Street, ...</td></tr>
+        <tr><td>housenumber</td><td>Categorical</td><td>4</td><td>109</td><td>280, 117, 770, 84, 620, ...</td></tr>
+        <tr><td>postcode</td><td>Numeric</td><td>0</td><td>10</td><td>3000 — 3053</td></tr>
+        <tr><td>city</td><td>Categorical</td><td>0</td><td>10</td><td>Melbourne, Docklands, Carlton, Southbank, North Melbourne, ...</td></tr>
+        <tr><td>country</td><td>Categorical</td><td>0</td><td>1</td><td>Australia</td></tr>
+        <tr><td>formatted</td><td>Categorical</td><td>0</td><td>126</td><td>Cue City, 280 Bourke Street Mall, Melbourne VIC 3000, Australia, 117 Swanston Street, Melbourne VIC 3000, Australia, 770 Bourke Street, Docklands VIC 3008, Australia, 84 Newquay Promenade, Docklands VIC 3008, Australia, Liberty Tower, 620 Collins Street, Melbourne VIC 3000, Australia, ...</td></tr>
     </table>
-
     <h4>Data Quality Notes</h4>
-    <table>
-        <tr>
-            <th>Column(s) Affected</th>
-            <th>Observation</th>
-        </tr>
-        <tr>
-            <td>Status</td>
-            <td>All the rows have the same value (A).</td>
-        </tr>
-        <tr>
-            <td>Direction_1, Direction_2</td>
-            <td>Whenever Direction_1 = In, Direction_2 = Out and viceversa.</td>
-        </tr>
-        <tr>
-            <td>Direction_1, Direction_2</td>
-            <td>Whenever Direction_1 = East, Direction_2 = West and viceversa.</td>
-        </tr>
-        <tr>
-            <td>Direction_1, Direction_2</td>
-            <td>Both columns are blank in the same rows.</td>
-        </tr>
-        <tr>
-            <td>HouseNumber</td>
-            <td>There are 16 non-numeric rows. They can be of two differents formats: range of numbers (e.g. 207-361) or a number followed by a letter (e.g. 514B).</td>
-        </tr>
-        <tr>
-            <td>Country</td>
-            <td>All the rows have the same value (Australia).</td>
-        </tr>
+    <table class="notes-table">
+        <tr><th>Column(s) Affected</th><th>Observation</th></tr>
+        <tr><td>Location, Sensor_Description, Sensor_Name</td><td>These columns are redundant or very similar. 'Location' duplicates 'Latitude' and 'Longitude'.</td></tr>
+        <tr><td>Status</td><td>The column has a single value ('A') and does not add variability to the analysis.</td></tr>
+        <tr><td>Direction_1, Direction_2</td><td>These columns work in pairs (North/South, East/West) and are populated together.</td></tr>
+        <tr><td>Note</td><td>The column has a high percentage of missing values, which is expected for a notes field.</td></tr>
     </table>
 </div>
 
-<!-- Repeat for Dataset 2, 3, 4 -->
 <div class="dataset-section">
-    <h3>Dataset 2: [Dataset Name]</h3>
-    <!-- Tables same as above -->
+    <h3>Pedestrian Counting System - Monthly Counts Per Hour</h3>
+    <h4>General Information</h4>
+    <table>
+        <tr><td style="width: 20%;">Total Rows</td><td>1417050</td></tr>
+        <tr><td>Total Columns</td><td>9</td></tr>
+        <tr><td>Publisher</td><td>data.melbourne.vic.gov.au</td></tr>
+        <tr><td>Rightsholder</td><td>City of Melbourne Open Data Team</td></tr>
+        <tr><td>Current license</td><td>CC BY 4.0</td></tr>
+        <tr><td>License to be used</td><td>CC BY 4.0</td></tr>
+    </table>
+    <h4>Column Overview</h4>
+    <table>
+        <tr><th>Column Name</th><th>Data Type</th><th>Missing</th><th>Unique</th><th>Value Range / Top Values</th></tr>
+        <tr><td>ID</td><td>Numeric</td><td>0</td><td>1417050</td><td>1020231002 — 1852320250930</td></tr>
+        <tr><td>Location_ID</td><td>Numeric</td><td>0</td><td>100</td><td>1 — 185</td></tr>
+        <tr><td>Sensing_Date</td><td>Date</td><td>0</td><td>731</td><td>2023-10-02 — 2025-10-01</td></tr>
+        <tr><td>HourDay</td><td>Numeric</td><td>0</td><td>24</td><td>0 — 23</td></tr>
+        <tr><td>Direction_1</td><td>Numeric</td><td>0</td><td>3054</td><td>0 — 10099</td></tr>
+        <tr><td>Direction_2</td><td>Numeric</td><td>0</td><td>3170</td><td>0 — 10207</td></tr>
+        <tr><td>Total_of_Directions</td><td>Numeric</td><td>0</td><td>4729</td><td>0 — 10223</td></tr>
+        <tr><td>Sensor_Name</td><td>Categorical</td><td>0</td><td>98</td><td>Fra118_T, QVMQ_T, FLDegN_T, 488Mac_T, Col12_T, ...</td></tr>
+        <tr><td>Location</td><td>Categorical</td><td>0</td><td>100</td><td>-37.80841815, 144.95906316, -37.80631581, 144.95866697, -37.8168479, 144.96559789, -37.79432415, 144.92973378, -37.81344862, 144.97305353, ...</td></tr>
+    </table>
+    <h4>Data Quality Notes</h4>
+    <table class="notes-table">
+        <tr><th>Column(s) Affected</th><th>Observation</th></tr>
+        <tr><td>Total_of_Directions</td><td>Calculated column (Direction_1 + Direction_2) and therefore redundant.</td></tr>
+        <tr><td>Sensor_Name, Location</td><td>This data is redundant, as it can be obtained from the locations dataset via the 'Location_ID'.</td></tr>
+        <tr><td>ID</td><td>Functions as a unique identifier for each record, ensuring no duplicate rows.</td></tr>
+        <tr><td>Location_ID</td><td>This column establishes a direct relationship with the sensor locations dataset.</td></tr>
+    </table>
 </div>
 
 <div class="dataset-section">
-    <h3>Dataset 3: [Dataset Name]</h3>
-    <!-- Tables same as above -->
+    <h3>Microclimate Sensor Locations</h3>
+    <h4>General Information</h4>
+    <table>
+        <tr><td style="width: 20%;">Total Rows</td><td>16</td></tr>
+        <tr><td>Total Columns</td><td>15</td></tr>
+        <tr><td>Publisher</td><td>data.melbourne.vic.gov.au</td></tr>
+        <tr><td>Rightsholder</td><td>City of Melbourne Open Data Team</td></tr>
+        <tr><td>Current license</td><td>CC BY 4.0</td></tr>
+        <tr><td>License to be used</td><td>CC BY 4.0</td></tr>
+    </table>
+    <h4>Column Overview</h4>
+    <table>
+        <tr><th>Column Name</th><th>Data Type</th><th>Missing</th><th>Unique</th><th>Value Range / Top Values</th></tr>
+        <tr><td>Site_ID</td><td>Numeric</td><td>0</td><td>16</td><td>1001 — 1016</td></tr>
+        <tr><td>GateWayHub_ID</td><td>Categorical</td><td>0</td><td>9</td><td>arc1045, arc1046, arc1047, arc1113, arc1112, ...</td></tr>
+        <tr><td>Site_Status</td><td>Categorical</td><td>0</td><td>2</td><td>R, C</td></tr>
+        <tr><td>Last_Data_Local</td><td>Numeric</td><td>16</td><td>0</td><td>Not applicable</td></tr>
+        <tr><td>Start_Reading</td><td>Date</td><td>0</td><td>6</td><td>2019-11-15 — 2021-09-17</td></tr>
+        <tr><td>End_Reading</td><td>Date</td><td>9</td><td>3</td><td>2021-06-13 — (Not finished)</td></tr>
+        <tr><td>Latitude</td><td>Numeric</td><td>0</td><td>16</td><td>-37.82250002 — -37.800524</td></tr>
+        <tr><td>Longitude</td><td>Numeric</td><td>0</td><td>16</td><td>144.951835 — 144.9725</td></tr>
+        <tr><td>Location</td><td>Categorical</td><td>0</td><td>16</td><td>-37.81746522, 144.96705703, -37.800524, 144.964122, -37.811944, 144.956389, -37.82246, 144.951835, -37.82250002, 144.95222195, ...</td></tr>
+        <tr><td>street</td><td>Categorical</td><td>0</td><td>9</td><td>Flinders Street, Grattan Street, William Street, Siddeley Street, Spring Street, ...</td></tr>
+        <tr><td>housenumber</td><td>Categorical</td><td>0</td><td>16</td><td>216, 151, 307, 67, 57, ...</td></tr>
+        <tr><td>postcode</td><td>Numeric</td><td>0</td><td>3</td><td>3000 — 3053</td></tr>
+        <tr><td>city</td><td>Categorical</td><td>0</td><td>3</td><td>Melbourne, Carlton, Docklands</td></tr>
+        <tr><td>country</td><td>Categorical</td><td>0</td><td>1</td><td>Australia</td></tr>
+        <tr><td>formatted</td><td>Categorical</td><td>0</td><td>16</td><td>216 Flinders Street, Melbourne VIC 3000, Australia, 151 Grattan Street, Carlton VIC 3053, Australia, 307 William Street, Melbourne VIC 3000, Australia, 67 Siddeley Street, Docklands VIC 3008, Australia, 57 Siddeley Street, Docklands VIC 3008, Australia, ...</td></tr>
+    </table>
+    <h4>Data Quality Notes</h4>
+    <table class="notes-table">
+        <tr><th>Column(s) Affected</th><th>Observation</th></tr>
+        <tr><td>Location, formatted</td><td>These columns are redundant. 'Location' duplicates the information from 'Latitude' and 'Longitude', and 'formatted' combines other address columns.</td></tr>
+        <tr><td>Last_Data_Local</td><td>The column is completely empty (100% missing values) and provides no information.</td></tr>
+        <tr><td>country</td><td>The column has a single value ('Australia') for all rows.</td></tr>
+        <tr><td>End_Reading</td><td>The high number of missing values likely indicates that these sensors are still active.</td></tr>
+    </table>
 </div>
 
 <div class="dataset-section">
-    <h3>Dataset 4: [Dataset Name]</h3>
-    <!-- Tables same as above -->
+    <h3>Microclimate Sensors Data</h3>
+    <h4>General Information</h4>
+    <table>
+        <tr><td style="width: 20%;">Total Rows</td><td>473287</td></tr>
+        <tr><td>Total Columns</td><td>16</td></tr>
+        <tr><td>Publisher</td><td>data.melbourne.vic.gov.au</td></tr>
+        <tr><td>Rightsholder</td><td>City of Melbourne Open Data Team</td></tr>
+        <tr><td>Current license</td><td>CC BY 4.0</td></tr>
+        <tr><td>License to be used</td><td>CC BY 4.0</td></tr>
+    </table>
+    <h4>Column Overview</h4>
+    <table>
+        <tr><th>Column Name</th><th>Data Type</th><th>Missing</th><th>Unique</th><th>Value Range / Top Values</th></tr>
+        <tr><td>Device_id</td><td>Categorical</td><td>0</td><td>12</td><td>ICTMicroclimate-10, ICTMicroclimate-05, ICTMicroclimate-01, ICTMicroclimate-07, ICTMicroclimate-08, ...</td></tr>
+        <tr><td>Time</td><td>Date</td><td>0</td><td>469984</td><td>2024-05-29 — 2025-10-06</td></tr>
+        <tr><td>SensorLocation</td><td>Categorical</td><td>6143</td><td>11</td><td>1 Treasury Place, Enterprize Park - Pole ID: COM1667, Birrarung Marr Park - Pole 1131, Tram Stop 7C - Melbourne Tennis Centre Precinct - Rod Laver Arena, Swanston St - Tram Stop 13 adjacent Federation Sq & Flinders St Station, ...</td></tr>
+        <tr><td>LatLong</td><td>Categorical</td><td>11483</td><td>12</td><td>-37.8128595, 144.9745395, -37.8204083, 144.9591192, -37.8185931, 144.9716404, -37.8222341, 144.9829409, -37.8184515, 144.9678474, ...</td></tr>
+        <tr><td>MinimumWindDirection</td><td>Numeric</td><td>47754</td><td>360</td><td>0.0 — 359.0</td></tr>
+        <tr><td>AverageWindDirection</td><td>Numeric</td><td>531</td><td>360</td><td>0.0 — 359.0</td></tr>
+        <tr><td>MaximumWindDirection</td><td>Numeric</td><td>47912</td><td>361</td><td>0.0 — 360.0</td></tr>
+        <tr><td>MinimumWindSpeed</td><td>Numeric</td><td>47912</td><td>411</td><td>0.0 — 359.0</td></tr>
+        <tr><td>AverageWindSpeed</td><td>Numeric</td><td>531</td><td>104</td><td>0.0 — 11.1</td></tr>
+        <tr><td>GustWindSpeed</td><td>Numeric</td><td>47912</td><td>306</td><td>0.0 — 52.5</td></tr>
+        <tr><td>AirTemperature</td><td>Numeric</td><td>531</td><td>543</td><td>-0.8 — 40.8</td></tr>
+        <tr><td>RelativeHumidity</td><td>Numeric</td><td>531</td><td>1551</td><td>4.0 — 99.800003</td></tr>
+        <tr><td>AtmosphericPressure</td><td>Numeric</td><td>531</td><td>1646</td><td>20.9 — 1042.9</td></tr>
+        <tr><td>PM25</td><td>Numeric</td><td>21522</td><td>544</td><td>0.0 — 1030.7</td></tr>
+        <tr><td>PM10</td><td>Numeric</td><td>21522</td><td>135</td><td>0.0 — 308.0</td></tr>
+        <tr><td>Noise</td><td>Numeric</td><td>21522</td><td>1140</td><td>0.0 — 131.1</td></tr>
+    </table>
+    <h4>Data Quality Notes</h4>
+    <table class="notes-table">
+        <tr><th>Column(s) Affected</th><th>Observation</th></tr>
+        <tr><td>Various</td><td>Columns such as PM25, PM10, Noise, and those related to wind have a high volume of missing values.</td></tr>
+        <tr><td>MinimumWindSpeed</td><td>The maximum value of 359.0 is implausible and is likely wind direction data entered by mistake.</td></tr>
+        <tr><td>LatLong</td><td>The column is redundant, as the location can be obtained by linking 'Device_id' with its locations table.</td></tr>
+        <tr><td>Various</td><td>The inconsistency in missing values between basic metrics (few) and advanced ones (many) suggests different types of sensors.</td></tr>
+    </table>
+</div>
+
+<div class="dataset-section">
+    <h3>Public Holidays</h3>
+    <h4>General Information</h4>
+    <table>
+        <tr><td style="width: 20%;">Total Rows</td><td>459</td></tr>
+        <tr><td>Total Columns</td><td>16</td></tr>
+        <tr><td>Publisher</td><td>adelaide.figshare.com</td></tr>
+        <tr><td>Rightsholder</td><td>University of Adelaide</td></tr>
+        <tr><td>Current license</td><td>CC0 1.0</td></tr>
+        <tr><td>License to be used</td><td>CC BY 4.0</td></tr>
+    </table>
+    <h4>Column Overview</h4>
+    <table>
+        <tr><th>Column Name</th><th>Data Type</th><th>Missing</th><th>Unique</th><th>Value Range / Top Values</th></tr>
+        <tr><td>Date</td><td>Date</td><td>0</td><td>458</td><td>2004-01-01 — 2023-12-26</td></tr>
+        <tr><td>Year</td><td>Numeric</td><td>0</td><td>20</td><td>2004 — 2023</td></tr>
+        <tr><td>Month</td><td>Numeric</td><td>0</td><td>11</td><td>1 — 12</td></tr>
+        <tr><td>Day</td><td>Numeric</td><td>0</td><td>31</td><td>1 — 31</td></tr>
+        <tr><td>DOW</td><td>Categorical</td><td>0</td><td>7</td><td>Thursday, Monday, Friday, Saturday, Sunday, ...</td></tr>
+        <tr><td>Public holiday</td><td>Categorical</td><td>0</td><td>54</td><td>New Year's Day, Australia Day, Royal Hobart Regatta, Labour Day, ...</td></tr>
+        <tr><td>Adelaide</td><td>Numeric</td><td>239</td><td>1</td><td>1.0 — 1.0</td></tr>
+        <tr><td>Brisbane</td><td>Numeric</td><td>217</td><td>1</td><td>1.0 — 1.0</td></tr>
+        <tr><td>Canberra</td><td>Numeric</td><td>199</td><td>1</td><td>1.0 — 1.0</td></tr>
+        <tr><td>Darwin</td><td>Numeric</td><td>227</td><td>1</td><td>1.0 — 1.0</td></tr>
+        <tr><td>Hobart</td><td>Numeric</td><td>238</td><td>1</td><td>1.0 — 1.0</td></tr>
+        <tr><td>Melbourne</td><td>Numeric</td><td>206</td><td>1</td><td>1.0 — 1.0</td></tr>
+        <tr><td>Perth</td><td>Numeric</td><td>232</td><td>1</td><td>1.0 — 1.0</td></tr>
+        <tr><td>Sydney</td><td>Numeric</td><td>229</td><td>1</td><td>1.0 — 1.0</td></tr>
+        <tr><td>Number</td><td>Numeric</td><td>0</td><td>8</td><td>1 — 8</td></tr>
+        <tr><td>National_holiday</td><td>Unknown</td><td>0</td><td>2</td><td>Not applicable</td></tr>
+    </table>
+    <h4>Data Quality Notes</h4>
+    <table class="notes-table">
+        <tr><th>Column(s) Affected</th><th>Observation</th></tr>
+        <tr><td>Year, Month, Day, DOW</td><td>These columns are redundant, as their information can be extracted from the 'Date' column.</td></tr>
+        <tr><td>Number</td><td>This column is a calculated field (the sum of cities where it is a holiday) and is therefore redundant.</td></tr>
+        <tr><td>Adelaide, ..., Sydney</td><td>The dataset uses a "wide format" with a column for each city, which generates many nulls and could be optimized.</td></tr>
+        <tr><td>City Columns, National_holiday</td><td>These columns act as binary indicators (flags) to classify each holiday.</td></tr>
+    </table>
+</div>
+
+<div class="dataset-section">
+    <h3>Ontology Strategy and Data Mapping</h3>
+    <p>The ontology is designed to create a structured, interconnected representation of the different datasets. It defines the main concepts (as <strong>Classes</strong>), the attributes of these concepts (as <strong>Data Properties</strong>), and the relationships between them (as <strong>Object Properties</strong>).</p>
+
+    <h4>1. Mapping Datasets to Classes</h4>
+    <p>Each dataset, or a key concept within it, is mapped to a class in the ontology:</p>
+    <table class="mapping-table">
+        <tr><th style="width: 40%;">Ontology Class</th><th style="width: 60%;">Corresponding Dataset(s)</th></tr>
+        <tr><td><code>:SensorLocation</code></td><td>Represents a physical location from <em>Pedestrian Sensor Locations</em> and <em>Microclimate Sensor Locations</em>.</td></tr>
+        <tr><td><code>:PedestrianObservation</code></td><td>Represents a single row (a specific count at a specific time) from <em>Pedestrian Monthly Counts</em>.</td></tr>
+        <tr><td><code>:MicroClimateObservation</code></td><td>Represents a single row (a set of measurements) from <em>Microclimate Sensors Data</em>.</td></tr>
+        <tr><td><code>:PublicHoliday</code></td><td>Represents a holiday entry from the <em>Public Holidays</em> dataset.</td></tr>
+        <tr><td><code>:StreetSegment</code></td><td>Represents the concept of a street, derived from address columns in the location datasets.</td></tr>
+    </table>
+    
+    <h4>2. Mapping CSV Columns to Data Properties</h4>
+    <p>The columns within each CSV file are mapped to data properties that describe the attributes of the corresponding class.</p>
+    <table class="mapping-table">
+        <tr><th>Dataset Column</th><th>Ontology Property</th><th>Description</th></tr>
+        <tr><td><code>Installation_Date</code></td><td><code>:installationDate</code></td><td>Links a sensor to its installation date.</td></tr>
+        <tr><td><code>Latitude</code>, <code>Longitude</code></td><td><code>:latitude</code>, <code>:longitude</code></td><td>Define the geographic coordinates of a <code>:SensorLocation</code>.</td></tr>
+        <tr><td><code>city</code>, <code>postcode</code></td><td><code>:cityName</code>, <code>:postcode</code></td><td>Provide address details for a <code>:SensorLocation</code>.</td></tr>
+        <tr><td><code>Total_of_Directions</code></td><td><code>:pedestrianCount</code></td><td>Represents the total count for a <code>:PedestrianObservation</code>.</td></tr>
+        <tr><td><code>Direction_1</code>, <code>Direction_2</code></td><td><code>:direction1Count</code>, <code>:direction2Count</code></td><td>Store the individual directional counts.</td></tr>
+        <tr><td><code>AirTemperature</code></td><td><code>:airTemperature</code></td><td>Stores the temperature for a <code>:MicroClimateObservation</code>.</td></tr>
+        <tr><td><code>RelativeHumidity</code></td><td><code>:humidity</code></td><td>Stores the humidity for a <code>:MicroClimateObservation</code>.</td></tr>
+        <tr><td><code>AtmosphericPressure</code></td><td><code>:pressure</code></td><td>Stores the pressure for a <code>:MicroClimateObservation</code>.</td></tr>
+        <tr><td><code>Noise</code>, <code>AverageWindSpeed</code></td><td><code>:noiseLevel</code>, <code>:windSpeed</code></td><td>Store other environmental readings.</td></tr>
+        <tr><td><code>Public holiday</code> (name)</td><td><code>:holidayName</code></td><td>The name of the holiday for a <code>:PublicHoliday</code> instance.</td></tr>
+        <tr><td><code>Date</code> (holiday)</td><td><code>:holidayDate</code></td><td>The date of the holiday.</td></tr>
+    </table>
+
+    <h4>3. Linking Datasets with Object Properties</h4>
+    <p>Object properties define the relationships between classes, effectively linking the different datasets together into a cohesive knowledge graph.</p>
+    <table class="mapping-table">
+        <tr><th>Object Property</th><th>Domain (Source)</th><th>Range (Target)</th><th>Description and Link</th></tr>
+        <tr><td><code>:observedAtLocation</code></td><td><code>sosa:Observation</code></td><td><code>:SensorLocation</code></td><td>Links an observation (either <code>:PedestrianObservation</code> or <code>:MicroClimateObservation</code>) to the location where it was recorded. This is achieved by joining via <strong>Location_ID</strong> or <strong>Site_ID</strong>.</td></tr>
+        <tr><td><code>:locatedOnStreet</code></td><td><code>:SensorLocation</code></td><td><code>:StreetSegment</code></td><td>Links a sensor's location to a specific street segment, using the <strong>street</strong> column from the location datasets.</td></tr>
+        <tr><td><code>:occursOnHoliday</code></td><td><code>sosa:Observation</code></td><td><code>:PublicHoliday</code></td><td>Links an observation to a public holiday if their dates match. This connects sensor data with the holiday schedule.</td></tr>
+    </table>
+    
+    <h4>4. Naming Conventions</h4>
+    <p>A consistent naming convention is used for all ontology elements to ensure clarity:</p>
+    <ul>
+        <li><strong>Classes</strong> use <strong>UpperCamelCase</strong> (e.g., <code>:SensorLocation</code>, <code>:PublicHoliday</code>).</li>
+        <li><strong>Properties</strong> (both object and data) use <strong>lowerCamelCase</strong> (e.g., <code>:hasSensor</code>, <code>:airTemperature</code>).</li>
+        <li>Each element includes a human-readable <code>rdfs:label</code> in English for better understanding (e.g., "pedestrian count").</li>
+    </ul>
 </div>
 
 </body>
