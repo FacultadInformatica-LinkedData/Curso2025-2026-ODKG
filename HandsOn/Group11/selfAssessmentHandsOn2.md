@@ -31,10 +31,10 @@
 - [x] Contains at least one class that will be used to link to other entities
 
 **The sample instantiation file:**
-- [] Uses the .ttl extension
-- [] Is serialized in the Turtle format
-- [] Follows the resource naming strategy
-- [] Does not include the definition of ontology terms
+- [x] Uses the .ttl extension
+- [x] Is serialized in the Turtle format
+- [x] Follows the resource naming strategy
+- [x] Does not include the definition of ontology terms
 
 ## Comments on the self-assessment
 _(If required)_
