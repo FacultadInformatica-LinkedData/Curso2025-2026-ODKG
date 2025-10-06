@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV Data Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+            color: black;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: black;
+        }
+
+        .dataset-section {
+            max-width: 900px;
+            background-color: white;
+            padding: 15px 20px;
+            margin: 20px auto;
+            border-radius: 6px;
+            box-shadow: 0 1px 6px black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            word-wrap: break-word;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: lightgray;
+            color: black;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+        }
+
+        @media (max-width: 600px) {
+            th, td {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSV Data Analysis</h1>
+
+<!-- Dataset 1 -->
+<div class="dataset-section">
+    <h3>Pedestrian Counting System - Sensor Locations</h3>
+
+    <h4>General Information</h4>
+    <table>
+        <tr><th>Property</th><th>Value</th></tr>
+        <tr><td>Total Rows</td><td>143</td></tr>
+        <tr><td>Total Columns</td><td>18</td></tr>
+        <tr><td>Publisher</td><td>data.melbourne.vic.gov.au</td></tr>
+        <tr><td>Rightsholder</td><td>City of Melbourne Open Data Team</td></tr>
+        <tr><td>Current license</td><td>CC BY 4.0</td></tr>
+        <tr><td>License to be used</td><td><!-- Fill encoding --></td></tr>
+    </table>
+
+    <h4>Column Overview</h4>
+    <table>
+        <tr>
+            <th>Column Name</th>
+            <th>Data Type</th>
+            <th>Value Range</th>
+            <th>Missing Values</th>
+            <th>Non-unique values</th>
+        </tr>
+        <tr>
+            <td>Location_ID</td>
+            <td>Integer</td>
+            <td>0 - 190</td>
+            <td>0</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Sensor_Description</td>
+            <td>String</td>
+            <td>NA</td>
+            <td>0</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>Sensor_Name</td>
+            <td>String</td>
+            <td>NA</td>
+            <td>0</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Installation_Date</td>
+            <td>Date</td>
+            <td>Tue Jan 20 2009 01:00:00 GMT+0100 - Sat Jun 28 2025 02:00:00 GMT+0200</td>
+            <td>0</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>Note</td>
+            <td>String</td>
+            <td>NA</td>
+            <td>110</td>
+            <td>126</td>
+        </tr>
+        <tr>
+            <td>Location_Type</td>
+            <td>Categorical</td>
+            <td>Indoor, Outdoor</td>
+            <td>0</td>
+            <td>Indoor - 34, Outdoor - 109</td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>Categorical</td>
+            <td>A</td>
+            <td>0</td>
+            <td>A - 143</td>
+        </tr>
+        <tr>
+            <td>Direction_1</td>
+            <td>Categorical</td>
+            <td>East, In, North</td>
+            <td>32</td>
+            <td>East - 46, In - 7, North - 58</td>
+        </tr>
+        <tr>
+            <td>Direction_2</td>
+            <td>Categorical</td>
+            <td>InOut, Out, South, West</td>
+            <td>32</td>
+            <td>InOut - 4, Out - 7, South - 54, West - 46</td>
+        </tr>
+        <tr>
+            <td>Latitude</td>
+            <td>Double</td>
+            <td>-37.83 — -37.79</td>
+            <td>0</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Longitude</td>
+            <td>Double</td>
+            <td>144.93 — 144.99</td>
+            <td>0</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>Pair(Double,Double)</td>
+            <td>NA</td>
+            <td>0</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Street</td>
+            <td>String</td>
+            <td>NA</td>
+            <td>0</td>
+            <td>124</td>
+        </tr>
+        <tr>
+            <td>HouseNumber</td>
+            <td>Integer</td>
+            <td>0 - 1100</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>PostCode</td>
+            <td>Integer</td>
+            <td>3000 - 3054</td>
+            <td>0</td>
+            <td>143</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>Categorical</td>
+            <td>Carlton, Docklands, East Melbourne, Kensington, Melbourne, North Melbourne, Parkville, South Wharf, Southbank, West Melbourne</td>
+            <td>0</td>
+            <td>Carlton - 3, Docklands - 9, East Melbourne - 2, Melbourne - 113, North Melbourne - 3, Parkville - 2, Southbank - 6, West Melbourne - 3</td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>Categorical</td>
+            <td>Australia</td>
+            <td>0</td>
+            <td>Australia - 143</td>
+        </tr>
+        <tr>
+            <td>FullAdress</td>
+            <td>String</td>
+            <td>NA</td>
+            <td>0</td>
+            <td>29</td>
+        </tr>
+    </table>
+
+    <h4>Data Quality Notes</h4>
+    <table>
+        <tr>
+            <th>Column(s) Affected</th>
+            <th>Observation</th>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>All the rows have the same value (A).</td>
+        </tr>
+        <tr>
+            <td>Direction_1, Direction_2</td>
+            <td>Whenever Direction_1 = In, Direction_2 = Out and viceversa.</td>
+        </tr>
+        <tr>
+            <td>Direction_1, Direction_2</td>
+            <td>Whenever Direction_1 = East, Direction_2 = West and viceversa.</td>
+        </tr>
+        <tr>
+            <td>Direction_1, Direction_2</td>
+            <td>Both columns are blank in the same rows.</td>
+        </tr>
+        <tr>
+            <td>HouseNumber</td>
+            <td>There are 16 non-numeric rows. They can be of two differents formats: range of numbers (e.g. 207-361) or a number followed by a letter (e.g. 514B).</td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>All the rows have the same value (Australia).</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Repeat for Dataset 2, 3, 4 -->
+<div class="dataset-section">
+    <h3>Dataset 2: [Dataset Name]</h3>
+    <!-- Tables same as above -->
+</div>
+
+<div class="dataset-section">
+    <h3>Dataset 3: [Dataset Name]</h3>
+    <!-- Tables same as above -->
+</div>
+
+<div class="dataset-section">
+    <h3>Dataset 4: [Dataset Name]</h3>
+    <!-- Tables same as above -->
+</div>
+
+</body>
+</html>
