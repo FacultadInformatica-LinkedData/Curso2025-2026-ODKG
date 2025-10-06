@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dataset Requirements — Assessment</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; line-height: 1.5; }
+    h1 { color: #0b5bd3; }
+    h2 { color: #333; margin-top: 1.5em; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1em; }
+    th, td { border: 1px solid #ccc; padding: 0.5em; text-align: left; }
+    th { background: #f7f7f7; }
+    
+    .grid { display: grid; gap: 1rem; }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    @media (max-width: 900px) {
+      .grid.cols-2 { grid-template-columns: 1fr; }
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      padding: 1rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #0b5bd3;
+    }
+    .mono { 
+      font-family: monospace; 
+      background: #f7f7f7; 
+      padding: 0.1em 0.3em; 
+      border-radius: 4px; 
+    }
+    .card a { color: #0b5bd3; text-decoration: none; }
+    .card a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Dataset Requirements</h1>
+  <p>
+    This document discusses whether each selected dataset satisfies the requirements.
+    R1-R4 must be satisfied. R5-R6 are optional and their degree of satisfaction is discussed.
+    Identifies the licenses of all the selected datasets and those entities in the selected datasets that can be linked with entities in
+other datasets.
+
+  </p>
+
+  <h1>1) Datasets</h1>
+  <h2>Dataset 1 - <em>BiciMAD stations and status</em></h2>
+  <p><strong>File:</strong> <a href="../csv/bikestationbicimad_csv.csv">bikestationbicimad_csv.csv</a></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Req</th>
+        <th>Statement</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Status Discussion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>R1</td>
+        <td>Data belong to a smart city domain.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Urban mobility / transport is a smart city domain.</td>
+      </tr>
+      <tr>
+        <td>R2</td>
+        <td>Data are available as CSV.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Provided as CSV. Available in: <a href="../csv/bikestationbicimad_csv.csv">BiciMad Database</a>.</td>
+      </tr>
+      <tr>
+        <td>R3</td>
+        <td>Open license allows publication.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Open reuse permitted. Use conditions available in: 
+            <a href="https://datos.madrid.es/portal/site/egob/menuitem.3efdb29b813ad8241e830cc2a8a409a0/?vgnextoid=108804d4aab90410VgnVCM100000171f5a0aRCRD&vgnextchannel=b4c412b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default" target="_blank">BiciMad dataset use conditions</a>.
+        </td>
+      </tr>
+      <tr>
+        <td>R4</td>
+        <td>Data can be easily linked with real-world entities.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Linkable via station IDs, station address, district code, district suburb, coordinates.</td>
+      </tr>
+      <tr>
+        <td>R5</td>
+        <td>Documentation exists for the data.</td>
+        <td>Optional</td>
+        <td>Partial</td>
+        <td>Basic field and dataset content descriptions available. Available in:
+          <a href="https://datos.madrid.es/FWProjects/egob/Catalogo/Transporte/Bici/ficheros/EstructuraEstacionesBicimad.pdf" target="_blank">BiciMad dataset documentation</a>.
+        </td>
+      </tr>
+      <tr>
+        <td>R6</td>
+        <td>Data may come from multiple sources.</td>
+        <td>Optional</td>
+        <td>Not satisfied</td>
+        <td>Dirección de Tecnología e Innovación de EMT MADRID is the only publisher.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Datasets 2-13 - <em>Analisis_redes_BiciMAD</em></h2>
+  <p><strong>File:</strong> <a href="../csv/bikestationbicimad_csv.csv">bikestationbicimad_csv.csv</a></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Req</th>
+        <th>Statement</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Status Discussion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>R1</td>
+        <td>Data belong to a smart city domain.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Urban mobility / transport is a smart city domain.</td>
+      </tr>
+      <tr>
+        <td>R2</td>
+        <td>Data are available as CSV.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Provided as CSV. Available in:<br> 
+          <a href="../csv/viajes_22_01.csv">Analisis_redes_BiciMAD_1</a>.<br>
+          <a href="../csv/viajes_22_02.csv">Analisis_redes_BiciMAD_2</a>.<br>
+          <a href="../csv/viajes_22_03.csv">Analisis_redes_BiciMAD_3</a>.<br>
+          <a href="../csv/viajes_22_04.csv">Analisis_redes_BiciMAD_4</a>.<br>
+          <a href="../csv/viajes_22_05.csv">Analisis_redes_BiciMAD_5</a>.<br>
+          <a href="../csv/viajes_22_06.csv">Analisis_redes_BiciMAD_6</a>.<br>
+          <a href="../csv/viajes_22_07.csv">Analisis_redes_BiciMAD_7</a>.<br>
+          <a href="../csv/viajes_22_08.csv">Analisis_redes_BiciMAD_8</a>.<br>
+          <a href="../csv/viajes_22_09.csv">Analisis_redes_BiciMAD_9</a>.<br>
+          <a href="../csv/viajes_22_10.csv">Analisis_redes_BiciMAD_10</a>.<br>
+          <a href="../csv/viajes_22_11.csv">Analisis_redes_BiciMAD_11</a>.<br>
+          <a href="../csv/viajes_22_12.csv">Analisis_redes_BiciMAD_12</a>.</td>
+      </tr>
+      <tr>
+        <td>R3</td>
+        <td>Open license allows publication.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Open reuse permitted. Use conditions available in: 
+            <a href="https://mobilitylabs.emtmadrid.es/sip/terms-of-use" target="_blank">Analisis_redes_BiciMAD dataset use conditions</a>.
+        </td>
+      </tr>
+      <tr>
+        <td>R4</td>
+        <td>Data can be easily linked with real-world entities.</td>
+        <td>Mandatory</td>
+        <td>Satisfied</td>
+        <td>Linkable via station IDs, station address, district code, district suburb, coordinates.</td>
+      </tr>
+      <tr>
+        <td>R5</td>
+        <td>Documentation exists for the data.</td>
+        <td>Optional</td>
+        <td>Satisfied</td>
+        <td>Basic field and dataset content descriptions available. Available in:
+          <a href="https://github.com/datosgobes/Laboratorio-de-Datos/blob/main/Visualizaciones/Analisis_redes_BiciMAD/readme.md" target="_blank">Analisis_redes_BiciMAD dataset documentation</a>.
+        </td>
+      </tr>
+      <tr>
+        <td>R6</td>
+        <td>Data may come from multiple sources.</td>
+        <td>Optional</td>
+        <td>Not satisfied</td>
+        <td>Empresa Municipal de Transportes de Madrid is the only publisher.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section id="data">
+    <h2>2) Data & Linking Requirements</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Linking Attributes (from the BiciMAD CSV)</h3>
+        <ul>
+          <li><span class="mono">Name</span></li>
+          <li><span class="mono">Address</span></li>
+          <li><span class="mono">Latitude</span>, <span class="mono">Longitude</span></li>
+          <li><span class="mono">FreeBases</span></li>
+          <li><span class="mono">DockBikes</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Examples of linking possibilities to other Open Data DataBases</h3>
+        <ul>
+          <li><span class="mono">Metro Callao (name) - <a href="https://www.wikidata.org/wiki/Q2055072">https://www.wikidata.org/wiki/Q2055072</a></span></li>
+          <li><span class="mono">Plaza Conde Suchil (name) - <a href="https://www.wikidata.org/wiki/Q27244013">https://www.wikidata.org/wiki/Q27244013</a></span></li>
+          <li><span class="mono">Malasaña (name) - <a href="https://www.wikidata.org/wiki/Q106103914">https://www.wikidata.org/wiki/Q106103914</a></span></li>
+          <li><span class="mono">Banco de España (name) - <a href="https://www.wikidata.org/wiki/Q2481227">https://www.wikidata.org/wiki/Q2481227</a></span></li>
+          <li><span class="mono">Calle San Andrés (address) - <a href="https://www.wikidata.org/wiki/Q27166315">https://www.wikidata.org/wiki/Q27166315</a></span></li>
+          <li><span class="mono">Plaza del Cordón (address) - <a href="https://www.wikidata.org/wiki/Q52063495">https://www.wikidata.org/wiki/Q52063495</a></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
