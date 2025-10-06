@@ -84,6 +84,34 @@ See the license text: <a href="https://creativecommons.org/licenses/by/4.0/" tar
   </li>
 </ul>
 
+<hr>
+<h2>Dataset analysis (detailed)</h2>
+<table>
+  <tr>
+    <th>Column</th>
+    <th>Type</th>
+    <th>Comments / Range</th>
+    <th>Problems</th>
+    <th>Unique values</th>
+    <th>Total rows</th>
+    <th>Nulls</th>
+  </tr>
+  <tr><td><b>ADDRESS</b></td><td>String</td><td>Not unique; not standardized; split street/number</td><td>Standardize street / number; dedupe spaces &amp; case</td><td>780</td><td>829</td><td>0</td></tr>
+  <tr><td><b>BEZIRK</b></td><td>Float</td><td>Not unique; linkable (district)</td><td>Contains nulls (150)</td><td>23</td><td>829</td><td>150</td></tr>
+  <tr><td><b>CITY</b></td><td>String</td><td>Not unique; linkable (city)</td><td>-</td><td>51</td><td>829</td><td>0</td></tr>
+  <tr><td><b>COUNTRYCODE</b></td><td>String</td><td>ISO 3166-1 alpha-2 (e.g., ES); normalize to uppercase</td><td>-</td><td>1</td><td>829</td><td>0</td></tr>
+  <tr><td><b>DESIGNATION</b></td><td>String</td><td>Human-readable station name/designation</td><td>-</td><td>829</td><td>829</td><td>0</td></tr>
+  <tr><td><b>DIRECTPAYMENT</b></td><td>Integer</td><td>Boolean flag (direct payment available); normalize 0/1 → True/False</td><td>-</td><td>1</td><td>829</td><td>0</td></tr>
+  <tr><td><b>EVSEID</b></td><td>String</td><td>Unique identifier of EVSE/station; preferred key</td><td>-</td><td>829</td><td>829</td><td>0</td></tr>
+  <tr><td><b>FID</b></td><td>String</td><td>Unique identifier (source/GIS); stable key</td><td>-</td><td>829</td><td>829</td><td>0</td></tr>
+  <tr><td><b>HUBJECT_COMPATIBLE</b></td><td>Float</td><td>General attribute; review for standardization/linkage</td><td>Contains nulls (829)</td><td>0</td><td>829</td><td>829</td></tr>
+  <tr><td><b>OBJECTID</b></td><td>Integer</td><td>Internal index (not linkable); may be source row id</td><td>-</td><td>829</td><td>829</td><td>0</td></tr>
+  <tr><td><b>OPERATORNAME</b></td><td>String</td><td>Label/name; not unique; consider rdfs:label</td><td>-</td><td>1</td><td>829</td><td>0</td></tr>
+  <tr><td><b>SE_ANNO_CAD_DATA</b></td><td>Float</td><td>General attribute; review for standardization/linkage</td><td>Contains nulls (829)</td><td>0</td><td>829</td><td>829</td></tr>
+  <tr><td><b>SHAPE</b></td><td>String</td><td>Geometry type (e.g., Point); not a key</td><td>-</td><td>797</td><td>829</td><td>0</td></tr>
+  <tr><td><b>SOURCE</b></td><td>Float</td><td>General attribute; review for standardization/linkage</td><td>Contains nulls (829)</td><td>0</td><td>829</td><td>829</td></tr>
+</table>
+
 </body>
 </html>
 
