@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      max-width: 800px;
+      max-width: 1300px;
       margin: 40px auto;
       line-height: 1.6;
       color: #111;
@@ -161,17 +161,17 @@
       All classes and properties are defined under the ontology namespace:
     </p>
     <div class="code-block">
-      <code>http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#</code>
+      <code>http://crtm-urban-buses.org/opendata/handsOn/group11/ontology<h2></code>
     </div>
     <p>
-      This namespace uses the hash (<code>#</code>) fragment identifier pattern, which is suitable for ontologies
+      This namespace uses the hash (<code><h2></code>) fragment identifier pattern, which is suitable for ontologies
       and allows all ontology resources to be retrieved with a single HTTP request.
     </p>
     <p><strong>Examples:</strong></p>
     <ul>
-      <li><code>ont:BusRoute</code> → <code>http://...group11/ontology#BusRoute</code></li>
-      <li><code>ont:hasTrip</code> → <code>http://...group11/ontology#hasTrip</code></li>
-      <li><code>ont:routeShortName</code> → <code>http://...group11/ontology#routeShortName</code></li>
+      <li><code>ont:BusRoute</code> → <code>http://...group11/ontology<h2>BusRoute</code></li>
+      <li><code>ont:hasTrip</code> → <code>http://...group11/ontology<h2>hasTrip</code></li>
+      <li><code>ont:routeShortName</code> → <code>http://...group11/ontology<h2>routeShortName</code></li>
     </ul>
 
     <h3>Individual Resources (Data Instances)</h3>
@@ -241,7 +241,7 @@
     <h3>Key Design Principles</h3>
     <ol>
       <li>
-        <strong>Separation of Concerns:</strong> Ontology resources (<code>/ontology#</code>) are completely
+        <strong>Separation of Concerns:</strong> Ontology resources (<code>/ontology<h2></code>) are completely
         separated from data instances (<code>/resource/...</code>).
       </li>
       <li>
@@ -252,7 +252,7 @@
       <li>
         <strong>URI Independence:</strong> Individual URIs are constructed independently from class URIs.
         For example, a bus route instance URI (<code>.../resource/route/001</code>) does not derive from
-        or depend on the class URI (<code>.../ontology#BusRoute</code>).
+        or depend on the class URI (<code>.../ontology<h2>BusRoute</code>).
       </li>
       <li>
         <strong>Human-Readable Identifiers:</strong> URIs use meaningful identifiers (e.g., <code>puerta-del-sol</code>)
@@ -277,11 +277,11 @@
     <h3>Example URI Structure</h3>
     <div class="code-block">
       <pre>
-# Ontology (Classes and Properties)
-http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#BusRoute
-http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#hasTrip
+<h2> Ontology (Classes and Properties)
+http://crtm-urban-buses.org/opendata/handsOn/group11/ontology<h2>BusRoute
+http://crtm-urban-buses.org/opendata/handsOn/group11/ontology<h2>hasTrip
 
-# Data Instances (Different paths for different classes)
+<h2> Data Instances (Different paths for different classes)
 http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/001
 http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/puerta-del-sol
 http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/12345
@@ -292,7 +292,7 @@ http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/12345
     <div class="code-block">
       <pre>
 @prefix base: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11&gt; .
-@prefix ont: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#&gt; .
+@prefix ont: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/ontology<h2>&gt; .
 @prefix feed: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/feedinfo/&gt;
 @prefix agency: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/&gt;
 @prefix route: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/&gt; .
@@ -306,6 +306,173 @@ http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/12345
     </div>
   </section>
 
+
+<pre>
+  <div>
+    <h1>Dataset files column type analysis</h1>
+    <p>For more info please reffer to the official <a href="https://gtfs.org/documentation/schedule/reference/#general-transit-feed-specification-reference" target="_blank">documentation</a> that we used as reference.
+    </p>
+    <section>
+      <h2>shapes.txt</h2>
+        <sub>
+            ->Describes the path of travel of the public trasist vehicles.
+        </sub>
+        <strong>shape_id: </strong>Identifier, String type
+        <strong>shape_pt_lat: </strong>Coordinates, type Signed Float
+        <strong>shape_pt_lon: </strong>Coordinates, type Signed Float
+        <strong>shape_pt_sequence: </strong>Order number, type Integer
+        <strong>shape_dist_traveled: </strong>Distance, type Float
+      </p>
+    </section>
+    <section>
+      <h2>stop_times.txt</h2>
+        <sub>
+          ->Times at which a public trasport vehicle arrives at and leaves stops for each trip.
+        </sub>
+        <strong>trip_id: </strong>Identifier, foreign key, type String
+        <strong>arrival_time: </strong>Time, type Time/String
+        <strong>departure_time: </strong>Time, type Time/String
+        <strong>stop_id: </strong>Identifier, foreign key, type String
+        <strong>stop_sequence: </strong>Order number, type Integer
+        <strong>stop_headsign: </strong>Descriptor, type String
+        <strong>pickup_type: </strong>Enumerator type Integer
+        <strong>drop_off_type: </strong>Enumerator type Integer
+        <strong>shape_dist_traveled: </strong>Type Unsigned Float
+      </section>
+      <section>
+      <h2> stops.txt</h2>
+        <sub>
+          ->Stops or stations at which a public trasport vehicles pick up or drop off passengers.
+        </sub>
+        <strong>stop_id: </strong>Identifier, String type
+        <strong>stop_code: </strong>Secondary identifier, type String
+        <strong>stop_name:	Descriptor, type String
+        <strong>stop_desc:	Descriptor, type String
+        <strong>stop_lat: </strong>Coordinates, type Signed Float
+        <strong>stop_lon: </strong>Coordinates, type Signed Float
+        <strong>zone_id: </strong>Identifier, String type
+        <strong>stop_url: </strong>URL, type String
+        <strong>parent_station: </strong>Station, type string
+        <strong>stop_timezone: </strong>Time Zone, type String
+        <strong>wheelchair_boarding: </strong>Location type enumerator, type Integer
+      </section>
+      <section>
+        <h2>trips.txt </h2>
+        <sub>
+          ->Trips for each route.
+        </sub>
+        <strong>route_id: </strong>Identifier, foreign key, type String
+        <strong>service_id: </strong>Identifier, foreign key, type String
+        <strong>trip_id: </strong>Identifier, String type
+        <strong>trip_headsign: </strong>Descriptor, type String
+        <strong>trip_short_name: </strong>Descriptor, type String
+        <strong>direction_id: </strong>sentido de la marcha, Enumerator type Integer
+        <strong>block_id: </strong>Identifier, String type (desconocido)
+        <strong>shape_id: </strong>Identifier, foreign key, type String
+        <strong>wheelchair_accessible: </strong>Descriptor, Enumerator type Integer
+      </section>
+      <section>
+      <h2>agency.txt</h2>
+        <sub>
+          ->Public transit agencies present in the dataset.
+        </sub>
+        <strong>agency_id: </strong>Identifier, String type
+        <strong>agency_name: </strong>Descriptor, type String
+        <strong>agency_url: </strong>URL, type String
+        <strong>agency_timezone: </strong>Time Zone, type String
+        <strong>agency_lang: </strong>Language code, type string
+        <strong>agency_phone: </strong>Phone number, Type integer (unless it includes the "+" in the prefix)
+        <strong>agency_fare_url: </strong>URL, type String
+      </section>
+      <section>
+      <h2>calendar.txt</h2>
+        <sub>
+          ->Dates at which public transit is available.
+        </sub>
+        <strong>service_id: </strong>Identifier, String type
+        <strong>monday: </strong>Enum/Boolean, type Integer/Bit/Boolean
+        <strong>tuesday: </strong>Enum/Boolean, type Integer/Bit/Boolean
+        <strong>wednesday: </strong>Enum/Boolean, type Integer/Bit/Boolean
+        <strong>thursday: </strong>Enum/Boolean, type Integer/Bit/Boolean
+        <strong>friday: </strong>Enum/Boolean, type Integer/Bit/Boolean
+        <strong>saturday: </strong>Enum/Boolean, type Integer/Bit/Boolean
+        <strong>sunday: </strong>Enum/Boolean, type Integer/Bit/Boolean
+        <strong>start_date: </strong>Start Date, type Date
+        <strong>end_date: </strong>End Date, type Date
+      </section>
+      <section>
+      <h2>calendar_dates.txt</h2>
+        <sub>
+          ->Dates at which public transit is not available exceptionally.
+        </sub>
+        <strong>service_id: </strong>Identifier, foreign key, type String
+        <strong>date: </strong>Exceptiond date, type Date
+        <strong>exception_type: </strong>Enumerator, type Integer
+      </section>
+      <section>
+      <h2>fare_atributes.txt</h2>
+        <sub>
+          ->Information about the fares
+        </sub>
+        <strong>fare_id: </strong>Identifier, type String
+        <strong>price: </strong>Price, type Unsigned Float
+        <strong>currency_type: </strong>currency code, type String
+        <strong>payment_method: </strong>moment of payment, Enumerador type Integer
+        <strong>transfers: </strong>Enumerator, type Integer
+        <strong>transfer_duration: </strong>duration_limit, type Unsigned Integer
+      </section>
+      <section>
+      <h2>fare_rules.txt</h2>
+        <sub>
+          ->Rules regarding the fares
+        </sub>
+        <strong>fare_id: </strong>Identifier, foreign key, type String
+        <strong>route_id: </strong>Identifier, foreign key, type String
+        <strong>origin_id: </strong>Identifier, foreign key, type String
+        <strong>destination_id: </strong>Identifier, foreign key, type String
+        <strong>contains_id: </strong>Identifier, foreign key, type String
+      </section>
+      <section>
+      <h2>feed_info.txt</h2>
+        <sub>
+          ->Dataset metadata.
+        </sub>
+        <strong>feed_publisher_name: </strong>Descriptor, type String
+        <strong>feed_publisher_url: </strong>URL, type String
+        <strong>feed_lang: </strong>Language code, type string
+        <strong>feed_start_date: </strong>Start Date, type Date
+        <strong>feed_end_date: </strong>End Date, type Date
+        <strong>feed_version: </strong>Descriptor, type String
+      </section>
+      <section>
+      <h2>frequencies.txt</h2>
+        <sub>
+          ->Time between trips.
+        </sub>
+        <strong>trip_id: </strong>Identifier, foreign key, type String
+        <strong>start_time: </strong>Start time, type Time
+        <strong>end_time: </strong>End time, type Time
+        <strong>headway_secs: </strong>Time in seconds, type Unsigned Integer
+        <strong>exact_times: </strong>Enum/Boolean, type Integer/Bit/Boolean
+      </section>
+      <section>
+      <h2>routes.txt</h2>
+        <sub>
+          ->Routes of the public transit system
+        </sub>
+        <strong>route_id: </strong>Identifier, String type
+        <strong>agency_id: </strong>Identifier, foreign key, type String
+        <strong>route_short_name: </strong>Descriptor, type String
+        <strong>route_long_name: </strong>Descriptor, type String
+        <strong>route_desc: </strong>Descriptor, type String
+        <strong>route_type: </strong>Enumerator, type Integer
+        <strong>route_url: </strong>URL, type String
+        <strong>route_color: </strong>color code in Hexadecimal, type String
+        <strong>route_text_color: </strong>color code in Hexadecimal, type String
+      </section>
+    </p>
+  </div>
+</pre>
 </body>
 
 </html>
