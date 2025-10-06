@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <title>Analysis</title>
@@ -13,20 +14,70 @@
       color: #111;
       background: #fafafa;
     }
-    h1, h2 {
+
+    h1,
+    h2,
+    h3 {
       color: #003366;
     }
+
     section {
       background: #fff;
       padding: 16px 22px;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       margin-bottom: 24px;
     }
+
     a {
       color: #004d99;
       text-decoration: none;
     }
+
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: "Courier New", monospace;
+      font-size: 0.9em;
+      color: #d63384;
+    }
+
+    .code-block {
+      background: #f8f9fa;
+      padding: 12px;
+      border-left: 3px solid #004d99;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #f0f4f8;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 10px 0;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
     footer {
       font-size: 0.9rem;
       color: #555;
@@ -35,21 +86,19 @@
     }
   </style>
 </head>
+
 <body>
-
   <h1>Licence and Data Set Analysis</h1>
-
   <section>
     <h2>Publisher and Rightsholder</h2>
     <p>
       The <strong>Consorcio Regional de Transportes de Madrid (CRTM)</strong> is the publisher and rightsholder
-      of the dataset <em>“GTFS - Urban Bus Network”</em>, available at
+      of the dataset <em>"GTFS - Urban Bus Network"</em>, available at
       <a href="https://datos.crtm.es/datasets/357e63c2904f43aeb5d8a267a64346d8/about" target="_blank">
         datos.crtm.es
       </a>.
     </p>
   </section>
-
   <section>
     <h2>License</h2>
     <p>
@@ -59,29 +108,204 @@
       conditions are met:
     </p>
     <ul>
-      <li>Mandatory attribution: <em>“Powered by Consorcio Regional de Transportes de Madrid (CRTM)”</em>.</li>
+      <li>Mandatory attribution: <em>"Powered by Consorcio Regional de Transportes de Madrid (CRTM)"</em>.</li>
       <li>Preservation of metadata and provenance information.</li>
       <li>No implication of sponsorship or endorsement by the CRTM.</li>
-      <li>Link to the license and to the official portal: <a href="https://www.crtm.es/" target="_blank">www.crtm.es</a>.</li>
+      <li>Link to the license and to the official portal: <a href="https://www.crtm.es/"
+          target="_blank">www.crtm.es</a>.</li>
     </ul>
+  </section>
+  <section>
+    <h2>License for Generated Dataset</h2>
+    <p>
+      The generated dataset is licensed under the
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+        Creative Commons Attribution 4.0 International (CC BY 4.0)
+      </a>.
+      This license allows sharing and adaptation for any purpose, including commercial use,
+      provided that appropriate credit is given to the
+      <strong>Consorcio Regional de Transportes de Madrid (CRTM)</strong> as the source of the original data.
+    </p>
+    <p>
+      Users must include proper attribution, link to the license, and indicate if any modifications were made.
+      No additional restrictions apply.
+    </p>
   </section>
 
   <section>
-    <h2>License for Generated Dataset</h2>
-   <p>
-    The generated dataset is licensed under the
-    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
-      Creative Commons Attribution 4.0 International (CC BY 4.0)
-    </a>.
-    This license allows sharing and adaptation for any purpose, including commercial use,
-    provided that appropriate credit is given to the
-    <strong>Consorcio Regional de Transportes de Madrid (CRTM)</strong> as the source of the original data.
-  </p>
-  <p>
-    Users must include proper attribution, link to the license, and indicate if any modifications were made.
-    No additional restrictions apply.
-  </p>
+    <h2>Resource Naming Strategy</h2>
+    <p>
+      The resource naming strategy for this project follows Linked Data best practices to ensure
+      clear separation between ontology resources and data instances, as well as proper URI design
+      for different entity types.
+    </p>
+
+    <h3>Base URI and Domain</h3>
+    <p>
+      The base URI for all resources is:
+    </p>
+    <div class="code-block">
+      <code>http://crtm-urban-buses.org/opendata/handsOn/group11/</code>
+    </div>
+    <p>
+      This domain was chosen to:
+    </p>
+    <ul>
+      <li>Avoid using default Protégé namespaces (e.g., <code>semanticweb.org</code>)</li>
+      <li>Reflect the project context (CRTM urban buses)</li>
+      <li>Provide semantic meaning and organization (opendata/handsOn/group11)</li>
+    </ul>
+
+    <h3>Ontology Namespace</h3>
+    <p>
+      All classes and properties are defined under the ontology namespace:
+    </p>
+    <div class="code-block">
+      <code>http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#</code>
+    </div>
+    <p>
+      This namespace uses the hash (<code>#</code>) fragment identifier pattern, which is suitable for ontologies
+      and allows all ontology resources to be retrieved with a single HTTP request.
+    </p>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li><code>ont:BusRoute</code> → <code>http://...group11/ontology#BusRoute</code></li>
+      <li><code>ont:hasTrip</code> → <code>http://...group11/ontology#hasTrip</code></li>
+      <li><code>ont:routeShortName</code> → <code>http://...group11/ontology#routeShortName</code></li>
+    </ul>
+
+    <h3>Individual Resources (Data Instances)</h3>
+    <p>
+      Individual resources use <strong>different paths</strong> depending on their class type,
+      ensuring clear separation and independent URI design. The slash (<code>/</code>) pattern
+      is used for individuals to allow for content negotiation and scalability.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Entity Type</th>
+          <th>URI Pattern</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Feed Info</strong></td>
+          <td><code>.../resource/feedinfo/{feedInfoId}</code></td>
+          <td><code>.../resource/feedinfo/2025-01-01</code></td>
+        </tr>
+        <tr>
+          <td><strong>Agency</strong></td>
+          <td><code>.../resource/agency/{agencyId}</code></td>
+          <td><code>.../resource/agency/CRTM</code></td>
+        </tr>
+        <tr>
+          <td><strong>Bus Route</strong></td>
+          <td><code>.../resource/route/{routeId}</code></td>
+          <td><code>.../resource/route/001</code></td>
+        </tr>
+        <tr>
+          <td><strong>Trip</strong></td>
+          <td><code>.../resource/trip/{tripId}</code></td>
+          <td><code>.../resource/trip/12345</code></td>
+        </tr>
+        <tr>
+          <td><strong>Stop</strong></td>
+          <td><code>.../resource/stop/{stopId}</code></td>
+          <td><code>.../resource/stop/puerta-del-sol</code></td>
+        </tr>
+        <tr>
+          <td><strong>Stop Time</strong></td>
+          <td><code>.../resource/stoptime/{stoptimeId}</code></td>
+          <td><code>.../resource/stoptime/st-001</code></td>
+        </tr>
+        <tr>
+          <td><strong>Calendar Service</strong></td>
+          <td><code>.../resource/service/{serviceId}</code></td>
+          <td><code>.../resource/service/weekday</code></td>
+        </tr>
+        <tr>
+          <td><strong>Calendar Exception</strong></td>
+          <td><code>.../resource/exception/{exceptionId}</code></td>
+          <td><code>.../resource/exception/holiday-2025-12-25</code></td>
+        </tr>
+        <tr>
+          <td><strong>Shape</strong></td>
+          <td><code>.../resource/shape/{shapeId}</code></td>
+          <td><code>.../resource/shape/shape-001</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Key Design Principles</h3>
+    <ol>
+      <li>
+        <strong>Separation of Concerns:</strong> Ontology resources (<code>/ontology#</code>) are completely
+        separated from data instances (<code>/resource/...</code>).
+      </li>
+      <li>
+        <strong>Class-Specific Paths:</strong> Each class type has its own distinct path segment
+        (e.g., <code>/route/</code>, <code>/stop/</code>, <code>/trip/</code>), preventing URI collisions
+        and improving data organization.
+      </li>
+      <li>
+        <strong>URI Independence:</strong> Individual URIs are constructed independently from class URIs.
+        For example, a bus route instance URI (<code>.../resource/route/001</code>) does not derive from
+        or depend on the class URI (<code>.../ontology#BusRoute</code>).
+      </li>
+      <li>
+        <strong>Human-Readable Identifiers:</strong> URIs use meaningful identifiers (e.g., <code>puerta-del-sol</code>)
+        rather than arbitrary numbers when appropriate, improving readability and maintainability.
+      </li>
+      <li>
+        <strong>Scalability:</strong> The slash-based pattern for individuals allows for future implementation
+        of content negotiation and HTTP redirects to serve different representations (HTML, RDF/XML, JSON-LD, etc.).
+      </li>
+    </ol>
+
+    <h3>Content Negotiation (Future Implementation)</h3>
+    <p>
+      Although not implemented in this assignment, the URI design supports future content negotiation:
+    </p>
+    <ul>
+      <li><strong>HTML representation:</strong> <code>Accept: text/html</code> → Human-readable webpage</li>
+      <li><strong>RDF/Turtle:</strong> <code>Accept: text/turtle</code> → Machine-readable RDF data</li>
+      <li><strong>JSON-LD:</strong> <code>Accept: application/ld+json</code> → JSON-LD format</li>
+    </ul>
+
+    <h3>Example URI Structure</h3>
+    <div class="code-block">
+      <pre>
+# Ontology (Classes and Properties)
+http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#BusRoute
+http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#hasTrip
+
+# Data Instances (Different paths for different classes)
+http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/001
+http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/puerta-del-sol
+http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/12345
+</pre>
+    </div>
+
+    <h3>Namespace Prefixes Used</h3>
+    <div class="code-block">
+      <pre>
+@prefix base: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11&gt; .
+@prefix ont: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#&gt; .
+@prefix feed: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/feedinfo/&gt;
+@prefix agency: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/&gt;
+@prefix route: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/&gt; .
+@prefix trip: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/&gt; .
+@prefix shape: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/shape/&gt; .
+@prefix stop: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/&gt; .
+@prefix stoptime: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stoptime/&gt; .
+@prefix service: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendarservice/&gt; .
+@prefix exception: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendarexception/&gt; .
+</pre>
+    </div>
   </section>
 
 </body>
+
 </html>
