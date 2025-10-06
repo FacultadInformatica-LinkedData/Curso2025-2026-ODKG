@@ -161,17 +161,17 @@
       All classes and properties are defined under the ontology namespace:
     </p>
     <div class="code-block">
-      <code>http://crtm-urban-buses.org/opendata/handsOn/group11/ontology<h2></code>
+      <code>http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#</code>
     </div>
     <p>
-      This namespace uses the hash (<code><h2></code>) fragment identifier pattern, which is suitable for ontologies
+      This namespace uses the hash (<code>#</code>) fragment identifier pattern, which is suitable for ontologies
       and allows all ontology resources to be retrieved with a single HTTP request.
     </p>
     <p><strong>Examples:</strong></p>
     <ul>
-      <li><code>ont:BusRoute</code> → <code>http://...group11/ontology<h2>BusRoute</code></li>
-      <li><code>ont:hasTrip</code> → <code>http://...group11/ontology<h2>hasTrip</code></li>
-      <li><code>ont:routeShortName</code> → <code>http://...group11/ontology<h2>routeShortName</code></li>
+      <li><code>ont:BusRoute</code> → <code>http://...group11/ontology#usRoute</code></li>
+      <li><code>ont:hasTrip</code> → <code>http://...group11/ontology#hasTrip</code></li>
+      <li><code>ont:routeShortName</code> → <code>http://...group11/ontology#outeShortName</code></li>
     </ul>
 
     <h3>Individual Resources (Data Instances)</h3>
@@ -241,7 +241,7 @@
     <h3>Key Design Principles</h3>
     <ol>
       <li>
-        <strong>Separation of Concerns:</strong> Ontology resources (<code>/ontology<h2></code>) are completely
+        <strong>Separation of Concerns:</strong> Ontology resources (<code>/ontology#</code>) are completely
         separated from data instances (<code>/resource/...</code>).
       </li>
       <li>
@@ -252,7 +252,7 @@
       <li>
         <strong>URI Independence:</strong> Individual URIs are constructed independently from class URIs.
         For example, a bus route instance URI (<code>.../resource/route/001</code>) does not derive from
-        or depend on the class URI (<code>.../ontology<h2>BusRoute</code>).
+        or depend on the class URI (<code>.../ontology#BusRoute</code>).
       </li>
       <li>
         <strong>Human-Readable Identifiers:</strong> URIs use meaningful identifiers (e.g., <code>puerta-del-sol</code>)
@@ -277,11 +277,11 @@
     <h3>Example URI Structure</h3>
     <div class="code-block">
       <pre>
-<h2> Ontology (Classes and Properties)
-http://crtm-urban-buses.org/opendata/handsOn/group11/ontology<h2>BusRoute
-http://crtm-urban-buses.org/opendata/handsOn/group11/ontology<h2>hasTrip
+# Ontology (Classes and Properties)
+http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#BusRoute
+http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#hasTrip
 
-<h2> Data Instances (Different paths for different classes)
+-# Data Instances (Different paths for different classes)
 http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/001
 http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/puerta-del-sol
 http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/12345
@@ -292,7 +292,7 @@ http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/12345
     <div class="code-block">
       <pre>
 @prefix base: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11&gt; .
-@prefix ont: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/ontology<h2>&gt; .
+@prefix ont: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#&gt; .
 @prefix feed: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/feedinfo/&gt;
 @prefix agency: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/&gt;
 @prefix route: &lt;http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/&gt; .
