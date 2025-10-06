@@ -1,0 +1,63 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Prefijos de la ontología
+@prefix ns: <http://www.barnabikes.org/ODKG/handsOn/group10/> .
+@prefix nameDistrict: <http://www.owl-ontologies.com/nameDistrict#> .
+@prefix nameStreet: <http://www.owl-ontologies.com/nameStreet#> .
+@prefix numberDistrict: <http://www.owl-ontologies.com/numberDistrict#> .
+@prefix numberStreet: <http://www.owl-ontologies.com/numberStreet#> .
+
+# ----------------------------------------------------
+# 1. INSTANCIACIÓN DE LA CLASE ns:District
+# ----------------------------------------------------
+
+ns: Ciutat Vella rdf:type ns:District ;
+    rdfs:label "Ciutat Vella" ; # Etiqueta opcional para el humano
+    
+    # Usa la propiedad de dato 'ns' para el nombre del distrito (nameDistrict:prefix)
+    ns:ns "Ciutat Vella"^^nameDistrict:prefix ; 
+    
+    # Usa la propiedad de dato 'ns' para el número del distrito (numberDistrict:prefix)
+    ns:ns "10"^^numberDistrict:prefix . 
+    
+
+# ----------------------------------------------------
+# 2. INSTANCIACIÓN DE LA CLASE ns:Street
+# ----------------------------------------------------
+
+
+ns:PasseigDeGraciaStreet rdf:type ns:Street ;
+    rdfs:label "Passeig de Gràcia" ;
+    
+
+    ns:ns "Passeig de Gràcia"^^nameStreet:prefix ;
+        ns:ns "08007"^^numberStreet:prefix . 
+
+# ----------------------------------------------------
+# 3. INSTANCIACIÓN DE LA CLASE ns:BikingStation (Conexión a District)
+# ----------------------------------------------------
+
+ns:Station_123 rdf:type ns:BikingStation ;
+    rdfs:label "Estación Bicing 123 - Diagonal/PasseigGracia" ;
+
+    ns:hasDistrict ns: Ciutat Vella . 
+    
+ns:Station_45 rdf:type ns:BikingStation ;
+    rdfs:label "Estación Bicing 45 - La Rambla" ;
+    ns:hasDistrict ns:CiutatVellaDistrict .
+
+# ----------------------------------------------------
+# 4. INSTANCIACIÓN DE LA CLASE ns:Bar (Conexión a District y Street)
+# ----------------------------------------------------
+
+ns:Cafe_Moderno_Bar rdf:type ns:Bar ;
+    rdfs:label "Bar: Cafe Moderno" ;
+
+    # Conecta este Bar con una instancia de District (Object Property)
+    ns:hasDistrict ns: Ciutat Vella ; 
+    
+    # Conecta este Bar con una instancia de Street (Object Property)
+    ns:hasStreet ns:PasseigDeGraciaStreet .
+

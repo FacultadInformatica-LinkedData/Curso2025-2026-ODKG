@@ -1,0 +1,39 @@
+@prefix mod: <https://w3id.org/mod#> .
+@prefix nameDistrict: <http://www.owl-ontologies.com/nameDistrict#> .
+@prefix nameStreet: <http://www.owl-ontologies.com/nameStreet#> .
+@prefix ns: <http://www.barnabikes.org/ODKG/handsOn/group10/> .
+@prefix numberDistrict: <http://www.owl-ontologies.com/numberDistrict#> .
+@prefix numberStreet: <http://www.owl-ontologies.com/numberStreet#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+ns:Bar a owl:Class ;
+    rdfs:label "Bar" .
+
+ns:BikingStation a owl:Class ;
+    rdfs:label "Biking Station" .
+
+ns:hasDistrict a owl:ObjectProperty ;
+    rdfs:label "has district" .
+
+ns:hasStreet a owl:ObjectProperty ;
+    rdfs:label "has street" .
+
+ns:ns a owl:DatatypeProperty ;
+    rdfs:label "ns" ;
+    rdfs:domain ns:District,
+        ns:Street ;
+    rdfs:range nameDistrict:prefix,
+        nameStreet:prefix,
+        numberDistrict:prefix,
+        numberStreet:prefix .
+
+ns:District a owl:Class ;
+    rdfs:label "District" .
+
+ns:Street a owl:Class ;
+    rdfs:label "Street" .
+
