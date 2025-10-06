@@ -1,0 +1,223 @@
+﻿route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+6__1___,CRTM,1,CRISTO REY-PROSPERIDAD,,3,https://www.crtm.es/6__1___.aspx,0178BC,FFFFFF
+6__2___,CRTM,2,MANUEL BECERRA-REINA VICTORIA,,3,https://www.crtm.es/6__2_A__.aspx,0178BC,FFFFFF
+6__3___,CRTM,3,PUERTA TOLEDO-SAN AMARO,,3,https://www.crtm.es/6__3___.aspx,0178BC,FFFFFF
+6__4___,CRTM,4,CIUDAD LINEAL-PUERTA ARGANDA,,3,https://www.crtm.es/6__4___.aspx,0178BC,FFFFFF
+6__5___,CRTM,5,SOL/SEVILLA-CHAMARTIN,,3,https://www.crtm.es/6__5___.aspx,0178BC,FFFFFF
+6__6___,CRTM,6,BENAVENTE-ORCASITAS,,3,https://www.crtm.es/6__6___.aspx,0178BC,FFFFFF
+6__7___,CRTM,7,ALONSO MARTINEZ-MANOTERAS,,3,https://www.crtm.es/6__7___.aspx,0178BC,FFFFFF
+6__8___,CRTM,8,LEGAZPI-VALDEBERNARDO,,3,https://www.crtm.es/6__8___.aspx,0178BC,FFFFFF
+6__9___,CRTM,9,SOL/SEVILLA-HORTALEZA,,3,https://www.crtm.es/6__9___.aspx,0178BC,FFFFFF
+6__10___,CRTM,10,CIBELES-PALOMERAS,,3,https://www.crtm.es/6__10___.aspx,0178BC,FFFFFF
+6__11___,CRTM,11,MARQUES DE VIANA-BARRIO BLANCO,,3,https://www.crtm.es/6__11___.aspx,0178BC,FFFFFF
+6__12___,CRTM,12,CRISTO REY-MARQUES DE ZAFRA,,3,https://www.crtm.es/6__12___.aspx,0178BC,FFFFFF
+6__14___,CRTM,14,CONDE DE CASAL-PIO XII,,3,https://www.crtm.es/6__14___.aspx,0178BC,FFFFFF
+6__15___,CRTM,15,SOL/SEVILLA-LA ELIPA,,3,https://www.crtm.es/6__15___.aspx,0178BC,FFFFFF
+6__16___,CRTM,16,MONCLOA-PIO XII,,3,https://www.crtm.es/6__16___.aspx,0178BC,FFFFFF
+6__17___,CRTM,17,PLAZA MAYOR-PARQUE EUROPA,,3,https://www.crtm.es/6__17___.aspx,0178BC,FFFFFF
+6__18___,CRTM,18,PLAZA MAYOR-VILLAVERDE CRUCE,,3,https://www.crtm.es/6__18___.aspx,0178BC,FFFFFF
+6__19___,CRTM,19,PLAZA CATALUÑA-LEGAZPI,,3,https://www.crtm.es/6__19___.aspx,0178BC,FFFFFF
+6__20___,CRTM,20,SOL/SEVILLA-PAVONES,,3,https://www.crtm.es/6__20___.aspx,0178BC,FFFFFF
+6__21___,CRTM,21,PINTOR ROSALES-EL SALVADOR,,3,https://www.crtm.es/6__21___.aspx,0178BC,FFFFFF
+6__22___,CRTM,22,LEGAZPI-VILLAVERDE ALTO,,3,https://www.crtm.es/6__22___.aspx,0178BC,FFFFFF
+6__23___,CRTM,23,PLAZA MAYOR-VILLAVERDE CRUCE,,3,https://www.crtm.es/6__23_A__.aspx,0178BC,FFFFFF
+6__24___,CRTM,24,ESTACION DE ATOCHA-EL POZO,,3,https://www.crtm.es/6__24___.aspx,0178BC,FFFFFF
+6__25___,CRTM,25,PLAZA ESPAÑA-CASA DE CAMPO,,3,https://www.crtm.es/6__25___.aspx,0178BC,FFFFFF
+6__26___,CRTM,26,TIRSO DE MOLINA-DIEGO DE LEON,,3,https://www.crtm.es/6__26___.aspx,0178BC,FFFFFF
+6__27___,CRTM,27,EMBAJADORES-PLAZA CASTILLA,,3,https://www.crtm.es/6__27___.aspx,0178BC,FFFFFF
+6__28___,CRTM,28,PUERTA ALCALA-Bº CANILLEJAS,,3,https://www.crtm.es/6__28_A__.aspx,0178BC,FFFFFF
+6__29___,CRTM,29,FELIPE II-MANOTERAS,,3,https://www.crtm.es/6__29___.aspx,0178BC,FFFFFF
+6__30___,CRTM,30,FELIPE II-PAVONES,,3,https://www.crtm.es/6__30___.aspx,0178BC,FFFFFF
+6__31___,CRTM,31,PLAZA MAYOR-ALUCHE,,3,https://www.crtm.es/6__31___.aspx,0178BC,FFFFFF
+6__32___,CRTM,32,BENAVENTE-PAVONES,,3,https://www.crtm.es/6__32___.aspx,0178BC,FFFFFF
+6__33___,CRTM,33,PRINCIPE PIO-CASA DE CAMPO,,3,https://www.crtm.es/6__33___.aspx,0178BC,FFFFFF
+6__34___,CRTM,34,CIBELES-LAS AGUILAS,,3,https://www.crtm.es/6__34___.aspx,0178BC,FFFFFF
+6__35___,CRTM,35,PLAZA MAYOR-CARABANCHEL ALTO,,3,https://www.crtm.es/6__35___.aspx,0178BC,FFFFFF
+6__36___,CRTM,36,ATOCHA-CAMPAMENTO,,3,https://www.crtm.es/6__36___.aspx,0178BC,FFFFFF
+6__37___,CRTM,37,CUATRO CAMINOS-PUENTE VALLECAS,,3,https://www.crtm.es/6__37___.aspx,0178BC,FFFFFF
+6__38___,CRTM,38,MANUEL BECERRA-LAS ROSAS,,3,https://www.crtm.es/6__38___.aspx,0178BC,FFFFFF
+6__39___,CRTM,39,PLAZA ESPAÑA-SAN IGNACIO,,3,https://www.crtm.es/6__39___.aspx,0178BC,FFFFFF
+6__40___,CRTM,40,TRIBUNAL-ALFONSO XIII,,3,https://www.crtm.es/6__40___.aspx,0178BC,FFFFFF
+6__41___,CRTM,41,ATOCHA-COLONIA MANZANARES,,3,https://www.crtm.es/6__41___.aspx,0178BC,FFFFFF
+6__42___,CRTM,42,PLAZA CASTILLA-Bº PEÑAGRANDE,,3,https://www.crtm.es/6__42___.aspx,0178BC,FFFFFF
+6__43___,CRTM,43,FELIPE II-ESTRECHO,,3,https://www.crtm.es/6__43___.aspx,0178BC,FFFFFF
+6__44___,CRTM,44,CALLAO-MARQUES DE VIANA,,3,https://www.crtm.es/6__44___.aspx,0178BC,FFFFFF
+6__45___,CRTM,45,LEGAZPI-REINA VICTORIA,,3,https://www.crtm.es/6__45___.aspx,0178BC,FFFFFF
+6__46___,CRTM,46,SOL/SEVILLA-MONCLOA,,3,https://www.crtm.es/6__46___.aspx,0178BC,FFFFFF
+6__47___,CRTM,47,ATOCHA-CARABANCHEL ALTO,,3,https://www.crtm.es/6__47_A__.aspx,0178BC,FFFFFF
+6__48___,CRTM,48,MANUEL BECERRA-Bº CANILLEJAS,,3,https://www.crtm.es/6__48___.aspx,0178BC,FFFFFF
+6__49___,CRTM,49,PLAZA CASTILLA-PITIS,,3,https://www.crtm.es/6__49___.aspx,0178BC,FFFFFF
+6__50___,CRTM,50,PLAZA MAYOR-AVENIDA MANZANARES,,3,https://www.crtm.es/6__50___.aspx,0178BC,FFFFFF
+6__51___,CRTM,51,SOL/SEVILLA-PLAZA PERU,,3,https://www.crtm.es/6__51___.aspx,0178BC,FFFFFF
+6__52___,CRTM,52,SOL/SEVILLA-SANTAMARCA,,3,https://www.crtm.es/6__52___.aspx,0178BC,FFFFFF
+6__53___,CRTM,53,SOL/SEVILLA-ARTURO SORIA,,3,https://www.crtm.es/6__53___.aspx,0178BC,FFFFFF
+6__54___,CRTM,54,ESTACION DE ATOCHA-CONGOSTO,,3,https://www.crtm.es/6__54___.aspx,0178BC,FFFFFF
+6__55___,CRTM,55,ATOCHA-BATAN,,3,https://www.crtm.es/6__55___.aspx,0178BC,FFFFFF
+6__56___,CRTM,56,DIEGO DE LEON-PUENTE VALLECAS,,3,https://www.crtm.es/6__56___.aspx,0178BC,FFFFFF
+6__57___,CRTM,57,EST. ATOCHA-ALTO DEL ARENAL,,3,https://www.crtm.es/6__57___.aspx,0178BC,FFFFFF
+6__58___,CRTM,58,PUENTE VALLECAS-SANTA EUGENIA,,3,https://www.crtm.es/6__58_A__.aspx,0178BC,FFFFFF
+6__59___,CRTM,59,EST. ATOCHA-SAN CRISTOBAL,,3,https://www.crtm.es/6__59___.aspx,0178BC,FFFFFF
+6__60___,CRTM,60,PLAZA CEBADA-ORCASITAS,,3,https://www.crtm.es/6__60___.aspx,0178BC,FFFFFF
+6__61___,CRTM,61,MONCLOA-NARVAEZ,,3,https://www.crtm.es/6__61___.aspx,0178BC,FFFFFF
+6__62___,CRTM,62,CRISTO REY-LOS PUERTOS,,3,https://www.crtm.es/6__62___.aspx,0178BC,FFFFFF
+6__63___,CRTM,63,FELIPE II-SANTA EUGENIA,,3,https://www.crtm.es/6__63___.aspx,0178BC,FFFFFF
+6__64___,CRTM,64,CUATRO CAMINOS-PITIS,,3,https://www.crtm.es/6__64___.aspx,0178BC,FFFFFF
+6__65___,CRTM,65,BENAVENTE-GRAN CAPITAN,,3,https://www.crtm.es/6__65___.aspx,0178BC,FFFFFF
+6__66___,CRTM,66,CUATRO CAMINOS-FUENCARRAL,,3,https://www.crtm.es/6__66___.aspx,0178BC,FFFFFF
+6__67___,CRTM,67,PLAZA CASTILLA-Bº PEÑAGRANDE,,3,https://www.crtm.es/6__67___.aspx,0178BC,FFFFFF
+6__70___,CRTM,70,PLAZA CASTILLA-ALSACIA,,3,https://www.crtm.es/6__70___.aspx,0178BC,FFFFFF
+6__71___,CRTM,71,MANUEL BECERRA-PUERTA ARGANDA,,3,https://www.crtm.es/6__71___.aspx,0178BC,FFFFFF
+6__72___,CRTM,72,DIEGO DE LEON-HORTALEZA,,3,https://www.crtm.es/6__72___.aspx,0178BC,FFFFFF
+6__73___,CRTM,73,DIEGO DE LEON-FERIA DE MADRID,,3,https://www.crtm.es/6__73___.aspx,0178BC,FFFFFF
+6__74___,CRTM,74,PINTOR ROSALES-PARQUE AVENIDAS,,3,https://www.crtm.es/6__74___.aspx,0178BC,FFFFFF
+6__75___,CRTM,75,CALLAO-COLONIA MANZANARES,,3,https://www.crtm.es/6__75___.aspx,0178BC,FFFFFF
+6__76___,CRTM,76,PLAZA BEATA-VILLAVERDE ALTO,,3,https://www.crtm.es/6__76___.aspx,0178BC,FFFFFF
+6__77___,CRTM,77,CIUDAD LINEAL-FIN DE SEMANA,,3,https://www.crtm.es/6__77___.aspx,0178BC,FFFFFF
+6__78___,CRTM,78,EMBAJADORES-SAN FERMIN,,3,https://www.crtm.es/6__78___.aspx,0178BC,FFFFFF
+6__79___,CRTM,79,LEGAZPI-VILLAVERDE ALTO,,3,https://www.crtm.es/6__79___.aspx,0178BC,FFFFFF
+6__81___,CRTM,81,OPORTO-HOSPITAL 12 OCTUBRE,,3,https://www.crtm.es/6__81___.aspx,0178BC,FFFFFF
+6__82___,CRTM,82,MONCLOA-PITIS,,3,https://www.crtm.es/6__82_A__.aspx,0178BC,FFFFFF
+6__83___,CRTM,83,MONCLOA-BARRIO DEL PILAR,,3,https://www.crtm.es/6__83___.aspx,0178BC,FFFFFF
+6__85___,CRTM,85,ESTACION DE ATOCHA-BUTARQUE,,3,https://www.crtm.es/6__85___.aspx,0178BC,FFFFFF
+6__86___,CRTM,86,EST. ATOCHA-VILLAVERDE ALTO,,3,https://www.crtm.es/6__86___.aspx,0178BC,FFFFFF
+6__87___,CRTM,87,REP.DOMINICANA-LAS CARCAVAS,,3,https://www.crtm.es/6__87___.aspx,0178BC,FFFFFF
+6__100___,CRTM,100,MORATALAZ-VALDERRIVAS,,3,https://www.crtm.es/6__100___.aspx,0178BC,FFFFFF
+6__101___,CRTM,101,CANILLEJAS-BARAJAS,,3,https://www.crtm.es/6__101___.aspx,0178BC,FFFFFF
+6__102___,CRTM,102,EST. ATOCHA-ESTACION EL POZO,,3,https://www.crtm.es/6__102___.aspx,0178BC,FFFFFF
+6__103___,CRTM,103,ESTACION EL POZO-ECOBULEVAR,,3,https://www.crtm.es/6__103___.aspx,0178BC,FFFFFF
+6__104___,CRTM,104,CIUDAD LINEAL-MAR DE CRISTAL,,3,https://www.crtm.es/6__104___.aspx,0178BC,FFFFFF
+6__105___,CRTM,105,CIUDAD LINEAL-BARAJAS,,3,https://www.crtm.es/6__105___.aspx,0178BC,FFFFFF
+6__106___,CRTM,106,MANUEL BECERRA-VICALVARO,,3,https://www.crtm.es/6__106___.aspx,0178BC,FFFFFF
+6__107___,CRTM,107,PLAZA CASTILLA-HORTALEZA,,3,https://www.crtm.es/6__107___.aspx,0178BC,FFFFFF
+6__108___,CRTM,108,OPORTO-CEMENTERIO CARABANCHEL,,3,https://www.crtm.es/6__108___.aspx,0178BC,FFFFFF
+6__109___,CRTM,109,CIUDAD LINEAL-CASTILLO UCLES,,3,https://www.crtm.es/6__109___.aspx,0178BC,FFFFFF
+6__110___,CRTM,110,MANUEL BECERRA-CMTº ALMUDENA,,3,https://www.crtm.es/6__110___.aspx,0178BC,FFFFFF
+6__111___,CRTM,111,PUENTE VALLECAS-ENTREVIAS,,3,https://www.crtm.es/6__111___.aspx,0178BC,FFFFFF
+6__112___,CRTM,112,MAR CRISTAL-BARRIO AEROPUERTO,,3,https://www.crtm.es/6__112___.aspx,0178BC,FFFFFF
+6__113___,CRTM,113,MENDEZ ALVARO-CIUDAD LINEAL,,3,https://www.crtm.es/6__113___.aspx,0178BC,FFFFFF
+6__114___,CRTM,114,AVENIDA AMERICA-Bº AEROPUERTO,,3,https://www.crtm.es/6__114___.aspx,0178BC,FFFFFF
+6__115___,CRTM,115,AVENIDA AMERICA-BARAJAS,,3,https://www.crtm.es/6__115___.aspx,0178BC,FFFFFF
+6__116___,CRTM,116,EMBAJADORES-VILLAVERDE CRUCE,,3,https://www.crtm.es/6__116___.aspx,0178BC,FFFFFF
+6__118___,CRTM,118,EMBAJADORES-LA PESETA,,3,https://www.crtm.es/6__118___.aspx,0178BC,FFFFFF
+6__119___,CRTM,119,ATOCHA-BARRIO GOYA,,3,https://www.crtm.es/6__119___.aspx,0178BC,FFFFFF
+6__120___,CRTM,120,PLAZA LIMA-HORTALEZA,,3,https://www.crtm.es/6__120___.aspx,0178BC,FFFFFF
+6__121___,CRTM,121,CAMPAMENTO-HOSPITAL 12 OCTUBRE,,3,https://www.crtm.es/6__121___.aspx,0178BC,FFFFFF
+6__122___,CRTM,122,AVENIDA AMERICA-FERIA MADRID,,3,https://www.crtm.es/6__122___.aspx,0178BC,FFFFFF
+6__123___,CRTM,123,LEGAZPI-BUTARQUE,,3,https://www.crtm.es/6__123___.aspx,0178BC,FFFFFF
+6__124___,CRTM,124,CUATRO CAMINOS-LACOMA,,3,https://www.crtm.es/6__124___.aspx,0178BC,FFFFFF
+6__125___,CRTM,125,MAR CRISTAL-H.RAMON Y CAJAL,,3,https://www.crtm.es/6__125___.aspx,0178BC,FFFFFF
+6__126___,CRTM,126,N.MINISTERIOS-BARRIO DEL PILAR,,3,https://www.crtm.es/6__126___.aspx,0178BC,FFFFFF
+6__127___,CRTM,127,CUATRO CAMINOS-C. PERIODISTAS,,3,https://www.crtm.es/6__127___.aspx,0178BC,FFFFFF
+6__128___,CRTM,128,C. CAMINOS-BARRIO DEL PILAR,,3,https://www.crtm.es/6__128___.aspx,0178BC,FFFFFF
+6__129___,CRTM,129,PLAZA CASTILLA-MANOTERAS,,3,https://www.crtm.es/6__129_A__.aspx,0178BC,FFFFFF
+6__130___,CRTM,130,VILLAVERDE ALTO-VICALVARO,,3,https://www.crtm.es/6__130___.aspx,0178BC,FFFFFF
+6__131___,CRTM,131,CAMPAMENTO-VILLAVERDE ALTO,,3,https://www.crtm.es/6__131_A__.aspx,0178BC,FFFFFF
+6__132___,CRTM,132,MONCLOA-HOSPITAL LA PAZ,,3,https://www.crtm.es/6__132___.aspx,0178BC,FFFFFF
+6__133___,CRTM,133,CALLAO-MIRASIERRA,,3,https://www.crtm.es/6__133___.aspx,0178BC,FFFFFF
+6__134___,CRTM,134,PLAZA CASTILLA-MONTECARMELO,,3,https://www.crtm.es/6__134___.aspx,0178BC,FFFFFF
+6__135___,CRTM,135,PLAZA CASTILLA-H.RAMON Y CAJAL,,3,https://www.crtm.es/6__135___.aspx,0178BC,FFFFFF
+6__136___,CRTM,136,PACIFICO-MADRID SUR,,3,https://www.crtm.es/6__136___.aspx,0178BC,FFFFFF
+6__137___,CRTM,137,PUERTA HIERRO-FUENCARRAL,,3,https://www.crtm.es/6__137___.aspx,0178BC,FFFFFF
+6__138___,CRTM,138,CRISTO REY-SAN IGNACIO,,3,https://www.crtm.es/6__138___.aspx,0178BC,FFFFFF
+6__139___,CRTM,139,D.PRINCIPE-CARABANCHEL ALTO,,3,https://www.crtm.es/6__139___.aspx,0178BC,FFFFFF
+6__140___,CRTM,140,PAVONES-CANILLEJAS,,3,https://www.crtm.es/6__140___.aspx,0178BC,FFFFFF
+6__141___,CRTM,141,EST. ATOCHA-BUENOS AIRES,,3,https://www.crtm.es/6__141___.aspx,0178BC,FFFFFF
+6__142___,CRTM,142,PAVONES-ENSANCHE VALLECAS,,3,https://www.crtm.es/6__142___.aspx,0178BC,FFFFFF
+6__143___,CRTM,143,MANUEL BECERRA-VILLA VALLECAS,,3,https://www.crtm.es/6__143___.aspx,0178BC,FFFFFF
+6__144___,CRTM,144,PAVONES-ENTREVIAS,,3,https://www.crtm.es/6__144___.aspx,0178BC,FFFFFF
+6__145___,CRTM,145,CONDE CASAL-ENSANCHE VALLECAS,,3,https://www.crtm.es/6__145___.aspx,0178BC,FFFFFF
+6__146___,CRTM,146,CALLAO-LOS MOLINOS,,3,https://www.crtm.es/6__146___.aspx,0178BC,FFFFFF
+6__147___,CRTM,147,CALLAO-BARRIO DEL PILAR,,3,https://www.crtm.es/6__147___.aspx,0178BC,FFFFFF
+6__148___,CRTM,148,CALLAO-PUENTE VALLECAS,,3,https://www.crtm.es/6__148___.aspx,0178BC,FFFFFF
+6__149___,CRTM,149,TRIBUNAL-PLAZA CASTILLA,,3,https://www.crtm.es/6__149___.aspx,0178BC,FFFFFF
+6__150___,CRTM,150,SOL/SEVILLA-VIRGEN CORTIJO,,3,https://www.crtm.es/6__150___.aspx,0178BC,FFFFFF
+6__151___,CRTM,151,CANILLEJAS-BARAJAS,,3,https://www.crtm.es/6__151___.aspx,0178BC,FFFFFF
+6__152___,CRTM,152,FELIPE II-MENDEZ ALVARO,,3,https://www.crtm.es/6__152___.aspx,0178BC,FFFFFF
+6__153___,CRTM,153,LAS ROSAS-MAR DE CRISTAL,,3,https://www.crtm.es/6__153___.aspx,0178BC,FFFFFF
+6__155___,CRTM,155,PLAZA ELIPTICA-ALUCHE,,3,https://www.crtm.es/6__155___.aspx,0178BC,FFFFFF
+6__156___,CRTM,156,MANUEL BECERRA-LEGAZPI,,3,https://www.crtm.es/6__156___.aspx,0178BC,FFFFFF
+6__159___,CRTM,159,ALSACIA-EL CAÑAVERAL,,3,https://www.crtm.es/6__159___.aspx,0178BC,FFFFFF
+6__160___,CRTM,160,MONCLOA-ARAVACA,,3,https://www.crtm.es/6__160___.aspx,0178BC,FFFFFF
+6__161___,CRTM,161,MONCLOA-ARAVACA SUR,,3,https://www.crtm.es/6__161___.aspx,0178BC,FFFFFF
+6__162___,CRTM,162,MONCLOA-EL BARRIAL,,3,https://www.crtm.es/6__162___.aspx,0178BC,FFFFFF
+6__163___,CRTM,163,ESTACION DE ARAVACA-EL PLANTIO,,3,https://www.crtm.es/6__163___.aspx,0178BC,FFFFFF
+6__165___,CRTM,165,ALSACIA-HOSPITAL RAMON Y CAJAL,,3,https://www.crtm.es/6__165___.aspx,0178BC,FFFFFF
+6__166___,CRTM,166,BARAJAS-HOSPITAL RAMON Y CAJAL,,3,https://www.crtm.es/6__166___.aspx,0178BC,FFFFFF
+6__167___,CRTM,167,ALSACIA-FIN DE SEMANA,,3,https://www.crtm.es/6__167___.aspx,0178BC,FFFFFF
+6__170___,CRTM,170,ARROYO FRESNO-SANCHINARRO,,3,https://www.crtm.es/6__170___.aspx,0178BC,FFFFFF
+6__171___,CRTM,171,MAR DE CRISTAL-VALDEBEBAS,,3,https://www.crtm.es/6__171___.aspx,0178BC,FFFFFF
+6__172___,CRTM,172,MAR DE CRISTAL-TELEFONICA,,3,https://www.crtm.es/6__172___.aspx,0178BC,FFFFFF
+6__173___,CRTM,173,PLAZA CASTILLA-SANCHINARRO,,3,https://www.crtm.es/6__173___.aspx,0178BC,FFFFFF
+6__174___,CRTM,174,PLAZA CASTILLA-VALDEBEBAS,,3,https://www.crtm.es/6__174___.aspx,0178BC,FFFFFF
+6__175___,CRTM,175,PZA.CASTILLA-LAS TABLAS NORTE,,3,https://www.crtm.es/6__175___.aspx,0178BC,FFFFFF
+6__176___,CRTM,176,PLAZA CASTILLA-LAS TABLAS SUR,,3,https://www.crtm.es/6__176___.aspx,0178BC,FFFFFF
+6__177___,CRTM,177,PLAZA CASTILLA-MQUES.DE VIANA,,3,https://www.crtm.es/6__177___.aspx,0178BC,FFFFFF
+6__178___,CRTM,178,PLAZA CASTILLA-MONTECARMELO,,3,https://www.crtm.es/6__178___.aspx,0178BC,FFFFFF
+6__180___,CRTM,180,LEGAZPI-CAJA MAGICA,,3,https://www.crtm.es/6__180___.aspx,0178BC,FFFFFF
+6__200___,CRTM,200,AVENIDA AMERICA-AEROPUERTO,,3,https://www.crtm.es/6__200___.aspx,0178BC,FFFFFF
+6__203___,CRTM,203,ESTACION DE ATOCHA-AEROPUERTO,,3,https://www.crtm.es/6__203___.aspx,0178BC,FFFFFF
+6__210___,CRTM,210,DIEGO DE LEON-LA ELIPA,,3,https://www.crtm.es/6__210___.aspx,0178BC,FFFFFF
+6__215___,CRTM,215,FELIPE II-PARQUE ROMA,,3,https://www.crtm.es/6__215___.aspx,0178BC,FFFFFF
+6__247___,CRTM,247,ATOCHA-SAN JOSE OBRERO,,3,https://www.crtm.es/6__47_B__.aspx,0178BC,FFFFFF
+6__310___,CRTM,310,PACIFICO-ESTACION EL POZO,,3,https://www.crtm.es/6__310___.aspx,0178BC,FFFFFF
+6__001___,CRTM,001,ESTACION DE ATOCHA-MONCLOA,,3,https://www.crtm.es/6__361___.aspx,0178BC,FFFFFF
+6__002___,CRTM,002,PUERTA TOLEDO-ARGÜELLES,,3,https://www.crtm.es/6__362___.aspx,0178BC,FFFFFF
+6__A___,CRTM,A,MONCLOSOMOSAGUAS,,3,https://www.crtm.es/6__93___.aspx,0178BC,FFFFFF
+6__C03___,CRTM,C03,PUERTA TOLEDO-ARGÜELLES,,3,https://www.crtm.es/6__363___.aspx,0178BC,FFFFFF
+6__C1___,CRTM,C1,CIRCULAR 1,,3,https://www.crtm.es/6__68___.aspx,0178BC,FFFFFF
+6__C2___,CRTM,C2,CIRCULAR 2,,3,https://www.crtm.es/6__69___.aspx,0178BC,FFFFFF
+6__E___,CRTM,E,CONDE CASAL-SIERRA GUADALUPE,,3,https://www.crtm.es/6__90___.aspx,0178BC,FFFFFF
+6__E1___,CRTM,E1,CIBELES-LA PESETA,,3,https://www.crtm.es/6__401___.aspx,0178BC,FFFFFF
+6__E2___,CRTM,E2,FELIPE II-LAS ROSAS,,3,https://www.crtm.es/6__402___.aspx,0178BC,FFFFFF
+6__E3___,CRTM,E3,FELIPE II-VALDERRIVAS,,3,https://www.crtm.es/6__403___.aspx,0178BC,FFFFFF
+6__E4___,CRTM,E4,FELIPE II-VALDEBERNARDO,,3,https://www.crtm.es/6__404___.aspx,0178BC,FFFFFF
+6__E5___,CRTM,E5,MANUEL BECERRA-EL CAÑAVERAL,,3,https://www.crtm.es/6__405___.aspx,0178BC,FFFFFF
+6__F___,CRTM,F,CUATRO CAMINOS-C.UNIVERSITARIA,,3,https://www.crtm.es/6__91___.aspx,0178BC,FFFFFF
+6__G___,CRTM,G,MONCLOA-CIUDAD UNIVERSITARIA,,3,https://www.crtm.es/6__92___.aspx,0178BC,FFFFFF
+6__H___,CRTM,H,ALUCHE-SOMOSAGUAS,,3,https://www.crtm.es/6__96___.aspx,0178BC,FFFFFF
+6__H1___,CRTM,H1,SIERRA GUADALUPE-H.I.LEONOR,,3,https://www.crtm.es/6__481___.aspx,0178BC,FFFFFF
+6__M1___,CRTM,M1,SOL/SEVILLA-EMBAJADORES,,3,https://www.crtm.es/6__601___.aspx,0178BC,FFFFFF
+6_N_1___,CRTM,N1,CIBELES-SANCHINARRO,,3,https://www.crtm.es/6_N_501___.aspx,0178BC,FFFFFF
+6_N_10___,CRTM,N10,CIBELES-PALOMERAS,,3,https://www.crtm.es/6_N_510___.aspx,0178BC,FFFFFF
+6_N_11___,CRTM,N11,CIBELES-MADRID SUR,,3,https://www.crtm.es/6_N_511___.aspx,0178BC,FFFFFF
+6_N_12___,CRTM,N12,CIBELES-BUTARQUE,,3,https://www.crtm.es/6_N_512___.aspx,0178BC,FFFFFF
+6_N_13___,CRTM,N13,CIBELES-SAN CRISTOBAL,,3,https://www.crtm.es/6_N_513___.aspx,0178BC,FFFFFF
+6_N_14___,CRTM,N14,CIBELES-VILLAVERDE ALTO,,3,https://www.crtm.es/6_N_514___.aspx,0178BC,FFFFFF
+6_N_15___,CRTM,N15,CIBELES-ORCASUR,,3,https://www.crtm.es/6_N_515___.aspx,0178BC,FFFFFF
+6_N_16___,CRTM,N16,CIBELES-LA PESETA,,3,https://www.crtm.es/6_N_516___.aspx,0178BC,FFFFFF
+6_N_17___,CRTM,N17,CIBELES-CARABANCHEL ALTO,,3,https://www.crtm.es/6_N_517___.aspx,0178BC,FFFFFF
+6_N_18___,CRTM,N18,CIBELES-ALUCHE,,3,https://www.crtm.es/6_N_518___.aspx,0178BC,FFFFFF
+6_N_19___,CRTM,N19,CIBELES-SAN IGNACIO,,3,https://www.crtm.es/6_N_519___.aspx,0178BC,FFFFFF
+6_N_2___,CRTM,N2,CIBELES-VALDEBEBAS,,3,https://www.crtm.es/6_N_502___.aspx,0178BC,FFFFFF
+6_N_20___,CRTM,N20,CIBELES-PITIS,,3,https://www.crtm.es/6_N_520___.aspx,0178BC,FFFFFF
+6_N_21___,CRTM,N21,CIBELES-ARROYO FRESNO,,3,https://www.crtm.es/6_N_521___.aspx,0178BC,FFFFFF
+6_N_22___,CRTM,N22,CIBELES-BARRIO DEL PILAR,,3,https://www.crtm.es/6_N_522___.aspx,0178BC,FFFFFF
+6_N_23___,CRTM,N23,CIBELES-MONTECARMELO,,3,https://www.crtm.es/6_N_523___.aspx,0178BC,FFFFFF
+6_N_24___,CRTM,N24,CIBELES-LAS TABLAS,,3,https://www.crtm.es/6_N_524___.aspx,0178BC,FFFFFF
+6_N_25___,CRTM,N25,ALONSO MARTINEZ-VILLA VALLECAS,,3,https://www.crtm.es/6_N_525___.aspx,0178BC,FFFFFF
+6_N_26___,CRTM,N26,ALONSO MARTINEZ-ALUCHE,,3,https://www.crtm.es/6_N_526___.aspx,0178BC,FFFFFF
+6_N_27___,CRTM,N27,CIBELES-AEROPUERTO,,3,https://www.crtm.es/6_N_527___.aspx,0178BC,FFFFFF
+6_N_28___,CRTM,N28,MONCLOA-ARAVACA,,3,https://www.crtm.es/6_N_528___.aspx,0178BC,FFFFFF
+6_N_3___,CRTM,N3,CIBELES-CANILLAS,,3,https://www.crtm.es/6_N_503___.aspx,0178BC,FFFFFF
+6_N_4___,CRTM,N4,CIBELES-BARAJAS,,3,https://www.crtm.es/6_N_504___.aspx,0178BC,FFFFFF
+6_N_5___,CRTM,N5,CIBELES-FIN DE SEMANA,,3,https://www.crtm.es/6_N_505___.aspx,0178BC,FFFFFF
+6_N_6___,CRTM,N6,CIBELES-LAS ROSAS,,3,https://www.crtm.es/6_N_506___.aspx,0178BC,FFFFFF
+6_N_7___,CRTM,N7,CIBELES-VALDERRIVAS,,3,https://www.crtm.es/6_N_507___.aspx,0178BC,FFFFFF
+6_N_8___,CRTM,N8,CIBELES-VALDEBERNARDO,,3,https://www.crtm.es/6_N_508___.aspx,0178BC,FFFFFF
+6_N_9___,CRTM,N9,CIBELES-ENSANCHE VALLECAS,,3,https://www.crtm.es/6_N_509___.aspx,0178BC,FFFFFF
+6__SE702___,CRTM,SE702,PLAZA ELIPTICA-CEMENTERIO SUR,,3,https://www.crtm.es/6__702___.aspx,0178BC,FFFFFF
+6__SE704___,CRTM,SE704,PLAZA CASTILLA-CMTº FUENCARRAL,,3,https://www.crtm.es/6__704___.aspx,0178BC,FFFFFF
+6__SE709___,CRTM,SE709,FERIA DE MADRID-H. I. ZENDAL,,3,https://www.crtm.es/6__709___.aspx,0178BC,FFFFFF
+6__SE712___,CRTM,SE712,SOL/SEVILLA-PUERTA DE TOLEDO,,3,https://www.crtm.es/6__712___.aspx,0178BC,FFFFFF
+6__SE718___,CRTM,SE718,PUERTA ARGANDA-CAÑADA REAL,,3,https://www.crtm.es/6__718___.aspx,0178BC,FFFFFF
+6__SE721___,CRTM,SE721,CANILLEJAS-METROPOLITANO,,3,https://www.crtm.es/6__721___.aspx,0178BC,FFFFFF
+6__SE727___,CRTM,SE727,C.S.VILLAAMIL-C.S.CASTROVIEJO,,3,https://www.crtm.es/6__727___.aspx,0178BC,FFFFFF
+6__SE744___,CRTM,SE744,CANILLEJAS-REJAS,,3,https://www.crtm.es/6__744___.aspx,0178BC,FFFFFF
+6__T11___,CRTM,T11,MAR DE CRISTAL-CRISTALIA,,3,https://www.crtm.es/6__451___.aspx,0178BC,FFFFFF
+6__T23___,CRTM,T23,PUERTA ARGANDA-P.IND.VICALVARO,,3,https://www.crtm.es/6__452___.aspx,0178BC,FFFFFF
+6__T31___,CRTM,T31,EST.EL POZO-SIERRA GUADALUPE,,3,https://www.crtm.es/6__454___.aspx,0178BC,FFFFFF
+6__T32___,CRTM,T32,LEGAZPI-MERCAMADRID,,3,https://www.crtm.es/6__453___.aspx,0178BC,FFFFFF
+6__T41___,CRTM,T41,VILLAVERDE ALTO-P.I.LA RESINA,,3,https://www.crtm.es/6__456___.aspx,0178BC,FFFFFF
+6__T61___,CRTM,T61,ESTACION FUENCARRAL-LAS TABLAS,,3,https://www.crtm.es/6__455___.aspx,0178BC,FFFFFF
+6__T62___,CRTM,T62,PLAZA CASTILLA-CHAMARTIN,,3,https://www.crtm.es/6__457___.aspx,0178BC,FFFFFF
+6__U___,CRTM,U,AVENIDA SENECA-PARANINFO,,3,https://www.crtm.es/6__99___.aspx,0178BC,FFFFFF
