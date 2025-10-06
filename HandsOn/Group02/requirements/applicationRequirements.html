@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Requirements - SafeSchool Madrid</title>
+</head>
+<body>
+
+    <h1>SafeSchool Madrid - Application Requirements</h1>
+
+    <div class="section">
+        <h2>General Description</h2>
+        <p>
+            SafeSchool Madrid is a web application designed to map road accidents and speed cameras, and to assess safety risks 
+            around schools (within 150–300 meters). The app highlights "priority zones" where interventions such as new speed cameras, 
+            speed bumps, pedestrian crossings, or human supervision are necessary. Main outputs include interactive maps, school risk rankings, 
+            informative profiles, and exportable reports.
+        </p>
+    </div>
+
+
+    <div class="section">
+        <h2>Functional Requirements</h2>
+        <ul>
+            <li>Interactive map of schools with accident and speed camera overlays.</li>
+            <li>Risk calculation for each school within 150–300 meters, highlighting priority zones.</li>
+            <li>Ranking of the most at-risk schools.</li>
+            <li>Informative profiles for each school, including accident data, nearby speed cameras, and other safety notes.</li>
+            <li>Export of data in PDF or CSV reports.</li>
+            <li>Filters by school type, neighborhood, and accident severity.</li>
+            <li>Ability to link RDF datasets for advanced analysis and semantic queries.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Non-Functional Requirements</h2>
+        <ul>
+            <li>Responsive web interface compatible with desktop and mobile devices.</li>
+            <li>Map loading time within 3 seconds.</li>
+            <li>Data security with admin-only access.</li>
+            <li>Scalable architecture to handle real-time dataset updates.</li>
+            <li>Multilingual support (initially English and Spanish).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Interface Mock-ups</h2>
+
+        <h3>1. Interactive Map</h3>
+        <div class="mockup">
+            Map of Madrid showing schools, accidents, and speed cameras. Highlights high-risk zones with colors and symbols.
+        </div>
+
+        <h3>2. School Profile</h3>
+        <div class="mockup">
+            Informative card showing school name, address, number of nearby accidents, distance from the closest radar, and risk score.
+        </div>
+
+        <h3>3. School Ranking</h3>
+        <div class="mockup">
+            Table listing schools ranked by risk, with filtering options by neighborhood or school type.
+        </div>
+
+        <h3>4. Exportable Report</h3>
+        <div class="mockup">
+            Section to generate PDF or CSV reports with risk data for selected schools.
+        </div>
+
+    </div>
+
+</body>
+</html>

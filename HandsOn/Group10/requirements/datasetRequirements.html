@@ -1,0 +1,157 @@
+datasetRequirements.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of the Selected Datasets' Requirements</title>
+    <style> 
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.7; 
+            margin: 0 auto; 
+            max-width: 900px; 
+            padding: 2em;
+            color: #333;
+        } 
+        h1, h2, h3 { 
+            color: #111; 
+            border-bottom: 2px solid #007bff; 
+            padding-bottom: 8px;
+        }
+        h3 {
+            border-bottom: 1px solid #ccc;
+            margin-top: 2em;
+        }
+        .summary-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 2em 0;
+            border: 1px solid #ddd;
+        }
+        .summary-table th, .summary-table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        .summary-table th {
+            background-color: #f8f9fa;
+            width: 30%;
+        }
+        code { 
+            background-color: #e9ecef; 
+            padding: 3px 6px; 
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        strong.status {
+            font-weight: bold;
+        }
+        .status.yes {
+            color: #28a745;
+        }
+        .status.discuss {
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analysis of the Selected Datasets' Requirements</h1>
+    <p>This document presents the requirements compliance analysis for the three datasets selected for this project.</p>
+
+    <h2>Dataset 1: Bicing Stations</h2>
+    
+    <table class="summary-table">
+        <tr>
+            <th>Dataset Name</th>
+            <td>Bicing stations (mechanical and electrical) in Barcelona</td>
+        </tr>
+        <tr>
+            <th>Original Source</th>
+            <td><a href="https://opendata-ajuntament.barcelona.cat/data/en/dataset/bicing" target="_blank">Open Data BCN - Ajuntament de Barcelona</a></td>
+        </tr>
+        <tr>
+            <th>Specific File Used</th>
+            <td><code>2019_03_Marc_BICING_ESTACIONS.csv</code></td>
+        </tr>
+        <tr>
+            <th>License</th>
+            <td>Creative Commons Attribution 4.0</td>
+        </tr>
+    </table>
+
+    <h3>Requirements Analysis</h3>
+    <p><strong class="status yes">R1 (Smart Cities): YES.</strong> The dataset contains data on the city's bike-sharing system. Sustainable urban mobility management is a key component of the smart city domain.</p>
+    <p><strong class="status yes">R2 (CSV): YES.</strong> The dataset was downloaded in CSV format and is available in the repository's <code>/csv</code> folder.</p>
+    <p><strong class="status yes">R3 (Open License): YES.</strong> The data is published under the Creative Commons Attribution 4.0 (CC BY 4.0) license, which allows for its reuse and publication.</p>
+    <p><strong class="status yes">R4 (Linkable): YES.</strong> Each station record includes explicit geographic coordinates (latitude and longitude), allowing for direct linking with map systems and geospatial databases.</p>
+    <p><strong class="status discuss">R5 (Documentation): HIGH.</strong> The Open Data BCN portal provides a detailed metadata page and a definition for each of the dataset's fields.</p>
+    <p><strong class="status discuss">R6 (Multiple Sources): MEDIUM.</strong> While the data comes from a single source, its structure allows for future enrichment by linking it with weather data, public transport schedules, or local events.</p>
+
+    <h2>Dataset 2: Music & Drinks Venues</h2>
+    
+    <table class="summary-table">
+        <tr>
+            <th>Dataset Name</th>
+            <td>Music and drinks venues in the city of Barcelona</td>
+        </tr>
+        <tr>
+            <th>Original Source</th>
+            <td><a href="https://opendata-ajuntament.barcelona.cat/data/en/dataset/cultura_espais-de-musica-i-copes" target="_blank">Open Data BCN - Ajuntament de Barcelona</a></td>
+        </tr>
+        <tr>
+            <th>Specific File Used</th>
+            <td><code>opendatabcn_cultura_espais-de-musica-i-copes.csv</code></td>
+        </tr>
+        <tr>
+            <th>License</th>
+            <td>Creative Commons CC0</td>
+        </tr>
+    </table>
+
+    <h3>Requirements Analysis</h3>
+    <p><strong class="status yes">R1 (Smart Cities): YES.</strong> This dataset falls within the scope of culture, leisure, and tourism, which are important components of urban life in a smart city.</p>
+    <p><strong class="status yes">R2 (CSV): YES.</strong> The dataset was downloaded in CSV format and is available in the repository's <code>/csv</code> folder.</p>
+    <p><strong class="status yes">R3 (Open License): YES.</strong> It is published under the Creative Commons CC0 license, which permits reuse and publication without restrictions.</p>
+    <p><strong class="status yes">R4 (Linkable): YES.</strong> Each record includes geographic coordinates (latitude and longitude), which allows for precise linking with maps and other geospatial databases.</p>
+    <p><strong class="status discuss">R5 (Documentation): HIGH.</strong> The Barcelona Open Data portal offers a detailed description of each column and associated metadata for the dataset.</p>
+    <p><strong class="status discuss">R6 (Multiple Sources): MEDIUM.</strong> Its geospatial nature allows it to be cross-referenced with other city data sources, such as the public transport network or demographic data by neighborhood.</p>
+    
+    <h2>Dataset 3: Barcelona's Road Graph</h2>
+
+    <table class="summary-table">
+        <tr>
+            <th>Dataset Name</th>
+            <td>Road Graph of the streets of the city of Barcelona</td>
+        </tr>
+        <tr>
+            <th>Original Source</th>
+            <td><a href="https://opendata-ajuntament.barcelona.cat/data/en/dataset/mapa-graf-viari-carrers-wms" target="_blank">Open Data BCN - Ajuntament de Barcelona</a></td>
+        </tr>
+        <tr>
+            <th>Specific File Used</th>
+            <td><code>BCN_GrafVial_Trams_ETRS89_CSV.csv</code></td>
+        </tr>
+        <tr>
+            <th>License</th>
+            <td>Creative Commons Attribution 4.0</td>
+        </tr>
+    </table>
+
+    <h3>Requirements Analysis</h3>
+    <p><strong class="status yes">R1 (Smart Cities): YES.</strong> The dataset represents the city's road infrastructure, a fundamental pillar for traffic management and urban logistics.</p>
+    <p><strong class="status yes">R2 (CSV): YES.</strong> The CSV version of the dataset (available within a .7z archive) will be used for this project.</p>
+    <p><strong class="status yes">R3 (Open License): YES.</strong> It is distributed under the Creative Commons Attribution 4.0 (CC BY 4.0) license.</p>
+    <p><strong class="status yes">R4 (Linkable): YES.</strong> Each street segment contains an identifier and geometry defined by coordinates, allowing it to be linked with any other geolocated data.</p>
+    <p><strong class="status discuss">R5 (Documentation): HIGH.</strong> The open data portal provides a comprehensive metadata sheet that serves as exhaustive documentation.</p>
+    <p><strong class="status discuss">R6 (Multiple Sources): LOW.</strong> Due to its nature, the road graph tends to be a single, authoritative source, although it could be enriched with data from other sources (e.g., traffic flow).</p>
+
+</body>
+</html>

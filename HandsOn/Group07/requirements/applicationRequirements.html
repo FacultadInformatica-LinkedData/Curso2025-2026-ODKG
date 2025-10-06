@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Application Requirements — BiciMAD Linked Data App</title>
+  <style>
+    :root { --ink:#0f172a; --sub:#334155; --muted:#64748b; --line:#e2e8f0; --bg:#ffffff; --accent:#1d4ed8; }
+    * { box-sizing: border-box }
+    html,body { margin:0; padding:0; background:var(--bg); color:var(--ink); font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    main { max-width: 1100px; margin: 2.5rem auto; padding: 0 1.25rem; }
+    h1,h2 { color: var(--accent); margin: 0 0 .25rem; line-height:1.25 }
+    h3 { color: var(--sub); margin: 1.25rem 0 .25rem }
+    p { margin: .5rem 0 1rem }
+    .lede { color: var(--sub); max-width: 80ch }
+    .pill { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:.2rem .6rem; margin:.2rem .25rem 0 0; color:#64748b; font-size:.85rem }
+    .grid { display:grid; gap:1rem }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    @media (max-width:900px){ .grid.cols-2,.grid.cols-3 { grid-template-columns: 1fr } }
+    section { padding: 1.25rem 0; border-top: 1px solid var(--line); }
+    ul { margin:.25rem 0 1rem; padding-left:1.25rem }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: .95rem; }
+    .card { border:1px solid var(--line); border-radius:12px; padding:1rem; background:#fff }
+    .ok { font-weight:600; }
+    /* ---------- Wireframe styles ---------- */
+    .mockup { border:1px dashed #cbd5e1; border-radius:14px; padding:0; background:#fafafa; }
+    .chrome { border-bottom:1px dashed #cbd5e1; padding:.5rem .75rem; display:flex; align-items:center; gap:.5rem; }
+    .dot { width:.6rem; height:.6rem; border-radius:50%; border:1px solid #cbd5e1; background:#fff }
+    .bar { height:.7rem; border:1px dashed #cbd5e1; border-radius:6px; flex:1 }
+    .pane { display:grid; grid-template-columns: 300px 1fr; min-height:430px; }
+    @media (max-width:900px){ .pane { grid-template-columns: 1fr; } }
+    .left { border-right:1px dashed #cbd5e1; padding:1rem; }
+    .right { padding:1rem; }
+    .search { display:flex; gap:.5rem; margin:.25rem 0 1rem }
+    .input { flex:1; height:2.2rem; border:1px dashed #cbd5e1; border-radius:10px }
+    .btn { width:6.5rem; height:2.2rem; border:1px dashed #cbd5e1; border-radius:10px }
+    .filter { height:2rem; border:1px dashed #cbd5e1; border-radius:8px; margin:.25rem 0 }
+    .listitem { border:1px dashed #cbd5e1; border-radius:10px; padding:.5rem; margin:.5rem 0 }
+    .map { height:360px; border:2px dashed #94a3b8; border-radius:12px; display:grid; place-items:center; color:#64748b }
+    .legend { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem }
+    .legend .box { width:14px; height:14px; border:1px solid #cbd5e1; background:#fff }
+    .step { display:flex; gap:.75rem; align-items:flex-start; }
+    .step .n { width:1.6rem; height:1.6rem; border:1px solid var(--line); border-radius:999px; display:grid; place-items:center; font-size:.85rem; color:#64748b }
+    .kbd { border:1px solid var(--line); border-bottom-width:2px; padding:.05rem .35rem; border-radius:6px; background:#fff; font-size:.85rem }
+    .small { font-size:.9rem; color:#64748b; }
+    .callout { border-left:4px solid var(--accent); padding:.5rem .75rem; background:#f8fafc; border-radius:8px }
+    .tbl { width:100%; border-collapse: collapse; margin:.5rem 0 1rem }
+    .tbl th,.tbl td { border:1px solid var(--line); padding:.5rem .6rem; text-align:left; }
+    .tbl th { background:#f1f5f9; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Proposed application: <span class="ok">BiciMAD Linked Data App</span></h1>
+    <p class="lede">
+      Lightweight web application to explore BiciMAD stations from the dataset <a href="../csv/bikestationbicimad_csv.csv">bikestationbicimad_csv.csv</a>,
+      enriched as Linked Data. It allows searching stations, viewing details, filtering by location,
+      and linking CSV entities (districts/neighborhoods, streets, coordinates) with external resources (Wikidata/GeoNames/esDBpedia).
+    </p>
+  </header>
+
+  <section id="scope">
+    <h2>1) Scope and objectives</h2>
+    <ul>
+      <li><strong>Discover</strong> nearby stations and their operational status.</li>
+      <li><strong>Consult</strong> station record: address, neighborhood/district, coordinates, total slots.</li>
+      <li><strong>Filter</strong> by district, neighborhood, and status.</li>
+      <li><strong>Link</strong> with external entities to improve interoperability.</li>
+      <li><strong>Export</strong> results to RDF and enable SPARQL queries over the generated graph.</li>
+    </ul>
+  </section>
+
+  <section id="functional">
+    <h2>2) Functional Requirements </h2>
+    <table class="tbl">
+      <thead><tr><th>ID</th><th>Description</th><th>Validation</th></tr></thead>
+      <tbody>
+        <tr><td>F1</td><td>Search stations by text (name, address, coordinates).</td><td>Query returns >= 1 item when a match exists.</td></tr>
+        <tr><td>F2</td><td>Filter by district/neighborhood and status.</td><td>Filters are composable and results counter shown.</td></tr>
+        <tr><td>F3</td><td>Station detail page with metadata and outbound links (sameAs / locatedIn).</td><td>External URIs are clickable and show prefixes.</td></tr>
+        <tr><td>F4</td><td>Export to RDF (Turtle) of current results.</td><td>Downloadable files include visible fields + URIs.</td></tr>
+        <tr><td>F5</td><td>Local SPARQL endpoint over the generated graph.</td><td>3 example queries executable.</td></tr>
+        <tr><td>F6</td><td>“Map” view with markers and status legend.</td><td>Markers visible.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="nonfunctional">
+    <h2>3) Non-functional Requirements</h2>
+    <ul>
+      <li><strong>Accessibility</strong>: AA contrast, keyboard navigation (<span class="kbd">Tab</span>, <span class="kbd">Enter</span>), alternative texts.</li>
+      <li><strong>License</strong>: respect the dataset license and propagate it in exports.</li>
+      <li><strong>Internationalization</strong>: interface in EN; support basic i18n (externalized strings).</li>
+    </ul>
+  </section>
+
+  <section id="mockups">
+    <h2>4) User Interface Mock-ups</h2>
+
+    <h3>4.1 List + filters</h3>
+    <div class="mockup">
+      <div class="chrome"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="bar"></div></div>
+      <div class="pane">
+        <aside class="left">
+          <div class="search">
+            <div class="btn">Station Search</div><div class="btn">Map</div>
+          </div>
+          <div class="filter">Selectable/Writable Filter 1</div>
+          <div class="filter">Selectable/Writable Filter 2</div>
+          <div class="filter">...</div>
+          <div class="filter">Selectable/Writable Filter N</div>
+          <br><br><br><br><br><br><br>
+          <div class="btn">Apply fiters</div>
+        </aside>
+        <section class="right">
+          <div class="listitem">Station 231 -- Gran Vía 32 - Operational</div>
+          <div class="listitem">Station 045 -- Montera 10 - Operational</div>
+          <div class="listitem">Station 118 -- Plaza España - Closed</div>
+          <div class="listitem">…</div>
+        </section>
+      </div>
+    </div>
+
+    <div class="card" aria-labelledby="desc-51">
+        <h4 id="desc-51" style="margin:.25rem 0">Screen description</h4>
+        <p class="small">
+            This screen displays a list of BiciMAD stations. The left panel provides the option to
+            change the results view between filters and map. It also provides the option to choose
+            multiple composable filters (address,free bases, etc).
+            The right panel shows the resulting stations with name, address and current status once the filtering is made.
+        </p>
+        <h4 style="margin:.5rem 0 .25rem">User interactions</h4>
+        <ul>
+            <li>Apply one or more filters (combinable) and see the result counter update.</li>
+            <li>Scroll through the results list.</li>
+            <li>Click a station to open its detailed record (see 5.3 Station record).</li>
+            <li>Use “Map” to navigate to the map view (see 5.2 Map).</li>
+        </ul>
+    </div>
+
+    <h3>4.2 Map</h3>
+    <div class="mockup">
+    <div class="chrome">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="bar"></div>
+    </div>
+    <div class="pane" style="display:block;">
+        <section class="right">
+        <div class="search" style="margin-bottom:1rem; display:flex; gap:.5rem;">
+            <div class="btn">Station Search</div>
+            <div class="btn">Map</div>
+        </div>
+        <div class="map">Map with markers</div>
+        </section>
+    </div>
+    </div>
+
+    <div class="card" aria-labelledby="desc-52">
+        <h4 id="desc-52" style="margin:.25rem 0">Screen description</h4>
+        <p class="small">
+            This screen shows a map with station markers. A compact toolbar sits above the map
+            (e.g., "Station Search", "Map"). The user can
+            visually explore locations and access basic details via marker popups.
+        </p>
+        <h4 style="margin:.5rem 0 .25rem">User interactions</h4>
+        <ul>
+            <li>Pan and zoom the map to explore different areas.</li>
+            <li>Click a marker to open the station's detailed record (see 5.3).</li>
+            <li>Use “Station Search” to jump back to the list + filters view (see 5.1).</li>
+        </ul>
+    </div>
+
+
+    <h3>4.3 Station record</h3>
+    <div class="mockup">
+      <div class="chrome"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="bar"></div></div>
+      <div class="grid cols-2" style="padding:1rem">
+        <div class="card">
+          <h4 style="margin:.25rem 0">Station 231 — Gran Vía 32</h4>
+          <p class="small">URI: <span class="mono">http://example.org/bicimad/...</span></p>
+          <table class="tbl">
+            <tr><th>Address</th><td>Gran Vía 32</td></tr>
+            <tr><th>District</th><td>Centro <span class="mono">&lt;https://www.wikidata.org/entity/...</span></td></tr>
+            <tr><th>Coordinates</th><td>40.4203, -3.7058</td></tr>
+            <tr><th>Status</th><td>Operational</td></tr>
+            <tr><th>Last update</th><td>2025-09-25 08:30:18Z</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h4 style="margin:.25rem 0">Actions</h4>
+          <div class="step"><div class="n">1</div><div>Open on map</div></div>
+          <div class="step"><div class="n">2</div><div>Export RDF (Turtle)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" aria-labelledby="desc-53">
+        <h4 id="desc-53" style="margin:.25rem 0">Screen description</h4>
+        <p class="small">
+            Detailed record of a selected station with structured metadata (address, district,
+            coordinates, operational status, last update). External URIs (e.g., Wikidata) are
+            displayed to ensure interoperability and traceability.
+        </p>
+        <h4 style="margin:.5rem 0 .25rem">User interactions</h4>
+        <ul>
+            <li>Review full station metadata, including coordinates and status.</li>
+            <li>Open external linked resources via clickable URIs.</li>
+            <li>"Open on map" to locate the station on the map (see 5.2).</li>
+            <li>"Export RDF (Turtle)"" to download RDF for this station.</li>
+        </ul>
+    </div>
+  </section>
+</main>
+</body>
+</html>
