@@ -68,8 +68,7 @@ resource:Road-M30 a safeschool:Road ;
   dcterms:identifier "M-30" ;
   schema:name "M-30"@es ;
   safeschool:roadName "M-30"@es ;
-  safeschool:roadCode "M-30" ;
-  rdfs:comment "Madrid's inner ring road"@en .
+  safeschool:roadCode "M-30" .
 
 resource:Road-LopezDeHoyos a safeschool:Road ;
   dcterms:identifier "CALLE-LOPEZ-DE-HOYOS" ;
