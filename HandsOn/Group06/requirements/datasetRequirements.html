@@ -16,7 +16,7 @@
     .grid-2{grid-template-columns:1fr 1fr}
     code, pre{background:#0e1530;color:#cde1ff;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:.15rem .35rem}
     .badge{display:inline-block;font-size:.8rem;padding:.18rem .5rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);margin-left:.4rem}
-    .ok{color:#052d18;background:linear-gradient(0deg,#19d27f22,#19d27f22);border-color:#19d27f66}
+    .ok{color:#19d27f;background:linear-gradient(0deg,#19d27f22,#19d27f22);border-color:#19d27f66}
     .part{color:#3b2605;background:linear-gradient(0deg,#ffb02022,#ffb02022);border-color:#ffb02066}
     .no{color:#3b0a08;background:linear-gradient(0deg,#ff6a5922,#ff6a5922);border-color:#ff6a5966}
     a{color:#b9c4ff}
@@ -33,22 +33,22 @@
   <header>
     <h1>Dataset Requirements Check — GTFS Static Feed</h1>
     <p class="dim small">
-      Selected dataset: <strong>GTFS static transit feed for cities</strong> (e.g., AMAT Palermo).  
+      Selected dataset: <strong>GTFS static transit feed for Madrid</strong> (Consorcio Regional de Transportes de Madrid - CRTM).  
       This feed consists of multiple text files that are CSV-formatted as per the GTFS specification.
     </p>
     <div class="card small">
       <strong>Documentation used</strong>:
       <ul>
-        <li>GTFS Specification (Static): <a href="https://gtfs.org/schedule/reference/" target="_blank" rel="noreferrer">gtfs.org/schedule/reference</a></li>
-        <li>GTFS Validator Rules (MobilityData): <a href="https://gtfs-validator.mobilitydata.org/rules.html" target="_blank" rel="noreferrer">gtfs-validator.mobilitydata.org/rules.html</a></li>
-        <li> Official page license (for example Palermo), each cities have different licenses we will check before using the datasets <em>https://opendata.comune.palermo.it/opendata-dataset.php?dataset=1303</em></li>
+        <li>GTFS Specification (Static): <a href="https://gtfs.org/schedule/reference/" target="_blank" rel="noopener noreferrer">gtfs.org/schedule/reference</a></li>
+        <li>GTFS Validator Rules (MobilityData): <a href="https://gtfs-validator.mobilitydata.org/rules.html" target="_blank" rel="noopener noreferrer">gtfs-validator.mobilitydata.org/rules.html</a></li>
+        <li>CRTM Open License: <a href="https://www.crtm.es/licencia-de-uso" target="_blank" rel="noopener noreferrer">https://www.crtm.es/licencia-de-uso</a></li>
       </ul>
     </div>
   </header>
 
   <section class="card">
     <h2>Summary</h2>
-    <p>This GTFS feed represents public transport information for the cities (for example Plaermo). It is a standard open-data format widely used by transit agencies worldwide. It ships as multiple CSV-like text files (e.g., <code>stops.txt</code>, <code>routes.txt</code>, <code>trips.txt</code>, <code>stop_times.txt</code>, <code>calendar.txt</code>, <code>shapes.txt</code>) that are relationally linked by IDs (e.g., <code>stop_id</code>, <code>route_id</code>, <code>trip_id</code>).</p>
+    <p>This GTFS feed represents public transport information for Madrid. It is a standard open-data format widely used by transit agencies worldwide. It ships as multiple CSV-like text files (e.g., <code>stops.txt</code>, <code>routes.txt</code>, <code>trips.txt</code>, <code>stop_times.txt</code>, <code>calendar.txt</code>, <code>shapes.txt</code>) that are relationally linked by IDs (e.g., <code>stop_id</code>, <code>route_id</code>, <code>trip_id</code>).</p>
     <div class="grid grid-2 small">
       <div><strong>Domain</strong>: Smart City — Urban Mobility (Public Transport)</div>
       <div><strong>Granularity</strong>: Stops, routes, trips, stop-times (schedule-level, with geocoordinates)</div>
@@ -80,14 +80,17 @@
     <h3>R2. Data are available as a CSV file <span class="badge ok">Satisfied</span></h3>
     <p>Although files use the <code>.txt</code> extension, the GTFS specification defines them as comma-separated text tables (i.e., CSV). Each table can be opened with spreadsheet tools or parsed with CSV readers.</p>
 
-    <h3>R3. Data have an open license so it can be published <span class="badge part"></span></h3>
+    <h3>R3. Data have an open license so it can be published <span class="badge ok">Satisfied</span></h3>
     <div class="callout small">
-      <p><strong>Action required:</strong> We have checked for different cities and they all have the right licenses to be published </p>
+      <p><strong>License:</strong> <a href="https://www.crtm.es/licencia-de-uso" target="_blank" rel="noopener noreferrer">Licencia de Datos Abiertos y Estáticos (LDA) del CRTM</a></p>
+      <p><strong>Summary:</strong> This license allows free and non-exclusive reuse of static public data for both commercial and non-commercial purposes. Redistribution and derivative works (including RDF publication) are explicitly allowed under the following obligations:</p>
       <ul>
-        <li><strong>Accepted examples</strong>: CC0, CC BY (with attribution), Open Government License.</li>
-        <li><strong>Not accepted</strong>: restrictive “developer” licenses that forbid redistribution or derivatives.</li>
+        <li>Must <strong>cite CRTM as the source</strong> and indicate whether data are raw or transformed.</li>
+        <li>Must <strong>preserve metadata</strong> such as update date and license conditions.</li>
+        <li>Must not distort or falsify the data's meaning.</li>
+        <li>Cannot imply CRTM endorses the reuse without explicit permission.</li>
       </ul>
-      <p><em>License:</em> <strong>(insert license name & URL)</strong> — <em>Summary:</em> (state whether redistribution + derivative publication in RDF are allowed; note attribution text if required).</p>
+      <p><strong>Attribution:</strong> "Source: Consorcio Regional de Transportes de Madrid (CRTM) - https://www.crtm.es"</p>
     </div>
 
     <h3>R4. Data can be easily linked with generic real-world entities <span class="badge ok">Satisfied</span></h3>
@@ -95,12 +98,12 @@
 
     <h3>R5. Documentation exists for the data (optional) <span class="badge ok">Satisfied</span></h3>
     <p>GTFS has extensive public documentation (schema, field constraints, examples) and a well-maintained open-source validator with transparent rules:
-      <a href="https://gtfs.org/schedule/reference/" target="_blank" rel="noreferrer">GTFS Spec</a>,
-      <a href="https://gtfs-validator.mobilitydata.org/rules.html" target="_blank" rel="noreferrer">Validator rules</a>.
-      The publisher’s portal usually includes a short dataset description and version/date.</p>
+      <a href="https://gtfs.org/schedule/reference/" target="_blank" rel="noopener noreferrer">GTFS Spec</a>,
+      <a href="https://gtfs-validator.mobilitydata.org/rules.html" target="_blank" rel="noopener noreferrer">Validator rules</a>.
+      The publisher's portal usually includes a short dataset description and version/date.</p>
 
     <h3>R6. Data can come from multiple data sources (optional) <span class="badge ok">Satisfied / Optional</span></h3>
-    <p>The same model exists for many cities. We can combine different cities (e.g., Rome, Milan, Madrid) or merge with complementary smart-city datasets (traffic counts, air quality) using spatial joins. For this first minimal assignment we will publish Palermo only; adding more cities later is straightforward.</p>
+    <p>The same GTFS model exists for many cities worldwide. We can potentially combine data from different Spanish cities or merge with complementary smart-city datasets (traffic counts, air quality, weather) using spatial joins. For this assignment we focus on Madrid's CRTM feed; adding more cities later is straightforward.</p>
   </section>
 
 </main>
