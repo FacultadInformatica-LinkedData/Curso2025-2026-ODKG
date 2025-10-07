@@ -1,0 +1,8 @@
+SELECT DISTINCT ?p 
+WHERE {
+?s a <http://dbpedia.org/ontology/Politician>.
+?s ?p ?o .
+
+}
+
+LIMIT 100
