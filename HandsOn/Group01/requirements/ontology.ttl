@@ -1,0 +1,148 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sc: <http://smartcity.linkeddata.es/lcc/ontology#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sc: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+sc:BasketballCourt a owl:Class ;
+    rdfs:label "Basketball Court" ;
+    rdfs:subClassOf sc:SportsCenter .
+
+sc:Faculty a owl:Class ;
+    rdfs:label "Faculty" ;
+    rdfs:subClassOf <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution>,
+        sc:University .
+
+sc:FootballField a owl:Class ;
+    rdfs:label "Football Field" ;
+    rdfs:subClassOf sc:SportsCenter .
+
+sc:Gym a owl:Class ;
+    rdfs:label "Gym" ;
+    rdfs:subClassOf sc:SportsCenter .
+
+sc:Library a owl:Class ;
+    rdfs:label "Library" ;
+    rdfs:subClassOf sc:Facility .
+
+sc:OtherCenters a owl:Class ;
+    rdfs:label "Other Centers" ;
+    rdfs:subClassOf <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution> .
+
+sc:Park a owl:Class ;
+    rdfs:label "Park" ;
+    rdfs:subClassOf sc:Facility .
+
+sc:ResidenceHall a owl:Class ;
+    rdfs:label "Residence Hall" ;
+    rdfs:subClassOf <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution> .
+
+sc:SwimmingPool a owl:Class ;
+    rdfs:label "Swimming Pool" ;
+    rdfs:subClassOf sc:SportsCenter .
+
+sc:TennisCourt a owl:Class ;
+    rdfs:label "Tennis Court" ;
+    rdfs:subClassOf sc:SportsCenter .
+
+sc:accessibility a owl:DatatypeProperty ;
+    rdfs:label "accessibility" ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:Integer .
+
+sc:hasNearby a owl:ObjectProperty ;
+    rdfs:label "has nearby" ;
+    rdfs:domain sc:Facility ;
+    rdfs:range sc:PublicTransport .
+
+sc:stopName a owl:DatatypeProperty ;
+    rdfs:label "stop name" ;
+    rdfs:domain sc:PublicTransport .
+
+sc:transportLine a owl:DatatypeProperty ;
+    rdfs:label "transport line" ;
+    rdfs:domain sc:PublicTransport .
+
+sc:transportType a owl:DatatypeProperty ;
+    rdfs:label "transport type" ;
+    rdfs:domain sc:PublicTransport .
+
+geo1:lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain sc:Facility .
+
+geo1:long a owl:DatatypeProperty ;
+    rdfs:label "long" ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:float .
+
+schema:containedInPlace a owl:ObjectProperty ;
+    rdfs:label "contained in place" ;
+    rdfs:domain sc:Facility ;
+    rdfs:range dbo:Municipality .
+
+schema:containsPlace a owl:ObjectProperty ;
+    rdfs:label "contains place" ;
+    rdfs:domain dbo:District,
+        dbo:Municipality ;
+    rdfs:range dbo:District,
+        dbo:Neighbourhood .
+
+schema:email a owl:DatatypeProperty ;
+    rdfs:label "email" ;
+    rdfs:domain <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution>,
+        sc:SportsCenter .
+
+schema:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:String .
+
+schema:openingHours a owl:DatatypeProperty ;
+    rdfs:label "opening hours" ;
+    rdfs:domain <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution>,
+        sc:SportsCenter .
+
+schema:postalCode a owl:DatatypeProperty ;
+    rdfs:label "postal code" ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:Integer .
+
+schema:telephone a owl:DatatypeProperty ;
+    rdfs:label "telephone" ;
+    rdfs:domain <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution>,
+        sc:SportsCenter ;
+    rdfs:range xsd:String .
+
+dbo:Neighbourhood a owl:Class ;
+    rdfs:label "Neighbourhood" .
+
+sc:University a owl:Class ;
+    rdfs:label "University" .
+
+dbo:District a owl:Class ;
+    rdfs:label "District" .
+
+dbo:Municipality a owl:Class ;
+    rdfs:label "Municipality" .
+
+sc:PublicTransport a owl:Class ;
+    rdfs:label "Public Transport" .
+
+<http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution> a owl:Class ;
+    rdfs:label "sc. Education Institution" ;
+    rdfs:subClassOf sc:Facility .
+
+sc:SportsCenter a owl:Class ;
+    rdfs:label "Sports Center" ;
+    rdfs:subClassOf sc:Facility .
+
+sc:Facility a owl:Class ;
+    rdfs:label "Facility" .
+

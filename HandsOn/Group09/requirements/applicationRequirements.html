@@ -5,7 +5,6 @@
   <title>Hands-on 1 · Application Requirements & Mock-ups</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* ===== base ===== */
     body{
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
       max-width:1280px;
@@ -21,7 +20,6 @@
     code{background:#f6f8fa;padding:2px 6px;border-radius:6px}
     .foot{margin-top:28px;font-size:.92em;color:#555}
 
-    /* ===== mock-ups UI styles (no JS) ===== */
     .ui-cols{display:grid;gap:20px}
     @media (min-width: 1024px){ .ui-cols{grid-template-columns:1.35fr 1fr} }
     .ui-card{border:1px solid #e5e7eb;background:#fff;border-radius:14px;padding:16px}
@@ -62,47 +60,56 @@
 </head>
 <body>
 
-<h1>Application Requirements & Mock-ups (Assignment 1)</h1>
-<p><strong>Scope for this deliverable:</strong> select datasets and specify the application idea with UI mock-ups.
+<h1>Application Requirements & Mock-ups (Assignment 2)</h1>
+<p><strong>Scope for this deliverable:</strong> select datasets and specify the application idea with UI mock-ups.</p>
 
 <section>
   <h2>Selected datasets</h2>
   <ul>
-    <li><strong><a href="https://data.melbourne.vic.gov.au/explore/dataset/pedestrian-counting-system-monthly-counts-per-hour/information/" >Pedestrian Counting System — Monthly counts per hour</a></strong> (City of Melbourne). Hourly pedestrian totals since 2009; updated monthly. The column <code>sensor_id/location_id</code> identifies the sensor.</li>
-    <li><strong><a href="https://data.melbourne.vic.gov.au/explore/dataset/pedestrian-counting-system-sensor-locations/information/" >Pedestrian Counting System — Sensor Locations</a></strong> (City of Melbourne). Coordinates, status, notes and directions per sensor; joinable via <code>sensor_id/location_id</code>.</li>
+    <li><strong>Pedestrian Counting System — Monthly counts per hour:</strong> hourly pedestrian totals since 2009; joinable with sensor location data via <code>sensor_id/location_id</code>.</li>
+    <li><strong>Pedestrian Counting System — Sensor Locations:</strong> coordinates, status, and metadata for each sensor.</li>
+    <li><strong>Pedestrian Sensor Locations (Enriched):</strong> extends the original locations dataset with address-level fields (street, postcode, etc.) obtained from an API.</li>
+    <li><strong>Microclimate Sensor Locations:</strong> base dataset listing microclimate sensors with coordinates and operational status.</li>
+    <li><strong>Microclimate Sensor Locations (Enriched):</strong> adds geocoded address columns (street, city, postcode, etc.) to ease linkage with other spatial datasets.</li>
+    <li><strong>Microclimate Sensors Data:</strong> detailed environmental readings (temperature, humidity, wind, PM, noise) from each sensor, linked via <code>Device_id</code>.</li>
+    <li><strong>Public Holidays:</strong> dates of official holidays in Melbourne; used to analyse pedestrian and weather patterns on holidays vs. regular days.</li>
   </ul>
 </section>
 
 <section>
   <h2>Why these datasets fit the assignment (R1–R6)</h2>
   <ul>
-    <li><strong>R1 — Smart city domain:</strong> mobility / use of public space. Hourly counts help understand pedestrian activity across city locations.</li>
-    <li><strong>R2 — CSV available:</strong> official portal offers direct CSV export.</li>
-    <li><strong>R3 — Open license:</strong> Victoria open-data directory indicates <em>CC BY 4.0</em> (except trademarks/third-party material), suitable for course publishing.</li>
-    <li><strong>R4 — Linkable:</strong> every row has a <code>sensor_id</code>; we can join 1-to-1 with the <em>Sensor Locations</em> dataset to add coordinates, status and notes about moves/removals.</li>
-    <li><strong>R5 — Documentation (optional):</strong> the resource page includes a <em>Data Dictionary</em> with the column schema.</li>
-    <li><strong>R6 — Multiple sources (optional):</strong> we link two official sources from the same portal: Monthly counts per hour + Sensor Locations. (Optional later: enrich with public holidays/events or weather.)</li>
+    <li><strong>R1 — Smart city domain:</strong> datasets cover <em>mobility</em>, <em>environment</em> and <em>events</em> — key smart-city dimensions that interact (pedestrian movement ↔ weather ↔ holidays).</li>
+    <li><strong>R2 — CSV available:</strong> all seven datasets are downloadable or exportable in CSV format.</li>
+    <li><strong>R3 — Open license:</strong> all datasets are <em>CC BY 4.0</em> except <em>Public Holidays</em>, which is under <em>CC0 1.0</em> (public domain).</li>
+    <li><strong>R4 — Linkable:</strong> shared keys and coordinates enable joining:  
+      <code>sensor_id/location_id</code> (pedestrian data),  
+      <code>Device_id/SensorLocation</code> (microclimate),  
+      and <code>date</code> (public holidays).  
+      Enriched datasets provide address-level linkage to real-world entities.</li>
+    <li><strong>R5 — Documentation (optional):</strong> all datasets include metadata or field descriptions on their open-data portals.</li>
+    <li><strong>R6 — Multiple sources (optional):</strong> integrates data from several smart-city domains — transport, climate, and events — supporting multidimensional analytics.</li>
   </ul>
 </section>
 
 <section>
   <h2>Application concept</h2>
-  <p><strong>Working title:</strong> <em>Pedestrian Activity Explorer (Melbourne)</em></p>
-  <p><strong>Goal:</strong> Explore how foot traffic changes by place and time; compare regular days vs. public holidays; identify peak hours and high-activity locations.</p>
+  <p><strong>Working title:</strong> <em>Urban Dynamics Explorer (Melbourne)</em></p>
+  <p><strong>Goal:</strong> Analyse how pedestrian activity varies with weather and holidays, using linked data from sensors and public events.</p>
 
   <h3>Concrete questions the UI should answer</h3>
   <ul>
-    <li>Which Melbourne areas have the highest pedestrian traffic during peak hours?</li>
-    <li>How do counts at a given place differ on a regular day vs. a public holiday?</li>
-    <li>Is there an observable relationship between weather and pedestrian volumes?</li>
+    <li>How do temperature, humidity, or wind affect pedestrian activity in different city areas?</li>
+    <li>Which zones are busiest during public holidays versus regular weekdays?</li>
+    <li>Can we identify patterns of comfort or congestion based on microclimate and mobility data?</li>
   </ul>
 
   <h3>Minimal feature list for the prototype</h3>
   <ul>
-    <li>Load the two CSVs locally (counts + locations) and join by <code>sensor_id</code>.</li>
-    <li>Filter by date range and time window; aggregate to show averages and peaks.</li>
-    <li>Map of sensors (size/color = intensity) and a side panel with a small time series.</li>
-    <li>Comparator view: regular day vs. holiday for a selected sensor/time window.</li>
+    <li>Load the seven CSV datasets locally and join them by time, location, and sensor identifiers.</li>
+    <li>Filter by date, time range, or weather conditions; aggregate to show averages and peaks.</li>
+    <li>Interactive map combining pedestrian intensity and microclimate readings, with tooltips and drill-down.</li>
+    <li>Comparator view: regular day vs. public holiday or different weather conditions for the same location.</li>
   </ul>
 </section>
 
@@ -127,24 +134,23 @@
               <option>All</option><option>Flinders St Station</option><option>Federation Square</option><option>Bourke St Mall</option>
             </select>
           </label>
-          <span><input type="checkbox" checked> Show events/holidays</span>
+          <span><input type="checkbox" checked> Show weather / holidays</span>
         </div>
 
         <div class="ui-kpis">
-          <div class="ui-kpi"><small>Avg/h</small><strong>842</strong></div>
-          <div class="ui-kpi"><small>Peak</small><strong>18:00</strong></div>
+          <div class="ui-kpi"><small>Avg pedestrians/h</small><strong>842</strong></div>
+          <div class="ui-kpi"><small>Avg temp (°C)</small><strong>21.4</strong></div>
           <div class="ui-kpi"><small>Sensors</small><strong>62</strong></div>
         </div>
 
         <div class="ui-split">
           <div class="ui-panel">
-            <!-- map placeholder -->
             <svg class="ui-box" viewBox="0 0 100 60" aria-label="map">
               <rect x="2" y="2" width="96" height="56" rx="6" ry="6" fill="#f8fafc" stroke="#e5e7eb"/>
               <circle cx="25" cy="40" r="3.2" fill="#60a5fa"><title>Flinders St (high)</title></circle>
               <circle cx="48" cy="28" r="2.4" fill="#93c5fd"><title>Federation Sq (medium)</title></circle>
               <circle cx="70" cy="18" r="1.8" fill="#c7d2fe"><title>Bourke St (low)</title></circle>
-              <polygon points="86,46 88,49 92,49 89,51 90,55 86,53 82,55 83,51 80,49 84,49" fill="#fbbf24"><title>Event</title></polygon>
+              <polygon points="86,46 88,49 92,49 89,51 90,55 86,53 82,55 83,51 80,49 84,49" fill="#fbbf24"><title>Holiday</title></polygon>
             </svg>
             <div class="ui-legend">
               <div>
@@ -152,7 +158,7 @@
                 <span style="margin-left:10px" class="ui-dot ui-mid"></span><small>Medium</small>
                 <span style="margin-left:10px" class="ui-dot ui-high"></span><small>High</small>
               </div>
-              <div><span style="font-size:.9rem">★ Event</span></div>
+              <div><span style="font-size:.9rem">★ Holiday</span></div>
             </div>
           </div>
 
@@ -161,21 +167,20 @@
             <div style="margin:4px 0 2px;display:flex;gap:8px;flex-wrap:wrap">
               <span style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;padding:2px 8px;font-size:.85rem">sensor_id: 123</span>
               <span style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;padding:2px 8px;font-size:.85rem">avg/h: 1,120</span>
-              <span style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;padding:2px 8px;font-size:.85rem">peak: 18:00</span>
+              <span style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;padding:2px 8px;font-size:.85rem">temp: 22°C</span>
             </div>
 
-            <!-- sparkline -->
             <svg class="ui-box" viewBox="0 0 100 50" aria-label="sparkline">
               <polyline points="0,45 10,43 20,40 30,35 40,30 50,22 60,18 70,16 80,20 90,26 100,28"
                         fill="none" stroke="#0ea5e9" stroke-width="2"/>
             </svg>
 
             <table class="ui-table">
-              <thead><tr><th>Hour</th><th>Count</th></tr></thead>
+              <thead><tr><th>Hour</th><th>Count</th><th>Temp (°C)</th></tr></thead>
               <tbody>
-                <tr><td>17:00</td><td>1,540</td></tr>
-                <tr><td>18:00</td><td>1,715</td></tr>
-                <tr><td>19:00</td><td>1,320</td></tr>
+                <tr><td>17:00</td><td>1,540</td><td>23</td></tr>
+                <tr><td>18:00</td><td>1,715</td><td>22</td></tr>
+                <tr><td>19:00</td><td>1,320</td><td>21</td></tr>
               </tbody>
             </table>
           </div>
@@ -183,8 +188,8 @@
       </div>
 
       <ul style="margin-top:10px">
-        <li>Hover → conceptual tooltip with sensor name & intensity.</li>
-        <li>Click a point → open side panel with series & KPIs.</li>
+        <li>Hover → show sensor info and weather snapshot.</li>
+        <li>Click → open side panel with hourly trends and microclimate data.</li>
       </ul>
     </div>
 
@@ -193,21 +198,16 @@
       <h3>View 2 — Comparator</h3>
       <div class="ui-block">
         <div class="ui-bar">
-          <label>Sensor A
+          <label>Sensor
             <select class="ui-select">
               <option>Flinders St</option><option>Federation Square</option>
             </select>
           </label>
-          <label>Sensor B
+          <label>Regular day <input class="ui-input" type="date" value="2025-09-21"></label>
+          <label>Holiday <input class="ui-input" type="date" value="2025-09-28"></label>
+          <label>Weather condition
             <select class="ui-select">
-              <option>Bourke St Mall</option><option>Collins St</option>
-            </select>
-          </label>
-          <label>Day 1 <input class="ui-input" type="date" value="2025-09-21"></label>
-          <label>Day 2 (holiday) <input class="ui-input" type="date" value="2025-09-28"></label>
-          <label>Time window
-            <select class="ui-select">
-              <option>All day</option><option>07–10</option><option selected>17–20</option>
+              <option>All</option><option>Sunny</option><option>Rainy</option>
             </select>
           </label>
         </div>
@@ -228,13 +228,13 @@
 
           <div class="ui-panel">
             <strong>Summary</strong>
-            <p style="margin:8px 0"><span class="ui-badge">+18% peak</span> on holiday vs. regular day (17–20h).</p>
+            <p style="margin:8px 0"><span class="ui-badge">+18% pedestrians</span> on holidays, <span class="ui-badge">–2°C cooler</span> average temperature.</p>
             <table class="ui-table">
               <thead><tr><th>Metric</th><th>Regular</th><th>Holiday</th></tr></thead>
               <tbody>
                 <tr><td>Avg/h</td><td>980</td><td>1,140</td></tr>
                 <tr><td>Peak hour</td><td>18:00</td><td>18:00</td></tr>
-                <tr><td>Peak value</td><td>1,520</td><td>1,800</td></tr>
+                <tr><td>Avg temp (°C)</td><td>24</td><td>22</td></tr>
               </tbody>
             </table>
             <p style="font-size:.9rem;color:#475569">Note: illustrative values for the mock-up.</p>
@@ -243,14 +243,14 @@
       </div>
 
       <ul style="margin-top:10px">
-        <li>A/B selector to compare sensors and dates (regular vs. holiday).</li>
-        <li>Shows absolute/relative variation and peak hour.</li>
+        <li>Compare pedestrian and weather data between regular and holiday dates.</li>
+        <li>Shows relative variation in counts and temperature.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<p class="foot">This document only covers dataset selection and the application concept with UI mock-ups required for Assignment 1.</p>
+<p class="foot">This document describes the seven selected datasets and illustrates the application concept and UI mock-ups for Assignment 2.</p>
 
 </body>
 </html>
