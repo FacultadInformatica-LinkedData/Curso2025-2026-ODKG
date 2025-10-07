@@ -4,22 +4,22 @@
 
 **The “README.md” file:**
 
-- [yes] Includes the names and GitHub users of all the members of the group
+- [X] Includes the names and GitHub users of all the members of the group
 
 **The "csv" directory:**
 
-- [yes] Contains at least one CSV file 
-- [yes] The CSV files belong to one of the selected domains
+- [X] Contains at least one CSV file 
+- [X] The CSV files belong to one of the selected domains
 
 **The "datasetRequirements.html" file:**
 
-- [yes] Identifies the licenses of all the selected datasets
-- [yes] Identifies those entities in the selected datasets that can be linked with entities in other datasets
-- [yes] Identifies those entities in other datasets that can be linked with entities in the selected datasets 
+- [X] Identifies the licenses of all the selected datasets
+- [X] Identifies those entities in the selected datasets that can be linked with entities in other datasets
+- [X] Identifies those entities in other datasets that can be linked with entities in the selected datasets 
 
 **The "applicationRequirements.html” file:**
 
-- [yes] Includes a description of the application user interface
+- [X] Includes a description of the application user interface
 
 ## Comments on the self-assessment
-_(If required)_
+_We have used CSS to improve the visualization of the requirements. For future cases, let us know if you prefer it with or without styling._
