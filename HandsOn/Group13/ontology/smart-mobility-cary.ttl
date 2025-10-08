@@ -1,0 +1,737 @@
+@prefix : <http://smartmobility.townofcary.org/ontology#> .
+@prefix smc: <http://smartmobility.townofcary.org/ontology#> .
+@prefix smr: <http://smartmobility.townofcary.org/resource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix mod: <https://w3id.org/mod#> .
+@base <http://smartmobility.townofcary.org/ontology#> .
+
+<http://smartmobility.townofcary.org/ontology#> rdf:type owl:Ontology ;
+			dcterms:title "Smart Mobility Ontology for Cary, NC"@en ;
+			dcterms:description "An ontology for representing smart mobility infrastructure and usage data in Cary, North Carolina, including traffic counting sensors and electric vehicle charging stations."@en ;
+			dcterms:created "2025-10-06"^^xsd:date ;
+			dcterms:creator "Pedro F. Rascon Fernandez"@en ;
+			dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+			owl:versionInfo "0.0.1" ;
+			mod:createdWith <https://chowlk.linkeddata.es/> .
+
+dcterms:title a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+#################################
+#    Object Properties
+#################################
+
+## smc:ocurredAt
+smc:ocurredAt rdf:type owl:ObjectProperty ;
+		rdfs:label "ocurred at" .
+
+## smc:recordedAt
+smc:recordedAt rdf:type owl:ObjectProperty ;
+		rdfs:label "recorded at" .
+
+## smc:hasObservation
+smc:hasObservation rdf:type owl:ObjectProperty ;
+		rdfs:label "has observation" .
+
+## smc:hasChargingSession
+smc:hasChargingSession rdf:type owl:ObjectProperty ;
+		rdfs:label "has charging session" .
+
+#################################
+#    Data Properties
+#################################
+
+## smc:siteId
+smc:siteId rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:label "site id" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:range xsd:"site identifier"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:range xsd:"Unique identifier for an Eco-Counter site."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:range smc:EcoCounterSite ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:range xsd:string ;
+		rdfs:label "range" .
+
+## smc:stationName
+smc:stationName rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "station name" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Station name"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Name of the EV charging station."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+## smc:sessionDate
+smc:sessionDate rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:label "session date" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range xsd:"session date"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range xsd:"The date when a charging session took place."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range smc:ChargingSession ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range xsd:date ;
+		rdfs:label "range" .
+
+## smc:energyConsumed
+smc:energyConsumed rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:label "energy consumed" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range xsd:"energy consumed"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range xsd:"The amount of energy consumed during a charging session, measured in kilowatt-hours ."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range smc:ChargingSession ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range xsd:decimal ;
+		rdfs:label "range" .
+
+## smc:sessionDuration
+smc:sessionDuration rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:label "session duration" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range xsd:"session duration"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range xsd:"The duration of a charging session in minutes."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range smc:ChargingSession ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ChargingSession ;
+		rdfs:range xsd:decimal ;
+		rdfs:label "range" .
+
+## smc:siteActive
+smc:siteActive rdf:type owl:DatatypeProperty ;
+		rdfs:label "site active" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Site active"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Indicates whether the site is active."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:range smc:EcoCounterSite ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:boolean ;
+		rdfs:label "range" .
+
+## smc:installationDate
+smc:installationDate rdf:type owl:DatatypeProperty ;
+		rdfs:label "installation date" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Installation date"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Date when the counter was installed."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:range smc:EcoCounterSite ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:label "range" .
+
+## smc:userType
+smc:userType rdf:type owl:DatatypeProperty ;
+		rdfs:label "user type" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"User type"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Type of counter ."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:range smc:EcoCounterSite ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:string ;
+		rdfs:label "range" .
+
+## smc:siteOwner
+smc:siteOwner rdf:type owl:DatatypeProperty ;
+		rdfs:label "site owner" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Site owner"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Organization that owns the counter site"@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:range smc:EcoCounterSite ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:string ;
+		rdfs:label "range" .
+
+## geo:long
+geo:long rdf:type owl:DatatypeProperty ;
+		rdfs:label "long" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Longitude"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Longitude of the sensor site in decimal degrees."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:decimal ;
+		rdfs:label "range" .
+
+## geo:lat
+geo:lat rdf:type owl:DatatypeProperty ;
+		rdfs:label "lat" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Latitude"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Latitude of the sensor site in decimal degrees."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:label "range" .
+
+## smc:counterId
+smc:counterId rdf:type owl:DatatypeProperty ;
+		rdfs:label "counter id" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Counter ID"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Unique identifier of the counter device."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:range smc:EcoCounterSite ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:string ;
+		rdfs:label "range" .
+
+## smc:photoURL
+smc:photoURL rdf:type owl:DatatypeProperty ;
+		rdfs:label "photo u r l" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Photo URL"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"URL linking to photos of the counter site."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:range smc:EcoCounterSite ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:label "range" .
+
+## smc:observationDateTime
+smc:observationDateTime rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:label "observation date time" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:range xsd:"Observation date/time"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:range xsd:"Date and time when the observation was recorded."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:range smc:EcoCounterData ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:EcoCounterSite ;
+		rdfs:range xsd:dateTime ;
+		rdfs:label "range" .
+
+## smc:counts
+smc:counts rdf:type owl:DatatypeProperty ;
+		rdfs:label "counts" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Count value"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Number of pedestrians, bicycles, or vehicles counted."@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:range smc:EcoCounterData ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:label "range" .
+
+## smc:status
+smc:status rdf:type owl:DatatypeProperty ;
+		rdfs:label "status" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Status"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:range xsd:"Status of the record"@en ;
+		rdfs:label "comment" .
+
+## rdfs:domain
+rdfs:domain rdf:type owl:DatatypeProperty ;
+		rdfs:range smc:EcoCounterData ;
+		rdfs:label "domain" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:label "range" .
+
+## smc:zipCode
+smc:zipCode rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "zip code" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"ZIP code"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Postal code of the charging station."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+## smc:stateProvince
+smc:stateProvince rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "state province" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"State/Province"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"State or province where the station is located."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+## smc:city
+smc:city rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "city" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"City"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"City where the station is located."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+## smc:address
+smc:address rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "address" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Station address"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Address of the station."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+## smc:fee
+smc:fee rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "fee" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Fee"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Fee for using the charger ."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+## smc:modelNumber
+smc:modelNumber rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "model number" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Model number"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Model number of the EV charger."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+## geo:lat
+geo:lat rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "lat" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Latitude"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Latitude coordinate of the charging station in decimal degrees."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+## smc:geoPoint
+smc:geoPoint rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "geo point" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Geographic point"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Combined geographic coordinate as text ."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+## geo:long
+geo:long rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "long" .
+
+## rdfs:label
+rdfs:label rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Longitude"@en ;
+		rdfs:label "label" .
+
+## rdfs:comment
+rdfs:comment rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:range xsd:"Longitude coordinate of the charging station in decimal degrees."@en ;
+		rdfs:label "comment" .
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "electric vehicle charging station" .
+
+## rdfs:range
+rdfs:range rdf:type owl:DatatypeProperty ;
+		rdfs:domain smc:ElectricVehicleChargingStation ;
+		rdfs:label "range" .
+
+#################################
+#    Classes
+#################################
+
+## smc:ElectricVehicleChargingStation
+smc:ElectricVehicleChargingStation rdf:type owl:Class ;
+	rdfs:label "Electric Vehicle Charging Station" .
+
+## smc:ChargingSession
+smc:ChargingSession rdf:type owl:Class ;
+	rdfs:label "Charging Session" .
+
+## smc:EcoCounterSite
+smc:EcoCounterSite rdf:type owl:Class ;
+	rdfs:label "Eco Counter Site" .
+
+## smc:EcoCounterData
+smc:EcoCounterData rdf:type owl:Class ;
+	rdfs:label "Eco Counter Data" .
+
+#################################
+#    Instances
+#################################
+
+#################################
+#    General Axioms
+#################################
+

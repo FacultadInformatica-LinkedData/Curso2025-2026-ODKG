@@ -1,0 +1,10 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+par_8_09568,09568,ESTACIÓN-EST.ARANJUEZ,Calle de la Estación 2,40.0345268249512,-3.61783719062805,C1,http://www.crtm.es,0,,Europe/Madrid,2
+par_8_09571,09571,GOBERNADOR-MERCADO DE ABASTOS,Calle del Gobernador 55,40.0326385498047,-3.60506820678711,C1,http://www.crtm.es,0,,Europe/Madrid,2
+par_8_09572,09572,ABASTOS-FLORIDA,Calle de Abastos 13,40.0320510864258,-3.60703206062317,C1,http://www.crtm.es,0,,Europe/Madrid,2
+par_8_09573,09573,GOBERNADOR-VALERAS,Calle del Gobernador 1,40.032772064209,-3.60856199264526,C1,http://www.crtm.es,0,,Europe/Madrid,2
+par_8_09576,09576,ABASTOS-AYUNTAMIENTO,Calle de Abastos 52,40.0319328308105,-3.60386633872986,C1,http://www.crtm.es,0,,Europe/Madrid,2
+par_8_09577,09577,GTA.NUEVO ARANJUEZ-CUARTELES,Gta del Nuevo Aranjuez 1,40.0324363708496,-3.5931932926178,C1,http://www.crtm.es,0,,Europe/Madrid,2
+par_8_09583,09583,REY-AUDITORIO,Calle del Rey 48,40.0323905944824,-3.60051822662354,C1,http://www.crtm.es,0,,Europe/Madrid,2
+par_8_09584,09584,FOSO-GOBERNADOR,Calle del Foso 82,40.0323944091797,-3.59809231758118,C1,http://www.crtm.es,0,,Europe/Madrid,2
+par_8_09585,09585,FOSO-INFANTAS,Calle del Foso 17,40.0333786010742,-3.59798359870911,C1,http://www.crtm.es,0,,Europe/Madrid,2
