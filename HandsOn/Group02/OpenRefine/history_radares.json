@@ -1,0 +1,211 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ubicacion",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Ubicacion using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Sentido",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Sentido using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Carretara o vial",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Carretara o vial using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tipo",
+    "expression": "grel:value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Tipo using expression grel:value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Sentido",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Sentido using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Sentido",
+    "expression": "grel:value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Sentido using expression grel:value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Carretara o vial",
+    "expression": "grel:value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Carretara o vial using expression grel:value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ubicacion",
+    "expression": "grel:value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Ubicacion using expression grel:value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Velocidad límite",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Velocidad límite using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Longitud inicio tramo",
+    "description": "Remove column Longitud inicio tramo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Latitud inicio tramo",
+    "description": "Remove column Latitud inicio tramo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "X (WGS84)",
+    "description": "Remove column X (WGS84)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Y (WGS84)",
+    "description": "Remove column Y (WGS84)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Nº RADAR",
+    "newColumnName": "numero_radar",
+    "description": "Rename column Nº RADAR to numero_radar"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ubicacion",
+    "newColumnName": "ubicacion",
+    "description": "Rename column Ubicacion to ubicacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Carretara o vial",
+    "newColumnName": "carretera_o_vial",
+    "description": "Rename column Carretara o vial to carretera_o_vial"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "UBICACIÓN Calle 30",
+    "newColumnName": "ubicacion_calle_30",
+    "description": "Rename column UBICACIÓN Calle 30 to ubicacion_calle_30"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "PK",
+    "newColumnName": "pk",
+    "description": "Rename column PK to pk"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Sentido",
+    "newColumnName": "sentido",
+    "description": "Rename column Sentido to sentido"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Tipo",
+    "newColumnName": "tipo",
+    "description": "Rename column Tipo to tipo"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Carril",
+    "newColumnName": "carril",
+    "description": "Rename column Carril to carril"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Longitud",
+    "newColumnName": "longitud",
+    "description": "Rename column Longitud to longitud"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Latitud",
+    "newColumnName": "latitud",
+    "description": "Rename column Latitud to latitud"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Velocidad límite",
+    "newColumnName": "velocidad_limite",
+    "description": "Rename column Velocidad límite to velocidad_limite"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Responsable",
+    "newColumnName": "responsable",
+    "description": "Rename column Responsable to responsable"
+  }
+]
