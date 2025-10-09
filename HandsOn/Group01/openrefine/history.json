@@ -1,0 +1,438 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "PK",
+    "description": "Remove column PK"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CONTENT-URL",
+    "description": "Remove column CONTENT-URL"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ORIENTACION",
+    "description": "Remove column ORIENTACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ESCALERAS",
+    "description": "Remove column ESCALERAS"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PUERTA",
+    "description": "Remove column PUERTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PLANTA",
+    "description": "Remove column PLANTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CLASE-VIAL",
+    "description": "Remove column CLASE-VIAL"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TIPO-NUM",
+    "description": "Remove column TIPO-NUM"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COD-BARRIO",
+    "description": "Remove column COD-BARRIO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COD-DISTRITO",
+    "description": "Remove column COD-DISTRITO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-X",
+    "description": "Remove column COORDENADA-X"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-Y",
+    "description": "Remove column COORDENADA-Y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "FAX",
+    "description": "Remove column FAX"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MADRID",
+          "MADRID 28042",
+          "Madrid"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MADRID"
+      }
+    ],
+    "description": "Mass edit cells in column LOCALIDAD"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "grel:if(value == null, \"/contenido/entidadesYorganismos/ParquesJardines\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIPO using expression grel:if(value == null, \"/contenido/entidadesYorganismos/ParquesJardines\", value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TIPO",
+    "expression": "grel:value.replace(\"/contenido/entidadesYorganismos/\", \"\").split(\"/\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "TipoInstalacion",
+    "columnInsertIndex": 19,
+    "description": "Create column TipoInstalacion at index 19 based on column TIPO using expression grel:value.replace(\"/contenido/entidadesYorganismos/\", \"\").split(\"/\")[0]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TELEFONO",
+          "expression": "value",
+          "columnName": "TELEFONO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "630 630 710 (actividades) \n917210079 (de lunes a viernes de 9 a 14 h)",
+                "l": "630 630 710 (actividades) \n917210079 (de lunes a viernes de 9 a 14 h)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "630 630 710 (actividades) \n917210079 (de lunes a viernes de 9 a 14 h)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "630 630 710\n917 210 079"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "913 553 201 -  919 246 793"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "913 553 201 / 919 246 793"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "913 947 505 / 913 947 504 (incidencias matrícula)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "913 947 505 / 913 947 504"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "914 305 871 - Taquilla 915 288 879"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "914 305 871 / 915 288 879"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "914 507 344 - 914 505 530"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "914 507 344 / 914 505 530"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "914 800 476 - idmlavaguada@madrid.es"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "914 800 476"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "917 106 155 (De L a V de 9 a 22 horas)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "917 106 155"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "917 588 677 - 915 592 090 - 649 84 14 45"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "917 588 677 / 915 592 090 / 649 84 14 45"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "grel:value.replace(/\\s*\\/\\s*/,\"\\n\").replace(/\\s+-\\s+/,\"\\n\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/\\s*\\/\\s*/,\"\\n\").replace(/\\s+-\\s+/,\"\\n\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "grel:value.replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "grel:value.replace(/(\\d{9})(?=\\d)/, \"$1\\n\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/(\\d{9})(?=\\d)/, \"$1\\n\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ACCESIBILIDAD",
+    "expression": "grel:if(\n  isBlank(value),\n  \"\",\n  forEach(\n    value.split(/[,; ]+/),\n    v,\n    if(v==\"0\",\"No accesible\",\n      if(v==\"1\",\"Accesible\",\n        if(v==\"2\",\"Instalación parcialmente accesible para personas con movilidad reducida\",\n          if(v==\"3\",\"Sin información sobre accesibilidad para personas con movilidad reducida\",\n            if(v==\"4\",\"Lengua de signos\",\n              if(v==\"5\",\"Señalización podotáctil\",\n                if(v==\"6\",\"Bucle de inducción magnético\",\"\")\n              )\n            )\n          )\n        )\n      )\n    )\n  ).join(\"\\n\")\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ACCESIBILIDAD using expression grel:if(\n  isBlank(value),\n  \"\",\n  forEach(\n    value.split(/[,; ]+/),\n    v,\n    if(v==\"0\",\"No accesible\",\n      if(v==\"1\",\"Accesible\",\n        if(v==\"2\",\"Instalación parcialmente accesible para personas con movilidad reducida\",\n          if(v==\"3\",\"Sin información sobre accesibilidad para personas con movilidad reducida\",\n            if(v==\"4\",\"Lengua de signos\",\n              if(v==\"5\",\"Señalización podotáctil\",\n                if(v==\"6\",\"Bucle de inducción magnético\",\"\")\n              )\n            )\n          )\n        )\n      )\n    )\n  ).join(\"\\n\")\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TRANSPORTE",
+    "expression": "grel:if((value.match(/.*(autobuses|bus|autobús).*/i)!=null),value,null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Bus",
+    "columnInsertIndex": 5,
+    "description": "Create column Bus at index 5 based on column TRANSPORTE using expression grel:if((value.match(/.*(autobuses|bus|autobús).*/i)!=null),value,null)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Bus",
+    "expression": "grel:if(\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i) != null,\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Bus using expression grel:if(\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i) != null,\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TRANSPORTE",
+    "expression": "grel:if((value.match(/.*(metro).*/i)!=null),value,null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro",
+    "columnInsertIndex": 5,
+    "description": "Create column Metro at index 5 based on column TRANSPORTE using expression grel:if((value.match(/.*(metro).*/i)!=null),value,null)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Metro",
+    "expression": "grel:if(\n\t\t  value.match(/.*((metro).*)/i) != null,\n\t\t  value.match(/.*((metro).*)/i)[0].split(/[\\.\\n]|autobuses|bus|autobús|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Metro using expression grel:if(\n\t\t  value.match(/.*((metro).*)/i) != null,\n\t\t  value.match(/.*((metro).*)/i)[0].split(/[\\.\\n]|autobuses|bus|autobús|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TRANSPORTE",
+    "expression": "grel:if((value.match(/.*(cercanías|renfe|tren).*/i)!=null),value,null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias",
+    "columnInsertIndex": 5,
+    "description": "Create column Cercanias at index 5 based on column TRANSPORTE using expression grel:if((value.match(/.*(cercanías|renfe|tren).*/i)!=null),value,null)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i) != null,\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|autobuses|bus|autobús|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cercanias using expression grel:if(\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i) != null,\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|autobuses|bus|autobús|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+  }
+]
