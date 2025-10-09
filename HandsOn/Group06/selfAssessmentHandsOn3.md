@@ -1,23 +1,18 @@
 # Hands-on Assignment 3 – Self Assessment
 
-## Checklist
+## Data–Ontology Consistency Checklist
 
-### The “README.md” file
-- [x] Includes the names and GitHub users of all the members of the group.
+### Resources (CSV)
+- [x] Every resource has a unique identifier in a column (not auto-incremented).
+- [x] Every resource is related to a class in the ontology.
 
-### The "csv" directory
-- [x] Contains at least one CSV file.  
-- [x] The CSV files belong to one of the selected domains.
+### Classes (Ontology)
+- [x] Every class is related to at least one resource described in the CSV file.
 
-### The "datasetRequirements.html" file
-- [x] Identifies the licenses of all the selected datasets.  
-- [x] Identifies those entities in the selected datasets that can be linked with entities in other datasets.  
-- [x] Identifies those entities in other datasets that can be linked with entities in the selected datasets.
+### Columns (CSV)
+- [x] All values are trimmed (no leading/trailing whitespace).
+- [x] All values are properly encoded (e.g., dates, booleans).
+- [x] Every column is related to a property in the ontology.
 
-### The "applicationRequirements.html” file
-- [x] Includes a description of the application user interface.
-
-## Comments on the self-assessment
-The CSV files were too large to push to the repository, so only the initial rows are included as a representation.  
-Currently, data from the city of Palermo is being used.  
-Decisions may change in the future if better solutions are identified.
+### Properties (Ontology)
+- [x] Every property is related to a column in the CSV file.
