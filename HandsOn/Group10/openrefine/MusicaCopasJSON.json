@@ -1131,5 +1131,15 @@
     "newColumnName": "TYPE_ROAD",
     "columnInsertIndex": 4,
     "description": "Crear la columna TYPE_ROAD en el índice 4 basada en la columna ROAD usando la expresión grel:if(value == null, null,\n  if(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i).length() > 0,\n     trim(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i)[0]),\n     null)\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "STREET",
+    "description": "Eliminar columna STREET"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "STREET2",
+    "description": "Eliminar columna STREET2"
   }
 ]
