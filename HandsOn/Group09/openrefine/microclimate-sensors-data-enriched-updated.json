@@ -1,20 +1,108 @@
 [
   {
-    "op": "core/row-removal",
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Device_id",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "Closest_PedestrianCount_Sensor",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna Closest_PedestrianCount_Sensor en el índice 1 basada en la columna Device_id usando la expresión grel:null"
+  },
+  {
+    "op": "core/fill-down",
     "engineConfig": {
       "facets": [
         {
           "type": "list",
-          "name": "MinimumWindDirection",
+          "name": "Device_id",
           "expression": "value",
-          "columnName": "MinimumWindDirection",
+          "columnName": "Device_id",
           "invert": false,
           "omitBlank": false,
           "omitError": false,
-          "selection": [],
-          "selectBlank": true,
+          "selection": [
+            {
+              "v": {
+                "v": "aws5-0999",
+                "l": "aws5-0999"
+              }
+            }
+          ],
+          "selectBlank": false,
           "selectError": false
-        },
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Device_id",
+          "expression": "value",
+          "columnName": "Device_id",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ICTMicroclimate-01",
+                "l": "ICTMicroclimate-01"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Device_id",
+          "expression": "value",
+          "columnName": "Device_id",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ICTMicroclimate-02",
+                "l": "ICTMicroclimate-02"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [
         {
           "type": "list",
           "name": "Device_id",
@@ -37,24 +125,13 @@
       ],
       "mode": "row-based"
     },
-    "description": "Remove rows"
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
   },
   {
-    "op": "core/row-removal",
+    "op": "core/fill-down",
     "engineConfig": {
       "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
         {
           "type": "list",
           "name": "Device_id",
@@ -77,184 +154,13 @@
       ],
       "mode": "row-based"
     },
-    "description": "Remove rows"
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
   },
   {
-    "op": "core/row-removal",
+    "op": "core/fill-down",
     "engineConfig": {
       "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-08",
-                "l": "ICTMicroclimate-08"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "description": "Remove rows"
-  },
-  {
-    "op": "core/row-removal",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-09",
-                "l": "ICTMicroclimate-09"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "description": "Remove rows"
-  },
-  {
-    "op": "core/row-removal",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-06",
-                "l": "ICTMicroclimate-06"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "description": "Remove rows"
-  },
-  {
-    "op": "core/row-removal",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-07",
-                "l": "ICTMicroclimate-07"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "description": "Remove rows"
-  },
-  {
-    "op": "core/row-removal",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
         {
           "type": "list",
           "name": "Device_id",
@@ -277,563 +183,11 @@
       ],
       "mode": "row-based"
     },
-    "description": "Remove rows"
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
   },
   {
-    "op": "core/row-removal",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-02",
-                "l": "ICTMicroclimate-02"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "description": "Remove rows"
-  },
-  {
-    "op": "core/row-removal",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-10",
-                "l": "ICTMicroclimate-10"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "description": "Remove rows"
-  },
-  {
-    "op": "core/row-removal",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-11",
-                "l": "ICTMicroclimate-11"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "description": "Remove rows"
-  },
-  {
-    "op": "core/row-removal",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "MinimumWindDirection",
-          "expression": "value",
-          "columnName": "MinimumWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-01",
-                "l": "ICTMicroclimate-01"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "RelativeHumidity",
-          "expression": "value",
-          "columnName": "RelativeHumidity",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "description": "Remove rows"
-  },
-  {
-    "op": "core/row-removal",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "AverageWindDirection",
-          "expression": "value",
-          "columnName": "AverageWindDirection",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "description": "Remove rows"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-10",
-                "l": "ICTMicroclimate-10"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value),\"1 Treasury Place\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value),\"1 Treasury Place\", value)"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-11",
-                "l": "ICTMicroclimate-11"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"1 Treasury Place\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"1 Treasury Place\", value)"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-01",
-                "l": "ICTMicroclimate-01"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"Birrarung Marr Park - Pole 1131\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"Birrarung Marr Park - Pole 1131\", value)"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-04",
-                "l": "ICTMicroclimate-04"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"Batman Park\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"Batman Park\", value)"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "aws5-0999",
-                "l": "aws5-0999"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"Royal Park Asset ID: COM2707\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"Royal Park Asset ID: COM2707\", value)"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-08",
-                "l": "ICTMicroclimate-08"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"Swanston St - Tram Stop 13 adjacent Federation Sq & Flinders St Station\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"Swanston St - Tram Stop 13 adjacent Federation Sq & Flinders St Station\", value)"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-09",
-                "l": "ICTMicroclimate-09"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"SkyFarm (Jeff's Shed). Rooftop - Melbourne Conference & Exhibition Centre (MCEC)\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"SkyFarm (Jeff's Shed). Rooftop - Melbourne Conference & Exhibition Centre (MCEC)\", value)"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-07",
-                "l": "ICTMicroclimate-07"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"Tram Stop 7C - Melbourne Tennis Centre Precinct - Rod Laver Arena\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"Tram Stop 7C - Melbourne Tennis Centre Precinct - Rod Laver Arena\", value)"
-  },
-  {
-    "op": "core/text-transform",
+    "op": "core/fill-down",
     "engineConfig": {
       "facets": [
         {
@@ -854,346 +208,15 @@
           ],
           "selectBlank": false,
           "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
         }
       ],
       "mode": "row-based"
     },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"Tram Stop 7B - Melbourne Tennis Centre Precinct - Rod Laver Arena\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"Tram Stop 7B - Melbourne Tennis Centre Precinct - Rod Laver Arena\", value)"
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
   },
   {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-03",
-                "l": "ICTMicroclimate-03"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"CH1 rooftop\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"CH1 rooftop\", value)"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-02",
-                "l": "ICTMicroclimate-02"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "SensorLocation",
-          "expression": "value",
-          "columnName": "SensorLocation",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "SensorLocation",
-    "expression": "grel:if(isNull(value), \"101 Collins St L11 Rooftop\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna SensorLocation usando la expresión grel:if(isNull(value), \"101 Collins St L11 Rooftop\", value)"
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-10",
-                "l": "ICTMicroclimate-10"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.8128595, 144.9745395\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.8128595, 144.9745395\""
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-04",
-                "l": "ICTMicroclimate-04"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.8221828, 144.9562225\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.8221828, 144.9562225\""
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "aws5-0999",
-                "l": "aws5-0999"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.7956167, 144.9519007\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.7956167, 144.9519007\""
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-08",
-                "l": "ICTMicroclimate-08"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.8184515, 144.9678474\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.8184515, 144.9678474\""
-  },
-  {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-09",
-                "l": "ICTMicroclimate-09"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.8223306, 144.9521696\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.8223306, 144.9521696\""
-  },
-  {
-    "op": "core/text-transform",
+    "op": "core/fill-down",
     "engineConfig": {
       "facets": [
         {
@@ -1214,31 +237,15 @@
           ],
           "selectBlank": false,
           "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
         }
       ],
       "mode": "row-based"
     },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.8222341, 144.9829409\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.8222341, 144.9829409\""
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
   },
   {
-    "op": "core/text-transform",
+    "op": "core/fill-down",
     "engineConfig": {
       "facets": [
         {
@@ -1252,38 +259,22 @@
           "selection": [
             {
               "v": {
-                "v": "ICTMicroclimate-06",
-                "l": "ICTMicroclimate-06"
+                "v": "ICTMicroclimate-08",
+                "l": "ICTMicroclimate-08"
               }
             }
           ],
           "selectBlank": false,
           "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
         }
       ],
       "mode": "row-based"
     },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.8194993, 144.9787211\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.8194993, 144.9787211\""
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
   },
   {
-    "op": "core/text-transform",
+    "op": "core/fill-down",
     "engineConfig": {
       "facets": [
         {
@@ -1297,38 +288,22 @@
           "selection": [
             {
               "v": {
-                "v": "ICTMicroclimate-03",
-                "l": "ICTMicroclimate-03"
+                "v": "ICTMicroclimate-09",
+                "l": "ICTMicroclimate-09"
               }
             }
           ],
           "selectBlank": false,
           "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
         }
       ],
       "mode": "row-based"
     },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.8140348, 144.96728\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.8140348, 144.96728\""
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
   },
   {
-    "op": "core/text-transform",
+    "op": "core/fill-down",
     "engineConfig": {
       "facets": [
         {
@@ -1342,83 +317,22 @@
           "selection": [
             {
               "v": {
-                "v": "ICTMicroclimate-01",
-                "l": "ICTMicroclimate-01"
+                "v": "ICTMicroclimate-10",
+                "l": "ICTMicroclimate-10"
               }
             }
           ],
           "selectBlank": false,
           "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
         }
       ],
       "mode": "row-based"
     },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.8185931, 144.9716404\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.8185931, 144.9716404\""
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
   },
   {
-    "op": "core/text-transform",
-    "engineConfig": {
-      "facets": [
-        {
-          "type": "list",
-          "name": "Device_id",
-          "expression": "value",
-          "columnName": "Device_id",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [
-            {
-              "v": {
-                "v": "ICTMicroclimate-02",
-                "l": "ICTMicroclimate-02"
-              }
-            }
-          ],
-          "selectBlank": false,
-          "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
-        }
-      ],
-      "mode": "row-based"
-    },
-    "columnName": "LatLong",
-    "expression": "grel:\"-37.814604, 144.9702991\"",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:\"-37.814604, 144.9702991\""
-  },
-  {
-    "op": "core/text-transform",
+    "op": "core/fill-down",
     "engineConfig": {
       "facets": [
         {
@@ -1439,54 +353,17 @@
           ],
           "selectBlank": false,
           "selectError": false
-        },
-        {
-          "type": "list",
-          "name": "LatLong",
-          "expression": "value",
-          "columnName": "LatLong",
-          "invert": false,
-          "omitBlank": false,
-          "omitError": false,
-          "selection": [],
-          "selectBlank": true,
-          "selectError": false
         }
       ],
       "mode": "row-based"
     },
-    "columnName": "LatLong",
-    "expression": "grel:if(isNull(value), \"-37.812888, 144.9750857\", value)",
-    "onError": "keep-original",
-    "repeat": false,
-    "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna LatLong usando la expresión grel:if(isNull(value), \"-37.812888, 144.9750857\", value)"
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "description": "Rellenar las celdas en la columna Closest_PedestrianCount_Sensor"
   },
   {
-    "op": "core/column-split",
-    "engineConfig": {
-      "facets": [],
-      "mode": "row-based"
-    },
-    "columnName": "LatLong",
-    "guessCellType": true,
-    "removeOriginalColumn": true,
-    "mode": "separator",
-    "separator": ",",
-    "regex": false,
-    "maxColumns": 0,
-    "description": "Dividir columna LatLong por separador"
-  },
-  {
-    "op": "core/column-rename",
-    "oldColumnName": "LatLong 1",
-    "newColumnName": "lat",
-    "description": "Renombra la columna LatLong 1 a lat"
-  },
-  {
-    "op": "core/column-rename",
-    "oldColumnName": "LatLong 2",
-    "newColumnName": "lon",
-    "description": "Renombra la columna LatLong 2 a lon"
+    "op": "core/column-move",
+    "columnName": "Closest_PedestrianCount_Sensor",
+    "index": 23,
+    "description": "Mueve la columna Closest_PedestrianCount_Sensor a la posición 23"
   }
 ]
