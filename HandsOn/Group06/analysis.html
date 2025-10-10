@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linked Data – Dataset Analysis (GTFS Madrid)</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+  main { max-width: 1000px; margin: 2.5rem auto; padding: 0 1rem 3rem; }
+  h1, h2, h3 { line-height: 1.3; }
+  h2 { color: #60a5fa; margin-top: 2rem; }
+  h3 { color: #e5e7eb; margin-top: 1.25rem; }
+  p { margin: 0.75rem 0; }
+  .card { background: #111827; border-radius: 10px; padding: 1.5rem; margin-top: 1.5rem; }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  th, td { padding: 0.6rem; border-bottom: 1px solid #1f2937; text-align: left; vertical-align: top; }
+  th { background: #0b1220; color: #e5e7eb; }
+  ul, ol { margin-left: 1.25rem; }
+  a { color: #93c5fd; }
+  .small { font-size: 0.95rem; color: #d1d5db; }
+  .callout { background: #0b1220; border-left: 4px solid #60a5fa; padding: 1rem; border-radius: 8px; margin-top: 1rem; }
+  pre { background: #0b1220; border-radius: 8px; padding: 1rem; overflow-x: auto; color: #d1d5db; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Analysis &amp; Design – GTFS Madrid</h1>
+  <p class="small">Hands-on assignment 2 – Open Data and Knowledge Graphs · Group <strong>06</strong></p>
+
+  <section class="card">
+    <h2>1. Dataset Analysis</h2>
+    <p>The dataset is a curated subset of the General Transit Feed Specification (GTFS) for Madrid’s public transportation, obtained from the Mobility Database feed
+    (<a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank">mdb-2820</a>).
+    The objective is to produce a compact table (<code>df_clean</code>) where each row represents a <strong>scheduled stop event</strong> (a particular trip arriving at a particular stop at a planned time). This dataset supports the development of an application for user-reported waiting times.</p>
+
+    <h3>1.1 Data Processing</h3>
+    <ul>
+      <li>Loaded five GTFS source files: <code>routes.txt</code>, <code>trips.txt</code>, <code>stop_times.txt</code>, <code>stops.txt</code>, and <code>shapes.txt</code>.</li>
+      <li>Excluded <code>shapes.txt</code> for this stage (geometry not needed).</li>
+      <li>Removed empty columns (<code>route_desc</code>, <code>block_id</code>) and handled null values.</li>
+      <li>Merged tables in the order <code>routes → trips → stop_times → stops</code> using keys <code>route_id</code>, <code>trip_id</code>, and <code>stop_id</code>.</li>
+      <li>Kept only essential attributes: route info, trip info, stop info, arrival times, and accessibility.</li>
+      <li>Verified referential integrity and consistent keys.</li>
+    </ul>
+
+    <h3>1.2 Final Schema</h3>
+    <table>
+      <thead><tr><th>Column</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><code>trip_id</code></td><td>Unique identifier of the scheduled journey.</td></tr>
+        <tr><td><code>route_id</code></td><td>Identifier of the line the trip belongs to.</td></tr>
+        <tr><td><code>route_short_name</code></td><td>Public line code (e.g., 519).</td></tr>
+        <tr><td><code>route_long_name</code></td><td>Human-readable description of the line.</td></tr>
+        <tr><td><code>route_type</code></td><td>Type of transport (Bus, Metro, etc.).</td></tr>
+        <tr><td><code>trip_headsign</code></td><td>Trip direction or destination label.</td></tr>
+        <tr><td><code>direction_id</code></td><td>Direction flag (0 or 1).</td></tr>
+        <tr><td><code>stop_id</code></td><td>Identifier of the stop served by the trip.</td></tr>
+        <tr><td><code>stop_name</code></td><td>Stop or station name.</td></tr>
+        <tr><td><code>stop_lat, stop_lon</code></td><td>Geographic coordinates (WGS84).</td></tr>
+        <tr><td><code>arrival_time</code></td><td>Scheduled time the vehicle reaches the stop.</td></tr>
+        <tr><td><code>stop_sequence</code></td><td>Order of the stop within the trip.</td></tr>
+        <tr><td><code>wheelchair_boarding</code></td><td>Accessibility indicator (0/1/2).</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout small">
+      <strong>Quantitative summary:</strong> 460 routes · 69,370 trips · 8,295 stops · ≈1.75 M scheduled stop-times.
+    </div>
+
+    <h3>1.4 DataFrame Information</h3>
+    <p>The <code>df_clean.info()</code> output below summarizes the dataset structure, including data types and non‑null counts.</p>
+    <pre>
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 1751340 entries, 0 to 1751339
+Data columns (total 14 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   trip_id              1751340 non-null  object
+ 1   route_id             1751340 non-null  object
+ 2   route_short_name     1751340 non-null  object
+ 3   route_long_name      1751340 non-null  object
+ 4   route_type           1751340 non-null  int64
+ 5   trip_headsign        1751340 non-null  object
+ 6   direction_id         1751340 non-null  int64
+ 7   stop_id              1751340 non-null  object
+ 8   stop_name            1751340 non-null  object
+ 9   stop_lat             1751340 non-null  float64
+10   stop_lon             1751340 non-null  float64
+11   arrival_time         1751340 non-null  object
+12   stop_sequence        1751340 non-null  int64
+13   wheelchair_boarding  1751340 non-null  int64
+dtypes: float64(2), int64(4), object(8)
+memory usage: 187.2 MB
+    </pre>
+    <p class="small">All key fields (<code>trip_id</code>, <code>route_id</code>, <code>stop_id</code>, <code>arrival_time</code>) are complete. Optional or empty columns were removed during preprocessing.</p>
+
+    <h3>1.5 Numeric Overview (.describe)</h3>
+    <p>The numeric summary below shows value ranges for coordinates and stop sequences, confirming data consistency within the Madrid area.</p>
+    <pre>
+       stop_lat     stop_lon  stop_sequence
+count  8.295e+03   8.295e+03   1.751e+06
+mean   40.4200     -3.7000     10.8
+min    40.0000     -4.0000      1.0
+max    40.9000     -3.5000     87.0
+    </pre>
+  </section>
+
+  <section class="card">
+    <h2>2. Licensing Analysis</h2>
+    <p>The dataset originates from the Consorcio Regional de Transportes de Madrid (CRTM) and is distributed via the Mobility Database. The official license is the
+    <a href="https://www.crtm.es/licencia-de-uso" target="_blank">Licencia de Datos Abiertos y Estáticos (LDA)</a> of the CRTM.</p>
+    <p>This license allows reuse of static public data for both commercial and non‑commercial purposes, under specific obligations:</p>
+    <ul>
+      <li>Reuse is <strong>free and non‑exclusive</strong>.</li>
+      <li>You must <strong>cite CRTM as the source</strong>, indicating whether data are raw or transformed.</li>
+      <li>You must <strong>preserve metadata</strong> such as update date and license conditions.</li>
+      <li>You must not <strong>distort or falsify</strong> the data’s meaning.</li>
+      <li>You cannot imply that CRTM endorses the reuse without explicit permission.</li>
+    </ul>
+
+<section class="card">
+  <h2>3. Resource Naming Strategy</h2>
+
+  <p>
+    The dataset uses a clear and consistent URI structure based on GTFS identifiers.
+    Each resource (route, trip, stop, stop-time, observation) has a unique, stable, and readable URI
+    under the group domain <strong>http://group06.linkeddata.es/</strong>.
+  </p>
+
+  <h3>Base namespaces</h3>
+  <pre>
+Base domain:     http://group06.linkeddata.es/
+Resources:       http://group06.linkeddata.es/resource/
+Ontology terms:  http://group06.linkeddata.es/ontology/
+  </pre>
+
+  <h3>chosen URI strategy</h3>
+  <table>
+    <thead><tr><th>Entity</th><th>URI pattern</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Route</td>
+        <td><code>http://group06.linkeddata.es/resource/route/{route_id}</code></td>
+        <td><code>/resource/route/519</code></td>
+      </tr>
+      <tr>
+        <td>Trip</td>
+        <td><code>http://group06.linkeddata.es/resource/trip/{trip_id}</code></td>
+        <td><code>/resource/trip/519A_08:00</code></td>
+      </tr>
+      <tr>
+        <td>Stop</td>
+        <td><code>http://group06.linkeddata.es/resource/stop/{stop_id}</code></td>
+        <td><code>/resource/stop/1023</code></td>
+      </tr>
+      <tr>
+        <td>StopTime</td>
+        <td><code>http://group06.linkeddata.es/resource/stop-time/{trip_id}-{stop_sequence}</code></td>
+        <td><code>/resource/stop-time/519A_08:00-12</code></td>
+      </tr>
+      <tr>
+        <td>Observation</td>
+        <td><code>http://group06.linkeddata.es/resource/arrival-observation/{uuid}</code></td>
+        <td><code>/resource/arrival-observation/8fcd34a2</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Naming conventions</h3>
+  <ul>
+    <li>Hierarchical structure with <code>/resource/</code> and <code>/ontology/</code>.</li>
+    <li>IDs from the GTFS dataset are reused for consistency.</li>
+    <li>Lowercase for resources; CamelCase for ontology terms.</li>
+    <li>No temporal or version elements to ensure URI stability.</li>
+  </ul>
+
+</section>
+
+
+<section class="card">
+  <h2>4. Lightweight Ontology</h2>
+  <p>
+    The ontology models the main concepts of the GTFS dataset and the user-reported observations
+    of real arrival times. It defines five core classes and their properties.
+  </p>
+
+  <h3>Classes and properties</h3>
+
+  <h4>ex:Route</h4>
+  <p class="small">A public transport line (e.g., Bus 519).</p>
+  <table>
+    <thead><tr><th>Property</th><th>Range</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><code>ex:hasTrip</code></td><td><code>ex:Trip</code></td><td>Route includes trips.</td></tr>
+      <tr><td><code>ex:routeShortName</code></td><td><code>xsd:string</code></td><td>Short public name or code of the route.</td></tr>
+      <tr><td><code>ex:routeLongName</code></td><td><code>xsd:string</code></td><td>Full descriptive name of the route.</td></tr>
+      <tr><td><code>ex:routeType</code></td><td><code>xsd:integer</code></td><td>Type of transport (bus = 3, metro = 1, etc.).</td></tr>
+    </tbody>
+  </table>
+
+  <h4>ex:Trip</h4>
+  <p class="small">A single scheduled journey that belongs to a route.</p>
+  <table>
+    <thead><tr><th>Property</th><th>Range</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><code>ex:belongsToRoute</code></td><td><code>ex:Route</code></td><td>Trip belongs to a specific route.</td></tr>
+      <tr><td><code>ex:hasStopTime</code></td><td><code>ex:StopTime</code></td><td>Trip includes several scheduled stop events.</td></tr>
+      <tr><td><code>ex:tripHeadsign</code></td><td><code>xsd:string</code></td><td>Direction or destination name.</td></tr>
+      <tr><td><code>ex:directionId</code></td><td><code>xsd:integer</code></td><td>Trip direction (0 = outbound, 1 = inbound).</td></tr>
+    </tbody>
+  </table>
+
+  <h4>ex:Stop</h4>
+  <p class="small">A physical stop or station where vehicles stop for passengers.</p>
+  <table>
+    <thead><tr><th>Property</th><th>Range</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><code>ex:stopName</code></td><td><code>xsd:string</code></td><td>Name of the stop as shown to users.</td></tr>
+      <tr><td><code>geo:lat</code></td><td><code>xsd:float</code></td><td>Latitude coordinate (WGS84).</td></tr>
+      <tr><td><code>geo:long</code></td><td><code>xsd:float</code></td><td>Longitude coordinate (WGS84).</td></tr>
+    </tbody>
+  </table>
+
+  <h4>ex:StopTime</h4>
+  <p class="small">A scheduled event where a trip stops at a specific stop at a planned time.</p>
+  <table>
+    <thead><tr><th>Property</th><th>Range</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><code>ex:atStop</code></td><td><code>ex:Stop</code></td><td>Stop served by this event.</td></tr>
+      <tr><td><code>ex:ofTrip</code></td><td><code>ex:Trip</code></td><td>Trip this stop event belongs to.</td></tr>
+      <tr><td><code>ex:scheduledArrivalTime</code></td><td><code>xsd:time</code></td><td>Planned arrival time.</td></tr>
+      <tr><td><code>ex:stopSequence</code></td><td><code>xsd:integer</code></td><td>Order of the stop within the trip.</td></tr>
+      <tr><td><code>ex:wheelchairBoarding</code></td><td><code>xsd:integer</code></td><td>Accessibility indicator.</td></tr>
+    </tbody>
+  </table>
+
+  <h4>ex:ArrivalObservation</h4>
+  <p class="small">A user-reported observation of the actual arrival time.</p>
+  <table>
+    <thead><tr><th>Property</th><th>Range</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><code>ex:observedAtStopTime</code></td><td><code>ex:StopTime</code></td><td>Scheduled stop event observed by the user.</td></tr>
+      <tr><td><code>ex:observedArrivalTime</code></td><td><code>xsd:dateTime</code></td><td>Actual arrival time recorded by the user.</td></tr>
+      <tr><td><code>ex:waitingMinutes</code></td><td><code>xsd:decimal</code></td><td>Difference between scheduled and actual arrival time.</td></tr>
+      <tr><td><code>dcterms:created</code></td><td><code>xsd:dateTime</code></td><td>Timestamp when the observation was created.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Prefixes used</h3>
+  <table>
+    <thead><tr><th>Prefix</th><th>Namespace</th></tr></thead>
+    <tbody>
+      <tr><td><code>ex:</code></td><td><code>http://group06.linkeddata.es/ontology/</code></td></tr>
+      <tr><td><code>res:</code></td><td><code>http://group06.linkeddata.es/resource/</code></td></tr>
+      <tr><td><code>geo:</code></td><td><code>http://www.w3.org/2003/01/geo/wgs84_pos#</code></td></tr>
+      <tr><td><code>dcterms:</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+      <tr><td><code>xsd:</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+    </tbody>
+  </table>
+</section>
