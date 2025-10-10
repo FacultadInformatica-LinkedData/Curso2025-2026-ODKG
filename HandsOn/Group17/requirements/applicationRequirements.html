@@ -1,117 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Application Requirements</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Application Requirements</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        body > * {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+            margin: 30px auto 20px;
+            padding: 20px 30px;
+            background: white;
+            border-left: 5px solid #4a90e2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.6em;
+            margin: 35px auto 15px;
+            padding: 15px 25px;
+            background: white;
+            border-left: 4px solid #6b7c93;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        h3 {
+            color: #4a5568;
+            font-size: 1.3em;
+            margin: 25px auto 10px;
+            padding: 12px 20px;
+            background: #fafafa;
+            border-left: 3px solid #a0aec0;
+        }
+
+        p {
+            margin: 15px auto;
+            padding: 15px 25px;
+            background: white;
+            line-height: 1.8;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        ul {
+            margin: 15px auto;
+            padding: 20px 25px 20px 50px;
+            background: white;
+            list-style-position: outside;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        li {
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+
+        li p {
+            margin: 8px 0;
+            padding: 8px 0;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        ul ul {
+            margin: 10px 0;
+            padding: 10px 0 10px 30px;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        code {
+            background: #e8ecf1;
+            color: #4a90e2;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+
+        em {
+            color: #4a5568;
+            font-style: italic;
+        }
+
+        br {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+                padding: 15px 20px;
+            }
+
+            h2 {
+                font-size: 1.3em;
+                padding: 12px 18px;
+            }
+
+            h3 {
+                font-size: 1.1em;
+                padding: 10px 15px;
+            }
+
+            p, ul {
+                padding: 12px 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<h1>Non-Municipal Facilities in Madrid</h1>
-
-<h2>Description of the Application</h2>
-<p>
-  The application’s primary goal is to help people <strong>discover, locate, and compare non-municipal facilities</strong>
-  (universities, parks and gardens, sports centers and libraries) across Madrid.
-  Users can quickly find what they need by <strong>area</strong> (district/neighbourhood/municipality), by <strong>category</strong>
-  (type of facility), or by <strong>proximity</strong> to a chosen point. For each facility, the app highlights practical
-  details—address, opening hours, contact info—and, when available, <strong>nearby public transport</strong> (metro, bus, train)
-  to make planning a visit fast and convenient.
-</p>
-<p>
-  Typical tasks include: “show all universities in Chamartín,” “find libraries in Prosperidad,” or
-  “list sports centers near me that are easy to reach by Metro.” The emphasis is on <strong>clear, actionable results</strong> rather than raw data.
-</p>
-
-<h2>Possible use cases</h2>
-<ul>
-  <li>Residents searching for specific facility types within their district or neighbourhood and checking how to get there.</li>
-  <li>Visitors identifying facilities of interest near a location and reviewing nearby metro/bus/train lines.</li>
-  <li>Analysts exploring coverage and diversity of facility types per administrative area to support planning.</li>
-</ul>
-
-<h2>Functional Requirements</h2>
-<ul>
-  <li><strong>Search and Filter by Area:</strong>
+    <h1>Inter-Municipality Mobility Explorer — Application Requirements</h1>
+    
+    <h2>Description of the Application</h2>
     <p>
-      Users can select a <em>district</em>, <em>neighbourhood</em>, or <em>municipality</em> (where applicable) to retrieve all facilities within that boundary.
-      Results must update instantly when the user switches area, and the interface should clearly display the current area context (e.g., breadcrumb or header tags).
+        The application's primary goal is to <strong>identify the most intense exchange zones</strong> 
+        between municipalities in Spain to support large-scale transport planning. The app provides 
+        a very simple, focused interface that lets a user select a municipality and immediately see 
+        the municipalities with which it exchanges the most traffic, plus a clear indication of any 
+        significant <strong>imbalances</strong> (excess departures or excess arrivals).
     </p>
-  </li>
-
-  <li><strong>Filter by Facility Type (Category):</strong>
     <p>
-      Users can refine results using a <em>type</em> facet (e.g., university, library, sport center, park).
-      Multiple selections are allowed, and each selection updates the result list and counts. The system should remember selected filters when users navigate between pages or the map.
+        The emphasis is on <strong>clear, actionable outputs</strong> (top partners, volumes, imbalance 
+        indicators) rather than many interactive controls. The UI is intentionally minimal — one input 
+        and one validation action — so non-technical users (analysts, planners) can get results instantly.
     </p>
-  </li>
-
-  <li><strong>Keyword Search:</strong>
+    
+    <h2>Possible use cases</h2>
+    <ul>
+        <li>
+            National or regional transport planners checking which municipality pairs concentrate the 
+            greatest flows to consider new or reinforced links.
+        </li>
+        <li>
+            Analysts identifying corridors and zones with large inflow/outflow imbalances that may require 
+            targeted interventions (e.g., more frequent services, hub creation).
+        </li>
+        <li>
+            Open data services reusing the hotspot outputs to cross-reference with public transport 
+            offerings and detect areas that are under-served.
+        </li>
+    </ul>
+    
+    <h2>Functional Requirements</h2>
+    <ul>
+        <li>
+            <strong>Single Municipality Query:</strong>
+            <p>
+                Users must be able to select a municipality (via a small autocomplete search field or a 
+                compact dropdown) and request results with a single explicit action (e.g., "Show flows"). 
+                The app then returns the top connected municipalities and key metrics for each connection.
+            </p>
+        </li>
+        <li>
+            <strong>Top Partner List:</strong>
+            <p>
+                For the selected municipality, the app shows the top N (default 5) connected municipalities 
+                with: <em>absolute flow volume</em>, <em>direction</em> (inbound/outbound), and a 
+                <em>balance ratio</em> (arrivals vs departures).
+            </p>
+        </li>
+        <li>
+            <strong>Hotspot & Imbalance Detection:</strong>
+            <p>
+                The system computes and highlights the most frequented routes (highest flows) and flags 
+                routes or municipalities with significant imbalance (e.g., > X% difference). Outputs must 
+                be presented in human-readable format (labels, numeric badges) so they can be reused by 
+                other services.
+            </p>
+        </li>
+        <li>
+            <strong>Compact Visual Cue (Optional mini-map):</strong>
+            <p>
+                A small, schematic map can accompany the list to give spatial context (simple arcs or 
+                markers). This map is optional and must not introduce extra interaction complexity.
+            </p>
+        </li>
+        <li>
+            <strong>Simple Export / Copy:</strong>
+            <p>
+                Provide a small "Copy results" or "Download CSV" action so analysts can quickly extract 
+                the top connections for further processing.
+            </p>
+        </li>
+        <li>
+            <strong>Minimal Temporal Option (Optional):</strong>
+            <p>
+                If implemented within schedule, allow a single dropdown to select the aggregation period 
+                (day / week / month). This control is optional and must be defaulted to the preselected 
+                time slice the backend provides.
+            </p>
+        </li>
+    </ul>
+    
+    <h2>Non-Functional Requirements</h2>
+    <ul>
+        <li>
+            <strong>Performance:</strong> Query response (select + show results) should occur in under 
+            3 seconds for typical requests.
+        </li>
+        <li>
+            <strong>Simplicity:</strong> The UI must expose no more than one primary action 
+            (search/select + Validate). Avoid extra filters or multi-step workflows.
+        </li>
+        <li>
+            <strong>Reliability:</strong> Results should be stable and consistent with the RDF dataset 
+            produced by the project; numeric summaries must be reproducible.
+        </li>
+        <li>
+            <strong>Accessibility:</strong> Ensure basic accessibility (keyboard focus on the search field, 
+            readable labels, responsive layout).
+        </li>
+    </ul>
+    
+    <h2>Ontology and RDF model</h2>
     <p>
-      A free-text search matches <em>names</em> and <em>descriptions</em> (e.g., “Universidad Politécnica”, “Parque del Oeste”).
-      It should tolerate minor typos and support simple operators (quoted phrases, AND/OR) to narrow or broaden queries.
+        The ontology underpins queries, aggregation, and hotspot detection. It must be compact but 
+        expressive enough to support the application's needs: represent municipalities, directed flows 
+        between them, per-flow quantitative measures and an optional temporal attribute.
     </p>
-  </li>
-
-  <li><strong>Map-Based Exploration:</strong>
+    
+    <h3>Goals for the ontology</h3>
+    <ul>
+        <li>
+            Represent each municipality as a distinct, dereferenceable resource (class <code>:Commune</code> 
+            or <code>ex:Municipality</code>), with properties for name and coordinates.
+        </li>
+        <li>
+            Model each observed movement aggregate as a <code>:Flow</code> entity linking an origin to a 
+            destination (<code>:hasOrigin</code>, <code>:hasDestination</code>).
+        </li>
+        <li>
+            Attach numeric and temporal attributes to flows: <code>:volume</code> (integer), 
+            <code>:period</code> (e.g., month/year or day), and a derived <code>:balanceIndex</code> 
+            for imbalance analysis.
+        </li>
+        <li>
+            Allow simple linking metadata so an external system can match municipality URIs to other 
+            datasets (optional linking predicates, not required in this deliverable).
+        </li>
+    </ul>
+    
+    <h3>Core classes and properties (example)</h3>
+    <ul>
+        <li>
+            <code>ex:Municipality</code> — class for municipalities; key properties: 
+            <code>rdfs:label</code>, <code>ex:inseeCode</code> (or national code), 
+            <code>geo:lat</code>, <code>geo:long</code>.
+        </li>
+        <li>
+            <code>ex:Flow</code> — class for aggregated directed flows; key properties:
+            <ul>
+                <li><code>ex:hasOrigin</code> (→ ex:Municipality)</li>
+                <li><code>ex:hasDestination</code> (→ ex:Municipality)</li>
+                <li><code>ex:volume</code> (xsd:integer)</li>
+                <li><code>ex:period</code> (xsd:date or xsd:string indicating aggregation)</li>
+                <li><code>ex:balanceIndex</code> (xsd:decimal) — optional precomputed metric indicating imbalance.</li>
+            </ul>
+        </li>
+        <li>
+            Example SPARQL queries will rely on these terms to compute top partners 
+            (ORDER BY <code>ex:volume</code>) and imbalance (compute ratio of inbound/outbound 
+            for a municipality).
+        </li>
+    </ul>
+    
+    <h3>Implications of our objectives on the ontology</h3>
+    <ul>
+        <li>
+            <strong>Indexable flows:</strong> To answer "which municipalities exchange the most with X" 
+            efficiently, flows must be represented as first-class entities (not only as aggregated table 
+            literals) so SPARQL can easily group and sort by <code>ex:volume</code>.
+        </li>
+        <li>
+            <strong>Balance calculation:</strong> The ontology should allow either storing a precomputed 
+            <code>ex:balanceIndex</code> or support easy computation via SPARQL aggregation (sum of 
+            inbound vs outbound volumes) so the UI can flag imbalances quickly.
+        </li>
+        <li>
+            <strong>Simple temporal tagging:</strong> Include a compact period property so the optional 
+            time aggregation can be supported without schema changes.
+        </li>
+        <li>
+            <strong>Stable identifiers:</strong> Municipalities must have stable URIs (one per municipality) 
+            so repeated queries, linking and caching behave predictably.
+        </li>
+    </ul>
+    
+    <h2>Application User Interface (precise, minimal)</h2>
     <p>
-      An interactive map allows panning/zooming to explore facilities visually. The visible viewport determines which results appear in the side list.
-      Clicking a marker opens a concise preview (name, type, address, transport hints) with a link to the full detail.
+        The UI is intentionally minimal to guarantee clarity and speed. The entire application fits on 
+        a single page with the fewest controls possible: one search input (autocomplete) and one validation 
+        action (button) — optionally a small "Download" control for result export.
     </p>
-  </li>
-
-  <li><strong>Facility Detail View:</strong>
+    
+    <h3>Layout (single page)</h3>
+    <ul>
+        <li>
+            <strong>Header:</strong> App title and a one-line description (non-interactive).
+        </li>
+        <li>
+            <strong>Control row (centered):</strong>
+            <ul>
+                <li>
+                    <em>Search input</em> — a forgiving autocomplete text field labeled "Select municipality". 
+                    As the user types, municipal names are suggested (keyboard accessible).
+                </li>
+                <li>
+                    <em>Action button</em> — a single button labeled "Show flows" that triggers the query 
+                    and renders results below. The button remains enabled only when a municipality is selected.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>Results area:</strong> Immediately below the control row: a compact card that contains
+            <ul>
+                <li>
+                    <strong>Top partners list</strong> (default top 5): each entry shows partner name, 
+                    volume (badge), and balance indicator (arrow up/down + percent).
+                </li>
+                <li>
+                    <strong>Mini map</strong> (small, schematic) to the right of the list or above on 
+                    narrow screens — purely contextual, no required interactions.
+                </li>
+                <li>
+                    <strong>Small export action</strong> (tiny button "Download CSV") inside the results 
+                    card for quick extraction.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h3>Interaction details (keyboard & a11y)</h3>
+    <ul>
+        <li>
+            User focuses the search field (tab), types a few characters, navigates suggestions with arrow 
+            keys, presses Enter to pick, then presses Tab to move to the "Show flows" button and presses 
+            Enter to execute.
+        </li>
+        <li>
+            Results are displayed with semantic headings and ARIA attributes so screen readers announce 
+            the top partner list and counts.
+        </li>
+        <li>
+            No extra clicks, no multi-panel navigation — the result is visible immediately on the same page.
+        </li>
+    </ul>
+    
+    <h3>Result presentation (example)</h3>
     <p>
-      Each facility page (or drawer) shows: name, type(s), description, opening hours (if provided), address with “open in maps”, 
-      contact details (phone, email, website), district/neighbourhood labels, coordinates, accessibility note (if any), and transport hints (e.g., “Metro L7; Bus 27, 53”).
-      Provide consistent formatting and clearly mark missing fields.
+        The top partner line format: <strong>Partner Municipality — [Volume] — [Balance indicator]</strong>
+        <br>
+        Example: <em>Barcelona — 154,000 trips — Imbalance +12%</em> (where +12% means more departures 
+        → arrivals imbalance in the selected direction).
     </p>
-  </li>
-
-  <li><strong>Public Transport Context:</strong>
+    
+    <h2>Scenarios (brief)</h2>
     <p>
-      When the dataset includes transport information, display it prominently in the detail view. If additional transport datasets are integrated later,
-      show nearby <em>stops/lines</em> within a configurable radius and let users filter results by transport mode (metro/bus/train).
-      Where possible, provide quick links to official timetables or network maps.
+        <strong>Scenario 1:</strong> A planner selects "Valencia" in the search field and clicks "Show flows". 
+        Within seconds the app displays the top 5 partner municipalities, highlights two routes with high 
+        imbalance, and the planner clicks "Download CSV" to include the results in a planning memo.
     </p>
-  </li>
-
-  <li><strong>Proximity and “Near Me” Queries:</strong>
     <p>
-      Users can search “near a point” (by typing an address or clicking the map) with a distance slider (e.g., 200–2000 m).
-      Results should be sortable by distance and show an approximate walking time badge when coordinates are available.
+        <strong>Scenario 2 (optional):</strong> If time allows, the team selects "monthly" in a 
+        hidden/secondary setting and re-runs the query to compare seasonal patterns; however, this behavior 
+        is optional and not required for the minimal deliverable.
     </p>
-  </li>
-
-  <li><strong>Administrative Facets and Summaries:</strong>
+    
+    <h2>Conclusion and next steps</h2>
     <p>
-      Present <em>facets</em> and <em>counts</em> by district and neighbourhood (e.g., “Universities (12) in Chamartín”), enabling quick drill-down.
-      Area summary pages should list top facility types and provide a compact overview (e.g., “Most common categories in this area”).
+        This document defines a focused, achievable scope: a lightweight single-page app that identifies 
+        intense exchange zones and imbalances between municipalities with minimal user interaction. Ontology 
+        choices are intentionally compact to support fast SPARQL queries and stable linking. Next steps for 
+        the implementation team are: finalize RDF vocabulary, implement the single query endpoint, and build 
+        the minimal UI (search + show).
     </p>
-  </li>
-
-  </li>
-</ul>
-
-<h2>Non-Functional Requirements</h2>
-<ul>
-  <li><strong>Performance:</strong> The application should load quickly and handle large datasets efficiently, especially when users perform searches or interact with the map.</li>
-  <li><strong>Security:</strong> Ensure that data privacy and security measures are implemented when accessing or storing data. Users should not be able to access sensitive or unauthorized information.</li>
-  <li><strong>Accessibility:</strong> The application should be fully accessible, following best practices for web accessibility (WCAG standards). This includes support for screen readers, keyboard navigation, and mobile responsiveness.</li>
-</ul>
-
-<h2>Application User Interface</h2>
-<p>
-  The interface should be <strong>clean, approachable, and responsive</strong>, promoting clarity and speed. The following components will be included:
-</p>
-<ul>
-  <li><strong>Prominent Search Bar:</strong> A forgiving, fast search across names and descriptions with suggestions for common facility types and areas.</li>
-  <li><strong>Intuitive Filters Panel:</strong> Clear, multi-select filters for area (district → neighbourhood), facility type, and—when available—transport mode; chips/badges reflect active filters.</li>
-  <li><strong>Two-Pane Layout (Map + Results):</strong> An elegant split view with a dynamic map on the left and a sortable, paginated results list on the right; hover/click keeps both in sync.</li>
-  <li><strong>Concise Detail Drawer/Page:</strong> A well-structured detail view with readable sections (Overview, Address & Contact, Transport, Hours) and an easy “open in maps” action.</li>
-  <li><strong>Helpful Empty States:</strong> Friendly guidance when no results match, suggesting filter tweaks or nearby areas.</li>
-</ul>
-
 </body>
 </html>
-
