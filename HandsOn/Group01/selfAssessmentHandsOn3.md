@@ -2,13 +2,13 @@
 
 ## Checklist
 
-**The “dataset.json” file:**
+**The “history.json” file:**
 
 - [X] Includes all the operations performed over the data of our datasets (previously joined) for fixing and transforming.
 
 **The "openrefine" directory:**
 
-- [X] Contains the dataset.json file
+- [X] Contains the history.json file
 
 **The "combined-updated.csv" file:**
 
