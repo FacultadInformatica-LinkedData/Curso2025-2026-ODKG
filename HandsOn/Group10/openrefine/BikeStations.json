@@ -1,0 +1,310 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "physical_configuration",
+    "description": "Eliminar columna physical_configuration"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "name",
+    "description": "Eliminar columna name"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "address",
+    "index": 0,
+    "description": "Mueve la columna address a la posición 0"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "rental_uris",
+    "description": "Eliminar columna rental_uris"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "is_valet_station",
+    "description": "Eliminar columna is_valet_station"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "last_updated",
+    "description": "Eliminar columna last_updated"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ttl",
+    "description": "Eliminar columna ttl"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "x_ride_code_support",
+    "description": "Eliminar columna x_ride_code_support"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "nearby_distance",
+    "description": "Eliminar columna nearby_distance"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "short_name",
+    "description": "Eliminar columna short_name"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "is_charging_station",
+    "description": "Eliminar columna is_charging_station"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "address",
+    "index": 1,
+    "description": "Mueve la columna address a la posición 1"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "address",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Dividir columna address por separador"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "address 2",
+    "expression": "grel:if(value == null, null,\n   if(value.find(/\\d+/).length() > 0,\n      value.find(/\\d+/)[0],\n      null))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna address 2 usando la expresión grel:if(value == null, null,\n   if(value.find(/\\d+/).length() > 0,\n      value.find(/\\d+/)[0],\n      null))"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cross_street",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "/",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Dividir columna cross_street por separador"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cross_street 1",
+    "guessCellType": false,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "-",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Dividir columna cross_street 1 por separador"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cross_street 2",
+    "guessCellType": false,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "-",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Dividir columna cross_street 2 por separador"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cross_street 1 2",
+    "newColumnName": "district_name",
+    "description": "Renombra la columna cross_street 1 2 a district_name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cross_street 1 1",
+    "newColumnName": "district_number",
+    "description": "Renombra la columna cross_street 1 1 a district_number"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cross_street 2 2",
+    "newColumnName": "neighborhood_name",
+    "description": "Renombra la columna cross_street 2 2 a neighborhood_name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cross_street 2 1",
+    "newColumnName": "neighborhood_number",
+    "description": "Renombra la columna cross_street 2 1 a neighborhood_number"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "address 2",
+    "newColumnName": "address_number",
+    "description": "Renombra la columna address 2 a address_number"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "address 1",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "|",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Dividir columna address 1 por separador"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "address 1 2",
+    "description": "Eliminar columna address 1 2"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "address 1 1",
+          "columnName": "address 1 1",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "address 1 1",
+    "expression": "grel:if(value == null, null,\n  if(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i).length() > 0,\n     trim(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i)[0]),\n     null)\n)",
+    "onError": "keep-original",
+    "newColumnName": "address_type",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna address_type en el índice 2 basada en la columna address 1 1 usando la expresión grel:if(value == null, null,\n  if(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i).length() > 0,\n     trim(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i)[0]),\n     null)\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "address 1 1",
+          "columnName": "address 1 1",
+          "query": "",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "address 1 1",
+    "expression": "grel:if(value == null, null,\n  trim(\n    value.replace(\n      /^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?[\\s,]*/i,\n      \"\"\n    )\n  )\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna address 1 1 usando la expresión grel:if(value == null, null,\n  trim(\n    value.replace(\n      /^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?[\\s,]*/i,\n      \"\"\n    )\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "address 1 1",
+          "columnName": "address 1 1",
+          "query": "/ ",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "address 1 1",
+    "expression": "grel:value.replace(/^[\\/\\s]+/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna address 1 1 usando la expresión grel:value.replace(/^[\\/\\s]+/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "address 1 1",
+          "columnName": "address 1 1",
+          "query": "/",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "address 1 1",
+    "expression": "grel:value.replace(/\\/.*/, \"\").trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna address 1 1 usando la expresión grel:value.replace(/\\/.*/, \"\").trim()"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "address_type",
+    "index": 1,
+    "description": "Mueve la columna address_type a la posición 1"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "address 1 1",
+    "newColumnName": "address_name",
+    "description": "Renombra la columna address 1 1 a address_name"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "address_name",
+    "expression": "grel:substring(md5(cells[\"address_name\"].value + toString(cells[\"lat\"].value) + toString(cells[\"lon\"].value)), 0, 8)",
+    "onError": "set-to-blank",
+    "newColumnName": "id",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna id en el índice 3 basada en la columna address_name usando la expresión grel:substring(md5(cells[\"address_name\"].value + toString(cells[\"lat\"].value) + toString(cells[\"lon\"].value)), 0, 8)"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "id",
+    "index": 0,
+    "description": "Mueve la columna id a la posición 0"
+  }
+]

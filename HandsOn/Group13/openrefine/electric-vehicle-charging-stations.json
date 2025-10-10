@@ -1,0 +1,611 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "start_date",
+    "expression": "grel:value.toDate(\"yyyy-MM-dd HH:mm:ss\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna start_date usando la expresión grel:value.toDate(\"yyyy-MM-dd HH:mm:ss\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "charging_time_hh_mm_ss",
+    "expression": "grel:value.split(\":\")[0].toNumber()*3600 + value.split(\":\")[1].toNumber()*60 + value.split(\":\")[2].toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna charging_time_hh_mm_ss usando la expresión grel:value.split(\":\")[0].toNumber()*3600 + value.split(\":\")[1].toNumber()*60 + value.split(\":\")[2].toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "charging_time_hh_mm_ss",
+    "newColumnName": "elapsed_charging_seconds",
+    "description": "Renombra la columna charging_time_hh_mm_ss a elapsed_charging_seconds"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "elapsed_charging_seconds",
+          "expression": "grel:if(value > 0, value, null)",
+          "columnName": "elapsed_charging_seconds",
+          "from": 0,
+          "to": 170000,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "energy_kwh",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna energy_kwh usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "energy_kwh",
+          "expression": "grel:if(value > 0, value, null)",
+          "columnName": "energy_kwh",
+          "from": 0,
+          "to": 210,
+          "selectNumeric": false,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zip_postal_code",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna zip_postal_code usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zip_postal_code",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna zip_postal_code usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fee",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna fee usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "model_number",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna model_number usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna latitude usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "longitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna longitude usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": " / ",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Dividir columna station_name por separador"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "station_name 1",
+    "description": "Eliminar columna station_name 1"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "station_name 2",
+    "expression": "grel:value.match(/.*(P[1-9]).*/)[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "charger_post",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna charger_post en el índice 2 basada en la columna station_name 2 usando la expresión grel:value.match(/.*(P[1-9]).*/)[0]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "P3_DTCARYDECKW",
+          "P3_DTCARYDECKE",
+          "P6_DTCARYDECKE",
+          "P5_DTCARYDECKE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "P3_DTCARYDECKW"
+      },
+      {
+        "from": [
+          "P3_DTCARYDECKE",
+          "P6_DTCARYDECKE",
+          "P5_DTCARYDECKE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "P3_DTCARYDECKE"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DT DECK P4",
+          "DT DECK P5",
+          "DT DECK P6"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DT DECK"
+      },
+      {
+        "from": [
+          "DT DECK P2 (2)",
+          "DT DECK P2 (1)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DT DECK"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "P3_DTCARYDECKW",
+          "P3_DTCARYDECKE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DTCARYDECK"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TOWN HALL-PWH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TOWNHALL"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TOWNHALLEAST"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TOWNHALL"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BOND PARK BH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BOND PARK BOATHOUSE"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BOND PARK"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BOND PARK BOATHOUSE"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DT DECK P3 WEST",
+          "DT DECK P3 EAST"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DT DECK"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DTCARYDECK",
+          "P2_DTCARYDEKCE2",
+          "P2_DTCARYDECKE1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DTCARYDECK"
+      },
+      {
+        "from": [
+          "P2_DTCARYDEKCE2",
+          "P2_DTCARYDECKE1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DTCARYDECK"
+      },
+      {
+        "from": [
+          "DTCARYDECK",
+          "P2_DTCARYDECKE1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DTCARYDECK"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "P4_DTCARDECKE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOWNTOWN CARY PARK DECK"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DT DECK"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOWNTOWN CARY PARK DECK"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DTCARYDECK"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOWNTOWN CARY PARK DECK"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "TOWNOFCARY1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TOWN OF CARY"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "OPS CENTER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TOWN OF CARY"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "OFF NETWORK 1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TOWN OF CARY"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CHARGER #1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TOWN OF CARY"
+      }
+    ],
+    "description": "Editar celdas en masa en columna station_name 2"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "station_name 2",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna station_name 2 usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "station_name 2",
+    "newColumnName": "ev_station_name",
+    "description": "Renombra la columna station_name 2 a ev_station_name"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "zip_postal_code",
+    "expression": "grel:\"United States of America\"",
+    "onError": "set-to-blank",
+    "newColumnName": "country",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna country en el índice 10 basada en la columna zip_postal_code usando la expresión grel:\"United States of America\""
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "country",
+    "expression": "grel:\"US\"",
+    "onError": "set-to-blank",
+    "newColumnName": "country_code",
+    "columnInsertIndex": 11,
+    "description": "Crear la columna country_code en el índice 11 basada en la columna country usando la expresión grel:\"US\""
+  }
+]
