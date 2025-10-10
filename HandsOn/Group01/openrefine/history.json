@@ -2,67 +2,67 @@
   {
     "op": "core/column-removal",
     "columnName": "PK",
-    "description": "Remove column PK"
+    "description": "Eliminar columna PK"
   },
   {
     "op": "core/column-removal",
     "columnName": "CONTENT-URL",
-    "description": "Remove column CONTENT-URL"
+    "description": "Eliminar columna CONTENT-URL"
   },
   {
     "op": "core/column-removal",
     "columnName": "ORIENTACION",
-    "description": "Remove column ORIENTACION"
+    "description": "Eliminar columna ORIENTACION"
   },
   {
     "op": "core/column-removal",
     "columnName": "ESCALERAS",
-    "description": "Remove column ESCALERAS"
+    "description": "Eliminar columna ESCALERAS"
   },
   {
     "op": "core/column-removal",
     "columnName": "PUERTA",
-    "description": "Remove column PUERTA"
+    "description": "Eliminar columna PUERTA"
   },
   {
     "op": "core/column-removal",
     "columnName": "PLANTA",
-    "description": "Remove column PLANTA"
+    "description": "Eliminar columna PLANTA"
   },
   {
     "op": "core/column-removal",
     "columnName": "CLASE-VIAL",
-    "description": "Remove column CLASE-VIAL"
+    "description": "Eliminar columna CLASE-VIAL"
   },
   {
     "op": "core/column-removal",
     "columnName": "TIPO-NUM",
-    "description": "Remove column TIPO-NUM"
+    "description": "Eliminar columna TIPO-NUM"
   },
   {
     "op": "core/column-removal",
     "columnName": "COD-BARRIO",
-    "description": "Remove column COD-BARRIO"
+    "description": "Eliminar columna COD-BARRIO"
   },
   {
     "op": "core/column-removal",
     "columnName": "COD-DISTRITO",
-    "description": "Remove column COD-DISTRITO"
+    "description": "Eliminar columna COD-DISTRITO"
   },
   {
     "op": "core/column-removal",
     "columnName": "COORDENADA-X",
-    "description": "Remove column COORDENADA-X"
+    "description": "Eliminar columna COORDENADA-X"
   },
   {
     "op": "core/column-removal",
     "columnName": "COORDENADA-Y",
-    "description": "Remove column COORDENADA-Y"
+    "description": "Eliminar columna COORDENADA-Y"
   },
   {
     "op": "core/column-removal",
     "columnName": "FAX",
-    "description": "Remove column FAX"
+    "description": "Eliminar columna FAX"
   },
   {
     "op": "core/mass-edit",
@@ -84,7 +84,7 @@
         "to": "MADRID"
       }
     ],
-    "description": "Mass edit cells in column LOCALIDAD"
+    "description": "Editar celdas en masa en columna LOCALIDAD"
   },
   {
     "op": "core/text-transform",
@@ -110,7 +110,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column TIPO using expression grel:if(value == null, \"/contenido/entidadesYorganismos/ParquesJardines\", value)"
+    "description": "Transforma el texto de las celdas en la columna TIPO usando la expresión grel:if(value == null, \"/contenido/entidadesYorganismos/ParquesJardines\", value)"
   },
   {
     "op": "core/column-addition",
@@ -123,7 +123,7 @@
     "onError": "set-to-blank",
     "newColumnName": "TipoInstalacion",
     "columnInsertIndex": 19,
-    "description": "Create column TipoInstalacion at index 19 based on column TIPO using expression grel:value.replace(\"/contenido/entidadesYorganismos/\", \"\").split(\"/\")[0]"
+    "description": "Crear la columna TipoInstalacion en el índice 19 basada en la columna TIPO usando la expresión grel:value.replace(\"/contenido/entidadesYorganismos/\", \"\").split(\"/\")[0]"
   },
   {
     "op": "core/mass-edit",
@@ -163,7 +163,7 @@
         "to": "630 630 710\n917 210 079"
       }
     ],
-    "description": "Mass edit cells in column TELEFONO"
+    "description": "Editar celdas en masa en columna TELEFONO"
   },
   {
     "op": "core/mass-edit",
@@ -183,7 +183,7 @@
         "to": "913 553 201 / 919 246 793"
       }
     ],
-    "description": "Mass edit cells in column TELEFONO"
+    "description": "Editar celdas en masa en columna TELEFONO"
   },
   {
     "op": "core/mass-edit",
@@ -203,7 +203,7 @@
         "to": "913 947 505 / 913 947 504"
       }
     ],
-    "description": "Mass edit cells in column TELEFONO"
+    "description": "Editar celdas en masa en columna TELEFONO"
   },
   {
     "op": "core/mass-edit",
@@ -223,7 +223,7 @@
         "to": "914 305 871 / 915 288 879"
       }
     ],
-    "description": "Mass edit cells in column TELEFONO"
+    "description": "Editar celdas en masa en columna TELEFONO"
   },
   {
     "op": "core/mass-edit",
@@ -243,7 +243,7 @@
         "to": "914 507 344 / 914 505 530"
       }
     ],
-    "description": "Mass edit cells in column TELEFONO"
+    "description": "Editar celdas en masa en columna TELEFONO"
   },
   {
     "op": "core/mass-edit",
@@ -263,7 +263,7 @@
         "to": "914 800 476"
       }
     ],
-    "description": "Mass edit cells in column TELEFONO"
+    "description": "Editar celdas en masa en columna TELEFONO"
   },
   {
     "op": "core/mass-edit",
@@ -283,7 +283,7 @@
         "to": "917 106 155"
       }
     ],
-    "description": "Mass edit cells in column TELEFONO"
+    "description": "Editar celdas en masa en columna TELEFONO"
   },
   {
     "op": "core/mass-edit",
@@ -303,7 +303,7 @@
         "to": "917 588 677 / 915 592 090 / 649 84 14 45"
       }
     ],
-    "description": "Mass edit cells in column TELEFONO"
+    "description": "Editar celdas en masa en columna TELEFONO"
   },
   {
     "op": "core/text-transform",
@@ -316,7 +316,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/\\s*\\/\\s*/,\"\\n\").replace(/\\s+-\\s+/,\"\\n\")"
+    "description": "Transforma el texto de las celdas en la columna TELEFONO usando la expresión grel:value.replace(/\\s*\\/\\s*/,\"\\n\").replace(/\\s+-\\s+/,\"\\n\")"
   },
   {
     "op": "core/text-transform",
@@ -329,7 +329,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\")"
+    "description": "Transforma el texto de las celdas en la columna TELEFONO usando la expresión grel:value.replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\")"
   },
   {
     "op": "core/text-transform",
@@ -342,7 +342,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/(\\d{9})(?=\\d)/, \"$1\\n\")"
+    "description": "Transforma el texto de las celdas en la columna TELEFONO usando la expresión grel:value.replace(/(\\d{9})(?=\\d)/, \"$1\\n\")"
   },
   {
     "op": "core/text-transform",
@@ -355,7 +355,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column ACCESIBILIDAD using expression grel:if(\n  isBlank(value),\n  \"\",\n  forEach(\n    value.split(/[,; ]+/),\n    v,\n    if(v==\"0\",\"No accesible\",\n      if(v==\"1\",\"Accesible\",\n        if(v==\"2\",\"Instalación parcialmente accesible para personas con movilidad reducida\",\n          if(v==\"3\",\"Sin información sobre accesibilidad para personas con movilidad reducida\",\n            if(v==\"4\",\"Lengua de signos\",\n              if(v==\"5\",\"Señalización podotáctil\",\n                if(v==\"6\",\"Bucle de inducción magnético\",\"\")\n              )\n            )\n          )\n        )\n      )\n    )\n  ).join(\"\\n\")\n)"
+    "description": "Transforma el texto de las celdas en la columna ACCESIBILIDAD usando la expresión grel:if(\n  isBlank(value),\n  \"\",\n  forEach(\n    value.split(/[,; ]+/),\n    v,\n    if(v==\"0\",\"No accesible\",\n      if(v==\"1\",\"Accesible\",\n        if(v==\"2\",\"Instalación parcialmente accesible para personas con movilidad reducida\",\n          if(v==\"3\",\"Sin información sobre accesibilidad para personas con movilidad reducida\",\n            if(v==\"4\",\"Lengua de signos\",\n              if(v==\"5\",\"Señalización podotáctil\",\n                if(v==\"6\",\"Bucle de inducción magnético\",\"\")\n              )\n            )\n          )\n        )\n      )\n    )\n  ).join(\"\\n\")\n)"
   },
   {
     "op": "core/column-addition",
@@ -368,7 +368,7 @@
     "onError": "set-to-blank",
     "newColumnName": "Bus",
     "columnInsertIndex": 5,
-    "description": "Create column Bus at index 5 based on column TRANSPORTE using expression grel:if((value.match(/.*(autobuses|bus|autobús).*/i)!=null),value,null)"
+    "description": "Crear la columna Bus en el índice 5 basada en la columna TRANSPORTE usando la expresión grel:if((value.match(/.*(autobuses|bus|autobús).*/i)!=null),value,null)"
   },
   {
     "op": "core/text-transform",
@@ -381,7 +381,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column Bus using expression grel:if(\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i) != null,\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+    "description": "Transforma el texto de las celdas en la columna Bus usando la expresión grel:if(\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i) != null,\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
   },
   {
     "op": "core/column-addition",
@@ -394,7 +394,7 @@
     "onError": "set-to-blank",
     "newColumnName": "Metro",
     "columnInsertIndex": 5,
-    "description": "Create column Metro at index 5 based on column TRANSPORTE using expression grel:if((value.match(/.*(metro).*/i)!=null),value,null)"
+    "description": "Crear la columna Metro en el índice 5 basada en la columna TRANSPORTE usando la expresión grel:if((value.match(/.*(metro).*/i)!=null),value,null)"
   },
   {
     "op": "core/text-transform",
@@ -407,7 +407,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column Metro using expression grel:if(\n\t\t  value.match(/.*((metro).*)/i) != null,\n\t\t  value.match(/.*((metro).*)/i)[0].split(/[\\.\\n]|autobuses|bus|autobús|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+    "description": "Transforma el texto de las celdas en la columna Metro usando la expresión grel:if(\n\t\t  value.match(/.*((metro).*)/i) != null,\n\t\t  value.match(/.*((metro).*)/i)[0].split(/[\\.\\n]|autobuses|bus|autobús|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
   },
   {
     "op": "core/column-addition",
@@ -420,7 +420,7 @@
     "onError": "set-to-blank",
     "newColumnName": "Cercanias",
     "columnInsertIndex": 5,
-    "description": "Create column Cercanias at index 5 based on column TRANSPORTE using expression grel:if((value.match(/.*(cercanías|renfe|tren).*/i)!=null),value,null)"
+    "description": "Crear la columna Cercanias en el índice 5 basada en la columna TRANSPORTE usando la expresión grel:if((value.match(/.*(cercanías|renfe|tren).*/i)!=null),value,null)"
   },
   {
     "op": "core/text-transform",
@@ -433,6 +433,334 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Text transform on cells in column Cercanias using expression grel:if(\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i) != null,\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|autobuses|bus|autobús|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i) != null,\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|autobuses|bus|autobús|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores",
+                "l": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "EQUIPAMIENTO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tipo mixta."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tipo mixto."
+      }
+    ],
+    "description": "Editar celdas en masa en columna EQUIPAMIENTO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores",
+                "l": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "EQUIPAMIENTO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tipo masculina."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tipo masculino."
+      }
+    ],
+    "description": "Editar celdas en masa en columna EQUIPAMIENTO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores",
+                "l": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "EQUIPAMIENTO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tipo femenina."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tipo femenino."
+      }
+    ],
+    "description": "Editar celdas en masa en columna EQUIPAMIENTO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores",
+                "l": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "EQUIPAMIENTO",
+    "expression": "grel:cells[\"EQUIPAMIENTO\"].value.replace(/Tipo\\s+(masculino|femenino|mixto)\\..*/, \"$1\"), \n   \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "generoAlumnos",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna generoAlumnos en el índice 4 basada en la columna EQUIPAMIENTO usando la expresión grel:cells[\"EQUIPAMIENTO\"].value.replace(/Tipo\\s+(masculino|femenino|mixto)\\..*/, \"$1\"), \n   \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "BibliotecasPublicas",
+                "l": "BibliotecasPublicas"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "EQUIPAMIENTO",
+    "expression": "grel:if(isBlank(cells[\"EQUIPAMIENTO\"].value), \n   \"no especifica\", if(or(cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"wifi gratuito\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"zona wifi\")),\"sí\", \"no especifica\"))",
+    "onError": "set-to-blank",
+    "newColumnName": "tieneWifi",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna tieneWifi en el índice 4 basada en la columna EQUIPAMIENTO usando la expresión grel:if(isBlank(cells[\"EQUIPAMIENTO\"].value), \n   \"no especifica\", if(or(cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"wifi gratuito\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"zona wifi\")),\"sí\", \"no especifica\"))"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ParquesJardines",
+                "l": "ParquesJardines"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DESCRIPCION",
+    "expression": "grel:value.match(/.*Superficie[:\\.]\\s*(?:Área de\\s*)?([0-9.,]+\\s*(m2|m²|ha|m&amp;sup2|hectáreas)).*/i)[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Superficie",
+    "columnInsertIndex": 11,
+    "description": "Crear la columna Superficie en el índice 11 basada en la columna DESCRIPCION usando la expresión grel:value.match(/.*Superficie[:\\.]\\s*(?:Área de\\s*)?([0-9.,]+\\s*(m2|m²|ha|m&amp;sup2|hectáreas)).*/i)[0]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ParquesJardines",
+                "l": "ParquesJardines"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Superficie",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "No especificado"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Superficie"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ParquesJardines",
+                "l": "ParquesJardines"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superficie",
+    "expression": "grel:if(value.match(\"No especificado\"), \"No especificado\", value.replace(/&amp;sup2/,\"²\").replace(\"hectáreas\",\"ha\").replace(\"m2\",\"m²\").replace(\".\",\"\").replace(/\\s+/,\" \").trim())",
+    "onError": "set-to-blank",
+    "newColumnName": "superficieLimpia",
+    "columnInsertIndex": 12,
+    "description": "Crear la columna superficieLimpia en el índice 12 basada en la columna Superficie usando la expresión grel:if(value.match(\"No especificado\"), \"No especificado\", value.replace(/&amp;sup2/,\"²\").replace(\"hectáreas\",\"ha\").replace(\"m2\",\"m²\").replace(\".\",\"\").replace(/\\s+/,\" \").trim())"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superficie",
+    "description": "Eliminar columna Superficie"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ParquesJardines",
+                "l": "ParquesJardines"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "EQUIPAMIENTO",
+    "expression": "grel:if(isBlank(cells[\"EQUIPAMIENTO\"].value), \"no especifica\", if(or(cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalaciones deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"circuito deportivo\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"zonas deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"pista deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalación deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"polideportivos\")),\"sí\", \"no\"))",
+    "onError": "set-to-blank",
+    "newColumnName": "tieneInstalacionesDeportivas",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna tieneInstalacionesDeportivas en el índice 4 basada en la columna EQUIPAMIENTO usando la expresión grel:if(isBlank(cells[\"EQUIPAMIENTO\"].value), \"no especifica\", if(or(cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalaciones deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"circuito deportivo\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"zonas deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"pista deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalación deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"polideportivos\")),\"sí\", \"no\"))"
   }
 ]
