@@ -1,0 +1,373 @@
+Universidad;Campus;Centro;Denominación de la Titulación;Rama
+UBU;Burgos;Escuela Politécnica Superior;Grado en Arquitectura Técnica;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;Grado en Ingeniería Agroalimentaria y del Medio Rural;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;Grado en Ingeniería Civil;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;Grado en Ingeniería de la Salud;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;Grado en Ingeniería de Organización Industrial;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;Grado en Ingeniería Electrónica Industrial y Automática;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;Grado en Ingeniería Informática;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;Grado en Ingeniería Mecánica;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;PCEO Grado en Ingeniería Agroalimentaria y del Medio Rural/Grado en Ingeniería de Organización Industrial;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;PCEO Grado en Ingeniería Civil/Grado en Arquitectura Técnica;Ingeniería y Arquitectura
+UBU;Burgos;Escuela Politécnica Superior;PCEO Grado en Ingeniería Mecánica y Grado en Ingeniería Electrónica Industrial y Automática;Ingeniería y Arquitectura
+UBU;Burgos;Facultad de Ciencias;Grado en Ciencia y Tecnología de los Alimentos;Ciencias de la Salud
+UBU;Burgos;Facultad de Ciencias;Grado en Química;Ciencias
+UBU;Burgos;Facultad de Ciencias de la Salud;Grado en Enfermería;Ciencias de la Salud
+UBU;Burgos;Facultad de Ciencias de la Salud;Grado en Psicología;Ciencias de la Salud
+UBU;Burgos;Facultad de Ciencias de la Salud;Grado en Terapia Ocupacional;Ciencias de la Salud
+UBU;Burgos;Facultad de Ciencias Económicas y Empresariales;Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Ciencias Económicas y Empresariales;Grado en Finanzas y Contabilidad;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Ciencias Económicas y Empresariales;Grado en Turismo;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Derecho;Grado en Ciencia Política y Gestión Pública;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Derecho;Grado en Derecho;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Derecho;Grado en Relaciones Laborales y Recursos Humanos;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Derecho;PCEO Grado en Derecho y Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Derecho;PCEO Grado en Derecho y Grado en Ciencia Política y Gestión Pública;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Educación;Grado en Educación Social;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Educación;Grado en Maestro de Educación Infantil;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Educación;Grado en Maestro de Educación Primaria;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Educación;Grado en Pedagogía;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Humanidades y Comunicación;Grado en Comunicación Audiovisual;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Humanidades y Comunicación;Grado en Diseño de Videojuegos;Ciencias Sociales y Jurídicas
+UBU;Burgos;Facultad de Humanidades y Comunicación;Grado en Español: Lengua y Literatura;Artes y Humanidades
+UBU;Burgos;Facultad de Humanidades y Comunicación;Grado en Historia y Patrimonio;Artes y Humanidades
+UBU;;Escuela Politécnica Superior;Grado en Ingeniería de Empresa Digital;Ingeniería y Arquitectura
+ULE;León;Escuela de Ingeniería Agraria y Forestal;Grado en Ingeniería Agraria;Ingeniería y Arquitectura
+ULE;León;Escuela de Ingenierías Industrial, Informática y Aeroespacial;Grado en Ingeniería Aeroespacial;Ingeniería y Arquitectura
+ULE;León;Escuela de Ingenierías Industrial, Informática y Aeroespacial;Grado en Ingeniería de Datos e Inteligencia Artificial;Ingeniería y Arquitectura
+ULE;León;Escuela de Ingenierías Industrial, Informática y Aeroespacial;Grado en Ingeniería Eléctrica;Ingeniería y Arquitectura
+ULE;León;Escuela de Ingenierías Industrial, Informática y Aeroespacial;Grado en Ingeniería en Electrónica Industrial y Automática;Ingeniería y Arquitectura
+ULE;León;Escuela de Ingenierías Industrial, Informática y Aeroespacial;Grado en Ingeniería Informática;Ingeniería y Arquitectura
+ULE;León;Escuela de Ingenierías Industrial, Informática y Aeroespacial;Grado en Ingeniería Mecánica;Ingeniería y Arquitectura
+ULE;León;Escuela Superior y Técnica de Ingenieros de Minas;Grado en Ingeniería de la Energía;Ingeniería y Arquitectura
+ULE;León;Escuela Superior y Técnica de Ingenieros de Minas;Grado en Ingeniería Minera;Ingeniería y Arquitectura
+ULE;León;Escuela Superior y Técnica de Ingenieros de Minas;PCEO Grado en Ingeniería Eléctrica y Grado en Ingeniería de la Energía;Ingeniería y Arquitectura
+ULE;León;Escuela Superior y Técnica de Ingenieros de Minas;PCEO Grado en Ingeniería Minera y Grado en Ingeniería de la Energía;Ingeniería y Arquitectura
+ULE;León;Escuela Universitaria de Trabajo Social;Grado en Trabajo Social;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Ciencias Biológicas y Ambientales;Grado en Biología;Ciencias
+ULE;León;Facultad de Ciencias Biológicas y Ambientales;Grado en Biotecnología;Ciencias
+ULE;León;Facultad de Ciencias Biológicas y Ambientales;Grado en Ciencias Ambientales;Ciencias
+ULE;León;Facultad de Ciencias Biológicas y Ambientales;PCEO Grado en Ingeniería Forestal y del Medio Natural y Grado Ciencias Ambientales;Ciencias
+ULE;León;Facultad de Ciencias de la Actividad Física y del Deporte;Grado en Ciencias de la Actividad Física y del Deporte;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Ciencias de la Salud;Grado en Enfermería;Ciencias de la Salud
+ULE;León;Facultad de Ciencias del Trabajo;Grado en Relaciones Laborales y Recursos Humanos;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Ciencias Económicas y Empresariales;Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Ciencias Económicas y Empresariales;Grado en Comercio Internacional;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Ciencias Económicas y Empresariales;Grado en Economía;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Ciencias Económicas y Empresariales;Grado en Finanzas;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Ciencias Económicas y Empresariales;Grado en Marketing e Investigación de Mercados;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Ciencias Económicas y Empresariales;Grado en Turismo;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Derecho;Grado en Derecho;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Derecho;PCEO Grado en Derecho y Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Educación;Grado en Educación Infantil;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Educación;Grado en Educación Primaria;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Educación;Grado en Educación Social;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Filosofía y Letras;Grado en Filología Moderna, Inglés;Artes y Humanidades
+ULE;León;Facultad de Filosofía y Letras;Grado en Geografía y Ordenación del Territorio;Artes y Humanidades
+ULE;León;Facultad de Filosofía y Letras;Grado en Historia;Artes y Humanidades
+ULE;León;Facultad de Filosofía y Letras;Grado en Historia del Arte;Artes y Humanidades
+ULE;León;Facultad de Filosofía y Letras;Grado en Información y Documentación;Ciencias Sociales y Jurídicas
+ULE;León;Facultad de Filosofía y Letras;Grado en Lengua Española y su Literatura;Artes y Humanidades
+ULE;León;Facultad de Filosofía y Letras;PCEO Grado en Historia y Grado en Historia del Arte;Artes y Humanidades
+ULE;León;Facultad de Veterinaria;Grado en Ciencia y Tecnología de los Alimentos;Ciencias
+ULE;León;Facultad de Veterinaria;Grado en Veterinaria;Ciencias de la Salud
+ULE;Ponferrada;Escuela de Ingeniería Agraria y Forestal;Grado en Ingeniería Forestal y del Medio Natural;Ingeniería y Arquitectura
+ULE;Ponferrada;Escuela Superior y Técnica de Ingenieros de Minas;Grado en Ingeniería en Geomática y Topografía;Ingeniería y Arquitectura
+ULE;Ponferrada;Facultad de Ciencias de la Salud;Grado en Nutrición Humana y Dietética;Ciencias de la Salud
+ULE;Ponferrada;Facultad de Ciencias de la Salud;Grado en Enfermería;Ciencias de la Salud
+ULE;Ponferrada;Facultad de Ciencias de la Salud;Grado en Fisioterapia;Ciencias de la Salud
+ULE;Ponferrada;Facultad de Ciencias de la Salud;Grado en Podología;Ciencias de la Salud
+USAL;Ávila;Centro Universitario de Formación de la Policía Nacional, O.A.;Grado en Estudios Policiales;Ciencias Sociales y Jurídicas
+USAL;Ávila;Escuela Politécnica Superior de Ávila;Grado en Ingeniería Civil;Ingeniería y Arquitectura
+USAL;Ávila;Escuela Politécnica Superior de Ávila;Grado en Ingeniería de la Energía y Recursos Minerales;Ingeniería y Arquitectura
+USAL;Ávila;Escuela Politécnica Superior de Ávila;Grado en Ingeniería en Geoinformación y Geomática;Ingeniería y Arquitectura
+USAL;Ávila;Escuela Politécnica Superior de Ávila;Grado en Seguridad;Ciencias Sociales y Jurídicas
+USAL;Ávila;Escuela Politécnica Superior de Ávila;PCEO Grado en Ingeniería Civil y Grado en Ingeniería de la Energía y Recursos Minerales;Ingeniería y Arquitectura
+USAL;Ávila;Escuela Universitaria de Educación y Turismo;Grado en Gestión del Turismo;Ciencias Sociales y Jurídicas
+USAL;Ávila;Escuela Universitaria de Educación y Turismo;Grado en Maestro en Educación Infantil;Ciencias Sociales y Jurídicas
+USAL;Ávila;Escuela Universitaria de Educación y Turismo;Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+USAL;Ávila;Escuela Universitaria de Educación y Turismo;PCEO Grado en Gestión de Turismo y Grado en Gestión de Pequeñas y Medianas Empresas;Ciencias Sociales y Jurídicas
+USAL;Ávila;Escuela Universitaria de Educación y Turismo;PCEO Grado en Maestro en Educación Infantil y Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+USAL;Ávila;Escuela Universitaria de Enfermería de Avila;Grado en Enfermería;Ciencias de la Salud
+USAL;Béjar;Escuela Técnica Superior de Ingeniería Industrial;Grado en Ingeniería Eléctrica;Ingeniería y Arquitectura
+USAL;Béjar;Escuela Técnica Superior de Ingeniería Industrial;Grado en Ingeniería Electrónica Industrial y Automática;Ingeniería y Arquitectura
+USAL;Béjar;Escuela Técnica Superior de Ingeniería Industrial;Grado en Ingeniería Mecánica;Ingeniería y Arquitectura
+USAL;Béjar;Escuela Técnica Superior de Ingeniería Industrial;PCEO Grado en Ingeniería Eléctrica y Grado en Ingeniería Electrónica Industrial y Automática;Ingeniería y Arquitectura
+USAL;Béjar;Escuela Técnica Superior de Ingeniería Industrial;PCEO Grado en Ingeniería Eléctrica y Grado en Ingeniería Mecánica;Ingeniería y Arquitectura
+USAL;Béjar;Escuela Técnica Superior de Ingeniería Industrial;PCEO Grado en Ingeniería Mecánica y Grado en Ingeniería Electrónica Industrial y Automática;Ingeniería y Arquitectura
+USAL;Salamanca;Escuela Aeronáutica Adventia (European College of Aeronautics);Grado en Piloto de Aviación Comercial y Operaciones Aéreas;Ingeniería y Arquitectura
+USAL;Salamanca;Facultad de Bellas Artes;Grado en Bellas Artes;Artes y Humanidades
+USAL;Salamanca;Facultad de Biología;Grado en Biología;Ciencias
+USAL;Salamanca;Facultad de Biología;Grado en Biotecnología;Ciencias
+USAL;Salamanca;Facultad de Biología;PCEO Grado en Biotecnología y Grado en Farmacia;Ciencias
+USAL;Salamanca;Facultad de Ciencias;Grado en Estadística;Ciencias
+USAL;Salamanca;Facultad de Ciencias;Grado en Física;Ciencias
+USAL;Salamanca;Facultad de Ciencias;Grado en Geología;Ciencias
+USAL;Salamanca;Facultad de Ciencias;Grado en Ingeniería Geológica;Ingeniería y Arquitectura
+USAL;Salamanca;Facultad de Ciencias;Grado en Ingeniería Informática;Ingeniería y Arquitectura
+USAL;Salamanca;Facultad de Ciencias;Grado en Matemáticas;Ciencias
+USAL;Salamanca;Facultad de Ciencias;PCEO Grado en Estadística y Grado en Ingeniería Informática;Ciencias
+USAL;Salamanca;Facultad de Ciencias;PCEO Grado en Física y Grado en Matemáticas;Ciencias
+USAL;Salamanca;Facultad de Ciencias Agrarias y Ambientales;Grado en Ciencias Ambientales;Ciencias
+USAL;Salamanca;Facultad de Ciencias Agrarias y Ambientales;Grado en Ingeniería Agrícola;Ingeniería y Arquitectura
+USAL;Salamanca;Facultad de Ciencias Químicas;Grado en Ingeniería Química;Ingeniería y Arquitectura
+USAL;Salamanca;Facultad de Ciencias Químicas;Grado en Química;Ciencias
+USAL;Salamanca;Facultad de Ciencias Sociales;Grado en Antropología;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Ciencias Sociales;Grado en Comunicación y Creación Audiovisual;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Ciencias Sociales;Grado en Relaciones Laborales y Recursos Humanos;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Ciencias Sociales;Grado en Sociología;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Ciencias Sociales;Grado en Trabajo Social;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Ciencias Sociales;PCEO Grado en Antropología y Grado en Filosofía;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Ciencias Sociales;PCEO Grado en Sociología y Grado en Ciencia Política y Administración  Pública;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Derecho;Grado en Ciencia Política y Administración Pública;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Derecho;Grado en Criminología;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Derecho;Grado en Derecho;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Derecho;Grado en Estudios Globales / Global Studies;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Derecho;PCEO Grado en Derecho y Grado en Ciencia Política y Administración Pública;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Derecho;PCEO Grado en Derecho y Grado en Criminología;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Economía y Empresa;Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Economía y Empresa;Grado en Economía;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Economía y Empresa;Grado en Gestión de Pequeñas y Medianas Empresas;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Economía y Empresa;PCEO Grado en Administración y Dirección de Empresas y Grado en Derecho;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Economía y Empresa;PCEO Grado en Administración y Dirección de Empresas y Grado en Ingeniería Informática;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Economía y Empresa;PCEO Grado en Administración y Dirección de Empresas y Grado en Traducción e Interpretación;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Economía y Empresa;PCEO Grado en Gestión de Pequeñas y Medianas Empresas y Grado en Relaciones Laborales y Recursos Humanos;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Educación;Grado en Educación Social;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Educación;Grado en Maestro en Educación Infantil;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Educación;Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Educación;Grado en Pedagogía;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Educación;PCEO Grado en Maestro en Educación Infantil y Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Enfermería y Fisioterapia;Grado en Enfermería;Ciencias de la Salud
+USAL;Salamanca;Facultad de Enfermería y Fisioterapia;Grado en Fisioterapia;Ciencias de la Salud
+USAL;Salamanca;Facultad de Farmacia;Grado en Farmacia;Ciencias de la Salud
+USAL;Salamanca;Facultad de Farmacia;PCEO Grado en Farmacia y Grado en Gestión de Pequeñas y Medianas Empresas;Ciencias de la Salud
+USAL;Salamanca;Facultad de Filología;Grado en Estudios Alemanes;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Estudios Árabes e Islámicos;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Estudios de Asia Oriental;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Estudios Franceses;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Estudios Hebreos y Arameos;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Estudios Ingleses;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Estudios Italianos;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Estudios Portugueses y Brasileños;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Filología Clásica;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Filología Hispánica;Artes y Humanidades
+USAL;Salamanca;Facultad de Filología;Grado en Lenguas, Literaturas y Culturas Románicas;Artes y Humanidades
+USAL;Salamanca;Facultad de Filosofía;Grado en Filosofía;Artes y Humanidades
+USAL;Salamanca;Facultad de Geografía e Historia;Grado en Geografía;Artes y Humanidades
+USAL;Salamanca;Facultad de Geografía e Historia;Grado en Historia;Artes y Humanidades
+USAL;Salamanca;Facultad de Geografía e Historia;Grado en Historia del Arte;Artes y Humanidades
+USAL;Salamanca;Facultad de Geografía e Historia;Grado en Historia y Ciencias de la Música;Artes y Humanidades
+USAL;Salamanca;Facultad de Geografía e Historia;Grado en Humanidades;Artes y Humanidades
+USAL;Salamanca;Facultad de Medicina;Grado en Medicina;Ciencias de la Salud
+USAL;Salamanca;Facultad de Medicina;Grado en Odontología;Ciencias de la Salud
+USAL;Salamanca;Facultad de Psicología;Grado en Psicología;Ciencias de la Salud
+USAL;Salamanca;Facultad de Psicología;Grado en Terapia Ocupacional;Ciencias de la Salud
+USAL;Salamanca;Facultad de Traducción y Documentación;Grado en Información y Documentación;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Traducción y Documentación;Grado en Traducción e Interpretación;Artes y Humanidades
+USAL;Salamanca;Facultad de Traducción y Documentación;PCEO Grado en Educación Social y Grado en Información y Documentación;Ciencias Sociales y Jurídicas
+USAL;Salamanca;Facultad de Traducción y Documentación;PCEO Grado en Información y Documentación y Grado en Ciencia Política y Administración Pública;
+USAL;Salamanca;Facultad de Traducción y Documentación;PCEO Grado en Información y Documentación y Grado en Historia;
+USAL;Salamanca;Facultad de Traducción y Documentación;PCEO Grado en Pedagogía y Grado en Información y Documentación;
+USAL;Salamanca;Facultad de Traducción y Documentación;PCEO Grado en Traducción e Interpretación y Grado en Derecho;
+USAL;Zamora;Escuela Politécnica Superior de Zamora;Grado en Arquitectura Técnica;Ingeniería y Arquitectura
+USAL;Zamora;Escuela Politécnica Superior de Zamora;Grado en Desarrollo de Aplicaciones 3D Interactivas y Videojuegos;Ingeniería y Arquitectura
+USAL;Zamora;Escuela Politécnica Superior de Zamora;Grado en Ingeniería Agroalimentaria;Ingeniería y Arquitectura
+USAL;Zamora;Escuela Politécnica Superior de Zamora;Grado en Ingeniería Civil;Ingeniería y Arquitectura
+USAL;Zamora;Escuela Politécnica Superior de Zamora;Grado en Ingeniería de Materiales;Ingeniería y Arquitectura
+USAL;Zamora;Escuela Politécnica Superior de Zamora;Grado en Ingeniería Informática en Sistemas de Información;Ingeniería y Arquitectura
+USAL;Zamora;Escuela Politécnica Superior de Zamora;Grado en Ingeniería Mecánica;Ingeniería y Arquitectura
+USAL;Zamora;Escuela Politécnica Superior de Zamora;PCEO Grado en Ingeniería de Materiales y Grado en Ingeniería Mecánica;Ingeniería y Arquitectura
+USAL;Zamora;Escuela Politécnica Superior de Zamora;PCEO Grado en Ingeniería Informática de Sistemas de Información y Grado en Información y Documentación;Ingeniería y Arquitectura
+USAL;Zamora;Escuela Universitaria de Enfermería SACYL;Grado en Enfermería;Ciencias de la Salud
+USAL;Zamora;Escuela Universitaria de Magisterio;Grado en Maestro en Educación Infantil;Ciencias Sociales y Jurídicas
+USAL;Zamora;Escuela Universitaria de Magisterio;Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+USAL;Zamora;Escuela Universitaria de Magisterio;PCEO Grado en Maestro en Educación Infantil y Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+USAL;Zamora;Escuela Universitaria de Relaciones Laborales;Grado en Relaciones Laborales y Recursos Humanos;Ciencias Sociales y Jurídicas
+UVA;Palencia;Escuela Técnica Superior de Ingenierías Agrarias;Grado en Enología;Ciencias
+UVA;Palencia;Escuela Técnica Superior de Ingenierías Agrarias;Grado en Ingeniería Agrícola y del Medio Rural;Ingeniería y Arquitectura
+UVA;Palencia;Escuela Técnica Superior de Ingenierías Agrarias;Grado en Ingeniería de las Industrias Agrarias y Alimentarias;Ingeniería y Arquitectura
+UVA;Palencia;Escuela Técnica Superior de Ingenierías Agrarias;Grado en Ingeniería Forestal y del Medio Natural;Ingeniería y Arquitectura
+UVA;Palencia;Escuela Técnica Superior de Ingenierías Agrarias;PCEO Grado en Ingeniería Agrícola y del Medio Rural y Grado en Ingeniería de las Industrias Agrarias y Alimentarias;Ingeniería y Arquitectura
+UVA;Palencia;Escuela Técnica Superior de Ingenierías Agrarias;PCEO Grado en Ingeniería Agrícola y del Medio Rural y Grado en Ingeniería Forestal y del Medio Natural;Ingeniería y Arquitectura
+UVA;Palencia;Escuela Técnica Superior de Ingenierías Agrarias;PCEO Grado en Ingeniería de las Industrias Agrarias y Alimentarias y Grado en Enología;Ingeniería y Arquitectura
+UVA;Palencia;Escuela Universitaria de Enfermería Dr.Dacio Crespo de Palencia (Adscrita a la UVa);Grado en Enfermería;Ciencias de la Salud
+UVA;Palencia;Facultad de Ciencias del Trabajo;Grado en Relaciones Laborales y Recursos Humanos;Ciencias Sociales y Jurídicas
+UVA;Palencia;Facultad de Educación de Palencia;Grado en Antropología Social y Cultural;Ciencias Sociales y Jurídicas
+UVA;Palencia;Facultad de Educación de Palencia;Grado en Educación Infantil;Ciencias Sociales y Jurídicas
+UVA;Palencia;Facultad de Educación de Palencia;Grado en Educación Primaria;Ciencias Sociales y Jurídicas
+UVA;Palencia;Facultad de Educación de Palencia;Grado en Educación Social;Ciencias Sociales y Jurídicas
+UVA;Palencia;Facultad de Educación de Palencia;PCEO Grado en Educación Primaria y Grado en Educación Infantil;Ciencias Sociales y Jurídicas
+UVA;Segovia;Escuela de Ingeniería Informática de Segovia;Grado en Ingeniería Informática de Servicios y Aplicaciones;Ingeniería y Arquitectura
+UVA;Segovia;Escuela de Ingeniería Informática de Segovia;PCEO Grado en Matemáticas y Grado en Ingeniería Informática de Servicios y Aplicaciones;Ingeniería y Arquitectura
+UVA;Segovia;Facultad de Ciencias Sociales, Jurídicas y de la Comunicación;Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UVA;Segovia;Facultad de Ciencias Sociales, Jurídicas y de la Comunicación;Grado en Derecho;Ciencias Sociales y Jurídicas
+UVA;Segovia;Facultad de Ciencias Sociales, Jurídicas y de la Comunicación;Grado en Publicidad y Relaciones Públicas;Ciencias Sociales y Jurídicas
+UVA;Segovia;Facultad de Ciencias Sociales, Jurídicas y de la Comunicación;Grado en Relaciones Laborales y Recursos Humanos;Ciencias Sociales y Jurídicas
+UVA;Segovia;Facultad de Ciencias Sociales, Jurídicas y de la Comunicación;Grado en Turismo;Ciencias Sociales y Jurídicas
+UVA;Segovia;Facultad de Ciencias Sociales, Jurídicas y de la Comunicación;PCEO Grado en Publicidad y Relaciones Públicas y Grado en Turismo;Ciencias Sociales y Jurídicas
+UVA;Segovia;Facultad de Educación de Segovia;Grado en Educación Infantil;Ciencias Sociales y Jurídicas
+UVA;Segovia;Facultad de Educación de Segovia;Grado en Educación Primaria;Ciencias Sociales y Jurídicas
+UVA;Segovia;Facultad de Educación de Segovia;PCEO Grado en Educación Primaria y Grado en Educación Infantil;Ciencias Sociales y Jurídicas
+UVA;Segovia;Facultad de Enfermería sede Segovia;Grado en Enfermería;Ciencias de la Salud
+UVA;Soria;Escuela de Ingeniería de la Industria Forestal, Agronómica y de la Bioenergía;Grado en Ingeniería Agraria y Energética;Ingeniería y Arquitectura
+UVA;Soria;Escuela de Ingeniería de la Industria Forestal, Agronómica y de la Bioenergía;Grado en Ingeniería Forestal: Industrias Forestales;Ingeniería y Arquitectura
+UVA;Soria;Facultad de Ciencias de la Salud;Grado en Enfermería;Ciencias de la Salud
+UVA;Soria;Facultad de Ciencias de la Salud;Grado en Fisioterapia;Ciencias de la Salud
+UVA;Soria;Facultad de Ciencias Empresariales y del Trabajo de Soria;Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UVA;Soria;Facultad de Ciencias Empresariales y del Trabajo de Soria;Grado en Relaciones Laborales y Recursos Humanos;Ciencias Sociales y Jurídicas
+UVA;Soria;Facultad de Ciencias Empresariales y del Trabajo de Soria;PCEO Grado en Relaciones Laborales y Recursos Humanos y Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UVA;Soria;Facultad de Educación de Soria;Grado en Ciencias de la Actividad Física y del Deporte;Ciencias Sociales y Jurídicas
+UVA;Soria;Facultad de Educación de Soria;Grado en Educación Infantil;Ciencias Sociales y Jurídicas
+UVA;Soria;Facultad de Educación de Soria;Grado en Educación Primaria;Ciencias Sociales y Jurídicas
+UVA;Soria;Facultad de Traducción e Interpretación;Grado en Traducción e Interpretación;Artes y Humanidades
+UVA;Valladolid;Escuela de Ingeniería Informática de Valladolid;Grado en Ingeniería Informática;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela de Ingeniería Informática de Valladolid;PCEO Grado en Ingeniería Informática y Grado en Estadística;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela de Ingenierías Industriales;Grado en Ingeniería Eléctrica;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela de Ingenierías Industriales;Grado en Ingeniería en Diseño Industrial y Desarrollo de Producto;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela de Ingenierías Industriales;Grado en Ingeniería en Electrónica Industrial y Automática;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela de Ingenierías Industriales;Grado en Ingeniería en Organización Industrial;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela de Ingenierías Industriales;Grado en Ingeniería en Tecnologías Industriales;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela de Ingenierías Industriales;Grado en Ingeniería Energética;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela de Ingenierías Industriales;Grado en Ingeniería Mecánica;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela de Ingenierías Industriales;Grado en Ingeniería Química;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela Técnica Superior de Arquitectura;Grado en Fundamentos de la Arquitectura;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela Técnica Superiorde  Ingenieros de Telecomunicación;Grado en Ingeniería de Tecnologías de Telecomunicación;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela Técnica Superiorde  Ingenieros de Telecomunicación;Grado en Ingeniería de Tecnologías Específicas de Telecomunicación;Ingeniería y Arquitectura
+UVA;Valladolid;Escuela Técnica Superiorde  Ingenieros de Telecomunicación;PCEO Grado en Ingeniería de Tecnologías de Telecomunicación y de Grado en Administración y Dirección de Empresas;Ingeniería y Arquitectura
+UVA;Valladolid;Facultad de Ciencias;Grado en Estadística;Ciencias
+UVA;Valladolid;Facultad de Ciencias;Grado en Física;Ciencias
+UVA;Valladolid;Facultad de Ciencias;Grado en Matemáticas;Ciencias
+UVA;Valladolid;Facultad de Ciencias;Grado en Óptica y Optometría;Ciencias de la Salud
+UVA;Valladolid;Facultad de Ciencias;Grado en Química;Ciencias
+UVA;Valladolid;Facultad de Ciencias;PCEO Grado en Matemáticas y Grado en Física;Ciencias
+UVA;Valladolid;Facultad de Ciencias;PCEO Grado en Matemáticas y Grado en Ingeniería Informática de Servicios y Aplicaciones;Ciencias
+UVA;Valladolid;Facultad de Ciencias Económicas y  Empresariales;Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Ciencias Económicas y  Empresariales;Grado en Economía;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Ciencias Económicas y  Empresariales;Grado en Finanzas, Banca y Seguros;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Ciencias Económicas y  Empresariales;Grado en Marketing e Investigación de Mercados;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Comercio;Grado en Comercio;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Comercio;Grado en Relaciones Internacionales;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Comercio;PCEO Grado en Comercio y Grado en Relaciones Laborales y Recursos Humanos;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Derecho;Grado en Criminología;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Derecho;Grado en Derecho;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Derecho;PCEO Grado en Derecho y Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Educación y Trabajo Social;Grado en Educación Infantil;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Educación y Trabajo Social;Grado en Educación Primaria;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Educación y Trabajo Social;Grado en Educación Social;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Educación y Trabajo Social;Grado en Trabajo Social;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Enfermería;Grado en Enfermería;Ciencias de la Salud
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Español: Lengua y Literatura;Artes y Humanidades
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Estudios Clásicos;Artes y Humanidades
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Estudios Ingleses;Artes y Humanidades
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Filosofía;Artes y Humanidades
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Geografia y Planificación Territorial;Artes y Humanidades
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Historia;Artes y Humanidades
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Historia del Arte;Artes y Humanidades
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Historia y Ciencias de la Música;Artes y Humanidades
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Lenguas Modernas y sus Literaturas;Artes y Humanidades
+UVA;Valladolid;Facultad de Filosofia  y Letras;Grado en Periodismo;Ciencias Sociales y Jurídicas
+UVA;Valladolid;Facultad de Medicina;Grado en Biomedicina y Terapias Avanzadas;Ciencias de la Salud
+UVA;Valladolid;Facultad de Medicina;Grado en Ingeniería Biomédica;Ingeniería y Arquitectura
+UVA;Valladolid;Facultad de Medicina;Grado en Logopedia;Ciencias de la Salud
+UVA;Valladolid;Facultad de Medicina;Grado en Medicina;Ciencias de la Salud
+UVA;Valladolid;Facultad de Medicina;Grado en Nutrición Humana y Dietética;Ciencias de la Salud
+UCAV;Santander;Escuela Técnico Profesional en Ciencias de la Salud Clínica Mompía;Grado en Enfermería;Ciencias de la Salud
+UCAV;UCAV;Escuela Universitaria de Magisterio Fray Luis de Leon;Grado en Maestro en Educación Infantil;Ciencias Sociales y Jurídicas
+UCAV;UCAV;Escuela Universitaria de Magisterio Fray Luis de Leon;Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+UCAV;UCAV;Facultad de Ciencias Sociales y Juridicas;Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UCAV;UCAV;Facultad de Ciencias Sociales y Juridicas;Grado en Derecho;Ciencias Sociales y Jurídicas
+UCAV;UCAV;Facultad de Ciencias Sociales y Juridicas;Grado en Economía;Ciencias Sociales y Jurídicas
+UCAV;UCAV;Facultad de Ciencias Sociales y Juridicas;Grado en Filosofía;Ciencias Sociales y Jurídicas
+UCAV;UCAV;Facultad de Ciencias Sociales y Juridicas;Grado en Maestro en Educación Infantil;Ciencias Sociales y Jurídicas
+UCAV;UCAV;Facultad de Ciencias Sociales y Juridicas;Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+UCAV;UCAV;Facultad de Ciencias Sociales y Juridicas;Grado en Políticas de Seguridad y Control de la Criminalidad;Ciencias Sociales y Jurídicas
+UCAV;UCAV;Facultad de Ciencias y Artes;Grado en Bioinformática;Ingeniería y Arquitectura
+UCAV;UCAV;Facultad de Ciencias y Artes;Grado en Ciencias Ambientales;Ciencias
+UCAV;UCAV;Facultad de Ciencias y Artes;Grado en Ingeniería de las Industrias Agrarias y Alimentarias;Ingeniería y Arquitectura
+UCAV;UCAV;Facultad de Ciencias y Artes;Grado en Ingeniería Electrónica Industrial y Automática;Ingeniería y Arquitectura
+UCAV;UCAV;Facultad de Ciencias y Artes;Grado en Ingeniería Forestal y del Medio Natural;Ingeniería y Arquitectura
+UCAV;UCAV;Facultad de Ciencias y Artes;Grado en Ingeniería Informática - Sistemas de Información;Ingeniería y Arquitectura
+UCAV;UCAV;Facultad de Ciencias y Artes;Grado en Ingeniería Mecánica;Ingeniería y Arquitectura
+UCAV;UCAV;Facultad de la Salud;Grado en Enfermería;Ciencias de la Salud
+UCAV;UCAV;Facultad de la Salud;Grado en Farmacia;Ciencias de la Salud
+UCAV;UCAV;Facultad de la Salud;Grado en Fisioterapia;Ciencias de la Salud
+UCAV;UCAV;Facultad de la Salud;Grado en Nutrición Humana y Dietética;Ciencias de la Salud
+UCAV;UCAV;Facultad de la Salud;Grado en Psicología;Ciencias de la Salud
+UEMC;UEMC;Escuela Politécnica Superior;Grado en Ingeniería de Organizacion Industrial;Ingeniería y Arquitectura
+UEMC;UEMC;Escuela Politécnica Superior;Grado en Ingeniería Informática;Ingeniería y Arquitectura
+UEMC;UEMC;Facultad de Ciencias de la Salud;Grado en Ciencias de la Actividad Física y del Deporte;Ciencias de la Salud
+UEMC;UEMC;Facultad de Ciencias de la Salud;Grado en Enfermería;Ciencias de la Salud
+UEMC;UEMC;Facultad de Ciencias de la Salud;Grado en Fisioterapia;Ciencias de la Salud
+UEMC;UEMC;Facultad de Ciencias de la Salud;Grado en Nutrición Humana y Dietética;Ciencias de la Salud
+UEMC;UEMC;Facultad de Ciencias de la Salud;Grado en Odontología;Ciencias de la Salud
+UEMC;UEMC;Facultad de Ciencias de la Salud;Grado en Psicología;Ciencias de la Salud
+UEMC;UEMC;Facultad de Ciencias de la Salud;Grado en Terapia Ocupacional;Ciencias de la Salud
+UEMC;UEMC;Facultad de Ciencias Sociales;Grado en Administracion y Direccion de Empresas;Ciencias Sociales y Jurídicas
+UEMC;UEMC;Facultad de Ciencias Sociales;Grado en Comunicación Audiovisual;Ciencias Sociales y Jurídicas
+UEMC;UEMC;Facultad de Ciencias Sociales;Grado en Criminología;Ciencias Sociales y Jurídicas
+UEMC;UEMC;Facultad de Ciencias Sociales;Grado en Derecho;Ciencias Sociales y Jurídicas
+UEMC;UEMC;Facultad de Ciencias Sociales;Grado en Periodismo;Ciencias Sociales y Jurídicas
+UEMC;UEMC;Facultad de Ciencias Sociales;Grado en Publicidad y Relaciones Publicas;Ciencias Sociales y Jurídicas
+UPSA;Madrid;Centro de Enseñanza Superior Escuni;Grado en Educación Social;Ciencias Sociales y Jurídicas
+UPSA;Madrid;Centro de Enseñanza Superior Escuni;Grado en Maestro en Educación Infantil;Ciencias Sociales y Jurídicas
+UPSA;Madrid;Centro de Enseñanza Superior Escuni;Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+UPSA;Madrid;Centro de Enseñanza Superior Escuni;Grado en Pedagogía;Ciencias Sociales y Jurídicas
+UPSA;Madrid;Facultad de Enfermería y Fisioterapia Salus Infirmorum;Grado en Enfermería;Ciencias de la Salud
+UPSA;Madrid;Facultad de Enfermería y Fisioterapia Salus Infirmorum;Grado en Enfermería;Ciencias de la Salud
+UPSA;Madrid;Facultad de Enfermería y Fisioterapia Salus Infirmorum;Grado en Fisioterapia;Ciencias de la Salud
+UPSA;Madrid;Facultad de Enfermería y Fisioterapia Salus Infirmorum;Grado en Fisioterapia;Ciencias de la Salud
+UPSA;Salamanca;Facultad de Ciencias de la Salud;Grado en Enfermería;Ciencias de la Salud
+UPSA;Salamanca;Facultad de Ciencias de la Salud;Grado en Enfermería;Ciencias de la Salud
+UPSA;Salamanca;Facultad de Ciencias de la Salud;Grado en Fisioterapia;Ciencias de la Salud
+UPSA;Salamanca;Facultad de Ciencias de la Salud;Grado en Logopedia;Ciencias de la Salud
+UPSA;Salamanca;Facultad de Ciencias del Seguro, Jurídicas y de la Empresa;Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Ciencias del Seguro, Jurídicas y de la Empresa;Grado en Derecho;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Ciencias del Seguro, Jurídicas y de la Empresa;Grado en Relaciones Internacionales;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Ciencias Humanas y Sociales;Grado en Filosofía;Artes y Humanidades
+UPSA;Salamanca;Facultad de Comunicación;Grado en Comunicación Audiovisual;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Comunicación;Grado en Marketing y Comunicación;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Comunicación;Grado en Periodismo;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Comunicación;Grado en Publicidad y Relaciones Públicas;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Educación;Grado en Ciencias de la Actividad Física y el Deporte;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Educación;Grado en Maestro en Educación Infantil;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Educación;Grado en Maestro en Educación Primaria;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Informática;Grado en Administración y Dirección de Empresas Tecnológicas;Ciencias Sociales y Jurídicas
+UPSA;Salamanca;Facultad de Informática;Grado en Ingeniería Informática;Ingeniería y Arquitectura
+UPSA;Salamanca;Facultad de Psicología;Grado en Psicología;Ciencias de la Salud
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Administración de Empresas/Bachelor in Business Administration;Ciencias Sociales y Jurídicas
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Comportamiento y Ciencias Sociales/ Bachelor in Behavior and Social Sciences ;Ciencias Sociales y Jurídicas
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Computación e Inteligencia Artificial/ Bachelor in Computer Science and Artificial Intelligence;Ingeniería y Arquitectura
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Comunicación y Medios Digitales / Bachelor in Communication and Digital Media;Ciencias Sociales y Jurídicas
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Datos y Analítica de Negocio/ Bachelor in Data and Business Analytics ;Ciencias Sociales y Jurídicas
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Derecho / Bachelor of Laws ;Ciencias Sociales y Jurídicas
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Diseño / Bachelor in Design;Artes y Humanidades
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Economía/Bachelor in Economics;Ciencias Sociales y Jurídicas
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Filosofía, Política, Derecho y Economía / Bachelor in Philosophy, Politics, Law and Economics;Ciencias Sociales y Jurídicas
+IE;Madrid;Centro de Estudios Superiores IE;Grado en Relaciones Internacionales /  Bachelor in International Relations ;Ciencias Sociales y Jurídicas
+IE;Segovia;Escuela Técnica Superior de Estudios Integrados de Arquitectura;Grado en Diseño / Bachelor in Design;Artes y Humanidades
+IE;Segovia;Escuela Técnica Superior de Estudios Integrados de Arquitectura;Grado en Estudios de Arquitectura/ Bachelor in Architectural Studies ;Ingeniería y Arquitectura
+IE;Segovia;Escuela Técnica Superior de Estudios Integrados de Arquitectura;Grado en Matemática Aplicada / Bachelor in Applied Mathematics;Ciencias
+IE;Segovia;Facultad de Ciencias Experimentales;Grado en Ciencias Ambientales para la Sostenibilidad / Bachelor in Environmental Sciences and Sustainability;Ciencias
+IE;Segovia;Facultad de Ciencias Humanas, Sociales y de la Comunicación;Grado en Administración de Empresas/Bachelor in Business Administration;Ciencias Sociales y Jurídicas
+IE;Segovia;Facultad de Ciencias Humanas, Sociales y de la Comunicación;Grado en Comportamiento y Ciencias Sociales/ Bachelor in Behavior and Social Sciences ;Ciencias Sociales y Jurídicas
+IE;Segovia;Facultad de Ciencias Humanas, Sociales y de la Comunicación;Grado en Computación e Inteligencia Artificial/ Bachelor in Computer Science and Artificial Intelligence;Ingeniería y Arquitectura
+IE;Segovia;Facultad de Ciencias Humanas, Sociales y de la Comunicación;Grado en Comunicación y Medios Digitales / Bachelor in Communication and Digital Media;Ciencias Sociales y Jurídicas
+IE;Segovia;Facultad de Ciencias Humanas, Sociales y de la Comunicación;Grado en Datos y Analítica de Negocio/ Bachelor in Data and Business Analytics ;Ciencias Sociales y Jurídicas
+IE;Segovia;Facultad de Ciencias Humanas, Sociales y de la Comunicación;Grado en Derecho / Bachelor of Laws ;Ciencias Sociales y Jurídicas
+IE;Segovia;Facultad de Ciencias Humanas, Sociales y de la Comunicación;Grado en Economía/Bachelor in Economics;Ciencias Sociales y Jurídicas
+IE;Segovia;Facultad de Ciencias Humanas, Sociales y de la Comunicación;Grado en Filosofía, Política, Derecho y Economía / Bachelor in Philosophy, Politics, Law and Economics;Ciencias Sociales y Jurídicas
+IE;Segovia;Facultad de Ciencias Humanas, Sociales y de la Comunicación;Grado en Relaciones Internacionales /  Bachelor in International Relations ;Ciencias Sociales y Jurídicas
+UIIIC;UIIIC;Facultad de Ciencias de la Salud;Grado en Ciencias de la Actividad Física y del Deporte;Ciencias de la Salud
+UIIIC;UIIIC;Facultad de Ciencias de la Salud;Grado en Nutrición Humana y Dietética;Ciencias de la Salud
+UIIIC;UIIIC;Facultad de Ciencias de la Salud;Grado en Psicología;Ciencias de la Salud
+UIIIC;UIIIC;Facultad de Ciencias Jurídicas y Económicas;Grado en Administración y Dirección de Empresas;Ciencias Sociales y Jurídicas
+UIIIC;UIIIC;Facultad de Ciencias Jurídicas y Económicas;Grado en Derecho;Ciencias Sociales y Jurídicas
+UIIIC;UIIIC;Facultad de Ciencias Jurídicas y Económicas;Grado en Filosofía, Política y Economía;Ciencias Sociales y Jurídicas
+UIIIC;UIIIC;Facultad de Ciencias y Tecnología;Grado en Biotecnología;Ciecnias
+UIIIC;UIIIC;Facultad de Ciencias y Tecnología;Grado en Ingeniería Informática;Ingeniería y Arquitectura
+UIIIC;UIIIC;Facultad de Criminología;Grado en Ciencias de la Seguridad;Ciencias Sociales y Jurídicas
+UIIIC;UIIIC;Facultad de Criminología;Grado en Criminología;Ciencias Sociales y Jurídicas
+UIIIC;UIIIC;Facultad de Humanidades y Ciencias Sociales;Grado en Educación Infantil;Ciencias Sociales y Jurídicas
+UIIIC;UIIIC;Facultad de Humanidades y Ciencias Sociales;Grado en Educación Primaria;Ciencias Sociales y Jurídicas
+UIIIC;UIIIC;Facultad de Humanidades y Ciencias Sociales;Grado en Historia, Geografía e Historia del Arte;Ciencias Sociales y Jurídicas
+UIIIC;UIIIC;Facultad de Humanidades y Ciencias Sociales;Grado en Periodismo;Ciencias Sociales y Jurídicas
