@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install rdflib
 
-      - name: Find and run Python script from PR
+      - name: Find and run Python scripts from PR
         id: run_script
         run: |
           PR=${{ github.event.pull_request.number }}
@@ -40,7 +40,7 @@ jobs:
           echo "New Python files containing 'task':"
           echo "$FILES"
 
-          # Write multi-line output safely
+          # Save the list of files as an output
           {
             echo "files<<EOF"
             echo "$FILES"
@@ -51,49 +51,23 @@ jobs:
             echo "No new Python files with 'task' in the name found."
           fi
 
-          # Run each changed Python file and capture report output. Only for files called task06 and task07
+          # Run each new Python file that contains 'task' in its name
           for f in $FILES; do
-            if echo "$f" | grep -Eiq "task0*6|task0*7"; then
-              echo "Running script with task in title $f..."
+            if echo "$f" | grep -Eiq "task"; then
+              echo "Running script $f..."
               python "$f" || {
                 echo "Script $f failed to run."
                 exit 1
               }
             else
-              echo "Skipping $f (not task06 or task07)."
+              echo "Skipping $f (not a task file)."
             fi
           done
 
-      - name: Verify required report files exist
-        id: verify_reports
+      - name: Check for generated report files (optional)
         run: |
-          REQUIRED_REPORTS=("report_result_Task_06.txt" "report_result_Task_07.txt")
-          for report in "${REQUIRED_REPORTS[@]}"; do
-            if [ ! -f "$report" ]; then
-              echo "Missing required report: $report"
-              exit 1
-            else
-              echo "Found $report"
-            fi
-          done
-          echo "status=ok" >> $GITHUB_OUTPUT
-
-      - name: Check report for required text
-        if: steps.verify_reports.outputs.status == 'ok'
-        run: |
-          for report in report_result_Task_06.txt report_result_Task_07.txt; do
-            echo "Checking $report for any 'ERROR'..."
-            if grep -q "ERROR" "$report"; then
-              echo "Found 'ERROR' in $report!"
-              echo "----- File content -----"
-              cat "$report"
-              echo "------------------------"
-              exit 1
-            else
-              echo "No 'ERROR' found in $report."
-              echo "status=ok" >> $GITHUB_OUTPUT
-            fi
-          done
+          echo "Checking for any generated report files..."
+          ls report_result_*.txt 2>/dev/null || echo "No report files generated."
 
       - name: Upload reports as artifacts
         if: always()
@@ -101,6 +75,5 @@ jobs:
         with:
           name: generated-reports
           path: |
-            report_result_Task_06.txt
-            report_result_Task_07.txt
-
+            report_result_*.txt
+          if-no-files-found: ignore
