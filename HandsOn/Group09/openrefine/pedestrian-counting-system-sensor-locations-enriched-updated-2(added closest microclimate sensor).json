@@ -1,0 +1,63 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Sensor_Name",
+    "expression": "grel:value.replace(\"280Will_T\",\"5\").replace(\"488Mac_T\",\"0\").replace(\"474Fl_T\",\"5\").replace(\"574Qub_T\",\"0\").replace(\"ACMI_T\",\"8\").replace(\"AG_T\",\"8\").replace(\"AlfPl_T\",\"2\").replace(\"BirArt1109_T\",\"1\").replace(\"BirBridge_T_1\",\"1\").replace(\"BirBridge_T_2\",\"1\").replace(\"BirFed1120_T\",\"1\").replace(\"Boyd2837_T\",\"4\").replace(\"Bou231_T\",\"3\").replace(\"Bou283_T\",\"3\").replace(\"Bou292_T\",\"3\").replace(\"Bou688_T\",\"9\").replace(\"Bou892T\",\"9\").replace(\"BouHbr2353_T\",\"9\").replace(\"BouHbr_T\",\"9\").replace(\"Bourke155_T\",\"3\").replace(\"Col12_T\",\"10\").replace(\"Col15_T\",\"10\").replace(\"Col254_T\",\"3\").replace(\"Col620_T\",\"4\").replace(\"Col623_T\",\"4\").replace(\"Col700_T\",\"9\").replace(\"ElFi_T\",\"8\").replace(\"Eli124_T\",\"3\").replace(\"Eli197_T\",\"3\").replace(\"Eli250_T\",\"3\").replace(\"Eli263_T\",\"3\").replace(\"Eli489_T\",\"3\").replace(\"Eli501_T\",\"3\").replace(\"EntPark1671_T\",\"5\").replace(\"Errol20_T\",\"0\").replace(\"Errol23_T\",\"0\").replace(\"Fli114C_T\",\"2\").replace(\"Fli114F_T\",\"2\").replace(\"FliS_T\",\"8\").replace(\"FliSS_T\",\"8\").replace(\"FLDegC_T\",\"8\").replace(\"FLDegN_T\",\"8\").replace(\"FLDegS_T\",\"8\").replace(\"Fra118_T\",\"3\").replace(\"Hammer1584_T\",\"8\").replace(\"HarEsB_T\",\"9\").replace(\"HarEsP_T\",\"9\").replace(\"KenMac_T\",\"0\").replace(\"King163_T\",\"5\").replace(\"King2_T\",\"5\").replace(\"King335_T\",\"5\").replace(\"Lat224_T\",\"3\").replace(\"Lat526_T_1\",\"9\").replace(\"Lat526_T_2\",\"9\").replace(\"LatWill_T\",\"5\").replace(\"Lyg161_T\",\"3\").replace(\"Lyg260_T\",\"3\").replace(\"Lyg309_T\",\"0\").replace(\"Mac330_T\",\"0\").replace(\"MCEC_T\",\"4\").replace(\"narrLibL1L1_T\",\"3\").replace(\"narrLibL2CA_T\",\"3\").replace(\"narrLibL3C1_T\",\"3\").replace(\"NewQ_T\",\"9\").replace(\"Pel147_T\",\"0\").replace(\"Pow61_T\",\"5\").replace(\"PriNW_T\",\"8\").replace(\"QVN_T\",\"3\").replace(\"Que85_T\",\"5\").replace(\"SanBri_T\",\"5\").replace(\"Signal1647_T\",\"5\").replace(\"SouthB_T\",\"8\").replace(\"Spen161_T\",\"9\").replace(\"Spen201_T\",\"9\").replace(\"Spen229_T\",\"9\").replace(\"Spen475_T\",\"9\").replace(\"Spen484_T\",\"0\").replace(\"Spencer_T\",\"4\").replace(\"Spr201_T\",\"10\").replace(\"SprFli_T\",\"11\").replace(\"Swa123_T\",\"3\").replace(\"Swa148_T\",\"3\").replace(\"Swa295_T\",\"3\").replace(\"Swa31\",\"8\").replace(\"Swa607_T\",\"3\").replace(\"SwaCs_T\",\"3\").replace(\"UM1_T\",\"0\").replace(\"UM2_T\",\"0\").replace(\"UM3_T\",\"0\").replace(\"VAC_T\",\"8\").replace(\"Vic_T\",\"0\").replace(\"WatCit_T\",\"9\").replace(\"WebBN_T\",\"9\").replace(\"WestWP_T\",\"2\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Closest_Microclimate_Sensor_Name",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna Closest_Microclimate_Sensor_Name en el índice 3 basada en la columna Sensor_Name usando la expresión grel:value.replace(\"280Will_T\",\"5\").replace(\"488Mac_T\",\"0\").replace(\"474Fl_T\",\"5\").replace(\"574Qub_T\",\"0\").replace(\"ACMI_T\",\"8\").replace(\"AG_T\",\"8\").replace(\"AlfPl_T\",\"2\").replace(\"BirArt1109_T\",\"1\").replace(\"BirBridge_T_1\",\"1\").replace(\"BirBridge_T_2\",\"1\").replace(\"BirFed1120_T\",\"1\").replace(\"Boyd2837_T\",\"4\").replace(\"Bou231_T\",\"3\").replace(\"Bou283_T\",\"3\").replace(\"Bou292_T\",\"3\").replace(\"Bou688_T\",\"9\").replace(\"Bou892T\",\"9\").replace(\"BouHbr2353_T\",\"9\").replace(\"BouHbr_T\",\"9\").replace(\"Bourke155_T\",\"3\").replace(\"Col12_T\",\"10\").replace(\"Col15_T\",\"10\").replace(\"Col254_T\",\"3\").replace(\"Col620_T\",\"4\").replace(\"Col623_T\",\"4\").replace(\"Col700_T\",\"9\").replace(\"ElFi_T\",\"8\").replace(\"Eli124_T\",\"3\").replace(\"Eli197_T\",\"3\").replace(\"Eli250_T\",\"3\").replace(\"Eli263_T\",\"3\").replace(\"Eli489_T\",\"3\").replace(\"Eli501_T\",\"3\").replace(\"EntPark1671_T\",\"5\").replace(\"Errol20_T\",\"0\").replace(\"Errol23_T\",\"0\").replace(\"Fli114C_T\",\"2\").replace(\"Fli114F_T\",\"2\").replace(\"FliS_T\",\"8\").replace(\"FliSS_T\",\"8\").replace(\"FLDegC_T\",\"8\").replace(\"FLDegN_T\",\"8\").replace(\"FLDegS_T\",\"8\").replace(\"Fra118_T\",\"3\").replace(\"Hammer1584_T\",\"8\").replace(\"HarEsB_T\",\"9\").replace(\"HarEsP_T\",\"9\").replace(\"KenMac_T\",\"0\").replace(\"King163_T\",\"5\").replace(\"King2_T\",\"5\").replace(\"King335_T\",\"5\").replace(\"Lat224_T\",\"3\").replace(\"Lat526_T_1\",\"9\").replace(\"Lat526_T_2\",\"9\").replace(\"LatWill_T\",\"5\").replace(\"Lyg161_T\",\"3\").replace(\"Lyg260_T\",\"3\").replace(\"Lyg309_T\",\"0\").replace(\"Mac330_T\",\"0\").replace(\"MCEC_T\",\"4\").replace(\"narrLibL1L1_T\",\"3\").replace(\"narrLibL2CA_T\",\"3\").replace(\"narrLibL3C1_T\",\"3\").replace(\"NewQ_T\",\"9\").replace(\"Pel147_T\",\"0\").replace(\"Pow61_T\",\"5\").replace(\"PriNW_T\",\"8\").replace(\"QVN_T\",\"3\").replace(\"Que85_T\",\"5\").replace(\"SanBri_T\",\"5\").replace(\"Signal1647_T\",\"5\").replace(\"SouthB_T\",\"8\").replace(\"Spen161_T\",\"9\").replace(\"Spen201_T\",\"9\").replace(\"Spen229_T\",\"9\").replace(\"Spen475_T\",\"9\").replace(\"Spen484_T\",\"0\").replace(\"Spencer_T\",\"4\").replace(\"Spr201_T\",\"10\").replace(\"SprFli_T\",\"11\").replace(\"Swa123_T\",\"3\").replace(\"Swa148_T\",\"3\").replace(\"Swa295_T\",\"3\").replace(\"Swa31\",\"8\").replace(\"Swa607_T\",\"3\").replace(\"SwaCs_T\",\"3\").replace(\"UM1_T\",\"0\").replace(\"UM2_T\",\"0\").replace(\"UM3_T\",\"0\").replace(\"VAC_T\",\"8\").replace(\"Vic_T\",\"0\").replace(\"WatCit_T\",\"9\").replace(\"WebBN_T\",\"9\").replace(\"WestWP_T\",\"2\")"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Closest_Microclimate_Sensor_Name",
+          "expression": "value",
+          "columnName": "Closest_Microclimate_Sensor_Name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "261Will_T",
+                "l": "261Will_T"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Closest_Microclimate_Sensor_Name",
+    "description": "Rellenar las celdas en la columna Closest_Microclimate_Sensor_Name"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Closest_Microclimate_Sensor_Name",
+    "expression": "grel:value.replace(/^0$/,\"aws5-0999\")\n.replace(/^1$/,\"ICTMicroclimate-01\")\n.replace(/^2$/,\"ICTMicroclimate-02\")\n.replace(/^3$/,\"ICTMicroclimate-03\")\n.replace(/^4$/,\"ICTMicroclimate-04\")\n.replace(/^5$/,\"ICTMicroclimate-05\")\n.replace(/^6$/,\"ICTMicroclimate-06\")\n.replace(/^7$/,\"ICTMicroclimate-07\")\n.replace(/^8$/,\"ICTMicroclimate-08\")\n.replace(/^9$/,\"ICTMicroclimate-09\")\n.replace(/^10$/,\"ICTMicroclimate-10\")\n.replace(/^11$/,\"ICTMicroclimate-11\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Closest_Microclimate_Sensor_Name usando la expresión grel:value.replace(/^0$/,\"aws5-0999\")\n.replace(/^1$/,\"ICTMicroclimate-01\")\n.replace(/^2$/,\"ICTMicroclimate-02\")\n.replace(/^3$/,\"ICTMicroclimate-03\")\n.replace(/^4$/,\"ICTMicroclimate-04\")\n.replace(/^5$/,\"ICTMicroclimate-05\")\n.replace(/^6$/,\"ICTMicroclimate-06\")\n.replace(/^7$/,\"ICTMicroclimate-07\")\n.replace(/^8$/,\"ICTMicroclimate-08\")\n.replace(/^9$/,\"ICTMicroclimate-09\")\n.replace(/^10$/,\"ICTMicroclimate-10\")\n.replace(/^11$/,\"ICTMicroclimate-11\")"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Closest_Microclimate_Sensor_Name",
+    "index": 18,
+    "description": "Mueve la columna Closest_Microclimate_Sensor_Name a la posición 18"
+  }
+]
