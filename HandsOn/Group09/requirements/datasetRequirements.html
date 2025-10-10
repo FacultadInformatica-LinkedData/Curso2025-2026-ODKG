@@ -18,21 +18,18 @@
     .note{background:#fff7cc;border:1px solid #ffe58f;padding:10px;border-radius:8px;margin-top:8px}
     .foot{margin-top:32px;font-size:.92em;color:#555}
     hr{margin:18px 0 22px;border:none;border-top:1px solid #e5e7eb}
-    /* --- spacing & readability for the datasets list --- */
     ol.ds-list{padding-left:1.2em}
     ol.ds-list > li{margin:20px 0 28px}
     .ds-title{display:block;font-weight:700;margin:0 0 6px}
     .meta{margin:6px 0 0;color:#374151}
     .meta em{font-style:normal;color:#0f172a}
     .key{margin:10px 0 6px}
-    .note{margin-top:10px;line-height:1.55}
-
   </style>
 </head>
 <body>
 
 <h1>Dataset Requirements</h1>
-<p class="lead"><strong>Group:</strong> 09 · <strong>Members:</strong> Andosilla Herraiz, Lucas — Gil Planes, German — Beamonte González, Sergio — Herrero Míguez, Paula — Hunziker Cadabal, Celina </p>
+<p class="lead"><strong>Group:</strong> 09 · <strong>Members:</strong> Andosilla Herráiz, Lucas — Gil Planes, Germán — Beamonte González, Sergio — Herrero Míguez, Paula — Hunziker Cadabal, Celina </p>
 
 <hr/>
 
@@ -45,86 +42,110 @@
     <p class="meta"><em>Updated:</em> monthly</p>
     <p class="meta"><em>Theme:</em> Transport</p>
     <p class="meta"><em>Language:</em> English</p>
-    <p class="key"><em>Key columns:</em> <span class="id">id</span>, <span class="id">location_id</span> (aka <span class="id">sensor_id</span>), <span class="id">sensing_date</span> (date), <span class="id">hourday</span> (hour), <span class="id">direction_1</span>, <span class="id">direction_2</span>, <span class="id">pedestriancount</span> (hourly total), <span class="id">sensor_name</span>, <span class="id">location</span> (geo point).</p>
-    <div class="note">Hourly pedestrian counts since 2009; zeros appear when no pedestrians passed. It can be merged with “Sensor Locations” via <span class="id">sensor_id/location_id</span>.</div>
+    <p class="key"><em>Key columns:</em> <span class="id">id</span>, <span class="id">location_id</span>, <span class="id">sensing_date</span>, <span class="id">hourday</span>, <span class="id">pedestriancount</span>, <span class="id">sensor_name</span>, <span class="id">location</span>.</p>
+    <div class="note">Hourly pedestrian counts since 2009; mergeable with “Sensor Locations” via <span class="id">sensor_id/location_id</span>.</div>
   </li>
 
   <li>
-    <span class="ds-title"><a href="https://data.melbourne.vic.gov.au/explore/dataset/pedestrian-counting-system-sensor-locations/information/" >City of Melbourne — Pedestrian Counting System · Sensor Locations</a></span>
+    <span class="ds-title"><a href="https://data.melbourne.vic.gov.au/explore/dataset/pedestrian-counting-system-sensor-locations/information/">City of Melbourne — Pedestrian Counting System · Sensor Locations</a></span>
     <p class="meta"><em>Identifier:</em> <span class="id">pedestrian-counting-system-sensor-locations</span></p>
     <p class="meta"><em>Updated:</em> daily</p>
     <p class="meta"><em>Theme:</em> Transport</p>
-    <p class="meta"><em>Language:</em> English</p>
-    <p class="key"><em>Key columns:</em> <span class="id">location_id</span>, <span class="id">sensor_name</span>, <span class="id">sensor_description</span>, <span class="id">status</span> (A/I/R), <span class="id">installation_date</span>, <span class="id">note</span>, <span class="id">latitude</span>, <span class="id">longitude</span>, <span class="id">location</span> (geo point).</p>
-    <div class="note">Records bi-directional pedestrian movement; notes document moved/removed/inactive sensors. Join to related datasets via <span class="id">sensor_id/location_id</span>.</div>
+    <p class="key"><em>Key columns:</em> <span class="id">location_id</span>, <span class="id">sensor_name</span>, <span class="id">status</span>, <span class="id">latitude</span>, <span class="id">longitude</span>, <span class="id">location</span>.</p>
+    <div class="note">Provides geographic reference for pedestrian sensors. Joinable to counts via <span class="id">location_id</span>.</div>
   </li>
-</ol>
 
+  <li>
+    <span class="ds-title">Pedestrian Sensor Locations (Enriched)</span>
+    <p class="meta"><em>Identifier:</em> <span class="id">pedestrian-counting-system-sensor-locations_enriched</span></p>
+    <p class="meta"><em>Theme:</em> Transport / Urban context</p>
+    <p class="key"><em>Key columns:</em> <span class="id">location_id</span>, <span class="id">sensor_name</span>, <span class="id">status</span>, <span class="id">latitude</span>, <span class="id">longitude</span>, <span class="id">street</span>, <span class="id">housenumber</span>, <span class="id">postcode</span>, <span class="id">city</span>, <span class="id">country</span>, <span class="id">formatted</span>, <span class="id">latitude</span>, <span class="id">longitude</span>.</p>
+    <div class="note">Enhances the original “Sensor Locations” dataset with geocoded address fields (street, postcode, city, etc.) obtained via API, enabling precise spatial linkage with microclimate data and administrative boundaries.</div>
+  </li>
+
+  <li>
+    <span class="ds-title"><a href="https://adelaide.figshare.com/articles/dataset/Public_holidays_in_Australian_capital_cities_from_2004_to_2023/20732449">Public holidays in Australian capital cities (2004–2023)</a></span>
+    <p class="meta"><em>Identifier:</em> <span class="id">public-holidays</span></p>
+    <p class="meta"><em>Theme:</em> Events / Government</p>
+    <p class="key"><em>Key columns:</em> <span class="id">Date</span>, <span class="id">Public holiday</span>, <span class="id">Melbourne</span>, <span class="id">National_holiday</span>.</p>
+    <div class="note">Lists official public holidays for all Australian capital cities (2004–2023). Allows temporal linkage with pedestrian and microclimate data to study holiday-related patterns.</div>
+  </li>
+
+  <li>
+    <span class="ds-title"><a href="https://data.melbourne.vic.gov.au/explore/dataset/microclimate-sensor-locations/map/?location=14,-37.81046,144.96108&basemap=mbs-7a7333">Microclimate Sensor Locations</a></span>
+    <p class="meta"><em>Identifier:</em> <span class="id">microclimate-sensor-locations_enriched</span></p>
+    <p class="meta"><em>Theme:</em> Environment / Climate</p>
+    <p class="key"><em>Key columns:</em> <span class="id">Site_ID</span>, <span class="id">GateWayHub_ID</span>, <span class="id">Site_Status</span>, <span class="id">Last_Data_Local</span>, <span class="id">Latitude</span>, <span class="id">Longitude</span>, <span class="id">Location</span>.</p>
+    <div class="note">Lists active microclimate sensor sites in the City of Melbourne with status, coordinates and last data date. Enables spatial linking with pedestrian sensors and weather readings.</div>
+  </li>
+
+  <li>
+    <span class="ds-title">Microclimate Sensor Locations (Enriched)</span>
+    <p class="meta"><em>Identifier:</em> <span class="id">microclimate-sensor-locations_enriched</span></p>
+    <p class="meta"><em>Theme:</em> Environment / Climate</p>
+    <p class="key"><em>Key columns:</em> <span class="id">Site_ID</span>, <span class="id">GateWayHub_ID</span>, <span class="id">Site_Status</span>, <span class="id">Last_Data_Local</span>, <span class="id">Latitude</span>, <span class="id">Longitude</span>, <span class="id">Location</span>, <span class="id">street</span>, <span class="id">housenumber</span>, <span class="id">postcode</span>, <span class="id">city</span>, <span class="id">country</span>, <span class="id">formatted</span>.</p>
+    <div class="note">Extends the base microclimate sensor locations with address and geocoding fields retrieved via API, improving linkage with pedestrian and administrative datasets.</div>
+  </li>
+
+  <li>
+    <span class="ds-title"><a href="https://data.melbourne.vic.gov.au/explore/dataset/microclimate-sensors-data/information/">Microclimate Sensors Data</a></span>
+    <p class="meta"><em>Identifier:</em> <span class="id">microclimate-sensors-data</span></p>
+    <p class="meta"><em>Theme:</em> Environment / Weather</p>
+    <p class="key"><em>Key columns:</em> <span class="id">Device_id</span>, <span class="id">Time</span>, <span class="id">SensorLocation</span>, <span class="id">AirTemperature</span>, <span class="id">RelativeHumidity</span>, <span class="id">AverageWindSpeed</span>, <span class="id">PM25</span>, <span class="id">Noise</span>.</p>
+    <div class="note">Provides detailed environmental readings from each microclimate sensor, linkable to sensor locations via <span class="id">Device_id/SensorLocation</span> for spatial and temporal analysis.</div>
+  </li>
+
+</ol>
 
 <h2>Requirements assessment (R1–R6)</h2>
 
 <table>
   <thead>
-    <tr>
-      <th>Req.</th>
-      <th>What it asks</th>
-      <th>Status</th>
-      <th>Evidence / comments</th>
-    </tr>
+    <tr><th>Req.</th><th>What it asks</th><th>Status</th><th>Evidence / comments</th></tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>R1</strong></td>
       <td>Smart-city domain</td>
       <td class="ok">Meets</td>
-      <td>
-        Mobility / use of public urban space. Hourly pedestrian activity across city locations supports planning, safety and events/tourism analysis.
-        Both datasets are under the <em>Transport</em> theme and describe city sensors and their counts.
-      </td>
+      <td>All datasets belong to smart-city domains: <em>Transport</em> (pedestrian counts, sensors), <em>Environment</em> (microclimate), and <em>Events</em> (public holidays). They support mobility, climate, and planning analyses.</td>
     </tr>
 
     <tr>
       <td><strong>R2</strong></td>
       <td>Available as CSV</td>
       <td class="ok">Meets</td>
-      <td>Official portal provides direct CSV export for both datasets (and API). A historical CSV attachment is provided for counts.</td>
+      <td>All datasets are provided or exported as CSV files, enabling easy integration and processing.</td>
     </tr>
 
     <tr>
       <td><strong>R3</strong></td>
       <td>Open license</td>
       <td class="ok">Meets</td>
-      <td>
-        Both datasets are published under <strong>Creative Commons Attribution 4.0 (CC BY 4.0)</strong>. License text: 
-        <a href="https://creativecommons.org/licenses/by/4.0/legalcode">https://creativecommons.org/licenses/by/4.0/legalcode</a>.
-      </td>
+      <td>Datasets from the City of Melbourne portal are released under <strong>Creative Commons Attribution 4.0 (CC BY 4.0)</strong>.  
+        The “Public Holidays” dataset is under <strong>Creative Commons CC0 1.0</strong> (Public Domain).  
+        All datasets are therefore open, reusable, and publishable.</td>
     </tr>
 
     <tr>
       <td><strong>R4</strong></td>
       <td>Linkable to generic entities</td>
       <td class="ok">Meets</td>
-      <td>
-        Each hourly row carries <span class="id">sensor_id/location_id</span> → 1-to-1 join with “Sensor Locations” to attach coordinates, status and notes.
-        Places (coordinates / names) can be aligned to generic entities (e.g., Wikidata POIs, districts; public holidays as events).
-      </td>
+      <td>Linking keys: <span class="id">sensor_id/location_id</span> (pedestrian ↔ locations), <span class="id">date</span> (↔ holidays), and geospatial coordinates (↔ microclimate sensors, districts, POIs). Enriched versions add address-level attributes to facilitate linkage to generic real-world entities.</td>
     </tr>
 
     <tr>
-      <td><strong>R5</strong> (optional)</td>
-      <td>Documentation</td>
+      <td><strong>R5</strong></td>
+      <td>Documentation (optional)</td>
       <td class="ok">Meets</td>
-      <td>Resource pages include a Data Dictionary / schema with field names and types (e.g., <span class="id">sensing_date</span>, <span class="id">hourday</span>, <span class="id">pedestriancount</span>).</td>
+      <td>Each dataset includes metadata, data dictionaries, or field descriptions on the open-data portal or accompanying notes.</td>
     </tr>
 
     <tr>
-      <td><strong>R6</strong> (optional)</td>
-      <td>Multiple sources</td>
+      <td><strong>R6</strong></td>
+      <td>Multiple sources (optional)</td>
       <td class="ok">Meets</td>
-      <td>
-        We link two official sources from the same portal: <em>Monthly counts per hour</em> + <em>Sensor Locations</em>.
-        (Optional later: enrich with public holidays/events or weather.)
-      </td>
+      <td>Data integrate multiple smart-city sources: pedestrian counts, enriched location data, climate sensor networks, and public-holiday events, enabling multi-domain analytics (mobility ↔ weather ↔ events).</td>
     </tr>
   </tbody>
 </table>
@@ -132,27 +153,31 @@
 <h2>Licenses</h2>
 
 <ul>
-  <li><strong>Pedestrian Counting System — Monthly counts per hour:</strong> CC BY 4.0 — <a href="https://creativecommons.org/licenses/by/4.0/legalcode">https://creativecommons.org/licenses/by/4.0/legalcode</a></li>
-  <li><strong>Pedestrian Counting System — Sensor Locations:</strong> CC BY 4.0 — <a href="https://creativecommons.org/licenses/by/4.0/legalcode">https://creativecommons.org/licenses/by/4.0/legalcode</a></li>
+  <li><strong>Pedestrian Counting System — Monthly counts per hour:</strong> CC BY 4.0 — <a href="https://creativecommons.org/licenses/by/4.0/legalcode">link</a></li>
+  <li><strong>Pedestrian Counting System — Sensor Locations:</strong> CC BY 4.0 — <a href="https://creativecommons.org/licenses/by/4.0/legalcode">link</a></li>
+  <li><strong>Pedestrian Sensor Locations (Enriched):</strong> Derived from CC BY 4.0 data — maintained under same license.</li>
+  <li><strong>Microclimate Sensor Locations (Enriched):</strong> CC BY 4.0 — <a href="https://creativecommons.org/licenses/by/4.0/legalcode">link</a></li>
+  <li><strong>Microclimate Sensors Data:</strong> CC BY 4.0 — <a href="https://creativecommons.org/licenses/by/4.0/legalcode">link</a></li>
+  <li><strong>Public Holidays:</strong> CC0 1.0 — <a href="https://creativecommons.org/publicdomain/zero/1.0/">link</a></li>
 </ul>
 
 <h2>Entities in the selected datasets that can be linked</h2>
-
 <ul>
-  <li><strong>Locations</strong>: latitude/longitude, location name → link to POIs/districts.</li>
-  <li><strong>Sensors</strong>: <span class="id">sensor_id/location_id</span>, <span class="id">sensor_name</span>, <span class="id">status</span>, <span class="id">installation_date</span>, <span class="id">note</span>.</li>
-  <li><strong>Time</strong>: <span class="id">sensing_date</span> + <span class="id">hourday</span> (hour) → link to public holidays/events.</li>
+  <li><strong>Locations:</strong> latitude/longitude, street, postcode → link to districts or Wikidata POIs.</li>
+  <li><strong>Sensors:</strong> <span class="id">sensor_id/location_id</span>, <span class="id">sensor_name</span>, <span class="id">type</span>.</li>
+  <li><strong>Time:</strong> <span class="id">sensing_date</span>, <span class="id">hourday</span>, <span class="id">timestamp</span> → link to public holidays or external events.</li>
+  <li><strong>Weather variables:</strong> temperature, humidity, wind speed, particulate matter, noise — joinable by time and location with pedestrian data.</li>
 </ul>
 
 <h2>Entities in other datasets that can be linked to ours</h2>
-
 <ul>
-  <li><strong>Wikidata / DBpedia</strong>: POIs (squares, stations, malls), administrative areas (districts), and Australian public holidays.</li>
-  <li><strong>Geonames</strong>: toponyms and administrative hierarchy.</li>
-  <li><strong>Open weather (optional)</strong>: daily/hourly summaries for correlation analysis.</li>
+  <li><strong>Wikidata / DBpedia:</strong> POIs, squares, and districts corresponding to sensor locations.</li>
+  <li><strong>Geonames:</strong> geographic hierarchy (city, suburb, postcode).</li>
+  <li><strong>Australian Government APIs:</strong> official holidays and events datasets.</li>
+  <li><strong>Open weather or climate APIs:</strong> to validate or enrich microclimate sensor data.</li>
 </ul>
 
-<p class="foot"><strong>Scope note:</strong> This document only covers dataset selection and discussion of R1–R6 (R5–R6 optional). No servers or endpoints are assumed at this stage.</p>
+<p class="foot"><strong>Scope note:</strong> The document covers dataset identification and evaluation under R1–R6. Enriched datasets enable more complete spatial linking across mobility, environment and event data.</p>
 
 </body>
 </html>

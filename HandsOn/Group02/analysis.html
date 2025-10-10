@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis and Resource Naming Strategy — Group02 (Hands-on 2)</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Helvetica, Arial, sans-serif;
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 { color: #0b63c5; margin-top: 2rem; }
+        h2 { color: #2c5aa0; margin-top: 2rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; }
+        h3 { color: #4a4a4a; margin-top: 1.5rem; }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #f5f7fa;
+            font-weight: 600;
+            color: #2c5aa0;
+        }
+        tr:hover { background: #f9f9f9; }
+        .box {
+            background: #f0f4f8;
+            border-left: 4px solid #0b63c5;
+            border-radius: 4px;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        .license-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        code, pre {
+            background: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            padding: 1rem;
+            overflow-x: auto;
+            border: 1px solid #ddd;
+        }
+        .uri-pattern {
+            background: #fff9e6;
+            border: 1px solid #ffe066;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+        small { color: #666; }
+        a { color: #0b63c5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .stat { font-weight: 600; color: #0b63c5; }
+    </style>
+</head>
+<body>
+
+<h1>SafeSchool Madrid — Data Analysis & Resource Naming Strategy</h1>
+<p><strong>Group 02</strong> — Hands-on Assignment 2<br>
+<small>Open Data and Knowledge Graphs — UPM 2025</small></p>
+
+<div class="box">
+    <strong>Executive Summary:</strong> This document presents the analysis of three datasets related to schools, traffic accidents, and speed cameras in Madrid, the licensing strategy for the generated linked data, and the resource naming strategy (URI patterns, content negotiation, and namespace design) for the SafeSchool Madrid knowledge graph.
+</div>
+
+<!-- ========================================
+     1. DATA SOURCE ANALYSIS
+     ======================================== -->
+
+<h2>1. Data Source Analysis</h2>
+
+<h3>1.1 Educational Centers in the Community of Madrid</h3>
+<p><strong>Source:</strong> <a href="https://datos.gob.es/es/catalogo/a13002908-centros-educativos-de-la-comunidad-de-madrid1">datos.gob.es — Educational Centers</a><br>
+<strong>Format:</strong> CSV (semicolon-separated)<br>
+<strong>Encoding:</strong> ISO-8859-1 (Latin-1)<br>
+<strong>File:</strong> <code>centros_educativos.csv</code> (2.2 MB)<br>
+<strong>Records:</strong> 7,689 educational centers</p>
+
+<h4>Schema Analysis (31 fields)</h4>
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Data Type</th>
+      <th>Description</th>
+      <th>Example Values</th>
+      <th>Distribution / Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>centro_codigo</code></td><td>Integer (8 digits)</td><td>Unique center identifier</td><td>28000017, 28000029</td><td>7689 unique, sequential 28000001–28999999</td></tr>
+    <tr><td><code>centro_nombre</code></td><td>String</td><td>School name</td><td>"E.M.", "SAN BLAS"</td><td>7588 unique, most common prefixes: CEIP, IES, CRA</td></tr>
+    <tr><td><code>centro_tipo_codigo</code></td><td>Integer (3 digits)</td><td>School type code</td><td>10, 70, 204</td><td>34 unique codes (10–290), skewed toward 10 & 70</td></tr>
+    <tr><td><code>centro_tipo_desc_abreviada</code></td><td>String</td><td>Abbreviated type description</td><td>"CP EGB", "CP INF-PRI-SEC"</td><td>32 unique, top: CP INF-PRI, IES, CEIP</td></tr>
+    <tr><td><code>centro_tipo_descripcion</code></td><td>String</td><td>Full type description</td><td>"CENTRO PUBLICO DE EDUCACION GENERAL BASICA"</td><td>31 unique, top: CENTRO PUBLICO, CENTRO PRIVADO</td></tr>
+    <tr><td><code>centro_titularidad</code></td><td>Enum</td><td>Ownership type (public/private)</td><td>"PÚBLICO", "PRIVADO"</td><td>2 unique, 62% público / 38% privado</td></tr>
+    <tr><td><code>centro_titular</code></td><td>String</td><td>Name of the owner or managing entity</td><td>"COMUNIDAD DE MADRID"</td><td>421 unique, top: Comunidad de Madrid, Arzobispado</td></tr>
+    <tr><td><code>nif_titular</code></td><td>String</td><td>Tax ID of the owner</td><td>Masked for privacy</td><td>Approx. 420 unique NIF values</td></tr>
+    <tr><td><code>nif_centro</code></td><td>String</td><td>Tax ID of the center</td><td>Masked for privacy</td><td>Almost all unique</td></tr>
+    <tr><td><code>dat_codigo</code></td><td>Integer (1 digit)</td><td>Educational area code</td><td>1, 2, 3, 5</td><td>4 values (1–5) — evenly distributed</td></tr>
+    <tr><td><code>dat_nombre</code></td><td>String</td><td>Educational area name</td><td>"Madrid-Norte", "Madrid-Este"</td><td>4 unique (Madrid-Norte, Este, Sur, Oeste)</td></tr>
+    <tr><td><code>direccion_via_tipo</code></td><td>String</td><td>Street type</td><td>"CALLE", "AVDA", "PLAZA"</td><td>15 unique, top: CALLE (75%), AVDA (10%)</td></tr>
+    <tr><td><code>direccion_via_nombre</code></td><td>String</td><td>Street name</td><td>"Víctor Hurtado", "LA ACEBEDA"</td><td>~6600 unique street names</td></tr>
+    <tr><td><code>direccion_numero</code></td><td>String</td><td>Street number</td><td>"s/n", "82", "12"</td><td>~4100 unique, “s/n” appears in ~20%</td></tr>
+    <tr><td><code>direccion_codigo_postal</code></td><td>Integer (5 digits)</td><td>Postal code</td><td>28864, 28022</td><td>min=28001, max=28999, 217 unique</td></tr>
+    <tr><td><code>municipio_codigo</code></td><td>Integer (3 digits)</td><td>Municipality code</td><td>001, 002, 079</td><td>179 unique municipalities</td></tr>
+    <tr><td><code>municipio_nombre</code></td><td>String</td><td>Municipality name</td><td>"Acebeda, La", "Ajalvir", "Madrid"</td><td>179 unique, top: Madrid (36%)</td></tr>
+    <tr><td><code>distrito_codigo</code></td><td>String (2 digits)</td><td>District code (Madrid city only)</td><td>01, 05, 20</td><td>21 unique districts, only populated for Madrid</td></tr>
+    <tr><td><code>distrito_nombre</code></td><td>String</td><td>District name</td><td>"Centro", "San Blas-Canillejas"</td><td>21 unique, “Centro” and “Fuencarral” most frequent</td></tr>
+    <tr><td><code>contacto_telefono1</code></td><td>String</td><td>Primary phone number</td><td>"918844589"</td><td>~7300 filled, 300 missing</td></tr>
+    <tr><td><code>contacto_telefono2</code></td><td>String</td><td>Secondary phone number</td><td>Often empty</td><td>~85% empty</td></tr>
+    <tr><td><code>contacto_telefono3</code></td><td>String</td><td>Tertiary phone number</td><td>Often empty</td><td>~95% empty</td></tr>
+    <tr><td><code>contacto_telefono4</code></td><td>String</td><td>Additional phone number</td><td>Often empty</td><td>~98% empty</td></tr>
+    <tr><td><code>contacto_fax</code></td><td>String</td><td>Fax number</td><td>Often empty</td><td>~99% empty</td></tr>
+    <tr><td><code>contacto_web</code></td><td>URL</td><td>School website</td><td>"http://www.educa.madrid.org/..."</td><td>~6800 URLs, mostly educa.madrid.org domain</td></tr>
+    <tr><td><code>contacto_email1</code></td><td>Email</td><td>Primary email contact</td><td>"cp.sanblas.ajalvir@educa.madrid.org"</td><td>~7500 valid, 180 missing</td></tr>
+    <tr><td><code>contacto_email2</code></td><td>Email</td><td>Secondary email contact</td><td>Often empty</td><td>~90% empty</td></tr>
+    <tr><td><code>direccion_coor_x</code></td><td>Decimal</td><td>X coordinate (UTM projected)</td><td>458832.0</td><td>min=420000, max=485000, mean≈455000</td></tr>
+    <tr><td><code>direccion_coor_y</code></td><td>Decimal</td><td>Y coordinate (UTM projected)</td><td>4487797.0</td><td>min=4460000, max=4520000, mean≈4490000</td></tr>
+    <tr><td><code>situación</code></td><td>Enum</td><td>Operational status</td><td>"ALTA", "BAJA"</td><td>“ALTA” 99.3%, “BAJA” 0.7%</td></tr>
+    <tr><td><code>fecha_constitución</code></td><td>Date (YYYY-MM-DD)</td><td>Foundation date</td><td>1980-09-04, 2020-10-16</td><td>Range: 1885–2024, mean≈1998</td></tr>
+  </tbody>
+</table>
+
+
+<h4>Data Quality Observations</h4>
+<ul>
+    <li><strong>Completeness:</strong> Some fields have missing values (e.g., district info for schools outside Madrid city, phone/fax numbers).</li>
+    <li><strong>Geocoding:</strong> All records include coordinates (X/Y in a projected coordinate system, likely ETRS89/UTM).</li>
+    <li><strong>Linkability:</strong> Postal codes, municipality/district codes enable joins with administrative boundaries.</li>
+    <li><strong>Temporal coverage:</strong> Foundation dates range from 1980s to 2021, indicating historical and recent schools.</li>
+</ul>
+<h3>1.2 Traffic Accidents in Madrid (2025)</h3>
+
+<p><strong>Source:</strong> <a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=7c2843010d9c3610VgnVCM2000001f4a900aRCRD">datos.madrid.es — Accidents</a><br>
+<strong>Format:</strong> CSV (semicolon-separated)<br>
+<strong>File:</strong> <code>2025_Accidentalidad.csv</code> (6.2 MB)<br>
+<strong>Records:</strong> 32,327 accident records (Jan–Aug 2025)</p>
+
+<h4>Schema Analysis (19 fields)</h4>
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Data Type</th>
+      <th>Description</th>
+      <th>Example Values</th>
+      <th>Distribution / Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>num_expediente</code></td><td>String</td><td>Unique accident identifier</td><td>2025S000056, 2025S097231</td><td>32,327 unique; no missing</td></tr>
+    <tr><td><code>fecha</code></td><td>Date (DD/MM/YYYY)</td><td>Accident date</td><td>01/01/2025, 31/08/2025</td><td>8 months span; no missing</td></tr>
+    <tr><td><code>hora</code></td><td>Time (H:MM:SS)</td><td>Accident time</td><td>0:49:00, 23:00:00</td><td>0:00–23:59; broad distribution, no dominant hour</td></tr>
+    <tr><td><code>localizacion</code></td><td>String</td><td>Street location (intersection or segment)</td><td>"CALL. LOPEZ DE HOYOS / CALL. ROS DE OLANO"</td><td>~27k unique; some standardised intersection formats; ~few % missing</td></tr>
+    <tr><td><code>numero</code></td><td>String</td><td>Street number</td><td>140, 39, 5</td><td>Thousands of unique values; many blanks at intersections</td></tr>
+    <tr><td><code>cod_distrito</code></td><td>Integer</td><td>District code</td><td>5, 14, 2</td><td>21 values (1–21); top: 11 (7.5%), 13 (7.3%), 4 (7.0%)</td></tr>
+    <tr><td><code>distrito</code></td><td>String</td><td>District name</td><td>"CHAMARTÍN", "MORATALAZ", "ARGANZUELA"</td><td>21 unique (Madrid districts); mirrors code distribution</td></tr>
+    <tr><td><code>tipo_accidente</code></td><td>String (controlled vocabulary)</td><td>Accident type</td><td>"Colisión fronto-lateral", "Alcance", "Atropello a persona"</td><td>~20 categories; top: Colisión fronto-lateral (26.5%), Alcance (24.7%), Colisión lateral (15.5%)</td></tr>
+    <tr><td><code>estado_meteorológico</code></td><td>String</td><td>Weather conditions during the accident</td><td>"Despejado", "Nublado", "Lluvia débil"</td><td>Despejado (70.0%), Lluvia débil (8.3%), Nublado (7.3%)</td></tr>
+    <tr><td><code>tipo_vehiculo</code></td><td>String</td><td>Vehicle type involved</td><td>"Turismo", "Ciclomotor", "Autobús"</td><td>Multiple categories; Turismo dominant; motocicleta notable share</td></tr>
+    <tr><td><code>tipo_persona</code></td><td>String</td><td>Role of the person involved</td><td>"Conductor", "Pasajero", "Peatón"</td><td>Conductor most frequent; peatón smaller share</td></tr>
+    <tr><td><code>rango_edad</code></td><td>String</td><td>Age range of the person</td><td>"De 30 a 34 años", "De 25 a 29 años", "Desconocido"</td><td>Wide spread across adult ranges; some “Desconocido”</td></tr>
+    <tr><td><code>sexo</code></td><td>Enum</td><td>Gender</td><td>"Hombre", "Mujer", "Desconocido"</td><td>Mostly “Hombre”; “Desconocido” small</td></tr>
+    <tr><td><code>cod_lesividad</code></td><td>Integer</td><td>Injury severity code</td><td>7, 14</td><td>Codes concentrated in minor-injury bands</td></tr>
+    <tr><td><code>lesividad</code></td><td>String</td><td>Injury severity description</td><td>"Sin asistencia sanitaria", "Asistencia sanitaria solo en el lugar", "Fallecido 24 horas"</td><td>“Sin asistencia sanitaria” most common; fatalities rare</td></tr>
+    <tr><td><code>coordenada_x_utm</code></td><td>Decimal</td><td>UTM X coordinate (meters)</td><td>442966, 446461</td><td>min≈420k, max≈485k, mean≈455k (meters)</td></tr>
+    <tr><td><code>coordenada_y_utm</code></td><td>Decimal</td><td>UTM Y coordinate (meters)</td><td>4477385, 4473262</td><td>min≈4,460k, max≈4,520k, mean≈4,490k (meters)</td></tr>
+    <tr><td><code>positiva_alcohol</code></td><td>Char (S/N)</td><td>Positive alcohol test</td><td>"N", "S"</td><td>Mostly “N”; Positives: 845 (2.6%)</td></tr>
+    <tr><td><code>positiva_droga</code></td><td>Numeric (indicator)</td><td>Positive drug test (1 = positive, NaN = not tested/negative)</td><td>1, NaN</td><td>1 indicates positive; Positives: 89 (0.3%)</td></tr>
+  </tbody>
+</table>
+
+<p><em>Note 1:</em> Top accident types: Colisión fronto-lateral (26.5%), Alcance (24.7%), Colisión lateral (15.5%). Weather at time of crash: Despejado (70.0%), Lluvia débil (8.3%), Nublado (7.3%). Most affected districts (by code): 11 (7.5%), 13 (7.3%), 4 (7.0%). Alcohol positives: 845 (2.6%). Drug positives: 89 (0.3%).</p>
+
+
+<p><em>Note 2:</em> Coordinates correspond to the ETRS89 / UTM Zone 30N reference system (EPSG:25830).</p>
+
+
+<h4>Data Statistics</h4>
+<ul>
+    <li><strong>Top accident types:</strong> Colisión fronto-lateral (8,558), Alcance (7,973), Colisión lateral (5,010), Choque contra obstáculo fijo (3,468), Atropello a persona (2,005)</li>
+    <li><strong>Districts with most accidents:</strong> Carabanchel (2,430), Puente de Vallecas (2,345), Salamanca (2,268), Chamartín (2,172)</li>
+    <li><strong>Injury severity distribution:</strong>
+        <ul>
+            <li>No medical assistance: 10,842 (33.5%)</li>
+            <li>On-site medical assistance: 3,765 (11.6%)</li>
+            <li>Emergency care without admission: 1,019 (3.2%)</li>
+            <li>Hospital admission: 1,429 (4.4%)</li>
+            <li>Fatalities (24h): 17 (0.05%)</li>
+        </ul>
+    </li>
+    <li><strong>Temporal scope:</strong> January to August 2025</li>
+</ul>
+
+<h3>1.3 Fixed Speed Cameras in Madrid</h3>
+
+<p><strong>Source:</strong> <a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=4678f7de62435510VgnVCM2000001f4a900aRCRD">datos.madrid.es — Speed Cameras</a><br>
+<strong>Format:</strong> CSV (semicolon-separated)<br>
+<strong>Encoding:</strong> ISO-8859-1 (Latin-1)<br>
+<strong>File:</strong> <code>RADARES FIJOS_vDTT.csv</code> (6.6 KB)<br>
+<strong>Records:</strong> 36 radars</p>
+
+<h4>Schema Analysis (16 fields)</h4>
+<table>
+  <thead>
+    <tr>
+      <th>Field Name</th>
+      <th>Data Type</th>
+      <th>Description</th>
+      <th>Example Values</th>
+      <th>Distribution / Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>Nº RADAR</code></td><td>Integer</td><td>Radar identifier</td><td>1, 2, 28, 29</td><td>min=1, max=36, continuous sequence</td></tr>
+    <tr><td><code>Ubicacion</code></td><td>String</td><td>Location description</td><td>"M-30, ENTRADA DE LA A-1, SENTIDO PUENTE DE VENTAS P.K. 0,500"</td><td>36 unique (one per radar)</td></tr>
+    <tr><td><code>Carretera o vial</code></td><td>String</td><td>Road name</td><td>"M-30", "A-5", "AVENIDA DE CÓRDOBA"</td><td>12 unique; top: M-30 (47.2%), A-5 (8.3%), A-42 (8.3%)</td></tr>
+    <tr><td><code>UBICACIÓN Calle 30</code></td><td>String</td><td>M-30 specific location code</td><td>"00NC50" (often empty for non-M30 roads)</td><td>14 non-empty entries (39% filled)</td></tr>
+    <tr><td><code>PK</code></td><td>String</td><td>Kilometer point</td><td>"0+500", "P.K. 4+000 — P.K. 5+750"</td><td>Mostly filled, 36 unique, no repeats</td></tr>
+    <tr><td><code>Sentido</code></td><td>String</td><td>Traffic direction</td><td>"Calzada interior", "Calzada exterior", "Salida"</td><td>5 unique; top: Calzada interior (44%), Calzada exterior (28%)</td></tr>
+    <tr><td><code>Tipo</code></td><td>String</td><td>Radar type</td><td>"Fijo", "Radar de tramo"</td><td>2 unique; Fijo (75%), Radar de tramo (25%)</td></tr>
+    <tr><td><code>Carril</code></td><td>String</td><td>Lane specification</td><td>"Fijo carril 4", "Salida, radar de tramo"</td><td>Mostly empty or specific to certain radars</td></tr>
+    <tr><td><code>Longitud inicio tramo</code></td><td>Decimal (degrees)</td><td>Longitude of section start (for section radars)</td><td>-3.699380</td><td>Filled only for tramo radars (9 values)</td></tr>
+    <tr><td><code>Latitud inicio tramo</code></td><td>Decimal (degrees)</td><td>Latitude of section start (for section radars)</td><td>40.387572</td><td>Filled only for tramo radars (9 values)</td></tr>
+    <tr><td><code>X (WGS84)</code></td><td>Decimal (meters)</td><td>UTM X coordinate (projected)</td><td>442843.00, 440873.00</td><td>min=436205.00, max=448231.00, mean≈442100</td></tr>
+    <tr><td><code>Y (WGS84)</code></td><td>Decimal (meters)</td><td>UTM Y coordinate (projected)</td><td>4481180.00, 4470025.29</td><td>min=4467050.00, max=4486800.00, mean≈4477000</td></tr>
+    <tr><td><code>Longitud</code></td><td>Decimal (degrees)</td><td>Longitude (WGS84)</td><td>-3.67433808, -3.69651900</td><td>min=-3.751000, max=-3.597000</td></tr>
+    <tr><td><code>Latitud</code></td><td>Decimal (degrees)</td><td>Latitude (WGS84)</td><td>40.47934148, 40.37859000</td><td>min=40.368, max=40.489</td></tr>
+    <tr><td><code>Velocidad límite</code></td><td>Integer</td><td>Speed limit (km/h)</td><td>90, 70, 50</td><td>70 km/h (47.2%), 50 km/h (27.8%), 90 km/h (25.0%)</td></tr>
+    <tr><td><code>Responsable</code></td><td>String</td><td>Managing authority</td><td>"DGP", "DGGVC"</td><td>2 unique; DGT/DGP (75%), DGGVC (25%)</td></tr>
+  </tbody>
+</table>
+
+<p><em>Notes:</em> 
+1) <code>X/Y (WGS84)</code> are projected UTM coordinates (meters); <code>Longitud/Latitud</code> are geographic coordinates (degrees). 
+2) <code>Longitud/Latitud inicio tramo</code> are populated only for “Radar de tramo” entries (9 out of 36). 
+3) Speed limits are mostly 70 km/h (47%), followed by 50 km/h (28%) and 90 km/h (25%). 
+4) Radar types: 75% fixed, 25% section radars.</p>
+
+<h4>Data Observations</h4>
+<ul>
+    <li><strong>Speed limits range:</strong> 50 km/h to 90 km/h</li>
+    <li><strong>Radar types:</strong> Fixed (Fijo) and Section radars (Radar de tramo)</li>
+    <li><strong>Managing authorities:</strong> DGP (Dirección General de Policía), DGGVC (Dirección General de Gestión y Vigilancia de la Circulación)</li>
+    <li><strong>Coverage:</strong> Primarily M-30 ring road and major access routes (A-5, etc.)</li>
+</ul>
+
+<!-- ========================================
+     2. LICENSING ANALYSIS
+     ======================================== -->
+
+<h2>2. Licensing Analysis</h2>
+
+<h3>2.1 Source Dataset Licenses</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Dataset</th>
+            <th>Publisher</th>
+            <th>Rightsholder</th>
+            <th>License</th>
+            <th>Attribution Required</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Educational Centers</strong></td>
+            <td>datos.gob.es</td>
+            <td>Comunidad de Madrid</td>
+            <td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td>
+            <td>✓ Yes</td>
+        </tr>
+        <tr>
+            <td><strong>Traffic Accidents</strong></td>
+            <td>datos.madrid.es</td>
+            <td>Ayuntamiento de Madrid (Municipal Police)</td>
+            <td><a href="https://datos.madrid.es/portal/site/egob/menuitem.3efdb29b813ad8241e830cc2a8a409a0/?vgnextoid=108804d4aab90410VgnVCM100000171f5a0aRCRD">Terms of Use</a></td>
+            <td>✓ Yes (source citation)</td>
+        </tr>
+        <tr>
+            <td><strong>Fixed Speed Cameras</strong></td>
+            <td>datos.madrid.es</td>
+            <td>Ayuntamiento de Madrid</td>
+            <td><a href="https://datos.madrid.es/portal/site/egob/menuitem.3efdb29b813ad8241e830cc2a8a409a0/?vgnextoid=108804d4aab90410VgnVCM100000171f5a0aRCRD">Terms of Use</a></td>
+            <td>✓ Yes (source citation)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>2.2 License Analysis Summary</h3>
+
+<ul>
+    <li><strong>Educational Centers (CC BY 4.0):</strong> Permits sharing, adaptation, and commercial use with attribution.</li>
+    <li><strong>Accidents & Radars (Madrid Open Data Terms):</strong> Madrid's portal allows reuse with source attribution. The terms are compatible with open data principles but require acknowledgment of the Ayuntamiento de Madrid.</li>
+</ul>
+
+<h3>2.3 License for Generated Linked Data</h3>
+
+<div class="license-box">
+    <h4>Chosen License: <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong></h4>
+
+    <p><strong>Rationale:</strong></p>
+    <ul>
+        <li><strong>Compatibility:</strong> CC BY 4.0 is compatible with all source licenses. It satisfies the attribution requirements of both the Comunidad de Madrid (explicit CC BY 4.0) and the Ayuntamiento de Madrid (Terms of Use requiring source citation).</li>
+        <li><strong>Openness:</strong> Ensures the SafeSchool Madrid linked dataset remains open and reusable for research, public applications, and commercial purposes.</li>
+        <li><strong>Standard:</strong> CC BY 4.0 is widely adopted in the Linked Open Data community and aligns with FAIR data principles (Findable, Accessible, Interoperable, Reusable).</li>
+        <li><strong>Attribution statement:</strong> All generated RDF data will include provenance metadata (<code>dct:source</code>, <code>dct:license</code>, <code>prov:wasDerivedFrom</code>) linking back to the original datasets.</li>
+    </ul>
+
+    <p><strong>Attribution Statement (to be included in metadata):</strong></p>
+    <pre>This linked dataset is derived from:
+- Educational Centers of the Community of Madrid (CC BY 4.0) — Comunidad de Madrid
+- Traffic Accidents in Madrid — Ayuntamiento de Madrid (datos.madrid.es)
+- Fixed Speed Cameras in Madrid — Ayuntamiento de Madrid (datos.madrid.es)
+
+Generated linked data is licensed under CC BY 4.0 by Group02 — UPM 2025.</pre>
+</div>
+
+<!-- ========================================
+     3. RESOURCE NAMING STRATEGY
+     ======================================== -->
+
+<h2>3. Resource Naming Strategy</h2>
+<p>This project uses persistent HTTP URIs under the domain <code>http://safeschool.linkeddata.es/</code> with separate namespaces for ontology terms and data instances. The design follows Linked Data best practices (hash URIs for the ontology terms; slash URIs for instances with 303 content negotiation).</p>
+
+<h3>3.1 Namespaces</h3>
+<ul>
+    <li><strong>Ontology terms</strong> (<code>safeschool:</code>): <code>http://safeschool.linkeddata.es/ontology#</code></li>
+    <li><strong>Instances</strong> (<code>resource:</code>): <code>http://safeschool.linkeddata.es/resource/</code></li>
+    <li><strong>Controlled vocab (reserved)</strong> (<code>vocab:</code>): <code>http://safeschool.linkeddata.es/vocab/</code></li>
+</ul>
+
+<h3>3.2 URI patterns</h3>
+<div class="uri-pattern">
+    <div><strong>Ontology class/property</strong>: <code>http://safeschool.linkeddata.es/ontology#Accident</code>, <code>...#accidentType</code></div>
+    <div><strong>Accident</strong>: <code>http://safeschool.linkeddata.es/resource/Accident-{num_expediente}</code> (e.g., <code>.../Accident-2025S000056</code>)</div>
+    <div><strong>Educational center</strong>: <code>http://safeschool.linkeddata.es/resource/EducationalCenter-{centro_codigo}</code> (e.g., <code>.../EducationalCenter-28000029</code>)</div>
+    <div><strong>Fixed speed camera</strong>: <code>http://safeschool.linkeddata.es/resource/SpeedCamera-{id}</code> (e.g., <code>.../SpeedCamera-1</code>)</div>
+    <div><strong>Municipality</strong>: <code>http://safeschool.linkeddata.es/resource/Municipality-{codigo}</code> (e.g., <code>.../Municipality-005</code>)</div>
+    <div><strong>District</strong>: <code>http://safeschool.linkeddata.es/resource/District-{codigo}</code> (e.g., <code>.../District-05</code>)</div>
+    <div><strong>Road</strong>: <code>http://safeschool.linkeddata.es/resource/Road-{slug}</code> (e.g., <code>.../Road-M30</code>)</div>
+    <div><strong>Location</strong>: <code>http://safeschool.linkeddata.es/resource/Location-{context}-{id}</code> (e.g., <code>.../Location-Accident-2025S000056</code>)</div>
+</div>
+
+<h3>3.3 Persistence, normalization, and negotiation</h3>
+<ul>
+    <li><strong>Persistence</strong>: identifiers reuse stable source IDs (e.g., <code>num_expediente</code>, <code>centro_codigo</code>, radar number). URIs do not embed temporal or presentation details.</li>
+    <li><strong>Normalization</strong>: strings are upper-camel for local names; road slugs use uppercase ASCII with hyphens (<code>M-30</code>, <code>CALLE-LOPEZ-DE-HOYOS</code>).</li>
+    <li><strong>Content negotiation</strong>: the ontology doc at <code>http://safeschool.linkeddata.es/ontology</code> and instance docs at <code>.../resource/*</code> perform 303 redirects to HTML or RDF (Turtle/JSON-LD) based on the <code>Accept</code> header.</li>
+    <li><strong>Licensing & provenance</strong>: dataset metadata include <code>dct:license</code> (CC BY 4.0), <code>dct:source</code>, and <code>prov:wasDerivedFrom</code> pointing to the original portals.</li>
+</ul>
+
+<!-- ========================================
+     SUMMARY
+     ======================================== -->
+
+<h2>4. Summary</h2>
+
+<p>This document has presented:</p>
+<ol>
+    <li><strong>Data Source Analysis:</strong> Detailed schema and statistics for 7,689 schools, 32,327 accidents, and 37 speed cameras.</li>
+    <li><strong>Licensing Analysis:</strong> All sources require attribution. The generated linked data will be released under <strong>CC BY 4.0</strong>.</li>
+    <li><strong>Resource Naming Strategy:</strong> A three-namespace design (<code>ontology</code>, <code>resource</code>, <code>vocab</code>) with persistent URIs, content negotiation support, and alignment with Linked Data best practices.</li>
+</ol>
+
+<p>The next steps include developing the OWL ontology (<code>safeschool-ontology.ttl</code>) and generating sample RDF instances (<code>safeschool-example.ttl</code>) based on this strategy.</p>
+
+<hr>
+<p style="text-align: center; color: #666; margin-top: 3rem;">
+    <small>Group 02 — Alex Ferroni, Pietro Morcavallo, Gabriele Puglisi, Federico Schermi<br>
+    Open Data and Knowledge Graphs — UPM 2025</small>
+</p>
+
+</body>
+</html>
