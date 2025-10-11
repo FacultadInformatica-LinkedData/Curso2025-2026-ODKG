@@ -1409,6 +1409,1378 @@
                     Estudios de Grado ofertados. Serie 2021/22 - 2023/24 </a></p>
         </section>
 
+            <!-- === CATALONIA === -->
+        <section id="catalonia">
+            <h2><a href="csv/Catalunya_Notes_de_tall_d’accés_als_estudis_universitaris_(convocatòries_de_juny_2023-actualitat)_i_nombre_de_places_20251005.csv"
+                    target="_blank">Catalunya_Notes_de_tall_d’accés_als_estudis_universitaris_(convocatòries_de_juny_2023-actualitat)_i_nombre_de_places_20251005.csv</a>
+            </h2>
+            <h3>Dataset Analysis</h3>
+            <p><strong>Name:</strong> Notes de tall d’accés als estudis universitaris (convocatòries de juny
+                2023-actualitat) i nombre de places
+            </p>
+            <p><strong>Description:</strong> Data published by the Generalitat de Catalunya through its open data
+                portal, containing admission thresholds and degree information from Catalan universities.</p>
+
+            <h3>Schema and Fields</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                        <th>Value Range</th>
+                        <th>Example Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Curs acadèmic</td>
+                        <td>Academic year corresponding to the admission data</td>
+                        <td>String</td>
+                        <td>{2023-2024, 2024-2025, 2025-2026}</td>
+                        <td>2023-2024</td>
+                    </tr>
+                    <tr>
+                        <td>Any</td>
+                        <td>Calendar year in which the admission process takes place</td>
+                        <td>Integer</td>
+                        <td>2023–2025</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td>Codi Oferta</td>
+                        <td>Unique identifier code for the degree program offered</td>
+                        <td>String</td>
+                        <td></td>
+                        <td>942</td>
+                    </tr>
+                    <tr>
+                        <td>Nom de l’Oferta</td>
+                        <td>Name of the degree or program offered</td>
+                        <td>String</td>
+                        <td></td>
+                        <td>Turisme</td>
+                    </tr>
+                    <tr>
+                        <td>Tipus d’estudi</td>
+                        <td>Type of study (e.g. undergraduate, master's, etc.)</td>
+                        <td>String</td>
+                        <td>{Grau, Màster Universitari}</td>
+                        <td>Grau</td>
+                    </tr>
+                    <tr>
+                        <td>Sigles Universitat responsable</td>
+                        <td>Acronym of the university responsible for the program</td>
+                        <td>String</td>
+                        <td>{UB, UAB, UPC, UPF, UdG, UdL, URV, UVic}</td>
+                        <td>UdG</td>
+                    </tr>
+                    <tr>
+                        <td>Via d’accés</td>
+                        <td>Admission pathway used to enter the program</td>
+                        <td>String</td>
+                        <td>{Pau/cfgs/FP, Titulats universitaris}</td>
+                        <td>Pau/cfgs/FP</td>
+                    </tr>
+                    <tr>
+                        <td>Nota de tall</td>
+                        <td>Minimum entry grade required for admission (cut-off mark)</td>
+                        <td>Float (with comma separator)</td>
+                        <td>5.000–14.000</td>
+                        <td>12,676</td>
+                    </tr>
+                    <tr>
+                        <td>Municipi</td>
+                        <td>Municipality where the program is taught</td>
+                        <td>String</td>
+                        <td>{Girona, Cerdanyola del Vallès, Barcelona, Vic, Terrassa, Lleida, Reus, Salt, Sant Pol de
+                            Mar, Vilanova i la Geltrú, Castelldefels, L'Hospitalet de Llobregat, Esplugues de Llobregat,
+                            Sant Cugat del Vallès, el Vendrell, Tortosa, Mataró, Amposta, Mollet del Vallès, Vila-Seca,
+                            Manresa, Sabadell, Igualada, Tarragona}</td>
+                        <td>Girona</td>
+                    </tr>
+                    <tr>
+                        <td>Nombre de places</td>
+                        <td>Number of available places or seats in the program</td>
+                        <td>Integer</td>
+                        <td>5-780</td>
+                        <td>105</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Licensing</h3>
+            <p><strong>Publisher:</strong> Generalitat de Catalunya - Oficina d’Accés a la Universitat | ROC (Registre
+                Oficial de Centres Universitaris)</p>
+            <p><strong>Rightsholder:</strong> Dates Obertes Catalunya</p>
+            <p><strong>License:</strong> <a
+                    href="https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/"
+                    target="_blank">Dates obertes</a></p>
+
+            <h3>Source</h3>
+            <p><strong>URL:</strong> <a
+                    href="https://datos.gob.es/ca/catalogo/a09002970-notas-de-corte-de-acceso-a-estudios-universitarios-y-numero-de-plazas-ofertadas"
+                    target="_blank">
+                    Notes de tall d’accés als estudis universitaris (convocatòries de juny 2023-actualitat) i nombre de
+                    places</a></p>
+        </section>
+
+        <section id="UC3M-Titulaciones">
+            <h2><a href="csv/uc3m-titulaciones-2024-25.csv"
+                    target="_blank">uc3m-titulaciones-2024-25.csv</a></h2>
+            <h3>Dataset Analysis</h3>
+            <p><strong>Name:</strong> UC3M — Offered Degrees</p>
+            <p><strong>Description:</strong> This dataset contains all the official degrees offered by Universidad
+                Carlos III de Madrid.
+                It includes all official Bachelor's, Master's, and Doctoral programs.
+                It does not include proprietary degrees, short courses, etc.
+                If a degree is offered in more than one faculty/campus/municipality, a separate record is included for
+                each location.</p>
+
+            <h3>Schema and Fields</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                        <th>Example Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>curso_academico</td>
+                        <td>Academic year</td>
+                        <td>String (YYYY-YY)</td>
+                        <td>2024-25</td>
+                    </tr>
+                    <tr>
+                        <td>cod_universidad</td>
+                        <td>University code</td>
+                        <td>String</td>
+                        <td>036</td>
+                    </tr>
+                    <tr>
+                        <td>des_universidad</td>
+                        <td>University name</td>
+                        <td>String</td>
+                        <td>Universidad Carlos III de Madrid</td>
+                    </tr>
+                    <tr>
+                        <td>cod_tipo_estudio</td>
+                        <td>Study type code</td>
+                        <td>String</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>des_tipo_estudio</td>
+                        <td>Study type description</td>
+                        <td>String</td>
+                        <td>Bachelor's Degree</td>
+                    </tr>
+                    <tr>
+                        <td>cod_unidad_responsable</td>
+                        <td>Responsible unit code</td>
+                        <td>String</td>
+                        <td>28041822</td>
+                    </tr>
+                    <tr>
+                        <td>des_unidad_responsable</td>
+                        <td>Responsible unit name</td>
+                        <td>String</td>
+                        <td>Faculty of Social and Legal Sciences (Getafe)</td>
+                    </tr>
+                    <tr>
+                        <td>cod_municipio</td>
+                        <td>Municipality code</td>
+                        <td>String</td>
+                        <td>28065</td>
+                    </tr>
+                    <tr>
+                        <td>des_municipio</td>
+                        <td>Municipality name</td>
+                        <td>String</td>
+                        <td>Getafe</td>
+                    </tr>
+                    <tr>
+                        <td>cod_campus</td>
+                        <td>Campus code</td>
+                        <td>String</td>
+                        <td>03602</td>
+                    </tr>
+                    <tr>
+                        <td>des_campus</td>
+                        <td>Campus name</td>
+                        <td>String</td>
+                        <td>Getafe</td>
+                    </tr>
+                    <tr>
+                        <td>cod_titulacion</td>
+                        <td>Degree code</td>
+                        <td>String</td>
+                        <td>2500030</td>
+                    </tr>
+                    <tr>
+                        <td>des_titulacion</td>
+                        <td>Degree name</td>
+                        <td>String</td>
+                        <td>Bachelor's in Business Administration</td>
+                    </tr>
+                    <tr>
+                        <td>cod_rama</td>
+                        <td>Field of knowledge code</td>
+                        <td>String</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>des_rama</td>
+                        <td>Field of knowledge</td>
+                        <td>String</td>
+                        <td>Social and Legal Sciences</td>
+                    </tr>
+                    <tr>
+                        <td>anio_inicio</td>
+                        <td>Start year of the degree</td>
+                        <td>Integer</td>
+                        <td>2008</td>
+                    </tr>
+                    <tr>
+                        <td>cod_situacion_actual</td>
+                        <td>Current status code</td>
+                        <td>Integer</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_situacion_actual</td>
+                        <td>Current status of the degree</td>
+                        <td>String</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>cod_grado_presencialidad</td>
+                        <td>Attendance mode code</td>
+                        <td>Integer</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_grado_presencialidad</td>
+                        <td>Attendance mode</td>
+                        <td>String</td>
+                        <td>On-site study</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_1</td>
+                        <td>Credit price (1st enrollment)</td>
+                        <td>Float</td>
+                        <td>16.92</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_2</td>
+                        <td>Credit price (2nd enrollment)</td>
+                        <td>Float</td>
+                        <td>40.02</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_3</td>
+                        <td>Credit price (3rd enrollment)</td>
+                        <td>Float</td>
+                        <td>82.3</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_4</td>
+                        <td>Credit price (4th enrollment)</td>
+                        <td>Float</td>
+                        <td>113.71</td>
+                    </tr>
+                    <tr>
+                        <td>num_creditos_necesarios</td>
+                        <td>Total credits required for the degree</td>
+                        <td>Integer</td>
+                        <td>240</td>
+                    </tr>
+                    <tr>
+                        <td>num_creditos_ofertados</td>
+                        <td>Credits offered</td>
+                        <td>Integer</td>
+                        <td>549</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Licensing</h3>
+            <p><strong>Publisher:</strong> Universidad Carlos III de Madrid</p>
+            <p><strong>Rightsholder:</strong> Universidad Carlos III de Madrid</p>
+            <p><strong>License:</strong> <a href="https://www.universidata.es/licencia-universidata"
+                    target="_blank">UniversiData License</a></p>
+
+            <h3>Source</h3>
+            <p><strong>URL:</strong> <a href="https://datos.gob.es/es/catalogo/u03600001-uc3m-titulaciones"
+                    target="_blank">UniversiData — UC3M Degrees</a></p>
+        </section>
+
+
+        <section id="URJC-Titulaciones">
+            <h2><a href="csv/urjc-titulaciones-2024-25.csv"
+                    target="_blank">urjc-titulaciones-2024-25.csv</a></h2>
+            <h3>Dataset Analysis</h3>
+            <p><strong>Name:</strong> URJC — Offered Degrees</p>
+            <p><strong>Description:</strong> This dataset contains all the official degrees offered by Universidad Rey
+                Juan Carlos (URJC). It includes all official Bachelor's, Master's, and Doctoral programs. It does not
+                include proprietary degrees, short courses, etc. If a degree is offered in more than one
+                faculty/campus/municipality, a separate record is included for each location.</p>
+            <h3>Schema and Fields</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                        <th>Example Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>curso_academico</td>
+                        <td>Academic year</td>
+                        <td>String (YYYY-YY)</td>
+                        <td>2024-25</td>
+                    </tr>
+                    <tr>
+                        <td>cod_universidad</td>
+                        <td>University code</td>
+                        <td>String</td>
+                        <td>056</td>
+                    </tr>
+                    <tr>
+                        <td>des_universidad</td>
+                        <td>University name</td>
+                        <td>String</td>
+                        <td>Universidad Rey Juan Carlos</td>
+                    </tr>
+                    <tr>
+                        <td>cod_tipo_estudio</td>
+                        <td>Study type code</td>
+                        <td>String</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>des_tipo_estudio</td>
+                        <td>Study type description</td>
+                        <td>String</td>
+                        <td>Bachelor's Degree</td>
+                    </tr>
+                    <tr>
+                        <td>cod_tipo_unidad_responsable</td>
+                        <td>Responsible unit type code</td>
+                        <td>String</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_tipo_unidad_responsable</td>
+                        <td>Responsible unit type</td>
+                        <td>String</td>
+                        <td>Centro</td>
+                    </tr>
+                    <tr>
+                        <td>cod_unidad_responsable</td>
+                        <td>Responsible unit code</td>
+                        <td>String</td>
+                        <td>28048373</td>
+                    </tr>
+                    <tr>
+                        <td>des_unidad_responsable</td>
+                        <td>Responsible unit name</td>
+                        <td>String</td>
+                        <td>Facultad de Ciencias de la Salud</td>
+                    </tr>
+                    <tr>
+                        <td>cod_municipio</td>
+                        <td>Municipality code</td>
+                        <td>String</td>
+                        <td>28007</td>
+                    </tr>
+                    <tr>
+                        <td>des_municipio</td>
+                        <td>Municipality name</td>
+                        <td>String</td>
+                        <td>Alcorcón</td>
+                    </tr>
+                    <tr>
+                        <td>cod_campus</td>
+                        <td>Campus code</td>
+                        <td>String</td>
+                        <td>05601</td>
+                    </tr>
+                    <tr>
+                        <td>des_campus</td>
+                        <td>Campus name</td>
+                        <td>String</td>
+                        <td>Alcorcón</td>
+                    </tr>
+                    <tr>
+                        <td>cod_titulacion</td>
+                        <td>Degree code</td>
+                        <td>String</td>
+                        <td>2500091</td>
+                    </tr>
+                    <tr>
+                        <td>des_titulacion</td>
+                        <td>Degree name</td>
+                        <td>String</td>
+                        <td>Grado en Medicina</td>
+                    </tr>
+                    <tr>
+                        <td>cod_rama</td>
+                        <td>Field of knowledge code</td>
+                        <td>String</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>des_rama</td>
+                        <td>Field of knowledge</td>
+                        <td>String</td>
+                        <td>Ciencias de la Salud</td>
+                    </tr>
+                    <tr>
+                        <td>cod_interuniversitario</td>
+                        <td>Inter-university program code</td>
+                        <td>String</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>des_interuniversitario</td>
+                        <td>Inter-university program status</td>
+                        <td>String</td>
+                        <td>No es Interuniversitario</td>
+                    </tr>
+                    <tr>
+                        <td>cod_rol_coordinacion</td>
+                        <td>Coordination role code</td>
+                        <td>String</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>des_rol_coordinacion</td>
+                        <td>Coordination role</td>
+                        <td>String</td>
+                        <td>No Aplica</td>
+                    </tr>
+                    <tr>
+                        <td>cod_impartido</td>
+                        <td>Taught status code</td>
+                        <td>String</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_impartido</td>
+                        <td>Taught status</td>
+                        <td>String</td>
+                        <td>Se imparte en el curso académico de referencia</td>
+                    </tr>
+                    <tr>
+                        <td>anio_inicio</td>
+                        <td>Start year</td>
+                        <td>Integer</td>
+                        <td>2008</td>
+                    </tr>
+                    <tr>
+                        <td>cod_situacion_actual</td>
+                        <td>Current status code</td>
+                        <td>Integer</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_situacion_actual</td>
+                        <td>Current status</td>
+                        <td>String</td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td>cod_grado_presencialidad</td>
+                        <td>Attendance mode code</td>
+                        <td>Integer</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_grado_presencialidad</td>
+                        <td>Attendance mode</td>
+                        <td>String</td>
+                        <td>Estudio presencial</td>
+                    </tr>
+                    <tr>
+                        <td>cod_idioma_extranjero</td>
+                        <td>Foreign language code</td>
+                        <td>String</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>des_idioma_extranjero</td>
+                        <td>Foreign language status</td>
+                        <td>String</td>
+                        <td>No se oferta en idioma extranjero</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_1</td>
+                        <td>Credit price (1st enrollment)</td>
+                        <td>Float</td>
+                        <td>20.68</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_2</td>
+                        <td>Credit price (2nd enrollment)</td>
+                        <td>Float</td>
+                        <td>48.03</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_3</td>
+                        <td>Credit price (3rd enrollment)</td>
+                        <td>Float</td>
+                        <td>98.75</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_4</td>
+                        <td>Credit price (4th enrollment)</td>
+                        <td>Float</td>
+                        <td>136.44</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_5</td>
+                        <td>Credit price (5th enrollment, if applicable)</td>
+                        <td>Float</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>precio_tutela</td>
+                        <td>Price for thesis/doctoral supervision (if applicable)</td>
+                        <td>Float</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>num_creditos_necesarios</td>
+                        <td>Total credits required</td>
+                        <td>Integer</td>
+                        <td>360</td>
+                    </tr>
+                    <tr>
+                        <td>num_creditos_ofertados</td>
+                        <td>Total credits offered</td>
+                        <td>Integer</td>
+                        <td>360</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Licensing</h3>
+            <p><strong>Publisher:</strong> Universidad Rey Juan Carlos</p>
+            <p><strong>Rightsholder:</strong> Universidad Rey Juan Carlos</p>
+            <p><strong>License:</strong> <a href="https://www.universidata.es/licencia-universidata"
+                    target="_blank">UniversiData License</a></p>
+
+            <h3>Source</h3>
+            <p><strong>URL:</strong> <a href="https://datos.gob.es/es/catalogo/u05600001-urjc-titulaciones"
+                    target="_blank">UniversiData — URJC Degrees</a></p>
+
+
+
+        </section>
+
+        <section id="UAM-Titulaciones">
+            <h2><a href="csv/uam-titulaciones-2024-25.csv"
+                    target="_blank">uam-titulaciones-2024-25.csv</a></h2>
+            <h3>Dataset Analysis</h3>
+            <p><strong>Name:</strong> UAM — Offered Degrees</p>
+            <p><strong>Description:</strong> This dataset contains all the official degrees offered by Universidad
+                Autónoma de Madrid (UAM). It includes all official Bachelor's, Master's, and Doctoral programs. It does
+                not include proprietary degrees, short courses, etc. If a degree is offered in more than one
+                faculty/campus/municipality, a separate record is included for each location.</p>
+            <h3>Schema and Fields</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                        <th>Example Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>curso_academico</td>
+                        <td>Academic year</td>
+                        <td>String (YYYY-YY)</td>
+                        <td>2024-25</td>
+                    </tr>
+                    <tr>
+                        <td>cod_universidad</td>
+                        <td>University code</td>
+                        <td>String</td>
+                        <td>023</td>
+                    </tr>
+                    <tr>
+                        <td>des_universidad</td>
+                        <td>University name</td>
+                        <td>String</td>
+                        <td>Universidad Autónoma de Madrid</td>
+                    </tr>
+                    <tr>
+                        <td>cod_tipo_estudio</td>
+                        <td>Study type code</td>
+                        <td>String</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>des_tipo_estudio</td>
+                        <td>Study type description</td>
+                        <td>String</td>
+                        <td>Bachelor's Degree</td>
+                    </tr>
+                    <tr>
+                        <td>cod_tipo_unidad_responsable</td>
+                        <td>Responsible unit type code</td>
+                        <td>String</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_tipo_unidad_responsable</td>
+                        <td>Responsible unit type</td>
+                        <td>String</td>
+                        <td>Centro</td>
+                    </tr>
+                    <tr>
+                        <td>cod_unidad_responsable</td>
+                        <td>Responsible unit code</td>
+                        <td>String</td>
+                        <td>28027060</td>
+                    </tr>
+                    <tr>
+                        <td>des_unidad_responsable</td>
+                        <td>Responsible unit name</td>
+                        <td>String</td>
+                        <td>Facultad de Ciencias</td>
+                    </tr>
+                    <tr>
+                        <td>cod_municipio</td>
+                        <td>Municipality code</td>
+                        <td>String</td>
+                        <td>28079</td>
+                    </tr>
+                    <tr>
+                        <td>des_municipio</td>
+                        <td>Municipality name</td>
+                        <td>String</td>
+                        <td>Madrid</td>
+                    </tr>
+                    <tr>
+                        <td>cod_campus</td>
+                        <td>Campus code</td>
+                        <td>String</td>
+                        <td>02301</td>
+                    </tr>
+                    <tr>
+                        <td>des_campus</td>
+                        <td>Campus name</td>
+                        <td>String</td>
+                        <td>Cantoblanco</td>
+                    </tr>
+                    <tr>
+                        <td>cod_titulacion</td>
+                        <td>Degree code</td>
+                        <td>String</td>
+                        <td>2500264</td>
+                    </tr>
+                    <tr>
+                        <td>des_titulacion</td>
+                        <td>Degree name</td>
+                        <td>String</td>
+                        <td>Graduado/a en Ciencias Ambientales</td>
+                    </tr>
+                    <tr>
+                        <td>cod_rama</td>
+                        <td>Field of knowledge code</td>
+                        <td>String</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>des_rama</td>
+                        <td>Field of knowledge</td>
+                        <td>String</td>
+                        <td>Ciencias</td>
+                    </tr>
+                    <tr>
+                        <td>cod_interuniversitario</td>
+                        <td>Inter-university program code</td>
+                        <td>String</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>des_interuniversitario</td>
+                        <td>Inter-university program status</td>
+                        <td>String</td>
+                        <td>No es Interuniversitario</td>
+                    </tr>
+                    <tr>
+                        <td>cod_rol_coordinacion</td>
+                        <td>Coordination role code</td>
+                        <td>String</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>des_rol_coordinacion</td>
+                        <td>Coordination role</td>
+                        <td>String</td>
+                        <td>No Aplica</td>
+                    </tr>
+                    <tr>
+                        <td>cod_impartido</td>
+                        <td>Taught status code</td>
+                        <td>String</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_impartido</td>
+                        <td>Taught status</td>
+                        <td>String</td>
+                        <td>Se imparte en el curso académico de referencia</td>
+                    </tr>
+                    <tr>
+                        <td>anio_inicio</td>
+                        <td>Start year</td>
+                        <td>Integer</td>
+                        <td>2009</td>
+                    </tr>
+                    <tr>
+                        <td>cod_situacion_actual</td>
+                        <td>Current status code</td>
+                        <td>Integer</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_situacion_actual</td>
+                        <td>Current status</td>
+                        <td>String</td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td>cod_grado_presencialidad</td>
+                        <td>Attendance mode code</td>
+                        <td>Integer</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_grado_presencialidad</td>
+                        <td>Attendance mode</td>
+                        <td>String</td>
+                        <td>Estudio presencial</td>
+                    </tr>
+                    <tr>
+                        <td>cod_idioma_extranjero</td>
+                        <td>Foreign language code</td>
+                        <td>String</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>des_idioma_extranjero</td>
+                        <td>Foreign language status</td>
+                        <td>String</td>
+                        <td>No se oferta en idioma extranjero</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_1</td>
+                        <td>Credit price (1st enrollment)</td>
+                        <td>Float</td>
+                        <td>20.68</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_2</td>
+                        <td>Credit price (2nd enrollment)</td>
+                        <td>Float</td>
+                        <td>48.03</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_3</td>
+                        <td>Credit price (3rd enrollment)</td>
+                        <td>Float</td>
+                        <td>98.75</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_4</td>
+                        <td>Credit price (4th enrollment)</td>
+                        <td>Float</td>
+                        <td>136.44</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_5</td>
+                        <td>Credit price (5th enrollment, if applicable)</td>
+                        <td>Float</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>precio_tutela</td>
+                        <td>Price for thesis/doctoral supervision (if applicable)</td>
+                        <td>Float</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>num_creditos_necesarios</td>
+                        <td>Total credits required</td>
+                        <td>Integer</td>
+                        <td>240</td>
+                    </tr>
+                    <tr>
+                        <td>num_creditos_ofertados</td>
+                        <td>Total credits offered</td>
+                        <td>Integer</td>
+                        <td>354</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Licensing</h3>
+            <p><strong>Publisher:</strong> Universidad Autónoma de Madrid</p>
+            <p><strong>Rightsholder:</strong> Universidad Autónoma de Madrid</p>
+            <p><strong>License:</strong> <a href="https://www.universidata.es/licencia-universidata"
+                    target="_blank">UniversiData License</a></p>
+
+            <h3>Source</h3>
+            <p><strong>URL:</strong> <a href="https://datos.gob.es/es/catalogo/u02300001-uam-titulaciones"
+                    target="_blank">UniversiData — UAM Degrees</a></p>
+        </section>
+
+        <section id="UCM-Titulaciones">
+            <h2><a href="csv/ucm-titulaciones-2024-25.csv"
+                    target="_blank">ucm-titulaciones-2024-25.csv</a></h2>
+            <h3>Dataset Analysis</h3>
+            <p><strong>Name:</strong> UCM — Offered Degrees</p>
+            <p><strong>Description:</strong> This dataset contains all the official degrees offered by Universidad
+                Complutense de Madrid (UCM). It includes all official Bachelor's, Master's, and Doctoral programs.
+                Proprietary degrees and short courses are excluded. If a degree is offered in more than one
+                faculty/campus/municipality, a separate record is included for each location.</p>
+            <h3>Schema and Fields</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                        <th>Example Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>curso_academico</td>
+                        <td>Academic year</td>
+                        <td>String (YYYY-YY)</td>
+                        <td>2024-25</td>
+                    </tr>
+                    <tr>
+                        <td>cod_universidad</td>
+                        <td>University code</td>
+                        <td>String</td>
+                        <td>010</td>
+                    </tr>
+                    <tr>
+                        <td>des_universidad</td>
+                        <td>University name</td>
+                        <td>String</td>
+                        <td>Universidad Complutense de Madrid</td>
+                    </tr>
+                    <tr>
+                        <td>cod_tipo_estudio</td>
+                        <td>Study type code</td>
+                        <td>String</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>des_tipo_estudio</td>
+                        <td>Study type description</td>
+                        <td>String</td>
+                        <td>Grado</td>
+                    </tr>
+                    <tr>
+                        <td>cod_tipo_unidad_responsable</td>
+                        <td>Responsible unit type code</td>
+                        <td>String</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_tipo_unidad_responsable</td>
+                        <td>Responsible unit type</td>
+                        <td>String</td>
+                        <td>Centro</td>
+                    </tr>
+                    <tr>
+                        <td>cod_unidad_responsable</td>
+                        <td>Responsible unit code</td>
+                        <td>String</td>
+                        <td>28027126</td>
+                    </tr>
+                    <tr>
+                        <td>des_unidad_responsable</td>
+                        <td>Responsible unit name</td>
+                        <td>String</td>
+                        <td>Facultad de Bellas Artes</td>
+                    </tr>
+                    <tr>
+                        <td>cod_municipio</td>
+                        <td>Municipality code</td>
+                        <td>String</td>
+                        <td>28079</td>
+                    </tr>
+                    <tr>
+                        <td>des_municipio</td>
+                        <td>Municipality name</td>
+                        <td>String</td>
+                        <td>Madrid</td>
+                    </tr>
+                    <tr>
+                        <td>cod_campus</td>
+                        <td>Campus code</td>
+                        <td>String</td>
+                        <td>01001</td>
+                    </tr>
+                    <tr>
+                        <td>des_campus</td>
+                        <td>Campus name</td>
+                        <td>String</td>
+                        <td>Ciudad Universitaria</td>
+                    </tr>
+                    <tr>
+                        <td>cod_titulacion</td>
+                        <td>Degree code</td>
+                        <td>String</td>
+                        <td>2500811</td>
+                    </tr>
+                    <tr>
+                        <td>des_titulacion</td>
+                        <td>Degree name</td>
+                        <td>String</td>
+                        <td>Grado en Bellas Artes</td>
+                    </tr>
+                    <tr>
+                        <td>cod_rama</td>
+                        <td>Field of knowledge code</td>
+                        <td>String</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_rama</td>
+                        <td>Field of knowledge</td>
+                        <td>String</td>
+                        <td>Artes y Humanidades</td>
+                    </tr>
+                    <tr>
+                        <td>cod_interuniversitario</td>
+                        <td>Inter-university program code</td>
+                        <td>String</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>des_interuniversitario</td>
+                        <td>Inter-university program status</td>
+                        <td>String</td>
+                        <td>No es Interuniversitario</td>
+                    </tr>
+                    <tr>
+                        <td>cod_rol_coordinacion</td>
+                        <td>Coordination role code</td>
+                        <td>String</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>des_rol_coordinacion</td>
+                        <td>Coordination role</td>
+                        <td>String</td>
+                        <td>No Aplica</td>
+                    </tr>
+                    <tr>
+                        <td>cod_impartido</td>
+                        <td>Taught status code</td>
+                        <td>String</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_impartido</td>
+                        <td>Taught status</td>
+                        <td>String</td>
+                        <td>Se imparte en el curso académico de referencia</td>
+                    </tr>
+                    <tr>
+                        <td>anio_inicio</td>
+                        <td>Start year</td>
+                        <td>Integer</td>
+                        <td>2009</td>
+                    </tr>
+                    <tr>
+                        <td>cod_situacion_actual</td>
+                        <td>Current status code</td>
+                        <td>Integer</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_situacion_actual</td>
+                        <td>Current status</td>
+                        <td>String</td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td>cod_grado_presencialidad</td>
+                        <td>Attendance mode code</td>
+                        <td>Integer</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>des_grado_presencialidad</td>
+                        <td>Attendance mode</td>
+                        <td>String</td>
+                        <td>Estudio presencial</td>
+                    </tr>
+                    <tr>
+                        <td>cod_idioma_extranjero</td>
+                        <td>Foreign language code</td>
+                        <td>String</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>des_idioma_extranjero</td>
+                        <td>Foreign language status</td>
+                        <td>String</td>
+                        <td>No se oferta en idioma extranjero</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_1</td>
+                        <td>Credit price (1st enrollment)</td>
+                        <td>Float</td>
+                        <td>16.92</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_2</td>
+                        <td>Credit price (2nd enrollment)</td>
+                        <td>Float</td>
+                        <td>40.02</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_3</td>
+                        <td>Credit price (3rd enrollment)</td>
+                        <td>Float</td>
+                        <td>82.30</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_4</td>
+                        <td>Credit price (4th enrollment)</td>
+                        <td>Float</td>
+                        <td>113.71</td>
+                    </tr>
+                    <tr>
+                        <td>precio_credito_5</td>
+                        <td>Credit price (5th enrollment)</td>
+                        <td>Float</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>precio_tutela</td>
+                        <td>Thesis supervision price (if applicable)</td>
+                        <td>Float</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>num_creditos_necesarios</td>
+                        <td>Total credits required</td>
+                        <td>Float</td>
+                        <td>240</td>
+                    </tr>
+                    <tr>
+                        <td>num_creditos_ofertados</td>
+                        <td>Total credits offered</td>
+                        <td>Float</td>
+                        <td>378</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Licensing</h3>
+            <p><strong>Publisher:</strong> Universidad Complutense de Madrid</p>
+            <p><strong>Rightsholder:</strong> Universidad Complutense de Madrid</p>
+            <p><strong>License:</strong> <a href="https://www.universidata.es/licencia-universidata"
+                    target="_blank">UniversiData License</a></p>
+
+            <h3>Source</h3>
+            <p><strong>URL:</strong> <a href="https://datos.gob.es/es/catalogo/u01000001-ucm-titulaciones"
+                    target="_blank">UniversiData — UCM Degrees</a></p>
+
+        </section>
+
+
+
+
+
+
+
+
+        <!-- === MURCIA === -->
+        <section id="murcia">
+            <h2><a href="csv/Murcia_nota-admision-rango-grado-2024-2025.csv" target="_blank">Murcia_nota-admision-rango-grado-2024-2025.csv</a></h2>
+            <h2><a href="csv/Murcia_nota-corte-master-2024-2025.csv" target="_blank">Murcia_nota-corte-master-2024-2025.csv</a></h2>
+            <h3>Dataset Analysis</h3>
+            <p><strong>Name:</strong> Universidad de Murcia — Admission Grade and Master Distribution in 2024/2025 </p>
+            <p><strong>Description:</strong> This dataset provides grade and master distribution information for undergraduate degrees
+            at the University of Murcia during the 2024/2025 academic year. It includes the number of enrolled students,
+            performance across grade ranges (5–7, 7–9, 9–12, 12–14), and gender-based percentages within each range.
+            Data are disaggregated by faculty and degree type.</p>
+
+            <h3>Schema and Fields</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                        <th>Value Range</th>
+                        <th>Example Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>urso_academico_cod</td><td>Academic year code</td><td>Integer</td><td>2024</td><td>2024</td></tr>
+                    <tr><td>curso_academico</td><td>Academic year label</td><td>String</td><td>“2024/2025”</td><td>2024/2025</td></tr>
+                    <tr><td>tipo_centro</td><td>Type of faculty or institution</td><td>String</td><td>{Centros propios, Adscritos}</td><td>Centros propios</td></tr>
+                    <tr><td>centro_cod</td><td>Faculty code (internal ID)</td><td>String</td><td>Alphanumeric</td><td>0E03</td></tr>
+                    <tr><td>centro_cod_mec</td><td>Faculty code (MEC system)</td><td>String</td><td>Numeric</td><td>30010218</td></tr>
+                    <tr><td>centro</td><td>Faculty name</td><td>String</td><td></td><td>Facultad de Química</td></tr>
+                    <tr><td>ciclo_titulacion_cod</td><td>Cycle or study level code</td><td>String</td><td>{G, M, D}</td><td>G</td></tr>
+                    <tr><td>ciclo_titulacion</td><td>Cycle or study level</td><td>String</td><td>{Grado, Máster, Doctorado}</td><td>Grado</td></tr>
+                    <tr><td>titulacion_cod</td><td>Degree code (internal)</td><td>Integer</td><td></td><td>233</td></tr>
+                    <tr><td>titulacion_cod_mec</td><td>Degree code (MEC)</td><td>Integer</td><td></td><td>2500377</td></tr>
+                    <tr><td>titulacion</td><td>Degree name</td><td>String</td><td></td><td>Grado en Física</td></tr>
+                    <tr><td>matriculados</td><td>Total number of enrolled students</td><td>Integer</td><td>0–∞</td><td>58</td></tr>
+                    <tr><td>especiales</td><td>Number of students with special conditions</td><td>Integer</td><td>0–∞</td><td>0</td></tr>
+                    <tr><td>nota_5_7</td><td>Number of students with grades between 5 and 7</td><td>Integer</td><td>0–∞</td><td>0</td></tr>
+                    <tr><td>porc_nota_5_7_mujer</td><td>Percentage of women in grade range 5–7</td><td>Float</td><td>0–100</td><td>0.0</td></tr>
+                    <tr><td>porc_nota_5_7_hombre</td><td>Percentage of men in grade range 5–7</td><td>Float</td><td>0–100</td><td>100.0</td></tr>
+                    <tr><td>nota_7_9</td><td>Number of students with grades between 7 and 9</td><td>Integer</td><td>0–∞</td><td>15</td></tr>
+                    <tr><td>porc_nota_7_9_mujer</td><td>Percentage of women in grade range 7–9</td><td>Float</td><td>0–100</td><td>53.3</td></tr>
+                    <tr><td>porc_nota_7_9_hombre</td><td>Percentage of men in grade range 7–9</td><td>Float</td><td>0–100</td><td>46.7</td></tr>
+                    <tr><td>nota_9_12</td><td>Number of students with grades between 9 and 12</td><td>Integer</td><td>0–∞</td><td>35</td></tr>
+                    <tr><td>porc_nota_9_12_mujer</td><td>Percentage of women in grade range 9–12</td><td>Float</td><td>0–100</td><td>71.4</td></tr>
+                    <tr><td>porc_nota_9_12_hombre</td><td>Percentage of men in grade range 9–12</td><td>Float</td><td>0–100</td><td>28.6</td></tr>
+                    <tr><td>nota_12_14</td><td>Number of students with grades between 12 and 14</td><td>Integer</td><td>0–∞</td><td>2</td></tr>
+                    <tr><td>porc_nota_12_14_mujer</td><td>Percentage of women in grade range 12–14</td><td>Float</td><td>0–100</td><td>100.0</td></tr>
+                    <tr><td>porc_nota_12_14_hombre</td><td>Percentage of men in grade range 12–14</td><td>Float</td><td>0–100</td><td>0.0</td></tr>
+                    <tr><td>tipo_fila</td><td>Row type indicator (e.g., summary, faculty total)</td><td>String</td><td>{F, T}</td><td>F</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Licensing</h3>
+            <p><strong>Publisher:</strong> Universidad de Murcia — Área de gestión académica</p>
+            <p><strong>Rightsholder:</strong> Universidad de Murcia</p>
+            <p><strong>License:</strong> <a href="https://opendefinition.org/licenses/cc-zero/" target="_blank">Creative Commons CCZero</a></p>
+
+            <h3>Source</h3>
+            <p><strong>URL:</strong> <a href="https://datos.um.es/dataset/nota-admision-rango-grado-2024-2025" target="_blank">
+                Universidad de Murcia - Nota admisión por titulación y rango Grado 2024-2025</a></p>
+            <p><strong>URL:</strong> <a href="https://datos.um.es/es/dataset/nota-corte-master-2024-2025#" target="_blank">
+                Universidad de Murcia - Nota corte Máster 2024-2025</a></p>
+
+
+            <h2><a href="csv/Murcia2_listaestudios.csv" target="_blank">Murcia2_listaestudios.csv</a></h2>
+            <h3>Dataset Analysis</h3>
+            <p><strong>Name:</strong> Lista Estudios en Universidad Politécnica de Cartagena</p>
+            <p><strong>Description:</strong> This dataset lists discontinued university degree programs (titulaciones
+                extinguidas) formerly offered by various Spanish universities. It includes information such as academic
+                level, branch of knowledge, administrative status, and publication details in the Official State Gazette
+                (B.O.E.).</p>
+
+            <h3>Schema and Fields</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                        <th>Value Range</th>
+                        <th>Example Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Código</td>
+                        <td>Official program code assigned by the education authorities</td>
+                        <td>String</td>
+                        <td>Numeric identifier (7 digits)</td>
+                        <td>1001000</td>
+                    </tr>
+                    <tr>
+                        <td>Título</td>
+                        <td>Name of the academic degree or qualification</td>
+                        <td>String</td>
+                        <td></td>
+                        <td>Arquitecto</td>
+                    </tr>
+                    <tr>
+                        <td>Universidad</td>
+                        <td>University or group of universities offering the degree</td>
+                        <td>String</td>
+                        <td>{Universidad Politécnica de Cartagena, Varias Universidades, (Conjunto)}</td>
+                        <td>Varias Universidades</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel académico</td>
+                        <td>Educational level or cycle of the program</td>
+                        <td>String</td>
+                        <td>{Ciclo Corto, Ciclo Largo, Segundo Ciclo de Ciclo Largo}</td>
+                        <td>Ciclo Corto</td>
+                    </tr>
+                    <tr>
+                        <td>Rama</td>
+                        <td>Branch of knowledge associated with the degree</td>
+                        <td>String</td>
+                        <td>{Ingeniería y Arquitectura, Ciencias Sociales y Jurídicas, Ciencias de la Salud, Artes y
+                            Humanidades}</td>
+                        <td>Ingeniería y Arquitectura</td>
+                    </tr>
+                    <tr>
+                        <td>Ámbito</td>
+                        <td>Specific academic or professional domain (if available)</td>
+                        <td>String</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Estado</td>
+                        <td>Official status of the degree (e.g., active, discontinued, published)</td>
+                        <td>String</td>
+                        <td></td>
+                        <td>Publicado en B.O.E.</td>
+                    </tr>
+                    <tr>
+                        <td>Detalle</td>
+                        <td>Additional notes or clarifications about the program’s status</td>
+                        <td>String</td>
+                        <td>{(TITULACIÓN A EXTINGUIR), (TITULACIÓN RENOVADA)}</td>
+                        <td>(TITULACIÓN EXTINGUIDA)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h3>Licensing</h3>
+            <p><strong>Publisher:</strong> Registro de Universidades, Centros y Títulos (RUCT)</p>
+            <p><strong>Rightsholder:</strong> Ministerio de Ciencia, Innovación y Universidades</p>
+            <p><strong>License:</strong> <a href="https://www.boe.es/boe/dias/2008/09/25/pdfs/A38854-38857.pdf">Carácter
+                    público y de registro administrativo</a></p>
+
+            <h3>Source</h3>
+            <p><strong>URL:</strong> <a href="https://www.educacion.gob.es/ruct/consultaestudios.action?actual=estudios"
+                    target="_blank">
+                    Sección títulos - Estudios</a></p>
+        </section>
+
+        <!-- === NAVARRA, PAÍS VASCO, LA RIOJA === -->
+        <section id="navarra">
+            <h2><a href="csv/Navarra_listaestudios.csv" target="_blank">Navarra_listaestudios.csv</a></h2>
+            <h2><a href="csv/PaisVasco_listaestudios.csv" target="_blank">PaisVasco_listaestudios.csv</a></h2>
+            <h2><a href="csv/LaRioja_listaestudios.csv" target="_blank">LaRioja_listaestudios.csv</a></h2>
+            <h2><a href="csv/ua-titulaciones.csv" target="_blank">ua-titulaciones-csv</a></h2>
+            <h2><a href="csv/uah-titulaciones.csv" target="_blank">uah-titulaciones.csv</a></h2>
+            <h2><a href="csv/udc-titulaciones.csv" target="_blank">udc-titulaciones.csv</a></h2>
+            <h2><a href="csv/uimp-titulaciones.csv" target="_blank">uimp-titulaciones.csv</a></h2>
+            <h2><a href="csv/umh-titulaciones.csv" target="_blank">umh-titulaciones.csv</a></h2>
+            <h2><a href="csv/unex-titulaciones.csv" target="_blank">unex-titulaciones.csv</a></h2>
+            <h2><a href="csv/upm-titulaciones.csv" target="_blank">upm-titulaciones.csv</a></h2>
+            <h2><a href="csv/usc-titulaciones.csv" target="_blank">usc-titulaciones.csv</a></h2>
+            <h2><a href="csv/uv-titulaciones.csv" target="_blank">uv-titulaciones.csv</a></h2>
+            <h2><a href="csv/uvigo-titulaciones.csv" target="_blank">uvigo-titulaciones.csv</a></h2>
+            <h3>Dataset Analysis</h3>
+            <p><strong>Name:</strong> Lista Estudios en Universidad Pública de Navarra, de País Vasco, de La Rioja, Alicante, Alcalá,
+            A Coruña, Menéndez Pelayo, Miguel Hernández, Extremadura, Valencia, Santiago de Compostela, Valencia, Vigo, Jaume I</p>
+            <p><strong>Description:</strong> This dataset lists discontinued university degree programs (titulaciones
+                extinguidas) formerly offered by University of Islas Baleares. It includes information such as academic
+                level, branch of knowledge, administrative status, and publication details in the Official State Gazette
+                (B.O.E.).</p>
+
+            <h3>Schema and Fields</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                        <th>Value Range</th>
+                        <th>Example Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Código</td>
+                        <td>Official degree code assigned by the Ministry of Education or academic authorities</td>
+                        <td>String</td>
+                        <td>7-digit numeric identifier</td>
+                        <td>5067000</td>
+                    </tr>
+                    <tr>
+                        <td>Título</td>
+                        <td>Name of the university degree (qualification title)</td>
+                        <td>String</td>
+                        <td></td>
+                        <td>Arquitecto Técnico</td>
+                    </tr>
+                    <tr>
+                        <td>Universidad</td>
+                        <td>University or consortium of universities that offered the degree</td>
+                        <td>String</td>
+                        <td></td>
+                        <td>Varias Universidades</td>
+                    </tr>
+                    <tr>
+                        <td>Nivel académico</td>
+                        <td>Academic level or study cycle of the program</td>
+                        <td>String</td>
+                        <td>{Ciclo Corto, Ciclo Largo, Segundo Ciclo de Ciclo Largo}</td>
+                        <td>Ciclo Corto</td>
+                    </tr>
+                    <tr>
+                        <td>Rama</td>
+                        <td>Knowledge branch associated with the degree</td>
+                        <td>String</td>
+                        <td>{Ingeniería y Arquitectura, Ciencias Sociales y Jurídicas, Ciencias de la Salud, Artes y
+                            Humanidades}</td>
+                        <td>Ingeniería y Arquitectura</td>
+                    </tr>
+                    <tr>
+                        <td>Ámbito</td>
+                        <td>Specific academic or professional area (if applicable)</td>
+                        <td>String</td>
+                        <td></td>
+                        <td>Derecho y especialidades jurídicas</td>
+                    </tr>
+                    <tr>
+                        <td>Estado</td>
+                        <td>Official administrative status of the qualification (as published in B.O.E.)</td>
+                        <td>String</td>
+                        <td>{Publicado en B.O.E., Autorizado por Comunidad Aut&oacute;noma}</td>
+                        <td>Publicado en B.O.E.</td>
+                    </tr>
+                    <tr>
+                        <td>Detalle</td>
+                        <td>Additional remarks or contextual information about the program’s discontinuation</td>
+                        <td>String</td>
+                        <td>{(TITULACIÓN RENOVADA), (TITULACIÓN RENOVADA POR ACREDITACIÓN INSTITUCIONAL), (TITULACIÓN
+                            EXTINGUIDA)}</td>
+                        <td>(TITULACIÓN EXTINGUIDA)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h3>Licensing</h3>
+            <p><strong>Publisher:</strong> Registro de Universidades, Centros y Títulos (RUCT)</p>
+            <p><strong>Rightsholder:</strong> Ministerio de Ciencia, Innovación y Universidades</p>
+            <p><strong>License:</strong> <a href="https://www.boe.es/boe/dias/2008/09/25/pdfs/A38854-38857.pdf">Carácter
+                    público y de registro administrativo</a></p>
+
+            <h3>Source</h3>
+            <p><strong>URL:</strong> <a href="https://www.educacion.gob.es/ruct/consultaestudios.action?actual=estudios"
+                    target="_blank">
+                    Sección títulos - Estudios</a></p>
+        </section>
 
         <section id="resource-naming">
             <h2>3) Resource Naming Strategy</h2>
