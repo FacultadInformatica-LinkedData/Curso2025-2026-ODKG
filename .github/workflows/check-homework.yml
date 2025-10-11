@@ -3,6 +3,8 @@ name: Check Homework Report
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - 'Assignment4/**'
 
 jobs:
   verify-report:
