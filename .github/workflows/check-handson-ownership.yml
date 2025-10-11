@@ -3,6 +3,8 @@ name: Enforce HandsOn Folder Ownership
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - 'HandsOn/**'
 
 jobs:
   check-folder-ownership:
@@ -29,49 +31,47 @@ jobs:
             fi
           done
 
-      - name: Find added or deleted files
+      - name: Get changed files
         id: files
         run: |
           BASE=${{ github.event.pull_request.base.ref }}
           git fetch origin $BASE --depth=1
-          CHANGED_FILES=$(git diff --name-only --diff-filter=AD origin/$BASE)
+          CHANGED_FILES=$(git diff --name-only --diff-filter=ACMRT origin/$BASE)
           echo "$CHANGED_FILES"
-          # Save as multi-line output
           {
             echo "files<<EOF"
             echo "$CHANGED_FILES"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Verify changes are in user's group folder
+      - name: Validate changes
         run: |
-          INVALID_CHANGES=()
-
+          INVALID=()
           for f in ${{ steps.files.outputs.files }}; do
             # Only check files under HandsOn/GroupXX/
             if [[ "$f" =~ ^HandsOn/Group[0-9]{2}/ ]]; then
-              # Extract root group directory
               ROOT_DIR=$(echo "$f" | cut -d'/' -f1-2)
               README="$ROOT_DIR/README.md"
 
-              if [ -f "$README" ]; then
-                if ! grep -q "$PR_USER" "$README"; then
-                  INVALID_CHANGES+=("$f")
-                fi
-              else
-                # Missing README.md
-                INVALID_CHANGES+=("$f")
+              if [ ! -f "$README" ]; then
+                echo "FAIL: Missing $README"
+                INVALID+=("$f")
+                continue
+              fi
+
+              if ! grep -q "$PR_USER" "$README"; then
+                echo "FAIL: $PR_USER not found in $README"
+                INVALID+=("$f")
               fi
             fi
-            # Files outside HandsOn/GroupXX/ are ignored
           done
 
-          if [ ${#INVALID_CHANGES[@]} -gt 0 ]; then
-            echo "Unauthorized file changes detected in:"
-            for f in "${INVALID_CHANGES[@]}"; do
+          if [ ${#INVALID[@]} -gt 0 ]; then
+            echo "Unauthorized or invalid file changes detected:"
+            for f in "${INVALID[@]}"; do
               echo " - $f"
             done
             exit 1
           else
-            echo "All changes are within user's group folder."
+            echo "PASS: All changes are valid and authorized."
           fi
