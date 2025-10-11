@@ -1,0 +1,50 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix gtfs:  <https://vocab.gtfs.org/terms#> .
+@prefix ex:    <http://group06.linkeddata.es/resource/> .
+
+#################################################################
+# User
+#################################################################
+
+ex:user_A a foaf:Person ;
+    foaf:nick "UserA" ;
+    ex:ranking 3 ;
+    ex:score 42.0 .
+
+#################################################################
+# GTFS route / stop / trip / stoptime (from schedule)
+#################################################################
+
+ex:route_94022H1 a gtfs:Route ;
+    gtfs:routeShortName "94022H1" ;
+    gtfs:routeLongName "Boadilla del Monte – Estación Boadilla Centro" .
+
+ex:stop_boadilla_centro a gtfs:Stop ;
+    rdfs:label "Estación Boadilla Centro"@es .
+
+ex:trip_94022H1_0630 a gtfs:Trip ;
+    gtfs:route ex:route_94022H1 .
+
+ex:stoptime_94022H1_boadilla_0630 a gtfs:StopTime ;
+    gtfs:trip ex:trip_94022H1_0630 ;
+    gtfs:stop ex:stop_boadilla_centro ;
+    gtfs:arrivalTime "06:30:00"^^xsd:time .
+
+#################################################################
+# Guess
+#################################################################
+
+ex:guess_100 a ex:Guess ;
+    ex:madeBy ex:user_A ;
+    ex:forRoute ex:route_94022H1 ;
+    ex:atStop ex:stop_boadilla_centro ;
+    ex:basedOnStopTime ex:stoptime_94022H1_boadilla_0630 ;
+    # Suppose user guesses arrival at 06:32 on some date
+    ex:guessedArrivalTime "2025-10-07T06:32:00Z"^^xsd:dateTime ;
+    # Expected (from schedule) is 06:30
+    ex:expectedArrivalTime "06:30:00"^^xsd:time ;
+    dcterms:created "2025-10-07T06:20:00Z"^^xsd:dateTime .

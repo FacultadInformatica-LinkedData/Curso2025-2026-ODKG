@@ -1,10 +1,10 @@
-route_long_name,route_type,route_text_color,route_color,agency_id,route_id,route_url,route_desc,route_short_name
-STAZIONE CENTRALE - CROCEVERDE,3,ffffff,3A4B80,AMAT,212,,,212
-STAZIONE CENTRALE - BELMONTE CHIAVELLI,3,ffffff,023f56,AMAT,210,,,210
-STAZIONE CENTRALE - CROCEVERDE,3,ffffff,5D4864,AMAT,211,,,211
-STADIO - S. FILIPPO NERI,3,ffffff,8F4327,AMAT,662,,,662
-POLITEAMA - PARCHEGGIO FRANCIA,3,ffffff,146069,AMAT,164,,,164
-JOHN LENNON - POLITEAMA,3,ffffff,01645F,AMAT,134,,,134
-STAZIONE CENTRALE - VERGINE MARIA,3,ffffff,485C4C,AMAT,139,,,139
-STAZIONE CENTRALE - ACQUA DEI CORSARI,3,ffffff,4F3783,AMAT,225,,,225
-JOHN LENNON - S. GIOVANNI APOSTOLO,3,ffffff,6C4D50,AMAT,540,,,540
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+9__1__013_,CRTM,1,L1 CIRCULAR (FFCC-Moreras-FFCC),,3,https://www.crtm.es/9__1__013_.aspx,E60003,FFFFFF
+9__2__013_,CRTM,2,L2 CIRCULAR (FFCC-Residencia-FFCC),,3,https://www.crtm.es/9__2__013_.aspx,E60003,FFFFFF
+9__3__013_,CRTM,3,L3 CIRCULAR (FFCC-Glorieta de la Música-FFCC),,3,https://www.crtm.es/9__3__013_.aspx,E60003,FFFFFF
+9__4__013_,CRTM,4,EST. ARANJUEZ - HOSPITAL - PAU DE LA MONTAÑA,,3,https://www.crtm.es/9__4__013_.aspx,E60003,FFFFFF
+9__5__013_,CRTM,5,L5  CIRCULAR (FFCC-La Montaña-FFCC),,3,https://www.crtm.es/9__5__013_.aspx,E60003,FFFFFF
+8__421___,CRTM,421,MADRID (Legazpi)-PINTO,,3,https://www.crtm.es/8__421___.aspx,8EBF42,FFFFFF
+8__422___,CRTM,422,MADRID (Legazpi)-VALDEMORO,,3,https://www.crtm.es/8__422___.aspx,8EBF42,FFFFFF
+8__423___,CRTM,423,MADRID (Estación Sur)-ARANJUEZ,,3,https://www.crtm.es/8__423___.aspx,8EBF42,FFFFFF
+8__424___,CRTM,424,MADRID (Legazpi)-VALDEMORO (El Restón),,3,https://www.crtm.es/8__424___.aspx,8EBF42,FFFFFF

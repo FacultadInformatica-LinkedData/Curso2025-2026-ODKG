@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Prefijos según la estrategia de nombrado
+@prefix ns: <http://www.barnabikes.org/ODKG/handsOn/group10/ontology#> .
+@prefix resource: <http://www.barnabikes.org/ODKG/handsOn/group10/resource/> .
+
+
+resource:CiutatVella rdf:type ns:District ;
+    rdfs:label "Ciutat Vella" ;
+    ns:name "Ciutat Vella"^^xsd:string .
+
+resource:PasseigDeGracia rdf:type ns:Street ;
+    rdfs:label "Passeig de Gràcia" ;
+    ns:name "Passeig de Gràcia"^^xsd:string .
+
+resource:Station_45 rdf:type ns:BikingStation ;
+    rdfs:label "Estació Bicing 45 - La Rambla" ;
+    ns:hasDistrict resource:CiutatVella ;
+    ns:hasStreet resource:LaRambla .
+s
+resource:CafeModerno rdf:type ns:Bar ;
+    rdfs:label "Bar: Cafe Moderno" ;
+    ns:locatedIn resource:CiutatVella ;
+    ns:onStreet resource:PasseigDeGracia .

@@ -1,0 +1,17 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "HUBJECT_COMPATIBLE",
+    "description": "Remove column HUBJECT_COMPATIBLE"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SOURCE",
+    "description": "Remove column SOURCE"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SE_ANNO_CAD_DATA",
+    "description": "Remove column SE_ANNO_CAD_DATA"
+  }
+]

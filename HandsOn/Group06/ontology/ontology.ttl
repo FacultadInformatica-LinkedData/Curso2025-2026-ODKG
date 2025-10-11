@@ -1,0 +1,97 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gtfs: <https://vocab.gtfs.org/terms#> .
+@prefix ex: <http://group06.linkeddata.es/ontology/> .
+
+#################################################################
+# Ontology Metadata
+#################################################################
+
+<http://group06.linkeddata.es/ontology/guessing>
+    a owl:Ontology ;
+    dcterms:creator "Group 06" ;
+    rdfs:comment "Extension of GTFS for user-submitted guesses of vehicle arrival times."@en ;
+    owl:imports
+        <https://vocab.gtfs.org/terms>,
+        <http://xmlns.com/foaf/0.1/> .
+
+#################################################################
+# Classes
+#################################################################
+
+# User (reusing FOAF)
+foaf:Person a owl:Class ;
+    rdfs:label "User"@en ;
+    rdfs:comment "Represents a registered user who makes arrival time guesses."@en .
+
+# Guess (new)
+ex:Guess a owl:Class ;
+    rdfs:label "Guess"@en ;
+    rdfs:comment "A user’s prediction of the actual arrival time of a specific route at a specific stop."@en .
+
+#################################################################
+# Object Properties
+#################################################################
+
+# A guess is made by a user
+ex:madeBy a owl:ObjectProperty ;
+    rdfs:domain ex:Guess ;
+    rdfs:range foaf:Person ;
+    rdfs:comment "Connects a guess to the user who made it."@en .
+
+# A guess relates to a specific route
+ex:forRoute a owl:ObjectProperty ;
+    rdfs:domain ex:Guess ;
+    rdfs:range gtfs:Route ;
+    rdfs:comment "The route for which the user made a guess."@en .
+
+# A guess relates to a specific stop
+ex:atStop a owl:ObjectProperty ;
+    rdfs:domain ex:Guess ;
+    rdfs:range gtfs:Stop ;
+    rdfs:comment "The stop where the guessed arrival occurs."@en .
+
+# A guess may refer to a specific scheduled stop-time (GTFS)
+ex:basedOnStopTime a owl:ObjectProperty ;
+    rdfs:domain ex:Guess ;
+    rdfs:range gtfs:StopTime ;
+    rdfs:comment "Connects the guess to the corresponding scheduled stop-time entry."@en .
+
+#################################################################
+# Datatype Properties
+#################################################################
+
+# User attributes
+foaf:nick a owl:DatatypeProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:string .
+
+ex:ranking a owl:DatatypeProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The rank of the user based on performance."@en .
+
+ex:score a owl:DatatypeProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The accumulated score of the user based on guess accuracy."@en .
+
+# Guess attributes
+ex:guessedArrivalTime a owl:DatatypeProperty ;
+    rdfs:domain ex:Guess ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The time predicted by the user for the arrival."@en .
+
+ex:expectedArrivalTime a owl:DatatypeProperty ;
+    rdfs:domain ex:Guess ;
+    rdfs:range xsd:time ;
+    rdfs:comment "The scheduled arrival time from GTFS data."@en .
+
+dcterms:created a owl:DatatypeProperty ;
+    rdfs:domain ex:Guess ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The timestamp when the guess was submitted."@en .

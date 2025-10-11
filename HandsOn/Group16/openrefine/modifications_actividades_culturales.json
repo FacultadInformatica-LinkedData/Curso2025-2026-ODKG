@@ -1,0 +1,223 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "ID-EVENTO",
+    "description": "Remove column ID-EVENTO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LARGA-DURACION",
+    "description": "Remove column LARGA-DURACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DIAS-EXCLUIDOS",
+    "description": "Remove column DIAS-EXCLUIDOS"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DESCRIPCION",
+    "description": "Remove column DESCRIPCION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TITULO-ACTIVIDAD",
+    "description": "Remove column TITULO-ACTIVIDAD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "URL-ACTIVIDAD",
+    "description": "Remove column URL-ACTIVIDAD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NOMBRE-INSTALACION",
+    "description": "Remove column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ACCESIBILIDAD-INSTALACION",
+    "description": "Remove column ACCESIBILIDAD-INSTALACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CLASE-VIAL-INSTALACION",
+    "description": "Remove column CLASE-VIAL-INSTALACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NOMBRE-VIA-INSTALACION",
+    "description": "Remove column NOMBRE-VIA-INSTALACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NUM-INSTALACION",
+    "description": "Remove column NUM-INSTALACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DISTRITO-INSTALACION",
+    "description": "Remove column DISTRITO-INSTALACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "BARRIO-INSTALACION",
+    "description": "Remove column BARRIO-INSTALACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CODIGO-POSTAL-INSTALACION",
+    "description": "Remove column CODIGO-POSTAL-INSTALACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-X",
+    "description": "Remove column COORDENADA-X"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-Y",
+    "description": "Remove column COORDENADA-Y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PRECIO",
+    "description": "Remove column PRECIO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "GRATUITO",
+    "expression": "grel:if(value == \"1\", \"Gratuito\", \"No gratuito\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column GRATUITO using expression grel:if(value == \"1\", \"Gratuito\", \"No gratuito\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "FECHA",
+    "newColumnName": "FECHA-INICIO",
+    "description": "Rename column FECHA to FECHA-INICIO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FECHA-INICIO",
+    "expression": "grel:if(isNull(value), null, value.toString().split(\" \")[0])",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column FECHA-INICIO using expression grel:if(isNull(value), null, value.toString().split(\" \")[0])"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FECHA-FIN",
+    "expression": "grel:if(isNull(value), null, value.toString().split(\" \")[0])",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column FECHA-FIN using expression grel:if(isNull(value), null, value.toString().split(\" \")[0])"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DIAS-SEMANA",
+    "expression": "grel:if(\n  isNull(value),\nif(\n    cells[\"FECHA-INICIO\"].value == cells[\"FECHA-FIN\"].value ,\n    \"Un día a la semana\",\n    \"Información no disponible\"\n  ),\n  value\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DIAS-SEMANA using expression grel:if(\n  isNull(value),\nif(\n    cells[\"FECHA-INICIO\"].value == cells[\"FECHA-FIN\"].value ,\n    \"Un día a la semana\",\n    \"Información no disponible\"\n  ),\n  value\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "HORA",
+    "expression": "grel:if(isNull(value), \"informacion no disponible\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column HORA using expression grel:if(isNull(value), \"informacion no disponible\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "grel:value.split(\"/\")[-1].replace(/([A-Z])/, \" $1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIPO using expression grel:value.split(\"/\")[-1].replace(/([A-Z])/, \" $1\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AUDIENCIA",
+    "expression": "grel:value.split(\"/\")[-1].replace(/([A-Z])/, \" $1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AUDIENCIA using expression grel:value.split(\"/\")[-1].replace(/([A-Z])/, \" $1\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AUDIENCIA",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AUDIENCIA using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIPO using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIPO using expression value.toTitlecase()"
+  }
+]
