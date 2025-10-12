@@ -1,0 +1,363 @@
+[
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Universidad",
+          "expression": "value",
+          "columnName": "Universidad",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(Conjunto Internacional)",
+                "l": "(Conjunto Internacional)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Universidad",
+          "expression": "value",
+          "columnName": "Universidad",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(Conjunto)",
+                "l": "(Conjunto)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Universidad",
+          "expression": "value",
+          "columnName": "Universidad",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Varias Universidades",
+                "l": "Varias Universidades"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Detalle",
+          "expression": "value",
+          "columnName": "Detalle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(TITULACIÓN A EXTINGUIR)",
+                "l": "(TITULACIÓN A EXTINGUIR)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Detalle",
+          "expression": "value",
+          "columnName": "Detalle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(TITULACIÓN EXTINGUIDA)",
+                "l": "(TITULACIÓN EXTINGUIDA)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Universidad",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Universidad usando la expresión value.toUppercase()"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Universidad",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q875538",
+        "name": "public university"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Universidad to type Q875538"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Universidad",
+    "similarValue": "UNIVERSIDAD DE LAS PALMAS DE GRAN CANARIA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q940302",
+      "name": "University of Las Palmas de Gran Canaria",
+      "types": [
+        "Q875538",
+        "Q45400320"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento University of Las Palmas de Gran Canaria (Q940302) para las celdas que contienen \"UNIVERSIDAD DE LAS PALMAS DE GRAN CANARIA\" en la columna Universidad"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Rama",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q1047113",
+        "name": "field of study"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Rama to type Q1047113"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código",
+    "newColumnName": "Code",
+    "description": "Renombra la columna Código a Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Título",
+    "newColumnName": "Degree",
+    "description": "Renombra la columna Título a Degree"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Universidad",
+    "newColumnName": "University",
+    "description": "Renombra la columna Universidad a University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Nivel académico",
+    "newColumnName": "Academic Level",
+    "description": "Renombra la columna Nivel académico a Academic Level"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Rama",
+    "description": "Eliminar columna Rama"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ámbito",
+    "newColumnName": "Ambit",
+    "description": "Renombra la columna Ámbito a Ambit"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Estado",
+    "description": "Eliminar columna Estado"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Detalle",
+    "description": "Eliminar columna Detalle"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Academic Level",
+          "columnName": "Academic Level",
+          "query": "Doctor",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "grel:value.replace(/^(Grado).*/,\"$1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Level usando la expresión grel:value.replace(/^(Grado).*/,\"$1\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "grel:value.replace(/^(Máster).*/,\"$1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Level usando la expresión grel:value.replace(/^(Máster).*/,\"$1\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/^[Gg]raduado o Graduada\\s+en\\s+(.*?)\\s+por\\s+la\\s+Universidad\\s+de.*/,\"$1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/^[Gg]raduado o Graduada\\s+en\\s+(.*?)\\s+por\\s+la\\s+Universidad\\s+de.*/,\"$1\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/^(Máster\\s+Universitario\\s+en\\s+|Máster\\s+)(.*?)(\\s+por\\s+la\\s+Universidad.*)?$/,\"$2\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/^(Máster\\s+Universitario\\s+en\\s+|Máster\\s+)(.*?)(\\s+por\\s+la\\s+Universidad.*)?$/,\"$2\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna University usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:value + \" \" + cells[\"Degree\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Unique Identifier",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna Unique Identifier en el índice 3 basada en la columna University usando la expresión grel:value + \" \" + cells[\"Degree\"].value"
+  }
+]

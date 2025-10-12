@@ -1,0 +1,1766 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CENTRO",
+    "expression": "grel:value + \" \" + cells[\"LOCALIDAD\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "NOMBRE COMPLETO CENTRO",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna NOMBRE COMPLETO CENTRO en el índice 4 basada en la columna CENTRO usando la expresión grel:value + \" \" + cells[\"LOCALIDAD\"].value"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "description": "Vaciar las celdas en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE COMPLETO CENTRO to type null"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Escuela Politécnica Superior Huesca",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3572823",
+      "name": "Higher Polytechnic School of Huesca",
+      "types": [
+        "Q118496241"
+      ],
+      "score": 96
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Higher Polytechnic School of Huesca (Q3572823) para las celdas que contienen \"Escuela Politécnica Superior Huesca\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Ciencias de la Salud Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104176971",
+      "name": "Faculty of Health Sciences of the University of Zaragoza",
+      "types": [
+        "Q70013597"
+      ],
+      "score": 85
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Health Sciences of the University of Zaragoza (Q104176971) para las celdas que contienen \"Facultad de Ciencias de la Salud Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Escuela Universitaria de Enfermería San Jorge de Huesca Huesca",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Escuela Universitaria de Enfermería San Jorge de Huesca Huesca\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Escuela Universitaria de Enfermería de Teruel Teruel",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Escuela Universitaria de Enfermería de Teruel Teruel\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Ciencias Sociales y Humanas de Teruel Teruel",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104176988",
+      "name": "Faculty of Social and Human Sciences of Teruel",
+      "types": [
+        "Q180958"
+      ],
+      "score": 93
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Social and Human Sciences of Teruel (Q104176988) para las celdas que contienen \"Facultad de Ciencias Sociales y Humanas de Teruel Teruel\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Filosofía y Letras Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q13049019",
+      "name": "Faculty of Philosophy and Letters of the University of Zaragoza",
+      "types": [
+        "Q12011063",
+        "Q10922451"
+      ],
+      "score": 96
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Philosophy and Letters of the University of Zaragoza (Q13049019) para las celdas que contienen \"Facultad de Filosofía y Letras Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Ciencias Sociales y del Trabajo Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104177004",
+      "name": "Faculty of Social and Labor Sciences of the University of Zaragoza",
+      "types": [
+        "Q74541775"
+      ],
+      "score": 87
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Social and Labor Sciences of the University of Zaragoza (Q104177004) para las celdas que contienen \"Facultad de Ciencias Sociales y del Trabajo Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Escuela de Ingeniería y Arquitectura Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2946157",
+      "name": "School of Engineering and Architecture, University of Zaragoza",
+      "types": [
+        "Q1663017",
+        "Q845392",
+        "Q118496241",
+        "Q118496730",
+        "Q10273077"
+      ],
+      "score": 97
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento School of Engineering and Architecture, University of Zaragoza (Q2946157) para las celdas que contienen \"Escuela de Ingeniería y Arquitectura Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Veterinaria Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28745138",
+      "name": "Faculty of Veterinary Medicine of Zaragoza",
+      "types": [
+        "Q81755572"
+      ],
+      "score": 96
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Veterinary Medicine of Zaragoza (Q28745138) para las celdas que contienen \"Facultad de Veterinaria Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Ciencias de la Salud y del Deporte Huesca",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104176983",
+      "name": "Faculty of Health and Sports Sciences of Huesca",
+      "types": [
+        "Q180958",
+        "Q70013597"
+      ],
+      "score": 97
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Health and Sports Sciences of Huesca (Q104176983) para las celdas que contienen \"Facultad de Ciencias de la Salud y del Deporte Huesca\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Ciencias Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104176955",
+      "name": "Faculty of Sciences of the University of Zaragoza",
+      "types": [
+        "Q11573537"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Sciences of the University of Zaragoza (Q104176955) para las celdas que contienen \"Facultad de Ciencias Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Educación Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104177013",
+      "name": "Faculty of Education of the University of Zaragoza",
+      "types": [
+        "Q7432532"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Education of the University of Zaragoza (Q104177013) para las celdas que contienen \"Facultad de Educación Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Ciencias Humanas y de la Educación Huesca",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104176797",
+      "name": "Faculty of Human Sciences and Education of Huesca",
+      "types": [
+        "Q180958",
+        "Q7432532"
+      ],
+      "score": 97
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Human Sciences and Education of Huesca (Q104176797) para las celdas que contienen \"Facultad de Ciencias Humanas y de la Educación Huesca\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Medicina Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104176836",
+      "name": "Faculty of Medicine of the University of Zaragoza",
+      "types": [
+        "Q494230"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Medicine of the University of Zaragoza (Q104176836) para las celdas que contienen \"Facultad de Medicina Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Economía y Empresa Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104176919",
+      "name": "Faculty of Economics and Business of the University of Zaragoza",
+      "types": [
+        "Q11606401"
+      ],
+      "score": 96
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Economics and Business of the University of Zaragoza (Q104176919) para las celdas que contienen \"Facultad de Economía y Empresa Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Facultad de Derecho Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104176805",
+      "name": "Faculty of Law of the University of Zaragoza",
+      "types": [
+        "Q3488547"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Law of the University of Zaragoza (Q104176805) para las celdas que contienen \"Facultad de Derecho Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Escuela Universitaria de Turismo de Zaragoza Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q107539273",
+      "name": "Escuela Universitaria de Turismo de Zaragoza",
+      "types": [
+        "Q2385804",
+        "Q15407956"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Escuela Universitaria de Turismo de Zaragoza (Q107539273) para las celdas que contienen \"Escuela Universitaria de Turismo de Zaragoza Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Escuela Universitaria Politécnica de la Almunia de Doña Godina Almunia de Doña Godina (La)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5838998",
+      "name": "Escuela Universitaria Politécnica de La Almunia de Doña Godina",
+      "types": [
+        "Q1663017"
+      ],
+      "score": 83
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Escuela Universitaria Politécnica de La Almunia de Doña Godina (Q5838998) para las celdas que contienen \"Escuela Universitaria Politécnica de la Almunia de Doña Godina Almunia de Doña Godina (La)\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Escuela Universitaria Politécnica de Teruel Teruel",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104177027",
+      "name": "Polytechnic University School of Teruel",
+      "types": [
+        "Q180958",
+        "Q118496241"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Polytechnic University School of Teruel (Q104177027) para las celdas que contienen \"Escuela Universitaria Politécnica de Teruel Teruel\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE COMPLETO CENTRO",
+          "expression": "value",
+          "columnName": "NOMBRE COMPLETO CENTRO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "similarValue": "Centro Universitario de la Defensa de Zaragoza Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q59822615",
+      "name": "Centro Universitario de la Defensa Zaragoza",
+      "types": [
+        "Q24256092"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Centro Universitario de la Defensa Zaragoza (Q59822615) para las celdas que contienen \"Centro Universitario de la Defensa de Zaragoza Zaragoza\" en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "description": "Rellenar las celdas en la columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "description": "Vaciar las celdas en la columna LOCALIDAD"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "LOCALIDAD",
+          "expression": "value",
+          "columnName": "LOCALIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q2074737",
+        "name": "municipality of Spain"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column LOCALIDAD to type Q2074737"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "LOCALIDAD",
+          "expression": "value",
+          "columnName": "LOCALIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "similarValue": "Huesca",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11967",
+      "name": "Huesca",
+      "types": [
+        "Q2074737"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Huesca (Q11967) para las celdas que contienen \"Huesca\" en la columna LOCALIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "LOCALIDAD",
+          "expression": "value",
+          "columnName": "LOCALIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "similarValue": "Zaragoza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q10305",
+      "name": "Zaragoza",
+      "types": [
+        "Q2074737"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Zaragoza (Q10305) para las celdas que contienen \"Zaragoza\" en la columna LOCALIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "LOCALIDAD",
+          "expression": "value",
+          "columnName": "LOCALIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "similarValue": "Teruel",
+    "judgment": "matched",
+    "match": {
+      "id": "Q14336",
+      "name": "Teruel",
+      "types": [
+        "Q2074737"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Teruel (Q14336) para las celdas que contienen \"Teruel\" en la columna LOCALIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "LOCALIDAD",
+          "expression": "value",
+          "columnName": "LOCALIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "similarValue": "Almunia de Doña Godina (La)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q935575",
+      "name": "La Almunia de Doña Godina",
+      "types": [
+        "Q61763947"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento La Almunia de Doña Godina (Q935575) para las celdas que contienen \"Almunia de Doña Godina (La)\" en la columna LOCALIDAD"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "description": "Rellenar las celdas en la columna LOCALIDAD"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "description": "Vaciar las celdas en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q189533",
+        "name": "academic degree"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column ESTUDIO to type Q189533"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Ciencias Ambientales",
+    "judgment": "matched",
+    "match": {
+      "id": "Q134395717",
+      "name": "Licenciatura en Ciencias Ambientales",
+      "types": [
+        "Q189533"
+      ],
+      "score": 74
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Licenciatura en Ciencias Ambientales (Q134395717) para las celdas que contienen \"Grado: Ciencias Ambientales\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Enfermería",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4838827",
+      "name": "Bachelor of Science in Nursing",
+      "types": [
+        ""
+      ],
+      "score": 45.5
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Science in Nursing (Q4838827) para las celdas que contienen \"Grado: Enfermería\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Bellas Artes",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2878277",
+      "name": "Bachelor of Fine Arts",
+      "types": [
+        "Q117146794"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Fine Arts (Q2878277) para las celdas que contienen \"Grado: Bellas Artes\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Geología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q95564761",
+      "name": "licenciatura en Ciencias Geológicas",
+      "types": [
+        "Q189533"
+      ],
+      "score": 58
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento licenciatura en Ciencias Geológicas (Q95564761) para las celdas que contienen \"Grado: Geología\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Filosofía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q50357727",
+      "name": "Licentiate in Philosophy",
+      "types": [
+        "Q189533"
+      ],
+      "score": 60
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Licentiate in Philosophy (Q50357727) para las celdas que contienen \"Grado: Filosofía\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Medicina",
+    "judgment": "matched",
+    "match": {
+      "id": "Q64869217",
+      "name": "licentiate of Medicine",
+      "types": [
+        "Q189533",
+        "Q12737077"
+      ],
+      "score": 67
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento licentiate of Medicine (Q64869217) para las celdas que contienen \"Grado: Medicina\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Filología Hispánica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q50357241",
+      "name": "degree in Hispanic philology",
+      "types": [
+        "Q189533"
+      ],
+      "score": 63
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento degree in Hispanic philology (Q50357241) para las celdas que contienen \"Grado: Filología Hispánica\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Historia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q72317748",
+      "name": "grado en historia",
+      "types": [
+        "Q189533"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento grado en historia (Q72317748) para las celdas que contienen \"Grado: Historia\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Matemáticas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q133865334",
+      "name": "Licenciatura en Ciencias Matemáticas",
+      "types": [
+        "Q189533"
+      ],
+      "score": 64
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Licenciatura en Ciencias Matemáticas (Q133865334) para las celdas que contienen \"Grado: Matemáticas\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Física",
+    "judgment": "matched",
+    "match": {
+      "id": "Q125342576",
+      "name": "bachelor's degree in Physics",
+      "types": [
+        "Q189533"
+      ],
+      "score": 89
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento bachelor's degree in Physics (Q125342576) para las celdas que contienen \"Grado: Física\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Química",
+    "judgment": "matched",
+    "match": {
+      "id": "Q53775321",
+      "name": "Bachelor of Science in Chemistry",
+      "types": [
+        "Q163727"
+      ],
+      "score": 63
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Science in Chemistry (Q53775321) para las celdas que contienen \"Grado: Química\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Odontología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1230095",
+      "name": "Doctor in dental medicine",
+      "types": [
+        "Q189533"
+      ],
+      "score": 74
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Doctor in dental medicine (Q1230095) para las celdas que contienen \"Grado: Odontología\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Derecho",
+    "judgment": "matched",
+    "match": {
+      "id": "Q69384136",
+      "name": "Bachelor's Degree in Law",
+      "types": [
+        "Q189533"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor's Degree in Law (Q69384136) para las celdas que contienen \"Grado: Derecho\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Economía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q10752757",
+      "name": "Bachelor of Economics",
+      "types": [
+        "Q163727",
+        "Q189533"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Economics (Q10752757) para las celdas que contienen \"Grado: Economía\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Ingeniería Civil",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56760985",
+      "name": "Bachelor of Science in Civil Engineering",
+      "types": [
+        "Q189533"
+      ],
+      "score": 75
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Science in Civil Engineering (Q56760985) para las celdas que contienen \"Grado: Ingeniería Civil\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Ingeniería Informática",
+    "judgment": "matched",
+    "match": {
+      "id": "Q111032178",
+      "name": "bachelor's degree in systems engineering and informatics",
+      "types": [
+        "Q163727"
+      ],
+      "score": 65
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento bachelor's degree in systems engineering and informatics (Q111032178) para las celdas que contienen \"Grado: Ingeniería Informática\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ESTUDIO",
+          "expression": "value",
+          "columnName": "ESTUDIO",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "similarValue": "Grado: Psicología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q64019347",
+      "name": "Licentiate in Psychology",
+      "types": [
+        "Q189533"
+      ],
+      "score": 62
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Licentiate in Psychology (Q64019347) para las celdas que contienen \"Grado: Psicología\" en la columna ESTUDIO"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "description": "Vaciar las celdas en la columna ESTUDIO"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ESTUDIO",
+    "description": "Rellenar las celdas en la columna ESTUDIO"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CUPO_ADJUDICACION",
+    "description": "Vaciar las celdas en la columna CUPO_ADJUDICACION"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CUPO_ADJUDICACION",
+    "description": "Rellenar las celdas en la columna CUPO_ADJUDICACION"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CURSO_ACADEMICO",
+    "newColumnName": "Academic Year",
+    "description": "Renombra la columna CURSO_ACADEMICO a Academic Year"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Year",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2023"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2023-2024"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Academic Year"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ESTUDIO",
+    "newColumnName": "Degree",
+    "description": "Renombra la columna ESTUDIO a Degree"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LOCALIDAD",
+    "newColumnName": "Locality",
+    "description": "Renombra la columna LOCALIDAD a Locality"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CENTRO",
+    "newColumnName": "Center",
+    "description": "Renombra la columna CENTRO a Center"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NOMBRE COMPLETO CENTRO",
+    "description": "Eliminar columna NOMBRE COMPLETO CENTRO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Locality",
+    "expression": "grel:\"Universidad de \" + value",
+    "onError": "set-to-blank",
+    "newColumnName": "University",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna University en el índice 3 basada en la columna Locality usando la expresión grel:\"Universidad de \" + value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Locality",
+    "description": "Eliminar columna Locality"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CUPO_ADJUDICACION",
+    "newColumnName": "Adjudication Quota",
+    "description": "Renombra la columna CUPO_ADJUDICACION a Adjudication Quota"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PRELA_CONVO_NOTA_DEF",
+    "description": "Eliminar columna PRELA_CONVO_NOTA_DEF"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NOTA_CORTE_ADJUDICACION_1",
+    "description": "Eliminar columna NOTA_CORTE_ADJUDICACION_1"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOTA_CORTE_DEFINITIVA_1",
+    "newColumnName": "Cut Off Grade",
+    "description": "Renombra la columna NOTA_CORTE_DEFINITIVA_1 a Cut Off Grade"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NOTA_CORTE_ADJUDICACION_2",
+    "description": "Eliminar columna NOTA_CORTE_ADJUDICACION_2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NOTA_CORTE_DEFINITIVA_2",
+    "description": "Eliminar columna NOTA_CORTE_DEFINITIVA_2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "FECHA_ACTUALIZACION",
+    "description": "Eliminar columna FECHA_ACTUALIZACION"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "description": "Rellenar las celdas en la columna Degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Academic Level",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna Academic Level en el índice 2 basada en la columna Degree usando la expresión grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/^Grado:\\s*(.*)$/,\"$1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/^Grado:\\s*(.*)$/,\"$1\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/^Máster:\\s*(.*)$/,\"$1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/^Máster:\\s*(.*)$/,\"$1\")"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Degree",
+          "columnName": "Degree",
+          "query": "Doctorado",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "grel:value.replace(/^(Grado):.*/,\"$1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Level usando la expresión grel:value.replace(/^(Grado):.*/,\"$1\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "grel:value.replace(/^(Máster):.*/,\"$1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Level usando la expresión grel:value.replace(/^(Máster):.*/,\"$1\")"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "description": "Rellenar las celdas en la columna Degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:value + \" \" + cells[\"Degree\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Unique Identifier",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna Unique Identifier en el índice 4 basada en la columna University usando la expresión grel:value + \" \" + cells[\"Degree\"].value"
+  }
+]

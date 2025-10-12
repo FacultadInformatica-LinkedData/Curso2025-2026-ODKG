@@ -1,0 +1,685 @@
+[
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "description": "Vaciar las celdas en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q875538",
+        "name": "public university"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column UNIVERSIDAD to type Q875538"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "similarValue": "UNIVERSIDAD DE ALMERÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1218488",
+      "name": "University of Almería",
+      "types": [
+        "Q875538",
+        "Q45400320"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento University of Almería (Q1218488) para las celdas que contienen \"UNIVERSIDAD DE ALMERÍA\" en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "similarValue": "UNIVERSIDAD DE CÁDIZ",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2000065",
+      "name": "University of Cádiz",
+      "types": [
+        "Q875538",
+        "Q45400320"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento University of Cádiz (Q2000065) para las celdas que contienen \"UNIVERSIDAD DE CÁDIZ\" en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "similarValue": "UNIVERSIDAD DE CÓRDOBA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q734010",
+      "name": "University of Córdoba",
+      "types": [
+        "Q875538",
+        "Q45400320"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento University of Córdoba (Q734010) para las celdas que contienen \"UNIVERSIDAD DE CÓRDOBA\" en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "similarValue": "UNIVERSIDAD DE GRANADA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1232180",
+      "name": "University of Granada",
+      "types": [
+        "Q875538",
+        "Q45400320",
+        "Q43229"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento University of Granada (Q1232180) para las celdas que contienen \"UNIVERSIDAD DE GRANADA\" en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "similarValue": "UNIVERSIDAD DE HUELVA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q478464",
+      "name": "University of Huelva",
+      "types": [
+        "Q875538",
+        "Q45400320"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento University of Huelva (Q478464) para las celdas que contienen \"UNIVERSIDAD DE HUELVA\" en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "similarValue": "UNIVERSIDAD DE JAÉN",
+    "judgment": "matched",
+    "match": {
+      "id": "Q573144",
+      "name": "University of Jaén",
+      "types": [
+        "Q875538",
+        "Q45400320"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento University of Jaén (Q573144) para las celdas que contienen \"UNIVERSIDAD DE JAÉN\" en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "similarValue": "UNIVERSIDAD DE MÁLAGA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q958650",
+      "name": "Universidad de Málaga",
+      "types": [
+        "Q875538",
+        "Q45400320"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Universidad de Málaga (Q958650) para las celdas que contienen \"UNIVERSIDAD DE MÁLAGA\" en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "similarValue": "UNIVERSIDAD DE SEVILLA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1229996",
+      "name": "University of Seville",
+      "types": [
+        "Q875538",
+        "Q45400320",
+        "Q96888669",
+        "Q557206"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento University of Seville (Q1229996) para las celdas que contienen \"UNIVERSIDAD DE SEVILLA\" en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UNIVERSIDAD",
+          "expression": "value",
+          "columnName": "UNIVERSIDAD",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "similarValue": "UNIVERSIDAD PABLO OLAVIDE",
+    "judgment": "matched",
+    "match": {
+      "id": "Q477988",
+      "name": "Pablo de Olavide University",
+      "types": [
+        "Q875538",
+        "Q45400320"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Pablo de Olavide University (Q477988) para las celdas que contienen \"UNIVERSIDAD PABLO OLAVIDE\" en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UNIVERSIDAD",
+    "description": "Rellenar las celdas en la columna UNIVERSIDAD"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ï»¿CURSO",
+    "newColumnName": "Academic Year",
+    "description": "Renombra la columna ï»¿CURSO a Academic Year"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Year",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2024"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2024-2025"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Academic Year"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "PETICION",
+    "newColumnName": "Petition",
+    "description": "Renombra la columna PETICION a Petition"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "UNIVERSIDAD",
+    "newColumnName": "University",
+    "description": "Renombra la columna UNIVERSIDAD a University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "GRADO",
+    "newColumnName": "Degree",
+    "description": "Renombra la columna GRADO a Degree"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CENTRO",
+    "newColumnName": "Center",
+    "description": "Renombra la columna CENTRO a Center"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ÁREA",
+    "newColumnName": "Ambit Code",
+    "description": "Renombra la columna ÁREA a Ambit Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "GENERAL",
+    "newColumnName": "General",
+    "description": "Renombra la columna GENERAL a General"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TITULADOS",
+    "newColumnName": "Graduates",
+    "description": "Renombra la columna TITULADOS a Graduates"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MAYORES 25",
+    "description": "Eliminar columna MAYORES 25"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MAYORES 40",
+    "description": "Eliminar columna MAYORES 40"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MAYORES 45",
+    "description": "Eliminar columna MAYORES 45"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Graduates",
+    "description": "Eliminar columna Graduates"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "General",
+    "description": "Eliminar columna General"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna University usando la expresión value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna University usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Petition",
+    "newColumnName": "Code",
+    "description": "Renombra la columna Petition a Code"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:value + \" \" + cells[\"Code\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "Unique Identifier",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna Unique Identifier en el índice 2 basada en la columna University usando la expresión grel:value + \" \" + cells[\"Code\"].value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Year",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Year usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Year",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Year usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna University usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna University usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unique Identifier",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Unique Identifier usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unique Identifier",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Unique Identifier usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Code",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Code usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Code",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Code usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Center",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Center usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Center",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Center usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit Code",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ambit Code usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit Code",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ambit Code usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  }
+]
