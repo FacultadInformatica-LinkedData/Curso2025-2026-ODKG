@@ -38,7 +38,7 @@ for s, p, o in g:
 ontology = Namespace("http://www.oeg-upm.net/Ontology#")
 person = Namespace("http://oeg.fi.upm.es/def/people#")
 
-# Bind the namespaces to the graph
+
 g.bind("ontology", ontology)
 g.bind("person", person)
 
@@ -59,7 +59,7 @@ taxonomy = {
     'InterimAssociateProfessor': 'AssociateProfessor'
 }
 
-# Aggiungo le classi al grafo
+
 for cls, parent in taxonomy.items():
     cls_uri = person[cls]
     g.add((cls_uri, RDF.type, RDFS.Class))
@@ -143,18 +143,17 @@ r.validate_task_06_03(g)
 vcard = Namespace("http://www.w3.org/2001/vcard-rdf/3.0/")
 foaf = Namespace("http://xmlns.com/foaf/0.1/")
 
-# Aggiungo i namespace al grafo
+
 g.namespace_manager.bind('vcard', vcard)
 g.namespace_manager.bind('foaf', foaf)
 
-# Aggiungo le proprietà per Oscar usando le proprietà target
-# Email usando FOAF.email
+
 g.add((data.Oscar, foaf.email, Literal("oscar@example.com", datatype=XSD.string)))
 
-# Given name usando VCARD.Given
+
 g.add((data.Oscar, vcard.Given, Literal("Oscar", datatype=XSD.string)))
 
-# Family name usando VCARD.Family
+
 g.add((data.Oscar, vcard.Family, Literal("Garcia", datatype=XSD.string)))
 # Visualize the results
 for s, p, o in g:
