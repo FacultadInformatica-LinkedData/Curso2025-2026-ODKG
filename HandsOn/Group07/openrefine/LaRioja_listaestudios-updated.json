@@ -1,0 +1,322 @@
+[
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Universidad",
+          "expression": "value",
+          "columnName": "Universidad",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Universidad de La Rioja",
+                "l": "Universidad de La Rioja"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Detalle",
+          "expression": "value",
+          "columnName": "Detalle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(TITULACIÓN EXTINGUIDA)",
+                "l": "(TITULACIÓN EXTINGUIDA)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Título",
+    "expression": "grel:value.replace(/ o Graduada/, \"\").replace(/ por la Universidad.*/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Título using expression grel:value.replace(/ o Graduada/, \"\").replace(/ por la Universidad.*/, \"\")"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Nivel académico",
+          "expression": "value",
+          "columnName": "Nivel académico",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Doctor - RD 99/2011 (0)",
+                "l": "Doctor - RD 99/2011 (0)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Nivel académico",
+          "expression": "value",
+          "columnName": "Nivel académico",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Grado - RD 1393/2007 (1)",
+                "l": "Grado - RD 1393/2007 (1)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Nivel académico",
+    "expression": "grel:value.substring(0,5)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Nivel académico using expression grel:value.substring(0,5)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Nivel académico",
+          "expression": "value",
+          "columnName": "Nivel académico",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Máster - RD 1393/2007 (1)",
+                "l": "Máster - RD 1393/2007 (1)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Nivel académico",
+    "expression": "grel:value.substring(0,6)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Nivel académico using expression grel:value.substring(0,6)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Nivel académico",
+          "expression": "value",
+          "columnName": "Nivel académico",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Máster",
+                "l": "Máster"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Título",
+    "expression": "grel:value.replace(/Máster Universitario en /, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Título using expression grel:value.replace(/Máster Universitario en /, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Nivel académico",
+          "expression": "value",
+          "columnName": "Nivel académico",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Grado",
+                "l": "Grado"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Título",
+    "expression": "grel:value.replace(/Graduado en/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Título using expression grel:value.replace(/Graduado en/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Nivel académico",
+          "expression": "value",
+          "columnName": "Nivel académico",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Grado",
+                "l": "Grado"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Título",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Título using expression value.trim()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Rama",
+    "newColumnName": "Ambit",
+    "description": "Rename column Rama to Ambit"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Nivel académico",
+    "newColumnName": "Academic Level",
+    "description": "Rename column Nivel académico to Academic Level"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Universidad",
+    "newColumnName": "University",
+    "description": "Rename column Universidad to University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Título",
+    "newColumnName": "Degree",
+    "description": "Rename column Título to Degree"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código",
+    "newColumnName": "Code",
+    "description": "Rename column Código to Code"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ámbito",
+    "description": "Remove column Ámbito"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Estado",
+    "description": "Remove column Estado"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Detalle",
+    "description": "Remove column Detalle"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Code",
+    "expression": "grel:\"2024-2025\"",
+    "onError": "set-to-blank",
+    "newColumnName": "Academic Year",
+    "columnInsertIndex": 1,
+    "description": "Create column Academic Year at index 1 based on column Code using expression grel:\"2024-2025\""
+  }
+]
