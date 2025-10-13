@@ -31,6 +31,9 @@ jobs:
             fi
           done
 
+      - name: Fetch PR merge ref
+        run: git fetch origin +refs/pull/${{ github.event.pull_request.number }}/merge:pr-merge
+
       - name: Get changed files
         id: files
         run: |
