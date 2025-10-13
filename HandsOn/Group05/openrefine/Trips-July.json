@@ -1,0 +1,320 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "fecha",
+    "description": "Eliminar columna fecha"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "idTrip",
+    "expression": "grel:row.index",
+    "onError": "set-to-blank",
+    "newColumnName": "row_number",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna row_number en el índice 1 basada en la columna idTrip usando la expresión grel:row.index"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "row_number",
+          "expression": "grel:value % 2 == 0",
+          "columnName": "row_number",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "row_number",
+    "description": "Eliminar columna row_number"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "fleet",
+    "description": "Eliminar columna fleet"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "grel:value.split(\":\")[2].split(\",\")[1].replace(\"}\",\"\").replace(\"]\",\"\").toNumber()",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_y",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna Unlock_Coor_y en el índice 4 basada en la columna geolocation_unlock usando la expresión grel:value.split(\":\")[2].split(\",\")[1].replace(\"}\",\"\").replace(\"]\",\"\").toNumber()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "grel:value.split(\":\")[2].split(\",\")[0].replace(\"[\",\"\").toNumber()",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_x",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna Unlock_Coor_x en el índice 4 basada en la columna geolocation_unlock usando la expresión grel:value.split(\":\")[2].split(\",\")[0].replace(\"[\",\"\").toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unlock_Coor_x",
+    "description": "Eliminar columna Unlock_Coor_x"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unlock_Coor_y",
+    "description": "Eliminar columna Unlock_Coor_y"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "grel:value.split(\":\")[2].split(\",\")[1].replace(\"}\",\"\").replace(\"]\",\"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_y",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna Unlock_Coor_y en el índice 4 basada en la columna geolocation_unlock usando la expresión grel:value.split(\":\")[2].split(\",\")[1].replace(\"}\",\"\").replace(\"]\",\"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "grel:value.split(\":\")[2].split(\",\")[0].replace(\"[\",\"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_x",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna Unlock_Coor_x en el índice 4 basada en la columna geolocation_unlock usando la expresión grel:value.split(\":\")[2].split(\",\")[0].replace(\"[\",\"\").trim()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "geolocation_unlock",
+    "description": "Eliminar columna geolocation_unlock"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_lock",
+    "expression": "grel:value.split(\":\")[2].split(\",\")[1].replace(\"}\",\"\").replace(\"]\",\"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Lock_Coor_y",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna Lock_Coor_y en el índice 10 basada en la columna geolocation_lock usando la expresión grel:value.split(\":\")[2].split(\",\")[1].replace(\"}\",\"\").replace(\"]\",\"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_lock",
+    "expression": "grel:value.split(\":\")[2].split(\",\")[0].replace(\"[\",\"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Lock_Coor_x",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna Lock_Coor_x en el índice 10 basada en la columna geolocation_lock usando la expresión grel:value.split(\":\")[2].split(\",\")[0].replace(\"[\",\"\").trim()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "geolocation_lock",
+    "description": "Eliminar columna geolocation_lock"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "unlock_station_name",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q2221906",
+        "name": "geographic location"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column unlock_station_name to type Q2221906"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "unlock_station_name",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "UL-Station-WikiData",
+    "columnInsertIndex": 16,
+    "description": "Crear la columna UL-Station-WikiData en el índice 16 basada en la columna unlock_station_name usando la expresión cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "unlock_station_name",
+    "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+    "onError": "set-to-blank",
+    "newColumnName": "UL-Station-WikiData-URI",
+    "columnInsertIndex": 16,
+    "description": "Crear la columna UL-Station-WikiData-URI en el índice 16 basada en la columna unlock_station_name usando la expresión if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "UL-Station-WikiData-URI",
+    "index": 17,
+    "description": "Mueve la columna UL-Station-WikiData-URI a la posición 17"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "lock_station_name",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q2221906",
+        "name": "geographic location"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column lock_station_name to type Q2221906"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lock_station_name",
+    "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+    "onError": "set-to-blank",
+    "newColumnName": "L-Station-WikiData-URI",
+    "columnInsertIndex": 21,
+    "description": "Crear la columna L-Station-WikiData-URI en el índice 21 basada en la columna lock_station_name usando la expresión if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lock_station_name",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "L-Station-WikiData",
+    "columnInsertIndex": 21,
+    "description": "Crear la columna L-Station-WikiData en el índice 21 basada en la columna lock_station_name usando la expresión cell.recon.match.id"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "station_lock",
+    "index": 22,
+    "description": "Mueve la columna station_lock a la posición 22"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "dock_lock",
+    "index": 22,
+    "description": "Mueve la columna dock_lock a la posición 22"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "station_unlock",
+    "index": 14,
+    "description": "Mueve la columna station_unlock a la posición 14"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "station_unlock",
+    "index": 15,
+    "description": "Mueve la columna station_unlock a la posición 15"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "station_unlock",
+    "index": 16,
+    "description": "Mueve la columna station_unlock a la posición 16"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "station_unlock",
+    "index": 17,
+    "description": "Mueve la columna station_unlock a la posición 17"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "dock_unlock",
+    "index": 14,
+    "description": "Mueve la columna dock_unlock a la posición 14"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "dock_unlock",
+    "index": 15,
+    "description": "Mueve la columna dock_unlock a la posición 15"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "dock_unlock",
+    "index": 16,
+    "description": "Mueve la columna dock_unlock a la posición 16"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "dock_unlock",
+    "index": 17,
+    "description": "Mueve la columna dock_unlock a la posición 17"
+  }
+]

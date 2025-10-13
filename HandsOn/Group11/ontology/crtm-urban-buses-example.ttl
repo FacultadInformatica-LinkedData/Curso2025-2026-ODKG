@@ -12,15 +12,6 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-feed:urban-gtfs-2025 a ont:FeedInfo ;
-  ont:feedPublisherName "Consorcio Regional de Transportes de Madrid (CRTM)" ;
-  ont:feedPublisherUrl <https://datos.crtm.es/datasets/357e63c2904f43aeb5d8a267a64346d8/about> ;
-  ont:feedLang "es" ;
-  ont:feedVersion "2025.10" ;
-  ont:feedStartDate "2025-10-01" ;
-  ont:feedEndDate "2026-09-30" ;
-  ont:publishedBy agency:CRTM .
-
 agency:CRTM a ont:Agency ;
   ont:agencyId "CRTM" ;
   schema:name "Consorcio Regional de Transportes de Madrid" ;
@@ -150,12 +141,6 @@ service:weekend a ont:CalendarService ;
   ont:operatesOnFriday false ;
   ont:operatesOnSaturday true ;
   ont:operatesOnSunday true .
-
-exception:christmas-2025 a ont:CalendarException ;
-  ont:date "2025-12-25"^^xsd:date ;
-  ont:exceptionType 2 ;
-  schema:name "Navidad 2025" ;
-  schema:description "Servicio suspendido/reducido por festividad." .
 
 trip:L1A-morning-1 a ont:Trip ;
   ont:tripId "L1A-M-001" ;
