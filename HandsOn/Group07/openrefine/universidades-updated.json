@@ -1,0 +1,400 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Universidad",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Universidad using expression value.trim()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Administración Educativa Responsable",
+    "description": "Remove column Administración Educativa Responsable"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Con ánimo de lucro",
+    "description": "Remove column Con ánimo de lucro"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Código postal",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Código postal using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "EMail",
+    "newColumnName": "Email",
+    "description": "Rename column EMail to Email"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Teléfono 1 using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Teléfono 1 using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Teléfono 1 using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Teléfono 1 using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "828 019 019"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "828019019"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "915 55 25 28"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "915552528"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "917 340 413"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "917340413"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "919 032 201"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "919032201"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "922 985 050"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "922985050"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "941 209 743"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "941209743"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "942 244 244"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "942244244"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "951 562 168"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "951562168"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "960 452 849"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "960452849"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Tipo disposición",
+    "description": "Remove column Tipo disposición"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fecha disposición",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Fecha disposición using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fecha publicación",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Fecha publicación using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fecha entrada en Vigor",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Fecha entrada en Vigor using expression value.toDate()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Fecha disposición",
+    "description": "Remove column Fecha disposición"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Tipo",
+          "expression": "value",
+          "columnName": "Tipo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Pública",
+                "l": "Pública"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Tipo",
+          "expression": "value",
+          "columnName": "Tipo",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Pública",
+                "l": "Pública"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  }
+]
