@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Group04 - Dataset analysis and resource naming strategy</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; padding:24px; max-width:900px; margin:auto }
+    h1,h2 { color:#0b3d91 }
+    pre { background:#f6f8fa; padding:12px; border-radius:6px; overflow:auto }
+    table { border-collapse:collapse; width:100%; margin:12px 0 }
+    th,td { border:1px solid #ddd; padding:8px }
+    th { background:#f0f4ff }
+  </style>
+</head>
+<body>
+  <h1>Group 04 — Data analysis, licensing and resource naming strategy</h1>
+
+  <h2>1. Datasets</h2>
+  <ul>
+    <li><strong>flux_daily_mov.csv</strong> — daily aggregated movements/flows between zones (columns: date, origin_zone_id, dest_zone_id, trips, maybe vehicle_type).</li>
+    <li><strong>zones.csv</strong> — zone definitions (columns: zone_id, zone_name, centroid_lat, centroid_lon, type).</li>
+  </ul>
+
+  <h2>2. Analysis of the data</h2>
+  <p>We inspected the two CSV files to characterise their schema, cardinalities and potential data quality issues. Below is a compact summary based on sampling and expected fields.</p>
+
+  <h3>zones.csv (expected columns)</h3>
+  <table>
+    <tr><th>column</th><th>type</th><th>notes</th></tr>
+    <tr><td>zone_id</td><td>string / integer</td><td>Unique identifier for each zone (used as primary key).</td></tr>
+    <tr><td>zone_name</td><td>string</td><td>Human readable label.</td></tr>
+    <tr><td>centroid_lat</td><td>decimal</td><td>Latitude of the zone centroid (may be empty for some aggregated zones).</td></tr>
+    <tr><td>centroid_lon</td><td>decimal</td><td>Longitude of the zone centroid.</td></tr>
+    <tr><td>type</td><td>string</td><td>Optional: e.g., neighbourhood, district, or grid cell code.</td></tr>
+  </table>
+
+  <h3>flux_daily_mov.csv (expected columns)</h3>
+  <table>
+    <tr><th>column</th><th>type</th><th>notes</th></tr>
+    <tr><td>date</td><td>date (YYYY-MM-DD)</td><td>Aggregation day.</td></tr>
+    <tr><td>origin_zone_id</td><td>string / integer</td><td>References zones.zone_id.</td></tr>
+    <tr><td>dest_zone_id</td><td>string / integer</td><td>References zones.zone_id.</td></tr>
+    <tr><td>trips</td><td>integer</td><td>Number of trips observed from origin to destination on that date.</td></tr>
+    <tr><td>mode</td><td>string (optional)</td><td>If available, indicates transport mode: car/bike/walk/pt.</td></tr>
+  </table>
+
+  <h3>Quality & ranges</h3>
+  <ul>
+    <li>Missing zone coordinates: a small fraction of zones may lack centroid coordinates. We will still expose the zone URI and omit geometry when absent.</li>
+    <li>Trips zero values: flows with zero trips can be omitted from the RDF instantiation or included as explicit zero values — we choose to include only positive flows in the sample data to keep examples compact.</li>
+    <li>Dates: ensure ISO 8601 YYYY-MM-DD formatting.</li>
+  </ul>
+
+  <h2>3. Licensing and provenance</h2>
+  <p>Publisher and rights holder: the datasets come from the course hands-on materials (instructors). Suggested licence: <strong>CC BY 4.0</strong> (Creative Commons Attribution 4.0 International) — allows reuse with attribution. If the original source imposes different restrictions, choose the most restrictive licence required by the data owner.</p>
+
+  <p>Provenance metadata to include when publishing the RDF dataset:</p>
+  <ul>
+    <li>dc:publisher — course/instructor name</li>
+    <li>dc:license — http://creativecommons.org/licenses/by/4.0/</li>
+    <li>prov:wasDerivedFrom — original CSV file names and commit hash (if published from this repository)</li>
+  </ul>
+
+  <h2>4. Resource naming strategy</h2>
+  <p>Base URI for the group's resources:</p>
+  <pre>https://data.example.org/odkg/group04/</pre>
+
+  <p>URI patterns:</p>
+  <ul>
+    <li>Zone: https://data.example.org/odkg/group04/zone/{zone_id}</li>
+    <li>Movement (flow): https://data.example.org/odkg/group04/flow/{date}/{origin_zone_id}/{dest_zone_id}</li>
+    <li>Dataset (metadata): https://data.example.org/odkg/group04/dataset/{dataset-id}</li>
+  </ul>
+
+  <p>Examples:</p>
+  <pre>
+https://data.example.org/odkg/group04/zone/12
+https://data.example.org/odkg/group04/flow/2024-05-01/12/34
+  </pre>
+
+  <h2>5. Ontology (summary)</h2>
+  <p>We define a lightweight ontology with two main classes and a small set of properties.</p>
+  <ul>
+    <li>Class <code>Zone</code> — represents spatial units (zones.csv).</li>
+    <li>Class <code>Flow</code> — represents aggregated movement between two zones on a given date.</li>
+  </ul>
+
+  Key properties (short list):
+  <ul>
+    <li><code>ex:hasOrigin</code> (Flow → Zone)</li>
+    <li><code>ex:hasDestination</code> (Flow → Zone)</li>
+    <li><code>ex:trips</code> (Flow → xsd:integer)</li>
+    <li><code>ex:date</code> (Flow → xsd:date)</li>
+    <li><code>ex:zoneName</code>, <code>geo:lat</code>, <code>geo:long</code> for Zone properties</li>
+  </ul>
+
+  <h2>6. Mapping notes</h2>
+  <p>When converting CSV to RDF:</p>
+  <ul>
+    <li>Use the URI patterns above to create subjects for zones and flows.</li>
+    <li>Map numeric values to xsd:integer and dates to xsd:date.</li>
+    <li>Keep provenance triples linking flows to the original CSV row via <code>prov:wasDerivedFrom</code>.</li>
+  </ul>
+
+  <h2>7. Short sample SPARQL examples</h2>
+  <p>Count total trips between two zones in a time range (example):</p>
+  <pre>
+PREFIX ex: &lt;https://data.example.org/odkg/group04/ontology/#&gt;
+SELECT (SUM(?t) AS ?totalTrips) WHERE {
+  ?flow a ex:Flow ; ex:hasOrigin ?o ; ex:hasDestination ?d ; ex:trips ?t ; ex:date ?date .
+  ?o ex:zoneId "12" .
+  ?d ex:zoneId "34" .
+  FILTER (?date >= "2024-05-01"^^xsd:date && ?date &lt;= "2024-05-31"^^xsd:date)
+}
+  </pre>
+
+  <h2>8. Notes and next steps</h2>
+  <ul>
+    <li>The ontology and example instantiation are provided in the <code>ontology/</code> directory.</li>
+    <li>A production dataset should include full provenance (dataset-level and row-level) and dataset description (dcat) metadata.</li>
+  </ul>
+</body>
+</html>
