@@ -1,0 +1,333 @@
+@prefix base: <http://crtm-urban-buses.org/opendata/handsOn/group11> .
+@prefix ont: <http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix mod: <http://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+base: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+ont:Agency a owl:Class ;
+  rdfs:label "Agency" ;
+  rdfs:subClassOf schema:Organization .
+
+ont:BusRoute a owl:Class ;
+  rdfs:label "Bus Route" ;
+  rdfs:subClassOf schema:BusRoute .
+
+ont:Trip a owl:Class ;
+  rdfs:label "Trip" ;
+  rdfs:subClassOf schema:Trip .
+
+ont:Stop a owl:Class ;
+  rdfs:label "Stop" ;
+  rdfs:subClassOf schema:Place .
+
+ont:StopTime a owl:Class ;
+  rdfs:label "Stop Time" ;
+  rdfs:subClassOf schema:Event .
+
+ont:CalendarService a owl:Class ;
+  rdfs:label "Calendar Service" ;
+  rdfs:subClassOf time:TemporalEntity .
+
+ont:Shape a owl:Class ;
+  rdfs:label "Shape" ;
+  rdfs:subClassOf schema:Geometry .
+
+[] a owl:AllDisjointClasses ;
+   owl:members ( ont:Agency ont:BusRoute ont:Trip ont:Stop ont:StopTime ont:CalendarService ont:Shape ) .
+
+ont:operatedBy a owl:ObjectProperty ;
+  rdfs:label "operated by" ;
+  rdfs:domain ont:BusRoute ;
+  rdfs:range  ont:Agency .
+
+ont:operatesRoute a owl:ObjectProperty ;
+  rdfs:label "operates route" ;
+  rdfs:domain ont:Agency ;
+  rdfs:range  ont:BusRoute ;
+  owl:inverseOf ont:operatedBy .
+
+ont:hasTrip a owl:ObjectProperty ;
+  rdfs:label "has trip" ;
+  rdfs:domain ont:BusRoute ;
+  rdfs:range  ont:Trip .
+
+ont:belongsToRoute a owl:ObjectProperty ;
+  rdfs:label "belongs to route" ;
+  rdfs:domain ont:Trip ;
+  rdfs:range  ont:BusRoute ;
+  owl:inverseOf ont:hasTrip .
+
+ont:hasStopTime a owl:ObjectProperty ;
+  rdfs:label "has stop time" ;
+  rdfs:domain ont:Trip ;
+  rdfs:range  ont:StopTime .
+
+ont:belongsToTrip a owl:ObjectProperty ;
+  rdfs:label "belongs to trip" ;
+  rdfs:domain ont:StopTime ;
+  rdfs:range  ont:Trip ;
+  owl:inverseOf ont:hasStopTime .
+
+ont:refersToStop a owl:ObjectProperty ;
+  rdfs:label "refers to stop" ;
+  rdfs:domain ont:StopTime ;
+  rdfs:range  ont:Stop .
+
+ont:parentStation a owl:ObjectProperty ;
+  rdfs:label "parent station" ;
+  rdfs:domain ont:Stop ;
+  rdfs:range  ont:Stop .
+
+ont:hasChildStop a owl:ObjectProperty ;
+  rdfs:label "has child stop" ;
+  rdfs:domain ont:Stop ;
+  rdfs:range  ont:Stop ;
+  owl:inverseOf ont:parentStation .
+
+ont:hasCalendar a owl:ObjectProperty ;
+  rdfs:label "has calendar" ;
+  rdfs:domain ont:Trip ;
+  rdfs:range  ont:CalendarService .
+
+ont:isCalendarOf a owl:ObjectProperty ;
+  rdfs:label "is calendar of" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range  ont:Trip ;
+  owl:inverseOf ont:hasCalendar .
+
+ont:hasShape a owl:ObjectProperty ;
+  rdfs:label "has shape" ;
+  rdfs:domain ont:Trip ;
+  rdfs:range  ont:Shape .
+
+ont:isShapeOf a owl:ObjectProperty ;
+  rdfs:label "is shape of" ;
+  rdfs:domain ont:Shape ;
+  rdfs:range  ont:Trip ;
+  owl:inverseOf ont:hasShape .
+
+ont:nextStop a owl:ObjectProperty ;
+  rdfs:label "next stop" ;
+  rdfs:domain ont:Stop ;
+  rdfs:range  ont:Stop .
+
+ont:agencyId a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "agency id" ;
+  rdfs:domain ont:Agency ;
+  rdfs:range xsd:string .
+
+ont:timezone a owl:DatatypeProperty ;
+  rdfs:label "timezone" ;
+  rdfs:domain ont:Agency ;
+  rdfs:range xsd:string .
+
+ont:fareUrl a owl:DatatypeProperty ;
+  rdfs:label "fare url" ;
+  rdfs:domain ont:Agency ;
+  rdfs:range xsd:anyURI .
+
+ont:routeId a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "route id" ;
+  rdfs:domain ont:BusRoute ;
+  rdfs:range xsd:string .
+
+ont:agencyId a owl:DatatypeProperty ;
+  rdfs:label "agency id" ;
+  rdfs:domain ont:BusRoute ;
+  rdfs:range xsd:string .
+
+ont:routeShortName a owl:DatatypeProperty ;
+  rdfs:label "route short name" ;
+  rdfs:domain ont:BusRoute ;
+  rdfs:range xsd:string .
+
+ont:routeLongName a owl:DatatypeProperty ;
+  rdfs:label "route long name" ;
+  rdfs:domain ont:BusRoute ;
+  rdfs:range xsd:string .
+
+ont:routeType a owl:DatatypeProperty ;
+  rdfs:label "route type" ;
+  rdfs:domain ont:BusRoute ;
+  rdfs:range xsd:integer .
+
+ont:routeColor a owl:DatatypeProperty ;
+  rdfs:label "route color" ;
+  rdfs:domain ont:BusRoute ;
+  rdfs:range xsd:string .
+
+ont:routeTextColor a owl:DatatypeProperty ;
+  rdfs:label "route text color" ;
+  rdfs:domain ont:BusRoute ;
+  rdfs:range xsd:string .
+
+ont:tripId a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "trip id" ;
+  rdfs:domain ont:Trip ;
+  rdfs:range xsd:string .
+
+ont:tripShortName a owl:DatatypeProperty ;
+  rdfs:label "trip short name" ;
+  rdfs:domain ont:Trip ;
+  rdfs:range xsd:string .
+
+ont:directionId a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "direction id" ;
+  rdfs:domain ont:Trip ;
+  rdfs:range xsd:string .
+
+ont:wheelChairAccessible a owl:DatatypeProperty ;
+  rdfs:label "wheelchair accessible" ;
+  rdfs:domain ont:Trip ;
+  rdfs:range xsd:integer .
+
+ont:arrivalTime a owl:DatatypeProperty ;
+  rdfs:label "arrival time" ;
+  rdfs:domain ont:StopTime ;
+  rdfs:range xsd:string .
+
+ont:departureTime a owl:DatatypeProperty ;
+  rdfs:label "departure time" ;
+  rdfs:domain ont:StopTime ;
+  rdfs:range xsd:string .
+
+ont:stopSequence a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "stop sequence" ;
+  rdfs:domain ont:StopTime ;
+  rdfs:range xsd:integer .
+
+ont:pickupType a owl:DatatypeProperty ;
+  rdfs:label "pickup type" ;
+  rdfs:domain ont:StopTime ;
+  rdfs:range xsd:integer .
+
+ont:dropOffType a owl:DatatypeProperty ;
+  rdfs:label "drop off type" ;
+  rdfs:domain ont:StopTime ;
+  rdfs:range xsd:integer .
+
+ont:stopShapeDistTraveled a owl:DatatypeProperty ;
+  rdfs:label "stop shape distance traveled" ;
+  rdfs:domain ont:StopTime ;
+  rdfs:range xsd:decimal .
+
+ont:stopId a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "stop id" ;
+  rdfs:domain ont:Stop ;
+  rdfs:range xsd:string .
+
+ont:stopCode a owl:DatatypeProperty ;
+  rdfs:label "stop code" ;
+  rdfs:domain ont:Stop ;
+  rdfs:range xsd:string .
+
+ont:zoneId a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "zone id" ;
+  rdfs:domain ont:Stop ;
+  rdfs:range xsd:string .
+
+ont:locationType a owl:DatatypeProperty ;
+  rdfs:label "location type" ;
+  rdfs:domain ont:Stop ;
+  rdfs:range xsd:integer .
+
+ont:wheelChairBoarding a owl:DatatypeProperty ;
+  rdfs:label "wheelchair boarding" ;
+  rdfs:domain ont:Stop ;
+  rdfs:range xsd:integer .
+
+# CalendarService
+ont:serviceId a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "service id" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:string .
+
+ont:startDate a owl:DatatypeProperty ;
+  rdfs:label "start date" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:date .
+
+ont:endDate a owl:DatatypeProperty ;
+  rdfs:label "end date" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:date .
+
+ont:operatesOnMonday a owl:DatatypeProperty ;
+  rdfs:label "operates on monday" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:boolean .
+
+ont:operatesOnTuesday a owl:DatatypeProperty ;
+  rdfs:label "operates on tuesday" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:boolean .
+
+ont:operatesOnWednesday a owl:DatatypeProperty ;
+  rdfs:label "operates on wednesday" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:boolean .
+
+ont:operatesOnThursday a owl:DatatypeProperty ;
+  rdfs:label "operates on thursday" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:boolean .
+
+ont:operatesOnFriday a owl:DatatypeProperty ;
+  rdfs:label "operates on friday" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:boolean .
+
+ont:operatesOnSaturday a owl:DatatypeProperty ;
+  rdfs:label "operates on saturday" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:boolean .
+
+ont:operatesOnSunday a owl:DatatypeProperty ;
+  rdfs:label "operates on sunday" ;
+  rdfs:domain ont:CalendarService ;
+  rdfs:range xsd:boolean .
+
+ont:shapeId a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "shape id" ;
+  rdfs:domain ont:Shape ;
+  rdfs:range xsd:string .
+
+ont:shapeSequence a owl:DatatypeProperty ;
+  rdfs:label "shape sequence" ;
+  rdfs:domain ont:Shape ;
+  rdfs:range xsd:integer .
+
+ont:shapeDistTraveled a owl:DatatypeProperty ;
+  rdfs:label "shape distance traveled" ;
+  rdfs:domain ont:Shape ;
+  rdfs:range xsd:decimal .
+
+schema:name a owl:DatatypeProperty ;
+  rdfs:range xsd:string .
+
+schema:description a owl:DatatypeProperty ;
+  rdfs:range xsd:string .
+
+schema:url a owl:DatatypeProperty ;
+  rdfs:range xsd:anyURI .
+
+schema:inLanguage a owl:DatatypeProperty ;
+  rdfs:range xsd:string .
+
+schema:telephone a owl:DatatypeProperty ;
+  rdfs:range xsd:string .
+
+geo:lat a owl:DatatypeProperty ;
+  rdfs:range xsd:decimal .
+
+geo:long a owl:DatatypeProperty ;
+  rdfs:range xsd:decimal .

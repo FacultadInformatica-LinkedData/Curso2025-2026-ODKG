@@ -1,0 +1,203 @@
+<html>
+
+    <head>
+        <title>Analysis</title>
+
+		<style>
+
+			 p {
+      			margin: 4 0 0;
+    			}
+		</style>
+    </head>
+
+    <body>
+        <div>
+            <h3>Licensing of the Data Source</h3>
+				<ul>
+					<li><b>Datasets EMT:</b></li>
+					<ul>
+						<li>Publisher: EMT Madrid.</li>
+
+						<li>Rightsholder: EMT Madrid.</li>
+						
+						<li>License: Open Data Commons Attribution License.</li>
+
+						<li>Potential License: Open Data Commons Attribution License.</li>
+					</ul>
+					<li><b>Datasets Ayuntamiento de Madrid:</b></li>
+					<ul>
+						<li>Publisher: Ayuntamiento de Madrid.</li>
+
+						<li>Rightsholder: Ayuntamiento de Madrid.</li>
+						
+						<li>License: Condiciones generales para la modalidad general de puesta a disposición de los documentos reutilizables del Ayuntamiento de Madrid.</li>
+
+						<li>Potential License: CC BY 4.0 (Attribution), with additional clauses from the general terms of the City Council.</li>
+					</ul>
+            	</ul>
+        </div>
+
+		<div>
+			<h3>Dataset analysis</h3>
+			
+            <ul>
+
+               <li>	<h3>bici_disponibilidad20221031.csv</h3>
+           				<p>Number of records in the CSV : 3640</p>
+                    <ul>
+						
+                        <li>
+                            <h4>DIA</h4>
+                            <p>Date (dd/mm/yyyy)</p>
+                            <p>This is the temporal key: it allows analyzing daily trends, seasonality, and usage peaks..</p>
+                        </li>
+                        <li>
+                            <h4>HORAS_TOTALES_USOS_BICICLETAS</h4>
+                            <p>Total accumulated hours in which the bicycles were in use during that day.</p>
+                            <p>Useful information: reflects the real usage level of the system and service intensity.</p>
+                        </li>
+                        <li>
+                            <h4>FHORAS_TOTALES_DISPONIBILIDAD_BICICLETAS_EN_ANCLAJESID</h4>
+                            <p>Total hours in which bicycles were available at the docks (waiting to be used).</p>
+                            <p>Useful information: measures system capacity, idle time, or underutilization.</p>
+                        </li>
+                        <li>
+                            <h4>TOTAL_HORAS_SERVICIO_BICICLETAS</h4>
+                            <p>Sum of the two previous fields: service time = usage time + availability time.</p>
+                            <p>Represents the “total supply” that the system offered during that day.</p>
+                        </li>
+                        <li>
+                            <h4>MEDIA_BICICLETAS_DISPONIBLES</h4>
+                            <p>Average number of bicycles available at the docks throughout the day.</p>
+                            <p>Useful information: reflects system coverage and adequacy. A drop may indicate saturation.</p>
+                        </li>
+                        <li>
+                            <h4>USOS_ABONADO_ANUAL</h4>
+                            <p>Number of uses by annual subscribers.</p>
+                            <p>Useful information: identifies frequent/local users.</p>
+                        </li>
+                        <li>
+                            <h4>USOS_ABONADO_OCASIONAL</h4>
+                            <p>Number of uses by temporary users (tourists, visitors).</p>
+                            <p>Useful information: allows comparison between tourism and resident usage.</p>
+                        </li>
+                        <li>
+                            <h4>TOTAL_USOS</h4>
+                            <p>Sum of the two previous fields.</p>
+                            <p>Main demand metric.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+						<h3>bikestationbicimad_csv.csv</h3>
+           				<p>Number of records in the CSV : 610</p>
+					<ul>
+						<li>
+                            <h4>FID</h4>
+                            <p>Internal identifier of the row (Feature ID).</p>
+                            <p>Usually comes from a GIS (Geographic Information System).</p>
+                        </li>
+						<li>
+                            <h4>Shape</h4>
+                            <p>Type of associated geometry, here always Point.</p>
+                            <p>Means that each station is represented as a point on the map.</p>
+                        </li>
+						<li>
+                            <h4>IdStation</h4>
+                            <p>Unique identifier of the station.</p>
+                            <p>Primary key used to link with other data (e.g., availability or incidents).</p>
+                        </li>
+						<li>
+                            <h4>Activate</h4>
+                            <p>Binary indicator (<code>1 = active</code>, <code>0 = inactive</code>).</p>
+                            <p>Indicates whether the station is operational.</p>
+                        </li>
+						<li>
+                            <h4>Address</h4>
+                            <p>Station address.</p>
+                            <p>Textual information, useful for geolocation or joining with other street/neighborhood datasets.</p>
+                        </li>
+						<li>
+                            <h4>DockBikes</h4>
+                            <p>Number of bikes currently docked at the station.</p>
+                            <p>Represents the “available supply” in real time.</p>
+                        </li>
+						<li>
+                            <h4>FreeBases</h4>
+                            <p>Number of free docks at the station.</p>
+                            <p>Indicates available capacity for returning bikes.</p>
+                        </li>
+						<li>
+                            <h4>PosicionST</h4>
+                            <p>Original coordinates as a string (<code>long lat</code>).</p>
+                            <p>Redundant since you already have <code>POINT_X</code> and <code>POINT_Y</code>, but useful for debugging.</p>
+                        </li>
+						<li>
+                            <h4>Ligth</h4>
+                            <p>Station light/signal status.</p>
+                            <p>Usually represents service state:</p>
+							<ul>
+								<li><code>0</code> = Free</li>
+								<li><code>1</code> = Busy</li>
+								<li><code>2</code> = Closed / Maintenance</li>
+							</ul>
+                        </li>
+						<li>
+                            <h4>Name</h4>
+                            <p>Station name.</p>
+  							<p>Example: “2 - Metro Callao”. Useful for maps or reports.</p>
+                        </li>
+						<li>
+                            <h4>NoAvailabl</h4>
+                            <p>Boolean/numeric indicator showing if the station is completely out of service (<code>0 = available</code>, <code>1 = not available</code>).</p>
+                        </li>
+						<li>
+                            <h4>number</h4>
+                            <p>Another identifier (shorter than <code>IdStation</code>, e.g., “2” in “2 - Metro Callao”).</p>
+                            <p>Can be used as a user-visible code.</p>
+                        </li>
+						<li>
+                            <h4>TotalBases</h4>
+                            <p>Total capacity of the station = <code>DockBikes + FreeBases</code>.</p>
+                            <p>Shows the size of each station.</p>
+                        </li>
+						<li>
+                            <h4>POINT_X / POINT_Y</h4>
+                            <p>Numeric coordinates in decimal format (longitude, latitude).</p>
+                            <p>Cleaner than <code>PosicionST</code> for plotting or using in GIS systems.</p>
+                        </li>
+
+
+					</ul>
+                </li>
+
+            </ul>
+
+		</div>
+
+        <div>
+            <h3>Resource naming strategy</h3>
+
+            <h4>Namespaces</h4>
+            <p>
+                <strong>Ontology namespace:</strong> <code>http://example.org/ns#</code> (prefix <code>ns:</code>) for classes and predicates.<br>
+                <strong>Instance namespace:</strong> <code>http://example.org/resource/</code> (prefix <code>ex:</code>) for individuals.
+            </p>
+
+            <h4>Entity Naming</h4>
+            <p>Each entity has a URI combining a readable type name and a unique identifier or label:</p>
+            <pre><code>http://example.org/resource/[EntityType]_[IdentifierOrName]</code></pre>
+
+            <table border="1">
+                <tr><th>Entity</th><th>Example URI</th></tr>
+                <tr><td>Trip</td><td><code>ex:Trip_52863628Z_7265_2022-01-01T01:46:23</code></td></tr>
+                <tr><td>Bicycle</td><td><code>ex:Bike7265</code></td></tr>
+                <tr><td>Station</td><td><code>ex:Station_MuseoReinaSofia</code></td></tr>
+                <tr><td>Address</td><td><code>ex:Address_AntonMartin</code></td></tr>
+            </table>
+        </div>
+
+    </body>
+
+</html>

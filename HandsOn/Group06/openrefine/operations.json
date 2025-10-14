@@ -1,0 +1,221 @@
+[
+  {
+    "op": "core/column-removal",
+    "description": "Remove column stop_headsign",
+    "columnName": "stop_headsign"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column shape_dist_traveled",
+    "columnName": "shape_dist_traveled"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column pickup_type",
+    "columnName": "pickup_type"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column drop_off_type",
+    "columnName": "drop_off_type"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column departure_time",
+    "columnName": "departure_time"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column trip_headsign based on column trip_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "trip_headsign",
+    "columnInsertIndex": 6,
+    "baseColumnName": "trip_id",
+    "expression": "grel:cell.cross('trips','trip_id').cells['trip_headsign'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column direction_id based on column trip_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "direction_id",
+    "columnInsertIndex": 7,
+    "baseColumnName": "trip_id",
+    "expression": "grel:cell.cross('trips','trip_id').cells['direction_id'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column route_id based on column trip_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "route_id",
+    "columnInsertIndex": 8,
+    "baseColumnName": "trip_id",
+    "expression": "grel:cell.cross('trips','trip_id').cells['route_id'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column route_short_name based on column route_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "route_short_name",
+    "columnInsertIndex": 9,
+    "baseColumnName": "route_id",
+    "expression": "grel:cell.cross('routes','route_id').cells['route_short_name'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column route_long_name based on column route_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "route_long_name",
+    "columnInsertIndex": 10,
+    "baseColumnName": "route_id",
+    "expression": "grel:cell.cross('routes','route_id').cells['route_long_name'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column stop_name based on column stop_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "stop_name",
+    "columnInsertIndex": 11,
+    "baseColumnName": "stop_id",
+    "expression": "grel:cell.cross('stops','stop_id').cells['stop_name'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column route_type based on column route_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "route_type",
+    "columnInsertIndex": 12,
+    "baseColumnName": "route_id",
+    "expression": "grel:cell.cross('routes','route_id').cells['route_type'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column stop_lat based on column stop_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "stop_lat",
+    "columnInsertIndex": 13,
+    "baseColumnName": "stop_id",
+    "expression": "grel:cell.cross('GTFS_stops','stop_id').cells['stop_lat'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column stop_lon based on column stop_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "stop_lon",
+    "columnInsertIndex": 14,
+    "baseColumnName": "stop_id",
+    "expression": "grel:cell.cross('GTFS_stops','stop_id').cells['stop_lon'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column wheelchair_boarding based on column stop_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "wheelchair_boarding",
+    "columnInsertIndex": 15,
+    "baseColumnName": "stop_id",
+    "expression": "grel:cell.cross('GTFS_stops','stop_id').cells['wheelchair_boarding'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Trim leading and trailing whitespace in all textual columns",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "*",
+    "expression": "grel:value.trim()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Convert stop_lat to number",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "stop_lat",
+    "expression": "grel:value.toNumber()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Convert stop_lon to number",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "stop_lon",
+    "expression": "grel:value.toNumber()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Convert stop_sequence to number",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "stop_sequence",
+    "expression": "grel:value.toNumber()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-reorder",
+    "description": "Keep only relevant columns in correct order",
+    "columnNames": [
+      "trip_id",
+      "route_id",
+      "trip_headsign",
+      "direction_id",
+      "route_short_name",
+      "route_long_name",
+      "route_type",
+      "stop_id",
+      "stop_name",
+      "stop_lat",
+      "stop_lon",
+      "arrival_time",
+      "stop_sequence",
+      "wheelchair_boarding"
+    ]
+  }
+]

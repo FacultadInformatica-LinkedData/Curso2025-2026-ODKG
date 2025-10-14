@@ -1,0 +1,108 @@
+name: Check Homework Report
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'Assignment4/**'
+
+jobs:
+  verify-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install rdflib
+
+      - name: Find and run Python script from PR
+        id: run_script
+        run: |
+          PR=${{ github.event.pull_request.number }}
+          BASE=${{ github.event.pull_request.base.ref }}
+
+          # Fetch the merge commit for the PR
+          git fetch origin pull/$PR/merge:pr-merge
+          git fetch origin $BASE --depth=1
+
+          # List only newly added Python files compared to base
+          FILES=$(git diff --name-only --diff-filter=A origin/$BASE..pr-merge | grep '\.py$' || true)
+
+          echo "New Python files containing 'task':"
+          echo "$FILES"
+
+          # Write multi-line output safely
+          {
+            echo "files<<EOF"
+            echo "$FILES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          if [ -z "$FILES" ]; then
+            echo "No new Python files with 'task' in the name found."
+          fi
+
+          # Run each changed Python file and capture report output. Only for files called task06 and task07
+          for f in $FILES; do
+            if echo "$f" | grep -Eiq "task0*6|task0*7"; then
+              echo "Running script with task in title $f..."
+              python "$f" || {
+                echo "Script $f failed to run."
+                exit 1
+              }
+            else
+              echo "Skipping $f (not task06 or task07)."
+            fi
+          done
+
+      - name: Verify required report files exist
+        id: verify_reports
+        run: |
+          REQUIRED_REPORTS=("report_result_Task_06.txt" "report_result_Task_07.txt")
+          for report in "${REQUIRED_REPORTS[@]}"; do
+            if [ ! -f "$report" ]; then
+              echo "Missing required report: $report"
+              exit 1
+            else
+              echo "Found $report"
+            fi
+          done
+          echo "status=ok" >> $GITHUB_OUTPUT
+
+      - name: Check report for required text
+        if: steps.verify_reports.outputs.status == 'ok'
+        run: |
+          for report in report_result_Task_06.txt report_result_Task_07.txt; do
+            echo "Checking $report for any 'ERROR'..."
+            if grep -q "ERROR" "$report"; then
+              echo "Found 'ERROR' in $report!"
+              echo "----- File content -----"
+              cat "$report"
+              echo "------------------------"
+              exit 1
+            else
+              echo "No 'ERROR' found in $report."
+              echo "status=ok" >> $GITHUB_OUTPUT
+            fi
+          done
+
+      - name: Upload reports as artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-reports
+          path: |
+            report_result_Task_06.txt
+            report_result_Task_07.txt
+

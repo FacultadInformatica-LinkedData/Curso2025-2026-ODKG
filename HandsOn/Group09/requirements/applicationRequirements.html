@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Hands-on 1 · Application Requirements & Mock-ups</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
+      max-width:1280px;
+      margin:40px auto;
+      padding:0 20px;
+      line-height:1.45;
+      color:#0f172a;
+      background:#fff;
+    }
+    h1,h2{margin:0.6em 0}
+    section{margin:26px 0}
+    ul{margin:0 0 0 1.1em}
+    code{background:#f6f8fa;padding:2px 6px;border-radius:6px}
+    .foot{margin-top:28px;font-size:.92em;color:#555}
+
+    .ui-cols{display:grid;gap:20px}
+    @media (min-width: 1024px){ .ui-cols{grid-template-columns:1.35fr 1fr} }
+    .ui-card{border:1px solid #e5e7eb;background:#fff;border-radius:14px;padding:16px}
+    .ui-block{border:2px dashed #cbd5e1;border-radius:12px;background:#f8fafc;padding:16px}
+
+    .ui-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+    .ui-bar label{font-size:.92rem;color:#374151}
+    .ui-input,.ui-select{appearance:none;padding:8px 10px;border:1px solid #d1d5db;border-radius:10px;background:#fff;min-height:36px}
+
+    .ui-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 18px}
+    .ui-kpi{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px;text-align:center}
+    .ui-kpi small{display:block;color:#53627c}
+    .ui-kpi strong{display:block;font-size:1.5rem;margin-top:4px}
+
+    .ui-split{display:grid;gap:14px}
+    @media (min-width: 1100px){ .ui-split{grid-template-columns:2.2fr 1fr} }
+    .ui-panel{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px}
+
+    .ui-box{width:100%;height:340px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:10px}
+    .ui-panel .ui-box[aria-label="sparkline"]{height:200px}
+    .ui-legend{display:flex;justify-content:space-between;align-items:center;margin-top:6px;padding:8px;border-radius:10px;background:#f8fafc;border:1px solid #e5e7eb}
+    .ui-dot{width:10px;height:10px;border-radius:50%;display:inline-block;vertical-align:middle;margin-right:6px}
+    .ui-low{background:#c7d2fe}.ui-mid{background:#93c5fd}.ui-high{background:#60a5fa}
+
+    .ui-table{width:100%;border-collapse:collapse}
+    .ui-table th,.ui-table td{border-bottom:1px solid #e5e7eb;padding:8px 10px;text-align:left;font-size:.92rem}
+
+    .ui-grid2{display:grid;gap:14px}
+    @media (min-width: 1100px){ .ui-grid2{grid-template-columns:1.4fr 1fr} }
+    .ui-badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#dcfce7;color:#166534;font-size:.82rem}
+    .ui-key{display:flex;gap:16px;margin-top:8px}
+    .ui-lineA,.ui-lineB{width:22px;height:3px;border-radius:2px;background:#0ea5e9;display:inline-block}
+    .ui-lineB{background:#f59e0b}
+
+    .ui-card,.ui-panel{box-shadow:0 1px 0 rgba(16,24,40,.04)}
+    #mockups .ui-card > ul{max-width:56ch}
+  </style>
+</head>
+<body>
+
+<h1>Application Requirements & Mock-ups (Assignment 2)</h1>
+<p><strong>Scope for this deliverable:</strong> select datasets and specify the application idea with UI mock-ups.</p>
+
+<section>
+  <h2>Selected datasets</h2>
+  <ul>
+    <li><strong>Pedestrian Counting System — Monthly counts per hour:</strong> hourly pedestrian totals since 2009; joinable with sensor location data via <code>sensor_id/location_id</code>.</li>
+    <li><strong>Pedestrian Counting System — Sensor Locations:</strong> coordinates, status, and metadata for each sensor.</li>
+    <li><strong>Pedestrian Sensor Locations (Enriched):</strong> extends the original locations dataset with address-level fields (street, postcode, etc.) obtained from an API.</li>
+    <li><strong>Microclimate Sensor Locations:</strong> base dataset listing microclimate sensors with coordinates and operational status.</li>
+    <li><strong>Microclimate Sensor Locations (Enriched):</strong> adds geocoded address columns (street, city, postcode, etc.) to ease linkage with other spatial datasets.</li>
+    <li><strong>Microclimate Sensors Data:</strong> detailed environmental readings (temperature, humidity, wind, PM, noise) from each sensor, linked via <code>Device_id</code>.</li>
+    <li><strong>Public Holidays:</strong> dates of official holidays in Melbourne; used to analyse pedestrian and weather patterns on holidays vs. regular days.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Why these datasets fit the assignment (R1–R6)</h2>
+  <ul>
+    <li><strong>R1 — Smart city domain:</strong> datasets cover <em>mobility</em>, <em>environment</em> and <em>events</em> — key smart-city dimensions that interact (pedestrian movement ↔ weather ↔ holidays).</li>
+    <li><strong>R2 — CSV available:</strong> all seven datasets are downloadable or exportable in CSV format.</li>
+    <li><strong>R3 — Open license:</strong> all datasets are <em>CC BY 4.0</em> except <em>Public Holidays</em>, which is under <em>CC0 1.0</em> (public domain).</li>
+    <li><strong>R4 — Linkable:</strong> shared keys and coordinates enable joining:  
+      <code>sensor_id/location_id</code> (pedestrian data),  
+      <code>Device_id/SensorLocation</code> (microclimate),  
+      and <code>date</code> (public holidays).  
+      Enriched datasets provide address-level linkage to real-world entities.</li>
+    <li><strong>R5 — Documentation (optional):</strong> all datasets include metadata or field descriptions on their open-data portals.</li>
+    <li><strong>R6 — Multiple sources (optional):</strong> integrates data from several smart-city domains — transport, climate, and events — supporting multidimensional analytics.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Application concept</h2>
+  <p><strong>Working title:</strong> <em>Urban Dynamics Explorer (Melbourne)</em></p>
+  <p><strong>Goal:</strong> Analyse how pedestrian activity varies with weather and holidays, using linked data from sensors and public events.</p>
+
+  <h3>Concrete questions the UI should answer</h3>
+  <ul>
+    <li>How do temperature, humidity, or wind affect pedestrian activity in different city areas?</li>
+    <li>Which zones are busiest during public holidays versus regular weekdays?</li>
+    <li>Can we identify patterns of comfort or congestion based on microclimate and mobility data?</li>
+  </ul>
+
+  <h3>Minimal feature list for the prototype</h3>
+  <ul>
+    <li>Load the seven CSV datasets locally and join them by time, location, and sensor identifiers.</li>
+    <li>Filter by date, time range, or weather conditions; aggregate to show averages and peaks.</li>
+    <li>Interactive map combining pedestrian intensity and microclimate readings, with tooltips and drill-down.</li>
+    <li>Comparator view: regular day vs. public holiday or different weather conditions for the same location.</li>
+  </ul>
+</section>
+
+<section id="mockups">
+  <h2>Mock-ups (reference UI)</h2>
+
+  <div class="ui-cols">
+    <!-- VIEW 1 -->
+    <div class="ui-card">
+      <h3>View 1 — Map & Filters</h3>
+      <div class="ui-block">
+        <div class="ui-bar">
+          <label>From <input class="ui-input" type="date" value="2025-09-01"></label>
+          <label>To <input class="ui-input" type="date" value="2025-09-30"></label>
+          <label>Hour
+            <select class="ui-select">
+              <option>All day</option><option>07–10</option><option>12–15</option><option>17–20</option>
+            </select>
+          </label>
+          <label>Sensor
+            <select class="ui-select">
+              <option>All</option><option>Flinders St Station</option><option>Federation Square</option><option>Bourke St Mall</option>
+            </select>
+          </label>
+          <span><input type="checkbox" checked> Show weather / holidays</span>
+        </div>
+
+        <div class="ui-kpis">
+          <div class="ui-kpi"><small>Avg pedestrians/h</small><strong>842</strong></div>
+          <div class="ui-kpi"><small>Avg temp (°C)</small><strong>21.4</strong></div>
+          <div class="ui-kpi"><small>Sensors</small><strong>62</strong></div>
+        </div>
+
+        <div class="ui-split">
+          <div class="ui-panel">
+            <svg class="ui-box" viewBox="0 0 100 60" aria-label="map">
+              <rect x="2" y="2" width="96" height="56" rx="6" ry="6" fill="#f8fafc" stroke="#e5e7eb"/>
+              <circle cx="25" cy="40" r="3.2" fill="#60a5fa"><title>Flinders St (high)</title></circle>
+              <circle cx="48" cy="28" r="2.4" fill="#93c5fd"><title>Federation Sq (medium)</title></circle>
+              <circle cx="70" cy="18" r="1.8" fill="#c7d2fe"><title>Bourke St (low)</title></circle>
+              <polygon points="86,46 88,49 92,49 89,51 90,55 86,53 82,55 83,51 80,49 84,49" fill="#fbbf24"><title>Holiday</title></polygon>
+            </svg>
+            <div class="ui-legend">
+              <div>
+                <span class="ui-dot ui-low"></span><small>Low</small>
+                <span style="margin-left:10px" class="ui-dot ui-mid"></span><small>Medium</small>
+                <span style="margin-left:10px" class="ui-dot ui-high"></span><small>High</small>
+              </div>
+              <div><span style="font-size:.9rem">★ Holiday</span></div>
+            </div>
+          </div>
+
+          <div class="ui-panel">
+            <strong>Detail — Flinders St Station</strong>
+            <div style="margin:4px 0 2px;display:flex;gap:8px;flex-wrap:wrap">
+              <span style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;padding:2px 8px;font-size:.85rem">sensor_id: 123</span>
+              <span style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;padding:2px 8px;font-size:.85rem">avg/h: 1,120</span>
+              <span style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:999px;padding:2px 8px;font-size:.85rem">temp: 22°C</span>
+            </div>
+
+            <svg class="ui-box" viewBox="0 0 100 50" aria-label="sparkline">
+              <polyline points="0,45 10,43 20,40 30,35 40,30 50,22 60,18 70,16 80,20 90,26 100,28"
+                        fill="none" stroke="#0ea5e9" stroke-width="2"/>
+            </svg>
+
+            <table class="ui-table">
+              <thead><tr><th>Hour</th><th>Count</th><th>Temp (°C)</th></tr></thead>
+              <tbody>
+                <tr><td>17:00</td><td>1,540</td><td>23</td></tr>
+                <tr><td>18:00</td><td>1,715</td><td>22</td></tr>
+                <tr><td>19:00</td><td>1,320</td><td>21</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <ul style="margin-top:10px">
+        <li>Hover → show sensor info and weather snapshot.</li>
+        <li>Click → open side panel with hourly trends and microclimate data.</li>
+      </ul>
+    </div>
+
+    <!-- VIEW 2 -->
+    <div class="ui-card">
+      <h3>View 2 — Comparator</h3>
+      <div class="ui-block">
+        <div class="ui-bar">
+          <label>Sensor
+            <select class="ui-select">
+              <option>Flinders St</option><option>Federation Square</option>
+            </select>
+          </label>
+          <label>Regular day <input class="ui-input" type="date" value="2025-09-21"></label>
+          <label>Holiday <input class="ui-input" type="date" value="2025-09-28"></label>
+          <label>Weather condition
+            <select class="ui-select">
+              <option>All</option><option>Sunny</option><option>Rainy</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="ui-grid2">
+          <div class="ui-panel">
+            <svg class="ui-box" viewBox="0 0 100 60" aria-label="lines">
+              <line x1="6" y1="54" x2="96" y2="54" stroke="#cbd5e1"/>
+              <line x1="6" y1="6" x2="6" y2="54" stroke="#cbd5e1"/>
+              <polyline points="6,52 26,48 46,40 66,28 86,22" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+              <polyline points="6,50 26,44 46,35 66,20 86,15" fill="none" stroke="#f59e0b" stroke-width="2"/>
+            </svg>
+            <div class="ui-key">
+              <span><i class="ui-lineA"></i> Regular day</span>
+              <span><i class="ui-lineB"></i> Holiday</span>
+            </div>
+          </div>
+
+          <div class="ui-panel">
+            <strong>Summary</strong>
+            <p style="margin:8px 0"><span class="ui-badge">+18% pedestrians</span> on holidays, <span class="ui-badge">–2°C cooler</span> average temperature.</p>
+            <table class="ui-table">
+              <thead><tr><th>Metric</th><th>Regular</th><th>Holiday</th></tr></thead>
+              <tbody>
+                <tr><td>Avg/h</td><td>980</td><td>1,140</td></tr>
+                <tr><td>Peak hour</td><td>18:00</td><td>18:00</td></tr>
+                <tr><td>Avg temp (°C)</td><td>24</td><td>22</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:.9rem;color:#475569">Note: illustrative values for the mock-up.</p>
+          </div>
+        </div>
+      </div>
+
+      <ul style="margin-top:10px">
+        <li>Compare pedestrian and weather data between regular and holiday dates.</li>
+        <li>Shows relative variation in counts and temperature.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<p class="foot">This document describes the seven selected datasets and illustrates the application concept and UI mock-ups for Assignment 2.</p>
+
+</body>
+</html>

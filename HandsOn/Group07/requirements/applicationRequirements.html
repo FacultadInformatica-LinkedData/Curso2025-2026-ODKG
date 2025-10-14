@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Application Requirements — BiciMAD Linked Data App</title>
+  <style>
+    :root { --ink:#0f172a; --sub:#334155; --muted:#64748b; --line:#e2e8f0; --bg:#ffffff; --accent:#1d4ed8; }
+    * { box-sizing: border-box }
+    html,body { margin:0; padding:0; background:var(--bg); color:var(--ink); font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    main { max-width: 1100px; margin: 2.5rem auto; padding: 0 1.25rem; }
+    h1,h2 { color: var(--accent); margin: 0 0 .25rem; line-height:1.25 }
+    h3 { color: var(--sub); margin: 1.25rem 0 .25rem }
+    p { margin: .5rem 0 1rem }
+    .lede { color: var(--sub); max-width: 80ch }
+    .pill { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:.2rem .6rem; margin:.2rem .25rem 0 0; color:#64748b; font-size:.85rem }
+    .grid { display:grid; gap:1rem }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    @media (max-width:900px){ .grid.cols-2,.grid.cols-3 { grid-template-columns: 1fr } }
+    section { padding: 1.25rem 0; border-top: 1px solid var(--line); }
+    ul { margin:.25rem 0 1rem; padding-left:1.25rem }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: .95rem; }
+    .card { border:1px solid var(--line); border-radius:12px; padding:1rem; background:#fff }
+    .ok { font-weight:600; }
+    /* ---------- Wireframe styles ---------- */
+    .mockup { border:1px dashed #cbd5e1; border-radius:14px; padding:0; background:#fafafa; }
+    .chrome { border-bottom:1px dashed #cbd5e1; padding:.5rem .75rem; display:flex; align-items:center; gap:.5rem; }
+    .dot { width:.6rem; height:.6rem; border-radius:50%; border:1px solid #cbd5e1; background:#fff }
+    .bar { height:.7rem; border:1px dashed #cbd5e1; border-radius:6px; flex:1 }
+    .pane { display:grid; grid-template-columns: 300px 1fr; min-height:430px; }
+    @media (max-width:900px){ .pane { grid-template-columns: 1fr; } }
+    .left { border-right:1px dashed #cbd5e1; padding:1rem; }
+    .right { padding:1rem; }
+    .search { display:flex; gap:.5rem; margin:.25rem 0 1rem }
+    .input { flex:1; height:2.2rem; border:1px dashed #cbd5e1; border-radius:10px }
+    .btn { width:6.5rem; height:2.2rem; border:1px dashed #cbd5e1; border-radius:10px }
+    .filter { height:2rem; border:1px dashed #cbd5e1; border-radius:8px; margin:.25rem 0 }
+    .listitem { border:1px dashed #cbd5e1; border-radius:10px; padding:.5rem; margin:.5rem 0 }
+    .map { height:360px; border:2px dashed #94a3b8; border-radius:12px; display:grid; place-items:center; color:#64748b }
+    .legend { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem }
+    .legend .box { width:14px; height:14px; border:1px solid #cbd5e1; background:#fff }
+    .step { display:flex; gap:.75rem; align-items:flex-start; }
+    .step .n { width:1.6rem; height:1.6rem; border:1px solid var(--line); border-radius:999px; display:grid; place-items:center; font-size:.85rem; color:#64748b }
+    .kbd { border:1px solid var(--line); border-bottom-width:2px; padding:.05rem .35rem; border-radius:6px; background:#fff; font-size:.85rem }
+    .small { font-size:.9rem; color:#64748b; }
+    .callout { border-left:4px solid var(--accent); padding:.5rem .75rem; background:#f8fafc; border-radius:8px }
+    .tbl { width:100%; border-collapse: collapse; margin:.5rem 0 1rem }
+    .tbl th,.tbl td { border:1px solid var(--line); padding:.5rem .6rem; text-align:left; }
+    .tbl th { background:#f1f5f9; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Proposed application: <span class="ok">Linked Universities Data Explorer</span></h1>
+    <p class="lede">
+      Web application to explore, filter, and link information about university degrees in Spain, 
+      built upon CSV datasets from regional open data portals 
+      (e.g., Andalucía, Aragón, Cantabria, Castilla y León, Castilla-La Mancha, Cataluña).  
+      It enables searching universities and degrees, visualizing metadata, filtering by region or field of study, 
+      and linking CSV entities (universities, faculties, degrees, municipalities) with external knowledge graphs 
+      such as Wikidata, DBpedia, and GeoNames.
+    </p>
+  </header>
+
+  <section id="scope">
+    <h2>1) Scope and Objectives</h2>
+    <ul>
+      <li><strong>Discover</strong> available degrees and universities across Spanish regions.</li>
+      <li><strong>Consult</strong> information about each degree (university, faculty, location, credits, knowledge area, admission score).</li>
+      <li><strong>Filter</strong> by Comunidad Autónoma, university, branch of knowledge, or academic year.</li>
+      <li><strong>Link</strong> degrees and institutions with external entities (Wikidata, GeoNames, esDBpedia).</li>
+      <li><strong>Export</strong> filtered results as RDF (Turtle) and enable SPARQL queries over the generated graph.</li>
+    </ul>
+  </section>
+
+  <section id="functional">
+    <h2>2) Functional Requirements</h2>
+    <table class="tbl">
+      <thead><tr><th>ID</th><th>Description</th><th>Validation</th></tr></thead>
+      <tbody>
+        <tr><td>F1</td><td>Search universities or degrees by text (name, university, location).</td><td>At least one match appears for valid inputs.</td></tr>
+        <tr><td>F2</td><td>Filter by Comunidad Autónoma, university, or branch of knowledge.</td><td>Filters can be combined; results counter updates dynamically.</td></tr>
+        <tr><td>F3</td><td>Degree detail page with metadata and outbound Linked Data URIs (sameAs / locatedIn).</td><td>URIs are clickable and resolve to external data sources.</td></tr>
+        <tr><td>F4</td><td>Export current results to RDF (Turtle).</td><td>Download includes visible fields and linked URIs.</td></tr>
+        <tr><td>F5</td><td>Provide local SPARQL endpoint over the generated RDF graph.</td><td>At least 3 example queries return expected results.</td></tr>
+        <tr><td>F6</td><td>Map visualization with university campus markers.</td><td>Markers visible and accurately positioned via coordinates.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="nonfunctional">
+    <h2>3) Non-functional Requirements</h2>
+    <ul>
+      <li><strong>Accessibility</strong>: Contrast-compliant design, keyboard navigation (<span class="kbd">Tab</span>, <span class="kbd">Enter</span>), and alternative texts for visual content.</li>
+      <li><strong>License compliance</strong>: Respect original dataset licenses (CC-BY or equivalent) and propagate them in exported RDF.</li>
+      <li><strong>Internationalization</strong>: Interface in English; metadata fields maintain their original Spanish values.</li>
+    </ul>
+  </section>
+
+  <section id="mockups">
+    <h2>4) User Interface Mock-ups</h2>
+
+    <h3>4.1 List + Filters</h3>
+    <div class="mockup">
+      <div class="chrome"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="bar"></div></div>
+      <div class="pane">
+        <aside class="left">
+          <div class="search">
+            <div class="btn", style="width: 130px;">Degree Search</div><div class="btn">Map</div>
+          </div>
+          <div class="filter">Filter 1</div>
+          <div class="filter">Filter 2</div>
+          <div class="filter">...</div>
+          <div class="filter">Filter N</div>
+          <br><br><br>
+          <div class="btn">Apply filters</div>
+        </aside>
+        <section class="right">
+          <div class="listitem">Universidad de Zaragoza — Ingeniería Informática (2023-2024)</div>
+          <div class="listitem">Universidad de Cantabria — Derecho (2025-2026)</div>
+          <div class="listitem">Universidad de Castilla-La Mancha — Psicología (2023-2024)</div>
+          <div class="listitem">...</div>
+        </section>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Screen description</h4>
+      <p class="small">
+        The screen lists university degrees with relevant metadata.  
+        The left panel provides text search and multiple composable filters.  
+        The right panel dynamically updates the list of results.
+      </p>
+      <h4>User interactions</h4>
+      <ul>
+        <li>Apply one or more filters and observe the result count.</li>
+        <li>Scroll through the list of matching degrees.</li>
+        <li>Click a degree to view its detailed record (see 4.3).</li>
+        <li>Switch to “Map” to view geographic distribution (see 4.2).</li>
+      </ul>
+    </div>
+
+    <h3>4.2 Map</h3>
+    <div class="mockup">
+      <div class="chrome"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="bar"></div></div>
+      <div class="pane">
+        <section class="right">
+          <div class="search" style="margin-bottom:1rem; display:flex; gap:.5rem;">
+            <div class="btn">Degree Search</div>
+            <div class="btn">Map</div>
+          </div>
+          <div class="map", style="width: 900px;">Interactive map with university locations</div>
+        </section>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Screen description</h4>
+      <p class="small">
+        The map visualizes university campuses or faculties from the selected datasets.  
+        Users can pan, zoom, and click markers to view linked degree details.
+      </p>
+      <h4>User interactions</h4>
+      <ul>
+        <li>Pan and zoom to explore universities across Spain.</li>
+        <li>Click markers to open degree or university detail view.</li>
+        <li>Return to list view via “Degree Search” (see 4.1).</li>
+      </ul>
+    </div>
+
+    <h3>4.3 Degree Record</h3>
+    <div class="mockup">
+      <div class="chrome"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="bar"></div></div>
+      <div class="grid cols-2" style="padding:1rem">
+        <div class="card">
+          <h4>Universidad de Zaragoza — Ingeniería Informática</h4>
+          <p class="small">URI: <span class="mono">https://linkeduniversities.es/resource/degree/UZ_INF</span></p>
+          <table class="tbl">
+            <tr><th>University</th><td>Universidad de Zaragoza</td></tr>
+            <tr><th>Faculty</th><td>Escuela de Ingeniería y Arquitectura</td></tr>
+            <tr><th>Branch</th><td>Ingeniería y Arquitectura</td></tr>
+            <tr><th>ECTS</th><td>240</td></tr>
+            <tr><th>Campus</th><td>Zaragoza <span class="mono">&lt;https://www.wikidata.org/wiki/Q1224&gt;</span></td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <h4>Actions</h4>
+          <div class="step"><div class="n">1</div><div>Open on Map</div></div>
+          <div class="step"><div class="n">2</div><div>Export RDF (Turtle)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Screen description</h4>
+      <p class="small">
+        Displays complete information about a selected degree including its university, branch, ECTS, and links to external URIs.  
+        The page facilitates interoperability and Linked Data exploration.
+      </p>
+      <h4>User interactions</h4>
+      <ul>
+        <li>Review full degree and university metadata.</li>
+        <li>Navigate to external linked URIs (e.g., Wikidata, GeoNames).</li>
+        <li>Locate university on the map.</li>
+        <li>Export this record as RDF.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

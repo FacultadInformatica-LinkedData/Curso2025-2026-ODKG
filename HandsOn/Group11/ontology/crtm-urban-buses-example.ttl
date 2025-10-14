@@ -1,0 +1,276 @@
+@prefix ont: <http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#> .
+@prefix agency: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/> .
+@prefix route: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/> .
+@prefix trip: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/> .
+@prefix stop: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/> .
+@prefix stoptime: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stoptime/> .
+@prefix service: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/service/> .
+@prefix exception: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/exception/> .
+@prefix shape: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/shape/> .
+@prefix feed: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/feed/> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+agency:CRTM a ont:Agency ;
+  ont:agencyId "CRTM" ;
+  schema:name "Consorcio Regional de Transportes de Madrid" ;
+  schema:url <https://www.crtm.es/> ;
+  ont:timezone "Europe/Madrid" ;
+  schema:telephone "+341234567" ;
+  ont:fareUrl <https://www.crtm.es/tu-transporte-publico/tarifas-y-abonos/> ;
+  schema:inLanguage "es" .
+
+agency:AlcalaBus a ont:Agency ;
+  ont:agencyId "ALCALABUS" ;
+  schema:name "AlcalaBus (Monbus)" ;
+  schema:url <https://www.monbus.es/> ;
+  ont:timezone "Europe/Madrid" ;
+  schema:telephone "+34 918 880 021" ;
+  ont:fareUrl <https://www.crtm.es/tu-transporte-publico/tarifas-y-abonos/> ;
+  schema:inLanguage "es" .
+
+route:L1A a ont:BusRoute ;
+  ont:routeId "L1A-AH" ;
+  ont:routeShortName "L-1A" ;
+  ont:routeLongName "Circular A (Alcalá de Henares)" ;
+  ont:routeType 3 ;
+  ont:routeColor "D7263D" ;
+  ont:routeTextColor "FFFFFF" ;
+  ont:operatedBy agency:AlcalaBus ;
+  schema:description "Línea urbana circular de Alcalá de Henares (sentido A)." .
+
+route:L7 a ont:BusRoute ;
+  ont:routeId "L7-AH" ;
+  ont:routeShortName "L-7" ;
+  ont:routeLongName "El Ensanche – Nueva Alcalá" ;
+  ont:routeType 3 ;
+  ont:routeColor "0077B6" ;
+  ont:routeTextColor "FFFFFF" ;
+  ont:operatedBy agency:AlcalaBus ;
+  schema:description "Línea urbana que conecta Ensanche con Nueva Alcalá." .
+
+stop:alcala-estacion a ont:Stop ;
+  ont:stopId "AH-ST-EST" ;
+  ont:stopCode "AHEST" ;
+  schema:name "Estación Alcalá de Henares" ;
+  geo:lat "40.482600"^^xsd:decimal ;
+  geo:long "-3.360900"^^xsd:decimal ;
+  ont:zoneId "B3" ;
+  ont:locationType 1 ;
+  ont:wheelChairBoarding 1 ;
+  schema:description "Estación de cercanías y nodo de autobuses urbanos." .
+
+stop:alcala-estacion-urb-a a ont:Stop ;
+  ont:stopId "AH-ST-EST-URB-A" ;
+  ont:stopCode "AHESTU-A" ;
+  schema:name "Estación Alcalá (parada urbana A)" ;
+  geo:lat "40.482500"^^xsd:decimal ;
+  geo:long "-3.361300"^^xsd:decimal ;
+  ont:zoneId "B3" ;
+  ont:locationType 0 ;
+  ont:wheelChairBoarding 1 ;
+  ont:parentStation stop:alcala-estacion .
+
+stop:plaza-cervantes a ont:Stop ;
+  ont:stopId "AH-ST-PCER" ;
+  ont:stopCode "PCER" ;
+  schema:name "Plaza Cervantes" ;
+  geo:lat "40.482900"^^xsd:decimal ;
+  geo:long "-3.363900"^^xsd:decimal ;
+  ont:zoneId "B3" ;
+  ont:locationType 0 ;
+  ont:wheelChairBoarding 1 .
+
+stop:la-garena a ont:Stop ;
+  ont:stopId "AH-ST-GARE" ;
+  ont:stopCode "GARE" ;
+  schema:name "La Garena" ;
+  geo:lat "40.488800"^^xsd:decimal ;
+  geo:long "-3.389500"^^xsd:decimal ;
+  ont:zoneId "B3" ;
+  ont:locationType 0 ;
+  ont:wheelChairBoarding 1 .
+
+stop:ensanche a ont:Stop ;
+  ont:stopId "AH-ST-ENSA" ;
+  ont:stopCode "ENSA" ;
+  schema:name "El Ensanche" ;
+  geo:lat "40.504800"^^xsd:decimal ;
+  geo:long "-3.349800"^^xsd:decimal ;
+  ont:zoneId "B3" ;
+  ont:locationType 0 ;
+  ont:wheelChairBoarding 1 .
+
+stop:nueva-alcala a ont:Stop ;
+  ont:stopId "AH-ST-NUAL" ;
+  ont:stopCode "NUAL" ;
+  schema:name "Nueva Alcalá" ;
+  geo:lat "40.485400"^^xsd:decimal ;
+  geo:long "-3.343500"^^xsd:decimal ;
+  ont:zoneId "B3" ;
+  ont:locationType 0 ;
+  ont:wheelChairBoarding 1 .
+
+stop:plaza-cervantes ont:nextStop stop:alcala-estacion-urb-a .
+stop:alcala-estacion-urb-a ont:nextStop stop:la-garena .
+
+stop:alcala-estacion ont:hasChildStop stop:alcala-estacion-urb-a .
+
+service:weekday a ont:CalendarService ;
+  ont:serviceId "WD" ;
+  ont:startDate "2025-01-01"^^xsd:date ;
+  ont:endDate   "2025-12-31"^^xsd:date ;
+  ont:operatesOnMonday true ;
+  ont:operatesOnTuesday true ;
+  ont:operatesOnWednesday true ;
+  ont:operatesOnThursday true ;
+  ont:operatesOnFriday true ;
+  ont:operatesOnSaturday false ;
+  ont:operatesOnSunday false ;
+  ont:hasException exception:christmas-2025 .
+
+service:weekend a ont:CalendarService ;
+  ont:serviceId "WE" ;
+  ont:startDate "2025-01-01"^^xsd:date ;
+  ont:endDate   "2025-12-31"^^xsd:date ;
+  ont:operatesOnMonday false ;
+  ont:operatesOnTuesday false ;
+  ont:operatesOnWednesday false ;
+  ont:operatesOnThursday false ;
+  ont:operatesOnFriday false ;
+  ont:operatesOnSaturday true ;
+  ont:operatesOnSunday true .
+
+trip:L1A-morning-1 a ont:Trip ;
+  ont:tripId "L1A-M-001" ;
+  ont:tripShortName "Mañana 1" ;
+  ont:directionId "0" ;
+  ont:wheelChairAccessible 1 ;
+  ont:belongsToRoute route:L1A ;
+  ont:hasCalendar service:weekday ;
+  schema:description "Servicio matinal de la L-1A (circular) en Alcalá." .
+
+trip:L7-morning-1 a ont:Trip ;
+  ont:tripId "L7-M-001" ;
+  ont:tripShortName "Mañana 1" ;
+  ont:directionId "0" ;
+  ont:wheelChairAccessible 1 ;
+  ont:belongsToRoute route:L7 ;
+  ont:hasCalendar service:weekday ;
+  schema:description "Servicio de la L-7 en sentido Ensanche → Nueva Alcalá." .
+
+stoptime:L1A-1 a ont:StopTime ;
+  ont:arrivalTime "07:30:00" ;
+  ont:departureTime "07:30:00" ;
+  ont:stopSequence 1 ;
+  ont:pickupType 0 ;
+  ont:dropOffType 0 ;
+  ont:stopShapeDistTraveled "0.00"^^xsd:decimal ;
+  ont:belongsToTrip trip:L1A-morning-1 ;
+  ont:refersToStop stop:plaza-cervantes .
+
+stoptime:L1A-2 a ont:StopTime ;
+  ont:arrivalTime "07:36:00" ;
+  ont:departureTime "07:37:00" ;
+  ont:stopSequence 2 ;
+  ont:pickupType 0 ;
+  ont:dropOffType 0 ;
+  ont:stopShapeDistTraveled "1.80"^^xsd:decimal ;
+  ont:belongsToTrip trip:L1A-morning-1 ;
+  ont:refersToStop stop:alcala-estacion-urb-a .
+
+stoptime:L1A-3 a ont:StopTime ;
+  ont:arrivalTime "07:50:00" ;
+  ont:departureTime "07:50:00" ;
+  ont:stopSequence 3 ;
+  ont:pickupType 0 ;
+  ont:dropOffType 0 ;
+  ont:stopShapeDistTraveled "4.60"^^xsd:decimal ;
+  ont:belongsToTrip trip:L1A-morning-1 ;
+  ont:refersToStop stop:la-garena .
+
+stoptime:L7-1 a ont:StopTime ;
+  ont:arrivalTime "08:00:00" ;
+  ont:departureTime "08:00:00" ;
+  ont:stopSequence 1 ;
+  ont:pickupType 0 ;
+  ont:dropOffType 0 ;
+  ont:stopShapeDistTraveled "0.00"^^xsd:decimal ;
+  ont:belongsToTrip trip:L7-morning-1 ;
+  ont:refersToStop stop:ensanche .
+
+stoptime:L7-2 a ont:StopTime ;
+  ont:arrivalTime "08:08:00" ;
+  ont:departureTime "08:09:00" ;
+  ont:stopSequence 2 ;
+  ont:pickupType 0 ;
+  ont:dropOffType 0 ;
+  ont:stopShapeDistTraveled "2.10"^^xsd:decimal ;
+  ont:belongsToTrip trip:L7-morning-1 ;
+  ont:refersToStop stop:alcala-estacion-urb-a .
+
+stoptime:L7-3 a ont:StopTime ;
+  ont:arrivalTime "08:18:00" ;
+  ont:departureTime "08:18:00" ;
+  ont:stopSequence 3 ;
+  ont:pickupType 0 ;
+  ont:dropOffType 0 ;
+  ont:stopShapeDistTraveled "3.90"^^xsd:decimal ;
+  ont:belongsToTrip trip:L7-morning-1 ;
+  ont:refersToStop stop:nueva-alcala .
+
+shape:shape-L1A a ont:Shape ;
+  ont:shapeId "shape-L1A-01" ;
+  schema:description "Trayectoria simplificada de la L-1A (circular)." ;
+  ont:isShapeOf trip:L1A-morning-1 .
+
+shape:shape-L1A-pt1 a ont:Shape ;
+  ont:shapeId "shape-L1A-01" ;
+  geo:lat "40.482900"^^xsd:decimal ;
+  geo:long "-3.363900"^^xsd:decimal ;
+  ont:shapeSequence 1 ;
+  ont:shapeDistTraveled "0.00"^^xsd:decimal .
+
+shape:shape-L1A-pt2 a ont:Shape ;
+  ont:shapeId "shape-L1A-01" ;
+  geo:lat "40.482500"^^xsd:decimal ;
+  geo:long "-3.361300"^^xsd:decimal ;
+  ont:shapeSequence 2 ;
+  ont:shapeDistTraveled "1.80"^^xsd:decimal .
+
+shape:shape-L1A-pt3 a ont:Shape ;
+  ont:shapeId "shape-L1A-01" ;
+  geo:lat "40.488800"^^xsd:decimal ;
+  geo:long "-3.389500"^^xsd:decimal ;
+  ont:shapeSequence 3 ;
+  ont:shapeDistTraveled "4.60"^^xsd:decimal .
+
+shape:shape-L7 a ont:Shape ;
+  ont:shapeId "shape-L7-01" ;
+  schema:description "Trayectoria simplificada de la L-7 (Ensanche → Nueva Alcalá)." ;
+  ont:isShapeOf trip:L7-morning-1 .
+
+shape:shape-L7-pt1 a ont:Shape ;
+  ont:shapeId "shape-L7-01" ;
+  geo:lat "40.504800"^^xsd:decimal ;
+  geo:long "-3.349800"^^xsd:decimal ;
+  ont:shapeSequence 1 ;
+  ont:shapeDistTraveled "0.00"^^xsd:decimal .
+
+shape:shape-L7-pt2 a ont:Shape ;
+  ont:shapeId "shape-L7-01" ;
+  geo:lat "40.482500"^^xsd:decimal ;
+  geo:long "-3.361300"^^xsd:decimal ;
+  ont:shapeSequence 2 ;
+  ont:shapeDistTraveled "2.10"^^xsd:decimal .
+
+shape:shape-L7-pt3 a ont:Shape ;
+  ont:shapeId "shape-L7-01" ;
+  geo:lat "40.485400"^^xsd:decimal ;
+  geo:long "-3.343500"^^xsd:decimal ;
+  ont:shapeSequence 3 ;
+  ont:shapeDistTraveled "3.90"^^xsd:decimal .
+
+trip:L1A-morning-1 ont:hasShape shape:shape-L1A .
+trip:L7-morning-1  ont:hasShape shape:shape-L7 .
