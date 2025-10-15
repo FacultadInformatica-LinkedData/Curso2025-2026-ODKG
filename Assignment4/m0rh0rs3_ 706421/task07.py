@@ -1,20 +1,16 @@
 #task07.py
 # **Task 07: Querying RDF(s)**
 
-# %%
 #!pip install rdflib
 import urllib.request
 url = 'https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/refs/heads/master/Assignment4/course_materials/python/validation.py'
 urllib.request.urlretrieve(url, 'validation.py')
 github_storage = "https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/master/Assignment4/course_materials"
 
-# %%
 from validation import Report
 
-# %% [markdown]
 # First let's read the RDF file
 
-# %%
 from rdflib import Graph, Namespace, Literal
 from rdflib.namespace import RDF, RDFS
 # Do not change the name of the variables
@@ -23,11 +19,9 @@ g.namespace_manager.bind('ns', Namespace("http://somewhere#"), override=False)
 g.parse(github_storage+"/rdf/data06.ttl", format="TTL")
 report = Report()
 
-# %% [markdown]
 # **TASK 7.1a: For all classes, list each classURI. If the class belogs to another class, then list its superclass.**
 # **Do the exercise in RDFLib returning a list of Tuples: (class, superclass) called "result". If a class does not have a super class, then return None as the superclass**
 
-# %%
 # TASK 7.1a (RDFLib): result = [(classURI, superClassURI_or_None), ...]
 result = []
 
@@ -44,9 +38,9 @@ for c in sorted(classes, key=lambda x: str(x)):
 # %%
 # TO DO
 # Visualize the results
-for r in result:
+'''for r in result:
   print(r)
-
+'''
 # %%
 ## Validation: Do not remove
 report.validate_07_1a(result)
@@ -67,9 +61,10 @@ WHERE {
 ORDER BY STR(?c) ?scs
 """
 
+'''
 for r in g.query(query):
     print(r.c, r.sc)
-
+'''
 
 # %%
 ## Validation: Do not remove
@@ -105,19 +100,18 @@ for t in all_types:
 # rimuovi duplicati mantenendo ordine deterministico
 individuals = sorted(set(individuals), key=lambda x: str(x))
 
+'''
 # visualize results
 for i in individuals:
   print(i)
+'''
 
-
-# %%
 # validation. Do not remove
 report.validate_07_02a(individuals)
 
-# %% [markdown]
 # **TASK 7.2b: Repeat the same exercise in SPARQL, returning the individual URIs in a variable ?ind**
 
-# %%
+
 # TASK 7.2b (SPARQL)
 query = """
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -130,21 +124,15 @@ WHERE {
 ORDER BY STR(?ind)
 """
 
-
-# %%
-
 for r in g.query(query):
   print(r.ind)
 # Visualize the results
 
-# %%
 ## Validation: Do not remove
 report.validate_07_02b(g, query)
 
-# %% [markdown]
 # **TASK 7.3:  List the name and type of those who know Rocky (in SPARQL only). Use name and type as variables in the query**
 
-# %%
 ns = Namespace("http://oeg.fi.upm.es/def/people#")
 
 # Task 7.3
@@ -159,6 +147,7 @@ SELECT DISTINCT ?name ?type WHERE {
 """
 # TO DO
 # Visualize the results
+
 for r in g.query(query):
   print(r.name, r.type)
 
@@ -166,10 +155,8 @@ for r in g.query(query):
 ## Validation: Do not remove
 report.validate_07_03(g, query)
 
-# %% [markdown]
 # **Task 7.4: List the name of those entities who have a colleague with a dog, or that have a collegue who has a colleague who has a dog (in SPARQL). Return the results in a variable called name**
 
-# %%
 ns = Namespace("http://oeg.fi.upm.es/def/people#")
 
 # Task 7.4
@@ -199,7 +186,6 @@ for r in g.query(query):
 # TO DO
 # Visualize the results
 
-# %%
 ## Validation: Do not remove
 report.validate_07_04(g,query)
 report.save_report("_Task_07")
