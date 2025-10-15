@@ -9,40 +9,7 @@
 @prefix dbr:     <http://dbpedia.org/resource/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 
-##########################################################
-# MUNICIPALITIES
-##########################################################
 
-resource:Municipality-001 a safeschool:Municipality ;
-  dcterms:identifier "001" ;
-  safeschool:municipalityCode "001" ;
-  schema:name "Acebeda, La"@es ;
-  safeschool:municipalityName "Acebeda, La"@es .
-
-resource:Municipality-002 a safeschool:Municipality ;
-  dcterms:identifier "002" ;
-  safeschool:municipalityCode "002" ;
-  schema:name "Ajalvir"@es ;
-  safeschool:municipalityName "Ajalvir"@es .
-
-resource:Municipality-003 a safeschool:Municipality ;
-  dcterms:identifier "003" ;
-  safeschool:municipalityCode "003" ;
-  schema:name "Alameda del Valle"@es ;
-  safeschool:municipalityName "Alameda del Valle"@es .
-
-resource:Municipality-004 a safeschool:Municipality ;
-  dcterms:identifier "004" ;
-  safeschool:municipalityCode "004" ;
-  schema:name "Álamo, El"@es ;
-  safeschool:municipalityName "Álamo, El"@es .
-
-resource:Municipality-005 a safeschool:Municipality ;
-  dcterms:identifier "005" ;
-  safeschool:municipalityCode "005" ;
-  schema:name "Alcalá de Henares"@es ;
-  safeschool:municipalityName "Alcalá de Henares"@es ;
-  owl:sameAs dbr:Alcalá_de_Henares .
 
 ##########################################################
 # DISTRICTS (Madrid City)
@@ -59,33 +26,6 @@ resource:District-09 a safeschool:District ;
   safeschool:districtCode "09" ;
   schema:name "MONCLOA-ARAVACA"@es ;
   safeschool:districtName "MONCLOA-ARAVACA"@es .
-
-##########################################################
-# ROADS
-##########################################################
-
-resource:Road-M30 a safeschool:Road ;
-  dcterms:identifier "M-30" ;
-  schema:name "M-30"@es ;
-  safeschool:roadName "M-30"@es ;
-  safeschool:roadCode "M-30" .
-
-resource:Road-LopezDeHoyos a safeschool:Road ;
-  dcterms:identifier "CALLE-LOPEZ-DE-HOYOS" ;
-  schema:name "Calle López de Hoyos"@es ;
-  safeschool:roadName "López de Hoyos"@es ;
-  safeschool:inDistrict resource:District-05 .
-
-resource:Road-RioZancara a safeschool:Road ;
-  dcterms:identifier "GLORIETA-RIO-ZANCARA" ;
-  schema:name "Glorieta Río Záncara"@es ;
-  safeschool:roadName "Río Záncara"@es ;
-  safeschool:inDistrict resource:District-09 .
-
-resource:Road-PasoInferiorCostaRica a safeschool:Road ;
-  dcterms:identifier "PASO-INFERIOR-COSTA-RICA" ;
-  schema:name "Paso Inferior Costa Rica (Túnel)"@es ;
-  safeschool:roadName "Paso Inferior Costa Rica"@es .
 
 ##########################################################
 # LOCATIONS (Geographic Coordinates)
@@ -175,8 +115,6 @@ resource:EducationalCenter-28000029 a safeschool:EducationalCenter ;
   safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL, PRIMARIA Y SECUNDARIA"@es ;
   safeschool:centerTypeCode "070" ;
   safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:operationalStatus "ALTA"@es ;
-  safeschool:foundationDate "1980-09-04"^^xsd:date ;
   safeschool:streetType "CALLE"@es ;
   safeschool:streetName "Víctor Hurtado"@es ;
   safeschool:streetNumber "s/n"@es ;
@@ -187,8 +125,7 @@ resource:EducationalCenter-28000029 a safeschool:EducationalCenter ;
   safeschool:contactWebsite <http://www.educa.madrid.org/cp.sanblas.ajalvir> ;
   schema:email "cp.sanblas.ajalvir@educa.madrid.org" ;
   safeschool:contactEmail "cp.sanblas.ajalvir@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000029 ;
-  safeschool:inMunicipality resource:Municipality-002 .
+  safeschool:locatedAt resource:Location-Center-28000029 .
 
 resource:EducationalCenter-28000042 a safeschool:EducationalCenter ;
   dcterms:identifier "28000042" ;
@@ -196,10 +133,8 @@ resource:EducationalCenter-28000042 a safeschool:EducationalCenter ;
   schema:name "EL ALAMO"@es ;
   safeschool:centerName "EL ALAMO"@es ;
   safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA"@es ;
-  safeschool:centerTypeCode "014" ;
+  safeschool:centerTypeCode "14" ;
   safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:operationalStatus "ALTA"@es ;
-  safeschool:foundationDate "1900-01-01"^^xsd:date ;
   safeschool:streetType "CALLE"@es ;
   safeschool:streetName "del Río Alagón"@es ;
   safeschool:streetNumber "1"@es ;
@@ -210,8 +145,7 @@ resource:EducationalCenter-28000042 a safeschool:EducationalCenter ;
   safeschool:contactWebsite <http://www.educa.madrid.org/cp.elalamo.elalamo> ;
   schema:email "cp.elalamo.elalamo@educa.madrid.org" ;
   safeschool:contactEmail "cp.elalamo.elalamo@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000042 ;
-  safeschool:inMunicipality resource:Municipality-004 .
+  safeschool:locatedAt resource:Location-Center-28000042 .
 
 resource:EducationalCenter-28000054 a safeschool:EducationalCenter ;
   dcterms:identifier "28000054" ;
@@ -219,10 +153,8 @@ resource:EducationalCenter-28000054 a safeschool:EducationalCenter ;
   schema:name "ANTONIO DE NEBRIJA"@es ;
   safeschool:centerName "ANTONIO DE NEBRIJA"@es ;
   safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA"@es ;
-  safeschool:centerTypeCode "014" ;
+  safeschool:centerTypeCode "14" ;
   safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:operationalStatus "ALTA"@es ;
-  safeschool:foundationDate "1975-09-03"^^xsd:date ;
   safeschool:streetType "CALLE"@es ;
   safeschool:streetName "San Ignacio de Loyola"@es ;
   safeschool:streetNumber "13"@es ;
@@ -233,8 +165,7 @@ resource:EducationalCenter-28000054 a safeschool:EducationalCenter ;
   safeschool:contactWebsite <http://www.educa.madrid.org/cp.antoniodenebrija.alcala> ;
   schema:email "cp.antoniodenebrija.alcala@educa.madrid.org" ;
   safeschool:contactEmail "cp.antoniodenebrija.alcala@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000054 ;
-  safeschool:inMunicipality resource:Municipality-005 .
+  safeschool:locatedAt resource:Location-Center-28000054 .
 
 resource:EducationalCenter-28000066 a safeschool:EducationalCenter ;
   dcterms:identifier "28000066" ;
@@ -244,8 +175,6 @@ resource:EducationalCenter-28000066 a safeschool:EducationalCenter ;
   safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA"@es ;
   safeschool:centerTypeCode "014" ;
   safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:operationalStatus "ALTA"@es ;
-  safeschool:foundationDate "1975-09-03"^^xsd:date ;
   safeschool:streetType "CALLE"@es ;
   safeschool:streetName "San Juan"@es ;
   safeschool:streetNumber "2"@es ;
@@ -256,8 +185,7 @@ resource:EducationalCenter-28000066 a safeschool:EducationalCenter ;
   safeschool:contactWebsite <http://www.educa.madrid.org/cp.cardenalcisnero.alcala> ;
   schema:email "cp.cardenalcisnero.alcala@educa.madrid.org" ;
   safeschool:contactEmail "cp.cardenalcisnero.alcala@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000066 ;
-  safeschool:inMunicipality resource:Municipality-005 .
+  safeschool:locatedAt resource:Location-Center-28000066 .
 
 resource:EducationalCenter-28000078 a safeschool:EducationalCenter ;
   dcterms:identifier "28000078" ;
@@ -267,8 +195,6 @@ resource:EducationalCenter-28000078 a safeschool:EducationalCenter ;
   safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA"@es ;
   safeschool:centerTypeCode "014" ;
   safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:operationalStatus "ALTA"@es ;
-  safeschool:foundationDate "1975-09-03"^^xsd:date ;
   safeschool:streetType "CALLE"@es ;
   safeschool:streetName "Giner de los Ríos"@es ;
   safeschool:streetNumber "5"@es ;
@@ -279,8 +205,7 @@ resource:EducationalCenter-28000078 a safeschool:EducationalCenter ;
   safeschool:contactWebsite <http://www.educa.madrid.org/cp.cervantes.alcala> ;
   schema:email "cp.cervantes.alcala@educa.madrid.org" ;
   safeschool:contactEmail "cp.cervantes.alcala@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000078 ;
-  safeschool:inMunicipality resource:Municipality-005 .
+  safeschool:locatedAt resource:Location-Center-28000078 .
 
 resource:EducationalCenter-28000081 a safeschool:EducationalCenter ;
   dcterms:identifier "28000081" ;
@@ -302,8 +227,7 @@ resource:EducationalCenter-28000081 a safeschool:EducationalCenter ;
   safeschool:contactWebsite <http://www.educa.madrid.org/cp.daoizyvelarde.alcala> ;
   schema:email "cp.daoizyvelarde.alcala@educa.madrid.org" ;
   safeschool:contactEmail "cp.daoizyvelarde.alcala@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000081 ;
-  safeschool:inMunicipality resource:Municipality-005 .
+  safeschool:locatedAt resource:Location-Center-28000081 .
 
 ##########################################################
 # TRAFFIC ACCIDENTS
@@ -313,7 +237,6 @@ resource:Accident-2025S000056 a safeschool:Accident ;
   dcterms:identifier "2025S000056" ;
   safeschool:accidentId "2025S000056" ;
   schema:name "Traffic accident 2025S000056"@en ;
-  schema:startDate "2025-01-01T00:49:00"^^xsd:dateTime ;
   safeschool:occurrenceDate "2025-01-01"^^xsd:date ;
   safeschool:occurrenceTime "00:49:00"^^xsd:time ;
   safeschool:accidentType "Colisión fronto-lateral"@es ;
@@ -323,7 +246,6 @@ resource:Accident-2025S000056 a safeschool:Accident ;
   safeschool:alcoholPositive false ;
   safeschool:drugPositive false ;
   safeschool:locatedAt resource:Location-Accident-2025S000056 ;
-  safeschool:occursOnRoad resource:Road-LopezDeHoyos ;
   safeschool:inDistrict resource:District-05 ;
   safeschool:hasInvolvedParty resource:InvolvedParty-2025S000056-1 ,
                                 resource:InvolvedParty-2025S000056-2 ,
@@ -333,7 +255,6 @@ resource:Accident-2025S000057 a safeschool:Accident ;
   dcterms:identifier "2025S000057" ;
   safeschool:accidentId "2025S000057" ;
   schema:name "Traffic accident 2025S000057"@en ;
-  schema:startDate "2025-01-01T02:20:00"^^xsd:dateTime ;
   safeschool:occurrenceDate "2025-01-01"^^xsd:date ;
   safeschool:occurrenceTime "02:20:00"^^xsd:time ;
   safeschool:accidentType "Colisión lateral"@es ;
@@ -343,7 +264,6 @@ resource:Accident-2025S000057 a safeschool:Accident ;
   safeschool:alcoholPositive false ;
   safeschool:drugPositive false ;
   safeschool:locatedAt resource:Location-Accident-2025S000057 ;
-  safeschool:occursOnRoad resource:Road-RioZancara ;
   safeschool:inDistrict resource:District-09 ;
   safeschool:hasInvolvedParty resource:InvolvedParty-2025S000057-1 ,
                                 resource:InvolvedParty-2025S000057-2 .
@@ -413,9 +333,8 @@ resource:SpeedCamera-1 a safeschool:FixedSpeedCamera ;
   schema:name "Speed Camera 1 - M-30"@en ;
   safeschool:cameraType "Fijo"@es ;
   safeschool:speedLimit 90 ;
-  safeschool:kilometerPoint "0+500" ;
   safeschool:trafficDirection "Calzada interior"@es ;
-  safeschool:lane "Fijo carril 4"@es ;
+  safeschool:lane "4"@es ;
   safeschool:responsibleAuthority "DGP"@es ;
   safeschool:locationDescription "M-30, ENTRADA DE LA A-1, SENTIDO PUENTE DE VENTAS P.K. 0,500"@es ;
   safeschool:locatedAt resource:Location-Camera-1 ;
@@ -427,9 +346,8 @@ resource:SpeedCamera-2 a safeschool:FixedSpeedCamera ;
   schema:name "Speed Camera 2 - M-30"@en ;
   safeschool:cameraType "Fijo"@es ;
   safeschool:speedLimit 90 ;
-  safeschool:kilometerPoint "0+500" ;
   safeschool:trafficDirection "Calzada interior"@es ;
-  safeschool:lane "Fijo carril 5"@es ;
+  safeschool:lane "5"@es ;
   safeschool:responsibleAuthority "DGP"@es ;
   safeschool:locationDescription "M-30, ENTRADA DE LA A-1, SENTIDO PUENTE DE VENTAS P.K. 0,500"@es ;
   safeschool:locatedAt resource:Location-Camera-2 ;
@@ -454,9 +372,8 @@ resource:SpeedCamera-4 a safeschool:FixedSpeedCamera ;
   schema:name "Speed Camera 4 - M-30"@en ;
   safeschool:cameraType "Fijo"@es ;
   safeschool:speedLimit 90 ;
-  safeschool:kilometerPoint "6+700" ;
   safeschool:trafficDirection "Tronco calzada interior"@es ;
-  safeschool:lane "Fijo carril 1"@es ;
+  safeschool:lane "1"@es ;
   safeschool:responsibleAuthority "DGP"@es ;
   safeschool:locationDescription "M-30, PTE. DE VENTAS. SENTIDO SUR A O´DONNELL P.K. 6,700"@es ;
   safeschool:locatedAt resource:Location-Camera-4 ;

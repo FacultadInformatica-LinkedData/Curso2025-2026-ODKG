@@ -1,0 +1,575 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ubicacion",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Ubicacion using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Sentido",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Sentido using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Carretara o vial",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Carretara o vial using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tipo",
+    "expression": "grel:value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Tipo using expression grel:value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Sentido",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Sentido using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Sentido",
+    "expression": "grel:value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Sentido using expression grel:value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Carretara o vial",
+    "expression": "grel:value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Carretara o vial using expression grel:value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ubicacion",
+    "expression": "grel:value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Ubicacion using expression grel:value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Velocidad límite",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Velocidad límite using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Longitud inicio tramo",
+    "description": "Remove column Longitud inicio tramo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Latitud inicio tramo",
+    "description": "Remove column Latitud inicio tramo"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Nº RADAR",
+    "newColumnName": "numero_radar",
+    "description": "Rename column Nº RADAR to numero_radar"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ubicacion",
+    "newColumnName": "ubicacion",
+    "description": "Rename column Ubicacion to ubicacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Carretara o vial",
+    "newColumnName": "carretera_o_vial",
+    "description": "Rename column Carretara o vial to carretera_o_vial"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "UBICACIÓN Calle 30",
+    "newColumnName": "ubicacion_calle_30",
+    "description": "Rename column UBICACIÓN Calle 30 to ubicacion_calle_30"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "PK",
+    "newColumnName": "pk",
+    "description": "Rename column PK to pk"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Sentido",
+    "newColumnName": "sentido",
+    "description": "Rename column Sentido to sentido"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Tipo",
+    "newColumnName": "tipo",
+    "description": "Rename column Tipo to tipo"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Carril",
+    "newColumnName": "carril",
+    "description": "Rename column Carril to carril"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Longitud",
+    "newColumnName": "longitud",
+    "description": "Rename column Longitud to longitud"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Latitud",
+    "newColumnName": "latitud",
+    "description": "Rename column Latitud to latitud"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Velocidad límite",
+    "newColumnName": "velocidad_limite",
+    "description": "Rename column Velocidad límite to velocidad_limite"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Responsable",
+    "newColumnName": "responsable",
+    "description": "Rename column Responsable to responsable"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ubicacion_calle_30",
+    "description": "Remove column ubicacion_calle_30"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "pk",
+    "description": "Remove column pk"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column carril using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "carril",
+          "expression": "value",
+          "columnName": "carril",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Entrada, radar de tramo",
+                "l": "Entrada, radar de tramo"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "\"\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column carril using expression \"\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "carril",
+          "expression": "value",
+          "columnName": "carril",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Radar de tramo",
+                "l": "Radar de tramo"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "\"\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column carril using expression \"\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "carril",
+          "expression": "value",
+          "columnName": "carril",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Salida, radar de tramo",
+                "l": "Salida, radar de tramo"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "\"\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column carril using expression \"\""
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "carril",
+          "expression": "value",
+          "columnName": "carril",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fijo carril 1",
+                "l": "Fijo carril 1"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fijo carril 1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column carril"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "carril",
+          "expression": "value",
+          "columnName": "carril",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fijo carril 2",
+                "l": "Fijo carril 2"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fijo carril 2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2"
+      }
+    ],
+    "description": "Mass edit cells in column carril"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "carril",
+          "expression": "value",
+          "columnName": "carril",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fijo carril 3",
+                "l": "Fijo carril 3"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fijo carril 3"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3"
+      }
+    ],
+    "description": "Mass edit cells in column carril"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "carril",
+          "expression": "value",
+          "columnName": "carril",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fijo carril 4",
+                "l": "Fijo carril 4"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fijo carril 4"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4"
+      }
+    ],
+    "description": "Mass edit cells in column carril"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "carril",
+          "expression": "value",
+          "columnName": "carril",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fijo carril 5",
+                "l": "Fijo carril 5"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fijo carril 5"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "5"
+      }
+    ],
+    "description": "Mass edit cells in column carril"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "carril",
+          "expression": "value",
+          "columnName": "carril",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fijo multicarril",
+                "l": "Fijo multicarril"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "carril",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fijo multicarril"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Todos"
+      }
+    ],
+    "description": "Mass edit cells in column carril"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "X (WGS84)",
+    "newColumnName": "coordenada_x_utm",
+    "description": "Rename column X (WGS84) to coordenada_x_utm"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Y (WGS84)",
+    "newColumnName": "coordenada_y_utm",
+    "description": "Rename column Y (WGS84) to coordenada_y_utm"
+  }
+]
