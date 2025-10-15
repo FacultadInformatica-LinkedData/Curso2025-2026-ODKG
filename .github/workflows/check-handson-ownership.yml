@@ -1,0 +1,77 @@
+name: Enforce HandsOn Folder Ownership
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'HandsOn/**'
+
+jobs:
+  check-folder-ownership:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set PR environment variables
+        run: |
+          echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+          echo "PR_USER=${{ github.event.pull_request.user.login }}" >> $GITHUB_ENV
+
+      - name: Skip excluded users
+        run: |
+          EXCLUDED=("dgarijo" "ocorcho" "rgcmme")
+          for u in "${EXCLUDED[@]}"; do
+            if [ "$PR_USER" = "$u" ]; then
+              echo "PR user $u is excluded from checks."
+              exit 0
+            fi
+          done
+
+      - name: Get changed files
+        id: files
+        run: |
+          BASE=${{ github.event.pull_request.base.ref }}
+          git fetch origin $BASE --depth=1
+          CHANGED_FILES=$(git diff --name-only --diff-filter=ACMRT origin/$BASE..pr-merge)
+          echo "$CHANGED_FILES"
+          {
+            echo "files<<EOF"
+            echo "$CHANGED_FILES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Validate changes
+        run: |
+          INVALID=()
+          for f in ${{ steps.files.outputs.files }}; do
+            # Only check files under HandsOn/GroupXX/
+            if [[ "$f" =~ ^HandsOn/Group[0-9]{2}/ ]]; then
+              ROOT_DIR=$(echo "$f" | cut -d'/' -f1-2)
+              README="$ROOT_DIR/README.md"
+
+              if [ ! -f "$README" ]; then
+                echo "FAIL: Missing $README"
+                INVALID+=("$f")
+                continue
+              fi
+
+              if ! grep -q "$PR_USER" "$README"; then
+                echo "FAIL: $PR_USER not found in $README"
+                INVALID+=("$f")
+              fi
+            fi
+          done
+
+          if [ ${#INVALID[@]} -gt 0 ]; then
+            echo "Unauthorized or invalid file changes detected:"
+            for f in "${INVALID[@]}"; do
+              echo " - $f"
+            done
+            exit 1
+          else
+            echo "PASS: All changes are valid and authorized."
+          fi
