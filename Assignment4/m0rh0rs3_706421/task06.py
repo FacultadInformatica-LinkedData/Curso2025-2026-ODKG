@@ -1,17 +1,15 @@
 # task06.py
 # **Task 06: Modifying RDF(s)**
 
-# %%
 #!pip install rdflib
 import urllib.request
 url = 'https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/refs/heads/master/Assignment4/course_materials/python/validation.py'
 urllib.request.urlretrieve(url, 'validation.py')
 github_storage = "https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/master/Assignment4/course_materials"
 
-# %% [markdown]
 # Import RDFLib main methods
 
-# %%
+
 from rdflib import Graph, Namespace, Literal, XSD
 from rdflib.namespace import RDF, RDFS
 from validation import Report
@@ -19,19 +17,17 @@ g = Graph()
 g.namespace_manager.bind('ns', Namespace("http://somewhere#"), override=False)
 r = Report()
 
-# %% [markdown]
+
 # Create a new class named Researcher
 
-# %%
+
 ns = Namespace("http://mydomain.org#")
 g.add((ns.Researcher, RDF.type, RDFS.Class))
 for s, p, o in g:
   print(s,p,o)
 
-# %% [markdown]
 # **Task 6.0: Create new prefixes for "ontology" and "person" as shown in slide 14 of the Slidedeck 01a.RDF(s)-SPARQL shown in class.**
 
-# %%
 # this task is validated in the next step
 # TASK 6.0
 ontology = Namespace("http://oeg.fi.upm.es/def/people#")
@@ -42,11 +38,9 @@ g.namespace_manager.bind("person",   person,   override=False)
 
 
 
-# %% [markdown]
 # **TASK 6.1: Reproduce the taxonomy of classes shown in slide 34 in class (all the classes under "Vocabulario", Slidedeck: 01a.RDF(s)-SPARQL). Add labels for each of them as they are in the diagram (exactly) with no language tags. Remember adding the correct datatype (xsd:String) when appropriate**
 # 
 
-# %%
 # TASK 6.1
 
 # Classi
@@ -70,20 +64,17 @@ g.add((ontology.InterimAssociateProfessor,RDFS.label, Literal("InterimAssociateP
 g.add((ontology.FullProfessor,            RDFS.label, Literal("FullProfessor", datatype=XSD.string)))
 
 
-# %%
+
 # TO DO
 # Visualize the results
 for s, p, o in g:
   print(s,p,o)
 
-# %%
 # Validation. Do not remove
 r.validate_task_06_01(g)
 
-# %% [markdown]
 # **TASK 6.2: Add the 3 properties shown in slide 36. Add labels for each of them (exactly as they are in the slide, with no language tags), and their corresponding domains and ranges using RDFS. Remember adding the correct datatype (xsd:String) when appropriate. If a property has no range, make it a literal (string)**
 
-# %%
 # TASK 6.2
 
 # Proprietà
@@ -107,20 +98,16 @@ g.add((ontology.hasHomePage,  RDFS.domain, ontology.FullProfessor))
 g.add((ontology.hasHomePage,  RDFS.range,  RDFS.Literal))
 
 
-# %%
 # TO DO
 # Visualize the results
 for s, p, o in g:
   print(s,p,o)
 
-# %%
 # Validation. Do not remove
 r.validate_task_06_02(g)
 
-# %% [markdown]
 # **TASK 6.3: Create the individuals shown in slide 36 under "Datos". Link them with the same relationships shown in the diagram."**
 
-# %%
 # TASK 6.3
 
 # Individui (namespace "person")
@@ -145,20 +132,16 @@ g.add((asun,  ontology.hasHomePage,  Literal("https://example.org/asun", datatyp
 g.add((oscar, ontology.hasName,      Literal("Oscar", datatype=XSD.string)))
 
 
-# %%
 # TO DO
 # Visualize the results
 for s, p, o in g:
   print(s,p,o)
 
-# %%
 r.validate_task_06_03(g)
 
-# %% [markdown]
 # **TASK 6.4: Add to the individual person:Oscar the email address, given and family names. Use the properties already included in example 4 to describe Jane and John (https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/master/Assignment4/course_materials/rdf/example4.rdf). Do not import the namespaces, add them manually**
-# 
+#
 
-# %%
 # PATCH TASK 6.4 — usa FOAF email (non mbox) come in example4.rdf
 
 from rdflib import URIRef
@@ -179,13 +162,13 @@ g.add((oscar, VCARD.Family, Literal("Smith", datatype=XSD.string)))  # cambia co
 g.add((oscar, FOAF.email, Literal("oscar@example.org", datatype=XSD.string)))
 
 
-# %%
+
 # TO DO
 # Visualize the results
 for s, p, o in g:
   print(s,p,o)
 
-# %%
+
 # Validation. Do not remove
 r.validate_task_06_04(g)
 r.save_report("_Task_06")

@@ -20,7 +20,6 @@ g.parse(github_storage+"/rdf/data06.ttl", format="TTL")
 report = Report()
 
 # **TASK 7.1a: For all classes, list each classURI. If the class belogs to another class, then list its superclass.**
-# **Do the exercise in RDFLib returning a list of Tuples: (class, superclass) called "result". If a class does not have a super class, then return None as the superclass**
 
 # TASK 7.1a (RDFLib): result = [(classURI, superClassURI_or_None), ...]
 result = []
