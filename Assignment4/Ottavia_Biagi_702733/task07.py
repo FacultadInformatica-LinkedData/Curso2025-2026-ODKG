@@ -133,18 +133,63 @@ report.validate_07_02b(g, query)
 
 """**TASK 7.3:  List the name and type of those who know Rocky (in SPARQL only). Use name and type as variables in the query**"""
 
-query =  """select
-  }"""
-# TO DO
-# Visualize the results
-for r in g.query(query):
-  print(r.name, r.type)
+# TASK 7.3 (SPARQL)
+query = """
+PREFIX ns:   <http://oeg.fi.upm.es/def/people#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-## Validation: Do not remove
+SELECT ?name ?type
+WHERE {
+  ?x ns:knows ns:Rocky .
+  ?x a ?type .
+
+  OPTIONAL { ?x foaf:name ?n1 }
+  OPTIONAL { ?x rdfs:label ?n2 }
+  OPTIONAL { ?x ns:name   ?n3 }
+  BIND(COALESCE(?n1, ?n2, ?n3) AS ?name)
+}
+ORDER BY STR(?name) STR(?type)
+"""
+# Visualize
+for r in g.query(query):
+    print(r.name, r.type)
+
+# Validation (già presente nel tuo file)
 report.validate_07_03(g, query)
+
 
 """**Task 7.4: List the name of those entities who have a colleague with a dog, or that have a collegue who has a colleague who has a dog (in SPARQL). Return the results in a variable called name**"""
 
-## Validation: Do not remove
-report.validate_07_04(g,query)
-report.save_report("_Task_07")
+# TASK 7.4 (SPARQL)
+query = """
+PREFIX ns:   <http://oeg.fi.upm.es/def/people#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?name
+WHERE {
+  {
+    # collega diretto con un cane
+    ?x ns:hasColleague ?c .
+    ?dog a ns:Dog .
+    ?c ?p ?dog .
+  }
+  UNION
+  {
+    # collega-del-collega con un cane
+    ?x ns:hasColleague/ns:hasColleague ?c2 .
+    ?dog2 a ns:Dog .
+    ?c2 ?p2 ?dog2 .
+  }
+
+  OPTIONAL { ?x foaf:name ?n1 }
+  OPTIONAL { ?x rdfs:label ?n2 }
+  OPTIONAL { ?x ns:name   ?n3 }
+  BIND(COALESCE(?n1, ?n2, ?n3) AS ?name)
+}
+ORDER BY STR(?name)
+"""
+# Validation (già presente nel tuo file)
+report.validate_07_04(g, query)
+
