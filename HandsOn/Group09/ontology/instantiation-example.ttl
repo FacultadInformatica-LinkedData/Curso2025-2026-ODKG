@@ -1,0 +1,90 @@
+@prefix : <https://linked.melbourne.example/ontology/urban-sensors#> .
+@prefix us: <https://linked.melbourne.example/ontology/urban-sensors#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+#    Sensor Location 1 - Bourke Street Mall (Pedestrian Sensor)
+#################################################################
+
+:site001 a us:SensorLocation ;
+    us:siteId "1" ;
+    us:hasAddress :addr001 ;
+    schema:latitude -37.81349441 ;
+    schema:longitude 144.96515323 ;
+    schema:additionalProperty "Outdoor location, Status=A" ;
+    us:hostsSensor :sensorBou292 .
+
+:addr001 a us:StreetAddress ;
+    us:streetName "Bourke Street Mall" ;
+    us:streetNumber "280" ;
+    us:postcode "3000" ;
+    rdfs:label "280 Bourke Street Mall, Melbourne VIC 3000, Australia"@en .
+
+:sensorBou292 a us:PedestrianSensor ;
+    us:sensorId "Bou292_T" ;
+    us:installedAt :site001 ;
+    dcterms:created "2009-03-24"^^xsd:date ;
+    rdfs:label "Bourke Street Mall (North) Pedestrian Sensor"@en .
+
+#################################################################
+#    Sensor Location 2 - Flinders Street (Microclimate Sensor)
+#################################################################
+
+:site002 a us:SensorLocation ;
+    us:siteId "1008" ;
+    us:hasAddress :addr002 ;
+    schema:latitude -37.81746522 ;
+    schema:longitude 144.96705703 ;
+    schema:additionalProperty "Site active in 2021, GatewayHub=arc1045" ;
+    us:hostsSensor :sensorArc1045 .
+
+:addr002 a us:StreetAddress ;
+    us:streetName "Flinders Street" ;
+    us:streetNumber "216" ;
+    us:postcode "3000" ;
+    rdfs:label "216 Flinders Street, Melbourne VIC 3000, Australia"@en .
+
+:sensorArc1045 a us:MicroclimateSensor ;
+    us:sensorId "arc1045" ;
+    us:installedAt :site002 ;
+    dcterms:created "2021-06-14"^^xsd:date ;
+    rdfs:label "Flinders Street Microclimate Sensor"@en .
+
+#################################################################
+#    Observation - Pedestrian Count (Fra118_T)
+#################################################################
+
+:obs512120240614 a us:PedestrianObservation ;
+    sosa:resultTime "2024-06-14T21:00:00Z"^^xsd:dateTime ;
+    us:pedestrianCount 112 ;
+    us:observedAtLocation :site001 ;
+    rdfs:label "Pedestrian count at Bourke Street Mall (Fra118_T)"@en ;
+    schema:additionalProperty "Direction1=54, Direction2=58, Total=112" .
+
+#################################################################
+#    Observations - Microclimate (Flinders Street)
+#################################################################
+
+:obsMicro001 a us:MicroclimateObservation ;
+    sosa:resultTime "2024-06-14T09:00:00Z"^^xsd:dateTime ;
+    us:airTemperature 18.5 ;
+    us:humidity 62.0 ;
+    us:pm10 14.2 ;
+    us:pm25 7.9 ;
+    us:noise 58.4 ;
+    us:observedAtLocation :site002 ;
+    rdfs:label "Morning microclimate observation at Flinders Street"@en .
+
+:obsMicro002 a us:MicroclimateObservation ;
+    sosa:resultTime "2024-06-14T15:00:00Z"^^xsd:dateTime ;
+    us:airTemperature 22.1 ;
+    us:humidity 55.0 ;
+    us:pm10 18.7 ;
+    us:pm25 9.5 ;
+    us:noise 62.0 ;
+    us:observedAtLocation :site002 ;
+    rdfs:label "Afternoon microclimate observation at Flinders Street"@en .
