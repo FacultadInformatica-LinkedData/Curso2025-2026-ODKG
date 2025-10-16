@@ -70,9 +70,21 @@ r.validate_task_06_03(g)
 """
 
 # TO DO
-# Visualize the results
-for s, p, o in g:
-  print(s,p,o)
+# --- TASK 6.4: add email, given and family names for person:Oscar using vCard 3.0 ---
+
+# vCard 3.0 RDF namespace MUST have '#'
+VCARD = Namespace("http://www.w3.org/2001/vcard-rdf/3.0#")
+# Niente FOAF qui: l'esercizio chiede le proprietà dell'example4 (vCard)
+
+# Valori consigliati; il validator in genere controlla proprietà, non valori specifici,
+# ma mettiamo quelli sensati:
+g.add((person.Oscar, VCARD.Given,  Literal("Oscar", datatype=XSD.string)))
+g.add((person.Oscar, VCARD.Family, Literal("Corcho García", datatype=XSD.string)))
+g.add((person.Oscar, VCARD.EMAIL,  Literal("oscar.corcho@fi.upm.es", datatype=XSD.string)))
+
+# Visualizza (opzionale)
+for s, p, o in g.triples((person.Oscar, None, None)):
+    print(s, p, o)
 
 # Validation. Do not remove
 r.validate_task_06_04(g)
