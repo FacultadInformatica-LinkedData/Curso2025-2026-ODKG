@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Analysis of the Dataset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.5}
+    h1,h2,h3{margin:0.5em 0}
+    table{border-collapse:collapse;width:100%;margin:14px 0}
+    th,td{border:1px solid #ddd;padding:10px;vertical-align:top}
+    th{background:#f7f7f7;text-align:left}
+    .ok{font-weight:700}
+    .ds{background:#f9fcff;border:1px solid #e6f0ff;padding:10px;border-radius:8px}
+    code{background:#f6f6f6;padding:2px 5px;border-radius:4px}
+  </style>
+</head>
+<body>
+
+<section id="license-analysis" class="ds">
+<h1>License Analysis of the Dataset</h1> 
+<p>We have analyzed the license of the dataset available at <a href="https://www.data.gv.at/datasets/d99a5b1f-837b-456a-9b8b-14b4535c9517?locale=de" target="_blank" rel="noopener noreferrer">data.gv.at (dataset id d99a5b1f…9517)</a>,
+  following the defined methodology from the Chapter 3 of <a href = "https://www.dropbox.com/scl/fi/n2pp1nlt951ijl1lvknjc/R4SC-D4.1-Requirements-and-guidelines-for-energy-data-generation.pdf?rlkey=852zxak7ndpzxyjl00iyupb50&e=1&dl=0">D4.1 deliverable from the READY4SmartCities project.</a> </p>   </section>
+
+<h2>1. Identification of the rightsholder</h2> 
+<p>The dataset is published on the Austrian open data portal <em>data.gv.at</em>. 
+The metadata on the portal identifies the data provider / rightsholder as the 
+<strong>City of Vienna (Magistratsabteilung 23 – Wirtschaft, Arbeit und Statistik)</strong>.</p> 
+<h2>2. License verification</h2> 
+<p>The dataset is published under the <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong> license. This license permits copying, redistribution, adaptation and commercial reuse provided that appropriate attribution is given to the original source and a link to the license is included. 
+See the license text: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. </p> 
+<h2>3. Implications for Linked Data generation</h2> 
+<ul> 
+  <li>Since the dataset is publicly available under CC BY 4.0, it can be reused to generate Linked Data.</li> 
+  <li>When publishing the RDF/Linked Data, the following conditions must be respected: <ul> 
+    <li><strong>Attribution:</strong> clearly credit the City of Vienna as the source.</li> 
+    <li><strong>License metadata:</strong> include a reference to the CC BY 4.0 license in the RDF metadata (for example using <code>dct:license</code> or <code>owl:license</code> triples).</li> 
+    <li><strong>Derived data:</strong> indicate any modifications or transformations made to the original data.</li> </ul> 
+  </li> </ul> 
+
+<h2>Conclusions</h2> 
+    <p>At the time of this analysis the dataset is openly licensed (CC BY 4.0) and therefore suitable for reuse and Linked Data publication, provided that attribution and license metadata are included and that any privacy-sensitive content is handled appropriately.</p> 
+
+<h1>Resource Naming Strategy</h1>
+
+<div class="ds">
+  <h2>Purpose</h2>
+  <p>This document explains the URI and resource naming strategy for our dataset. 
+     Since the dataset is quite small, <strong>hash URIs</strong> will be used (see Sauermann &amp; Cyganiak, 2008).
+  </p>
+  <p>The URI domain to be used is: 
+     <code>https://iamabsa.github.io/chargingstation##12345/</code>. 
+
+  </p>
+</div>
+
+<h3>Ontology Model Classes</h3>
+<ul>
+  <li>Classes follow the pattern: 
+    <pre><code>https://iamabsa.github.io/ontology/&lt;ontologyName&gt;#&lt;className&gt;</code></pre>
+  </li>
+  <li>Example: Charging station class:
+    <pre><code>https://iamabsa.github.io/ontology/ChargingOntology#ChargingStation</code></pre>
+  </li>
+</ul>
+
+<h3>Ontology Model Properties</h3>
+<ul>
+  <li>Properties follow the pattern: 
+    <pre><code>http://iamabsa.github.io/ontology/&lt;ontologyName&gt;#&lt;propertyName&gt;</code></pre>
+  </li>
+  <li>Example (the <code>hasPower</code> property of ChargingStation): 
+    <pre><code>http://iamabsa.github.io/ontology/ChargingOntology#hasPower</code></pre>
+  </li>
+</ul>
+
+<h3>Instances</h3>
+<ul>
+  <li>Instances follow the pattern: 
+    <pre><code>https://iamabsa.github.io/resource/&lt;className&gt;#&lt;identifier&gt;</code></pre>
+  </li>
+  <li>Example (an instance of a charging station in Vienna): 
+    <pre><code>https://iamabsa.github.io/resource/ChargingStation#WIEN1234</code></pre>
+  </li>
+</ul>
+
+<hr>
+<h2>Dataset analysis (detailed)</h2>
+<table>
+  <tr>
+    <th>Column</th>
+    <th>Type</th>
+    <th>Comments / Range</th>
+    <th>Problems</th>
+    <th>Unique values</th>
+    <th>Total rows</th>
+    <th>Nulls</th>
+  </tr>
+  <tr><td><b>ADDRESS</b></td><td>String</td><td>Not unique; not standardized; split street/number</td><td>Standardize street / number; dedupe spaces &amp; case</td><td>780</td><td>829</td><td>0</td></tr>
+  <tr><td><b>BEZIRK</b></td><td>Float</td><td>Not unique; linkable (district)</td><td>Contains nulls (150)</td><td>23</td><td>829</td><td>150</td></tr>
+  <tr><td><b>CITY</b></td><td>String</td><td>Not unique; linkable (city)</td><td>-</td><td>51</td><td>829</td><td>0</td></tr>
+  <tr><td><b>COUNTRYCODE</b></td><td>String</td><td>ISO 3166-1 alpha-2 (e.g., ES); normalize to uppercase</td><td>-</td><td>1</td><td>829</td><td>0</td></tr>
+  <tr><td><b>DESIGNATION</b></td><td>String</td><td>Human-readable station name/designation</td><td>-</td><td>829</td><td>829</td><td>0</td></tr>
+  <tr><td><b>DIRECTPAYMENT</b></td><td>Integer</td><td>Boolean flag (direct payment available); normalize 0/1 → True/False</td><td>-</td><td>1</td><td>829</td><td>0</td></tr>
+  <tr><td><b>EVSEID</b></td><td>String</td><td>Unique identifier of EVSE/station; preferred key</td><td>-</td><td>829</td><td>829</td><td>0</td></tr>
+  <tr><td><b>FID</b></td><td>String</td><td>Unique identifier (source/GIS); stable key</td><td>-</td><td>829</td><td>829</td><td>0</td></tr>
+  <tr><td><b>HUBJECT_COMPATIBLE</b></td><td>Float</td><td>General attribute; review for standardization/linkage</td><td>Contains nulls (829)</td><td>0</td><td>829</td><td>829</td></tr>
+  <tr><td><b>OBJECTID</b></td><td>Integer</td><td>Internal index (not linkable); may be source row id</td><td>-</td><td>829</td><td>829</td><td>0</td></tr>
+  <tr><td><b>OPERATORNAME</b></td><td>String</td><td>Label/name; not unique; consider rdfs:label</td><td>-</td><td>1</td><td>829</td><td>0</td></tr>
+  <tr><td><b>SE_ANNO_CAD_DATA</b></td><td>Float</td><td>General attribute; review for standardization/linkage</td><td>Contains nulls (829)</td><td>0</td><td>829</td><td>829</td></tr>
+  <tr><td><b>SHAPE</b></td><td>String</td><td>Geometry type (e.g., Point); not a key</td><td>-</td><td>797</td><td>829</td><td>0</td></tr>
+  <tr><td><b>SOURCE</b></td><td>Float</td><td>General attribute; review for standardization/linkage</td><td>Contains nulls (829)</td><td>0</td><td>829</td><td>829</td></tr>
+</table>
+
+</body>
+</html>
+
