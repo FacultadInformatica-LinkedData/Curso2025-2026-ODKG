@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Dataset Requirements — pySpainMobility (flux_daily_mov & zones)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html,body{margin:0;padding:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;color:#111;background:#fff}
+    main{max-width:880px;margin:32px auto;padding:0 16px 56px}
+    h1{font-size:1.6rem;margin:0 0 .4rem} h2{font-size:1.1rem;margin:1.4rem 0 .4rem}
+    p,li{margin:.4rem 0}
+    code{background:#f6f8fa;padding:.12rem .35rem;border-radius:6px;border:1px solid #eaeef2}
+    table{width:100%;border-collapse:collapse;margin:.6rem 0 1rem}
+    th,td{padding:.55rem .6rem;border:1px solid #e5e7eb;text-align:left;font-size:.95rem}
+    small{color:#666}
+    .badge{display:inline-block;border:1px solid #cbd5e1;border-radius:999px;padding:.05rem .45rem;font-size:.8rem}
+    .ok{background:#ecfdf5;border-color:#34d399;color:#065f46}
+    .part{background:#fff7ed;border-color:#f59e0b;color:#8a5200}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Dataset Requirements Check — pySpainMobility</h1>
+    <p><strong>Selected CSVs</strong> (from the Spanish Ministry of Transport’s open mobility data via pySpainMobility):</p>
+    <table>
+      <thead><tr><th>File</th><th>What it contains</th><th>Key fields</th><th>Source</th><th>License</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>flux_daily_mov.csv</code></td>
+          <td>Daily/hourly OD flows between zones with demographic/activity breakdown.</td>
+          <td><code>date</code>, <code>hour</code>, <code>id_origin</code>, <code>id_destination</code>, <code>n_trips</code>, <code>trips_total_length_km</code>, <code>age</code>, <code>gender</code>, <code>income</code>, <code>activity_origin</code>, <code>activity_destination</code></td>
+          <td><a href="#" title="local copy in repo">local CSV</a></td>
+          <td>MITMA Open Data License (LDA MITMA).<sup>1</sup></td>
+        </tr>
+        <tr>
+          <td><code>zones.csv</code></td>
+          <td>Mobility study areas / zones (municipality-level), with names and population.</td>
+          <td><code>id</code> (INE-style code), <code>name</code>, <code>population</code></td>
+          <td><a href="#" title="local copy in repo">local CSV</a></td>
+          <td>MITMA Open Data License (LDA MITMA).<sup>1</sup></td>
+        </tr>
+      </tbody>
+    </table>
+    <p><small><sup>1</sup> Spanish Ministry of Transport Open Data license (reuse allowed with attribution, preserve metadata, no implied endorsement). See refs.</small></p>
+  </header>
+
+  <section>
+    <h2>R1. Smart-cities domain <span class="badge ok">Satisfied</span></h2>
+    <p>Both datasets are urban mobility data (origin–destination flows and zone definitions), a core smart-city vertical published as part of Spain’s national mobility open data initiative by the Ministry of Transport (MITMA).<sup>2,3</sup></p>
+
+    <h2>R2. Available as CSV <span class="badge ok">Satisfied</span></h2>
+    <p>The selected files are CSVs (<code>.csv</code>) suitable for transformation to RDF and publication.</p>
+
+    <h2>R3. Open license for publication <span class="badge ok">Satisfied</span></h2>
+    <p>MITMA provides these mobility datasets under the <em>Licencia de datos abiertos del MITMA</em> (LDA MITMA), which allows reuse and redistribution (including transformed works like RDF) with attribution, preservation of metadata (e.g., update dates and license), and no implied endorsement.<sup>1,4</sup></p>
+
+    <h2>R4. Easily linkable to real-world entities <span class="badge ok">Satisfied</span></h2>
+    <ul>
+      <li><strong>From the selected datasets</strong>:
+        <ul>
+          <li><code>id_origin</code>, <code>id_destination</code> ↔ <code>zones.id</code> (municipality INE-style codes) and <code>zones.name</code> — link to municipal entities.</li>
+          <li><code>date</code>, <code>hour</code> — link to time entities (calendar/OWL-Time).</li>
+          <li><code>age</code>, <code>gender</code>, <code>income</code>, <code>activity_* </code> — map to controlled vocabularies (SKOS concepts) if desired.</li>
+        </ul>
+      </li>
+      <li><strong>External datasets we can link to</strong>:
+        <ul>
+          <li><em>Wikidata / DBpedia / GeoNames</em>: municipalities by INE code or label (e.g., Madrid “28079”).</li>
+          <li><em>INE administrative lists</em>: official municipality codes; or <em>OpenStreetMap</em> features for municipal boundaries.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>R5. Documentation exists (optional) <span class="badge ok">Satisfied</span></h2>
+    <p>MITMA’s Open Data Movilidad portal publishes format notes and a license PDF; pySpainMobility and companion tooling (e.g., spanishoddata) provide public docs describing fields, study areas, and access patterns.<sup>2,4,5,6</sup></p>
+
+    <h2>R6. Multi-source possibility (optional) <span class="badge part">Partially (potential)</span></h2>
+    <p>We currently use two CSVs from the same publisher (MITMA). It is straightforward to add complementary sources later (e.g., municipal shapefiles, population/POIs, weather, GTFS), joining by municipality code or spatial joins.</p>
+  </section>
+
+  <section>
+    <h2>Linkable Entities — Quick List</h2>
+    <table>
+      <thead><tr><th>In selected datasets</th><th>Example external targets</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>zones.id</code> (INE-style municipal code), <code>zones.name</code></td>
+          <td>Wikidata (municipality Q-items), DBpedia resources, GeoNames, INE code lists, OpenStreetMap relations</td>
+        </tr>
+        <tr>
+          <td><code>date</code>, <code>hour</code></td>
+          <td>XSD dateTime, OWL-Time (intervals, instants)</td>
+        </tr>
+        <tr>
+          <td><code>id_origin</code> ↔ <code>id_destination</code></td>
+          <td>Same municipal targets as above; also enable linking to regional (NUTS/CCAA) hierarchies</td>
+        </tr>
+        <tr>
+          <td><code>age</code>, <code>gender</code>, <code>income</code>, <code>activity_* </code></td>
+          <td>Custom SKOS concept schemes (project-local) or alignments to existing vocabularies</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>References</h2>
+    <ol>
+      <li>MITMA Open Data License (LDA MITMA). <span title="Official license page">Transport Ministry “Licencia de datos abiertos del MITMA”.</span> </li>
+      <li>MITMA Open Data Movilidad (landing/overview). “Estudios de movilidad con Big Data – Open Data Movilidad”. </li>
+      <li>Gov. press note on national daily mobility data availability (context). </li>
+      <li>MITMA Open Data portal index showing license PDF and file formats (format/readme). </li>
+      <li>pySpainMobility paper (scope & fields). </li>
+      <li>spanishoddata docs & codebook for MITMA mobility data (schema context). </li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>
