@@ -47,16 +47,44 @@
   </header>
 
   <section class="card">
-    <h2>Summary</h2>
+    <h2>1. Dataset Summary</h2>
     <p>This GTFS feed represents public transport information for Madrid. It is a standard open-data format widely used by transit agencies worldwide. It ships as multiple CSV-like text files (e.g., <code>stops.txt</code>, <code>routes.txt</code>, <code>trips.txt</code>, <code>stop_times.txt</code>, <code>calendar.txt</code>, <code>shapes.txt</code>) that are relationally linked by IDs (e.g., <code>stop_id</code>, <code>route_id</code>, <code>trip_id</code>).</p>
     <div class="grid grid-2 small">
       <div><strong>Domain</strong>: Smart City — Urban Mobility (Public Transport)</div>
       <div><strong>Granularity</strong>: Stops, routes, trips, stop-times (schedule-level, with geocoordinates)</div>
+      <div><strong>Coverage</strong>: Madrid metropolitan region (CRTM network)</div>
+      <div><strong>Scale</strong>: 460 routes · 8,295 stops · 69,370 trips · 1.75M stop-times</div>
     </div>
   </section>
 
   <section class="card">
-    <h2>Files present (typical)</h2>
+    <h2>2. Selection Rationale</h2>
+    <p><strong>Why we selected Madrid CRTM GTFS:</strong></p>
+    <ul class="small">
+      <li><strong>Application Alignment:</strong> Our transit navigation app requires detailed stop locations, schedules, and routes — GTFS provides exactly this structured data.</li>
+      <li><strong>Geographic Linkability:</strong> 8,000+ stops with precise coordinates enable rich linking to Wikidata entities for our location-based quiz feature.</li>
+      <li><strong>Standard Format:</strong> GTFS is a well-documented, internationally recognized standard, simplifying RDF transformation and ensuring quality.</li>
+      <li><strong>Official Source:</strong> Data maintained by CRTM (official transport authority) ensures accuracy and reliability.</li>
+      <li><strong>Open License:</strong> Clear legal framework permits publication and reuse for educational purposes.</li>
+      <li><strong>Real-World Data:</strong> Actual operational schedules (not synthetic), covering multiple transport modes (bus, metro, rail).</li>
+      <li><strong>Local Relevance:</strong> Madrid provides rich cultural and historical context for Wikidata integration in our quiz game.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>3. Data Access & Retrieval</h2>
+    <div class="callout small">
+      <p><strong>Source:</strong> Mobility Database — <a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank" rel="noopener noreferrer">mdb-2820</a></p>
+      <p><strong>Provider:</strong> Consorcio Regional de Transportes de Madrid (CRTM)</p>
+      <p><strong>Access Method:</strong> Direct HTTP download from publicly accessible URL (no authentication required)</p>
+      <p><strong>Format Received:</strong> ZIP archive containing 12 text files</p>
+      <p><strong>File Size:</strong> Approximately 350 MB (uncompressed)</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>4. GTFS Files Structure</h2>
+    <p class="small">The dataset contains the following files with their respective roles:</p>
     <table class="small">
       <thead><tr><th>File</th><th>Role</th><th>Key fields for linking</th></tr></thead>
       <tbody>
@@ -72,7 +100,7 @@
   </section>
 
   <section class="card">
-    <h2>Requirement Check</h2>
+    <h2>5. Requirement Verification</h2>
 
     <h3>R1. Data are in the smart cities domain <span class="badge ok">Satisfied</span></h3>
     <p>Public transport is a core smart-city vertical (urban mobility). The feed describes transit infrastructure (routes, stops, services) used for routing, planning, and civic applications.</p>

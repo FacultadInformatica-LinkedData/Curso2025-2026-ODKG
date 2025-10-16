@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Application Requirements – The Waiting Game</title>
+  <title>Application Requirements – Madrid Transit Companion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root { --bg:#0b1020; --card:#121936; --ink:#e8ecff; --muted:#aab4e6; --ok:#22c55e; --warn:#f59e0b; --no:#ef4444; --accent:#8b5cf6; --orange:#FF6B35;}
@@ -34,18 +34,18 @@
 <body>
 <main>
   <header>
-    <h1>Application Requirements — The Waiting Game</h1>
+    <h1>Application Requirements — Madrid Transit Companion</h1>
     <p class="dim small">
-      A gamified public transit app that turns waiting into competition. Users predict real bus/train wait times and compete on accuracy and patience leaderboards.
+      A simple transit navigation app with an educational twist. Find your route, discover your wait time, and learn about Madrid while you wait through location-based quizzes powered by linked Wikidata entities.
     </p>
   </header>
 
   <section class="card">
     <h2>App Concept</h2>
-    <p><span class="highlight">The Waiting Game</span> transforms the boring experience of waiting for public transport into a playful social competition. Users select their destination, see the estimated wait time based on real GTFS schedule data, predict whether the estimate is accurate, and earn points for patience and precision.</p>
+    <p><span class="highlight">Madrid Transit Companion</span> helps users navigate Madrid's public transport system while making wait times more engaging. Users enter their destination, see the nearest stop and route information, and pass the waiting time with an educational quiz game about nearby places. The app demonstrates linked data by using pre-computed RDF links between transit stops and Wikidata cultural/historical entities.</p>
     
     <div class="callout small">
-      <strong>Core Mechanic:</strong> Guess how long you'll actually wait vs. the official schedule → Track real arrival → Compare prediction → Climb leaderboards.
+      <strong>Core Value:</strong> Practical transit navigation + Educational entertainment + Demonstration of how RDF links connect transport data with local knowledge.
     </div>
   </section>
 
@@ -54,27 +54,29 @@
     
     <div class="grid grid-2 small">
       <div>
-        <h3 style="color:#fff;font-size:1rem;margin:8px 0">1. Select Destination</h3>
-        <p>User searches for where they want to go. App shows nearest transit stop and route options from their GPS location.</p>
+        <h3 style="color:#fff;font-size:1rem;margin:8px 0">1. Enter Destination</h3>
+        <p>User types or selects their destination. App uses GPS location to find the nearest transit stop and determines the best route.</p>
       </div>
       <div>
-        <h3 style="color:#fff;font-size:1rem;margin:8px 0">2. See Estimated Wait</h3>
-        <p>App calculates wait time using GTFS schedule data (stop times, current time, service calendar).</p>
+        <h3 style="color:#fff;font-size:1rem;margin:8px 0">2. View Route & Wait Time</h3>
+        <p>Interactive map centers on the nearest stop, showing the route, stop name, next arrival time, and estimated wait duration calculated from GTFS schedule data.</p>
       </div>
       <div>
-        <h3 style="color:#fff;font-size:1rem;margin:8px 0">3. Make Your Guess</h3>
-        <p>User chooses: <strong>Agree</strong> with estimate, or adjust prediction with <strong>Add Time</strong> / <strong>Take Time</strong> buttons.</p>
+        <h3 style="color:#fff;font-size:1rem;margin:8px 0">3. Play Location Quiz</h3>
+        <p>While waiting, user can play a Kahoot-style quiz about the local area. Questions are based on pre-linked Wikidata entities near the stop (landmarks, history, culture).</p>
       </div>
       <div>
-        <h3 style="color:#fff;font-size:1rem;margin:8px 0">4. Wait & Track</h3>
-        <p>Real-time countdown starts. When the vehicle arrives (detected via GTFS Realtime or manual confirmation), app calculates accuracy and awards points.</p>
+        <h3 style="color:#fff;font-size:1rem;margin:8px 0">4. Learn & Discover</h3>
+        <p>Each quiz answer shows linked data from Wikidata, teaching users about their surroundings and demonstrating the power of linked open data.</p>
       </div>
     </div>
   </section>
 
   <section class="card">
-    <h2>Data Usage — GTFS Static Feed</h2>
-    <p>The app uses the <strong>AMAT Palermo GTFS dataset</strong> to power all transit functionality:</p>
+    <h2>Data Usage — Two Linked Data Sources</h2>
+    
+    <h3 style="color:#fff;font-size:1.05rem;margin:16px 0 8px">GTFS Static Feed (Madrid CRTM)</h3>
+    <p>Powers the transit navigation functionality:</p>
     
     <div class="data-flow">
       <div class="data-flow-item">
@@ -87,24 +89,38 @@
       </div>
       <div class="data-flow-item">
         <div class="data-flow-icon">🕒</div>
-        <div><code>stop_times.txt</code> — Calculate next arrival time (<code>arrival_time</code>, <code>departure_time</code> by <code>trip_id</code> + <code>stop_id</code>)</div>
+        <div><code>stop_times.txt</code> — Calculate next arrival time and wait duration (<code>arrival_time</code>, <code>departure_time</code>)</div>
       </div>
       <div class="data-flow-item">
         <div class="data-flow-icon">📅</div>
-        <div><code>calendar.txt</code> / <code>calendar_dates.txt</code> — Check if service runs today (weekday rules, exceptions)</div>
+        <div><code>calendar.txt</code> / <code>calendar_dates.txt</code> — Verify service operates today (weekday rules, exceptions)</div>
       </div>
       <div class="data-flow-item">
         <div class="data-flow-icon">🗺️</div>
         <div><code>shapes.txt</code> — Display route path on map (<code>shape_pt_lat</code>, <code>shape_pt_lon</code>)</div>
       </div>
+    </div>
+
+    <h3 style="color:#fff;font-size:1.05rem;margin:24px 0 8px">Wikidata Links</h3>
+    <p>Pre-computed RDF links connect transit stops to nearby cultural/historical entities:</p>
+    
+    <div class="data-flow">
       <div class="data-flow-item">
-        <div class="data-flow-icon">🚏</div>
-        <div><code>trips.txt</code> — Link routes to specific trips (<code>trip_id</code>, <code>route_id</code>, <code>service_id</code>)</div>
+        <div class="data-flow-icon">🔗</div>
+        <div>GTFS stops are linked to nearby Wikidata entities (landmarks, monuments, museums) using geographic proximity matching</div>
+      </div>
+      <div class="data-flow-item">
+        <div class="data-flow-icon">💾</div>
+        <div>Links stored as RDF triples in the dataset (e.g., <code>stop nearbyPlace landmark</code>)</div>
+      </div>
+      <div class="data-flow-item">
+        <div class="data-flow-icon">❓</div>
+        <div>App uses these pre-computed links to fetch Wikidata information for quiz questions</div>
       </div>
     </div>
 
     <div class="callout small">
-      <strong>Real-time Enhancement (Future):</strong> Integrate GTFS Realtime feed to detect actual vehicle positions and confirm arrivals automatically instead of manual confirmation.
+      <strong>Linked Data Demonstration:</strong> Our RDF dataset includes explicit links between GTFS stops and Wikidata entities, created through geographic coordinate matching. These stored links enable the app to discover and display relevant local information.
     </div>
   </section>
 
@@ -113,15 +129,15 @@
     
     <div class="screenshots-grid">
       <div>
-        <h3 style="color:#fff;font-size:1.05rem;margin:0 0 12px;text-align:center">Main Prediction Screen</h3>
-        <img src="Screenshot1.png" alt="Main page with map and prediction interface" class="screenshot" />
-        <p class="small" style="text-align:center;margin-top:12px">Interactive map shows user location, nearby stops, and route. Users select destination, see estimated wait, and submit their guess with Agree/Add/Take Time buttons.</p>
+        <h3 style="color:#fff;font-size:1.05rem;margin:0 0 12px;text-align:center">Transit Navigation Screen</h3>
+        <img src="Screenshot1.png" alt="Map showing user location, nearest stop, and route information" class="screenshot" />
+        <p class="small" style="text-align:center;margin-top:12px">Interactive map displays user location, highlights the nearest stop, shows the route to take, and presents clear wait time information. Simple, clean interface focused on getting users where they need to go.</p>
       </div>
       
       <div>
-        <h3 style="color:#fff;font-size:1.05rem;margin:0 0 12px;text-align:center">Leaderboards</h3>
-        <img src="Screenshot2.png" alt="Leaderboards with rankings and social features" class="screenshot" />
-        <p class="small" style="text-align:center;margin-top:12px">Compete on two leaderboards: <strong>Longest Waiters</strong> (total time waited) and <strong>Master Guessers</strong> (prediction accuracy). Social features let users taunt friends and react to waiting achievements.</p>
+        <h3 style="color:#fff;font-size:1.05rem;margin:0 0 12px;text-align:center">Location Quiz Screen</h3>
+        <img src="Screenshot2.png" alt="Kahoot-style quiz interface with local questions" class="screenshot" />
+        <p class="small" style="text-align:center;margin-top:12px">Kahoot-style quiz interface presents questions about the local area. Users select answers and learn interesting facts about nearby landmarks, history, and culture sourced from Wikidata.</p>
       </div>
     </div>
   </section>
@@ -129,13 +145,14 @@
   <section class="card">
     <h2>Key Features</h2>
     <ul>
-      <li><strong>Real GTFS Data Integration:</strong> All wait times calculated from actual Palermo transit schedules</li>
+      <li><strong>Real GTFS Data Integration:</strong> All transit information calculated from actual Madrid CRTM schedules</li>
       <li><strong>GPS-Based Stop Detection:</strong> Automatic nearest stop finding using geocoordinates from <code>stops.txt</code></li>
       <li><strong>Route Visualization:</strong> Map shows route paths using <code>shapes.txt</code> polyline data</li>
-      <li><strong>Schedule-Aware:</strong> Respects service calendars (weekday/weekend, exceptions) for accurate predictions</li>
-      <li><strong>Dual Leaderboards:</strong> Rankings for both total waiting endurance and guess accuracy</li>
-      <li><strong>Social Competition:</strong> Taunt friends, react with emojis, track streaks and achievements</li>
-      <li><strong>Mobile-First Design:</strong> Optimized for on-the-go use at bus stops</li>
+      <li><strong>Schedule-Aware Calculation:</strong> Respects service calendars (weekday/weekend, exceptions) for accurate wait times</li>
+      <li><strong>Pre-computed Wikidata Links:</strong> RDF links stored in dataset connect stops to nearby landmarks and places</li>
+      <li><strong>Linked Data Demonstration:</strong> Shows how geographic coordinates enable linking across different RDF datasets</li>
+      <li><strong>Educational Content:</strong> Users learn about their surroundings while waiting for transit</li>
+      <li><strong>Mobile-First Design:</strong> Clean, simple interface optimized for on-the-go use</li>
     </ul>
   </section>
 
