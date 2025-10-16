@@ -359,5 +359,42 @@
     "newColumnName": "Unique Identifier",
     "columnInsertIndex": 3,
     "description": "Crear la columna Unique Identifier en el índice 3 basada en la columna University usando la expresión grel:value + \" \" + cells[\"Degree\"].value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Degreee",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna Degreee en el índice 3 basada en la columna University usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "University",
+    "description": "Eliminar columna University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Degreee",
+    "newColumnName": "University",
+    "description": "Renombra la columna Degreee a University"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UniversityId",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna UniversityId en el índice 3 basada en la columna University usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
   }
 ]

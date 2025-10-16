@@ -681,5 +681,294 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Transforma el texto de las celdas en la columna Ambit Code usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "University Cleaned",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna University Cleaned en el índice 2 basada en la columna University usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University Cleaned",
+    "expression": "grel:md5(value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Universidad md5",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna Universidad md5 en el índice 3 basada en la columna University Cleaned usando la expresión grel:md5(value)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Universidad md5",
+    "newColumnName": "UniversityId",
+    "description": "Renombra la columna Universidad md5 a UniversityId"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "University",
+    "description": "Eliminar columna University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "University Cleaned",
+    "newColumnName": "University",
+    "description": "Renombra la columna University Cleaned a University"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unique Identifier",
+    "description": "Eliminar columna Unique Identifier"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Code",
+    "description": "Eliminar columna Code"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "r",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna r en el índice 4 basada en la columna Degree usando la expresión grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "r",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna r usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:md5(value)",
+    "onError": "set-to-blank",
+    "newColumnName": "ws",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna ws en el índice 4 basada en la columna Degree usando la expresión grel:md5(value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "r",
+    "expression": "grel:md5(value)",
+    "onError": "set-to-blank",
+    "newColumnName": "sdf",
+    "columnInsertIndex": 6,
+    "description": "Crear la columna sdf en el índice 6 basada en la columna r usando la expresión grel:md5(value)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ws",
+    "description": "Eliminar columna ws"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "r",
+    "description": "Eliminar columna r"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "sdf",
+    "description": "Eliminar columna sdf"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UniversityIdn",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna UniversityIdn en el índice 2 basada en la columna University usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit Code",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AYH"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Arte y Humanidades"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Ambit Code"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit Code",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SYJ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ciencias Sociales y Jurídicas"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Ambit Code"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit Code",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "IYA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ingeniería y Arquitectura"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Ambit Code"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit Code",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "C"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ciencias"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Ambit Code"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit Code",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sanidad"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Ambit Code"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit Code",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SIN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ingeniería y Arquitectura"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Ambit Code"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:\"Grado\"",
+    "onError": "set-to-blank",
+    "newColumnName": "Academic Level",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna Academic Level en el índice 5 basada en la columna Degree usando la expresión grel:\"Grado\""
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "UniversityIdn",
+    "description": "Eliminar columna UniversityIdn"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "UniversityId",
+    "description": "Eliminar columna UniversityId"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UnniversityId",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna UnniversityId en el índice 2 basada en la columna University usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
   }
 ]

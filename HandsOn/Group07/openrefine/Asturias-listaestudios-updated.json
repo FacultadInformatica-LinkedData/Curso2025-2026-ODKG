@@ -396,5 +396,49 @@
     "newColumnName": "Unique Identifier",
     "columnInsertIndex": 3,
     "description": "Crear la columna Unique Identifier en el índice 3 basada en la columna Universidad usando la expresión grel:value + \" \" + cells[\"Degree\"].value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Universidad",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "University",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna University en el índice 3 basada en la columna Universidad usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Universidad",
+    "description": "Eliminar columna Universidad"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UniversityId",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna UniversityId en el índice 3 basada en la columna University usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Ambit",
+    "expression": "grel:\"2023-2024\"",
+    "onError": "set-to-blank",
+    "newColumnName": "Academic Year",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna Academic Year en el índice 7 basada en la columna Ambit usando la expresión grel:\"2023-2024\""
   }
 ]

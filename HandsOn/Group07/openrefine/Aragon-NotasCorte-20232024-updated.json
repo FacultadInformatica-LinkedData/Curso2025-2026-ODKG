@@ -1762,5 +1762,280 @@
     "newColumnName": "Unique Identifier",
     "columnInsertIndex": 4,
     "description": "Crear la columna Unique Identifier en el índice 4 basada en la columna University usando la expresión grel:value + \" \" + cells[\"Degree\"].value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "f",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna f en el índice 2 basada en la columna Degree usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Degree",
+    "description": "Eliminar columna Degree"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "f",
+    "newColumnName": "Degree",
+    "description": "Renombra la columna f a Degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UniversityId",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna UniversityId en el índice 4 basada en la columna University usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unique Identifier",
+    "description": "Eliminar columna Unique Identifier"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:value.toString()\n     .toLowercase()\n     .replace(/[áàäâ]/,\"a\")\n     .replace(/[éèëê]/,\"e\")\n     .replace(/[íìïî]/,\"i\")\n     .replace(/[óòöô]/,\"o\")\n     .replace(/[úùüû]/,\"u\")\n     .replace(/[ñ]/,\"n\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Ambit",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna Ambit en el índice 2 basada en la columna Degree usando la expresión grel:value.toString()\n     .toLowercase()\n     .replace(/[áàäâ]/,\"a\")\n     .replace(/[éèëê]/,\"e\")\n     .replace(/[íìïî]/,\"i\")\n     .replace(/[óòöô]/,\"o\")\n     .replace(/[úùüû]/,\"u\")\n     .replace(/[ñ]/,\"n\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Ambit",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "1",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna 1 en el índice 3 basada en la columna Ambit usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "1",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "2",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna 2 en el índice 4 basada en la columna 1 usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "2",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "3",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna 3 en el índice 5 basada en la columna 2 usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "3",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "4",
+    "columnInsertIndex": 6,
+    "description": "Crear la columna 4 en el índice 6 basada en la columna 3 usando la expresión grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit",
+    "expression": "grel:if(value.contains(\"medicin\"), \"Ciencias de la Salud\",\nif(value.contains(\"enfermer\"), \"Ciencias de la Salud\",\nif(value.contains(\"fisioterap\"), \"Ciencias de la Salud\",\nif(value.contains(\"odontolog\"), \"Ciencias de la Salud\",\nif(value.contains(\"veterinar\"), \"Ciencias de la Salud\",\nif(value.contains(\"farmac\"), \"Ciencias de la Salud\",\nif(value.contains(\"terapia ocupacional\"), \"Ciencias de la Salud\",\nif(value.contains(\"nutric\"), \"Ciencias de la Salud\",\nif(value.contains(\"dietet\"), \"Ciencias de la Salud\",\nif(value.contains(\"actividad fisica\"), \"Ciencias de la Salud\",\nif(value.contains(\"deporte\"), \"Ciencias de la Salud\",\nif(value.contains(\"optica y optometr\"), \"Ciencias de la Salud\",\nif(value.contains(\"psicologia general sanitaria\"), \"Ciencias de la Salud\",\nif(value.contains(\"gerontolog\"), \"Ciencias de la Salud\",\nif(value.contains(\"salud global\"), \"Ciencias de la Salud\", \"\")))))))))))))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ambit usando la expresión grel:if(value.contains(\"medicin\"), \"Ciencias de la Salud\",\nif(value.contains(\"enfermer\"), \"Ciencias de la Salud\",\nif(value.contains(\"fisioterap\"), \"Ciencias de la Salud\",\nif(value.contains(\"odontolog\"), \"Ciencias de la Salud\",\nif(value.contains(\"veterinar\"), \"Ciencias de la Salud\",\nif(value.contains(\"farmac\"), \"Ciencias de la Salud\",\nif(value.contains(\"terapia ocupacional\"), \"Ciencias de la Salud\",\nif(value.contains(\"nutric\"), \"Ciencias de la Salud\",\nif(value.contains(\"dietet\"), \"Ciencias de la Salud\",\nif(value.contains(\"actividad fisica\"), \"Ciencias de la Salud\",\nif(value.contains(\"deporte\"), \"Ciencias de la Salud\",\nif(value.contains(\"optica y optometr\"), \"Ciencias de la Salud\",\nif(value.contains(\"psicologia general sanitaria\"), \"Ciencias de la Salud\",\nif(value.contains(\"gerontolog\"), \"Ciencias de la Salud\",\nif(value.contains(\"salud global\"), \"Ciencias de la Salud\", \"\")))))))))))))))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "1",
+    "expression": "grel:if(value.contains(\"ingenier\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"arquitect\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"informatic\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"industrial\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"mecanic\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"civil\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"electric\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"electron\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"mecatronic\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"biomedic\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"telecom\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"agroaliment\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"agronom\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"energias renovables\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"diseno industrial\"), \"Ingeniería y Arquitectura\", \"\")))))))))))))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna 1 usando la expresión grel:if(value.contains(\"ingenier\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"arquitect\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"informatic\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"industrial\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"mecanic\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"civil\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"electric\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"electron\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"mecatronic\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"biomedic\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"telecom\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"agroaliment\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"agronom\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"energias renovables\"), \"Ingeniería y Arquitectura\",\nif(value.contains(\"diseno industrial\"), \"Ingeniería y Arquitectura\", \"\")))))))))))))))"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "2",
+    "expression": "grel:if(value.contains(\"filosof\"), \"Artes y Humanidades\",\nif(value.contains(\"filolog\"), \"Artes y Humanidades\",\nif(value.contains(\"historia del arte\"), \"Artes y Humanidades\",\nif(value.contains(\"historia\"), \"Artes y Humanidades\",\nif(value.contains(\"bellas artes\"), \"Artes y Humanidades\",\nif(value.contains(\"ensenanza del espanol\"), \"Artes y Humanidades\",\nif(value.contains(\"lenguas modernas\"), \"Artes y Humanidades\",\nif(value.contains(\"estudios ingleses\"), \"Artes y Humanidades\",\nif(value.contains(\"estudios clasicos\"), \"Artes y Humanidades\",\nif(value.contains(\"arqueolog\"), \"Artes y Humanidades\",\nif(value.contains(\"patrimonio\"), \"Artes y Humanidades\",\nif(value.contains(\"mundo antiguo\"), \"Artes y Humanidades\",\nif(value.contains(\"arte\"), \"Artes y Humanidades\", \"\"))))))))))))))",
+    "onError": "set-to-blank",
+    "newColumnName": "5",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna 5 en el índice 5 basada en la columna 2 usando la expresión grel:if(value.contains(\"filosof\"), \"Artes y Humanidades\",\nif(value.contains(\"filolog\"), \"Artes y Humanidades\",\nif(value.contains(\"historia del arte\"), \"Artes y Humanidades\",\nif(value.contains(\"historia\"), \"Artes y Humanidades\",\nif(value.contains(\"bellas artes\"), \"Artes y Humanidades\",\nif(value.contains(\"ensenanza del espanol\"), \"Artes y Humanidades\",\nif(value.contains(\"lenguas modernas\"), \"Artes y Humanidades\",\nif(value.contains(\"estudios ingleses\"), \"Artes y Humanidades\",\nif(value.contains(\"estudios clasicos\"), \"Artes y Humanidades\",\nif(value.contains(\"arqueolog\"), \"Artes y Humanidades\",\nif(value.contains(\"patrimonio\"), \"Artes y Humanidades\",\nif(value.contains(\"mundo antiguo\"), \"Artes y Humanidades\",\nif(value.contains(\"arte\"), \"Artes y Humanidades\", \"\"))))))))))))))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "2",
+    "expression": "grel:if(value.contains(\"fisica\"), \"Ciencias\",\nif(value.contains(\"quimica industrial\"), \"\",\nif(value.contains(\"quimica\"), \"Ciencias\",\nif(value.contains(\"geolog\"), \"Ciencias\",\nif(value.contains(\"matemat\"), \"Ciencias\",\nif(value.contains(\"biologi\"), \"Ciencias\",\nif(value.contains(\"biotecno\"), \"Ciencias\",\nif(value.contains(\"ciencias ambientales\"), \"Ciencias\",\nif(value.contains(\"biofis\"), \"Ciencias\",\nif(value.contains(\"modeliz\"), \"Ciencias\",\nif(value.contains(\"cosmolog\"), \"Ciencias\",\nif(value.contains(\"astrofisic\"), \"Ciencias\",\nif(value.contains(\"astropart\"), \"Ciencias\",\nif(value.contains(\"fisica del universo\"), \"Ciencias\",\nif(value.contains(\"materiales nano\"), \"Ciencias\",\nif(value.contains(\"ciencia y tecnologia de los alimentos\"), \"Ciencias\",\nif(value.contains(\"quimica molecular\"), \"Ciencias\",\nif(value.contains(\"catalisis\"), \"Ciencias\",\nif(value.contains(\"biologia molecular\"), \"Ciencias\",\nif(value.contains(\"biologia celular\"), \"Ciencias\", \"\"))))))))))))))))))))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna 2 usando la expresión grel:if(value.contains(\"fisica\"), \"Ciencias\",\nif(value.contains(\"quimica industrial\"), \"\",\nif(value.contains(\"quimica\"), \"Ciencias\",\nif(value.contains(\"geolog\"), \"Ciencias\",\nif(value.contains(\"matemat\"), \"Ciencias\",\nif(value.contains(\"biologi\"), \"Ciencias\",\nif(value.contains(\"biotecno\"), \"Ciencias\",\nif(value.contains(\"ciencias ambientales\"), \"Ciencias\",\nif(value.contains(\"biofis\"), \"Ciencias\",\nif(value.contains(\"modeliz\"), \"Ciencias\",\nif(value.contains(\"cosmolog\"), \"Ciencias\",\nif(value.contains(\"astrofisic\"), \"Ciencias\",\nif(value.contains(\"astropart\"), \"Ciencias\",\nif(value.contains(\"fisica del universo\"), \"Ciencias\",\nif(value.contains(\"materiales nano\"), \"Ciencias\",\nif(value.contains(\"ciencia y tecnologia de los alimentos\"), \"Ciencias\",\nif(value.contains(\"quimica molecular\"), \"Ciencias\",\nif(value.contains(\"catalisis\"), \"Ciencias\",\nif(value.contains(\"biologia molecular\"), \"Ciencias\",\nif(value.contains(\"biologia celular\"), \"Ciencias\", \"\"))))))))))))))))))))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "3",
+    "expression": "grel:if(value.match(/derecho|abogacia|administracion y direccion de empresas|ade|empresa|gestion|contabilidad|finanzas|economi|marketing|direccion|estrategia|comunicacion|periodismo|relaciones laborales|recursos humanos|trabajo social|sociolog|educacion|magisterio|profesorado|informacion y documentacion|gestion publica|consultoria de informacion|turismo|auditoria|relaciones de genero/) != null,\n  \"Ciencias Sociales y Jurídicas\",\n  \"\"\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna 3 usando la expresión grel:if(value.match(/derecho|abogacia|administracion y direccion de empresas|ade|empresa|gestion|contabilidad|finanzas|economi|marketing|direccion|estrategia|comunicacion|periodismo|relaciones laborales|recursos humanos|trabajo social|sociolog|educacion|magisterio|profesorado|informacion y documentacion|gestion publica|consultoria de informacion|turismo|auditoria|relaciones de genero/) != null,\n  \"Ciencias Sociales y Jurídicas\",\n  \"\"\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit",
+    "expression": "join ([coalesce(cells['Ambit'].value,''),coalesce(cells['1'].value,''),coalesce(cells['2'].value,''),coalesce(cells['5'].value,''),coalesce(cells['3'].value,'')],'')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ambit usando la expresión join ([coalesce(cells['Ambit'].value,''),coalesce(cells['1'].value,''),coalesce(cells['2'].value,''),coalesce(cells['5'].value,''),coalesce(cells['3'].value,'')],'')"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Ambit",
+          "expression": "value",
+          "columnName": "Ambit",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "description": "Vaciar las celdas en la columna Degree"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Ambit",
+          "expression": "value",
+          "columnName": "Ambit",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "description": "Rellenar las celdas en la columna Degree"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Ambit",
+          "expression": "value",
+          "columnName": "Ambit",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "1",
+    "description": "Eliminar columna 1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "2",
+    "description": "Eliminar columna 2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "5",
+    "description": "Eliminar columna 5"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "3",
+    "description": "Eliminar columna 3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "4",
+    "description": "Eliminar columna 4"
   }
 ]
