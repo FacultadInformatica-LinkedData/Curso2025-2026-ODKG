@@ -1,148 +1,110 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix mod: <https://w3id.org/mod#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sc: <http://smartcity.linkeddata.es/lcc/ontology#> .
 @prefix schema: <https://schema.org/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 sc: a owl:Ontology ;
-    mod:createdWith <https://chowlk.linkeddata.es/> .
+    rdfs:label "Smart City Facilities Ontology" ;
+    rdfs:comment "Ontology describing urban facilities and nearby public transport in Madrid." .
 
-sc:BasketballCourt a owl:Class ;
-    rdfs:label "Basketball Court" ;
-    rdfs:subClassOf sc:SportsCenter .
+### CLASSES ###
+sc:Facility a owl:Class ; rdfs:label "Facility"@en .
+sc:Library a owl:Class ; rdfs:subClassOf sc:Facility ; rdfs:label "Library"@en .
+sc:ParkGarden a owl:Class ; rdfs:subClassOf sc:Facility ; rdfs:label "Park"@en .
 
-sc:Faculty a owl:Class ;
-    rdfs:label "Faculty" ;
-    rdfs:subClassOf <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution>,
-        sc:University .
+# University and its subtypes
+sc:University a owl:Class ; rdfs:subClassOf sc:Facility ; rdfs:label "University"@en .
+sc:ResidenceHall a owl:Class ; rdfs:subClassOf sc:University ; rdfs:label "Residence Hall"@en .
+sc:Faculty a owl:Class ; rdfs:subClassOf sc:University ; rdfs:label "Faculty"@en .
+sc:UniversitySchool a owl:Class ; rdfs:subClassOf sc:University ; rdfs:label "University School"@en .
+sc:OtherCenters a owl:Class ; rdfs:subClassOf sc:University ; rdfs:label "Other Centers"@en .
 
-sc:FootballField a owl:Class ;
-    rdfs:label "Football Field" ;
-    rdfs:subClassOf sc:SportsCenter .
+# Sports centers and subtypes
+sc:SportsCenter a owl:Class ; rdfs:subClassOf sc:Facility ; rdfs:label "Sports Center"@en .
+sc:Gym a owl:Class ; rdfs:subClassOf sc:SportsCenter ; rdfs:label "Gym"@en .
+sc:FootballField a owl:Class ; rdfs:subClassOf sc:SportsCenter ; rdfs:label "Football Field"@en .
+sc:SwimmingPool a owl:Class ; rdfs:subClassOf sc:SportsCenter ; rdfs:label "Swimming Pool"@en .
+sc:TennisCourt a owl:Class ; rdfs:subClassOf sc:SportsCenter ; rdfs:label "Tennis Court"@en .
+sc:ClimbingWall a owl:Class ; rdfs:subClassOf sc:SportsCenter ; rdfs:label "Climbing Wall"@en .
+sc:RowingPier a owl:Class ; rdfs:subClassOf sc:SportsCenter ; rdfs:label "Rowing Pier"@en .
+sc:Stadium a owl:Class ; rdfs:subClassOf sc:SportsCenter ; rdfs:label "Stadium"@en .
 
-sc:Gym a owl:Class ;
-    rdfs:label "Gym" ;
-    rdfs:subClassOf sc:SportsCenter .
+sc:PublicTransport a owl:Class ; rdfs:label "Public Transport"@en .
+sc:Metro a owl:Class ; rdfs:subClassOf sc:PublicTransport ; rdfs:label "Metro"@en .
+sc:Cercanias a owl:Class ; rdfs:subClassOf sc:PublicTransport ; rdfs:label "Cercanías"@es, "Commuter Rail"@en .
+sc:Bus a owl:Class ; rdfs:subClassOf sc:PublicTransport ; rdfs:label "Bus"@en .
 
-sc:Library a owl:Class ;
-    rdfs:label "Library" ;
-    rdfs:subClassOf sc:Facility .
+dbo:Municipality a owl:Class ; rdfs:label "Municipality"@en .
+dbo:District a owl:Class ; rdfs:label "District"@en .
+dbo:Neighbourhood a owl:Class ; rdfs:label "Neighbourhood"@en .
 
-sc:OtherCenters a owl:Class ;
-    rdfs:label "Other Centers" ;
-    rdfs:subClassOf <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution> .
-
-sc:Park a owl:Class ;
-    rdfs:label "Park" ;
-    rdfs:subClassOf sc:Facility .
-
-sc:ResidenceHall a owl:Class ;
-    rdfs:label "Residence Hall" ;
-    rdfs:subClassOf <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution> .
-
-sc:SwimmingPool a owl:Class ;
-    rdfs:label "Swimming Pool" ;
-    rdfs:subClassOf sc:SportsCenter .
-
-sc:TennisCourt a owl:Class ;
-    rdfs:label "Tennis Court" ;
-    rdfs:subClassOf sc:SportsCenter .
-
-sc:accessibility a owl:DatatypeProperty ;
-    rdfs:label "accessibility" ;
-    rdfs:domain sc:Facility ;
-    rdfs:range xsd:Integer .
-
+### OBJECT PROPERTIES ###
 sc:hasNearby a owl:ObjectProperty ;
-    rdfs:label "has nearby" ;
+    rdfs:label "has nearby"@en ;
     rdfs:domain sc:Facility ;
     rdfs:range sc:PublicTransport .
 
-sc:stopName a owl:DatatypeProperty ;
-    rdfs:label "stop name" ;
-    rdfs:domain sc:PublicTransport .
-
-sc:transportLine a owl:DatatypeProperty ;
-    rdfs:label "transport line" ;
-    rdfs:domain sc:PublicTransport .
-
-sc:transportType a owl:DatatypeProperty ;
-    rdfs:label "transport type" ;
-    rdfs:domain sc:PublicTransport .
-
-geo1:lat a owl:DatatypeProperty ;
-    rdfs:label "lat" ;
-    rdfs:domain sc:Facility .
-
-geo1:long a owl:DatatypeProperty ;
-    rdfs:label "long" ;
-    rdfs:domain sc:Facility ;
-    rdfs:range xsd:float .
-
 schema:containedInPlace a owl:ObjectProperty ;
-    rdfs:label "contained in place" ;
+    rdfs:label "contained in place"@en ;
     rdfs:domain sc:Facility ;
     rdfs:range dbo:Municipality .
 
 schema:containsPlace a owl:ObjectProperty ;
-    rdfs:label "contains place" ;
-    rdfs:domain dbo:District,
-        dbo:Municipality ;
-    rdfs:range dbo:District,
-        dbo:Neighbourhood .
+    rdfs:label "contains place"@en ;
+    rdfs:domain dbo:Municipality ;
+    rdfs:range dbo:District, dbo:Neighbourhood .
 
-schema:email a owl:DatatypeProperty ;
-    rdfs:label "email" ;
-    rdfs:domain <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution>,
-        sc:SportsCenter .
-
+### DATA PROPERTIES ###
 schema:name a owl:DatatypeProperty ;
-    rdfs:label "name" ;
     rdfs:domain sc:Facility ;
-    rdfs:range xsd:String .
-
-schema:openingHours a owl:DatatypeProperty ;
-    rdfs:label "opening hours" ;
-    rdfs:domain <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution>,
-        sc:SportsCenter .
+    rdfs:range xsd:string .
 
 schema:postalCode a owl:DatatypeProperty ;
-    rdfs:label "postal code" ;
     rdfs:domain sc:Facility ;
-    rdfs:range xsd:Integer .
+    rdfs:range xsd:string .
+
+schema:streetAddress a owl:DatatypeProperty ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:string .
+
+schema:addressLocality a owl:DatatypeProperty ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:string .
+
+schema:addressRegion a owl:DatatypeProperty ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:string .
 
 schema:telephone a owl:DatatypeProperty ;
-    rdfs:label "telephone" ;
-    rdfs:domain <http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution>,
-        sc:SportsCenter ;
-    rdfs:range xsd:String .
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:string .
 
-dbo:Neighbourhood a owl:Class ;
-    rdfs:label "Neighbourhood" .
+schema:email a owl:DatatypeProperty ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:string .
 
-sc:University a owl:Class ;
-    rdfs:label "University" .
+sc:accessibility a owl:DatatypeProperty ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:string .
 
-dbo:District a owl:Class ;
-    rdfs:label "District" .
+geo:lat a owl:DatatypeProperty ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:decimal .
 
-dbo:Municipality a owl:Class ;
-    rdfs:label "Municipality" .
+geo:long a owl:DatatypeProperty ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:decimal .
 
-sc:PublicTransport a owl:Class ;
-    rdfs:label "Public Transport" .
+sc:typeOfFacility a owl:DatatypeProperty ;
+    rdfs:domain sc:Facility ;
+    rdfs:range xsd:string .
 
-<http://smartcity.linkeddata.es/lcc/ontology#sc.EducationInstitution> a owl:Class ;
-    rdfs:label "sc. Education Institution" ;
-    rdfs:subClassOf sc:Facility .
 
-sc:SportsCenter a owl:Class ;
-    rdfs:label "Sports Center" ;
-    rdfs:subClassOf sc:Facility .
-
-sc:Facility a owl:Class ;
-    rdfs:label "Facility" .
-
+### SPECIFIC DATATYPE PROPERTIES ###
+sc:studentGender a owl:DatatypeProperty ;
+    rdfs:label "student gender"@en ;
+    rdfs:domain sc:ResidenceHall ;
+    rdfs:range xsd:string .
