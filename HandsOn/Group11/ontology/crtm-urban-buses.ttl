@@ -37,20 +37,12 @@ ont:CalendarService a owl:Class ;
   rdfs:label "Calendar Service" ;
   rdfs:subClassOf time:TemporalEntity .
 
-ont:CalendarException a owl:Class ;
-  rdfs:label "Calendar Exception" ;
-  rdfs:subClassOf time:TemporalEntity .
-
 ont:Shape a owl:Class ;
   rdfs:label "Shape" ;
   rdfs:subClassOf schema:Geometry .
 
-ont:FeedInfo a owl:Class ;
-  rdfs:label "Feed Info" ;
-  rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> .
-
 [] a owl:AllDisjointClasses ;
-   owl:members ( ont:Agency ont:BusRoute ont:Trip ont:Stop ont:StopTime ont:CalendarService ont:CalendarException ont:Shape ont:FeedInfo ) .
+   owl:members ( ont:Agency ont:BusRoute ont:Trip ont:Stop ont:StopTime ont:CalendarService ont:Shape ) .
 
 ont:operatedBy a owl:ObjectProperty ;
   rdfs:label "operated by" ;
@@ -112,11 +104,6 @@ ont:isCalendarOf a owl:ObjectProperty ;
   rdfs:range  ont:Trip ;
   owl:inverseOf ont:hasCalendar .
 
-ont:hasException a owl:ObjectProperty ;
-  rdfs:label "has exception" ;
-  rdfs:domain ont:CalendarService ;
-  rdfs:range  ont:CalendarException .
-
 ont:hasShape a owl:ObjectProperty ;
   rdfs:label "has shape" ;
   rdfs:domain ont:Trip ;
@@ -132,41 +119,6 @@ ont:nextStop a owl:ObjectProperty ;
   rdfs:label "next stop" ;
   rdfs:domain ont:Stop ;
   rdfs:range  ont:Stop .
-
-ont:publishedBy a owl:ObjectProperty ;
-  rdfs:label "published by" ;
-  rdfs:domain ont:FeedInfo ;
-  rdfs:range  ont:Agency .
-
-ont:feedPublisherName a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label "feed publisher name" ;
-  rdfs:domain ont:FeedInfo ;
-  rdfs:range xsd:string .
-
-ont:feedPublisherUrl a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label "feed publisher url" ;
-  rdfs:domain ont:FeedInfo ;
-  rdfs:range xsd:anyURI .
-
-ont:feedLang a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label "feed language" ;
-  rdfs:domain ont:FeedInfo ;
-  rdfs:range xsd:string .
-
-ont:feedVersion a owl:DatatypeProperty ;
-  rdfs:label "feed version" ;
-  rdfs:domain ont:FeedInfo ;
-  rdfs:range xsd:string .
-
-ont:feedStartDate a owl:DatatypeProperty ;
-  rdfs:label "feed start date" ;
-  rdfs:domain ont:FeedInfo ;
-  rdfs:range xsd:string .
-
-ont:feedEndDate a owl:DatatypeProperty ;
-  rdfs:label "feed end date" ;
-  rdfs:domain ont:FeedInfo ;
-  rdfs:range xsd:string .
 
 ont:agencyId a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "agency id" ;
@@ -293,7 +245,7 @@ ont:wheelChairBoarding a owl:DatatypeProperty ;
   rdfs:domain ont:Stop ;
   rdfs:range xsd:integer .
 
-# CalendarService / CalendarException
+# CalendarService
 ont:serviceId a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "service id" ;
   rdfs:domain ont:CalendarService ;
@@ -343,16 +295,6 @@ ont:operatesOnSunday a owl:DatatypeProperty ;
   rdfs:label "operates on sunday" ;
   rdfs:domain ont:CalendarService ;
   rdfs:range xsd:boolean .
-
-ont:date a owl:DatatypeProperty ;
-  rdfs:label "date" ;
-  rdfs:domain ont:CalendarException ;
-  rdfs:range xsd:date .
-
-ont:exceptionType a owl:DatatypeProperty ;
-  rdfs:label "exception type" ;
-  rdfs:domain ont:CalendarException ;
-  rdfs:range xsd:integer .
 
 ont:shapeId a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "shape id" ;
