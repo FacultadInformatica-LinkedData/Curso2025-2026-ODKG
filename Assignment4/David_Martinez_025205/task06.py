@@ -36,12 +36,15 @@ for s, p, o in g:
 ontology = Namespace("http://www.oeg-upm.net/Ontology#")
 person = Namespace("http://oeg.fi.upm.es/def/people#")
 
+# Bind prefixes for readability
 g.bind("ontology", ontology)
 g.bind("person", person)
 
 """**TASK 6.1: Reproduce the taxonomy of classes shown in slide 34 in class (all the classes under "Vocabulario", Slidedeck: 01a.RDF(s)-SPARQL). Add labels for each of them as they are in the diagram (exactly) with no language tags. Remember adding the correct datatype (xsd:String) when appropriate**
 
 """
+
+# Define the classes and hierarchy (vocabulary: person)
 
 g.add((person.Person, RDF.type, RDFS.Class))
 g.add((person.Person, RDFS.label, Literal("Person", datatype=XSD.string)))
