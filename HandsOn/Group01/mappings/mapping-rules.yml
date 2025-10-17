@@ -1,0 +1,143 @@
+prefixes:
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  schema: http://schema.org/
+  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+  dbo: http://dbpedia.org/ontology/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  sc: http://smartcity.linkeddata.es/lcc/ontology#
+  
+mappings:
+
+### MAPEOS DE FACILITIES ###
+#PROBLEMA: Creo que en las URIs no se pueden poner espacios ni tildes así que la columna NAME tal y como está no se puede 
+# utilizar como sujeto, crear una a partir de esta llamada NAMEID o algo de ID q sirva como identificador. Habría que sustituir espacios por guiones por ejemplo y quitar tildes y otros caracteres raros si hay.
+  park:
+    sources:
+      - [parques-jardines_limpio.csv~csv] #poner ruta que sea cuando guardemos el csv filtrando solo el tipo parques
+    s: "http://smartcity.linkeddata.es/lcc/resource/park/$(NAMEID) 
+    
+    po:
+      - [a, sc:Park]
+      - [schema:name,$(NAME)] #cuando no se pone nada se supone que es de tipo string
+      - [schema:postalCode,$(CODIGO-POSTAL)]
+      - [schema:streetAddress,$(NOMBRE-VIA)]
+      - [schema:telephone,$(TELEFONO)]
+      - [schema:email,$(EMAIL)]
+      - [sc:accessibility,$(ACCESIBILIDAD)]
+      - [geo:lat,$(LATITUD), xsd:decimal]
+      - [geo:long,$(LONGITUD), xsd:decimal]
+      - [sc:superficie,$(superficieLimpia), xsd:integer] #no me acuerdo como lo había puesto julia el nombre
+      - [sc:hasSportsFacilities,$(tieneInstalacionesDeportivas) xsd:bool] # mirar como lo ha puseto julia en la ontología 
+      - p: schema:containedInPlace
+        o:
+          mapping: district
+      - p: sc:hasNearby
+        o:
+          mapping: subway
+      - p: sc:hasNearby
+        o:
+          mapping: bus
+      - p: sc:hasNearbyTransport # he añadido transport para que tenga un poco más de sentido (corregir ontología)
+        o:
+          mapping: cercanias
+
+  library:
+    sources:
+      - [bibliobuses-bibliotecas_limpio.csv~csv] #poner ruta que sea cuando guardemos el csv filtrando solo el tipo biblioteca
+    s: "http://smartcity.linkeddata.es/lcc/resource/library/$(NAMEID) 
+
+    po:
+      - [a, schema:Library]
+      - [schema:name,$(NAME)] #cuando no se pone nada se supone que es de tipo string
+      - [schema:postalCode,$(CODIGO-POSTAL)]
+      - [schema:streetAddress,$(NOMBRE-VIA)]
+      - [schema:telephone,$(TELEFONO)]
+      - [schema:email,$(EMAIL)]
+      - [sc:accessibility,$(ACCESIBILIDAD)]
+      - [geo:lat,$(LATITUD), xsd:decimal]
+      - [geo:long,$(LONGITUD), xsd:decimal]
+      - [sc:hasWifi,$(tieneWifi)]
+      - p: schema:containedInPlace
+        o:
+          mapping: district
+      - p: sc:hasNearby
+        o:
+          mapping: subway
+      - p: sc:hasNearby
+        o:
+          mapping: bus
+      - p: sc:hasNearbyTransport # he añadido transport para que tenga un poco más de sentido (corregir ontología)
+        o:
+          mapping: cercanias
+
+  residenceHall:
+    sources:
+      - [colegios-mayores_limpio.csv~csv] #poner ruta que sea cuando guardemos el csv filtrando solo los colegiosmayores
+    s: "http://smartcity.linkeddata.es/lcc/resource/residenceHall/$(NAMEID) 
+
+    po:
+      - [a, sc:ResidenceHall]
+      - [schema:name,$(NAME)] #cuando no se pone nada se supone que es de tipo string
+      - [schema:postalCode,$(CODIGO-POSTAL)]
+      - [schema:streetAddress,$(NOMBRE-VIA)]
+      - [schema:telephone,$(TELEFONO)]
+      - [schema:email,$(EMAIL)]
+      - [sc:accessibility,$(ACCESIBILIDAD)]
+      - [geo:lat,$(LATITUD), xsd:decimal]
+      - [geo:long,$(LONGITUD), xsd:decimal]
+      - [sc:residentsSex,$(generoAlumnos)]
+      - p: schema:containedInPlace
+        o:
+          mapping: district
+      - p: sc:hasNearby
+        o:
+          mapping: subway
+      - p: sc:hasNearby
+        o:
+          mapping: bus
+      - p: sc:hasNearbyTransport # he añadido transport para que tenga un poco más de sentido (corregir ontología)
+        o:
+          mapping: cercanias
+  
+# LO MISMO CON EL RESTO DE CLASES QUE QUEDAN, HE HECHO TODAS LAS QUE TENÍAN COSAS ESPECIALES CREO. 
+
+### MAPEOS DE CLASES ESPACIALES ###
+  district:
+    sources: 
+      - [combinado.csv~csv] #cojo el completo para que aparezcan todos los distritos
+    s: "http://smartcity.linkeddata.es/lcc/resource/district/$(DISTRITO)
+    po:
+      - [a, dbo:District]
+      - p: schema:containedInPlace
+        o: 
+          mapping: neighbourhood
+          
+  neighbourhood:
+    sources: 
+      - [combinado.csv~csv] #cojo el completo para que aparezcan todos los barrios
+    s: "http://smartcity.linkeddata.es/lcc/resource/neighbourhood/$(BARRIO)
+    po:
+      - [a, dbo:Neighbourhood]
+      - p: schema:containedInPlace
+        o: 
+          mapping: municipality
+
+  municipality:
+    sources: 
+      - [combinado.csv~csv] #cojo el completo para que aparezcan todos los municipios
+    s: "http://smartcity.linkeddata.es/lcc/resource/municipality/$(MUNICIPIO)
+    po:
+      - [a, dbo:Municipality]
+
+### MAPEOS DE TRANSPORTE ###
+  subway:
+    sources: 
+      - [combinado.csv~csv] #cojo el completo para que aparezcan todos
+    s: "http://smartcity.linkeddata.es/lcc/resource/subway/$(METRO)
+    po:
+      - [a, sc:Subway]
+      - [sc:nameStation, $()] #MOFIFICAR ESTO SEGÚN CONSIGAMOS DEJAR EL OPENREFINE
+      - [sc: Lineas, $()] #MOFIFICAR ESTO SEGÚN CONSIGAMOS DEJAR EL OPENREFINE
+
+  # bus y cercanías análogo
