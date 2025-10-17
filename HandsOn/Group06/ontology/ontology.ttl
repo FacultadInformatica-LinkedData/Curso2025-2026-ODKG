@@ -27,7 +27,8 @@
 ex:LinkedPlace a owl:Class ;
     rdfs:label "Linked Place"@en ;
     rdfs:comment "A geographic entity from Wikidata (landmark, monument, museum, historical site) that is linked to a transit stop based on geographic proximity."@en ;
-    rdfs:subClassOf schema:Place .
+    rdfs:subClassOf schema:Place ;
+    owl:disjointWith gtfs:Stop .
 
 #################################################################
 # Object Properties
@@ -37,7 +38,15 @@ ex:nearbyPlace a owl:ObjectProperty ;
     rdfs:label "nearby place"@en ;
     rdfs:domain gtfs:Stop ;
     rdfs:range ex:LinkedPlace ;
-    rdfs:comment "Links a transit stop to a nearby Wikidata place entity. The link is pre-computed based on geographic proximity (typically within 500m radius)."@en .
+    rdfs:comment "Links a transit stop to a nearby Wikidata place entity. The link is pre-computed based on geographic proximity (typically within 500m radius)."@en ;
+    owl:inverseOf ex:nearbyStop .
+
+ex:nearbyStop a owl:ObjectProperty ;
+    rdfs:label "nearby stop"@en ;
+    rdfs:domain ex:LinkedPlace ;
+    rdfs:range gtfs:Stop ;
+    rdfs:comment "Links a Wikidata place entity to a nearby transit stop. Inverse property of ex:nearbyPlace."@en ;
+    owl:inverseOf ex:nearbyPlace .
 
 #################################################################
 # Datatype Properties

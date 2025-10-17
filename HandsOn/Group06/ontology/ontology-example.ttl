@@ -1,6 +1,7 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gtfs:  <https://vocab.gtfs.org/terms#> .
 @prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -71,6 +72,7 @@ res:place/Q5775 a ex:LinkedPlace ;
     rdfs:label "Royal Palace of Aranjuez"@en ;
     rdfs:label "Palacio Real de Aranjuez"@es ;
     ex:wikidataUri "http://www.wikidata.org/entity/Q5775"^^xsd:anyURI ;
+    owl:sameAs <http://www.wikidata.org/entity/Q5775> ;
     ex:distanceMeters "450.0"^^xsd:decimal ;
     dcterms:description "18th-century royal residence, UNESCO World Heritage Site since 2001"@en ;
     geo:lat "40.0373"^^xsd:float ;
@@ -80,6 +82,7 @@ res:place/Q28601268 a ex:LinkedPlace ;
     rdfs:label "Church of San Antonio"@en ;
     rdfs:label "Iglesia de San Antonio"@es ;
     ex:wikidataUri "http://www.wikidata.org/entity/Q28601268"^^xsd:anyURI ;
+    owl:sameAs <http://www.wikidata.org/entity/Q28601268> ;
     ex:distanceMeters "320.0"^^xsd:decimal ;
     dcterms:description "18th-century baroque church in Aranjuez"@en ;
     geo:lat "40.0332"^^xsd:float ;
