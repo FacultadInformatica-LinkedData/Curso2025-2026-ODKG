@@ -88,10 +88,6 @@ ns:isCityOf rdf:type owl:ObjectProperty ;
 #    Classes
 #################################
 
-## ns:Class1
-ns:Class1 rdf:type owl:Class ;
-	rdfs:label "Class1" .
-
 ## ns:ChargingStation
 ns:ChargingStation rdf:type owl:Class ;
 	rdfs:label "Charging Station" .
