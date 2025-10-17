@@ -3,95 +3,54 @@
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix gtfs: <https://vocab.gtfs.org/terms#> .
-@prefix ex: <http://group06.linkeddata.es/ontology/> .
+@prefix geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex:   <http://group06.linkeddata.es/ontology/> .
 
 #################################################################
 # Ontology Metadata
 #################################################################
 
-<http://group06.linkeddata.es/ontology/guessing>
+<http://group06.linkeddata.es/ontology/transit>
     a owl:Ontology ;
+    dcterms:title "Madrid Transit Linked Data Ontology"@en ;
     dcterms:creator "Group 06" ;
-    rdfs:comment "Extension of GTFS for user-submitted guesses of vehicle arrival times."@en ;
-    owl:imports
-        <https://vocab.gtfs.org/terms>,
-        <http://xmlns.com/foaf/0.1/> .
+    dcterms:created "2025-10-17"^^xsd:date ;
+    rdfs:comment "Lightweight ontology extending GTFS vocabulary to enable linking transit stops with nearby Wikidata geographic entities for the Madrid Transit Companion application."@en ;
+    owl:imports <https://vocab.gtfs.org/terms> .
 
 #################################################################
 # Classes
 #################################################################
 
-# User (reusing FOAF)
-foaf:Person a owl:Class ;
-    rdfs:label "User"@en ;
-    rdfs:comment "Represents a registered user who makes arrival time guesses."@en .
-
-# Guess (new)
-ex:Guess a owl:Class ;
-    rdfs:label "Guess"@en ;
-    rdfs:comment "A user’s prediction of the actual arrival time of a specific route at a specific stop."@en .
+ex:LinkedPlace a owl:Class ;
+    rdfs:label "Linked Place"@en ;
+    rdfs:comment "A geographic entity from Wikidata (landmark, monument, museum, historical site) that is linked to a transit stop based on geographic proximity."@en ;
+    rdfs:subClassOf schema:Place .
 
 #################################################################
 # Object Properties
 #################################################################
 
-# A guess is made by a user
-ex:madeBy a owl:ObjectProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range foaf:Person ;
-    rdfs:comment "Connects a guess to the user who made it."@en .
-
-# A guess relates to a specific route
-ex:forRoute a owl:ObjectProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range gtfs:Route ;
-    rdfs:comment "The route for which the user made a guess."@en .
-
-# A guess relates to a specific stop
-ex:atStop a owl:ObjectProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range gtfs:Stop ;
-    rdfs:comment "The stop where the guessed arrival occurs."@en .
-
-# A guess may refer to a specific scheduled stop-time (GTFS)
-ex:basedOnStopTime a owl:ObjectProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range gtfs:StopTime ;
-    rdfs:comment "Connects the guess to the corresponding scheduled stop-time entry."@en .
+ex:nearbyPlace a owl:ObjectProperty ;
+    rdfs:label "nearby place"@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range ex:LinkedPlace ;
+    rdfs:comment "Links a transit stop to a nearby Wikidata place entity. The link is pre-computed based on geographic proximity (typically within 500m radius)."@en .
 
 #################################################################
 # Datatype Properties
 #################################################################
 
-# User attributes
-foaf:nick a owl:DatatypeProperty ;
-    rdfs:domain foaf:Person ;
-    rdfs:range xsd:string .
+ex:wikidataUri a owl:DatatypeProperty ;
+    rdfs:label "Wikidata URI"@en ;
+    rdfs:domain ex:LinkedPlace ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "The Wikidata entity URI for this place (e.g., http://www.wikidata.org/entity/Q12345)."@en .
 
-ex:ranking a owl:DatatypeProperty ;
-    rdfs:domain foaf:Person ;
-    rdfs:range xsd:integer ;
-    rdfs:comment "The rank of the user based on performance."@en .
-
-ex:score a owl:DatatypeProperty ;
-    rdfs:domain foaf:Person ;
+ex:distanceMeters a owl:DatatypeProperty ;
+    rdfs:label "distance in meters"@en ;
+    rdfs:domain ex:LinkedPlace ;
     rdfs:range xsd:decimal ;
-    rdfs:comment "The accumulated score of the user based on guess accuracy."@en .
-
-# Guess attributes
-ex:guessedArrivalTime a owl:DatatypeProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range xsd:dateTime ;
-    rdfs:comment "The time predicted by the user for the arrival."@en .
-
-ex:expectedArrivalTime a owl:DatatypeProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range xsd:time ;
-    rdfs:comment "The scheduled arrival time from GTFS data."@en .
-
-dcterms:created a owl:DatatypeProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range xsd:dateTime ;
-    rdfs:comment "The timestamp when the guess was submitted."@en .
+    rdfs:comment "Distance in meters from the linked transit stop to this place, calculated using haversine formula on WGS84 coordinates."@en .

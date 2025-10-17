@@ -2,49 +2,85 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix gtfs:  <https://vocab.gtfs.org/terms#> .
-@prefix ex:    <http://group06.linkeddata.es/resource/> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ex:    <http://group06.linkeddata.es/ontology/> .
+@prefix res:   <http://group06.linkeddata.es/resource/> .
 
 #################################################################
-# User
+# Route Example (from actual Madrid CRTM data)
 #################################################################
 
-ex:user_A a foaf:Person ;
-    foaf:nick "UserA" ;
-    ex:ranking 3 ;
-    ex:score 42.0 .
+res:route/9__1__013_ a gtfs:Route ;
+    gtfs:shortName "1" ;
+    gtfs:longName "L1 CIRCULAR (FFCC-Moreras-FFCC)" ;
+    gtfs:routeType "3"^^xsd:integer ;
+    rdfs:comment "Bus route 1 in Aranjuez, circular line"@en .
 
 #################################################################
-# GTFS route / stop / trip / stoptime (from schedule)
+# Stop Example (from actual Madrid CRTM data)
 #################################################################
 
-ex:route_94022H1 a gtfs:Route ;
-    gtfs:routeShortName "94022H1" ;
-    gtfs:routeLongName "Boadilla del Monte – Estación Boadilla Centro" .
+res:stop/par_8_09568 a gtfs:Stop ;
+    gtfs:code "09568" ;
+    rdfs:label "ESTACIÓN-EST.ARANJUEZ"@es ;
+    rdfs:label "Aranjuez Train Station Stop"@en ;
+    geo:lat "40.0345268"^^xsd:float ;
+    geo:long "-3.6178372"^^xsd:float ;
+    gtfs:wheelchairBoarding "2"^^xsd:integer ;
+    ex:nearbyPlace res:place/Q5775 .
 
-ex:stop_boadilla_centro a gtfs:Stop ;
-    rdfs:label "Estación Boadilla Centro"@es .
-
-ex:trip_94022H1_0630 a gtfs:Trip ;
-    gtfs:route ex:route_94022H1 .
-
-ex:stoptime_94022H1_boadilla_0630 a gtfs:StopTime ;
-    gtfs:trip ex:trip_94022H1_0630 ;
-    gtfs:stop ex:stop_boadilla_centro ;
-    gtfs:arrivalTime "06:30:00"^^xsd:time .
+res:stop/par_8_09572 a gtfs:Stop ;
+    gtfs:code "09572" ;
+    rdfs:label "ABASTOS-FLORIDA"@es ;
+    geo:lat "40.0320511"^^xsd:float ;
+    geo:long "-3.6070321"^^xsd:float ;
+    gtfs:wheelchairBoarding "2"^^xsd:integer .
 
 #################################################################
-# Guess
+# Trip Example (from actual Madrid CRTM data)
 #################################################################
 
-ex:guess_100 a ex:Guess ;
-    ex:madeBy ex:user_A ;
-    ex:forRoute ex:route_94022H1 ;
-    ex:atStop ex:stop_boadilla_centro ;
-    ex:basedOnStopTime ex:stoptime_94022H1_boadilla_0630 ;
-    # Suppose user guesses arrival at 06:32 on some date
-    ex:guessedArrivalTime "2025-10-07T06:32:00Z"^^xsd:dateTime ;
-    # Expected (from schedule) is 06:30
-    ex:expectedArrivalTime "06:30:00"^^xsd:time ;
-    dcterms:created "2025-10-07T06:20:00Z"^^xsd:dateTime .
+res:trip/9010201_9__1__013_-9__1__013__2_00:40:00 a gtfs:Trip ;
+    gtfs:route res:route/9__1__013_ ;
+    gtfs:headsign "ESTUDIOS CINEMATOGRÁFICOS-MEDIODÍA" ;
+    gtfs:directionId "0"^^xsd:integer .
+
+#################################################################
+# StopTime Example (from actual Madrid CRTM data)
+#################################################################
+
+res:stop-time/9010201-09568-0 a gtfs:StopTime ;
+    gtfs:trip res:trip/9010201_9__1__013_-9__1__013__2_00:40:00 ;
+    gtfs:stop res:stop/par_8_09568 ;
+    gtfs:arrivalTime "00:40:00"^^xsd:time ;
+    gtfs:departureTime "00:40:00"^^xsd:time ;
+    gtfs:stopSequence "0"^^xsd:integer .
+
+res:stop-time/9010201-09572-2 a gtfs:StopTime ;
+    gtfs:trip res:trip/9010201_9__1__013_-9__1__013__2_00:40:00 ;
+    gtfs:stop res:stop/par_8_09572 ;
+    gtfs:arrivalTime "00:40:00"^^xsd:time ;
+    gtfs:stopSequence "2"^^xsd:integer .
+
+#################################################################
+# Linked Place Examples (Wikidata entities near stops)
+#################################################################
+
+res:place/Q5775 a ex:LinkedPlace ;
+    rdfs:label "Royal Palace of Aranjuez"@en ;
+    rdfs:label "Palacio Real de Aranjuez"@es ;
+    ex:wikidataUri "http://www.wikidata.org/entity/Q5775"^^xsd:anyURI ;
+    ex:distanceMeters "450.0"^^xsd:decimal ;
+    dcterms:description "18th-century royal residence, UNESCO World Heritage Site since 2001"@en ;
+    geo:lat "40.0373"^^xsd:float ;
+    geo:long "-3.6076"^^xsd:float .
+
+res:place/Q28601268 a ex:LinkedPlace ;
+    rdfs:label "Church of San Antonio"@en ;
+    rdfs:label "Iglesia de San Antonio"@es ;
+    ex:wikidataUri "http://www.wikidata.org/entity/Q28601268"^^xsd:anyURI ;
+    ex:distanceMeters "320.0"^^xsd:decimal ;
+    dcterms:description "18th-century baroque church in Aranjuez"@en ;
+    geo:lat "40.0332"^^xsd:float ;
+    geo:long "-3.6042"^^xsd:float .
