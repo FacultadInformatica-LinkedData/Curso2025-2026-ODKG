@@ -1,0 +1,62 @@
+# Prefissi usati in tutte le query
+PREFIX safeschool: <http://safeschool.linkeddata.es/ontology#>
+PREFIX schema: <https://schema.org/>
+
+# =========================================================================
+
+# Query 1: Get the names and types of the first 10 educational centers.
+# This query verifies that the basic mapping of centers is working.
+SELECT ?center ?name ?type
+WHERE {
+  ?center a safeschool:EducationalCenter ;
+          safeschool:centerName ?name ;
+          safeschool:centerType ?type .
+}
+LIMIT 10
+
+---
+
+# Query 2: Find all public schools ("PÚBLICO") in the "Centro" district and their websites.
+# This query checks if filtering by data properties works as expected.
+SELECT ?center ?name ?website
+WHERE {
+  ?center a safeschool:EducationalCenter ;
+          safeschool:centerName ?name ;
+          safeschool:ownershipType "PÚBLICO" ;
+          safeschool:districtName "Centro" .
+  OPTIONAL { ?center safeschool:contactWebsite ?website . }
+}
+
+---
+
+# Query 3: Get the UTM coordinates for the educational center with code "28004059" (CERVANTES).
+# This is a crucial query to verify that the object property link between an EducationalCenter and its Location was created correctly.
+SELECT ?name ?utmX ?utmY
+WHERE {
+  ?center safeschool:centerCode "28004059" ;
+          safeschool:centerName ?name ;
+          safeschool:locatedAt ?location .
+  ?location safeschool:utmX ?utmX ;
+            safeschool:utmY ?utmY .
+}
+
+---
+
+# Query 4: Count the number of educational centers in each district.
+# This query is useful for aggregating data and verifying the transformation on a larger scale.
+SELECT ?districtName (COUNT(?center) AS ?numberOfCenters)
+WHERE {
+    ?center a safeschool:EducationalCenter ;
+            safeschool:districtName ?districtName .
+}
+GROUP BY ?districtName
+ORDER BY DESC(?numberOfCenters)
+
+---
+
+# Query 5: Count the total number of all educational centers.
+# This query gives a final count to check if all rows from the CSV have been transformed.
+SELECT (COUNT(?center) AS ?totalCenters)
+WHERE {
+  ?center a safeschool:EducationalCenter .
+}
