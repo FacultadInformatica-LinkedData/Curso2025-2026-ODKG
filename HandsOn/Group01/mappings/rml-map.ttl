@@ -16,6 +16,7 @@
   ] ;
   rr:subjectMap [ 
     rr:template "http://smartcity.linkeddata.es/lcc/resource/{NOMBRE}" ;
+    rr:class sc:Facility ;
     rr:termType rr:IRI ;
   ] ;
   rr:predicateObjectMap [ 
