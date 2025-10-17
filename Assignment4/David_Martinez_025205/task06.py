@@ -33,8 +33,8 @@ for s, p, o in g:
 
 """**Task 6.0: Create new prefixes for "ontology" and "person" as shown in slide 14 of the Slidedeck 01a.RDF(s)-SPARQL shown in class.**"""
 
-ontology = Namespace("http://www.oeg-upm.net/Ontology#")
-person = Namespace("http://oeg.fi.upm.es/def/people#")
+ontology = Namespace("http://oeg.fi.upm.es/def/people#")
+person = Namespace("http://oeg.fi.upm.es/resource/person/")
 
 # Bind prefixes for readability
 g.bind("ontology", ontology)
@@ -46,24 +46,26 @@ g.bind("person", person)
 
 # Define the classes and hierarchy (vocabulary: person)
 
-g.add((person.Person, RDF.type, RDFS.Class))
-g.add((person.Person, RDFS.label, Literal("Person", datatype=XSD.string)))
+g.add((ontology.Person, RDF.type, RDFS.Class))
+g.add((ontology.Person, RDFS.label, Literal("Person", datatype=XSD.string)))
 
-g.add((person.Professor, RDF.type, RDFS.Class))
-g.add((person.Professor, RDFS.label, Literal("Professor", datatype=XSD.string)))
-g.add((person.Professor, RDFS.subClassOf, person.Person))
+g.add((ontology.Professor, RDF.type, RDFS.Class))
+g.add((ontology.Professor, RDFS.label, Literal("Professor", datatype=XSD.string)))
 
-g.add((person.AssociateProfessor, RDF.type, RDFS.Class))
-g.add((person.AssociateProfessor, RDFS.label, Literal("AssociateProfessor", datatype=XSD.string)))
-g.add((person.AssociateProfessor, RDFS.subClassOf, person.Professor))
+g.add((ontology.FullProfessor, RDF.type, RDFS.Class))
+g.add((ontology.FullProfessor, RDFS.label, Literal("FullProfessor", datatype=XSD.string)))
 
-g.add((person.InterimAssociateProfessor, RDF.type, RDFS.Class))
-g.add((person.InterimAssociateProfessor, RDFS.label, Literal("InterimAssociateProfessor", datatype=XSD.string)))
-g.add((person.InterimAssociateProfessor, RDFS.subClassOf, person.AssociateProfessor))
+g.add((ontology.AssociateProfessor, RDF.type, RDFS.Class))
+g.add((ontology.AssociateProfessor, RDFS.label, Literal("AssociateProfessor", datatype=XSD.string)))
 
-g.add((person.FullProfessor, RDF.type, RDFS.Class))
-g.add((person.FullProfessor, RDFS.label, Literal("FullProfessor", datatype=XSD.string)))
-g.add((person.FullProfessor, RDFS.subClassOf, person.Professor))
+g.add((ontology.InterimAssociateProfessor, RDF.type, RDFS.Class))
+g.add((ontology.InterimAssociateProfessor, RDFS.label, Literal("InterimAssociateProfessor", datatype=XSD.string)))
+
+# Defining hierarchy
+g.add((ontology.Professor, RDFS.subClassOf, ontology.Person))
+g.add((ontology.FullProfessor, RDFS.subClassOf, ontology.Professor))
+g.add((ontology.AssociateProfessor, RDFS.subClassOf, ontology.Professor))
+g.add((ontology.InterimAssociateProfessor, RDFS.subClassOf, ontology.AssociateProfessor))
 
 # Visualize the results
 for s, p, o in g:
@@ -77,19 +79,19 @@ r.validate_task_06_01(g)
 ## hasColleague
 g.add((person.hasColleague, RDF.type, RDF.Property))
 g.add((person.hasColleague, RDFS.label, Literal("hasColleague", datatype=XSD.string)))
-g.add((person.hasColleague, RDFS.domain, person.Person))
-g.add((person.hasColleague, RDFS.range, person.Person))
+g.add((person.hasColleague, RDFS.domain, ontology.Person))
+g.add((person.hasColleague, RDFS.range, ontology.Person))
 
 ## hasName
 g.add((person.hasName, RDF.type, RDF.Property))
 g.add((person.hasName, RDFS.label, Literal("hasName", datatype=XSD.string)))
-g.add((person.hasName, RDFS.domain, person.Person))
+g.add((person.hasName, RDFS.domain, ontology.Person))
 g.add((person.hasName, RDFS.range, RDFS.Literal))
 
 ## hasHomePage
 g.add((person.hasHomePage, RDF.type, RDF.Property))
 g.add((person.hasHomePage, RDFS.label, Literal("hasHomePage", datatype=XSD.string)))
-g.add((person.hasHomePage, RDFS.domain, person.FullProfessor))
+g.add((person.hasHomePage, RDFS.domain, ontology.FullProfessor))
 g.add((person.hasHomePage, RDFS.range, RDFS.Literal))
 
 
@@ -102,26 +104,21 @@ r.validate_task_06_02(g)
 
 """**TASK 6.3: Create the individuals shown in slide 36 under "Datos". Link them with the same relationships shown in the diagram."**"""
 
-data = Namespace("http://oeg.fi.upm.es/resource/person/")
-g.bind("data", data)
+# 1. Individual data: Oscar
+g.add((person.Oscar, RDF.type, ontology.AssociateProfessor))
+g.add((person.Oscar, RDFS.label, Literal("Oscar", datatype=XSD.string)))
+g.add((person.Oscar, ontology.hasName, Literal("Óscar Corcho García", datatype=XSD.string)))
+g.add((person.Oscar, ontology.hasColleague, person.Asun))
 
-# 1. Individual data:Oscar
-g.add((data.Oscar, RDF.type, person.AssociateProfessor))
-g.add((data.Oscar, RDFS.label, Literal("Oscar", datatype=XSD.string)))
-g.add((data.Oscar, person.hasName, Literal("Óscar Corcho García", datatype=XSD.string)))
-g.add((data.Oscar, person.hasColleague, data.Asun))
+# 2. Individual data: Asun
+g.add((person.Asun, RDF.type, ontology.FullProfessor))
+g.add((person.Asun, RDFS.label, Literal("Asun", datatype=XSD.string)))
+g.add((person.Asun, ontology.hasHomePage, Literal("http://oeg.fi.upm.es/", datatype=XSD.anyURI)))
+g.add((person.Asun, ontology.hasColleague, person.Raul))
 
-# 2. Individual data:Asun
-g.add((data.Asun, RDF.type, person.FullProfessor))
-g.add((data.Asun, RDFS.label, Literal("Asun", datatype=XSD.string)))
-g.add((data.Asun, person.hasHomePage, Literal("http://www.oeg-upm.net/", datatype=XSD.anyURI)))
-g.add((data.Asun, person.hasColleague, data.Raul))
-
-# 3. Individual data:Raul
-g.add((data.Raul, RDF.type, person.InterimAssociateProfessor))
-g.add((data.Raul, RDFS.label, Literal("Raul", datatype=XSD.string)))
-g.add((data.Raul, person.hasColleague, data.Asun))
-
+# 3. Individual data: Raul
+g.add((person.Raul, RDF.type, ontology.InterimAssociateProfessor))
+g.add((person.Raul, RDFS.label, Literal("Raul", datatype=XSD.string)))
 
 # Visualize the results
 for s, p, o in g:
@@ -140,11 +137,11 @@ g.bind("vcard", VCARD)
 g.bind("foaf", FOAF)
 
 
-g.add((data.Oscar, FOAF.email, Literal("oscar.corcho@upm.es", datatype=XSD.string)))
+g.add((person.Oscar, FOAF.email, Literal("oscar.corcho@upm.es", datatype=XSD.string)))
 
-g.add((data.Oscar, VCARD.Given, Literal("Óscar", datatype=XSD.string)))
+g.add((person.Oscar, VCARD.Given, Literal("Óscar", datatype=XSD.string)))
 
-g.add((data.Oscar, VCARD.Family, Literal("Corcho García", datatype=XSD.string)))
+g.add((person.Oscar, VCARD.Family, Literal("Corcho García", datatype=XSD.string)))
 # Visualize the results
 for s, p, o in g:
   print(s,p,o)
