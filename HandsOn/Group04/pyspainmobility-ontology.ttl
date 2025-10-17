@@ -1,0 +1,86 @@
+@prefix ont: <https://data.ccsi923.github.io/Curso2025-2026-ODKG/HandsOn/AS2-G4/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+
+# Ontology for representing MITMA mobility datasets (pySpainMobility mapping)
+
+ont:MobilityDataset a rdfs:Class ;
+    rdfs:label "Mobility Dataset" ;
+    rdfs:comment "A dataset release (e.g., OD matrices, trips-per-person) published by MITMS." .
+
+ont:ODMatrix a rdfs:Class ;
+    rdfs:label "Origin-Destination Matrix" ;
+    rdfs:subClassOf ont:MobilityDataset ;
+    rdfs:comment "An OD matrix for a given date and spatial aggregation level." .
+
+ont:TripCount a rdfs:Class ;
+    rdfs:label "Trips per person" ;
+    rdfs:subClassOf ont:MobilityDataset .
+
+ont:Zone a rdfs:Class ;
+    rdfs:label "Spatial Zone" ;
+    rdfs:comment "Geographic aggregation unit (district, municipality, greater urban area)." .
+
+ont:StudyArea a rdfs:Class ;
+    rdfs:label "Study Area" ;
+    rdfs:comment "A defined set of zones used for an analysis." .
+
+ont:DemographicGroup a rdfs:Class ;
+    rdfs:label "Demographic Group" ;
+    rdfs:comment "Demographic bucket (age, gender, income) used to disaggregate metrics." .
+
+# Properties
+ont:hasOrigin a rdf:Property ;
+    rdfs:domain ont:ODMatrix ;
+    rdfs:range ont:Zone ;
+    rdfs:label "has origin" .
+
+ont:hasDestination a rdf:Property ;
+    rdfs:domain ont:ODMatrix ;
+    rdfs:range ont:Zone ;
+    rdfs:label "has destination" .
+
+ont:trips a rdf:Property ;
+    rdfs:domain ont:ODMatrix ;
+    rdfs:range xsd:integer ;
+    rdfs:label "number of trips" ;
+    rdfs:comment "Total number of aggregated trips (integer count)." .
+
+ont:tripsKm a rdf:Property ;
+    rdfs:domain ont:ODMatrix ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "trips kilometers" ;
+    rdfs:comment "Sum of trips multiplied by distance in kilometers." .
+
+ont:date a rdf:Property ;
+    rdfs:domain ont:MobilityDataset ;
+    rdfs:range xsd:date ;
+    rdfs:label "date" .
+
+ont:zoneType a rdf:Property ;
+    rdfs:domain ont:Zone ;
+    rdfs:range rdfs:Literal ;
+    rdfs:label "zone type" ;
+    rdfs:comment "Values: district, municipality, gau (greater urban area)." .
+
+ont:hasDemographicBreakdown a rdf:Property ;
+    rdfs:domain ont:MobilityDataset ;
+    rdfs:range ont:DemographicGroup ;
+    rdfs:label "has demographic breakdown" .
+
+ont:populationCount a rdf:Property ;
+    rdfs:domain ont:DemographicGroup ;
+    rdfs:range xsd:integer ;
+    rdfs:label "population count" .
+
+# Provenance & licensing
+dcterms:provenance a rdf:Property .
+dcterms:license a rdf:Property .
+
+# Example recommended prefixes for data publication
+# ont: <https://data.ccsi923.github.io/Curso2025-2026-ODKG/HandsOn/AS2-G4/ontology#>
+# data: <https://data.ccsi923.github.io/Curso2025-2026-ODKG/HandsOn/AS2-G4/data/>
+# zone: <https://data.ccsi923.github.io/Curso2025-2026-ODKG/HandsOn/AS2-G4/zones/>

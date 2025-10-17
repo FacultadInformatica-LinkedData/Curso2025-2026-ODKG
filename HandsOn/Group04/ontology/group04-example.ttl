@@ -1,0 +1,33 @@
+@prefix ex: <https://data.example.org/odkg/group04/ontology#> .
+@prefix g04: <https://data.example.org/odkg/group04/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Example instantiation using a few zones and flows
+
+g04:zone/1 a ex:Zone ;
+  ex:zoneId "1" ;
+  ex:zoneName "Centro" ;
+  geo:lat "40.4168"^^xsd:decimal ;
+  geo:long "-3.7038"^^xsd:decimal .
+
+g04:zone/2 a ex:Zone ;
+  ex:zoneId "2" ;
+  ex:zoneName "Universidad" ;
+  geo:lat "40.4300"^^xsd:decimal ;
+  geo:long "-3.7000"^^xsd:decimal .
+
+g04:flow/2024-05-01/1/2 a ex:Flow ;
+  ex:hasOrigin g04:zone/1 ;
+  ex:hasDestination g04:zone/2 ;
+  ex:trips "42"^^xsd:integer ;
+  ex:date "2024-05-01"^^xsd:date ;
+  prov:wasDerivedFrom <file://../csv/flux_daily_mov.csv> .
+
+g04:flow/2024-05-01/2/1 a ex:Flow ;
+  ex:hasOrigin g04:zone/2 ;
+  ex:hasDestination g04:zone/1 ;
+  ex:trips "37"^^xsd:integer ;
+  ex:date "2024-05-01"^^xsd:date ;
+  prov:wasDerivedFrom <file://../csv/flux_daily_mov.csv> .

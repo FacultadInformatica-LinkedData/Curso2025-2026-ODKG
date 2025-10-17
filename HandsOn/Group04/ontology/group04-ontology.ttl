@@ -1,0 +1,55 @@
+@prefix ex: <https://data.example.org/odkg/group04/ontology#> .
+@prefix g04: <https://data.example.org/odkg/group04/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Group04 lightweight ontology for zones and aggregated flows
+
+ex:Zone a rdfs:Class ;
+  dc:description "A spatial unit (zone) used in the mobility datasets." .
+
+ex:Flow a rdfs:Class ;
+  dc:description "An aggregated movement (flow) observed between two zones on a particular date." .
+
+# Properties
+ex:zoneId a rdf:Property ;
+  rdfs:domain ex:Zone ;
+  rdfs:range xsd:string ;
+  dc:description "Identifier of the zone as in zones.csv" .
+
+ex:zoneName a rdf:Property ;
+  rdfs:domain ex:Zone ;
+  rdfs:range xsd:string ;
+  dc:description "Human readable name of the zone" .
+
+geo:lat a rdf:Property ;
+  rdfs:domain ex:Zone ;
+  rdfs:range xsd:decimal .
+
+geo:long a rdf:Property ;
+  rdfs:domain ex:Zone ;
+  rdfs:range xsd:decimal .
+
+ex:hasOrigin a rdf:Property ;
+  rdfs:domain ex:Flow ;
+  rdfs:range ex:Zone ;
+  dc:description "Points to the origin zone of the flow" .
+
+ex:hasDestination a rdf:Property ;
+  rdfs:domain ex:Flow ;
+  rdfs:range ex:Zone ;
+  dc:description "Points to the destination zone of the flow" .
+
+ex:trips a rdf:Property ;
+  rdfs:domain ex:Flow ;
+  rdfs:range xsd:integer ;
+  dc:description "Number of trips aggregated for the flow" .
+
+ex:date a rdf:Property ;
+  rdfs:domain ex:Flow ;
+  rdfs:range xsd:date ;
+  dc:description "Date of the aggregation (YYYY-MM-DD)" .
+
+prov:wasDerivedFrom a rdf:Property .
