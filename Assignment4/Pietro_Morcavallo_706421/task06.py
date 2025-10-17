@@ -1,5 +1,5 @@
 #task06.py
-# **Task 06: Modifying RDF(s)**
+#Task 06
 
 #!pip install rdflib
 import urllib.request
@@ -22,7 +22,7 @@ for s, p, o in g:
   print(s,p,o)
 
 
-# **Task 6.0: Create new prefixes for "ontology" and "person" as shown in slide 14 of the Slidedeck 01a.RDF(s)-SPARQL shown in class.**
+# Task 6.0: Create new prefixes for "ontology" and "person" as shown in slide 14 of the Slidedeck 01a.RDF(s)-SPARQL shown in class.**
 
 ontology = Namespace("http://oeg.fi.upm.es/def/people#")
 person   = Namespace("http://oeg.fi.upm.es/resource/person/")
@@ -56,7 +56,6 @@ g.add((ontology.FullProfessor,            RDFS.label, Literal("FullProfessor", d
 for s, p, o in g:
   print(s,p,o)
 
-# %%
 # Validation. Do not remove
 r.validate_task_06_01(g)
 
@@ -121,7 +120,7 @@ for s, p, o in g:
 
 r.validate_task_06_03(g)
 
-#TASK 6.4 
+# TASK 6.4 
 
 from rdflib import URIRef
 
@@ -144,7 +143,6 @@ g.add((oscar, FOAF.email, Literal("oscar@example.org", datatype=XSD.string)))
 for s, p, o in g:
   print(s,p,o)
 
-# %%
 # Validation. Do not remove
 r.validate_task_06_04(g)
 r.save_report("_Task_06")

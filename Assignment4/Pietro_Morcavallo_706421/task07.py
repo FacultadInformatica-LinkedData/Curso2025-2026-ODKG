@@ -1,6 +1,5 @@
 #task07.py
-# **Task 07: Querying RDF(s)**
-
+# Task 07
 
 #!pip install rdflib
 import urllib.request
