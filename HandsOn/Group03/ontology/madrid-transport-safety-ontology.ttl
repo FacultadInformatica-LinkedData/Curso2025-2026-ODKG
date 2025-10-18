@@ -18,10 +18,11 @@
     dcterms:description "An ontology for representing transportation infrastructure and safety data in Madrid, including bicycle accidents, traffic lights, pedestrian data, and bicycle infrastructure data."@en ;
     dcterms:creator "Group 03" ;
     dcterms:created "2025-10-05"^^xsd:date ;
+    dcterms:modified "2025-10-10"^^xsd:date ;
     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
     dcterms:source "Ayuntamiento de Madrid - Open Data Portal" ;
-    owl:versionInfo "1.0" ;
-    rdfs:comment "This ontology integrates data from multiple Madrid city datasets to support analysis of urban transportation safety and infrastructure."@en .
+    owl:versionInfo "2.0" ;
+    rdfs:comment "This ontology integrates data from multiple Madrid city datasets to support analysis of urban transportation safety and infrastructure. Updated to include enhanced properties for accident details, person information, traffic light specifications, and measurement data."@en .
 
 
 #    Classes
@@ -38,10 +39,10 @@
           owl:someValuesFrom xsd:dateTime
         ] ,
         [ rdf:type owl:Restriction ;
-          owl:onProperty :deviceType ;
+          owl:onProperty :vehicleType ;
           owl:someValuesFrom xsd:string
         ] ;
-    rdfs:label "Bicycle Accident"@en ;
+    rdfs:label "Bicycle Accident"@en , "Accidente de Bicicleta"@es ;
     rdfs:comment "Represents an accident involving a bicycle in Madrid."@en ;
     skos:definition "An event where a bicycle was involved in a traffic accident."@en .
 
@@ -104,6 +105,13 @@
     rdfs:comment "Represents a street in Madrid."@en ;
     skos:definition "A public road in an urban area."@en .
 
+###  http://madrid-transport-safety.org/ontology#Person
+:Person rdf:type owl:Class ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:label "Person"@en , "Persona"@es ;
+    rdfs:comment "Represents a person involved in an accident."@en ;
+    skos:definition "An individual involved in a traffic incident."@en .
+
 
 #    Object Properties
 
@@ -154,6 +162,14 @@
     rdfs:label "near traffic light"@en , "cerca de semáforo"@es ;
     rdfs:comment "Indicates an accident occurred near a traffic light."@en ;
     skos:definition "Spatial relationship indicating proximity to a traffic light."@en .
+
+###  http://madrid-transport-safety.org/ontology#involvesPerson
+:involvesPerson rdf:type owl:ObjectProperty ;
+    rdfs:domain :Accident ;
+    rdfs:range :Person ;
+    rdfs:label "involves person"@en , "involucra persona"@es ;
+    rdfs:comment "Indicates that a person was involved in an accident."@en ;
+    skos:definition "Links an accident to a person involved in it."@en .
 
 
 #    Data Properties
@@ -305,8 +321,160 @@
 
 ###  http://madrid-transport-safety.org/ontology#deviceType
 :deviceType rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Accident ;
+    rdfs:domain :BicycleStation ;
     rdfs:range xsd:string ;
     rdfs:label "device type"@en , "tipo de dispositivo"@es ;
     rdfs:comment "Type or category of the counting device."@en ;
     skos:definition "Classification of the device used for counting bicycles."@en .
+
+###  http://madrid-transport-safety.org/ontology#caseNumber
+:caseNumber rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Accident ;
+    rdfs:range xsd:string ;
+    rdfs:label "case number"@en , "número de expediente"@es ;
+    rdfs:comment "The unique case number assigned to an accident."@en ;
+    skos:definition "Official identifier for the accident case."@en .
+
+###  http://madrid-transport-safety.org/ontology#accidentTime
+:accidentTime rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Accident ;
+    rdfs:range xsd:time ;
+    rdfs:label "accident time"@en , "hora del accidente"@es ;
+    rdfs:comment "The specific time when an accident occurred."@en ;
+    skos:definition "Time of day when the accident took place."@en .
+
+###  http://madrid-transport-safety.org/ontology#streetNumber
+:streetNumber rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:string ;
+    rdfs:label "street number"@en , "número de calle"@es ;
+    rdfs:comment "The street number of a location."@en ;
+    skos:definition "The numeric identifier on a street."@en .
+
+###  http://madrid-transport-safety.org/ontology#vehicleType
+:vehicleType rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Accident ;
+    rdfs:range xsd:string ;
+    rdfs:label "vehicle type"@en , "tipo de vehículo"@es ;
+    rdfs:comment "The type of vehicle involved in the accident."@en ;
+    skos:definition "Classification of the vehicle (e.g., Bicicleta, Bicicleta EPAC)."@en .
+
+###  http://madrid-transport-safety.org/ontology#personType
+:personType rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string ;
+    rdfs:label "person type"@en , "tipo de persona"@es ;
+    rdfs:comment "The role of the person in the accident (e.g., conductor, passenger)."@en ;
+    skos:definition "Classification of the person's role in the incident."@en .
+
+###  http://madrid-transport-safety.org/ontology#ageRange
+:ageRange rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string ;
+    rdfs:label "age range"@en , "rango de edad"@es ;
+    rdfs:comment "The age range of the person involved."@en ;
+    skos:definition "Age bracket of the individual."@en .
+
+###  http://madrid-transport-safety.org/ontology#gender
+:gender rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string ;
+    rdfs:label "gender"@en , "sexo"@es ;
+    rdfs:comment "The gender of the person."@en ;
+    skos:definition "Sex of the individual."@en .
+
+###  http://madrid-transport-safety.org/ontology#severityCode
+:severityCode rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Accident ;
+    rdfs:range xsd:string ;
+    rdfs:label "severity code"@en , "código de lesividad"@es ;
+    rdfs:comment "The code representing the severity of injuries."@en ;
+    skos:definition "Numeric code for injury severity."@en .
+
+###  http://madrid-transport-safety.org/ontology#injuryDescription
+:injuryDescription rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Accident ;
+    rdfs:range xsd:string ;
+    rdfs:label "injury description"@en , "descripción de lesividad"@es ;
+    rdfs:comment "Description of the injuries sustained."@en ;
+    skos:definition "Textual description of the injury severity."@en .
+
+###  http://madrid-transport-safety.org/ontology#coordinateXUTM
+:coordinateXUTM rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "coordinate X UTM"@en , "coordenada X UTM"@es ;
+    rdfs:comment "The X coordinate in UTM projection."@en ;
+    skos:definition "Universal Transverse Mercator X coordinate."@en .
+
+###  http://madrid-transport-safety.org/ontology#coordinateYUTM
+:coordinateYUTM rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "coordinate Y UTM"@en , "coordenada Y UTM"@es ;
+    rdfs:comment "The Y coordinate in UTM projection."@en ;
+    skos:definition "Universal Transverse Mercator Y coordinate."@en .
+
+###  http://madrid-transport-safety.org/ontology#alcoholPositive
+:alcoholPositive rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "alcohol positive"@en , "positiva alcohol"@es ;
+    rdfs:comment "Indicates if the person tested positive for alcohol."@en ;
+    skos:definition "Boolean value for alcohol test result."@en .
+
+###  http://madrid-transport-safety.org/ontology#drugPositive
+:drugPositive rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "drug positive"@en , "positiva droga"@es ;
+    rdfs:comment "Indicates if the person tested positive for drugs."@en ;
+    skos:definition "Boolean value for drug test result."@en .
+
+###  http://madrid-transport-safety.org/ontology#observationDirection
+:observationDirection rdf:type owl:DatatypeProperty ;
+    rdfs:domain :BicycleStation ;
+    rdfs:range xsd:string ;
+    rdfs:label "observation direction"@en , "observaciones de dirección"@es ;
+    rdfs:comment "Additional observations about the direction of measurement."@en ;
+    skos:definition "Directional notes for the counting station."@en .
+
+###  http://madrid-transport-safety.org/ontology#measurementDate
+:measurementDate rdf:type owl:DatatypeProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:date ;
+    rdfs:label "measurement date"@en , "fecha de medición"@es ;
+    rdfs:comment "The date when a measurement was taken."@en ;
+    skos:definition "Date of data collection."@en .
+
+###  http://madrid-transport-safety.org/ontology#measurementTime
+:measurementTime rdf:type owl:DatatypeProperty ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:time ;
+    rdfs:label "measurement time"@en , "hora de medición"@es ;
+    rdfs:comment "The time when a measurement was taken."@en ;
+    skos:definition "Time of data collection."@en .
+
+###  http://madrid-transport-safety.org/ontology#trafficLightType
+:trafficLightType rdf:type owl:DatatypeProperty ;
+    rdfs:domain :TrafficLight ;
+    rdfs:range xsd:string ;
+    rdfs:label "traffic light type"@en , "tipo de semáforo"@es ;
+    rdfs:comment "The type of traffic light (e.g., BICI, PEATON-BICI)."@en ;
+    skos:definition "Classification of the traffic signal."@en .
+
+###  http://madrid-transport-safety.org/ontology#lightType
+:lightType rdf:type owl:DatatypeProperty ;
+    rdfs:domain :TrafficLight ;
+    rdfs:range xsd:string ;
+    rdfs:label "light type"@en , "tipo de luz"@es ;
+    rdfs:comment "The configuration of lights on the traffic signal."@en ;
+    skos:definition "Technical specification of the light configuration."@en .
+
+###  http://madrid-transport-safety.org/ontology#intersectionId
+:intersectionId rdf:type owl:DatatypeProperty ;
+    rdfs:domain :TrafficLight ;
+    rdfs:range xsd:string ;
+    rdfs:label "intersection ID"@en , "ID de cruce"@es ;
+    rdfs:comment "The unique identifier for the intersection."@en ;
+    skos:definition "Code identifying the intersection where the traffic light is located."@en .

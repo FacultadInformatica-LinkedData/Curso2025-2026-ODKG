@@ -12,16 +12,13 @@
 
 @base <http://madrid-transport-safety.org/resource/> .
 
-
-# ============================================================================
 # DISTRICTS - Administrative divisions of Madrid
-# ============================================================================
 
 res:district/01 rdf:type owl:NamedIndividual ,
                          :District ;
     schema:url <http://madrid-transport-safety.org/resource/district/01> ;
     :districtName "Centro"@es ;
-    :districtCode "01" ;
+    :districtCode "1" ;
     rdfs:label "Centro District"@en ,
                "Distrito Centro"@es ;
     rdfs:comment "The central district of Madrid, containing the historic city center."@en .
@@ -30,348 +27,414 @@ res:district/02 rdf:type owl:NamedIndividual ,
                          :District ;
     schema:url <http://madrid-transport-safety.org/resource/district/02> ;
     :districtName "Arganzuela"@es ;
-    :districtCode "02" ;
+    :districtCode "2" ;
     rdfs:label "Arganzuela District"@en ,
                "Distrito Arganzuela"@es ;
     rdfs:comment "Southern district of Madrid, bordered by the Manzanares River."@en .
 
-res:district/03 rdf:type owl:NamedIndividual ,
+res:district/11 rdf:type owl:NamedIndividual ,
                          :District ;
-    schema:url <http://madrid-transport-safety.org/resource/district/03> ;
-    :districtName "Retiro"@es ;
-    :districtCode "03" ;
-    rdfs:label "Retiro District"@en ,
-               "Distrito Retiro"@es ;
-    rdfs:comment "District containing the famous Retiro Park."@en .
+    schema:url <http://madrid-transport-safety.org/resource/district/11> ;
+    :districtName "Carabanchel"@es ;
+    :districtCode "11" ;
+    rdfs:label "Carabanchel District"@en ,
+               "Distrito Carabanchel"@es ;
+    rdfs:comment "District in the southwest of Madrid."@en .
 
-res:district/04 rdf:type owl:NamedIndividual ,
+res:district/17 rdf:type owl:NamedIndividual ,
                          :District ;
-    schema:url <http://madrid-transport-safety.org/resource/district/04> ;
-    :districtName "Salamanca"@es ;
-    :districtCode "04" ;
-    rdfs:label "Salamanca District"@en ,
-               "Distrito Salamanca"@es ;
-    rdfs:comment "Upscale residential and shopping district in central Madrid."@en .
+    schema:url <http://madrid-transport-safety.org/resource/district/17> ;
+    :districtName "Villaverde"@es ;
+    :districtCode "17" ;
+    rdfs:label "Villaverde District"@en ,
+               "Distrito Villaverde"@es ;
+    rdfs:comment "Southern district of Madrid."@en .
 
-# ============================================================================
 # STREETS - Major streets in Madrid
-# ============================================================================
 
-res:street/gran-via rdf:type owl:NamedIndividual ,
+res:street/tesoro rdf:type owl:NamedIndividual ,
                               :Street ;
-    schema:url <http://madrid-transport-safety.org/resource/street/gran-via> ;
-    :streetName "Gran Vía" ;
-    rdfs:label "Gran Vía"@es ,
-               "Gran Via"@en ;
-    rdfs:comment "One of Madrid's most famous streets, known for shopping and theaters."@en .
+    schema:url <http://madrid-transport-safety.org/resource/street/tesoro> ;
+    :streetName "Calle Tesoro" ;
+    rdfs:label "Calle Tesoro"@es ;
+    rdfs:comment "Street in Centro district."@en .
 
-res:street/paseo-prado rdf:type owl:NamedIndividual ,
-                                :Street ;
-    schema:url <http://madrid-transport-safety.org/resource/street/paseo-prado> ;
-    :streetName "Paseo del Prado" ;
-    rdfs:label "Paseo del Prado"@es ;
-    rdfs:comment "Historic boulevard home to major museums like the Prado Museum."@en .
+res:street/alejandro-moran rdf:type owl:NamedIndividual ,
+                              :Street ;
+    schema:url <http://madrid-transport-safety.org/resource/street/alejandro-moran> ;
+    :streetName "Calle Alejandro Moran" ;
+    rdfs:label "Calle Alejandro Moran"@es ;
+    rdfs:comment "Street in Carabanchel district."@en .
 
-res:street/calle-alcala rdf:type owl:NamedIndividual ,
+res:street/hortaleza rdf:type owl:NamedIndividual ,
                                  :Street ;
-    schema:url <http://madrid-transport-safety.org/resource/street/calle-alcala> ;
-    :streetName "Calle de Alcalá" ;
-    rdfs:label "Calle de Alcalá"@es ;
-    rdfs:comment "One of the longest streets in Madrid, crossing from east to west."@en .
+    schema:url <http://madrid-transport-safety.org/resource/street/hortaleza> ;
+    :streetName "Calle Hortaleza" ;
+    rdfs:label "Calle Hortaleza"@es ;
+    rdfs:comment "Major street in Centro district."@en .
 
-res:street/calle-atocha rdf:type owl:NamedIndividual ,
+res:street/toledo rdf:type owl:NamedIndividual ,
                                  :Street ;
-    schema:url <http://madrid-transport-safety.org/resource/street/calle-atocha> ;
-    :streetName "Calle de Atocha" ;
-    rdfs:label "Calle de Atocha"@es ;
-    rdfs:comment "Major street connecting central Madrid to Atocha train station."@en .
+    schema:url <http://madrid-transport-safety.org/resource/street/toledo> ;
+    :streetName "Calle Toledo" ;
+    rdfs:label "Calle Toledo"@es ;
+    rdfs:comment "Historic street connecting to Arganzuela district."@en .
 
-# ============================================================================
 # LOCATIONS - Specific geographical points
-# ============================================================================
 
 res:location/LOC-001 rdf:type owl:NamedIndividual ,
                               :Location ;
     schema:url <http://madrid-transport-safety.org/resource/location/LOC-001> ;
-    :latitude "40.4168"^^xsd:decimal ;
-    :longitude "-3.7038"^^xsd:decimal ;
-    :address "Gran Vía, 30, 28013 Madrid" ;
-    :hasDistrict res:district/01 ;
-    :hasStreet res:street/gran-via ;
-    rdfs:label "Location Gran Vía 30"@en ,
-               "Ubicación Gran Vía 30"@es ;
-    rdfs:comment "Intersection point on Gran Vía, central shopping area."@en .
+    :latitude "40.405472"^^xsd:decimal ;
+    :longitude "-3.711961"^^xsd:decimal ;
+    :address "Calle Toledo 133, 28005 Madrid" ;
+    :hasDistrict res:district/02 ;
+    :hasStreet res:street/toledo ;
+    rdfs:label "Location Calle Toledo 133"@en ,
+               "Ubicación Calle Toledo 133"@es ;
+    rdfs:comment "Bicycle counting station on Calle Toledo."@en .
 
 res:location/LOC-002 rdf:type owl:NamedIndividual ,
                               :Location ;
     schema:url <http://madrid-transport-safety.org/resource/location/LOC-002> ;
-    :latitude "40.4139"^^xsd:decimal ;
-    :longitude "-3.6921"^^xsd:decimal ;
-    :address "Paseo del Prado, 28014 Madrid" ;
-    :hasDistrict res:district/03 ;
-    :hasStreet res:street/paseo-prado ;
-    rdfs:label "Location Paseo del Prado"@en ,
-               "Ubicación Paseo del Prado"@es ;
-    rdfs:comment "Location near museum district on Paseo del Prado."@en .
+    :latitude "40.4175170"^^xsd:decimal ;
+    :longitude "-3.440123"^^xsd:decimal ;
+    :coordinateXUTM "440123"^^xsd:decimal ;
+    :coordinateYUTM "4475170"^^xsd:decimal ;
+    :address "Calle Tesoro / Calle Minas, 18" ;
+    :streetNumber "18" ;
+    :hasDistrict res:district/01 ;
+    :hasStreet res:street/tesoro ;
+    rdfs:label "Location Tesoro/Minas"@en ,
+               "Ubicación Tesoro/Minas"@es ;
+    rdfs:comment "Accident location at intersection in Centro."@en .
 
 res:location/LOC-003 rdf:type owl:NamedIndividual ,
                               :Location ;
     schema:url <http://madrid-transport-safety.org/resource/location/LOC-003> ;
-    :latitude "40.4198"^^xsd:decimal ;
-    :longitude "-3.6932"^^xsd:decimal ;
-    :address "Calle de Alcalá, 42, 28014 Madrid" ;
-    :hasDistrict res:district/04 ;
-    :hasStreet res:street/calle-alcala ;
-    rdfs:label "Location Calle Alcalá 42"@en ,
-               "Ubicación Calle Alcalá 42"@es ;
-    rdfs:comment "Commercial area location on Calle de Alcalá."@en .
+    :coordinateXUTM "437732"^^xsd:decimal ;
+    :coordinateYUTM "4470986"^^xsd:decimal ;
+    :address "Calle Alejandro Moran / Calle General Ricardos, 2" ;
+    :streetNumber "2" ;
+    :hasDistrict res:district/11 ;
+    :hasStreet res:street/alejandro-moran ;
+    rdfs:label "Location Alejandro Moran"@en ,
+               "Ubicación Alejandro Moran"@es ;
+    rdfs:comment "Accident location in Carabanchel district."@en .
 
 res:location/LOC-004 rdf:type owl:NamedIndividual ,
                               :Location ;
     schema:url <http://madrid-transport-safety.org/resource/location/LOC-004> ;
-    :latitude "40.4089"^^xsd:decimal ;
-    :longitude "-3.6928"^^xsd:decimal ;
-    :address "Calle de Atocha, 12, 28012 Madrid" ;
+    :coordinateXUTM "440785"^^xsd:decimal ;
+    :coordinateYUTM "4475122"^^xsd:decimal ;
+    :address "Calle Hortaleza, 96" ;
+    :streetNumber "96" ;
     :hasDistrict res:district/01 ;
-    :hasStreet res:street/calle-atocha ;
-    rdfs:label "Location Calle Atocha 12"@en ,
-               "Ubicación Calle Atocha 12"@es ;
-    rdfs:comment "Location on Calle de Atocha near the train station area."@en .
+    :hasStreet res:street/hortaleza ;
+    rdfs:label "Location Calle Hortaleza 96"@en ,
+               "Ubicación Calle Hortaleza 96"@es ;
+    rdfs:comment "Accident location on Calle Hortaleza."@en .
 
-# ============================================================================
+# PERSONS - People involved in accidents
+
+res:person/P-001 rdf:type owl:NamedIndividual ,
+                          :Person ;
+    schema:url <http://madrid-transport-safety.org/resource/person/P-001> ;
+    :identifier "P-001" ;
+    :personType "Conductor" ;
+    :ageRange "De 25 a 29 años" ;
+    :gender "Hombre" ;
+    :alcoholPositive "false"^^xsd:boolean ;
+    :drugPositive "false"^^xsd:boolean ;
+    rdfs:label "Person P-001"@en ,
+               "Persona P-001"@es ;
+    rdfs:comment "Male bicycle conductor aged 25-29, involved in accident 2023S040309."@en .
+
+res:person/P-002 rdf:type owl:NamedIndividual ,
+                          :Person ;
+    schema:url <http://madrid-transport-safety.org/resource/person/P-002> ;
+    :identifier "P-002" ;
+    :personType "Conductor" ;
+    :ageRange "De 25 a 29 años" ;
+    :gender "Hombre" ;
+    :alcoholPositive "false"^^xsd:boolean ;
+    :drugPositive "false"^^xsd:boolean ;
+    rdfs:label "Person P-002"@en ,
+               "Persona P-002"@es ;
+    rdfs:comment "Male EPAC bicycle conductor aged 25-29, involved in accident 2024S000027."@en .
+
+res:person/P-003 rdf:type owl:NamedIndividual ,
+                          :Person ;
+    schema:url <http://madrid-transport-safety.org/resource/person/P-003> ;
+    :identifier "P-003" ;
+    :personType "Conductor" ;
+    :ageRange "De 70 a 74 años" ;
+    :gender "Hombre" ;
+    :alcoholPositive "false"^^xsd:boolean ;
+    :drugPositive "false"^^xsd:boolean ;
+    rdfs:label "Person P-003"@en ,
+               "Persona P-003"@es ;
+    rdfs:comment "Male bicycle conductor aged 70-74, involved in accident 2024S000058."@en .
+
+res:person/P-004 rdf:type owl:NamedIndividual ,
+                          :Person ;
+    schema:url <http://madrid-transport-safety.org/resource/person/P-004> ;
+    :identifier "P-004" ;
+    :personType "Conductor" ;
+    :ageRange "De 30 a 34 años" ;
+    :gender "Hombre" ;
+    :alcoholPositive "false"^^xsd:boolean ;
+    :drugPositive "false"^^xsd:boolean ;
+    rdfs:label "Person P-004"@en ,
+               "Persona P-004"@es ;
+    rdfs:comment "Male EPAC bicycle conductor aged 30-34, involved in accident 2024S000081."@en .
+
 # BICYCLE ACCIDENTS - Incidents involving bicycles
-# ============================================================================
 
 res:accident/BA-2024-00001 rdf:type owl:NamedIndividual ,
                                     :Accident ;
     schema:url <http://madrid-transport-safety.org/resource/accident/BA-2024-00001> ;
     :identifier "BA-2024-00001" ;
-    :accidentDate "2024-01-15T14:30:00"^^xsd:dateTime ;
-    :accidentType "Collision with vehicle" ;
-    :severity "Minor" ;
-    :bicycleType "Private bicycle" ;
-    :weatherCondition "Clear" ;
-    :timeOfDay "Afternoon" ;
-    :deviceType "Standard bicycle" ;
-    :hasLocation res:location/LOC-001 ;
+    :caseNumber "2023S040309" ;
+    :accidentDate "2024-02-15T14:05:00"^^xsd:dateTime ;
+    :accidentTime "14:05:00"^^xsd:time ;
+    :accidentType "Colisión fronto-lateral" ;
+    :severity "Asistencia sanitaria sólo en el lugar del accidente" ;
+    :severityCode "7" ;
+    :injuryDescription "Asistencia sanitaria sólo en el lugar del accidente" ;
+    :vehicleType "Bicicleta" ;
+    :weatherCondition "Lluvia débil" ;
+    :hasLocation res:location/LOC-002 ;
     :locatedInDistrict res:district/01 ;
+    :involvesPerson res:person/P-001 ;
     rdfs:label "Bicycle Accident BA-2024-00001"@en ,
                "Accidente de Bicicleta BA-2024-00001"@es ;
-    rdfs:comment "Minor bicycle accident involving a vehicle collision on Gran Vía."@en .
+    rdfs:comment "Fronto-lateral collision on Tesoro street during light rain."@en .
 
 res:accident/BA-2024-00002 rdf:type owl:NamedIndividual ,
                                     :Accident ;
     schema:url <http://madrid-transport-safety.org/resource/accident/BA-2024-00002> ;
     :identifier "BA-2024-00002" ;
-    :accidentDate "2024-02-20T09:15:00"^^xsd:dateTime ;
-    :accidentType "Fall" ;
-    :severity "Minor" ;
-    :bicycleType "Electric bicycle" ;
-    :weatherCondition "Rainy" ;
-    :timeOfDay "Morning" ;
-    :deviceType "Bicicleta" ;
-    :hasLocation res:location/LOC-002 ;
-    :locatedInDistrict res:district/03 ;
+    :caseNumber "2024S000027" ;
+    :accidentDate "2024-01-01T16:30:00"^^xsd:dateTime ;
+    :accidentTime "16:30:00"^^xsd:time ;
+    :accidentType "Colisión fronto-lateral" ;
+    :severity "Asistencia sanitaria sólo en el lugar del accidente" ;
+    :severityCode "7" ;
+    :injuryDescription "Asistencia sanitaria sólo en el lugar del accidente" ;
+    :vehicleType "Bicicleta EPAC (pedaleo asistido)" ;
+    :weatherCondition "Despejado" ;
+    :hasLocation res:location/LOC-003 ;
+    :locatedInDistrict res:district/11 ;
+    :involvesPerson res:person/P-002 ;
     rdfs:label "Bicycle Accident BA-2024-00002"@en ,
                "Accidente de Bicicleta BA-2024-00002"@es ;
-    rdfs:comment "Cyclist fell on wet pavement on Paseo del Prado during rainy conditions."@en .
+    rdfs:comment "EPAC bicycle collision in Carabanchel district."@en .
 
 res:accident/BA-2024-00003 rdf:type owl:NamedIndividual ,
                                     :Accident ;
     schema:url <http://madrid-transport-safety.org/resource/accident/BA-2024-00003> ;
     :identifier "BA-2024-00003" ;
-    :accidentDate "2024-03-10T18:45:00"^^xsd:dateTime ;
-    :accidentType "Collision with pedestrian" ;
-    :severity "Moderate" ;
-    :bicycleType "Shared bicycle" ;
-    :weatherCondition "Clear" ;
-    :timeOfDay "Evening" ;
-    :deviceType "Bicicleta EPAC (pedaleo asistido)" ;
+    :caseNumber "2024S000058" ;
+    :accidentDate "2024-01-02T09:45:00"^^xsd:dateTime ;
+    :accidentTime "09:45:00"^^xsd:time ;
+    :accidentType "Caída" ;
+    :severity "Ingreso inferior o igual a 24 horas" ;
+    :severityCode "2" ;
+    :injuryDescription "Ingreso inferior o igual a 24 horas" ;
+    :vehicleType "Bicicleta" ;
+    :weatherCondition "Despejado" ;
     :hasLocation res:location/LOC-003 ;
-    :locatedInDistrict res:district/04 ;
+    :locatedInDistrict res:district/17 ;
+    :involvesPerson res:person/P-003 ;
     rdfs:label "Bicycle Accident BA-2024-00003"@en ,
                "Accidente de Bicicleta BA-2024-00003"@es ;
-    rdfs:comment "Bicycle collided with pedestrian on Calle de Alcalá during evening rush hour."@en .
+    rdfs:comment "Bicycle fall accident resulting in hospitalization in Villaverde."@en .
 
 res:accident/BA-2024-00004 rdf:type owl:NamedIndividual ,
                                     :Accident ;
     schema:url <http://madrid-transport-safety.org/resource/accident/BA-2024-00004> ;
     :identifier "BA-2024-00004" ;
-    :accidentDate "2024-04-05T20:10:00"^^xsd:dateTime ;
-    :accidentType "Collision with vehicle" ;
-    :severity "Severe" ;
-    :bicycleType "Private bicycle" ;
-    :weatherCondition "Clear" ;
-    :timeOfDay "Night" ;
-    :deviceType "Mountain bike" ;
-    :hasLocation res:location/LOC-001 ;
-    :locatedInDistrict res:district/01 ;
-    rdfs:label "Bicycle Accident BA-2024-00004"@en ,
-               "Accidente de Bicicleta BA-2024-00004"@es ;
-    rdfs:comment "Severe accident at night involving a vehicle on Gran Vía."@en .
-
-
-# ============================================================================
-# TRAFFIC LIGHTS - Bicycle-specific traffic signals
-# ============================================================================
-
-res:trafficlight/TL-001 rdf:type owl:NamedIndividual ,
-                                 :TrafficLight ;
-    schema:url <http://madrid-transport-safety.org/resource/trafficlight/TL-001> ;
-    :identifier "TL-001" ;
-    :installationDate "2020-05-15"^^xsd:date ;
-    :hasLocation res:location/LOC-001 ;
-    :locatedInDistrict res:district/01 ;
-    rdfs:label "Traffic Light TL-001"@en ,
-               "Semáforo TL-001"@es ;
-    rdfs:comment "Bicycle traffic light at Gran Vía intersection, installed 2020."@en .
-
-res:trafficlight/TL-002 rdf:type owl:NamedIndividual ,
-                                 :TrafficLight ;
-    schema:url <http://madrid-transport-safety.org/resource/trafficlight/TL-002> ;
-    :identifier "TL-002" ;
-    :installationDate "2019-11-20"^^xsd:date ;
-    :hasLocation res:location/LOC-002 ;
-    :locatedInDistrict res:district/03 ;
-    rdfs:label "Traffic Light TL-002"@en ,
-               "Semáforo TL-002"@es ;
-    rdfs:comment "Bicycle traffic light at Paseo del Prado museum district."@en .
-
-res:trafficlight/TL-003 rdf:type owl:NamedIndividual ,
-                                 :TrafficLight ;
-    schema:url <http://madrid-transport-safety.org/resource/trafficlight/TL-003> ;
-    :identifier "TL-003" ;
-    :installationDate "2021-03-10"^^xsd:date ;
-    :hasLocation res:location/LOC-003 ;
-    :locatedInDistrict res:district/04 ;
-    rdfs:label "Traffic Light TL-003"@en ,
-               "Semáforo TL-003"@es ;
-    rdfs:comment "Bicycle traffic light at Calle de Alcalá commercial area."@en .
-
-res:trafficlight/TL-004 rdf:type owl:NamedIndividual ,
-                                 :TrafficLight ;
-    schema:url <http://madrid-transport-safety.org/resource/trafficlight/TL-004> ;
-    :identifier "TL-004" ;
-    :installationDate "2022-08-22"^^xsd:date ;
+    :caseNumber "2024S000081" ;
+    :accidentDate "2024-01-02T19:30:00"^^xsd:dateTime ;
+    :accidentTime "19:30:00"^^xsd:time ;
+    :accidentType "Atropello a persona" ;
+    :severity "Sin asistencia sanitaria" ;
+    :severityCode "14" ;
+    :injuryDescription "Sin asistencia sanitaria" ;
+    :vehicleType "Bicicleta EPAC (pedaleo asistido)" ;
+    :weatherCondition "Nublado" ;
     :hasLocation res:location/LOC-004 ;
     :locatedInDistrict res:district/01 ;
-    rdfs:label "Traffic Light TL-004"@en ,
-               "Semáforo TL-004"@es ;
-    rdfs:comment "Bicycle traffic light on Calle de Atocha near train station."@en .
+    :involvesPerson res:person/P-004 ;
+    rdfs:label "Bicycle Accident BA-2024-00004"@en ,
+               "Accidente de Bicicleta BA-2024-00004"@es ;
+    rdfs:comment "EPAC bicycle hit a person on Calle Hortaleza."@en .
 
-# ============================================================================
+
+# TRAFFIC LIGHTS - Bicycle-specific traffic signals
+
+res:trafficlight/TL-52384 rdf:type owl:NamedIndividual ,
+                                 :TrafficLight ;
+    schema:url <http://madrid-transport-safety.org/resource/trafficlight/TL-52384> ;
+    :identifier "52384" ;
+    :trafficLightType "BICI" ;
+    :lightType "3/100" ;
+    :intersectionId "1445" ;
+    :installationDate "1996-01-26"^^xsd:date ;
+    :latitude "40.423347"^^xsd:decimal ;
+    :longitude "-3.655013"^^xsd:decimal ;
+    rdfs:label "Traffic Light TL-52384"@en ,
+               "Semáforo TL-52384"@es ;
+    rdfs:comment "Bicycle traffic light installed in 1996, district 15."@en .
+
+res:trafficlight/TL-58075 rdf:type owl:NamedIndividual ,
+                                 :TrafficLight ;
+    schema:url <http://madrid-transport-safety.org/resource/trafficlight/TL-58075> ;
+    :identifier "58075" ;
+    :trafficLightType "PEATON - BICI" ;
+    :lightType "2/200" ;
+    :intersectionId "4722" ;
+    :latitude "40.352789"^^xsd:decimal ;
+    :longitude "-3.705336"^^xsd:decimal ;
+    rdfs:label "Traffic Light TL-58075"@en ,
+               "Semáforo TL-58075"@es ;
+    rdfs:comment "Pedestrian and bicycle traffic light in district 17."@en .
+
+res:trafficlight/TL-222 rdf:type owl:NamedIndividual ,
+                                 :TrafficLight ;
+    schema:url <http://madrid-transport-safety.org/resource/trafficlight/TL-222> ;
+    :identifier "222" ;
+    :trafficLightType "PEATON - BICI" ;
+    :lightType "2/200" ;
+    :intersectionId "1530" ;
+    :installationDate "1998-06-08"^^xsd:date ;
+    :latitude "40.504901"^^xsd:decimal ;
+    :longitude "-3.685520"^^xsd:decimal ;
+    rdfs:label "Traffic Light TL-222"@en ,
+               "Semáforo TL-222"@es ;
+    rdfs:comment "Pedestrian-bicycle traffic light installed in 1998, district 8."@en .
+
+res:trafficlight/TL-225 rdf:type owl:NamedIndividual ,
+                                 :TrafficLight ;
+    schema:url <http://madrid-transport-safety.org/resource/trafficlight/TL-225> ;
+    :identifier "225" ;
+    :trafficLightType "PEATON - BICI" ;
+    :lightType "2/200" ;
+    :intersectionId "2027" ;
+    :installationDate "2007-09-17"^^xsd:date ;
+    :latitude "40.506335"^^xsd:decimal ;
+    :longitude "-3.694808"^^xsd:decimal ;
+    rdfs:label "Traffic Light TL-225"@en ,
+               "Semáforo TL-225"@es ;
+    rdfs:comment "Pedestrian-bicycle traffic light installed in 2007, district 8."@en .
+
 # BICYCLE STATIONS - Counting and monitoring stations
-# ============================================================================
 
 res:bicyclestation/BS-001 rdf:type owl:NamedIndividual ,
                                    :BicycleStation ;
     schema:url <http://madrid-transport-safety.org/resource/bicyclestation/BS-001> ;
-    :identifier "BS-001" ;
-    :deviceId "DEVICE-GV-001" ;
-    :bicycleCount 1250 ;
+    :identifier "PERM_BICI01_PM01" ;
+    :deviceId "PERM_BICI01_PM01" ;
+    :bicycleCount 0 ;
+    :measurementDate "2024-01-01"^^xsd:date ;
+    :measurementTime "00:00:00"^^xsd:time ;
+    :observationDirection "Sentido Gta. Pirámides" ;
     :hasLocation res:location/LOC-001 ;
-    :locatedInDistrict res:district/01 ;
+    :locatedInDistrict res:district/02 ;
     rdfs:label "Bicycle Station BS-001"@en ,
                "Estación de Bicicletas BS-001"@es ;
-    rdfs:comment "Bicycle counting station on Gran Vía with high traffic volume."@en .
+    rdfs:comment "Bicycle counting station on Calle Toledo, Arganzuela district."@en .
 
 res:bicyclestation/BS-002 rdf:type owl:NamedIndividual ,
                                    :BicycleStation ;
     schema:url <http://madrid-transport-safety.org/resource/bicyclestation/BS-002> ;
-    :identifier "BS-002" ;
-    :deviceId "DEVICE-CA-002" ;
-    :bicycleCount 890 ;
-    :hasLocation res:location/LOC-003 ;
-    :locatedInDistrict res:district/04 ;
+    :identifier "PERM_BICI01_PM01" ;
+    :deviceId "PERM_BICI01_PM01" ;
+    :bicycleCount 0 ;
+    :measurementDate "2024-01-01"^^xsd:date ;
+    :measurementTime "01:00:00"^^xsd:time ;
+    :observationDirection "Sentido Gta. Pirámides" ;
+    :hasLocation res:location/LOC-001 ;
+    :locatedInDistrict res:district/02 ;
     rdfs:label "Bicycle Station BS-002"@en ,
                "Estación de Bicicletas BS-002"@es ;
-    rdfs:comment "Bike monitoring station on Calle de Alcalá."@en .
+    rdfs:comment "Bicycle counting measurement at 1:00 AM on Calle Toledo."@en .
 
-res:bicyclestation/BS-003 rdf:type owl:NamedIndividual ,
-                                   :BicycleStation ;
-    schema:url <http://madrid-transport-safety.org/resource/bicyclestation/BS-003> ;
-    :identifier "BS-003" ;
-    :deviceId "DEVICE-AT-003" ;
-    :bicycleCount 2100 ;
-    :hasLocation res:location/LOC-004 ;
-    :locatedInDistrict res:district/01 ;
-    rdfs:label "Bicycle Station BS-003"@en ,
-               "Estación de Bicicletas BS-003"@es ;
-    rdfs:comment "High-capacity bicycle monitoring point on Calle de Atocha."@en .
-
-res:bicyclestation/BS-004 rdf:type owl:NamedIndividual ,
-                                   :BicycleStation ;
-    schema:url <http://madrid-transport-safety.org/resource/bicyclestation/BS-004> ;
-    :identifier "BS-004" ;
-    :deviceId "DEVICE-PP-004" ;
-    :bicycleCount 675 ;
-    :hasLocation res:location/LOC-002 ;
-    :locatedInDistrict res:district/03 ;
-    rdfs:label "Bicycle Station BS-004"@en ,
-               "Estación de Bicicletas BS-004"@es ;
-    rdfs:comment "Bicycle counter near museum area on Paseo del Prado."@en .
-
-# ============================================================================
 # PEDESTRIAN DATA - Pedestrian activity and crossing information
-# ============================================================================
+
+res:location/LOC-PED-001 rdf:type owl:NamedIndividual ,
+                              :Location ;
+    schema:url <http://madrid-transport-safety.org/resource/location/LOC-PED-001> ;
+    :latitude "40.417386"^^xsd:decimal ;
+    :longitude "-3.707141"^^xsd:decimal ;
+    :address "Calle Arenal esquina San Martín" ;
+    :hasDistrict res:district/01 ;
+    rdfs:label "Location Calle Arenal"@en ,
+               "Ubicación Calle Arenal"@es ;
+    rdfs:comment "Pedestrian counting location on Calle Arenal, Centro."@en .
 
 res:pedestrian/PED-2024-001 rdf:type owl:NamedIndividual ,
                                      :PedestrianData ;
     schema:url <http://madrid-transport-safety.org/resource/pedestrian/PED-2024-001> ;
-    :identifier "PED-2024-001" ;
-    :pedestrianCount 6969 ;
-    :pedestrianCrossingDate "2024-03-30T05:12:00"^^xsd:dateTime ;
-    :hasLocation res:location/LOC-001 ;
+    :identifier "PERM_PEA01_PM01" ;
+    :pedestrianCount 910 ;
+    :measurementDate "2024-01-01"^^xsd:date ;
+    :measurementTime "00:00:00"^^xsd:time ;
+    :pedestrianCrossingDate "2024-01-01T00:00:00"^^xsd:dateTime ;
+    :hasLocation res:location/LOC-PED-001 ;
     :locatedInDistrict res:district/01 ;
     rdfs:label "Pedestrian Data PED-2024-001"@en ,
                "Datos de Peatones PED-2024-001"@es ;
-    rdfs:comment "High pedestrian activity data for Gran Vía during early morning hours."@en .
+    rdfs:comment "Pedestrian count of 910 at midnight on Calle Arenal pedestrian street."@en .
 
 res:pedestrian/PED-2024-002 rdf:type owl:NamedIndividual ,
                                      :PedestrianData ;
     schema:url <http://madrid-transport-safety.org/resource/pedestrian/PED-2024-002> ;
-    :identifier "PED-2024-002" ;
-    :pedestrianCount 777 ;
-    :pedestrianCrossingDate "2024-02-20T04:20:00"^^xsd:dateTime ;
-    :hasLocation res:location/LOC-002 ;
-    :locatedInDistrict res:district/03 ;
+    :identifier "PERM_PEA01_PM01" ;
+    :pedestrianCount 1539 ;
+    :measurementDate "2024-01-01"^^xsd:date ;
+    :measurementTime "01:00:00"^^xsd:time ;
+    :pedestrianCrossingDate "2024-01-01T01:00:00"^^xsd:dateTime ;
+    :hasLocation res:location/LOC-PED-001 ;
+    :locatedInDistrict res:district/01 ;
     rdfs:label "Pedestrian Data PED-2024-002"@en ,
                "Datos de Peatones PED-2024-002"@es ;
-    rdfs:comment "Pedestrian activity data for Paseo del Prado museum district."@en .
+    rdfs:comment "Increased pedestrian activity of 1539 at 1:00 AM on Calle Arenal."@en .
 
 res:pedestrian/PED-2024-003 rdf:type owl:NamedIndividual ,
                                      :PedestrianData ;
     schema:url <http://madrid-transport-safety.org/resource/pedestrian/PED-2024-003> ;
-    :identifier "PED-2024-003" ;
-    :pedestrianCount 4523 ;
-    :pedestrianCrossingDate "2024-03-10T18:30:00"^^xsd:dateTime ;
-    :hasLocation res:location/LOC-003 ;
-    :locatedInDistrict res:district/04 ;
+    :identifier "PERM_PEA01_PM01" ;
+    :pedestrianCount 582 ;
+    :measurementDate "2024-01-01"^^xsd:date ;
+    :measurementTime "02:00:00"^^xsd:time ;
+    :pedestrianCrossingDate "2024-01-01T02:00:00"^^xsd:dateTime ;
+    :hasLocation res:location/LOC-PED-001 ;
+    :locatedInDistrict res:district/01 ;
     rdfs:label "Pedestrian Data PED-2024-003"@en ,
                "Datos de Peatones PED-2024-003"@es ;
-    rdfs:comment "Evening rush hour pedestrian counts on Calle de Alcalá."@en .
+    rdfs:comment "Decreased pedestrian traffic of 582 at 2:00 AM."@en .
 
 res:pedestrian/PED-2024-004 rdf:type owl:NamedIndividual ,
                                      :PedestrianData ;
     schema:url <http://madrid-transport-safety.org/resource/pedestrian/PED-2024-004> ;
-    :identifier "PED-2024-004" ;
-    :pedestrianCount 3210 ;
-    :pedestrianCrossingDate "2024-04-05T12:45:00"^^xsd:dateTime ;
-    :hasLocation res:location/LOC-004 ;
+    :identifier "PERM_PEA01_PM01" ;
+    :pedestrianCount 257 ;
+    :measurementDate "2024-01-01"^^xsd:date ;
+    :measurementTime "03:00:00"^^xsd:time ;
+    :pedestrianCrossingDate "2024-01-01T03:00:00"^^xsd:dateTime ;
+    :hasLocation res:location/LOC-PED-001 ;
     :locatedInDistrict res:district/01 ;
     rdfs:label "Pedestrian Data PED-2024-004"@en ,
                "Datos de Peatones PED-2024-004"@es ;
-    rdfs:comment "Midday pedestrian traffic near Atocha train station area."@en .
+    rdfs:comment "Low pedestrian count of 257 at 3:00 AM on Calle Arenal."@en .
 
 
-# ============================================================================
-# RELATIONSHIPS AND ADDITIONAL ASSERTIONS
-# ============================================================================
+# RELATIONSHIPS
 
-# Accident near traffic light
-res:accident/BA-2024-00001 :nearTrafficLight res:trafficlight/TL-001 .
-res:accident/BA-2024-00004 :nearTrafficLight res:trafficlight/TL-001 .
-res:accident/BA-2024-00002 :nearTrafficLight res:trafficlight/TL-002 .
-
-# Accident involving pedestrian
-res:accident/BA-2024-00003 :involvesPedestrian res:pedestrian/PED-2024-003 .
+# Accidents involving persons
+res:accident/BA-2024-00001 :involvesPerson res:person/P-001 .
+res:accident/BA-2024-00002 :involvesPerson res:person/P-002 .
+res:accident/BA-2024-00003 :involvesPerson res:person/P-003 .
+res:accident/BA-2024-00004 :involvesPerson res:person/P-004 .
