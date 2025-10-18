@@ -1,0 +1,41 @@
+-- Query #1
+SELECT ?class (COUNT(?s) AS ?count)
+  WHERE {
+    ?s a ?class .
+  }
+  GROUP BY ?class
+  ORDER BY DESC(?count)
+
+-- Query #2
+PREFIX smc: <http://smartmobility.townofcary.org/ontology#>
+
+SELECT ?data ?site
+WHERE {
+  ?data a smc:EcoCounterData ;
+        smc:recordedAt ?site .
+}
+LIMIT 10
+
+-- Query #3
+PREFIX smc: <http://smartmobility.townofcary.org/ontology#>
+PREFIX wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+SELECT ?site ?name ?lat ?long
+WHERE {
+  ?site a smc:EcoCounterSite ;
+        smc:siteName ?name ;
+        wgs84_pos:lat ?lat ;
+        wgs84_pos:long ?long .
+}
+
+-- Query #4
+PREFIX smc: <http://smartmobility.townofcary.org/ontology#>
+
+SELECT ?session ?station ?energy ?duration
+WHERE {
+  ?session a smc:ChargingSession ;
+          smc:occurredAt ?station ;
+          smc:energyConsumed ?energy ;
+          smc:sessionDuration ?duration .
+}
+LIMIT 10

@@ -1,0 +1,271 @@
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "schema": "http://schema.org/",
+    "fullName": "foaf:name",
+    "hometown": "schema:birthPlace",
+    "age": "foaf:age",
+    "almaMater": "schema:alumniOf",
+    "parents": "schema:parent",
+    "father": "schema:givenName",
+    "mother": "schema:givenName",
+    "subjects": "schema:hasCourse",
+    "name": "schema:name",
+    "teachers": "schema:provider",
+    "description": "schema:description",
+    "Course": "schema:Course",
+    "Person": "schema:Person"
+  },
+  "@id": "http://example.org/person/pedro-francisco-rascon-fernandez",
+  "@type": "foaf:Person",
+  "fullName": "Pedro Francisco Rascon Fernandez",
+  "hometown": {
+    "@type": "schema:Place",
+    "schema:name": "Madrid, Comunidad de Madrid, Spain"
+  },
+  "age": 22,
+  "almaMater": {
+    "@id": "https://www.upm.es",
+    "@type": "schema:EducationalOrganization",
+    "schema:name": "Universidad Politecnica de Madrid"
+  },
+  "parents": [
+    {
+      "@type": "schema:Person",
+      "father": "Pedro"
+    },
+    {
+      "@type": "schema:Person",
+      "mother": "Sonia"
+    }
+  ],
+  "subjects": [
+    {
+      "@type": "schema:Course",
+      "name": "Open Data and Knowledge Graphs",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Oscar Corcho Garcia"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Raul Garcia Castro"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Daniel Garijo"
+        }
+      ],
+      "description": "During this course you will learn about the main foundations for Knowledge Graphs, including the W3C recommendations that are applicable in this area (RDF, RDF Schema, SPARQL, OWL, CSV on the Web) and methodologies for the generation and publication of Knowledge Graphs from multiple heterogeneous data sources and formats, using Linked Data technologies. You will also learn about how to create shared agreed vocabularies and ontologies that can give support to Knowledge Graph generation and publication, and will understand how these principles and approaches have been applied to several domains. You will work on a practical hands-on exercise that will be the basis for your participation in hackatons and other similar events."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Machine Learning",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Pedro Maria Larrañaga Múgica"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Maria Concepcion Bielza Lozoya"
+        }
+      ],
+      "description": "Machine Learning transforms data into knowledge and provides general purpose systems that adapt to the circumstances. This course exposes several methods to solve problems of supervised and unsupervised classification, and relationships between system variables."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Big Data",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Julian Arenas Guerrero"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Jorge Acosta Hernandez"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Antonio Latorre De La Fuente"
+        }
+      ],
+      "description": "This course will allow the student to gain the fundamentals for the analysis of large volumes of data. With an eminently practical approach, the technologies and fundamentals necessary to successfully accomplish the whole data analysis process will be presented in the context of Big Data, from the raw data to the models derived from them."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Cloud Computing and Big Data Ecosystems Design",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Marta Patiño"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Tonghong Li"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Ainhoa Azqueta"
+        }
+      ],
+      "description": "This course presents architectures for scalable distributed systems and data management systems: map-reduce, bigtable, data streaming, persistent queues."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Data Processes",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Antonio Jesus Diaz Honrubia"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Luis Mengual Galan"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Maria Covadonga Fernandez Baizan"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Ernestina Menasalvas Ruiz"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Alejandro Rodriguez Gonzalez"
+        }
+      ],
+      "description": "In this course we will deepen on the importance of data for an organization. In fact, the course is centered on the process of extraction of knowledge from databases as a support for decision making. The planning and management of a project of data science project is the main goal of this course. Consequently the course will start with the analysis of data sources in an organization and very briefly analyzed data base management systems. Emphasis will be put on the ethical aspects regarding data management and knowledge extraction. Later students will understand the data value chain and will go deep into the process of knowledge extraction. At this stage CRISP-Dm methodology will be used. The course will follow on the different phases of the process: i) business understanding, ii) data understanding, iii) data preparation, iv) modeling v) evaluation and vi) deployment. Through all the phases the main emphasis will be on students getting hands on the different steps, techniques, algorithms and tools."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Data Visualization",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Jorge Acosta Hernandez"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Pablo Toharia Rabasco"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Antonio Latorre De La Fuente"
+        }
+      ],
+      "description": "This course will allow the student to gain the fundamentals for the visualization of all kinds of information. With an eminently practical approach, the technologies and fundamentals necessary to create successful information visualization tools will be presented."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Deep Learning",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Luis Baumela Molina"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Roberto Valle Fernandez"
+        }
+      ],
+      "description": "The course presents a theoretical and practical view of deep learning. It is assumed that students are familiar with the basic foundations of shallow neural networks. The course provides an introduction to deep neural networks, covering key training methods such as backpropagation, optimization algorithms, and regularization techniques. It then focuses on deep learning applications in computer vision, including convolutional neural networks (CNNs), state-of-the-art architectures, representation learning, and tasks such as object detection and image segmentation."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Societal, Legal and Ethic aspects in Data Science",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Victor Rodriguez Doncel"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Asuncion De Maria Gomez Perez"
+        }
+      ],
+      "description": "Data scientists and AI professionals will face legal and ethical issues during their careers. Designing, deploying, or using AI systems and data-intensive applications requires knowing and abiding by the law (legal compliance) and being aware of the technology's impact and acting accordingly (ethical responsibility). In this course, students will learn about European Union policies and regulations related to AI and data. Specifically, they will cover the basics of the EU AI Regulation and the AI Liability Directive, the General Data Protection Regulation (GDPR), the Data Governance Act, the Data Act, and some aspects of copyright law, including the Database Directive. The course will also cover open data policies in Europe."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Generative AI And Language Models",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Emilio Serrano Fernandez"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Damiano Zanardini"
+        }
+      ],
+      "description": "This course provides a deep and practical introduction to one of the most transformative areas in modern artificial intelligence: Generative AI and Language Models. Students will explore how machines can generate text, images, and other forms of media by leveraging powerful deep learning architectures. Generative AI refers to AI systems capable of producing novel content based on human input - commonly called prompts. Language models, particularly large-scale models like the GPT series lie at the heart of these systems. They not only process and generate human language but can also serve as a foundation for multimodal applications that integrate text, images, and audio. These technologies are evolving rapidly and becoming increasingly accessible through websites, APIs, and opensource tools. As a result, their influence is spreading across many sectors. They are transforming creative industries, enhancing education, and driving innovation in fields such as scientific research, healthcare, and more. The course explores both the theoretical foundations and practical techniques needed to build generative AI solutions."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Graph Analysis And Social Networks",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Emilio Serrano Fernandez"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Javier Bajo Perez"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Laura Melgar Garcia"
+        }
+      ],
+      "description": "Social computing is a general term for an area of computer science that is concerned with the intersection of social behavior and computational systems. During recent years the Internet introduced a social element where users could network, share interests, publish personal insights and use their computers for more than just doing a job faster, and this has led to the development of social machines where both humans and machines collaborate to solve social problems. This course presents the principals of social computing and focuses on graph and network analysis."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Introduction to Research Methodology",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Oscar Corcho"
+        }
+      ],
+      "description": "This seminar aims at informing and guiding students about techniques, most common standards and systems for the practice of scientific research and its methodological bases."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Programming For Data Processing",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Guillermo Antonio Vigueras Gonzalez"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Delia Moreno Perdomo"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Belén Ríos Sánchez"
+        },
+        {
+          "@type": "schema:Person",
+          "schema:name": "Paloma Tejera Nevado"
+        }
+      ],
+      "description": "This course is related with data manipulation and programming using the Python language. The main goal is to introduce main characteristics and programming style using this language of wide adoption for data analysis purposes. Once introduced the language, the course presents to students how to efficiently use the different constructs, control statements and data structures in Python. Based on this, the course describes the main characteristics of a Python framework for data storage and manipulation. All programming concepts presented in the course are accompanied with exercises in order to guarantee correct comprehension and practical knowledge."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Statistical Data Analysis",
+      "teachers": [
+        {
+          "@type": "schema:Person",
+          "schema:name": "Arminda Moreno Díaz"
+        }
+      ],
+      "description": "The course is intended to be a non-exhaustive survey of techniques to convert multivariate data into useful information so that good decisions can be made. The perspective is twofold, theoretical and applied, covering topics such as: exploratory data analysis, statistical summaries and graphical representations, dimensionality reduction, regression techniques and time series analysis. There will be an emphasis on hands-on application of the theory and methods throughout, with extensive use of R."
+    }
+  ]
+}

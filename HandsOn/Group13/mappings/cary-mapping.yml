@@ -1,0 +1,83 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  rml: http://semweb.mmlab.be/ns/rml#
+  ql: http://semweb.mmlab.be/ns/ql#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  wgs84_pos: http://www.w3.org/2003/01/geo/wgs84_pos#
+  smc: http://smartmobility.townofcary.org/ontology#
+  smr: http://smartmobility.townofcary.org/resource/
+  vocab: http://example.org#
+
+mappings:
+  EcoCounterSite:
+    sources:
+      - [csv/eco-counter-sites.-updated.csv~csv]
+    s: http://smartmobility.townofcary.org/resource/EcoCounterSite/$(id)
+    po:
+      - [a, smc:EcoCounterSite]
+      - [smc:siteId, $(id), xsd:integer]
+      - [smc:siteName, $(name), xsd:string]
+      - [smc:siteOwner, $(site_owner), xsd:string]
+      - [smc:siteActive, $(site_active), xsd:boolean]
+      - [smc:userType, $(user_type), xsd:string]
+      - [smc:installationDate, $(installation_date), xsd:dateTime]
+      - [smc:counterId, $(counter), xsd:string]
+      - [smc:photoURL, $(photos), xsd:anyURI]
+      - [wgs84_pos:lat, $(latitude), xsd:decimal]
+      - [wgs84_pos:long, $(longitude), xsd:decimal]
+
+  EcoCounterData:
+    sources:
+      - [csv/eco-counter-data.-updated.csv~csv]
+    s: http://smartmobility.townofcary.org/resource/EcoCounterData/$(id)_$(date)
+    po:
+      - [a, smc:EcoCounterData]
+      - [smc:observationDateTime, $(date), xsd:dateTime]
+      - [smc:dayOfWeek, $(day_of_week), xsd:string]
+      - [smc:counts, $(counts), xsd:integer]
+      - [smc:userType, $(user_type), xsd:string]
+      - [smc:installationDate, $(installation_date), xsd:dateTime]
+      - p: smc:recordedAt
+        o:
+          mapping: EcoCounterSite
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(id)]
+              - [str2, $(id)]
+
+  ElectricVehicleChargingStation:
+    sources:
+      - [csv/electric-vehicle-charging-stations.-updated.csv~csv]
+    s: http://smartmobility.townofcary.org/resource/ElectricVehicleChargingStation/$(station_name)
+    po:
+      - [a, smc:ElectricVehicleChargingStation]
+      - [smc:stationName, $(station_name), xsd:string]
+      - [smc:address, $(address1), xsd:string]
+      - [smc:address, $(address2), xsd:string]
+      - [smc:city, $(city), xsd:string]
+      - [smc:stateProvince, $(state_province), xsd:string]
+      - [smc:zipCode, $(zip_postal_code), xsd:integer]
+      - [smc:fee, $(fee), xsd:decimal]
+      - [smc:modelNumber, $(model_number), xsd:string]
+      - [wgs84_pos:lat, $(latitude), xsd:decimal]
+      - [wgs84_pos:long, $(longitude), xsd:decimal]
+
+  ChargingSession:
+    sources:
+      - [csv/electric-vehicle-charging-stations.-updated.csv~csv]
+    s: http://smartmobility.townofcary.org/resource/ChargingSession/$(start_date)_$(station_name)
+    po:
+      - [a, smc:ChargingSession]
+      - [smc:startDateTime, $(start_date), xsd:dateTime]
+      - [smc:sessionDuration, $(elapsed_charging_seconds), xsd:integer]
+      - [smc:energyConsumed, $(energy_kwh), xsd:decimal]
+      - [smc:stationName, $(station_name), xsd:string]
+      - p: smc:occurredAt
+        o:
+          mapping: ElectricVehicleChargingStation
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(station_name)]
+              - [str2, $(station_name)]

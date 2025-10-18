@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "includes": "rdfs:member",
+    "hasMeasurement": "rdfs:seeAlso",
+    "hasTemperature": "rdfs:comment",
+    "atTime": "rdfs:isDefinedBy",
+    "hasOwner": "rdfs:isDefinedBy",
+    "hasName": "rdfs:label"
+  },
+  "@type": "rdfs:Class",
+  "rdfs:label": "Class01",
+  "includes": [
+    {
+      "@type": "rdfs:Resource",
+      "rdfs:label": "Sensor029",
+      "hasMeasurement": {
+        "@type": "rdfs:Resource",
+        "rdfs:label": "Measurement8401",
+        "hasTemperature": 29,
+        "atTime": {
+          "@type": "xsd:dateTime",
+          "@value": "2010-06-12T12:00:12"
+        }
+      }
+    },
+    {
+      "@type": "rdfs:Resource",
+      "rdfs:label": "Computer101",
+      "hasOwner": {
+        "@type": "rdfs:Resource",
+        "rdfs:label": "User10A",
+        "hasName": "Pedro"
+      }
+    }
+  ]
+}
