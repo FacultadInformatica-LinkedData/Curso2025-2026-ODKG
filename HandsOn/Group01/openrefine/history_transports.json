@@ -975,5 +975,535 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Octubre\"), \"doce de octubre C5\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Aravaca\"), \"Aravaca C7 C10\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Aravaca\"), \"Aravaca C7 C10\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Vicálvaro\"), \"Vicálvaro C2\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Vicálvaro\"), \"Vicálvaro C2\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Vallecas\"), \"Vallecas C1 C2 C7\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Vallecas\"), \"Vallecas C1 C2 C7\", value)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Ramón y Cajal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Ramón y Cajal C10 C8 C3"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Ramón y Cajal (líneas C10, C8-A, C8-B)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Ramón y Cajal (líneas C10, C8-A, C8-B, C3)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Puente Alcocer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Puente Alcocer (C5)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Pirámides"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Pirámides (líneas C1 y C10)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Príncipe Pío"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Príncipe Pío (Líneas C1, C7, C10)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Príncipe Pío, Pirámides"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Príncipe Pío C1 C7 C19, Pirámides"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Estación Atocha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Estación Atocha líneas C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: El Pozo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: El Pozo C2 C7 C8"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Las Águilas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Las Águilas C5"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cercanías: Príncipe Pío"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cercanías: Príncipe Pío C1, C7, C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Atocha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Atocha C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Méndez Alvaro, Atocha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Méndez Alvaro, Atocha C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cercanías: Villaverde Bajo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cercanías: Villaverde Bajo c3 c4"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Atocha-Alcalá de Henares (líneas C2 y C7)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Atocha-Alcalá de Henares (líneas C2 y C7) C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Chamartín"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Chamartín C1, C2, C3, C4a, C4b, C7 y C8"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Delicias"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Delicias c1 c10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Laguna"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Laguna c5"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Maestra Justa Freire-Polideportivo Aluche (antigua estación de Fanjul)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Maestra Justa Freire-Polideportivo Aluche (antigua estación de Fanjul) C5"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Méndez Álvaro"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Méndez Álvaro c1 c5 c10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Nuevos Ministerios"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Nuevos Ministerios (líneas C-1, C-3, C-4, C-7, C-8, C-10)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Orcasitas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Orcasitas (línea C5)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Recoletos"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Recoletos C1 C2 C7 C8 C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Villaverde Bajo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Villaverde Bajo C3 C4"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cercanias line",
+    "newColumnName": "cercanias_line",
+    "description": "Renombra la columna cercanias line a cercanias_line"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "metro lines",
+    "newColumnName": "metro_line",
+    "description": "Renombra la columna metro lines a metro_line"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "bus line",
+    "newColumnName": "bus_line",
+    "description": "Renombra la columna bus line a bus_line"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE",
+    "expression": "grel:value.replace(/\\s+/,\"-\").replace(/[áÁ]/,\"a\").replace(/[éÉ]/,\"e\").replace(/[íÍ]/,\"i\").replace(/[óÓ]/,\"o\").replace(/[úÚ]/,\"u\").replace(/[ñÑ]/,\"n\")",
+    "onError": "set-to-blank",
+    "newColumnName": "IDNOMBRE",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna IDNOMBRE en el índice 1 basada en la columna NOMBRE usando la expresión grel:value.replace(/\\s+/,\"-\").replace(/[áÁ]/,\"a\").replace(/[éÉ]/,\"e\").replace(/[íÍ]/,\"i\").replace(/[óÓ]/,\"o\").replace(/[úÚ]/,\"u\").replace(/[ñÑ]/,\"n\")"
   }
 ]
