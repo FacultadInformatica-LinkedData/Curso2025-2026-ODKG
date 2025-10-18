@@ -10,8 +10,7 @@ prefixes:
 mappings:
 
 ### MAPEOS DE FACILITIES ###
-#PROBLEMA: Creo que en las URIs no se pueden poner espacios ni tildes así que la columna NAME tal y como está no se puede 
-# utilizar como sujeto, crear una a partir de esta llamada NAMEID o algo de ID q sirva como identificador. Habría que sustituir espacios por guiones por ejemplo y quitar tildes y otros caracteres raros si hay.
+
   park:
     sources:
       - [parques-jardines_limpio.csv~csv] #poner ruta que sea cuando guardemos el csv filtrando solo el tipo parques
@@ -19,26 +18,26 @@ mappings:
     
     po:
       - [a, sc:ParkGarden]
-      - [schema:name,$(NAME)] #cuando no se pone nada se supone que es de tipo string
-      - [schema:postalCode,$(CODIGO-POSTAL)]
+      - [schema:name,$(NAME)]
+      - [schema:postalCode,$(CODIGO-POSTAL), xsd:string]
       - [schema:streetAddress,$(NOMBRE-VIA)]
       - [schema:telephone,$(TELEFONO)]
       - [schema:email,$(EMAIL)]
       - [sc:accessibility,$(ACCESIBILIDAD)]
       - [geo:lat,$(LATITUD), xsd:decimal]
       - [geo:long,$(LONGITUD), xsd:decimal]
-      - [sc:superficie,$(superficieLimpia), xsd:integer] #no me acuerdo como lo había puesto julia el nombre
-      - [sc:hasSportsFacilities,$(tieneInstalacionesDeportivas), xsd:bool] # mirar como lo ha puseto julia en la ontología 
+      - [sc:surface,$(superficieLimpia), xsd:decimal] 
+      - [sc:hasSportsFacilities,$(tieneInstalacionesDeportivas), xsd:boolean] # mirar como lo ha puseto julia en la ontología 
       - p: schema:containedInPlace
         o:
           mapping: district
-      - p: sc:hasNearbyTransport
+      - p: sc:hasNearby
         o:
           mapping: subway
-      - p: sc:hasNearbyTransport
+      - p: sc:hasNearby
         o:
           mapping: bus
-      - p: sc:hasNearbyTransport # he añadido transport para que tenga un poco más de sentido (corregir ontología)
+      - p: sc:hasNearby
         o:
           mapping: cercanias
 
@@ -49,15 +48,15 @@ mappings:
 
     po:
       - [a, schema:Library]
-      - [schema:name,$(NAME)] #cuando no se pone nada se supone que es de tipo string
-      - [schema:postalCode,$(CODIGO-POSTAL)]
+      - [schema:name,$(NAME)]
+      - [schema:postalCode,$(CODIGO-POSTAL), xsd:string]
       - [schema:streetAddress,$(NOMBRE-VIA)]
       - [schema:telephone,$(TELEFONO)]
       - [schema:email,$(EMAIL)]
       - [sc:accessibility,$(ACCESIBILIDAD)]
       - [geo:lat,$(LATITUD), xsd:decimal]
       - [geo:long,$(LONGITUD), xsd:decimal]
-      - [sc:hasWifi,$(tieneWifi)]
+      - [sc:haveWifi,$(tieneWifi)]
       - p: schema:containedInPlace
         o:
           mapping: district
@@ -67,7 +66,7 @@ mappings:
       - p: sc:hasNearby
         o:
           mapping: bus
-      - p: sc:hasNearbyTransport # he añadido transport para que tenga un poco más de sentido (corregir ontología)
+      - p: sc:hasNearby
         o:
           mapping: cercanias
 
@@ -79,14 +78,14 @@ mappings:
     po:
       - [a, sc:ResidenceHall]
       - [schema:name,$(NAME)] #cuando no se pone nada se supone que es de tipo string
-      - [schema:postalCode,$(CODIGO-POSTAL)]
+      - [schema:postalCode,$(CODIGO-POSTAL), xsd:string]
       - [schema:streetAddress,$(NOMBRE-VIA)]
       - [schema:telephone,$(TELEFONO)]
       - [schema:email,$(EMAIL)]
       - [sc:accessibility,$(ACCESIBILIDAD)]
       - [geo:lat,$(LATITUD), xsd:decimal]
       - [geo:long,$(LONGITUD), xsd:decimal]
-      - [sc:studentGender,$(generoAlumnos)]
+      - [sc:genderType,$(generoAlumnos)]
       - p: schema:containedInPlace
         o:
           mapping: district
@@ -96,7 +95,7 @@ mappings:
       - p: sc:hasNearby
         o:
           mapping: bus
-      - p: sc:hasNearbyTransport # he añadido transport para que tenga un poco más de sentido (corregir ontología)
+      - p: sc:hasNearby
         o:
           mapping: cercanias
 
@@ -112,7 +111,7 @@ mappings:
       - [schema:description, $(DESCRIPCION-ENTIDAD)]
       - [schema:openingHours, $(HORARIO)]
       - [schema:streetAddress, $(NOMBRE-VIA)]
-      - [schema:postalCode, $(CODIGO-POSTAL)]
+      - [schema:postalCode, $(CODIGO-POSTAL), xsd:string]
       - [schema:telephone, $(TELEFONO)]
       - [schema:email, $(EMAIL)]
       - [sc:accessibility, $(ACCESIBILIDAD)]
@@ -121,13 +120,13 @@ mappings:
       - p: schema:containedInPlace
         o:
           mapping: district
-      - p: sc:hasNearbyTransport
+      - p: sc:hasNearby
         o:
           mapping: subway
-      - p: sc:hasNearbyTransport
+      - p: sc:hasNearby
         o:
           mapping: bus
-      - p: sc:hasNearbyTransport 
+      - p: sc:hasNearby 
         o:
           mapping: cercanias
 
@@ -142,58 +141,23 @@ mappings:
       - [schema:name,$(NOMBRE)]
       - [schema:description, $(DESCRIPCION-ENTIDAD)]
       - [schema:streetAddress, $(NOMBRE-VIA)]
-      - [schema:postalCode, $(CODIGO-POSTAL)]
+      - [schema:postalCode, $(CODIGO-POSTAL), xsd:string]
       - [schema:telephone, $(TELEFONO)]
       - [schema:email, $(EMAIL)]
       - [sc:accessibility, $(ACCESIBILIDAD)]
       - [geo:lat, $(LATITUD), xsd:decimal]
       - [geo:long, $(LONGITUD), xsd:decimal]
-      - p: #PROPIEDAD relacionada con ser subclase de unversity?? -> mirar en la ontologia cuando la suba julia
-        o:
-          mapping: university
+      - [schema:openingHours, $(HORARIO)]
       - p: schema:containedInPlace
         o:
           mapping: district
-      - p: sc:hasNearbyTransport
+      - p: sc:hasNearby
         o:
           mapping: subway
-      - p: sc:hasNearbyTransport
+      - p: sc:hasNearby
         o:
           mapping: bus
-      - p: sc:hasNearbyTransport 
-        o:
-          mapping: cercanias
-  
-  universitySchool:
-    sources:
-      - [combinado.csv~csv] 
-    s: "http://smartcity.linkeddata.es/lcc/resource/universitySchool/$(NAMEID)"
-
-    po:
-      - [a, sc:UniversitySchool]
-      - [rdfs:label, $(NOMBRE)]
-      - [schema:name,$(NOMBRE)]
-      - [schema:description, $(DESCRIPCION-ENTIDAD)]
-      - [schema:streetAddress, $(NOMBRE-VIA)]
-      - [schema:postalCode, $(CODIGO-POSTAL)]
-      - [schema:telephone, $(TELEFONO)]
-      - [schema:email, $(EMAIL)]
-      - [sc:accessibility, $(ACCESIBILIDAD)]
-      - [geo:lat, $(LATITUD), xsd:decimal]
-      - [geo:long, $(LONGITUD), xsd:decimal]
-      - p: #PROPIEDAD relacionada con ser subclase de unversity?? -> mirar en la ontologia cuando la suba julia
-        o:
-          mapping: university
-      - p: schema:containedInPlace
-        o:
-          mapping: district
-      - p: sc:hasNearbyTransport
-        o:
-          mapping: subway
-      - p: sc:hasNearbyTransport
-        o:
-          mapping: bus
-      - p: sc:hasNearbyTransport 
+      - p: sc:hasNearby 
         o:
           mapping: cercanias
 
@@ -208,28 +172,150 @@ otherCenters:
       - [schema:name,$(NOMBRE)]
       - [schema:description, $(DESCRIPCION-ENTIDAD)]
       - [schema:streetAddress, $(NOMBRE-VIA)]
-      - [schema:postalCode, $(CODIGO-POSTAL)]
+      - [schema:postalCode, $(CODIGO-POSTAL), xsd:string]
       - [schema:telephone, $(TELEFONO)]
       - [schema:email, $(EMAIL)]
       - [sc:accessibility, $(ACCESIBILIDAD)]
       - [geo:lat, $(LATITUD), xsd:decimal]
       - [geo:long, $(LONGITUD), xsd:decimal]
-      - p: #PROPIEDAD relacionada con ser subclase de unversity?? -> mirar en la ontologia cuando la suba julia
-        o:
-          mapping: university
+      - [schema:openingHours, $(HORARIO)]
       - p: schema:containedInPlace
         o:
           mapping: district
-      - p: sc:hasNearbyTransport
+      - p: sc:hasNearby
         o:
           mapping: subway
-      - p: sc:hasNearbyTransport
+      - p: sc:hasNearby
         o:
           mapping: bus
-      - p: sc:hasNearbyTransport 
+      - p: sc:hasNearby 
         o:
           mapping: cercanias
-# LO MISMO CON EL RESTO DE CLASES QUE QUEDAN, HE HECHO TODAS LAS QUE TENÍAN COSAS ESPECIALES CREO. 
+
+  sportsCenter:
+    sources:
+      - [combinado.csv~csv] 
+    s: "http://smartcity.linkeddata.es/lcc/resource/sportsCenter/$(NAMEID)"
+
+    po:
+      - [a, sc:SportsCenter]
+      - [rdfs:label, $(NOMBRE)]
+      - [schema:name,$(NOMBRE)]
+      - [sc:accessibility, $(ACCESIBILIDAD)]
+      - [schema:postalCode, $(CODIGO-POSTAL), xsd:string]
+      - [geo:lat, $(LATITUD), xsd:decimal]
+      - [geo:long, $(LONGITUD), xsd:decimal]
+      - [schema:streetAddress, $(NOMBRE-VIA)]
+      - [schema:telephone, $(TELEFONO)]
+      - [schema:email, $(EMAIL)]
+      - [schema:openingHours, $(HORARIO)]
+      - p: schema:containedInPlace
+        o:
+          mapping: district
+      - p: sc:hasNearby
+        o:
+          mapping: subway
+      - p: sc:hasNearby
+        o:
+          mapping: bus
+      - p: sc:hasNearby 
+        o:
+          mapping: cercanias
+  basketballCourt:
+    sources:
+      - [sports_limpio.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/basketballCourt/$(NAMEID)"
+    po:
+      - [a, sc:BasketballCourt]
+      - [schema:name,$(NOMBRE)]
+      - [sc:accessibility, $(ACCESIBILIDAD)]
+      - [schema:postalCode, $(CODIGO-POSTAL), xsd:string]
+      - [geo:lat, $(LATITUD), xsd:decimal]
+      - [geo:long, $(LONGITUD), xsd:decimal]
+      - [schema:streetAddress, $(NOMBRE-VIA)]
+      - [schema:telephone, $(TELEFONO)]
+      - [schema:email, $(EMAIL)]
+      - [schema:openingHours, $(HORARIO)]
+      - p: schema:containedInPlace
+        o:
+          mapping: district
+
+  swimmingPool:
+    sources:
+      - [sports_limpio.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/swimmingPool/$(NAMEID)"
+    po:
+      - [a, sc:SwimmingPool]
+      - [schema:name,$(NOMBRE)]
+      - [sc:accessibility, $(ACCESIBILIDAD)]
+      - [schema:postalCode, $(CODIGO-POSTAL), xsd:string]
+      - [geo:lat, $(LATITUD), xsd:decimal]
+      - [geo:long, $(LONGITUD), xsd:decimal]
+      - [schema:streetAddress, $(NOMBRE-VIA)]
+      - [schema:telephone, $(TELEFONO)]
+      - [schema:email, $(EMAIL)]
+      - [schema:openingHours, $(HORARIO)]
+      - p: schema:containedInPlace
+        o:
+          mapping: district
+
+  footballField:
+    sources:
+      - [sports_limpio.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/footballField/$(NAMEID)"
+    po:
+      - [a, sc:FootballField]
+      - [schema:name,$(NOMBRE)]
+      - [sc:accessibility, $(ACCESIBILIDAD)]
+      - [schema:postalCode, $(CODIGO-POSTAL), xsd:string]
+      - [geo:lat, $(LATITUD), xsd:decimal]
+      - [geo:long, $(LONGITUD), xsd:decimal]
+      - [schema:streetAddress, $(NOMBRE-VIA)]
+      - [schema:telephone, $(TELEFONO)]
+      - [schema:email, $(EMAIL)]
+      - [schema:openingHours, $(HORARIO)]
+      - p: schema:containedInPlace
+        o:
+          mapping: district
+
+  gym:
+    sources:
+      - [sports_limpio.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/gym/$(NAMEID)"
+    po:
+      - [a, sc:Gym]
+      - [schema:name,$(NOMBRE)]
+      - [sc:accessibility, $(ACCESIBILIDAD)]
+      - [schema:postalCode, $(CODIGO-POSTAL), xsd:string]
+      - [geo:lat, $(LATITUD), xsd:decimal]
+      - [geo:long, $(LONGITUD), xsd:decimal]
+      - [schema:streetAddress, $(NOMBRE-VIA)]
+      - [schema:telephone, $(TELEFONO)]
+      - [schema:email, $(EMAIL)]
+      - [schema:openingHours, $(HORARIO)]
+      - p: schema:containedInPlace
+        o:
+          mapping: district
+
+  tennisCourt:
+    sources:
+      - [sports_limpio.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/tennisCourt/$(NAMEID)"
+    po:
+      - [a, sc:TennisCourt]
+      - [schema:name,$(NOMBRE)]
+      - [sc:accessibility, $(ACCESIBILIDAD)]
+      - [schema:postalCode, $(CODIGO-POSTAL), xsd:string]
+      - [geo:lat, $(LATITUD), xsd:decimal]
+      - [geo:long, $(LONGITUD), xsd:decimal]
+      - [schema:streetAddress, $(NOMBRE-VIA)]
+      - [schema:telephone, $(TELEFONO)]
+      - [schema:email, $(EMAIL)]
+      - [schema:openingHours, $(HORARIO)]
+      - p: schema:containedInPlace
+        o:
+          mapping: district
+
 
 ### MAPEOS DE CLASES ESPACIALES ###
   district:
@@ -238,23 +324,25 @@ otherCenters:
     s: "http://smartcity.linkeddata.es/lcc/resource/district/$(DISTRITO)"
     po:
       - [a, dbo:District]
+      - [rdfs:label, $(DISTRITO)]
       - p: schema:containedInPlace
         o: 
           mapping: neighbourhood
           
   neighbourhood:
     sources: 
-      - [combinado.csv~csv] #cojo el completo para que aparezcan todos los barrios
+      - [combinado.csv~csv] 
     s: "http://smartcity.linkeddata.es/lcc/resource/neighbourhood/$(BARRIO)"
     po:
       - [a, dbo:Neighbourhood]
+      - [rdfs:label, $(BARRIO)]
       - p: schema:containedInPlace
         o: 
           mapping: municipality
 
   municipality:
     sources: 
-      - [combinado.csv~csv] #cojo el completo para que aparezcan todos los municipios
+      - [combinado.csv~csv]
     s: "http://smartcity.linkeddata.es/lcc/resource/municipality/$(MUNICIPIO)"
     po:
       - [a, dbo:Municipality]
@@ -268,22 +356,23 @@ otherCenters:
     s: "http://smartcity.linkeddata.es/lcc/resource/subway/$(metro_line)"
     po:
       - [a, sc:Subway]
-      - [sc:nameStation, $(metro_line)]
+      - [schema:subwayStation, $(metro_line)]
+      - [sc:subwayLine, $(metro_line), xsd:integer]
 
   bus:
     sources:
       - [combinado.csv~csv]
-    iterator: "$.metro_line.split('\n')"
+    iterator: "$.bus_line.split('\n')"
     s: "http://smartcity.linkeddata.es/lcc/resource/bus/$(bus_line)"
     po:
-      - [a, sc:BusStop]
-      - [sc:nameStation, $(bus_line)]
+      - [a, schema:Bus]
+      - [sc:busLine, $(bus_line)]
 
   cercanias:
     sources:
       - [combinado.csv~csv]
-    iterator: "$.metro_line.split('\n')"
+    iterator: "$.cercanias_line.split('\n')"
     s: "http://smartcity.linkeddata.es/lcc/resource/train/$(cercanias_line)"
     po:
-      - [a, sc:TrainStation]
-      - [sc:nameStation, $(cercanias_line)]
+      - [a, schema:SuburbanTrain]
+      - [sc:suburbanLine, $(cercanias_line)]

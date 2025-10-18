@@ -4,7 +4,10 @@
 
 **The “rml-map.ttl” file:**
 
-- [X] RML file with the mappings from the source "../csv/combinado-updated.csv"
+- [X] Contains the RML mappings from the source `../csv/combinado-updated.csv`.
+
+**The “mapping-rules.yml” file:**
+- [X] Contains the YARRRML version of the mappings from the same source.
 
 **The "mappings" directory:**
 
@@ -13,7 +16,7 @@
 
 **The "queries.sparql" file:**
 
-- [X] SPARQL file with the queries to verify the data.
+- [X] Includes SPARQL queries to verify the correctness of the generated RDF data.
 
 
 
