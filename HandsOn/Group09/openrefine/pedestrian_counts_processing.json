@@ -1,0 +1,280 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Sensor_Name",
+          "expression": "value",
+          "columnName": "Sensor_Name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Lat526_T",
+                "l": "Lat526_T"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Location_ID",
+          "expression": "value",
+          "columnName": "Location_ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "164",
+                "l": "164"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Sensor_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Lat526_T"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lat526_T_1"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Sensor_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Sensor_Name",
+          "expression": "value",
+          "columnName": "Sensor_Name",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Lat526_T",
+                "l": "Lat526_T"
+              }
+            },
+            {
+              "v": {
+                "v": "Lat526_T_1",
+                "l": "Lat526_T_1"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Location_ID",
+          "expression": "value",
+          "columnName": "Location_ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "167",
+                "l": "167"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Sensor_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Lat526_T"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lat526_T_2"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Sensor_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Sensor_Name",
+          "columnName": "Sensor_Name",
+          "query": "BirBridge",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "list",
+          "name": "Location_ID",
+          "expression": "value",
+          "columnName": "Location_ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "123",
+                "l": "123"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Sensor_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BirBridge_T"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BirBridge_T_1"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Sensor_Name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Sensor_Name",
+          "columnName": "Sensor_Name",
+          "query": "BirBridge",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        },
+        {
+          "type": "list",
+          "name": "Location_ID",
+          "expression": "value",
+          "columnName": "Location_ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "124",
+                "l": "124"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Sensor_Name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BirBridge_T"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BirBridge_T_2"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Sensor_Name"
+  },
+  {
+    "op": "core/row-star",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Sensing_Date",
+          "columnName": "Sensing_Date",
+          "query": "2024-12",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "starred": true,
+    "description": "Star rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-star",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "starred": false,
+    "description": "Unstar rows"
+  }
+]
