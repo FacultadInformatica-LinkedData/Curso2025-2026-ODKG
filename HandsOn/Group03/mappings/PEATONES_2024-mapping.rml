@@ -1,0 +1,109 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix mts: <http://madrid-transport-safety.org/ontology#> .
+@prefix resource: <http://madrid-transport-safety.org/resource/> .
+@base <http://madrid-transport-safety.org/mapping/pedestrians#>.
+
+<#PedestrianDataMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "../csv/PEATONES_2024-updated.csv" ;
+    rml:referenceFormulation ql:CSV 
+  ];
+  rr:subjectMap [
+    rr:template "http://madrid-transport-safety.org/resource/pedestrian-observation/{identificador}/{fecha}/{hora}";
+    rr:class mts:PedestrianData
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:pedestrianDate;
+    rr:objectMap [
+      rml:reference "fecha"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:pedestrianTime;
+    rr:objectMap [
+      rml:reference "hora"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:pedestrianIdentifier;
+    rr:objectMap [
+      rml:reference "identificador"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:pedestrianCounter;
+    rr:objectMap [
+      rml:reference "peatones";
+      rr:datatype xsd:integer
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:pedestrianStreetName;
+    rr:objectMap [
+      rml:reference "direccion"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:pedestrianObservationDirection;
+    rr:objectMap [
+      rml:reference "observaciones_direccion"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:pedestrianLatitude;
+    rr:objectMap [
+      rml:reference "latitude";
+      rr:datatype xsd:decimal
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:pedestrianLongitude;
+    rr:objectMap [
+      rml:reference "longitude";
+      rr:datatype xsd:decimal
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:locatedInDistrict;
+    rr:objectMap [
+      rr:parentTriplesMap <#DistrictMap>
+    ]
+  ] .
+
+
+<#DistrictMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "../csv/PEATONES_2024-updated.csv" ;
+    rml:referenceFormulation ql:CSV 
+  ];
+  rr:subjectMap [
+    rr:template "http://madrid-transport-safety.org/resource/district/{Número_distrito}";
+    rr:class mts:District
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:districtCode;
+    rr:objectMap [
+      rml:reference "Número_distrito";
+      rr:datatype xsd:integer
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:districtName;
+    rr:objectMap [
+      rml:reference "distrito"
+    ]
+  ] .
