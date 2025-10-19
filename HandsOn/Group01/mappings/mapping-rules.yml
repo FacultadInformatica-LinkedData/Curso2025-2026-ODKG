@@ -10,11 +10,11 @@ prefixes:
 mappings:
   park:
     sources:
-      - [parques-jardines_limpio.csv~csv]
-    s: "http://smartcity.linkeddata.es/lcc/resource/park/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/park/$(IDNOMBRE)"
     po:
       - [a, sc:ParkGarden]
-      - [schema:name,$(NAME)]
+      - [schema:name,$(IDNOMBRE)]
       - [schema:postalCode,$(CODIGO-POSTAL), xsd:string]
       - [schema:streetAddress,$(NOMBRE-VIA)]
       - [schema:telephone,$(TELEFONO)]
@@ -23,7 +23,7 @@ mappings:
       - [geo:lat,$(LATITUD), xsd:decimal]
       - [geo:long,$(LONGITUD), xsd:decimal]
       - [sc:surface,$(superficieLimpia), xsd:decimal] 
-      - [sc:hasSportsFacilities,$(tieneInstalacionesDeportivas), xsd:boolean] # mirar como lo ha puseto julia en la ontología 
+      - [sc:hasSportsFacilities,$(tieneInstalacionesDeportivas)]
       - p: schema:containedInPlace
         o:
           - mapping: district
@@ -38,11 +38,11 @@ mappings:
           - mapping: cercanias
 library:
     sources:
-      - [bibliobuses-bibliotecas_limpio.csv~csv]
-    s: "http://smartcity.linkeddata.es/lcc/resource/library/$(NAMEID)" 
+      - [./csv/combinado-updated.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/library/$(IDNOMBRE)" 
     po:
       - [a, schema:Library]
-      - [schema:name,$(NAME)]
+      - [schema:name,$(IDNOMBRE)]
       - [schema:postalCode,$(CODIGO-POSTAL), xsd:string]
       - [schema:streetAddress,$(NOMBRE-VIA)]
       - [schema:telephone,$(TELEFONO)]
@@ -65,11 +65,11 @@ library:
           - mapping: cercanias
 residenceHall:
     sources:
-      - [colegios-mayores_limpio.csv~csv]
-    s: "http://smartcity.linkeddata.es/lcc/resource/residenceHall/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/residenceHall/$(IDNOMBRE)"
     po:
       - [a, sc:ResidenceHall]
-      - [schema:name,$(NAME)]
+      - [schema:name,$(IDNOMBRE)]
       - [schema:postalCode,$(CODIGO-POSTAL), xsd:string]
       - [schema:streetAddress,$(NOMBRE-VIA)]
       - [schema:telephone,$(TELEFONO)]
@@ -92,8 +92,8 @@ residenceHall:
           - mapping: cercanias
 university:
     sources:
-      - [combinado.csv~csv] 
-    s: "http://smartcity.linkeddata.es/lcc/resource/university/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv] 
+    s: "http://smartcity.linkeddata.es/lcc/resource/university/$(IDNOMBRE)"
     po:
       - [a, sc:University]
       - [rdfs:label, $(NOMBRE)]
@@ -121,8 +121,8 @@ university:
           - mapping: cercanias
 faculty:
     sources:
-      - [combinado.csv~csv] 
-    s: "http://smartcity.linkeddata.es/lcc/resource/faculty/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv] 
+    s: "http://smartcity.linkeddata.es/lcc/resource/faculty/$(IDNOMBRE)"
     po:
       - [a, sc:Faculty]
       - [rdfs:label, $(NOMBRE)]
@@ -150,8 +150,8 @@ faculty:
           - mapping: cercanias
 otherCenters:
     sources:
-      - [combinado.csv~csv] 
-    s: "http://smartcity.linkeddata.es/lcc/resource/otherCenters/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv] 
+    s: "http://smartcity.linkeddata.es/lcc/resource/otherCenters/$(IDNOMBRE)"
     po:
       - [a, sc:OtherCenters]
       - [rdfs:label, $(NOMBRE)]
@@ -179,8 +179,8 @@ otherCenters:
           - mapping: cercanias
 sportsCenter:
     sources:
-      - [combinado.csv~csv] 
-    s: "http://smartcity.linkeddata.es/lcc/resource/sportsCenter/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv] 
+    s: "http://smartcity.linkeddata.es/lcc/resource/sportsCenter/$(IDNOMBRE)"
     po:
       - [a, sc:SportsCenter]
       - [rdfs:label, $(NOMBRE)]
@@ -207,8 +207,8 @@ sportsCenter:
           - mapping: cercanias
 basketballCourt:
     sources:
-      - [sports_limpio.csv~csv]
-    s: "http://smartcity.linkeddata.es/lcc/resource/basketballCourt/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/basketballCourt/$(IDNOMBRE)"
     po:
       - [a, sc:BasketballCourt]
       - [schema:name,$(NOMBRE)]
@@ -225,8 +225,8 @@ basketballCourt:
           - mapping: district
 swimmingPool:
     sources:
-      - [sports_limpio.csv~csv]
-    s: "http://smartcity.linkeddata.es/lcc/resource/swimmingPool/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/swimmingPool/$(IDNOMBRE)"
     po:
       - [a, sc:SwimmingPool]
       - [schema:name,$(NOMBRE)]
@@ -243,8 +243,8 @@ swimmingPool:
           - mapping: district
 footballField:
     sources:
-      - [sports_limpio.csv~csv]
-    s: "http://smartcity.linkeddata.es/lcc/resource/footballField/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/footballField/$(IDNOMBRE)"
     po:
       - [a, sc:FootballField]
       - [schema:name,$(NOMBRE)]
@@ -261,8 +261,8 @@ footballField:
           - mapping: district
 gym:
     sources:
-      - [sports_limpio.csv~csv]
-    s: "http://smartcity.linkeddata.es/lcc/resource/gym/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/gym/$(IDNOMBRE)"
     po:
       - [a, sc:Gym]
       - [schema:name,$(NOMBRE)]
@@ -279,8 +279,8 @@ gym:
           - mapping: district
 tennisCourt:
     sources:
-      - [sports_limpio.csv~csv]
-    s: "http://smartcity.linkeddata.es/lcc/resource/tennisCourt/$(NAMEID)"
+      - [./csv/combinado-updated.csv~csv]
+    s: "http://smartcity.linkeddata.es/lcc/resource/tennisCourt/$(IDNOMBRE)"
     po:
       - [a, sc:TennisCourt]
       - [schema:name,$(NOMBRE)]
@@ -297,7 +297,7 @@ tennisCourt:
           - mapping: district
 district:
     sources: 
-      - [combinado.csv~csv]
+      - [./csv/combinado-updated.csv~csv]
     s: "http://smartcity.linkeddata.es/lcc/resource/district/$(DISTRITO)"
     po:
       - [a, dbo:District]
@@ -307,7 +307,7 @@ district:
           - mapping: neighbourhood          
 neighbourhood:
     sources: 
-      - [combinado.csv~csv] 
+      - [./csv/combinado-updated.csv~csv] 
     s: "http://smartcity.linkeddata.es/lcc/resource/neighbourhood/$(BARRIO)"
     po:
       - [a, dbo:Neighbourhood]
@@ -317,15 +317,14 @@ neighbourhood:
           - mapping: municipality
 municipality:
     sources: 
-      - [combinado.csv~csv]
+      - [./csv/combinado-updated.csv~csv]
     s: "http://smartcity.linkeddata.es/lcc/resource/municipality/$(MUNICIPIO)"
     po:
       - [a, dbo:Municipality]
       - [rdfs:label, $(MUNICIPIO)]
 subway:
     sources: 
-      - [combinado.csv~csv]
-    iterator: "$.metro_line.split('\n')"
+      - [./csv/combinado-updated.csv~csv]
     s: "http://smartcity.linkeddata.es/lcc/resource/subway/$(metro_line)"
     po:
       - [a, sc:Subway]
@@ -333,16 +332,14 @@ subway:
       - [sc:subwayLine, $(metro_line), xsd:integer]
 bus:
     sources:
-      - [combinado.csv~csv]
-    iterator: "$.bus_line.split('\n')"
+      - [./csv/combinado-updated.csv~csv]
     s: "http://smartcity.linkeddata.es/lcc/resource/bus/$(bus_line)"
     po:
       - [a, schema:Bus]
       - [sc:busLine, $(bus_line)]
 cercanias:
     sources:
-      - [combinado.csv~csv]
-    iterator: "$.cercanias_line.split('\n')"
+      - [./csv/combinado-updated.csv~csv]
     s: "http://smartcity.linkeddata.es/lcc/resource/train/$(cercanias_line)"
     po:
       - [a, schema:SuburbanTrain]

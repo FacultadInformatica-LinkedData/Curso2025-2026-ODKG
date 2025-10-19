@@ -22,8 +22,8 @@ LIMIT 20
 SELECT ?district (COUNT(?facility) AS ?numFacilities)
 WHERE {
   ?facility a sc:Facility ;
-            schema:address ?address .
-  ?address schema:addressLocality ?district .
+            schema:streetAddress ?address .
+  ?address schema:streetAddress ?district .
 }
 GROUP BY ?district
 ORDER BY DESC(?numFacilities)
@@ -44,7 +44,7 @@ LIMIT 15
 SELECT ?facility
 WHERE {
   ?facility a sc:Facility ;
-            sc:hasWifi "sí" .
+            sc:haveWifi "sí" .
 }
 
 
