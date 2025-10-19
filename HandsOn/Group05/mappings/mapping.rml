@@ -14,11 +14,11 @@
 
   rr:subjectMap [
     rr:template "http://example.org/address/{Address}" ;
-    rr:class foaf:Address
+    rr:class ns:Address
   ] ;
 
   rr:predicateObjectMap [
-    rr:predicate foaf:hasAddress_name ;
+    rr:predicate ns:hasAddress_name ;
     rr:objectMap [
       rml:reference "Address" ;
       rr:datatype xsd:string
@@ -33,11 +33,11 @@
 
   rr:subjectMap [
     rr:template "http://example.org/bikeStation/{Name}" ;
-    rr:class foaf:Bike_Station
+    rr:class ns:Bike_Station
   ] ;
 
   rr:predicateObjectMap [
-    rr:predicate foaf:hasStation_name ;
+    rr:predicate ns:hasStation_name ;
     rr:objectMap [
       rml:reference "Name" ;
       rr:datatype xsd:string
@@ -45,7 +45,7 @@
   ] ;
 
   rr:predicateObjectMap [
-    rr:predicate foaf:hasCoord_x ;
+    rr:predicate ns:hasCoord_x ;
     rr:objectMap [
       rml:reference "POINT_X" ;
       rr:datatype xsd:float
@@ -53,7 +53,7 @@
   ] ;
 
   rr:predicateObjectMap [
-    rr:predicate foaf:hasCoord_y ;
+    rr:predicate ns:hasCoord_y ;
     rr:objectMap [
       rml:reference "POINT_Y" ;
       rr:datatype xsd:float
@@ -61,7 +61,7 @@
   ] ;
 
   rr:predicateObjectMap [
-    rr:predicate foaf:hasCapacity ;
+    rr:predicate ns:hasCapacity ;
     rr:objectMap [
       rml:reference "DockBikes" ;
       rr:datatype xsd:int
@@ -83,7 +83,7 @@
 
   rr:subjectMap [
     rr:template "http://example.org/bike/{idBike}" ;
-    rr:class foaf:Bicycle
+    rr:class ns:Bicycle
   ] .
 
 <#TrialMapping>
@@ -98,7 +98,7 @@
   ] ;
 
   rr:predicateObjectMap [
-    rr:predicate foaf:hasDuration ;
+    rr:predicate ns:hasDuration ;
     rr:objectMap [
       rml:reference "trip_minutes" ;
       rr:datatype xsd:float
@@ -106,7 +106,7 @@
   ] ;
 
   rr:predicateObjectMap [
-    rr:predicate foaf:hasUnlock_date ;
+    rr:predicate ns:hasUnlock_date ;
     rr:objectMap [
       rml:reference "unlock_date" ;
       rr:datatype xsd:dateTime
@@ -114,7 +114,7 @@
   ] ;
 
   rr:predicateObjectMap [
-    rr:predicate foaf:hasLock_date ;
+    rr:predicate ns:hasLock_date ;
     rr:objectMap [
       rml:reference "lock_date" ;
       rr:datatype xsd:dateTime
