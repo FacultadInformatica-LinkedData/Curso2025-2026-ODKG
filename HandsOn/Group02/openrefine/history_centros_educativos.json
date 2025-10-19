@@ -2657,5 +2657,69 @@
     "op": "core/column-removal",
     "columnName": "centro_tipo_desc_abreviada",
     "description": "Remove column centro_tipo_desc_abreviada"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "direccion_via_tipo",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column direccion_via_tipo using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "direccion_via_tipo",
+    "expression": "grel:cells['direccion_via_tipo'].value + \" \" + cells['direccion_via_nombre'].value + \", \" + cells['direccion_numero'].value",
+    "onError": "set-to-blank",
+    "newColumnName": "direccion",
+    "columnInsertIndex": 6,
+    "description": "Create column direccion at index 6 based on column direccion_via_tipo using expression grel:cells['direccion_via_tipo'].value + \" \" + cells['direccion_via_nombre'].value + \", \" + cells['direccion_numero'].value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "direccion_via_tipo",
+    "description": "Remove column direccion_via_tipo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "direccion_via_nombre",
+    "description": "Remove column direccion_via_nombre"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "direccion_numero",
+    "description": "Remove column direccion_numero"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "coordenada_x_utm",
+    "expression": "jython:# Import the Java classes we need\nfrom org.locationtech.proj4j import CRSFactory, CoordinateReferenceSystem\nfrom org.locationtech.proj4j import CoordinateTransformFactory, ProjCoordinate\n\n# --- Setup the transformation (this runs once) ---\nif \"transformer\" not in globals():\n    global ctFactory, crsFactory, transformer\n    global srcCRS, targetCRS\n\n    ctFactory = CoordinateTransformFactory()\n    crsFactory = CRSFactory()\n\n    # Source: Your UTM Zone (e.g., EPSG:32630 for Zone 30N)\n    # Verify this is the correct EPSG code for your specific UTM zone!\n    srcCRS = crsFactory.createFromName(\"EPSG:32630\")\n    # Target: Standard Lat/Lon (WGS84)\n    targetCRS = crsFactory.createFromName(\"EPSG:4326\")\n\n    # Create the transformer object\n    transformer = ctFactory.createTransform(srcCRS, targetCRS)\n\n# --- Run the transformation for each row ---\ntry:\n    # Get x and y strings from your columns\n    # !!! CHANGE THESE column names if yours are different !!!\n    x_utm_string = cells['coordenada_x_utm'].value\n    y_utm_string = cells['coordenada_y_utm'].value\n\n    # Convert the strings to numbers (float)\n    x_utm = float(x_utm_string)\n    y_utm = float(y_utm_string)\n\n    # Create coordinate objects\n    srcCoord = ProjCoordinate(x_utm, y_utm)\n    targetCoord = ProjCoordinate()\n\n    # Perform the transformation\n    transformer.transform(srcCoord, targetCoord)\n\n    # Return as a WKT string (Lon Lat)\n    return \"POINT(\" + str(targetCoord.x) + \" \" + str(targetCoord.y) + \")\"\n\nexcept Exception as e:\n    # Handle blank cells or non-numeric errors\n    return None",
+    "onError": "set-to-blank",
+    "newColumnName": "wktGeometry",
+    "columnInsertIndex": 13,
+    "description": "Create column wktGeometry at index 13 based on column coordenada_x_utm using expression jython:# Import the Java classes we need\nfrom org.locationtech.proj4j import CRSFactory, CoordinateReferenceSystem\nfrom org.locationtech.proj4j import CoordinateTransformFactory, ProjCoordinate\n\n# --- Setup the transformation (this runs once) ---\nif \"transformer\" not in globals():\n    global ctFactory, crsFactory, transformer\n    global srcCRS, targetCRS\n\n    ctFactory = CoordinateTransformFactory()\n    crsFactory = CRSFactory()\n\n    # Source: Your UTM Zone (e.g., EPSG:32630 for Zone 30N)\n    # Verify this is the correct EPSG code for your specific UTM zone!\n    srcCRS = crsFactory.createFromName(\"EPSG:32630\")\n    # Target: Standard Lat/Lon (WGS84)\n    targetCRS = crsFactory.createFromName(\"EPSG:4326\")\n\n    # Create the transformer object\n    transformer = ctFactory.createTransform(srcCRS, targetCRS)\n\n# --- Run the transformation for each row ---\ntry:\n    # Get x and y strings from your columns\n    # !!! CHANGE THESE column names if yours are different !!!\n    x_utm_string = cells['coordenada_x_utm'].value\n    y_utm_string = cells['coordenada_y_utm'].value\n\n    # Convert the strings to numbers (float)\n    x_utm = float(x_utm_string)\n    y_utm = float(y_utm_string)\n\n    # Create coordinate objects\n    srcCoord = ProjCoordinate(x_utm, y_utm)\n    targetCoord = ProjCoordinate()\n\n    # Perform the transformation\n    transformer.transform(srcCoord, targetCoord)\n\n    # Return as a WKT string (Lon Lat)\n    return \"POINT(\" + str(targetCoord.x) + \" \" + str(targetCoord.y) + \")\"\n\nexcept Exception as e:\n    # Handle blank cells or non-numeric errors\n    return None"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "coordenada_x_utm",
+    "description": "Remove column coordenada_x_utm"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "coordenada_y_utm",
+    "description": "Remove column coordenada_y_utm"
   }
 ]
