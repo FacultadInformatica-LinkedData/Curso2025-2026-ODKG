@@ -31,7 +31,7 @@
     <h2>1. Dataset Analysis</h2>
     <p>The dataset is a curated subset of the General Transit Feed Specification (GTFS) for Madrid's public transportation, obtained from the Mobility Database feed
     (<a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank">mdb-2820</a>).
-    The objective is to produce a compact table (<code>df_clean</code>) where each row represents a <strong>scheduled stop event</strong> (a particular trip arriving at a particular stop at a planned time). This dataset supports the development of the Madrid Transit Companion application, which provides transit navigation and location-based educational content through pre-computed links to Wikidata entities.</p>
+    The objective is to produce a compact table (<code>df_clean</code>) where each row represents a <strong>scheduled stop event</strong> (a particular trip arriving at a particular stop at a planned time). This dataset supports the development of the Madrid Bus Companion application, which provides bus navigation and location-based educational content through runtime DBpedia queries based on stop location.</p>
 
     <h3>1.1 Data Processing</h3>
     <ul>
@@ -137,7 +137,7 @@ max    4.113160e+01 -2.825500e+00   1.617000e+03
     
     <div class="callout small">
       <p><strong>License URI:</strong> <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">https://creativecommons.org/licenses/by/4.0/</a></p>
-      <p><strong>Required Attribution:</strong> "Original GTFS data from Consorcio Regional de Transportes de Madrid (CRTM) - https://www.crtm.es/. RDF transformation and Wikidata."</p>
+      <p><strong>Required Attribution:</strong> "Original GTFS data from Consorcio Regional de Transportes de Madrid (CRTM) - https://www.crtm.es/. RDF transformation by Group 06."</p>
       <p><strong>Rationale:</strong> CC-BY 4.0 is compatible with the source license (LDA allows derivative works), widely recognized, and promotes open data reuse while requiring proper attribution.</p>
     </div>
 
@@ -178,13 +178,38 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
       </tr>
       <tr>
         <td>StopTime</td>
-        <td><code>http://group06.linkeddata.es/resource/stop-time/{trip_id}-{stop_id}-{stop_sequence}</code></td>
-        <td><code>/resource/stop-time/9010201-09568-0</code></td>
+        <td><code>http://group06.linkeddata.es/resource/stoptime/{trip_id}-{stop_id}-{stop_sequence}</code></td>
+        <td><code>/resource/stoptime/9010201-09568-0</code></td>
       </tr>
       <tr>
-        <td>LinkedPlace</td>
-        <td><code>http://group06.linkeddata.es/resource/place/{wikidata_id}</code></td>
-        <td><code>/resource/place/Q5775</code></td>
+        <td>LocalArea</td>
+        <td><code>http://group06.linkeddata.es/resource/area/{area_name}</code></td>
+        <td><code>/resource/area/aranjuez</code></td>
+      </tr>
+      <tr>
+        <td>Service</td>
+        <td><code>http://group06.linkeddata.es/resource/service/{service_id}</code></td>
+        <td><code>/resource/service/9010201</code></td>
+      </tr>
+      <tr>
+        <td>CalendarRule</td>
+        <td><code>http://group06.linkeddata.es/resource/calendarrule/{service_id}</code></td>
+        <td><code>/resource/calendarrule/9010201</code></td>
+      </tr>
+      <tr>
+        <td>CalendarDate</td>
+        <td><code>http://group06.linkeddata.es/resource/calendardate/{service_id}-{date}</code></td>
+        <td><code>/resource/calendardate/9010201-20241225</code></td>
+      </tr>
+      <tr>
+        <td>Shape</td>
+        <td><code>http://group06.linkeddata.es/resource/shape/{shape_id}</code></td>
+        <td><code>/resource/shape/9__1__013__2</code></td>
+      </tr>
+      <tr>
+        <td>ShapePoint</td>
+        <td><code>http://group06.linkeddata.es/resource/shapepoint/{shape_id}-{sequence}</code></td>
+        <td><code>/resource/shapepoint/9__1__013__2-0</code></td>
       </tr>
     </tbody>
   </table>
@@ -203,63 +228,103 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
 <section class="card">
   <h2>4. Lightweight Ontology</h2>
   <p>
-    The ontology extends the GTFS vocabulary (<a href="https://vocab.gtfs.org/terms" target="_blank">vocab.gtfs.org/terms</a>) 
-    to enable linking transit stops with nearby Wikidata geographic entities. Following best practices for ontology reuse, 
-    we import existing vocabularies and add only minimal extensions needed for our application.
+    The <strong>Madrid Bus Network Ontology</strong> extends the GTFS vocabulary (<a href="https://vocab.gtfs.org/terms" target="_blank">vocab.gtfs.org/terms</a>) 
+    to model Madrid's bus network. Following best practices for ontology reuse, we import existing vocabularies and add only minimal 
+    bus-specific extensions and geographic area linking needed for our application.
   </p>
 
   <h3>4.1 Reused Vocabularies</h3>
   <table class="small">
     <thead><tr><th>Vocabulary</th><th>Prefix</th><th>Classes/Properties Used</th></tr></thead>
     <tbody>
-      <tr><td>GTFS Vocabulary</td><td><code>gtfs:</code></td><td><code>Route</code>, <code>Stop</code>, <code>Trip</code>, <code>StopTime</code>, <code>shortName</code>, <code>arrivalTime</code>, etc.</td></tr>
+      <tr><td>GTFS Vocabulary</td><td><code>gtfs:</code></td><td><code>Route</code>, <code>Stop</code>, <code>Trip</code>, <code>StopTime</code>, <code>Service</code>, <code>CalendarRule</code>, <code>Shape</code>, <code>ShapePoint</code>, <code>shortName</code>, <code>arrivalTime</code>, etc.</td></tr>
       <tr><td>WGS84 Geo</td><td><code>geo:</code></td><td><code>lat</code>, <code>long</code></td></tr>
-      <tr><td>Schema.org</td><td><code>schema:</code></td><td><code>Place</code> (superclass)</td></tr>
-      <tr><td>Dublin Core</td><td><code>dcterms:</code></td><td><code>description</code>, <code>created</code>, <code>title</code></td></tr>
+      <tr><td>Schema.org</td><td><code>schema:</code></td><td><code>Place</code> (superclass for LocalArea), <code>startDate</code>, <code>endDate</code></td></tr>
+      <tr><td>DBpedia Ontology</td><td><code>dbo:</code></td><td><code>Place</code> (superclass for LocalArea)</td></tr>
+      <tr><td>Dublin Core</td><td><code>dcterms:</code></td><td><code>title</code>, <code>creator</code>, <code>created</code>, <code>license</code>, <code>source</code></td></tr>
+      <tr><td>OWL</td><td><code>owl:</code></td><td><code>Ontology</code>, <code>Class</code>, <code>ObjectProperty</code>, <code>sameAs</code>, <code>inverseOf</code>, <code>disjointWith</code></td></tr>
     </tbody>
   </table>
 
   <h3>4.2 New Ontology Extensions</h3>
   <p class="small">We add only what doesn't exist in GTFS vocabulary:</p>
 
-  <h4>ex:LinkedPlace</h4>
-  <p class="small">A Wikidata entity (landmark, monument, museum) linked to a transit stop based on geographic proximity.</p>
-  <table>
-    <thead><tr><th>Property</th><th>Range</th><th>Description</th></tr></thead>
+  <h4>ex:BusRoute (Class)</h4>
+  <p class="small">A bus route in the Madrid CRTM network. Specialization of <code>gtfs:Route</code> with <code>route_type = 3</code> (Bus service).</p>
+  <table class="small">
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td><code>ex:wikidataUri</code></td><td><code>xsd:anyURI</code></td><td>The Wikidata entity URI (e.g., http://www.wikidata.org/entity/Q5775).</td></tr>
-      <tr><td><code>ex:distanceMeters</code></td><td><code>xsd:decimal</code></td><td>Distance in meters from the linked stop to this place.</td></tr>
-      <tr><td><code>dcterms:description</code></td><td><code>xsd:string</code></td><td>Brief description of the place (reused from Dublin Core).</td></tr>
-      <tr><td><code>geo:lat</code>, <code>geo:long</code></td><td><code>xsd:float</code></td><td>Geographic coordinates (reused from WGS84).</td></tr>
+      <tr><td><code>rdfs:subClassOf</code></td><td><code>gtfs:Route</code></td></tr>
+      <tr><td><code>owl:disjointWith</code></td><td><code>ex:BusStop</code>, <code>ex:LocalArea</code></td></tr>
     </tbody>
   </table>
 
-  <h4>ex:nearbyPlace (Object Property)</h4>
-  <p class="small">Links a transit stop to a nearby Wikidata place entity.</p>
-  <table>
-    <thead><tr><th>Domain</th><th>Range</th><th>Description</th></tr></thead>
+  <h4>ex:BusStop (Class)</h4>
+  <p class="small">A physical bus stop location in Madrid's CRTM network with WGS84 coordinates. Each stop is associated with a geographic area (<code>ex:LocalArea</code>) for contextualized information retrieval.</p>
+  <table class="small">
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td><code>gtfs:Stop</code></td><td><code>ex:LinkedPlace</code></td><td>Pre-computed link based on geographic proximity (typically within 500m radius).</td></tr>
+      <tr><td><code>rdfs:subClassOf</code></td><td><code>gtfs:Stop</code></td></tr>
+      <tr><td><code>owl:disjointWith</code></td><td><code>ex:BusRoute</code>, <code>ex:LocalArea</code></td></tr>
+    </tbody>
+  </table>
+
+  <h4>ex:LocalArea (Class)</h4>
+  <p class="small">A named geographic area in Madrid (neighborhood, district, landmark zone) that contains one or more bus stops. Instances are linked to corresponding DBpedia resources via <code>owl:sameAs</code> to enable retrieval of cultural, historical, and touristic information.</p>
+  <table class="small">
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td><code>rdfs:subClassOf</code></td><td><code>schema:Place</code>, <code>dbo:Place</code></td></tr>
+      <tr><td><code>owl:disjointWith</code></td><td><code>ex:BusRoute</code>, <code>ex:BusStop</code></td></tr>
+    </tbody>
+  </table>
+
+  <h4>ex:locatedInArea (Object Property)</h4>
+  <p class="small">Links a bus stop to the local geographic area (neighborhood, district) where it is located. This enables the application to retrieve area-specific quiz content from DBpedia.</p>
+  <table class="small">
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td><code>rdfs:domain</code></td><td><code>ex:BusStop</code></td></tr>
+      <tr><td><code>rdfs:range</code></td><td><code>ex:LocalArea</code></td></tr>
+      <tr><td><code>owl:inverseOf</code></td><td><code>ex:containsStop</code></td></tr>
+    </tbody>
+  </table>
+
+  <h4>ex:containsStop (Object Property)</h4>
+  <p class="small">Indicates that a geographic area contains one or more bus stops. Inverse of <code>ex:locatedInArea</code>.</p>
+  <table class="small">
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td><code>rdfs:domain</code></td><td><code>ex:LocalArea</code></td></tr>
+      <tr><td><code>rdfs:range</code></td><td><code>ex:BusStop</code></td></tr>
+      <tr><td><code>owl:inverseOf</code></td><td><code>ex:locatedInArea</code></td></tr>
     </tbody>
   </table>
 
   <h3>4.3 Ontology Design Rationale</h3>
   <div class="callout small">
-    <p><strong>Vocabulary Reuse:</strong> We reuse the official GTFS vocabulary instead of recreating Route, Stop, Trip, and StopTime classes. </p>
-    <p><strong>Minimal Extensions:</strong> We add only the linking mechanism (<code>ex:LinkedPlace</code> class and <code>ex:nearbyPlace</code> property) needed to connect transit data with external knowledge graphs.</p>
-    <p><strong>Linking Strategy:</strong> Geographic proximity matching is used to pre-compute links between stops and Wikidata entities, which are then stored as RDF triples in the dataset.</p>
+    <p><strong>Vocabulary Reuse:</strong> We reuse the official GTFS vocabulary instead of recreating Route, Stop, Trip, and StopTime classes.</p>
+    <p><strong>Bus-Specific Subclasses:</strong> <code>ex:BusRoute</code> and <code>ex:BusStop</code> provide domain specificity for Madrid's bus network while maintaining compatibility with the GTFS standard.</p>
+    <p><strong>Geographic Linking:</strong> <code>ex:LocalArea</code> enables proper semantic linking between bus stops and geographic regions. Each LocalArea instance uses <code>owl:sameAs</code> to link to its corresponding DBpedia entity (e.g., <code>dbr:Aranjuez</code>).</p>
+    <p><strong>Runtime DBpedia Integration:</strong> The application uses bus stop coordinates to query DBpedia at runtime for cultural/historical content about nearby areas. The <code>ex:locatedInArea</code> relationship provides the semantic bridge for this linking.</p>
+    <p><strong>Disjointness Constraints:</strong> All three custom classes are mutually disjoint, preventing logical errors where an entity could be simultaneously a route, stop, and area.</p>
+    <p><strong>Inverse Relationships:</strong> <code>ex:locatedInArea</code> and <code>ex:containsStop</code> are explicitly declared as inverses, enabling bidirectional queries.</p>
   </div>
 
   <h3>4.4 Complete Prefix List</h3>
   <table class="small">
     <thead><tr><th>Prefix</th><th>Namespace</th><th>Purpose</th></tr></thead>
     <tbody>
-      <tr><td><code>ex:</code></td><td><code>http://group06.linkeddata.es/ontology/</code></td><td>Our ontology extensions</td></tr>
+      <tr><td><code>ex:</code></td><td><code>http://group06.linkeddata.es/ontology/madridbus/</code></td><td>Our ontology extensions</td></tr>
       <tr><td><code>res:</code></td><td><code>http://group06.linkeddata.es/resource/</code></td><td>Our data instances</td></tr>
-      <tr><td><code>gtfs:</code></td><td><code>https://vocab.gtfs.org/terms#</code></td><td>GTFS vocabulary (imported)</td></tr>
+      <tr><td><code>gtfs:</code></td><td><code>http://vocab.gtfs.org/terms#</code></td><td>GTFS vocabulary (imported)</td></tr>
       <tr><td><code>geo:</code></td><td><code>http://www.w3.org/2003/01/geo/wgs84_pos#</code></td><td>WGS84 coordinates</td></tr>
       <tr><td><code>schema:</code></td><td><code>http://schema.org/</code></td><td>Schema.org vocabulary</td></tr>
+      <tr><td><code>dbo:</code></td><td><code>http://dbpedia.org/ontology/</code></td><td>DBpedia ontology</td></tr>
+      <tr><td><code>dbr:</code></td><td><code>http://dbpedia.org/resource/</code></td><td>DBpedia resources (for <code>owl:sameAs</code> links)</td></tr>
       <tr><td><code>dcterms:</code></td><td><code>http://purl.org/dc/terms/</code></td><td>Dublin Core metadata</td></tr>
+      <tr><td><code>owl:</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td><td>OWL constructs</td></tr>
+      <tr><td><code>rdfs:</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td><td>RDF Schema</td></tr>
       <tr><td><code>xsd:</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td><td>XML Schema datatypes</td></tr>
     </tbody>
   </table>
