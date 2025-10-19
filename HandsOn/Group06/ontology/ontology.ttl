@@ -20,7 +20,7 @@
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     rdfs:comment "Lightweight ontology for Madrid's CRTM bus network data (mdb-2820), extending GTFS vocabulary. Bus stops are linked to geographic areas (neighborhoods, districts) which are explicitly linked to DBpedia entities via owl:sameAs, enabling quiz content retrieval about local history and culture."@en ;
     owl:versionInfo "1.0" ;
-    owl:imports <http://vocab.gtfs.org/terms#> ;
+    owl:imports <http://vocab.gtfs.org/terms> ;
     dcterms:source <https://mobilitydatabase.org/feeds/gtfs/mdb-2820> ;
     rdfs:seeAlso <https://www.crtm.es> .
 
