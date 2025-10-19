@@ -279,6 +279,16 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
     </tbody>
   </table>
 
+  <h4>ex:areaCode (Datatype Property)</h4>
+  <p class="small">A short alphanumeric code identifying the local area (e.g., 'ARJ' for Aranjuez, 'CHB' for Chamberí). Used for compact area identification in the application.</p>
+  <table class="small">
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td><code>rdfs:domain</code></td><td><code>ex:LocalArea</code></td></tr>
+      <tr><td><code>rdfs:range</code></td><td><code>xsd:string</code></td></tr>
+    </tbody>
+  </table>
+
   <h4>ex:locatedInArea (Object Property)</h4>
   <p class="small">Links a bus stop to the local geographic area (neighborhood, district) where it is located. This enables the application to retrieve area-specific quiz content from DBpedia.</p>
   <table class="small">
@@ -305,7 +315,7 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
   <div class="callout small">
     <p><strong>Vocabulary Reuse:</strong> We reuse the official GTFS vocabulary instead of recreating Route, Stop, Trip, and StopTime classes.</p>
     <p><strong>Bus-Specific Subclasses:</strong> <code>ex:BusRoute</code> and <code>ex:BusStop</code> provide domain specificity for Madrid's bus network while maintaining compatibility with the GTFS standard.</p>
-    <p><strong>Geographic Linking:</strong> <code>ex:LocalArea</code> enables proper semantic linking between bus stops and geographic regions. Each LocalArea instance uses <code>owl:sameAs</code> to link to its corresponding DBpedia entity (e.g., <code>dbr:Aranjuez</code>).</p>
+    <p><strong>Geographic Linking:</strong> <code>ex:LocalArea</code> enables proper semantic linking between bus stops and geographic regions. Each LocalArea instance uses <code>owl:sameAs</code> to link to its corresponding DBpedia entity (e.g., <code>dbr:Aranjuez</code>). The <code>ex:areaCode</code> datatype property provides compact area identification.</p>
     <p><strong>Runtime DBpedia Integration:</strong> The application uses bus stop coordinates to query DBpedia at runtime for cultural/historical content about nearby areas. The <code>ex:locatedInArea</code> relationship provides the semantic bridge for this linking.</p>
     <p><strong>Disjointness Constraints:</strong> All three custom classes are mutually disjoint, preventing logical errors where an entity could be simultaneously a route, stop, and area.</p>
     <p><strong>Inverse Relationships:</strong> <code>ex:locatedInArea</code> and <code>ex:containsStop</code> are explicitly declared as inverses, enabling bidirectional queries.</p>

@@ -14,6 +14,7 @@
 
 res:area/aranjuez a ex:LocalArea ;
     rdfs:label "Aranjuez"@es ;
+    ex:areaCode "ARJ" ;
     owl:sameAs dbr:Aranjuez ;
     ex:containsStop res:stop/par_8_09568 , res:stop/par_8_09572 .
 

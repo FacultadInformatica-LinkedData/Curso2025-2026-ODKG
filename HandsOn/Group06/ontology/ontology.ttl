@@ -29,36 +29,46 @@
 #################################################################
 
 ex:BusRoute a owl:Class ;
-    rdfs:label "Bus Route"@en , "Línea de Autobús"@es ;
+    rdfs:label "Bus Route"@en ;
     rdfs:subClassOf gtfs:Route ;
     rdfs:comment "A bus route in the Madrid CRTM network. Specialization of gtfs:Route with route_type = 3 (Bus service)."@en ;
     owl:disjointWith ex:BusStop , ex:LocalArea .
 
 ex:BusStop a owl:Class ;
-    rdfs:label "Bus Stop"@en , "Parada de Autobús"@es ;
+    rdfs:label "Bus Stop"@en ;
     rdfs:subClassOf gtfs:Stop ;
     rdfs:comment "A physical bus stop location in Madrid's CRTM network with WGS84 coordinates. Each stop is associated with a geographic area (ex:LocalArea) for contextualized information retrieval."@en ;
     owl:disjointWith ex:BusRoute , ex:LocalArea .
 
 ex:LocalArea a owl:Class ;
-    rdfs:label "Local Area"@en , "Área Local"@es ;
+    rdfs:label "Local Area"@en ;
     rdfs:subClassOf schema:Place , dbo:Place ;
     rdfs:comment "A named geographic area in Madrid (neighborhood, district, landmark zone) that contains one or more bus stops. Instances are linked to corresponding DBpedia resources via owl:sameAs to enable retrieval of cultural, historical, and touristic information."@en ;
     owl:disjointWith ex:BusRoute , ex:BusStop .
+
+#################################################################
+# Datatype Properties
+#################################################################
+
+ex:areaCode a owl:DatatypeProperty ;
+    rdfs:label "area code"@en ;
+    rdfs:domain ex:LocalArea ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A short alphanumeric code identifying the local area (e.g., 'ARJ' for Aranjuez, 'CHB' for Chamberí). Used for compact area identification in the application."@en .
 
 #################################################################
 # Object Properties
 #################################################################
 
 ex:locatedInArea a owl:ObjectProperty ;
-    rdfs:label "located in area"@en , "ubicado en área"@es ;
+    rdfs:label "located in area"@en ;
     rdfs:domain ex:BusStop ;
     rdfs:range ex:LocalArea ;
     rdfs:comment "Links a bus stop to the local geographic area (neighborhood, district) where it is located. This enables the application to retrieve area-specific quiz content from DBpedia."@en ;
     owl:inverseOf ex:containsStop .
 
 ex:containsStop a owl:ObjectProperty ;
-    rdfs:label "contains stop"@en , "contiene parada"@es ;
+    rdfs:label "contains stop"@en ;
     rdfs:domain ex:LocalArea ;
     rdfs:range ex:BusStop ;
     rdfs:comment "Indicates that a geographic area contains one or more bus stops. Inverse of ex:locatedInArea."@en ;
