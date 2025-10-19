@@ -1141,5 +1141,155 @@
     "op": "core/column-removal",
     "columnName": "STREET2",
     "description": "Eliminar columna STREET2"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ID",
+    "newColumnName": "barId",
+    "description": "Renombra la columna ID a barId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NAME",
+    "newColumnName": "barName",
+    "description": "Renombra la columna NAME a barName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TYPE_BAR",
+    "newColumnName": "barType",
+    "description": "Renombra la columna TYPE_BAR a barType"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "GEO_LAT",
+    "newColumnName": "latitude",
+    "description": "Renombra la columna GEO_LAT a latitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "GEO_LONG",
+    "newColumnName": "longitude",
+    "description": "Renombra la columna GEO_LONG a longitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ZIP_CODE",
+    "newColumnName": "postCode",
+    "description": "Renombra la columna ZIP_CODE a postCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DISTRICT_ID",
+    "newColumnName": "districtId",
+    "description": "Renombra la columna DISTRICT_ID a districtId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DISTRICT_NAME",
+    "newColumnName": "districtName",
+    "description": "Renombra la columna DISTRICT_NAME a districtName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NEIGBORHOOD_NAMES",
+    "newColumnName": "neighborhoodName",
+    "description": "Renombra la columna NEIGBORHOOD_NAMES a neighborhoodName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NEIGHBORHOOD_ID",
+    "newColumnName": "neighborhoodId",
+    "description": "Renombra la columna NEIGHBORHOOD_ID a neighborhoodId"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ROAD",
+    "description": "Eliminar columna ROAD"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ADDRESS_ID",
+    "newColumnName": "addressId",
+    "description": "Renombra la columna ADDRESS_ID a addressId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ROAD_NUMBER",
+    "newColumnName": "addressNumber",
+    "description": "Renombra la columna ROAD_NUMBER a addressNumber"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TYPE_ROAD",
+    "newColumnName": "addressType",
+    "description": "Renombra la columna TYPE_ROAD a addressType"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna addressType usando la expresión value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ADDRESS",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ADDRESS usando la expresión value.toUppercase()"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "barType",
+    "index": 0,
+    "description": "Mueve la columna barType a la posición 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "barType",
+    "index": 1,
+    "description": "Mueve la columna barType a la posición 1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "barType",
+    "index": 2,
+    "description": "Mueve la columna barType a la posición 2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "addressId",
+    "description": "Eliminar columna addressId"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ADDRESS",
+    "expression": "grel:value\n.replace(/^[\\/\\s]*(CARRER|C\\/|C\\.|C|CALLE|AVENIDA|AVDA|AV\\.?|AV|PG\\.?|PASSEIG|PASEO|Pº|GRAN VIA|RAMBLA|Rbla|PL\\.?|PLAZA|PLAÇA|PS\\.?|PZ\\.?)\\s+/i, \"\")\n.replace(/\\s+\\d+.*$/, \"\")\n.trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "addressName",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna addressName en el índice 5 basada en la columna ADDRESS usando la expresión grel:value\n.replace(/^[\\/\\s]*(CARRER|C\\/|C\\.|C|CALLE|AVENIDA|AVDA|AV\\.?|AV|PG\\.?|PASSEIG|PASEO|Pº|GRAN VIA|RAMBLA|Rbla|PL\\.?|PLAZA|PLAÇA|PS\\.?|PZ\\.?)\\s+/i, \"\")\n.replace(/\\s+\\d+.*$/, \"\")\n.trim()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ADDRESS",
+    "description": "Eliminar columna ADDRESS"
   }
 ]

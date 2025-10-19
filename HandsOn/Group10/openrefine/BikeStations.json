@@ -306,5 +306,76 @@
     "columnName": "id",
     "index": 0,
     "description": "Mueve la columna id a la posición 0"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "id",
+    "newColumnName": "stationId",
+    "description": "Renombra la columna id a stationId"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "station_id",
+    "description": "Eliminar columna station_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "address_type",
+    "newColumnName": "addressType",
+    "description": "Renombra la columna address_type a addressType"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "address_name",
+    "newColumnName": "addressName",
+    "description": "Renombra la columna address_name a addressName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "address_number",
+    "newColumnName": "addressNumber",
+    "description": "Renombra la columna address_number a addressNumber"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "district_number",
+    "newColumnName": "districtNumber",
+    "description": "Renombra la columna district_number a districtNumber"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "district_name",
+    "newColumnName": "districtName",
+    "description": "Renombra la columna district_name a districtName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "neighborhood_number",
+    "newColumnName": "neighborhoodNumber",
+    "description": "Renombra la columna neighborhood_number a neighborhoodNumber"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "neighborhood_name",
+    "newColumnName": "neighborhoodName",
+    "description": "Renombra la columna neighborhood_name a neighborhoodName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "post_code",
+    "newColumnName": "postCode",
+    "description": "Renombra la columna post_code a postCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "lat",
+    "newColumnName": "latitude",
+    "description": "Renombra la columna lat a latitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "lon",
+    "newColumnName": "longitude",
+    "description": "Renombra la columna lon a longitude"
   }
 ]
