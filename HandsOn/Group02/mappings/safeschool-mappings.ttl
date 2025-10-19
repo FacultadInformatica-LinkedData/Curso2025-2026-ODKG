@@ -1,0 +1,248 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix safeschool: <http://safeschool.linkeddata.es/ontology#> .
+@prefix resource: <http://safeschool.linkeddata.es/resource/> .
+
+@base <http://safeschool.linkeddata.es/mapping/> . # Defines the base for relative IRIs like <#AccidentSource>
+
+#  Logical Source Definitions 
+
+<#AccidentSource> a rml:LogicalSource ;
+  rml:source "../csv/2025_Accidentalidad-updated.csv" ; 
+  rml:referenceFormulation ql:CSV .
+
+<#CenterSource> a rml:LogicalSource ;
+  rml:source "../csv/centros_educativos-updated.csv" ; 
+  rml:referenceFormulation ql:CSV .
+
+<#CameraSource> a rml:LogicalSource ;
+  rml:source "../csv/RADARES-FIJOS-vDTT-updated.csv" ;
+  rml:referenceFormulation ql:CSV .
+
+#  Triples Map: Districts 
+# Note: This map generates District instances based *only* on the codes found
+# in the other files. Ideally, you'd have a separate, authoritative source for districts.
+
+<#DistrictMap> a rr:TriplesMap ;
+  # Using AccidentSource to find unique district codes. Change if CenterSource is better.
+  # Important: Ensure this source contains ALL district codes needed by both accidents and centers.
+  rml:logicalSource <#AccidentSource> ;
+  rr:subjectMap [
+    rr:template "http://safeschool.linkeddata.es/resource/District/{cod_distrito}" ;
+    rr:class safeschool:District ;
+    rr:class schema:AdministrativeArea
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate schema:identifier ;
+    rr:objectMap [ rml:reference "cod_distrito" ; rr:datatype xsd:string ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:name ;
+    rr:objectMap [ rml:reference "distrito" ]
+  ] .
+
+#  Triples Map: Accidents 
+
+<#AccidentMap> a rr:TriplesMap ;
+  rml:logicalSource <#AccidentSource> ;
+  rr:subjectMap [
+    rr:template "http://safeschool.linkeddata.es/resource/Accident/{num_expediente}" ;
+    rr:class safeschool:Accident ;
+    rr:class geo:Feature ;
+    rr:class schema:Event
+  ] ;
+
+  #  schema properties 
+  rr:predicateObjectMap [
+    rr:predicate schema:identifier ;
+    rr:objectMap [ rml:reference "num_expediente" ; rr:datatype xsd:string ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate schema:startDate ;
+    # Combine date and time, assumes 'fecha' is YYYY-MM-DD and 'hora' is HH:MM:SS
+    rr:objectMap [
+      rr:template "{fecha}T{hora}" ;
+      rr:datatype xsd:dateTime
+    ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:description ;
+    rr:objectMap [ rml:reference "localizacion" ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:name ;
+    rr:objectMap [ rml:reference "tipo_accidente" ]
+  ] ;
+
+  #  safeschool properties 
+   rr:predicateObjectMap [
+    rr:predicate safeschool:weatherCondition ;
+    rr:objectMap [ rml:reference "estado_meteorológico" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate safeschool:alcoholPositive ;
+    rr:objectMap [ rml:reference "positiva_alcohol" ; rr:datatype xsd:boolean ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate safeschool:drugPositive ;
+    rr:objectMap [ rml:reference "positiva_droga" ; rr:datatype xsd:boolean ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate safeschool:pedestrianInvolved ;
+    rr:objectMap [ rml:reference "peaton_involucrado" ; rr:datatype xsd:boolean ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate safeschool:vehiclesInvolved ;
+    rr:objectMap [ rml:reference "vehiculos_involucrados" ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate safeschool:injuryDescription ;
+    rr:objectMap [ rml:reference "lesividad" ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate safeschool:injuryLevel ;
+    rr:objectMap [ rml:reference "nivel_lesividad" ; rr:datatype xsd:integer ]
+  ] ;
+
+  #  geo property 
+  rr:predicateObjectMap [
+    rr:predicate safeschool:wktGeometry ;
+    rr:objectMap [ rml:reference "wktGeometry" ; rr:datatype geo:wktLiteral ]
+  ] ;
+
+  #  Link to District (Object Map)
+  rr:predicateObjectMap [
+    rr:predicate safeschool:inDistrict ;
+    rr:objectMap [
+      rr:parentTriplesMap <#DistrictMap> ;
+      rr:joinCondition [
+        rr:child "cod_distrito" ;
+        rr:parent "cod_distrito" ; # Must match reference in DistrictMap's subject/POM
+      ]
+    ]
+  ] .
+
+
+# Triples Map: Educational Centers
+
+<#CenterMap> a rr:TriplesMap ;
+  rml:logicalSource <#CenterSource> ;
+  rr:subjectMap [
+    rr:template "http://safeschool.linkeddata.es/resource/EducationalCenter/{centro_codigo}" ;
+    rr:class safeschool:EducationalCenter ;
+    rr:class geo:Feature ;
+    rr:class schema:EducationalOrganization
+  ] ;
+
+  #  schema properties 
+   rr:predicateObjectMap [
+    rr:predicate schema:identifier ;
+    rr:objectMap [ rml:reference "centro_codigo" ; rr:datatype xsd:string ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:name ;
+    rr:objectMap [ rml:reference "centro_nombre" ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:description ;
+    rr:objectMap [ rml:reference "centro_tipo_descripcion" ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:streetAddress ;
+    rr:objectMap [ rml:reference "direccion" ] # Assuming 'direccion' is the merged field
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:postalCode ;
+    rr:objectMap [ rml:reference "direccion_codigo_postal" ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:telephone ;
+    rr:objectMap [ rml:reference "contacto_telefono1" ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:url ;
+    rr:objectMap [ rml:reference "contacto_web" ; rr:termType rr:IRI ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate schema:email ;
+    rr:objectMap [ rml:reference "contacto_email1" ]
+  ] ;
+
+  # safeschool properties 
+  rr:predicateObjectMap [
+    rr:predicate safeschool:centerTypeCode ;
+    rr:objectMap [ rml:reference "centro_tipo_codigo" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate safeschool:ownershipType ;
+    rr:objectMap [ rml:reference "centro_titularidad" ]
+  ] ;
+
+  # geo property 
+  rr:predicateObjectMap [
+    rr:predicate safeschool:wktGeometry ;
+    rr:objectMap [ rml:reference "wktGeometry" ; rr:datatype geo:wktLiteral ]
+  ] ;
+
+  # Link to District 
+  rr:predicateObjectMap [
+    rr:predicate safeschool:inDistrict ;
+    rr:objectMap [
+      rr:parentTriplesMap <#DistrictMap> ;
+      rr:joinCondition [
+        rr:child "distrito_codigo" ; # Check column name in centers.csv
+        rr:parent "cod_distrito" ; # Must match reference in DistrictMap
+      ]
+    ]
+  ] .
+
+# Triples Map: Speed Cameras
+
+<#CameraMap> a rr:TriplesMap ;
+  rml:logicalSource <#CameraSource> ;
+  rr:subjectMap [
+    rr:template "http://safeschool.linkeddata.es/resource/SpeedCamera/{numero_radar}" ;
+    rr:class safeschool:SpeedCamera ;
+    rr:class geo:Feature ;
+    rr:class schema:Place
+  ] ;
+
+  # schema properties 
+  rr:predicateObjectMap [
+    rr:predicate schema:identifier ;
+    rr:objectMap [ rml:reference "numero_radar" ; rr:datatype xsd:string ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate schema:description ;
+    rr:objectMap [ rml:reference "ubicacion" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate schema:streetAddress ;
+    rr:objectMap [ rml:reference "carretera_o_vial" ]
+  ] ;
+
+  # safeschool properties 
+  rr:predicateObjectMap [
+    rr:predicate safeschool:direction ;
+    rr:objectMap [ rml:reference "sentido" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate safeschool:cameraType ;
+    rr:objectMap [ rml:reference "tipo" ]
+  ] ;
+   rr:predicateObjectMap [
+    rr:predicate safeschool:speedLimit ;
+    rr:objectMap [ rml:reference "velocidad_limite" ; rr:datatype xsd:integer ]
+  ] ;
+
+  # geo property 
+  rr:predicateObjectMap [
+    rr:predicate safeschool:wktGeometry ;
+    rr:objectMap [ rml:reference "wktGeometry" ; rr:datatype geo:wktLiteral ]
+  ] .
