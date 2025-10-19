@@ -1,65 +1,65 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix gtfs: <https://vocab.gtfs.org/terms#> .
+@prefix gtfs: <http://vocab.gtfs.org/terms#> .
 @prefix geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbo:  <http://dbpedia.org/ontology/> .
 @prefix schema: <http://schema.org/> .
-@prefix ex:   <http://group06.linkeddata.es/ontology/> .
+@prefix ex:   <http://group06.linkeddata.es/ontology/madridbus/> .
 
 #################################################################
 # Ontology Metadata
 #################################################################
 
-<http://group06.linkeddata.es/ontology/transit>
+<http://group06.linkeddata.es/ontology/madridbus>
     a owl:Ontology ;
-    dcterms:title "Madrid Transit Linked Data Ontology"@en ;
+    dcterms:title "Madrid Bus Network Ontology"@en ;
     dcterms:creator "Group 06" ;
-    dcterms:created "2025-10-17"^^xsd:date ;
-    rdfs:comment "Lightweight ontology extending GTFS vocabulary to enable linking transit stops with nearby Wikidata geographic entities for the Madrid Transit Companion application."@en ;
-    owl:imports <https://vocab.gtfs.org/terms> .
+    dcterms:created "2025-10"^^xsd:gYearMonth ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "Lightweight ontology for Madrid's CRTM bus network data (mdb-2820), extending GTFS vocabulary. Bus stops are linked to geographic areas (neighborhoods, districts) which are explicitly linked to DBpedia entities via owl:sameAs, enabling quiz content retrieval about local history and culture."@en ;
+    owl:versionInfo "1.0" ;
+    owl:imports <http://vocab.gtfs.org/terms#> ;
+    dcterms:source <https://mobilitydatabase.org/feeds/gtfs/mdb-2820> ;
+    rdfs:seeAlso <https://www.crtm.es> .
 
 #################################################################
 # Classes
 #################################################################
 
-ex:LinkedPlace a owl:Class ;
-    rdfs:label "Linked Place"@en ;
-    rdfs:comment "A geographic entity from Wikidata (landmark, monument, museum, historical site) that is linked to a transit stop based on geographic proximity."@en ;
-    rdfs:subClassOf schema:Place ;
-    owl:disjointWith gtfs:Stop .
+ex:BusRoute a owl:Class ;
+    rdfs:label "Bus Route"@en , "Línea de Autobús"@es ;
+    rdfs:subClassOf gtfs:Route ;
+    rdfs:comment "A bus route in the Madrid CRTM network. Specialization of gtfs:Route with route_type = 3 (Bus service)."@en ;
+    owl:disjointWith ex:BusStop , ex:LocalArea .
+
+ex:BusStop a owl:Class ;
+    rdfs:label "Bus Stop"@en , "Parada de Autobús"@es ;
+    rdfs:subClassOf gtfs:Stop ;
+    rdfs:comment "A physical bus stop location in Madrid's CRTM network with WGS84 coordinates. Each stop is associated with a geographic area (ex:LocalArea) for contextualized information retrieval."@en ;
+    owl:disjointWith ex:BusRoute , ex:LocalArea .
+
+ex:LocalArea a owl:Class ;
+    rdfs:label "Local Area"@en , "Área Local"@es ;
+    rdfs:subClassOf schema:Place , dbo:Place ;
+    rdfs:comment "A named geographic area in Madrid (neighborhood, district, landmark zone) that contains one or more bus stops. Instances are linked to corresponding DBpedia resources via owl:sameAs to enable retrieval of cultural, historical, and touristic information."@en ;
+    owl:disjointWith ex:BusRoute , ex:BusStop .
 
 #################################################################
 # Object Properties
 #################################################################
 
-ex:nearbyPlace a owl:ObjectProperty ;
-    rdfs:label "nearby place"@en ;
-    rdfs:domain gtfs:Stop ;
-    rdfs:range ex:LinkedPlace ;
-    rdfs:comment "Links a transit stop to a nearby Wikidata place entity. The link is pre-computed based on geographic proximity (typically within 500m radius)."@en ;
-    owl:inverseOf ex:nearbyStop .
+ex:locatedInArea a owl:ObjectProperty ;
+    rdfs:label "located in area"@en , "ubicado en área"@es ;
+    rdfs:domain ex:BusStop ;
+    rdfs:range ex:LocalArea ;
+    rdfs:comment "Links a bus stop to the local geographic area (neighborhood, district) where it is located. This enables the application to retrieve area-specific quiz content from DBpedia."@en ;
+    owl:inverseOf ex:containsStop .
 
-ex:nearbyStop a owl:ObjectProperty ;
-    rdfs:label "nearby stop"@en ;
-    rdfs:domain ex:LinkedPlace ;
-    rdfs:range gtfs:Stop ;
-    rdfs:comment "Links a Wikidata place entity to a nearby transit stop. Inverse property of ex:nearbyPlace."@en ;
-    owl:inverseOf ex:nearbyPlace .
-
-#################################################################
-# Datatype Properties
-#################################################################
-
-ex:wikidataUri a owl:DatatypeProperty ;
-    rdfs:label "Wikidata URI"@en ;
-    rdfs:domain ex:LinkedPlace ;
-    rdfs:range xsd:anyURI ;
-    rdfs:comment "The Wikidata entity URI for this place (e.g., http://www.wikidata.org/entity/Q12345)."@en .
-
-ex:distanceMeters a owl:DatatypeProperty ;
-    rdfs:label "distance in meters"@en ;
-    rdfs:domain ex:LinkedPlace ;
-    rdfs:range xsd:decimal ;
-    rdfs:comment "Distance in meters from the linked transit stop to this place, calculated using haversine formula on WGS84 coordinates."@en .
+ex:containsStop a owl:ObjectProperty ;
+    rdfs:label "contains stop"@en , "contiene parada"@es ;
+    rdfs:domain ex:LocalArea ;
+    rdfs:range ex:BusStop ;
+    rdfs:comment "Indicates that a geographic area contains one or more bus stops. Inverse of ex:locatedInArea."@en ;
+    owl:inverseOf ex:locatedInArea .

@@ -1,89 +1,131 @@
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix gtfs:  <https://vocab.gtfs.org/terms#> .
+@prefix gtfs:  <http://vocab.gtfs.org/terms#> .
 @prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix ex:    <http://group06.linkeddata.es/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix dbr:   <http://dbpedia.org/resource/> .
+@prefix ex:    <http://group06.linkeddata.es/ontology/madridbus/> .
 @prefix res:   <http://group06.linkeddata.es/resource/> .
 
 #################################################################
-# Route Example (from actual Madrid CRTM data)
+# LOCAL AREA (linked to DBpedia)
 #################################################################
 
-res:route/9__1__013_ a gtfs:Route ;
+res:area/aranjuez a ex:LocalArea ;
+    rdfs:label "Aranjuez"@es ;
+    owl:sameAs dbr:Aranjuez ;
+    ex:containsStop res:stop/par_8_09568 , res:stop/par_8_09572 .
+
+#################################################################
+# BUS ROUTE (from final dataset)
+# Maps: route_id, route_short_name, route_long_name, route_type
+#################################################################
+
+res:route/9__1__013_ a ex:BusRoute ;
     gtfs:shortName "1" ;
     gtfs:longName "L1 CIRCULAR (FFCC-Moreras-FFCC)" ;
-    gtfs:routeType "3"^^xsd:integer ;
-    rdfs:comment "Bus route 1 in Aranjuez, circular line"@en .
+    gtfs:routeType "3"^^xsd:integer .
 
 #################################################################
-# Stop Example (from actual Madrid CRTM data)
+# BUS STOPS (from final dataset)
+# Maps: stop_id, stop_name, stop_lat, stop_lon, wheelchair_boarding
 #################################################################
 
-res:stop/par_8_09568 a gtfs:Stop ;
+res:stop/par_8_09568 a ex:BusStop ;
     gtfs:code "09568" ;
     rdfs:label "ESTACIÓN-EST.ARANJUEZ"@es ;
-    rdfs:label "Aranjuez Train Station Stop"@en ;
     geo:lat "40.0345268"^^xsd:float ;
     geo:long "-3.6178372"^^xsd:float ;
     gtfs:wheelchairBoarding "2"^^xsd:integer ;
-    ex:nearbyPlace res:place/Q5775 .
+    ex:locatedInArea res:area/aranjuez .
 
-res:stop/par_8_09572 a gtfs:Stop ;
+res:stop/par_8_09572 a ex:BusStop ;
     gtfs:code "09572" ;
     rdfs:label "ABASTOS-FLORIDA"@es ;
     geo:lat "40.0320511"^^xsd:float ;
     geo:long "-3.6070321"^^xsd:float ;
-    gtfs:wheelchairBoarding "2"^^xsd:integer .
+    gtfs:wheelchairBoarding "2"^^xsd:integer ;
+    ex:locatedInArea res:area/aranjuez .
 
 #################################################################
-# Trip Example (from actual Madrid CRTM data)
+# TRIP (from final dataset)
+# Maps: trip_id, route_id, service_id, trip_headsign, direction_id, shape_id
 #################################################################
 
-res:trip/9010201_9__1__013_-9__1__013__2_00:40:00 a gtfs:Trip ;
+res:trip/9010201_9__1__013_ a gtfs:Trip ;
     gtfs:route res:route/9__1__013_ ;
+    gtfs:service res:service/9010201 ;
     gtfs:headsign "ESTUDIOS CINEMATOGRÁFICOS-MEDIODÍA" ;
-    gtfs:directionId "0"^^xsd:integer .
+    gtfs:directionId "0"^^xsd:integer ;
+    gtfs:shape res:shape/9__1__013__2 .
 
 #################################################################
-# StopTime Example (from actual Madrid CRTM data)
+# STOP TIMES (from final dataset)
+# Maps: trip_id, stop_id, arrival_time, departure_time, stop_sequence
 #################################################################
 
-res:stop-time/9010201-09568-0 a gtfs:StopTime ;
-    gtfs:trip res:trip/9010201_9__1__013_-9__1__013__2_00:40:00 ;
+res:stoptime/9010201-09568-0 a gtfs:StopTime ;
+    gtfs:trip res:trip/9010201_9__1__013_ ;
     gtfs:stop res:stop/par_8_09568 ;
     gtfs:arrivalTime "00:40:00"^^xsd:time ;
     gtfs:departureTime "00:40:00"^^xsd:time ;
     gtfs:stopSequence "0"^^xsd:integer .
 
-res:stop-time/9010201-09572-2 a gtfs:StopTime ;
-    gtfs:trip res:trip/9010201_9__1__013_-9__1__013__2_00:40:00 ;
+res:stoptime/9010201-09572-2 a gtfs:StopTime ;
+    gtfs:trip res:trip/9010201_9__1__013_ ;
     gtfs:stop res:stop/par_8_09572 ;
-    gtfs:arrivalTime "00:40:00"^^xsd:time ;
+    gtfs:arrivalTime "00:42:00"^^xsd:time ;
+    gtfs:departureTime "00:42:00"^^xsd:time ;
     gtfs:stopSequence "2"^^xsd:integer .
 
 #################################################################
-# Linked Place Examples (Wikidata entities near stops)
+# SERVICE & CALENDAR (from calendar.csv)
+# Maps: service_id, monday...sunday, start_date, end_date
 #################################################################
 
-res:place/Q5775 a ex:LinkedPlace ;
-    rdfs:label "Royal Palace of Aranjuez"@en ;
-    rdfs:label "Palacio Real de Aranjuez"@es ;
-    ex:wikidataUri "http://www.wikidata.org/entity/Q5775"^^xsd:anyURI ;
-    owl:sameAs <http://www.wikidata.org/entity/Q5775> ;
-    ex:distanceMeters "450.0"^^xsd:decimal ;
-    dcterms:description "18th-century royal residence, UNESCO World Heritage Site since 2001"@en ;
-    geo:lat "40.0373"^^xsd:float ;
-    geo:long "-3.6076"^^xsd:float .
+res:service/9010201 a gtfs:Service ;
+    gtfs:serviceRule res:calendarrule/9010201 .
 
-res:place/Q28601268 a ex:LinkedPlace ;
-    rdfs:label "Church of San Antonio"@en ;
-    rdfs:label "Iglesia de San Antonio"@es ;
-    ex:wikidataUri "http://www.wikidata.org/entity/Q28601268"^^xsd:anyURI ;
-    owl:sameAs <http://www.wikidata.org/entity/Q28601268> ;
-    ex:distanceMeters "320.0"^^xsd:decimal ;
-    dcterms:description "18th-century baroque church in Aranjuez"@en ;
-    geo:lat "40.0332"^^xsd:float ;
-    geo:long "-3.6042"^^xsd:float .
+res:calendarrule/9010201 a gtfs:CalendarRule ;
+    gtfs:monday "true"^^xsd:boolean ;
+    gtfs:tuesday "true"^^xsd:boolean ;
+    gtfs:wednesday "true"^^xsd:boolean ;
+    gtfs:thursday "true"^^xsd:boolean ;
+    gtfs:friday "true"^^xsd:boolean ;
+    gtfs:saturday "false"^^xsd:boolean ;
+    gtfs:sunday "false"^^xsd:boolean ;
+    schema:startDate "2024-09-01"^^xsd:date ;
+    schema:endDate "2025-08-31"^^xsd:date .
+
+#################################################################
+# CALENDAR DATE EXCEPTION (from calendar_dates.csv)
+# Maps: service_id, date, exception_type
+#################################################################
+
+res:calendardate/9010201-20241225 a gtfs:CalendarDateRule ;
+    gtfs:service res:service/9010201 ;
+    gtfs:date "2024-12-25"^^xsd:date ;
+    gtfs:dateAddition "false"^^xsd:boolean .  # exception_type=2 (removed)
+
+#################################################################
+# SHAPE POINT (from shapes.csv)
+# Maps: shape_id, shape_pt_lat, shape_pt_lon, shape_pt_sequence, shape_dist_traveled
+#################################################################
+
+res:shape/9__1__013__2 a gtfs:Shape .
+
+res:shapepoint/9__1__013__2-0 a gtfs:ShapePoint ;
+    gtfs:shape res:shape/9__1__013__2 ;
+    geo:lat "40.0345"^^xsd:float ;
+    geo:long "-3.6178"^^xsd:float ;
+    gtfs:pointSequence "0"^^xsd:integer ;
+    gtfs:distanceTraveled "0.0"^^xsd:double .
+
+res:shapepoint/9__1__013__2-1 a gtfs:ShapePoint ;
+    gtfs:shape res:shape/9__1__013__2 ;
+    geo:lat "40.0346"^^xsd:float ;
+    geo:long "-3.6180"^^xsd:float ;
+    gtfs:pointSequence "1"^^xsd:integer ;
+    gtfs:distanceTraveled "0.025"^^xsd:double .
+
