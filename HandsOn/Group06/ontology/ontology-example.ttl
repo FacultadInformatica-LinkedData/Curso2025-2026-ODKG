@@ -1,50 +1,132 @@
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
-@prefix gtfs:  <https://vocab.gtfs.org/terms#> .
-@prefix ex:    <http://group06.linkeddata.es/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix gtfs:  <http://vocab.gtfs.org/terms#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbr:   <http://dbpedia.org/resource/> .
+@prefix ex:    <http://group06.linkeddata.es/ontology/madridbus/> .
+@prefix res:   <http://group06.linkeddata.es/resource/> .
 
 #################################################################
-# User
+# LOCAL AREA (linked to DBpedia)
 #################################################################
 
-ex:user_A a foaf:Person ;
-    foaf:nick "UserA" ;
-    ex:ranking 3 ;
-    ex:score 42.0 .
+res:area/aranjuez a ex:LocalArea ;
+    rdfs:label "Aranjuez"@es ;
+    ex:areaCode "ARJ" ;
+    owl:sameAs dbr:Aranjuez ;
+    ex:containsStop res:stop/par_8_09568 , res:stop/par_8_09572 .
 
 #################################################################
-# GTFS route / stop / trip / stoptime (from schedule)
+# BUS ROUTE (from final dataset)
+# Maps: route_id, route_short_name, route_long_name, route_type
 #################################################################
 
-ex:route_94022H1 a gtfs:Route ;
-    gtfs:routeShortName "94022H1" ;
-    gtfs:routeLongName "Boadilla del Monte – Estación Boadilla Centro" .
-
-ex:stop_boadilla_centro a gtfs:Stop ;
-    rdfs:label "Estación Boadilla Centro"@es .
-
-ex:trip_94022H1_0630 a gtfs:Trip ;
-    gtfs:route ex:route_94022H1 .
-
-ex:stoptime_94022H1_boadilla_0630 a gtfs:StopTime ;
-    gtfs:trip ex:trip_94022H1_0630 ;
-    gtfs:stop ex:stop_boadilla_centro ;
-    gtfs:arrivalTime "06:30:00"^^xsd:time .
+res:route/9__1__013_ a ex:BusRoute ;
+    gtfs:shortName "1" ;
+    gtfs:longName "L1 CIRCULAR (FFCC-Moreras-FFCC)" ;
+    gtfs:routeType "3"^^xsd:integer .
 
 #################################################################
-# Guess
+# BUS STOPS (from final dataset)
+# Maps: stop_id, stop_name, stop_lat, stop_lon, wheelchair_boarding
 #################################################################
 
-ex:guess_100 a ex:Guess ;
-    ex:madeBy ex:user_A ;
-    ex:forRoute ex:route_94022H1 ;
-    ex:atStop ex:stop_boadilla_centro ;
-    ex:basedOnStopTime ex:stoptime_94022H1_boadilla_0630 ;
-    # Suppose user guesses arrival at 06:32 on some date
-    ex:guessedArrivalTime "2025-10-07T06:32:00Z"^^xsd:dateTime ;
-    # Expected (from schedule) is 06:30
-    ex:expectedArrivalTime "06:30:00"^^xsd:time ;
-    dcterms:created "2025-10-07T06:20:00Z"^^xsd:dateTime .
+res:stop/par_8_09568 a ex:BusStop ;
+    gtfs:code "09568" ;
+    rdfs:label "ESTACIÓN-EST.ARANJUEZ"@es ;
+    geo:lat "40.0345268"^^xsd:float ;
+    geo:long "-3.6178372"^^xsd:float ;
+    gtfs:wheelchairBoarding "2"^^xsd:integer ;
+    ex:locatedInArea res:area/aranjuez .
+
+res:stop/par_8_09572 a ex:BusStop ;
+    gtfs:code "09572" ;
+    rdfs:label "ABASTOS-FLORIDA"@es ;
+    geo:lat "40.0320511"^^xsd:float ;
+    geo:long "-3.6070321"^^xsd:float ;
+    gtfs:wheelchairBoarding "2"^^xsd:integer ;
+    ex:locatedInArea res:area/aranjuez .
+
+#################################################################
+# TRIP (from final dataset)
+# Maps: trip_id, route_id, service_id, trip_headsign, direction_id, shape_id
+#################################################################
+
+res:trip/9010201_9__1__013_ a gtfs:Trip ;
+    gtfs:route res:route/9__1__013_ ;
+    gtfs:service res:service/9010201 ;
+    gtfs:headsign "ESTUDIOS CINEMATOGRÁFICOS-MEDIODÍA" ;
+    gtfs:directionId "0"^^xsd:integer ;
+    gtfs:shape res:shape/9__1__013__2 .
+
+#################################################################
+# STOP TIMES (from final dataset)
+# Maps: trip_id, stop_id, arrival_time, departure_time, stop_sequence
+#################################################################
+
+res:stoptime/9010201-09568-0 a gtfs:StopTime ;
+    gtfs:trip res:trip/9010201_9__1__013_ ;
+    gtfs:stop res:stop/par_8_09568 ;
+    gtfs:arrivalTime "00:40:00"^^xsd:time ;
+    gtfs:departureTime "00:40:00"^^xsd:time ;
+    gtfs:stopSequence "0"^^xsd:integer .
+
+res:stoptime/9010201-09572-2 a gtfs:StopTime ;
+    gtfs:trip res:trip/9010201_9__1__013_ ;
+    gtfs:stop res:stop/par_8_09572 ;
+    gtfs:arrivalTime "00:42:00"^^xsd:time ;
+    gtfs:departureTime "00:42:00"^^xsd:time ;
+    gtfs:stopSequence "2"^^xsd:integer .
+
+#################################################################
+# SERVICE & CALENDAR (from calendar.csv)
+# Maps: service_id, monday...sunday, start_date, end_date
+#################################################################
+
+res:service/9010201 a gtfs:Service ;
+    gtfs:serviceRule res:calendarrule/9010201 .
+
+res:calendarrule/9010201 a gtfs:CalendarRule ;
+    gtfs:monday "true"^^xsd:boolean ;
+    gtfs:tuesday "true"^^xsd:boolean ;
+    gtfs:wednesday "true"^^xsd:boolean ;
+    gtfs:thursday "true"^^xsd:boolean ;
+    gtfs:friday "true"^^xsd:boolean ;
+    gtfs:saturday "false"^^xsd:boolean ;
+    gtfs:sunday "false"^^xsd:boolean ;
+    schema:startDate "2024-09-01"^^xsd:date ;
+    schema:endDate "2025-08-31"^^xsd:date .
+
+#################################################################
+# CALENDAR DATE EXCEPTION (from calendar_dates.csv)
+# Maps: service_id, date, exception_type
+#################################################################
+
+res:calendardate/9010201-20241225 a gtfs:CalendarDateRule ;
+    gtfs:service res:service/9010201 ;
+    gtfs:date "2024-12-25"^^xsd:date ;
+    gtfs:dateAddition "false"^^xsd:boolean .  # exception_type=2 (removed)
+
+#################################################################
+# SHAPE POINT (from shapes.csv)
+# Maps: shape_id, shape_pt_lat, shape_pt_lon, shape_pt_sequence, shape_dist_traveled
+#################################################################
+
+res:shape/9__1__013__2 a gtfs:Shape .
+
+res:shapepoint/9__1__013__2-0 a gtfs:ShapePoint ;
+    gtfs:shape res:shape/9__1__013__2 ;
+    geo:lat "40.0345"^^xsd:float ;
+    geo:long "-3.6178"^^xsd:float ;
+    gtfs:pointSequence "0"^^xsd:integer ;
+    gtfs:distanceTraveled "0.0"^^xsd:double .
+
+res:shapepoint/9__1__013__2-1 a gtfs:ShapePoint ;
+    gtfs:shape res:shape/9__1__013__2 ;
+    geo:lat "40.0346"^^xsd:float ;
+    geo:long "-3.6180"^^xsd:float ;
+    gtfs:pointSequence "1"^^xsd:integer ;
+    gtfs:distanceTraveled "0.025"^^xsd:double .
+
