@@ -1,0 +1,1097 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "observaciones_direccion",
+    "expression": "grel:if(isBlank(value), \"Not specified\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column observaciones_direccion using expression grel:if(isBlank(value), \"Not specified\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha",
+    "expression": "grel:value.toDate().inc(1, \"hours\").toString(\"dd/MM/yyyy\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha using expression grel:value.toDate().inc(1, \"hours\").toString(\"dd/MM/yyyy\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitude",
+    "expression": "grel:value.replace(\".\", \"\").toNumber() / 1000000.0",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column latitude using expression grel:value.replace(\".\", \"\").toNumber() / 1000000.0"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "longitude",
+    "expression": "grel:value.replace(\".\", \"\").toNumber() / 1000000.0",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column longitude using expression grel:value.replace(\".\", \"\").toNumber() / 1000000.0"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "device_id",
+    "description": "Remove column device_id"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Av. Albufera",
+                "l": "Av. Albufera"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Número_distrito",
+    "expression": "grel:13",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número_distrito using expression grel:13"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": 13,
+                "l": "13"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "distrito",
+    "expression": "grel:\"Puente de Vallecas\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito using expression grel:\"Puente de Vallecas\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fuencarral - C.  Nuestra Señora de Valverde  61",
+                "l": "Fuencarral - C.  Nuestra Señora de Valverde  61"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "distrito",
+    "expression": "grel:\"Fuencarral - El Pardo\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito using expression grel:\"Fuencarral - El Pardo\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fuencarral - C.  Nuestra Señora de Valverde  61",
+                "l": "Fuencarral - C.  Nuestra Señora de Valverde  61"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Número_distrito",
+    "expression": "grel:8",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número_distrito using expression grel:8"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Avenida de la Osa Mayor 69, 28023 Madrid",
+                "l": "Avenida de la Osa Mayor 69, 28023 Madrid"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "distrito",
+    "expression": "grel:\"Moncloa - Aravaca\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito using expression grel:\"Moncloa - Aravaca\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Avenida de la Osa Mayor 69, 28023 Madrid",
+                "l": "Avenida de la Osa Mayor 69, 28023 Madrid"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Número_distrito",
+    "expression": "grel:9",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número_distrito using expression grel:9"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "C. La Laguna 26",
+                "l": "C. La Laguna 26"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "distrito",
+    "expression": "grel:\"Latina\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito using expression grel:\"Latina\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "C. La Laguna 26",
+                "l": "C. La Laguna 26"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Número_distrito",
+    "expression": "grel:10",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número_distrito using expression grel:10"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Calle de Doña Urraca 24, 28011 Madrid",
+                "l": "Calle de Doña Urraca 24, 28011 Madrid"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "distrito",
+    "expression": "grel:\"Latina\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito using expression grel:\"Latina\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Calle de Doña Urraca 24, 28011 Madrid",
+                "l": "Calle de Doña Urraca 24, 28011 Madrid"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Número_distrito",
+    "expression": "grel:10",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número_distrito using expression grel:10"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Dolores Barranco 56, 28026 Madrid",
+                "l": "Dolores Barranco 56, 28026 Madrid"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "distrito",
+    "expression": "grel:\"Usera\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito using expression grel:\"Usera\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Dolores Barranco 56, 28026 Madrid",
+                "l": "Dolores Barranco 56, 28026 Madrid"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Número_distrito",
+    "expression": "grel:12",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número_distrito using expression grel:12"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fuencarral - C.  Nuestra Señora de Valverde  48",
+                "l": "Fuencarral - C.  Nuestra Señora de Valverde  48"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "distrito",
+    "expression": "grel:\"Fuencarral - El Pardo\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito using expression grel:\"Fuencarral - El Pardo\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Fuencarral - C.  Nuestra Señora de Valverde  48",
+                "l": "Fuencarral - C.  Nuestra Señora de Valverde  48"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Número_distrito",
+    "expression": "grel:8",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número_distrito using expression grel:8"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Plaza Mayor de Barajas",
+                "l": "Plaza Mayor de Barajas"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "distrito",
+    "expression": "grel:\"Barajas\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito using expression grel:\"Barajas\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Plaza Mayor de Barajas",
+                "l": "Plaza Mayor de Barajas"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Número_distrito",
+    "expression": "grel:21",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número_distrito using expression grel:21"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Torre Arias 25, Canillejas, Madrid",
+                "l": "Torre Arias 25, Canillejas, Madrid"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "distrito",
+    "expression": "grel:\"San Blas - Canillejas\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito using expression grel:\"San Blas - Canillejas\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "from": 13,
+          "to": 13.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        },
+        {
+          "type": "list",
+          "name": "direccion",
+          "expression": "value",
+          "columnName": "direccion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Torre Arias 25, Canillejas, Madrid",
+                "l": "Torre Arias 25, Canillejas, Madrid"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Número_distrito",
+    "expression": "grel:20",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Número_distrito using expression grel:20"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Número_distrito",
+          "expression": "value",
+          "columnName": "Número_distrito",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "9",
+                "l": "9"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "identificador",
+    "expression": "grel:value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column identificador using expression grel:value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "identificador",
+    "expression": "grel:value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column identificador using expression grel:value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "direccion",
+    "expression": "grel:value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column direccion using expression grel:value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "observaciones_direccion",
+    "expression": "grel:value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column observaciones_direccion using expression grel:value.trim()"
+  }
+]
