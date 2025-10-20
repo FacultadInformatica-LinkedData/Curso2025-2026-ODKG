@@ -52,7 +52,7 @@ LIMIT 10
 SELECT ?trip ?headsign ?direction
 WHERE {
     ?trip rdf:type gtfs:Trip ;
-          gtfs:route res:route/9__1__013_ ;
+          gtfs:route <http://group06.linkeddata.es/resource/route/9__1__013_> ;
           gtfs:headsign ?headsign ;
           gtfs:directionId ?direction .
 }
@@ -121,7 +121,7 @@ LIMIT 10
 SELECT ?shapePoint ?lat ?long ?sequence ?distance
 WHERE {
     ?shapePoint rdf:type gtfs:ShapePoint ;
-                gtfs:shape res:shape/9__1__013__1_re_IT_2 ;
+                gtfs:shape <http://group06.linkeddata.es/resource/shape/9__1__013__1_re_IT_2> ;
                 geo:lat ?lat ;
                 geo:long ?long ;
                 gtfs:pointSequence ?sequence ;

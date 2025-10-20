@@ -17,7 +17,7 @@
 
 <#BusRouteMap>
     rml:logicalSource [
-        rml:source "../data-processed/gtfs_merged_for_rdf-updated.csv" ;
+        rml:source "../data-processed/df_final-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -66,7 +66,7 @@
 
 <#BusStopMap>
     rml:logicalSource [
-        rml:source "../data-processed/gtfs_merged_for_rdf-updated.csv" ;
+        rml:source "../data-processed/df_final-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -117,7 +117,7 @@
 
 <#TripMap>
     rml:logicalSource [
-        rml:source "../data-processed/gtfs_merged_for_rdf-updated.csv" ;
+        rml:source "../data-processed/df_final-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -185,7 +185,7 @@
 
 <#StopTimeMap>
     rml:logicalSource [
-        rml:source "../data-processed/gtfs_merged_for_rdf-updated.csv" ;
+        rml:source "../data-processed/df_final-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
