@@ -1,0 +1,1512 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CANILLEJAS-ÁREA INTERMODAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CANILLEJAS-AREA INTERMODAL"
+      },
+      {
+        "from": [
+          "EST. GETAFE SECTOR 3"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EST.GETAFE SECTOR 3"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "trip_headsign",
+    "expression": "grel:value",
+    "onError": "keep-original",
+    "newColumnName": "trip_headsign_completo",
+    "columnInsertIndex": 4,
+    "description": "Create column trip_headsign_completo at index 4 based on column trip_headsign using expression grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "trip_short_name",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "trip_short_name_completo",
+    "columnInsertIndex": 6,
+    "description": "Create column trip_short_name_completo at index 6 based on column trip_short_name using expression grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "trip_short_name",
+    "expression": "grel:value.split(\" \")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "numero_de_autobus",
+    "columnInsertIndex": 6,
+    "description": "Create column numero_de_autobus at index 6 based on column trip_short_name using expression grel:value.split(\" \")[0]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_short_name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_short_name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_short_name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_short_name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_short_name_completo",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_short_name_completo using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_short_name_completo",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_short_name_completo using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value.replace(\"EST.\",\"ESTACIÓN \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign using expression value.replace(\"EST.\",\"ESTACIÓN \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value.replace(\"PZA.\",\"PLAZA \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign using expression value.replace(\"PZA.\",\"PLAZA \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value.replace(\"AV.\",\"AVENIDA \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign using expression value.replace(\"AV.\",\"AVENIDA \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value.replace(\"STA.\",\"SANTA \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign using expression value.replace(\"STA.\",\"SANTA \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value.replace(/CTRA\\./i,\"CARRETERA \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign using expression value.replace(/CTRA\\./i,\"CARRETERA \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value.replace(/C\\.C\\./i,\"CENTRO COMERCIAL \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign using expression value.replace(/C\\.C\\./i,\"CENTRO COMERCIAL \")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AV REYES CATÓLICOS-PEDRO DE VALDIVIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA REYES CATÓLICOS-PEDRO DE VALDIVIA"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ESTACIÓN  DE AUTOBUSES DE S.L.DE EL ESCORIAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESTACIÓN  DE AUTOBUSES DE SAN LORENZO DEL ESCORIAL"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "FCO.QUEVEDO-ESTACIÓN ROBLEDO DE CHAVELA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FRANCISCO QUEVEDO-ESTACIÓN ROBLEDO DE CHAVELA"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "trip_headsign_completo",
+    "newColumnName": "trip_headsign_c",
+    "description": "Rename column trip_headsign_completo to trip_headsign_c"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "trip_headsign",
+    "newColumnName": "trip_headsign_completo",
+    "description": "Rename column trip_headsign to trip_headsign_completo"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "trip_headsign_c",
+    "newColumnName": "trip_headsign",
+    "description": "Rename column trip_headsign_c to trip_headsign"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LA TORRE DE E.H.-CARRETERA  MENTRIDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LA TORRE DE ESTEBAN HAMBRÁN-CARRETERA  MENTRIDA"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "B.PÉREZ GALDÓS-AVENIDA MEDITERRÁNEO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BENITO PÉREZ GALDÓS-AVENIDA MEDITERRÁNEO"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/POL\\./i,\"POLÍGONO \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/POL\\./i,\"POLÍGONO \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/URB\\./i,\"URBANIZACIÓN\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/URB\\./i,\"URBANIZACIÓN\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/Cº/i,\"CAMINO \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/Cº/i,\"CAMINO \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/DR\\./i,\"DOCTOR \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/DR\\./i,\"DOCTOR \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(\"FCO.\",\"FRANCISCO \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(\"FCO.\",\"FRANCISCO \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/Pº/i,\"PASEO \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/Pº/i,\"PASEO \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/GLEZ\\./i,\"GONZALEZ \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/GLEZ\\./i,\"GONZALEZ \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/IND\\./i,\"INDUSTRIAL \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/IND\\./i,\"INDUSTRIAL \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/TRVA\\./i,\"TRAVESÍA \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/TRVA\\./i,\"TRAVESÍA \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/UNIV\\./i,\"UNIVERSIDAD \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/UNIV\\./i,\"UNIVERSIDAD \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/GRAL\\./i,\"GENERAL \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/GRAL\\./i,\"GENERAL \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/AG\\./i,\"AGENCIA \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/AG\\./i,\"AGENCIA \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(\"PLIDPTVO.\",\"POLIDEPORTIVO \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(\"PLIDPTVO.\",\"POLIDEPORTIVO \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(\"POLIDPTVO.\",\"POLIDEPORTIVO \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(\"POLIDPTVO.\",\"POLIDEPORTIVO \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(\"GTA.\",\"GLORIETA \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(\"GTA.\",\"GLORIETA \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(\"HNOS.\",\"HERMANOS \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(\"HNOS.\",\"HERMANOS \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(\".DE\",\"DE\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(\".DE\",\"DE\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/FDEZ\\./i,\"FERNANDEZ\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/FDEZ\\./i,\"FERNANDEZ\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA COLMENAR VIEJO-NTRA.SRA.CARMEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA COLMENAR VIEJO-NUESTRA SEÑORA DEL CARMEN"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA ESPAÑA-ESTACIÓN ALCOBENDAS-S.S.REYES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA ESPAÑA-ESTACIÓN ALCOBENDAS-SAN SEBASTIÁN DE LOS REYES"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA SIERRA-ESTACIÓN ALCOBENDAS S.SEB.REYES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA SIERRA-ESTACIÓN ALCOBENDAS SAN SEBASTIÁN DE LOS REYES"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "value",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CARRETERA CCHEL.A ARAVACA-COLONIA JARDIN",
+                "l": "CARRETERA CCHEL.A ARAVACA-COLONIA JARDIN"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/CCHEL\\./i,\"CARABANCHEL \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/CCHEL\\./i,\"CARABANCHEL \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(\"BULEV.\",\"BULEVARD \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(\"BULEV.\",\"BULEVARD \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(\"CRTA.\",\"CARRETERA \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(\"CRTA.\",\"CARRETERA \")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA ESPAÑA-ESTACIÓN ALCOBENDAS S.SEB.REYES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA ESPAÑA-ESTACIÓN ALCOBENDAS SAN SEBASTIÁN DE LOS REYES"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "trip_short_name_completo",
+    "description": "Remove column trip_short_name_completo"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_short_name_completo",
+          "expression": "grel:value.contains(\".\")",
+          "columnName": "trip_short_name_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/Pº/i,\"PASEO \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/Pº/i,\"PASEO \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\"º\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(\"Cº\",\"CAMINO \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(\"Cº\",\"CAMINO \")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\"ª\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ALCALDE J.MªDE LAS HERAS-CHINCHÓN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ALCALDE JOSÉ MARÍA DE LAS HERAS-CHINCHÓN"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\"ª\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENIDA CAMILO J.CELA-GABRIEL GªMÁRQUEZ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENIDA CAMILO JOSÉ CELA-GABRIEL GARCÍA MÁRQUEZ"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\"ª\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "HERMANOS GªNOBLEJAS-CIUDAD LINEAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HERMANOS GARCÍA NOBLEJAS-CIUDAD LINEAL"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "trip_headsign_completo",
+          "expression": "grel:value.contains(\"ª\")",
+          "columnName": "trip_headsign_completo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PASEO  SANTA Mª CABEZA-ESTACIÓN PLAZA ELÍPTICA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PASEO  SANTA MARÍA DE LA CABEZA-ESTACIÓN PLAZA ELÍPTICA"
+      }
+    ],
+    "description": "Mass edit cells in column trip_headsign_completo"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "trip_headsign_completo",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column trip_headsign_completo using expression value.trim()"
+  }
+]
