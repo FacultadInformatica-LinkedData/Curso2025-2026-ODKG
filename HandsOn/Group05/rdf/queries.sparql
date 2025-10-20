@@ -1,0 +1,41 @@
+# Obtener todos los viajes entre una estación otra
+
+PREFIX rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns
+PREFIX ex:  http://example.org/ns
+
+SELECT ?trip ?fromStation ?fromName ?toStation ?toName ?unlockDate ?lockDate ?duration WHERE {
+  ?trip rdf:type ex:Trial .
+  ?trip ex:hasUnLockStation ?fromStation . 
+  ?trip ex:hasLockStation ?toStation . 
+  ?trip ex:hasUnlock_date ?unlockDate. 
+  ?trip ex:hasLock_date ?lockDate. 
+  ?trip ex:hasDuration ?duration. 
+  ?fromStation ex:hasStation_name ?fromName .
+  ?toStation   ex:hasStation_name ?toName .
+}
+
+
+# Estaciones más visitadas desde una estación en especifico
+
+PREFIX ex: <http://example.org/ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?dest (COUNT(?trip) AS ?numViajes)
+WHERE {
+  ?trip rdf:type ex:Trial .
+  ?trip ex:hasUnLockStation <http://example.org/bikeStation/53%20-%20Plaza%20de%20Lavapi%C3%A9s> .
+  ?trip ex:hasLockStation ?dest .
+}
+GROUP BY ?dest
+ORDER BY DESC(?numViajes)
+
+
+# Que bici se ha usado en un viaje
+
+PREFIX ns: http://example.org/ns
+
+SELECT ?trip ?bike
+WHERE {
+  ?trip a ns:Trial ;
+        ns:hasBike ?bike .
+}
