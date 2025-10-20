@@ -147,10 +147,10 @@
     ] .
 
 #################################################################
-# Location Mapping
+# Microclimate Location Mapping
 #################################################################
 
-<#Location>
+<#MicroclimateLocation>
     a rr:TriplesMap ;
     rml:logicalSource <#MicroclimateSource> ;
 
@@ -175,11 +175,6 @@
     ] ;
 
     rr:predicateObjectMap [
-        rr:predicate schema:streetAddress ;
-        rr:objectMap [ rml:reference "Address" ] ;
-    ] ;
-
-    rr:predicateObjectMap [
         rr:predicate schema:addressLocality ;
         rr:objectMap [ rml:reference "City" ] ;
     ] ;
@@ -192,4 +187,16 @@
     rr:predicateObjectMap [
         rr:predicate schema:addressCountry ;
         rr:objectMap [ rml:reference "Country" ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:streetAddress ;
+        rr:objectMap [
+            rr:template "{Street} {House_Number}"
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate us:hasAddress ;
+        rr:objectMap [ rml:reference "Address" ]
     ] .

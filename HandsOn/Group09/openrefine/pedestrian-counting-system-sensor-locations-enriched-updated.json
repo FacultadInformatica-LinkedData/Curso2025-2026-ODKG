@@ -315,8 +315,8 @@
   {
     "op": "core/column-rename",
     "oldColumnName": "formatted",
-    "newColumnName": "Adress",
-    "description": "Renombra la columna formatted a Adress"
+    "newColumnName": "Address",
+    "description": "Renombra la columna formatted a Address"
   },
   {
     "op": "core/row-removal",
