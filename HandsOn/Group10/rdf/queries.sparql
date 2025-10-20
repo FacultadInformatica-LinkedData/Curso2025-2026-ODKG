@@ -1,0 +1,46 @@
+# CONSULTA 1: Bares que están el distrito 10
+
+PREFIX ns: <http://www.barnabikes.org/ODKG/handsOn/group10/>
+
+SELECT ?bar ?barName
+WHERE {
+  ?bar a ns:Bar ;
+       ns:barName ?barName ;
+       ns:hasAddress ?addr .
+       
+  ?addr ns:hasNeighborhood ?neigh .
+  ?neigh ns:hasDistrict ?district .
+  ?district ns:districtId 10 .
+}
+
+
+# CONSULTA 2: Número de estaciones de bici en el districto 6
+
+PREFIX ns: <http://www.barnabikes.org/ODKG/handsOn/group10/>
+
+SELECT (COUNT(?station) AS ?numStations)
+WHERE {
+  ?station a ns:BikingStation ;
+           ns:hasAddress ?addr .
+           
+  ?addr ns:hasNeighborhood ?neigh .
+  ?neigh ns:hasDistrict ?district .
+  ?district ns:districtId 6 .
+}
+
+
+# CONSULTA 3: Calles que tienen más de 3 estaciones de bici.
+
+PREFIX ns: <http://www.barnabikes.org/ODKG/handsOn/group10/>
+
+SELECT ?addressName (COUNT(?station) AS ?numStations)
+WHERE {
+  ?station a ns:BikingStation ;
+           ns:hasAddress ?addr .
+  ?addr ns:addressName ?addressName .
+}
+GROUP BY ?addressName
+HAVING (COUNT(?station) > 3)
+ORDER BY DESC(?numStations)
+
+

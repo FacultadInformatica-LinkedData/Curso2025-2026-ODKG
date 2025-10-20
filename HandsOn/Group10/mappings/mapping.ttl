@@ -140,7 +140,7 @@
     ];
 
     rr:subjectMap [
-        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/{districtNumber}";
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/{districtId}";
         rr:class ns:District
     ];
     
@@ -161,7 +161,7 @@
     ];
 
     rr:subjectMap [
-        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/{neighborhoodNumber}";
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/{neighborhoodId}";
         rr:class ns:Neighborhood
     ];
 

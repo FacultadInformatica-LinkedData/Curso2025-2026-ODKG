@@ -5403,6 +5403,10 @@
   ns:districtId 7;
   ns:districtName "Horta-Guinardó" .
 
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8> a ns:District;
+  ns:districtId 8;
+  ns:districtName "Nou Barris" .
+
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/9> a ns:District;
   ns:districtId 9;
   ns:districtName "Sant Andreu" .
@@ -5418,7 +5422,8 @@
   ns:neighborhoodName "Sant Antoni" .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11> a ns:Neighborhood;
-  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/3>;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/2>,
+    <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/3>;
   ns:neighborhoodId 11;
   ns:neighborhoodName "El Poble-sec" .
 
@@ -5427,23 +5432,46 @@
   ns:neighborhoodId 12;
   ns:neighborhoodName "La Marina Del Prat Vermell" .
 
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/3>;
+  ns:neighborhoodId 13;
+  ns:neighborhoodName "La Marina De Port" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/14> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/3>;
+  ns:neighborhoodId 14;
+  ns:neighborhoodName "La Font De La Guatlla" .
+
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/15> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/3>;
   ns:neighborhoodId 15;
   ns:neighborhoodName "Hostafrancs" .
 
-<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18> a ns:Neighborhood;
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/16> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/3>;
+  ns:neighborhoodId 16;
+  ns:neighborhoodName "La Bordeta" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/17> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/3>;
+  ns:neighborhoodId 17;
+  ns:neighborhoodName "Sants - Badal" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18> ns:hasDistrict
+    <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/3>;
   ns:neighborhoodId 18;
-  ns:neighborhoodName "Sants" .
+  ns:neighborhoodName "Sants";
+  a ns:Neighborhood .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19> a ns:Neighborhood;
-  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/4>;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/2>,
+    <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/4>;
   ns:neighborhoodId 19;
   ns:neighborhoodName "Les Corts" .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2> a ns:Neighborhood;
-  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/1>;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/1>,
+    <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/2>;
   ns:neighborhoodId 2;
   ns:neighborhoodName "El Barri Gòtic" .
 
@@ -5457,11 +5485,16 @@
   ns:neighborhoodId 21;
   ns:neighborhoodName "Pedralbes" .
 
-<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/23> ns:hasDistrict
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/23> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/4>,
     <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/5>;
   ns:neighborhoodId 23;
-  ns:neighborhoodName "Sarrià";
-  a ns:Neighborhood .
+  ns:neighborhoodName "Sarrià" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/5>;
+  ns:neighborhoodId 24;
+  ns:neighborhoodName "Les Tres Torres" .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/25> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/5>;
@@ -5478,10 +5511,20 @@
   ns:neighborhoodId 27;
   ns:neighborhoodName "El Putxet I El Farró" .
 
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/28> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/6>;
+  ns:neighborhoodId 28;
+  ns:neighborhoodName "Vallcarca I Els Penitents" .
+
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/1>;
   ns:neighborhoodId 3;
   ns:neighborhoodName "La Barceloneta" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/30> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/6>;
+  ns:neighborhoodId 30;
+  ns:neighborhoodName "La Salut" .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/6>;
@@ -5493,25 +5536,120 @@
   ns:neighborhoodId 32;
   ns:neighborhoodName "El Camp D'en Grassot I Gràcia Nova" .
 
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/33> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/7>;
+  ns:neighborhoodId 33;
+  ns:neighborhoodName "El Baix Guinardó" .
+
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/35> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/7>;
   ns:neighborhoodId 35;
   ns:neighborhoodName "El Guinardó" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/36> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/7>;
+  ns:neighborhoodId 36;
+  ns:neighborhoodName "La Font D'en Fargues" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/37> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/7>;
+  ns:neighborhoodId 37;
+  ns:neighborhoodName "El Carmel" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/39> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/7>;
+  ns:neighborhoodId 39;
+  ns:neighborhoodName "Sant Genís Dels Agudells" .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/1>;
   ns:neighborhoodId 4;
   ns:neighborhoodName "Sant Pere, Santa Caterina I La Ribera" .
 
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/41> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/7>;
+  ns:neighborhoodId 41;
+  ns:neighborhoodName "La Vall D'hebron" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/42> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/7>;
+  ns:neighborhoodId 42;
+  ns:neighborhoodName "La Clota" .
+
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/7>;
   ns:neighborhoodId 43;
   ns:neighborhoodName "Horta" .
 
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/44> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 44;
+  ns:neighborhoodName "Vilapicina I La Torre Llobeta" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/45> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 45;
+  ns:neighborhoodName "Porta" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/46> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 46;
+  ns:neighborhoodName "El Turó De La Peira" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/48> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 48;
+  ns:neighborhoodName "La Guineueta" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/49> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 49;
+  ns:neighborhoodName "Canyelles" .
+
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/2>;
   ns:neighborhoodId 5;
   ns:neighborhoodName "El Fort Pienc" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/50> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 50;
+  ns:neighborhoodName "Les Roquetes" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/51> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 51;
+  ns:neighborhoodName "Verdun" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/52> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 52;
+  ns:neighborhoodName "La Prosperitat" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/53> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 53;
+  ns:neighborhoodName "La Trinitat Nova" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/55> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/8>;
+  ns:neighborhoodId 55;
+  ns:neighborhoodName "Ciutat Meridiana" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/57> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/9>;
+  ns:neighborhoodId 57;
+  ns:neighborhoodName "La Trinitat Vella" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/58> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/9>;
+  ns:neighborhoodId 58;
+  ns:neighborhoodName "Baró De Viver" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/9>;
+  ns:neighborhoodId 59;
+  ns:neighborhoodName "El Bon Pastor" .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/2>;
@@ -5523,6 +5661,11 @@
   ns:neighborhoodId 60;
   ns:neighborhoodName "Sant Andreu" .
 
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/61> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/9>;
+  ns:neighborhoodId 61;
+  ns:neighborhoodName "La Sagrera" .
+
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/62> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/9>;
   ns:neighborhoodId 62;
@@ -5533,13 +5676,25 @@
   ns:neighborhoodId 63;
   ns:neighborhoodName "Navas" .
 
-<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66> a ns:Neighborhood;
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/64> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>;
+  ns:neighborhoodId 64;
+  ns:neighborhoodName "El Camp De L'arpa Del Clot" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/65> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>;
+  ns:neighborhoodId 65;
+  ns:neighborhoodName "El Clot" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>,
+    <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/2>;
   ns:neighborhoodId 66;
   ns:neighborhoodName "El Parc I La Llacuna Del Poblenou" .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67> a ns:Neighborhood;
-  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/1>,
+    <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>;
   ns:neighborhoodId 67;
   ns:neighborhoodName "La Vila Olímpica Del Poblenou" .
 
@@ -5548,10 +5703,35 @@
   ns:neighborhoodId 68;
   ns:neighborhoodName "El Poblenou" .
 
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>;
+  ns:neighborhoodId 69;
+  ns:neighborhoodName "Diagonal Mar I El Front Marítim Del Poblenou" .
+
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/2>;
   ns:neighborhoodId 7;
   ns:neighborhoodName "La Dreta De L'eixample" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/70> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>;
+  ns:neighborhoodId 70;
+  ns:neighborhoodName "El Besòs I El Maresme" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>;
+  ns:neighborhoodId 71;
+  ns:neighborhoodName "Provençals Del Poblenou" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/72> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>;
+  ns:neighborhoodId 72;
+  ns:neighborhoodName "Sant Martí De Provençals" .
+
+<http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/73> a ns:Neighborhood;
+  ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/10>;
+  ns:neighborhoodId 73;
+  ns:neighborhoodName "La Verneda I La Pau" .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8> a ns:Neighborhood;
   ns:hasDistrict <http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/2>;
@@ -6529,8 +6709,8 @@
   ns:postCode 8003 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/41.38390_2.17092>
-  a ns:StreetAddress;
   ns:addressName "LA RAMBLA";
+  a ns:StreetAddress;
   ns:addressNumber 111;
   ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.38390"^^xsd:float;
@@ -6704,14 +6884,14 @@
   ns:postCode 8003 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/41.38465_2.18155>
+  a ns:StreetAddress;
   ns:addressName "MONTCADA";
   ns:addressNumber 20;
   ns:addressType "CARRER";
   ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38465"^^xsd:float;
   ns:longitude "2.18155"^^xsd:float;
-  ns:postCode 8003;
-  a ns:StreetAddress .
+  ns:postCode 8003 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/41.38468_2.18347>
   a ns:StreetAddress;
@@ -7784,9 +7964,9 @@
   ns:postCode 8010 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/41.39373_2.16486>
-  a ns:StreetAddress;
   ns:addressName "VALÈNCIA";
   ns:addressNumber 286;
+  a ns:StreetAddress;
   ns:addressType "CARRER";
   ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39373"^^xsd:float;
@@ -7968,8 +8148,8 @@
   ns:postCode 8013 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/41.39591_2.18861>
-  ns:addressName "ALMOGÀVERS";
   a ns:StreetAddress;
+  ns:addressName "ALMOGÀVERS";
   ns:addressNumber 88;
   ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.39591"^^xsd:float;
@@ -8839,6 +9019,7 @@
   ns:addressName "PARAL.LEL";
   ns:addressNumber 194;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37511"^^xsd:float;
   ns:longitude "2.15230"^^xsd:float;
   ns:postCode 8015 .
@@ -8848,6 +9029,7 @@
   ns:addressName "SANTA AMÈLIA";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/23>;
   ns:latitude "41.39353"^^xsd:float;
   ns:longitude "2.12312"^^xsd:float;
   ns:postCode 8034 .
@@ -8857,6 +9039,7 @@
   ns:addressName "NÀPOLS";
   ns:addressNumber 82;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.39415"^^xsd:float;
   ns:longitude "2.18133"^^xsd:float;
   ns:postCode 8013 .
@@ -8865,6 +9048,7 @@
   a ns:StreetAddress;
   ns:addressName "ALFONS X EL SAVI";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/33>;
   ns:latitude "41.41213"^^xsd:float;
   ns:longitude "2.16522"^^xsd:float;
   ns:postCode 8024 .
@@ -8873,6 +9057,7 @@
   a ns:StreetAddress;
   ns:addressName "LITORAL";
   ns:addressNumber 84;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.39790"^^xsd:float;
   ns:longitude "2.20884"^^xsd:float;
   ns:postCode 8005 .
@@ -8882,6 +9067,7 @@
   ns:addressName "MINERIA";
   ns:addressNumber 30;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13>;
   ns:latitude "41.36492"^^xsd:float;
   ns:longitude "2.13859"^^xsd:float;
   ns:postCode 8038 .
@@ -8891,6 +9077,7 @@
   ns:addressName "MÉNDEZ NÚÑEZ";
   ns:addressNumber 16;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.39005"^^xsd:float;
   ns:longitude "2.17755"^^xsd:float;
   ns:postCode 8003 .
@@ -8900,6 +9087,7 @@
   ns:addressName "GRAN DE GRÀCIA";
   ns:addressNumber 91;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40068"^^xsd:float;
   ns:longitude "2.15433"^^xsd:float;
   ns:postCode 8012 .
@@ -8909,6 +9097,7 @@
   ns:addressName "CASTILLEJOS";
   ns:addressNumber 388;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/33>;
   ns:latitude "41.41242"^^xsd:float;
   ns:longitude "2.17059"^^xsd:float;
   ns:postCode 8025 .
@@ -8918,6 +9107,7 @@
   ns:addressName "GOMBAU";
   ns:addressNumber 24;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38724"^^xsd:float;
   ns:longitude "2.17930"^^xsd:float;
   ns:postCode 8003 .
@@ -8927,6 +9117,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 609;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38932"^^xsd:float;
   ns:longitude "2.16783"^^xsd:float;
   ns:postCode 8007 .
@@ -8935,6 +9126,7 @@
   a ns:StreetAddress;
   ns:addressName "DE COLOM";
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.38062"^^xsd:float;
   ns:longitude "2.18228"^^xsd:float;
   ns:postCode 8002 .
@@ -8944,6 +9136,7 @@
   ns:addressName "GELABERT";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38715"^^xsd:float;
   ns:longitude "2.14109"^^xsd:float;
   ns:postCode 8029 .
@@ -8952,6 +9145,7 @@
   a ns:StreetAddress;
   ns:addressName "VIA AUGUSTA";
   ns:addressNumber 317;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24>;
   ns:latitude "41.39901"^^xsd:float;
   ns:longitude "2.12432"^^xsd:float;
   ns:postCode 8017 .
@@ -8961,6 +9155,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 981;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/72>;
   ns:latitude "41.41204"^^xsd:float;
   ns:longitude "2.19726"^^xsd:float;
   ns:postCode 8018 .
@@ -8970,6 +9165,7 @@
   ns:addressName "CASP";
   ns:addressNumber 67;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39372"^^xsd:float;
   ns:longitude "2.17642"^^xsd:float;
   ns:postCode 8010 .
@@ -8978,6 +9174,7 @@
   a ns:StreetAddress;
   ns:addressName "RADI";
   ns:addressNumber 10;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13>;
   ns:latitude "41.36327"^^xsd:float;
   ns:longitude "2.13415"^^xsd:float;
   ns:postCode 8038 .
@@ -8987,6 +9184,7 @@
   ns:addressName "JOAN D'ÀUSTRIA";
   ns:addressNumber 31;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.39238"^^xsd:float;
   ns:longitude "2.19250"^^xsd:float;
   ns:postCode 8005 .
@@ -8996,6 +9194,7 @@
   ns:addressName "TURÓ BLAU";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/52>;
   ns:latitude "41.43882"^^xsd:float;
   ns:longitude "2.17678"^^xsd:float;
   ns:postCode 8016 .
@@ -9005,6 +9204,7 @@
   ns:addressName "CÒRSEGA";
   ns:addressNumber 612;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40931"^^xsd:float;
   ns:longitude "2.17657"^^xsd:float;
   ns:postCode 8025 .
@@ -9014,15 +9214,17 @@
   ns:addressName "CATALUNYA";
   ns:addressNumber 5;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38723"^^xsd:float;
   ns:longitude "2.16881"^^xsd:float;
   ns:postCode 8002 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_0ab6411a>
-  a ns:StreetAddress;
   ns:addressName "CAN MARCET";
+  a ns:StreetAddress;
   ns:addressNumber 36;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/41>;
   ns:latitude "41.43478"^^xsd:float;
   ns:longitude "2.14790"^^xsd:float;
   ns:postCode 8035 .
@@ -9032,6 +9234,7 @@
   ns:addressName "SANT ISCLE";
   ns:addressNumber 60;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/46>;
   ns:latitude "41.43338"^^xsd:float;
   ns:longitude "2.17163"^^xsd:float;
   ns:postCode 8031 .
@@ -9041,6 +9244,7 @@
   ns:addressName "PORTO";
   ns:addressNumber 35;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43>;
   ns:latitude "41.43061"^^xsd:float;
   ns:longitude "2.15645"^^xsd:float;
   ns:postCode 8032 .
@@ -9050,6 +9254,7 @@
   ns:addressName "ESPRONCEDA";
   ns:addressNumber 298;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/63>;
   ns:latitude "41.41588"^^xsd:float;
   ns:longitude "2.19084"^^xsd:float;
   ns:postCode 8027 .
@@ -9059,6 +9264,7 @@
   ns:addressName "SAGUÉS";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39374"^^xsd:float;
   ns:longitude "2.14550"^^xsd:float;
   ns:postCode 8021 .
@@ -9068,6 +9274,7 @@
   ns:addressName "MASSENS";
   ns:addressNumber 76;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40923"^^xsd:float;
   ns:longitude "2.15577"^^xsd:float;
   ns:postCode 8024 .
@@ -9077,6 +9284,7 @@
   ns:addressName "DE LA CATEDRAL";
   ns:addressNumber 6;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.38506"^^xsd:float;
   ns:longitude "2.17668"^^xsd:float;
   ns:postCode 8002 .
@@ -9086,6 +9294,7 @@
   ns:addressName "PARAL.LEL";
   ns:addressNumber 132;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37509"^^xsd:float;
   ns:longitude "2.16138"^^xsd:float;
   ns:postCode 8015 .
@@ -9095,6 +9304,7 @@
   ns:addressName "DE BONAVISTA";
   ns:addressNumber 14;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.39834"^^xsd:float;
   ns:longitude "2.15982"^^xsd:float;
   ns:postCode 8012 .
@@ -9104,6 +9314,7 @@
   ns:addressName "PAU ALCOVER";
   ns:addressNumber 94;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24>;
   ns:latitude "41.40188"^^xsd:float;
   ns:longitude "2.13152"^^xsd:float;
   ns:postCode 8017 .
@@ -9113,6 +9324,7 @@
   ns:addressName "RAMON TRIAS FARGAS";
   ns:addressNumber 21;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.39021"^^xsd:float;
   ns:longitude "2.19040"^^xsd:float;
   ns:postCode 8005 .
@@ -9122,6 +9334,7 @@
   ns:addressName "FLORIDABLANCA";
   ns:addressNumber 145;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.38194"^^xsd:float;
   ns:longitude "2.16291"^^xsd:float;
   ns:postCode 8011 .
@@ -9131,6 +9344,7 @@
   ns:addressName "LLOBREGÓS";
   ns:addressNumber 115;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/37>;
   ns:latitude "41.42468"^^xsd:float;
   ns:longitude "2.15704"^^xsd:float;
   ns:postCode 8032 .
@@ -9140,6 +9354,7 @@
   ns:addressName "JUAN GRIS";
   ns:addressNumber 28;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/16>;
   ns:latitude "41.36534"^^xsd:float;
   ns:longitude "2.13313"^^xsd:float;
   ns:postCode 8014 .
@@ -9149,6 +9364,7 @@
   ns:addressName "PARE MARIANA";
   ns:addressNumber 24;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/41>;
   ns:latitude "41.43066"^^xsd:float;
   ns:longitude "2.14564"^^xsd:float;
   ns:postCode 8035 .
@@ -9158,6 +9374,7 @@
   ns:addressName "MADRAZO";
   ns:addressNumber 131;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39678"^^xsd:float;
   ns:longitude "2.14455"^^xsd:float;
   ns:postCode 8021 .
@@ -9167,6 +9384,7 @@
   ns:addressName "60";
   ns:addressNumber 25;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/12>;
   ns:latitude "41.34677"^^xsd:float;
   ns:longitude "2.14362"^^xsd:float;
   ns:postCode 8040 .
@@ -9176,6 +9394,7 @@
   ns:addressName "NOU DE LA RAMBLA";
   ns:addressNumber 164;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.37196"^^xsd:float;
   ns:longitude "2.16678"^^xsd:float;
   ns:postCode 8004 .
@@ -9185,6 +9404,7 @@
   ns:addressName "CATALUNYA";
   ns:addressNumber 10;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38769"^^xsd:float;
   ns:longitude "2.16965"^^xsd:float;
   ns:postCode 8002 .
@@ -9194,6 +9414,7 @@
   ns:addressName "MARITIM";
   ns:addressNumber 31;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.38347"^^xsd:float;
   ns:longitude "2.19473"^^xsd:float;
   ns:postCode 8003 .
@@ -9203,6 +9424,7 @@
   ns:addressName "SANT RAMON DE PENYAFORT";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/70>;
   ns:latitude "41.41348"^^xsd:float;
   ns:longitude "2.22069"^^xsd:float;
   ns:postCode 8930 .
@@ -9212,6 +9434,7 @@
   ns:addressName "LITORAL";
   ns:addressNumber 72;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.39614"^^xsd:float;
   ns:longitude "2.20784"^^xsd:float;
   ns:postCode 8005 .
@@ -9221,24 +9444,27 @@
   ns:addressName "RIBES";
   ns:addressNumber 13;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.39331"^^xsd:float;
   ns:longitude "2.18124"^^xsd:float;
   ns:postCode 8013 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_14db8335>
+  a ns:StreetAddress;
   ns:addressName "ICÀRIA";
   ns:addressNumber 202;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.39421"^^xsd:float;
   ns:longitude "2.20087"^^xsd:float;
-  ns:postCode 8005;
-  a ns:StreetAddress .
+  ns:postCode 8005 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_150032d8>
   a ns:StreetAddress;
   ns:addressName "CARRERA";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.37443"^^xsd:float;
   ns:longitude "2.17486"^^xsd:float;
   ns:postCode 8004 .
@@ -9248,6 +9474,7 @@
   ns:addressName "REINA VICTORIA";
   ns:addressNumber 31;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39694"^^xsd:float;
   ns:longitude "2.13634"^^xsd:float;
   ns:postCode 8021 .
@@ -9257,6 +9484,7 @@
   ns:addressName "TUCUMÁN";
   ns:addressNumber 21;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59>;
   ns:latitude "41.44579"^^xsd:float;
   ns:longitude "2.20104"^^xsd:float;
   ns:postCode 8030 .
@@ -9266,6 +9494,7 @@
   ns:addressName "VIRIAT";
   ns:addressNumber 43;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.38060"^^xsd:float;
   ns:longitude "2.14086"^^xsd:float;
   ns:postCode 8014 .
@@ -9275,6 +9504,7 @@
   ns:addressName "PRIM";
   ns:addressNumber 79;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/70>;
   ns:latitude "41.41604"^^xsd:float;
   ns:longitude "2.21249"^^xsd:float;
   ns:postCode 8019 .
@@ -9284,6 +9514,7 @@
   ns:addressName "MANILA";
   ns:addressNumber 53;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/21>;
   ns:latitude "41.39007"^^xsd:float;
   ns:longitude "2.12649"^^xsd:float;
   ns:postCode 8034 .
@@ -9293,6 +9524,7 @@
   ns:addressName "MALATS";
   ns:addressNumber 28;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.43612"^^xsd:float;
   ns:longitude "2.18944"^^xsd:float;
   ns:postCode 8030 .
@@ -9302,6 +9534,7 @@
   ns:addressName "SARDENYA";
   ns:addressNumber 362;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40551"^^xsd:float;
   ns:longitude "2.17064"^^xsd:float;
   ns:postCode 8025 .
@@ -9311,6 +9544,7 @@
   ns:addressName "NOU BARRIS";
   ns:addressNumber 23;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/50>;
   ns:latitude "41.44804"^^xsd:float;
   ns:longitude "2.17751"^^xsd:float;
   ns:postCode 8042 .
@@ -9320,6 +9554,7 @@
   ns:addressName "CASTELLNOU";
   ns:addressNumber 65;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24>;
   ns:latitude "41.39704"^^xsd:float;
   ns:longitude "2.12794"^^xsd:float;
   ns:postCode 8017 .
@@ -9329,6 +9564,7 @@
   ns:addressName "SARDENYA";
   ns:addressNumber 292;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40169"^^xsd:float;
   ns:longitude "2.17576"^^xsd:float;
   ns:postCode 8013 .
@@ -9338,6 +9574,7 @@
   ns:addressName "COMERÇ";
   ns:addressNumber 36;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38696"^^xsd:float;
   ns:longitude "2.18201"^^xsd:float;
   ns:postCode 8003 .
@@ -9347,6 +9584,7 @@
   ns:addressName "SANT ADRIÀ";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.43393"^^xsd:float;
   ns:longitude "2.18965"^^xsd:float;
   ns:postCode 8030 .
@@ -9356,6 +9594,7 @@
   ns:addressName "ROSA SENSAT";
   ns:addressNumber 20;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.39107"^^xsd:float;
   ns:longitude "2.19657"^^xsd:float;
   ns:postCode 8005 .
@@ -9365,6 +9604,7 @@
   ns:addressName "CONSELL DE CENT";
   ns:addressNumber 482;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.40013"^^xsd:float;
   ns:longitude "2.17801"^^xsd:float;
   ns:postCode 8013 .
@@ -9374,6 +9614,7 @@
   ns:addressName "SELVA DE MAR";
   ns:addressNumber 46;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69>;
   ns:latitude "41.40913"^^xsd:float;
   ns:longitude "2.20881"^^xsd:float;
   ns:postCode 8019 .
@@ -9383,6 +9624,7 @@
   ns:addressName "DOS DE MAIG";
   ns:addressNumber 230;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/64>;
   ns:latitude "41.40716"^^xsd:float;
   ns:longitude "2.18207"^^xsd:float;
   ns:postCode 8013 .
@@ -9392,6 +9634,7 @@
   ns:addressName "RIERA ALTA";
   ns:addressNumber 6;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.38064"^^xsd:float;
   ns:longitude "2.16716"^^xsd:float;
   ns:postCode 8001 .
@@ -9400,6 +9643,7 @@
   a ns:StreetAddress;
   ns:addressName "DE COLOM (VIA LAIETANA)";
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38062"^^xsd:float;
   ns:longitude "2.18206"^^xsd:float;
   ns:postCode 8002 .
@@ -9409,6 +9653,7 @@
   ns:addressName "DEL DR. AIGUADER";
   ns:addressNumber 72;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.38383"^^xsd:float;
   ns:longitude "2.19147"^^xsd:float;
   ns:postCode 8003 .
@@ -9417,6 +9662,7 @@
   a ns:StreetAddress;
   ns:addressName "DE COLOM (LES RAMBLES)";
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.37652"^^xsd:float;
   ns:longitude "2.17881"^^xsd:float;
   ns:postCode 8039 .
@@ -9426,6 +9672,7 @@
   ns:addressName "DE SANT PAU";
   ns:addressNumber 89;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37688"^^xsd:float;
   ns:longitude "2.16982"^^xsd:float;
   ns:postCode 8001 .
@@ -9435,6 +9682,7 @@
   ns:addressName "LONDRES";
   ns:addressNumber 101;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.39361"^^xsd:float;
   ns:longitude "2.15077"^^xsd:float;
   ns:postCode 8036 .
@@ -9444,6 +9692,7 @@
   ns:addressName "SARDENYA";
   ns:addressNumber 494;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/33>;
   ns:latitude "41.41076"^^xsd:float;
   ns:longitude "2.16409"^^xsd:float;
   ns:postCode 8024 .
@@ -9453,6 +9702,7 @@
   ns:addressName "FÍGOLS";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38129"^^xsd:float;
   ns:longitude "2.12899"^^xsd:float;
   ns:postCode 8028 .
@@ -9461,6 +9711,7 @@
   a ns:StreetAddress;
   ns:addressName "PORTAL DE SANTA MADRONA";
   ns:addressNumber 2;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37707"^^xsd:float;
   ns:longitude "2.17582"^^xsd:float;
   ns:postCode 8001 .
@@ -9470,6 +9721,7 @@
   ns:addressName "ROSSELLÓ";
   ns:addressNumber 101;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38719"^^xsd:float;
   ns:longitude "2.14913"^^xsd:float;
   ns:postCode 8036 .
@@ -9479,6 +9731,7 @@
   ns:addressName "DE CAN SEGALAR";
   ns:addressNumber 4;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38794"^^xsd:float;
   ns:longitude "2.13059"^^xsd:float;
   ns:postCode 8028 .
@@ -9488,6 +9741,7 @@
   ns:addressName "RAMON TURRÓ";
   ns:addressNumber 246;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40170"^^xsd:float;
   ns:longitude "2.20538"^^xsd:float;
   ns:postCode 8005 .
@@ -9497,6 +9751,7 @@
   ns:addressName "MÚRCIA";
   ns:addressNumber 64;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/63>;
   ns:latitude "41.41669"^^xsd:float;
   ns:longitude "2.19099"^^xsd:float;
   ns:postCode 8027 .
@@ -9506,6 +9761,7 @@
   ns:addressName "DEL RAVAL";
   ns:addressNumber 13;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37935"^^xsd:float;
   ns:longitude "2.16895"^^xsd:float;
   ns:postCode 8001 .
@@ -9513,6 +9769,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_262809a4>
   a ns:StreetAddress;
   ns:addressName "RECINTE PARC DE LA CIUTADELLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38739"^^xsd:float;
   ns:longitude "2.18754"^^xsd:float;
   ns:postCode 8003 .
@@ -9522,6 +9779,7 @@
   ns:addressName "PROVENÇA";
   ns:addressNumber 322;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39675"^^xsd:float;
   ns:longitude "2.16463"^^xsd:float;
   ns:postCode 8037 .
@@ -9531,6 +9789,7 @@
   ns:addressName "FELIU DE CASANOVA";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/17>;
   ns:latitude "41.37541"^^xsd:float;
   ns:longitude "2.12978"^^xsd:float;
   ns:postCode 8028 .
@@ -9540,6 +9799,7 @@
   ns:addressName "JOANIC - C";
   ns:addressNumber 59;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40551"^^xsd:float;
   ns:longitude "2.16225"^^xsd:float;
   ns:postCode 8024 .
@@ -9549,6 +9809,7 @@
   ns:addressName "DE L'ONZE DE SETEMBRE";
   ns:addressNumber 37;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.42986"^^xsd:float;
   ns:longitude "2.19220"^^xsd:float;
   ns:postCode 8030 .
@@ -9558,6 +9819,7 @@
   ns:addressName "CATALUNYA";
   ns:addressNumber 133;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39538"^^xsd:float;
   ns:longitude "2.15729"^^xsd:float;
   ns:postCode 8008 .
@@ -9566,6 +9828,7 @@
   a ns:StreetAddress;
   ns:addressName "DE LLUIS COMPANYS (ARC DE TRIOMF)";
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.39131"^^xsd:float;
   ns:longitude "2.18083"^^xsd:float;
   ns:postCode 8018 .
@@ -9575,6 +9838,7 @@
   ns:addressName "ENTENÇA";
   ns:addressNumber 70;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.37909"^^xsd:float;
   ns:longitude "2.15162"^^xsd:float;
   ns:postCode 8015 .
@@ -9584,6 +9848,7 @@
   ns:addressName "MONTMANY";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40356"^^xsd:float;
   ns:longitude "2.16093"^^xsd:float;
   ns:postCode 8012 .
@@ -9593,6 +9858,7 @@
   ns:addressName "TORRAS I BAGES";
   ns:addressNumber 29;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.43787"^^xsd:float;
   ns:longitude "2.19106"^^xsd:float;
   ns:postCode 8030 .
@@ -9602,6 +9868,7 @@
   ns:addressName "PUJADES";
   ns:addressNumber 311;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69>;
   ns:latitude "41.40701"^^xsd:float;
   ns:longitude "2.20744"^^xsd:float;
   ns:postCode 8019 .
@@ -9611,6 +9878,7 @@
   ns:addressName "MARQUÈS DE SENTMENAT";
   ns:addressNumber 46;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38497"^^xsd:float;
   ns:longitude "2.13762"^^xsd:float;
   ns:postCode 8029 .
@@ -9620,6 +9888,7 @@
   ns:addressName "LLULL";
   ns:addressNumber 309;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69>;
   ns:latitude "41.40652"^^xsd:float;
   ns:longitude "2.20912"^^xsd:float;
   ns:postCode 8019 .
@@ -9629,6 +9898,7 @@
   ns:addressName "QUATRE CAMINS";
   ns:addressNumber 46;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/25>;
   ns:latitude "41.41047"^^xsd:float;
   ns:longitude "2.13120"^^xsd:float;
   ns:postCode 8022 .
@@ -9638,6 +9908,7 @@
   ns:addressName "DE PRIM";
   ns:addressNumber 256;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/73>;
   ns:latitude "41.42566"^^xsd:float;
   ns:longitude "2.20086"^^xsd:float;
   ns:postCode 8020 .
@@ -9647,6 +9918,7 @@
   ns:addressName "VILADOMAT";
   ns:addressNumber 200;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38481"^^xsd:float;
   ns:longitude "2.15080"^^xsd:float;
   ns:postCode 8029 .
@@ -9656,6 +9928,7 @@
   ns:addressName "FABRA I PUIG";
   ns:addressNumber 385;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43>;
   ns:latitude "41.43332"^^xsd:float;
   ns:longitude "2.16292"^^xsd:float;
   ns:postCode 8031 .
@@ -9664,6 +9937,7 @@
   a ns:StreetAddress;
   ns:addressName "JESÚS CARRASCO";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/51>;
   ns:latitude "41.44504"^^xsd:float;
   ns:longitude "2.17672"^^xsd:float;
   ns:postCode 8042 .
@@ -9673,6 +9947,7 @@
   ns:addressName "IRLANDA";
   ns:addressNumber 34;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.4315"^^xsd:float;
   ns:longitude "2.18579"^^xsd:float;
   ns:postCode 8030 .
@@ -9682,6 +9957,7 @@
   ns:addressName "FONT D´EN- FARGAS";
   ns:addressNumber 1;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/36>;
   ns:latitude "41.42755"^^xsd:float;
   ns:longitude "2.16598"^^xsd:float;
   ns:postCode 8031 .
@@ -9691,6 +9967,7 @@
   ns:addressName "CRISTOBAL DE MOURA";
   ns:addressNumber 163;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.41351"^^xsd:float;
   ns:longitude "2.20935"^^xsd:float;
   ns:postCode 8019 .
@@ -9700,6 +9977,7 @@
   ns:addressName "CAMÈLIES";
   ns:addressNumber 78;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/33>;
   ns:latitude "41.41456"^^xsd:float;
   ns:longitude "2.16586"^^xsd:float;
   ns:postCode 8024 .
@@ -9709,6 +9987,7 @@
   ns:addressName "DEL TORRENT DE LES FLORS";
   ns:addressNumber 102;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40784"^^xsd:float;
   ns:longitude "2.15867"^^xsd:float;
   ns:postCode 8024 .
@@ -9718,6 +9997,7 @@
   ns:addressName "ALT DE GIRONELLA";
   ns:addressNumber 13;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24>;
   ns:latitude "41.39496"^^xsd:float;
   ns:longitude "2.13027"^^xsd:float;
   ns:postCode 8017 .
@@ -9727,6 +10007,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 1041;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/72>;
   ns:latitude "41.41458"^^xsd:float;
   ns:longitude "2.20081"^^xsd:float;
   ns:postCode 8020 .
@@ -9736,6 +10017,7 @@
   ns:addressName "URQUINAONA";
   ns:addressNumber 3;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38930"^^xsd:float;
   ns:longitude "2.17274"^^xsd:float;
   ns:postCode 8010 .
@@ -9745,6 +10027,7 @@
   ns:addressName "TORRENT DE L'OLLA";
   ns:addressNumber 11;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.39897"^^xsd:float;
   ns:longitude "2.16067"^^xsd:float;
   ns:postCode 8012 .
@@ -9754,6 +10037,7 @@
   ns:addressName "BILBAO";
   ns:addressNumber 174;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.40902"^^xsd:float;
   ns:longitude "2.19541"^^xsd:float;
   ns:postCode 8018 .
@@ -9763,6 +10047,7 @@
   ns:addressName "PERIODISTES";
   ns:addressNumber 9;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/35>;
   ns:latitude "41.42203"^^xsd:float;
   ns:longitude "2.17440"^^xsd:float;
   ns:postCode 8032 .
@@ -9772,6 +10057,7 @@
   ns:addressName "NÀPOLS";
   ns:addressNumber 125;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.39578"^^xsd:float;
   ns:longitude "2.17870"^^xsd:float;
   ns:postCode 8013 .
@@ -9781,6 +10067,7 @@
   ns:addressName "BRUC";
   ns:addressNumber 103;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39582"^^xsd:float;
   ns:longitude "2.16728"^^xsd:float;
   ns:postCode 8009 .
@@ -9790,6 +10077,7 @@
   ns:addressName "ARAGÓ";
   ns:addressNumber 629;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/65>;
   ns:latitude "41.41009"^^xsd:float;
   ns:longitude "2.18844"^^xsd:float;
   ns:postCode 8026 .
@@ -9799,6 +10087,7 @@
   ns:addressName "MANDONI";
   ns:addressNumber 6;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/14>;
   ns:latitude "41.36934"^^xsd:float;
   ns:longitude "2.14260"^^xsd:float;
   ns:postCode 8004 .
@@ -9808,6 +10097,7 @@
   ns:addressName "FELIPE II";
   ns:addressNumber 112;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/61>;
   ns:latitude "41.42192"^^xsd:float;
   ns:longitude "2.18491"^^xsd:float;
   ns:postCode 8027 .
@@ -9817,6 +10107,7 @@
   ns:addressName "JOAN DE BORBÓ";
   ns:addressNumber 42;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.37799"^^xsd:float;
   ns:longitude "2.18842"^^xsd:float;
   ns:postCode 8003 .
@@ -9826,6 +10117,7 @@
   ns:addressName "DE LA MARINA";
   ns:addressNumber 25;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.38850"^^xsd:float;
   ns:longitude "2.19507"^^xsd:float;
   ns:postCode 8005 .
@@ -9835,6 +10127,7 @@
   ns:addressName "RIO DE JANEIRO";
   ns:addressNumber 3;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/45>;
   ns:latitude "41.43068"^^xsd:float;
   ns:longitude "2.18218"^^xsd:float;
   ns:postCode 8016 .
@@ -9844,6 +10137,7 @@
   ns:addressName "FULTON";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43>;
   ns:latitude "41.42972"^^xsd:float;
   ns:longitude "2.16170"^^xsd:float;
   ns:postCode 8032 .
@@ -9853,6 +10147,7 @@
   ns:addressName "SANT PERE D´ABANTO";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/15>;
   ns:latitude "41.37136"^^xsd:float;
   ns:longitude "2.14356"^^xsd:float;
   ns:postCode 8014 .
@@ -9862,6 +10157,7 @@
   ns:addressName "MANSO";
   ns:addressNumber 46;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37704"^^xsd:float;
   ns:longitude "2.16113"^^xsd:float;
   ns:postCode 8015 .
@@ -9871,6 +10167,7 @@
   ns:addressName "VILLAR";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/35>;
   ns:latitude "41.41648"^^xsd:float;
   ns:longitude "2.18010"^^xsd:float;
   ns:postCode 8041 .
@@ -9879,6 +10176,7 @@
   a ns:StreetAddress;
   ns:addressName "PAU VILA (D)";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.38104"^^xsd:float;
   ns:longitude "2.18657"^^xsd:float;
   ns:postCode 8039 .
@@ -9887,6 +10185,7 @@
   a ns:StreetAddress;
   ns:addressName "LA RAMBLA";
   ns:addressNumber 56;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.38019"^^xsd:float;
   ns:longitude "2.17448"^^xsd:float;
   ns:postCode 8002 .
@@ -9896,6 +10195,7 @@
   ns:addressName "LLUIS COMPANYS";
   ns:addressNumber 11;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.39110"^^xsd:float;
   ns:longitude "2.18017"^^xsd:float;
   ns:postCode 8018 .
@@ -9905,6 +10205,7 @@
   ns:addressName "DE BARTRINA";
   ns:addressNumber 14;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.43911"^^xsd:float;
   ns:longitude "2.18580"^^xsd:float;
   ns:postCode 8030 .
@@ -9913,6 +10214,7 @@
   a ns:StreetAddress;
   ns:addressName "LA RAMBLA";
   ns:addressNumber 101;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.38266"^^xsd:float;
   ns:longitude "2.17170"^^xsd:float;
   ns:postCode 8002 .
@@ -9922,6 +10224,7 @@
   ns:addressName "DE GRÀCIA";
   ns:addressNumber 89;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39497"^^xsd:float;
   ns:longitude "2.16128"^^xsd:float;
   ns:postCode 8008 .
@@ -9931,6 +10234,7 @@
   ns:addressName "D'ENRIC SANCHIS";
   ns:addressNumber 33;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59>;
   ns:latitude "41.43392"^^xsd:float;
   ns:longitude "2.20622"^^xsd:float;
   ns:postCode 8030 .
@@ -9940,6 +10244,7 @@
   ns:addressName "MARQUÉS DE L'ARGENTERA";
   ns:addressNumber 13;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38454"^^xsd:float;
   ns:longitude "2.18492"^^xsd:float;
   ns:postCode 8003 .
@@ -9949,6 +10254,7 @@
   ns:addressName "CAVALLERS";
   ns:addressNumber 41;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/21>;
   ns:latitude "41.39063"^^xsd:float;
   ns:longitude "2.11154"^^xsd:float;
   ns:postCode 8034 .
@@ -9958,6 +10264,7 @@
   ns:addressName "RIO DE JANEIRO";
   ns:addressNumber 96;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/52>;
   ns:latitude "41.43969"^^xsd:float;
   ns:longitude "2.18233"^^xsd:float;
   ns:postCode 8016 .
@@ -9967,6 +10274,7 @@
   ns:addressName "CLOT";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/65>;
   ns:latitude "41.40638"^^xsd:float;
   ns:longitude "2.18744"^^xsd:float;
   ns:postCode 8018 .
@@ -9976,6 +10284,7 @@
   ns:addressName "ENTENÇA";
   ns:addressNumber 137;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38195"^^xsd:float;
   ns:longitude "2.14747"^^xsd:float;
   ns:postCode 8015 .
@@ -9985,6 +10294,7 @@
   ns:addressName "D'ESCORNALBOU";
   ns:addressNumber 51;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/35>;
   ns:latitude "41.41807"^^xsd:float;
   ns:longitude "2.17639"^^xsd:float;
   ns:postCode 8041 .
@@ -9993,6 +10303,7 @@
   a ns:StreetAddress;
   ns:addressName "VIA BARCINO";
   ns:addressNumber 121;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/57>;
   ns:latitude "41.44815"^^xsd:float;
   ns:longitude "2.19294"^^xsd:float;
   ns:postCode 8033 .
@@ -10002,6 +10313,7 @@
   ns:addressName "CIUTAT DE GRANADA";
   ns:addressNumber 168;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.40451"^^xsd:float;
   ns:longitude "2.18988"^^xsd:float;
   ns:postCode 8018 .
@@ -10011,6 +10323,7 @@
   ns:addressName "JOSEP TARRADELLAS";
   ns:addressNumber 133;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.39000"^^xsd:float;
   ns:longitude "2.14321"^^xsd:float;
   ns:postCode 8029 .
@@ -10020,6 +10333,7 @@
   ns:addressName "SANT HERMENEGILD";
   ns:addressNumber 30;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/27>;
   ns:latitude "41.40315"^^xsd:float;
   ns:longitude "2.14458"^^xsd:float;
   ns:postCode 8006 .
@@ -10029,6 +10343,7 @@
   ns:addressName "J. MAYNARD KEYNES";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/21>;
   ns:latitude "41.38622"^^xsd:float;
   ns:longitude "2.11686"^^xsd:float;
   ns:postCode 8034 .
@@ -10036,6 +10351,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_455f40b2>
   a ns:StreetAddress;
   ns:addressName "VALENTÍ ALMIRALL";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/65>;
   ns:latitude "41.40847"^^xsd:float;
   ns:longitude "2.19204"^^xsd:float;
   ns:postCode 8018 .
@@ -10045,6 +10361,7 @@
   ns:addressName "PABLO IGLESIAS";
   ns:addressNumber 21;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/52>;
   ns:latitude "41.44338"^^xsd:float;
   ns:longitude "2.18130"^^xsd:float;
   ns:postCode 8016 .
@@ -10054,6 +10371,7 @@
   ns:addressName "PALAUDÀRIES";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.37449"^^xsd:float;
   ns:longitude "2.17302"^^xsd:float;
   ns:postCode 8004 .
@@ -10063,6 +10381,7 @@
   ns:addressName "REUS";
   ns:addressNumber 23;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/25>;
   ns:latitude "41.40500"^^xsd:float;
   ns:longitude "2.13460"^^xsd:float;
   ns:postCode 8022 .
@@ -10072,6 +10391,7 @@
   ns:addressName "ESTADI";
   ns:addressNumber 38;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.36631"^^xsd:float;
   ns:longitude "2.15220"^^xsd:float;
   ns:postCode 8038 .
@@ -10080,6 +10400,7 @@
   a ns:StreetAddress;
   ns:addressName "VIA FAVÈNCIA";
   ns:addressNumber 186;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/48>;
   ns:latitude "41.44273"^^xsd:float;
   ns:longitude "2.17039"^^xsd:float;
   ns:postCode 8042 .
@@ -10089,6 +10410,7 @@
   ns:addressName "FRANÇA XICA";
   ns:addressNumber 4;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.37217"^^xsd:float;
   ns:longitude "2.16021"^^xsd:float;
   ns:postCode 8004 .
@@ -10098,6 +10420,7 @@
   ns:addressName "PUJADES";
   ns:addressNumber 103;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.39839"^^xsd:float;
   ns:longitude "2.19607"^^xsd:float;
   ns:postCode 8005 .
@@ -10107,6 +10430,7 @@
   ns:addressName "DIPUTACIÓ";
   ns:addressNumber 272;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39161"^^xsd:float;
   ns:longitude "2.16890"^^xsd:float;
   ns:postCode 8009 .
@@ -10116,6 +10440,7 @@
   ns:addressName "CATALUNYA";
   ns:addressNumber 47;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39026"^^xsd:float;
   ns:longitude "2.16403"^^xsd:float;
   ns:postCode 8007 .
@@ -10125,6 +10450,7 @@
   ns:addressName "UNIVERSAL";
   ns:addressNumber 29;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43>;
   ns:latitude "41.43720"^^xsd:float;
   ns:longitude "2.16202"^^xsd:float;
   ns:postCode 8042 .
@@ -10134,24 +10460,27 @@
   ns:addressName "ROGER DE FLOR";
   ns:addressNumber 126;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.39548"^^xsd:float;
   ns:longitude "2.17719"^^xsd:float;
   ns:postCode 8013 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_4b9adbc0>
-  a ns:StreetAddress;
   ns:addressName "BOLIVIA";
   ns:addressNumber 120;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.40581"^^xsd:float;
   ns:longitude "2.19494"^^xsd:float;
-  ns:postCode 8018 .
+  ns:postCode 8018;
+  a ns:StreetAddress .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_4bc1757a>
   a ns:StreetAddress;
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 1157;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/73>;
   ns:latitude "41.41949"^^xsd:float;
   ns:longitude "2.20934"^^xsd:float;
   ns:postCode 8020 .
@@ -10161,6 +10490,7 @@
   ns:addressName "VALLDAURA";
   ns:addressNumber 26;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43>;
   ns:latitude "41.43749"^^xsd:float;
   ns:longitude "2.15657"^^xsd:float;
   ns:postCode 8031 .
@@ -10169,6 +10499,7 @@
   a ns:StreetAddress;
   ns:addressName "NOVA  BOCANA";
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.37024"^^xsd:float;
   ns:longitude "2.18781"^^xsd:float;
   ns:postCode 8039 .
@@ -10178,6 +10509,7 @@
   ns:addressName "FELIPE II";
   ns:addressNumber 214;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/62>;
   ns:latitude "41.42692"^^xsd:float;
   ns:longitude "2.17862"^^xsd:float;
   ns:postCode 8027 .
@@ -10187,6 +10519,7 @@
   ns:addressName "BAILÉN";
   ns:addressNumber 100;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39699"^^xsd:float;
   ns:longitude "2.17063"^^xsd:float;
   ns:postCode 8009 .
@@ -10196,6 +10529,7 @@
   ns:addressName "ZONA FRANCA";
   ns:addressNumber 9;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/12>;
   ns:latitude "41.35132"^^xsd:float;
   ns:longitude "2.14509"^^xsd:float;
   ns:postCode 8038 .
@@ -10205,6 +10539,7 @@
   ns:addressName "BRUC";
   ns:addressNumber 45;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39246"^^xsd:float;
   ns:longitude "2.17173"^^xsd:float;
   ns:postCode 8010 .
@@ -10214,6 +10549,7 @@
   ns:addressName "MALLORCA";
   ns:addressNumber 194;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.38997"^^xsd:float;
   ns:longitude "2.15772"^^xsd:float;
   ns:postCode 8036 .
@@ -10223,6 +10559,7 @@
   ns:addressName "NUMÀNCIA";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.38121"^^xsd:float;
   ns:longitude "2.14176"^^xsd:float;
   ns:postCode 8029 .
@@ -10232,6 +10569,7 @@
   ns:addressName "CANTÀBRIA";
   ns:addressNumber 55;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/73>;
   ns:latitude "41.42240"^^xsd:float;
   ns:longitude "2.19807"^^xsd:float;
   ns:postCode 8020 .
@@ -10241,6 +10579,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 668;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38870"^^xsd:float;
   ns:longitude "2.12857"^^xsd:float;
   ns:postCode 8034 .
@@ -10249,6 +10588,7 @@
   a ns:StreetAddress;
   ns:addressName "LITORAL (PG MARÍTIM DEL PORT OLÍMPIC)";
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.38891"^^xsd:float;
   ns:longitude "2.19931"^^xsd:float;
   ns:postCode 8005 .
@@ -10258,6 +10598,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 632;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38906"^^xsd:float;
   ns:longitude "2.16793"^^xsd:float;
   ns:postCode 8007 .
@@ -10267,6 +10608,7 @@
   ns:addressName "ENTENÇA";
   ns:addressNumber 301;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38952"^^xsd:float;
   ns:longitude "2.13862"^^xsd:float;
   ns:postCode 8029 .
@@ -10276,6 +10618,7 @@
   ns:addressName "ROGER";
   ns:addressNumber 24;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/17>;
   ns:latitude "41.37675"^^xsd:float;
   ns:longitude "2.12691"^^xsd:float;
   ns:postCode 8028 .
@@ -10284,6 +10627,7 @@
   a ns:StreetAddress;
   ns:addressName "CONSELL DE CENT";
   ns:addressNumber 6;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/15>;
   ns:latitude "41.37555"^^xsd:float;
   ns:longitude "2.14390"^^xsd:float;
   ns:postCode 8014 .
@@ -10293,6 +10637,7 @@
   ns:addressName "MERIDIANA";
   ns:addressNumber 40;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.39606"^^xsd:float;
   ns:longitude "2.18719"^^xsd:float;
   ns:postCode 8018 .
@@ -10300,6 +10645,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_53192d6d>
   a ns:StreetAddress;
   ns:addressName "SELVA DE MAR";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69>;
   ns:latitude "41.40536"^^xsd:float;
   ns:longitude "2.21358"^^xsd:float;
   ns:postCode 8019 .
@@ -10309,6 +10655,7 @@
   ns:addressName "MÚRCIA";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/65>;
   ns:latitude "41.41433"^^xsd:float;
   ns:longitude "2.18745"^^xsd:float;
   ns:postCode 8026 .
@@ -10317,6 +10664,7 @@
   a ns:StreetAddress;
   ns:addressName "UNIVERSITAT";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.38550"^^xsd:float;
   ns:longitude "2.16347"^^xsd:float;
   ns:postCode 8007 .
@@ -10326,6 +10674,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 368;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/15>;
   ns:latitude "41.37410"^^xsd:float;
   ns:longitude "2.14819"^^xsd:float;
   ns:postCode 8010 .
@@ -10333,6 +10682,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_54d67609>
   a ns:StreetAddress;
   ns:addressName "JARDINS DE CAN FERRERO";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13>;
   ns:latitude "41.35706"^^xsd:float;
   ns:longitude "2.14156"^^xsd:float;
   ns:postCode 8038 .
@@ -10342,6 +10692,7 @@
   ns:addressName "ROSSELLÓ";
   ns:addressNumber 557;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/64>;
   ns:latitude "41.41107"^^xsd:float;
   ns:longitude "2.18097"^^xsd:float;
   ns:postCode 8026 .
@@ -10351,6 +10702,7 @@
   ns:addressName "CAMÈLIES";
   ns:addressNumber 73;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/33>;
   ns:latitude "41.41345"^^xsd:float;
   ns:longitude "2.16310"^^xsd:float;
   ns:postCode 8024 .
@@ -10360,6 +10712,7 @@
   ns:addressName "PARAL.LEL";
   ns:addressNumber 146;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37518"^^xsd:float;
   ns:longitude "2.15923"^^xsd:float;
   ns:postCode 8015 .
@@ -10369,6 +10722,7 @@
   ns:addressName "RECTOR UBACH";
   ns:addressNumber 24;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39857"^^xsd:float;
   ns:longitude "2.14408"^^xsd:float;
   ns:postCode 8021 .
@@ -10378,6 +10732,7 @@
   ns:addressName "PUJADES";
   ns:addressNumber 191;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40262"^^xsd:float;
   ns:longitude "2.20176"^^xsd:float;
   ns:postCode 8005 .
@@ -10387,6 +10742,7 @@
   ns:addressName "JORDI GIRONA";
   ns:addressNumber 29;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/21>;
   ns:latitude "41.38811"^^xsd:float;
   ns:longitude "2.11541"^^xsd:float;
   ns:postCode 8034 .
@@ -10396,6 +10752,7 @@
   ns:addressName "BOLIVIA";
   ns:addressNumber 76;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.40302"^^xsd:float;
   ns:longitude "2.19135"^^xsd:float;
   ns:postCode 8018 .
@@ -10405,6 +10762,7 @@
   ns:addressName "LITORAL";
   ns:addressNumber 172;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.39198"^^xsd:float;
   ns:longitude "2.20371"^^xsd:float;
   ns:postCode 8005 .
@@ -10414,6 +10772,7 @@
   ns:addressName "DE L'ENERGIA";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13>;
   ns:latitude "41.35732"^^xsd:float;
   ns:longitude "2.13719"^^xsd:float;
   ns:postCode 8038 .
@@ -10423,6 +10782,7 @@
   ns:addressName "ROCAFORT";
   ns:addressNumber 214;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38528"^^xsd:float;
   ns:longitude "2.14548"^^xsd:float;
   ns:postCode 8029 .
@@ -10432,6 +10792,7 @@
   ns:addressName "MARINA";
   ns:addressNumber 199;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.40057"^^xsd:float;
   ns:longitude "2.17888"^^xsd:float;
   ns:postCode 8013 .
@@ -10441,6 +10802,7 @@
   ns:addressName "PAVIA";
   ns:addressNumber 3;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.37347"^^xsd:float;
   ns:longitude "2.13326"^^xsd:float;
   ns:postCode 8028 .
@@ -10450,6 +10812,7 @@
   ns:addressName "ROSSELLÓ";
   ns:addressNumber 354;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40314"^^xsd:float;
   ns:longitude "2.17079"^^xsd:float;
   ns:postCode 8025 .
@@ -10459,6 +10822,7 @@
   ns:addressName "DE GARCIA FÀRIA";
   ns:addressNumber 85;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69>;
   ns:latitude "41.40536"^^xsd:float;
   ns:longitude "2.21620"^^xsd:float;
   ns:postCode 8019 .
@@ -10468,6 +10832,7 @@
   ns:addressName "JOAN GÜELL";
   ns:addressNumber 98;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38120"^^xsd:float;
   ns:longitude "2.13236"^^xsd:float;
   ns:postCode 8028 .
@@ -10477,6 +10842,7 @@
   ns:addressName "DOCTOR MARAÑON";
   ns:addressNumber 25;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.38358"^^xsd:float;
   ns:longitude "2.11218"^^xsd:float;
   ns:postCode 8028 .
@@ -10485,6 +10851,7 @@
   a ns:StreetAddress;
   ns:addressName "MUNNÉ  2-6";
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/17>;
   ns:latitude "41.37541"^^xsd:float;
   ns:longitude "2.12325"^^xsd:float;
   ns:postCode 8028 .
@@ -10494,6 +10861,7 @@
   ns:addressName "MERIDIANA";
   ns:addressNumber 47;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.39826"^^xsd:float;
   ns:longitude "2.18665"^^xsd:float;
   ns:postCode 8013 .
@@ -10502,6 +10870,7 @@
   a ns:StreetAddress;
   ns:addressName "VIA DE BÀRCINO";
   ns:addressNumber 54;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/57>;
   ns:latitude "41.45137"^^xsd:float;
   ns:longitude "2.19229"^^xsd:float;
   ns:postCode 8033 .
@@ -10510,6 +10879,7 @@
   a ns:StreetAddress;
   ns:addressName "MARÍTIM DE LA BARCELONETA";
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.38095"^^xsd:float;
   ns:longitude "2.19346"^^xsd:float;
   ns:postCode 8003 .
@@ -10519,15 +10889,17 @@
   ns:addressName "GRAN DE LA SAGRERA";
   ns:addressNumber 74;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/61>;
   ns:latitude "41.42305"^^xsd:float;
   ns:longitude "2.19137"^^xsd:float;
   ns:postCode 8027 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_5e4b70a1>
+  a ns:StreetAddress;
   ns:addressName "DE ROSSELLÓ I PORCEL";
   ns:addressNumber 1;
-  a ns:StreetAddress;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/45>;
   ns:latitude "41.43648"^^xsd:float;
   ns:longitude "2.18410"^^xsd:float;
   ns:postCode 8016 .
@@ -10537,6 +10909,7 @@
   ns:addressName "GÒNGORA";
   ns:addressNumber 23;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/51>;
   ns:latitude "41.44327"^^xsd:float;
   ns:longitude "2.17462"^^xsd:float;
   ns:postCode 8042 .
@@ -10546,6 +10919,7 @@
   ns:addressName "NUMÀNCIA";
   ns:addressNumber 136;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38780"^^xsd:float;
   ns:longitude "2.13442"^^xsd:float;
   ns:postCode 8029 .
@@ -10553,6 +10927,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_61026db8>
   a ns:StreetAddress;
   ns:addressName "WORLD TRADE CENTER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37202"^^xsd:float;
   ns:longitude "2.18044"^^xsd:float;
   ns:postCode 8039 .
@@ -10562,6 +10937,7 @@
   ns:addressName "CRISTOBAL DE MOURA";
   ns:addressNumber 84;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.41071"^^xsd:float;
   ns:longitude "2.20616"^^xsd:float;
   ns:postCode 8019 .
@@ -10571,6 +10947,7 @@
   ns:addressName "RIO DE JANEIRO";
   ns:addressNumber 118;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/52>;
   ns:latitude "41.44248"^^xsd:float;
   ns:longitude "2.18572"^^xsd:float;
   ns:postCode 8016 .
@@ -10580,6 +10957,7 @@
   ns:addressName "SARDENYA";
   ns:addressNumber 402;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/33>;
   ns:latitude "41.40723"^^xsd:float;
   ns:longitude "2.16847"^^xsd:float;
   ns:postCode 8025 .
@@ -10589,6 +10967,7 @@
   ns:addressName "CÒRSEGA";
   ns:addressNumber 216;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.39176"^^xsd:float;
   ns:longitude "2.15321"^^xsd:float;
   ns:postCode 8036 .
@@ -10598,6 +10977,7 @@
   ns:addressName "VILAMARÍ";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37550"^^xsd:float;
   ns:longitude "2.15400"^^xsd:float;
   ns:postCode 8015 .
@@ -10605,6 +10985,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_638422a4>
   a ns:StreetAddress;
   ns:addressName "LA BARCELONETA (CN BARCELONETA)";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.37369"^^xsd:float;
   ns:longitude "2.18892"^^xsd:float;
   ns:postCode 8003 .
@@ -10614,6 +10995,7 @@
   ns:addressName "PROVENÇA";
   ns:addressNumber 445;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40486"^^xsd:float;
   ns:longitude "2.17479"^^xsd:float;
   ns:postCode 8025 .
@@ -10623,6 +11005,7 @@
   ns:addressName "DE NIL FABRA";
   ns:addressNumber 16;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40593"^^xsd:float;
   ns:longitude "2.15179"^^xsd:float;
   ns:postCode 8012 .
@@ -10632,6 +11015,7 @@
   ns:addressName "DE L'ONZE DE SETEMBRE";
   ns:addressNumber 31;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.42989"^^xsd:float;
   ns:longitude "2.19321"^^xsd:float;
   ns:postCode 8030 .
@@ -10641,6 +11025,7 @@
   ns:addressName "VILAMARÍ";
   ns:addressNumber 85;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38070"^^xsd:float;
   ns:longitude "2.14683"^^xsd:float;
   ns:postCode 8015 .
@@ -10649,6 +11034,7 @@
   a ns:StreetAddress;
   ns:addressName "VIA AUGUSTA";
   ns:addressNumber 68;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40051"^^xsd:float;
   ns:longitude "2.15181"^^xsd:float;
   ns:postCode 8006 .
@@ -10658,6 +11044,7 @@
   ns:addressName "JORGE MANRIQUE";
   ns:addressNumber 15;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/41>;
   ns:latitude "41.43123"^^xsd:float;
   ns:longitude "2.14991"^^xsd:float;
   ns:postCode 8035 .
@@ -10667,6 +11054,7 @@
   ns:addressName "LLULL";
   ns:addressNumber 465;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/70>;
   ns:latitude "41.41323"^^xsd:float;
   ns:longitude "2.21776"^^xsd:float;
   ns:postCode 8019 .
@@ -10676,6 +11064,7 @@
   ns:addressName "ALEXANDRE GALÍ";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/62>;
   ns:latitude "41.42397"^^xsd:float;
   ns:longitude "2.18123"^^xsd:float;
   ns:postCode 8027 .
@@ -10685,6 +11074,7 @@
   ns:addressName "PALLARS";
   ns:addressNumber 182;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40034"^^xsd:float;
   ns:longitude "2.19691"^^xsd:float;
   ns:postCode 8005 .
@@ -10694,6 +11084,7 @@
   ns:addressName "DE PRIM";
   ns:addressNumber 19;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/70>;
   ns:latitude "41.41166"^^xsd:float;
   ns:longitude "2.21833"^^xsd:float;
   ns:postCode 8019 .
@@ -10703,6 +11094,7 @@
   ns:addressName "AVENIR";
   ns:addressNumber 35;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39578"^^xsd:float;
   ns:longitude "2.14686"^^xsd:float;
   ns:postCode 8021 .
@@ -10712,6 +11104,7 @@
   ns:addressName "PROVENÇA";
   ns:addressNumber 241;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39388"^^xsd:float;
   ns:longitude "2.16016"^^xsd:float;
   ns:postCode 8008 .
@@ -10721,6 +11114,7 @@
   ns:addressName "DEL CANÓ";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40132"^^xsd:float;
   ns:longitude "2.15744"^^xsd:float;
   ns:postCode 8012 .
@@ -10728,6 +11122,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_6a1c634f>
   a ns:StreetAddress;
   ns:addressName "WORLD TRADE CENTER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37187"^^xsd:float;
   ns:longitude "2.18030"^^xsd:float;
   ns:postCode 8039 .
@@ -10737,6 +11132,7 @@
   ns:addressName "SANT PERE MÉS ALT";
   ns:addressNumber 4;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38710"^^xsd:float;
   ns:longitude "2.17533"^^xsd:float;
   ns:postCode 8003 .
@@ -10746,6 +11142,7 @@
   ns:addressName "DE SANT PAU";
   ns:addressNumber 119;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37540"^^xsd:float;
   ns:longitude "2.16800"^^xsd:float;
   ns:postCode 8001 .
@@ -10755,6 +11152,7 @@
   ns:addressName "CAMPO FLORIDO";
   ns:addressNumber 66;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/62>;
   ns:latitude "41.42167"^^xsd:float;
   ns:longitude "2.17998"^^xsd:float;
   ns:postCode 8027 .
@@ -10764,6 +11162,7 @@
   ns:addressName "PALÈNCIA";
   ns:addressNumber 31;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/61>;
   ns:latitude "41.41821"^^xsd:float;
   ns:longitude "2.19040"^^xsd:float;
   ns:postCode 8027 .
@@ -10773,6 +11172,7 @@
   ns:addressName "GANDUXER";
   ns:addressNumber 29;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39393"^^xsd:float;
   ns:longitude "2.13803"^^xsd:float;
   ns:postCode 8021 .
@@ -10782,6 +11182,7 @@
   ns:addressName "AMILCAR";
   ns:addressNumber 78;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/36>;
   ns:latitude "41.42607"^^xsd:float;
   ns:longitude "2.17225"^^xsd:float;
   ns:postCode 8032 .
@@ -10791,6 +11192,7 @@
   ns:addressName "DE LA SANTACREU";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40509"^^xsd:float;
   ns:longitude "2.15691"^^xsd:float;
   ns:postCode 8024 .
@@ -10800,6 +11202,7 @@
   ns:addressName "INDÚSTRIA";
   ns:addressNumber 10;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/32>;
   ns:latitude "41.40220"^^xsd:float;
   ns:longitude "2.16490"^^xsd:float;
   ns:postCode 8037 .
@@ -10809,6 +11212,7 @@
   ns:addressName "DE GUIPÚSCOA";
   ns:addressNumber 103;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/73>;
   ns:latitude "41.42001"^^xsd:float;
   ns:longitude "2.20166"^^xsd:float;
   ns:postCode 8020 .
@@ -10818,6 +11222,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 680;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/21>;
   ns:latitude "41.38752"^^xsd:float;
   ns:longitude "2.12371"^^xsd:float;
   ns:postCode 8034 .
@@ -10827,6 +11232,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 612;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39256"^^xsd:float;
   ns:longitude "2.14221"^^xsd:float;
   ns:postCode 8021 .
@@ -10836,6 +11242,7 @@
   ns:addressName "PUJADES";
   ns:addressNumber 1;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38888"^^xsd:float;
   ns:longitude "2.18329"^^xsd:float;
   ns:postCode 8003 .
@@ -10845,6 +11252,7 @@
   ns:addressName "SANTA FE DE NOU MÈXIC";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24>;
   ns:latitude "41.39358"^^xsd:float;
   ns:longitude "2.13458"^^xsd:float;
   ns:postCode 8017 .
@@ -10854,6 +11262,7 @@
   ns:addressName "CALABRIA";
   ns:addressNumber 112;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38031"^^xsd:float;
   ns:longitude "2.15443"^^xsd:float;
   ns:postCode 8015 .
@@ -10863,6 +11272,7 @@
   ns:addressName "MARQUÉS DE L'ARGENTERA";
   ns:addressNumber 15;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38484"^^xsd:float;
   ns:longitude "2.18508"^^xsd:float;
   ns:postCode 8003 .
@@ -10872,6 +11282,7 @@
   ns:addressName "LITORAL";
   ns:addressNumber 40;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.38966"^^xsd:float;
   ns:longitude "2.19995"^^xsd:float;
   ns:postCode 8005 .
@@ -10881,6 +11292,7 @@
   ns:addressName "FERNANDO PESSOA";
   ns:addressNumber 41;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.44198"^^xsd:float;
   ns:longitude "2.19295"^^xsd:float;
   ns:postCode 8030 .
@@ -10890,6 +11302,7 @@
   ns:addressName "JOAN MIRÓ";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.38902"^^xsd:float;
   ns:longitude "2.19682"^^xsd:float;
   ns:postCode 8005 .
@@ -10899,6 +11312,7 @@
   ns:addressName "PROVENÇA";
   ns:addressNumber 215;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39277"^^xsd:float;
   ns:longitude "2.15862"^^xsd:float;
   ns:postCode 8008 .
@@ -10908,6 +11322,7 @@
   ns:addressName "DE GRÀCIA";
   ns:addressNumber 61;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39306"^^xsd:float;
   ns:longitude "2.16332"^^xsd:float;
   ns:postCode 8007 .
@@ -10917,6 +11332,7 @@
   ns:addressName "SANT ANTONI MARIA CLARET";
   ns:addressNumber 214;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.41084"^^xsd:float;
   ns:longitude "2.17405"^^xsd:float;
   ns:postCode 8025 .
@@ -10926,6 +11342,7 @@
   ns:addressName "DOCTOR AIGUADER";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.38233"^^xsd:float;
   ns:longitude "2.18709"^^xsd:float;
   ns:postCode 8039 .
@@ -10935,6 +11352,7 @@
   ns:addressName "VALLCARCA";
   ns:addressNumber 11;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/28>;
   ns:latitude "41.40744"^^xsd:float;
   ns:longitude "2.14920"^^xsd:float;
   ns:postCode 8023 .
@@ -10944,6 +11362,7 @@
   ns:addressName "DEL CINCA";
   ns:addressNumber 7;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.43568"^^xsd:float;
   ns:longitude "2.19208"^^xsd:float;
   ns:postCode 8030 .
@@ -10953,6 +11372,7 @@
   ns:addressName "DIPUTACIÓ";
   ns:addressNumber 200;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.38574"^^xsd:float;
   ns:longitude "2.16105"^^xsd:float;
   ns:postCode 8011 .
@@ -10962,6 +11382,7 @@
   ns:addressName "JOAN GÜELL";
   ns:addressNumber 174;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38390"^^xsd:float;
   ns:longitude "2.13128"^^xsd:float;
   ns:postCode 8028 .
@@ -10971,6 +11392,7 @@
   ns:addressName "MARTÍ I FRANQUÈS";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.38470"^^xsd:float;
   ns:longitude "2.11707"^^xsd:float;
   ns:postCode 8028 .
@@ -10980,6 +11402,7 @@
   ns:addressName "VALLDAURA";
   ns:addressNumber 171;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/48>;
   ns:latitude "41.43890"^^xsd:float;
   ns:longitude "2.17155"^^xsd:float;
   ns:postCode 8042 .
@@ -10989,6 +11412,7 @@
   ns:addressName "CONCEPCIÓ ARENAL";
   ns:addressNumber 281;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.43250"^^xsd:float;
   ns:longitude "2.18420"^^xsd:float;
   ns:postCode 8033 .
@@ -10997,6 +11421,7 @@
   a ns:StreetAddress;
   ns:addressName "DE LLUIS COMPANYS (ARC DE TRIOMF)";
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.39106"^^xsd:float;
   ns:longitude "2.18011"^^xsd:float;
   ns:postCode 8018 .
@@ -11006,6 +11431,7 @@
   ns:addressName "CUBELLES";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/44>;
   ns:latitude "41.42607"^^xsd:float;
   ns:longitude "2.17515"^^xsd:float;
   ns:postCode 8031 .
@@ -11015,6 +11441,7 @@
   ns:addressName "VALLESPIR";
   ns:addressNumber 130;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38213"^^xsd:float;
   ns:longitude "2.13541"^^xsd:float;
   ns:postCode 8014 .
@@ -11024,6 +11451,7 @@
   ns:addressName "PROVENÇA";
   ns:addressNumber 317;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39881"^^xsd:float;
   ns:longitude "2.16673"^^xsd:float;
   ns:postCode 8037 .
@@ -11033,6 +11461,7 @@
   ns:addressName "GRANOLLERS";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43>;
   ns:latitude "41.42831"^^xsd:float;
   ns:longitude "2.16298"^^xsd:float;
   ns:postCode 8032 .
@@ -11042,6 +11471,7 @@
   ns:addressName "SANCHO DE ÁVILA";
   ns:addressNumber 60;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.39875"^^xsd:float;
   ns:longitude "2.19021"^^xsd:float;
   ns:postCode 8018 .
@@ -11051,6 +11481,7 @@
   ns:addressName "DIPUTACIÓ";
   ns:addressNumber 226;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.38730"^^xsd:float;
   ns:longitude "2.16312"^^xsd:float;
   ns:postCode 8007 .
@@ -11060,6 +11491,7 @@
   ns:addressName "DEL BRASIL";
   ns:addressNumber 5;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/17>;
   ns:latitude "41.37594"^^xsd:float;
   ns:longitude "2.12995"^^xsd:float;
   ns:postCode 8028 .
@@ -11069,6 +11501,7 @@
   ns:addressName "SANT MIQUEL";
   ns:addressNumber 4;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.38170"^^xsd:float;
   ns:longitude "2.17729"^^xsd:float;
   ns:postCode 8002 .
@@ -11077,6 +11510,7 @@
   a ns:StreetAddress;
   ns:addressName "RONDA DE SANT PAU";
   ns:addressNumber 51;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37731"^^xsd:float;
   ns:longitude "2.16467"^^xsd:float;
   ns:postCode 8015 .
@@ -11086,6 +11520,7 @@
   ns:addressName "JOSEP TARRADELLAS";
   ns:addressNumber 27;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.38293"^^xsd:float;
   ns:longitude "2.14207"^^xsd:float;
   ns:postCode 8029 .
@@ -11095,6 +11530,7 @@
   ns:addressName "JORDÀ";
   ns:addressNumber 18;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/39>;
   ns:latitude "41.42677"^^xsd:float;
   ns:longitude "2.13841"^^xsd:float;
   ns:postCode 8035 .
@@ -11104,6 +11540,7 @@
   ns:addressName "BONANOVA";
   ns:addressNumber 100;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/23>;
   ns:latitude "41.40079"^^xsd:float;
   ns:longitude "2.12288"^^xsd:float;
   ns:postCode 8017 .
@@ -11113,6 +11550,7 @@
   ns:addressName "OLIMPIC";
   ns:addressNumber 8;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.36197"^^xsd:float;
   ns:longitude "2.15432"^^xsd:float;
   ns:postCode 8038 .
@@ -11122,6 +11560,7 @@
   ns:addressName "CIUTAT D'ASUNCIÓN";
   ns:addressNumber 73;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/58>;
   ns:latitude "41.44314"^^xsd:float;
   ns:longitude "2.19960"^^xsd:float;
   ns:postCode 8030 .
@@ -11129,6 +11568,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_7c503fa0>
   a ns:StreetAddress;
   ns:addressName "MOLL ORIENTAL";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.36945"^^xsd:float;
   ns:longitude "2.18795"^^xsd:float;
   ns:postCode 8039 .
@@ -11138,6 +11578,7 @@
   ns:addressName "GAVÀ";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/16>;
   ns:latitude "41.37236"^^xsd:float;
   ns:longitude "2.14194"^^xsd:float;
   ns:postCode 8014 .
@@ -11147,6 +11588,7 @@
   ns:addressName "GALLEGO";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.37856"^^xsd:float;
   ns:longitude "2.12024"^^xsd:float;
   ns:postCode 8028 .
@@ -11156,6 +11598,7 @@
   ns:addressName "MERIDIANA";
   ns:addressNumber 71;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.40147"^^xsd:float;
   ns:longitude "2.18676"^^xsd:float;
   ns:postCode 8018 .
@@ -11165,6 +11608,7 @@
   ns:addressName "MARITIM";
   ns:addressNumber 11;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.38239"^^xsd:float;
   ns:longitude "2.19429"^^xsd:float;
   ns:postCode 8003 .
@@ -11174,6 +11618,7 @@
   ns:addressName "FRANCESC CAMBÓ";
   ns:addressNumber 10;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38556"^^xsd:float;
   ns:longitude "2.17732"^^xsd:float;
   ns:postCode 8003 .
@@ -11182,6 +11627,7 @@
   a ns:StreetAddress;
   ns:addressName "TETUAN";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39434"^^xsd:float;
   ns:longitude "2.17517"^^xsd:float;
   ns:postCode 8010 .
@@ -11191,6 +11637,7 @@
   ns:addressName "PARAL.LEL";
   ns:addressNumber 164;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37518"^^xsd:float;
   ns:longitude "2.15687"^^xsd:float;
   ns:postCode 8015 .
@@ -11200,6 +11647,7 @@
   ns:addressName "PUJADES";
   ns:addressNumber 57;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.39586"^^xsd:float;
   ns:longitude "2.19295"^^xsd:float;
   ns:postCode 8019 .
@@ -11209,6 +11657,7 @@
   ns:addressName "RIUS I TAULET";
   ns:addressNumber 4;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.37274"^^xsd:float;
   ns:longitude "2.15391"^^xsd:float;
   ns:postCode 8004 .
@@ -11218,6 +11667,7 @@
   ns:addressName "SANTALÓ";
   ns:addressNumber 165;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.4009"^^xsd:float;
   ns:longitude "2.13892"^^xsd:float;
   ns:postCode 8021 .
@@ -11227,6 +11677,7 @@
   ns:addressName "LONDRES";
   ns:addressNumber 53;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.39126"^^xsd:float;
   ns:longitude "2.14763"^^xsd:float;
   ns:postCode 8036 .
@@ -11236,6 +11687,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 26;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/70>;
   ns:latitude "41.41108"^^xsd:float;
   ns:longitude "2.21631"^^xsd:float;
   ns:postCode 8019 .
@@ -11245,6 +11697,7 @@
   ns:addressName "CATALUNYA";
   ns:addressNumber 33;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38969"^^xsd:float;
   ns:longitude "2.16521"^^xsd:float;
   ns:postCode 8007 .
@@ -11254,6 +11707,7 @@
   ns:addressName "DEL DOCTOR TRUETA";
   ns:addressNumber 222;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.39921"^^xsd:float;
   ns:longitude "2.20414"^^xsd:float;
   ns:postCode 8005 .
@@ -11263,17 +11717,19 @@
   ns:addressName "LISBOA";
   ns:addressNumber 128;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/42>;
   ns:latitude "41.42676"^^xsd:float;
   ns:longitude "2.15219"^^xsd:float;
   ns:postCode 8032 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_81a8c721>
-  a ns:StreetAddress;
   ns:addressName "JOAN XXIII";
   ns:addressNumber 17;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.38346"^^xsd:float;
   ns:longitude "2.12217"^^xsd:float;
+  a ns:StreetAddress;
   ns:postCode 8028 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_81cd7202>
@@ -11281,6 +11737,7 @@
   ns:addressName "DEL RAVAL";
   ns:addressNumber 20;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37810"^^xsd:float;
   ns:longitude "2.16967"^^xsd:float;
   ns:postCode 8001 .
@@ -11289,6 +11746,7 @@
   a ns:StreetAddress;
   ns:addressName "REPÚBLICA DOMINICANA";
   ns:addressNumber 25;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59>;
   ns:latitude "41.43992"^^xsd:float;
   ns:longitude "2.19706"^^xsd:float;
   ns:postCode 8030 .
@@ -11298,6 +11756,7 @@
   ns:addressName "CARDENAL TEDESCHINI";
   ns:addressNumber 13;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/61>;
   ns:latitude "41.42536"^^xsd:float;
   ns:longitude "2.18520"^^xsd:float;
   ns:postCode 8027 .
@@ -11307,6 +11766,7 @@
   ns:addressName "LONDRES";
   ns:addressNumber 63;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.39175"^^xsd:float;
   ns:longitude "2.14829"^^xsd:float;
   ns:postCode 8036 .
@@ -11316,6 +11776,7 @@
   ns:addressName "DIPUTACIÓ";
   ns:addressNumber 22;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.37784"^^xsd:float;
   ns:longitude "2.15052"^^xsd:float;
   ns:postCode 8015 .
@@ -11325,6 +11786,7 @@
   ns:addressName "HONDURAS";
   ns:addressNumber 32;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/61>;
   ns:latitude "41.42024"^^xsd:float;
   ns:longitude "2.18948"^^xsd:float;
   ns:postCode 8027 .
@@ -11334,6 +11796,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 634;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.39084"^^xsd:float;
   ns:longitude "2.13657"^^xsd:float;
   ns:postCode 8017 .
@@ -11343,6 +11806,7 @@
   ns:addressName "TEODOR LLORENTE";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/35>;
   ns:latitude "41.41917"^^xsd:float;
   ns:longitude "2.18018"^^xsd:float;
   ns:postCode 8041 .
@@ -11351,6 +11815,7 @@
   a ns:StreetAddress;
   ns:addressName "LA RAMBLA";
   ns:addressNumber 1;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.37632"^^xsd:float;
   ns:longitude "2.17697"^^xsd:float;
   ns:postCode 8002 .
@@ -11360,6 +11825,7 @@
   ns:addressName "SANT ADRIÀ";
   ns:addressNumber 88;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59>;
   ns:latitude "41.43546"^^xsd:float;
   ns:longitude "2.20015"^^xsd:float;
   ns:postCode 8030 .
@@ -11369,6 +11835,7 @@
   ns:addressName "AGUSTÍ DURAN I SANPERE";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.38138"^^xsd:float;
   ns:longitude "2.16807"^^xsd:float;
   ns:postCode 8001 .
@@ -11378,6 +11845,7 @@
   ns:addressName "SARRIÀ";
   ns:addressNumber 163;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.39223"^^xsd:float;
   ns:longitude "2.13092"^^xsd:float;
   ns:postCode 8017 .
@@ -11387,6 +11855,7 @@
   ns:addressName "GRANADELLA";
   ns:addressNumber 10;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59>;
   ns:latitude "41.43831"^^xsd:float;
   ns:longitude "2.20398"^^xsd:float;
   ns:postCode 8030 .
@@ -11396,6 +11865,7 @@
   ns:addressName "CATALUNYA";
   ns:addressNumber 7;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38654"^^xsd:float;
   ns:longitude "2.16942"^^xsd:float;
   ns:postCode 8002 .
@@ -11405,6 +11875,7 @@
   ns:addressName "GRAN DE GRÀCIA";
   ns:addressNumber 37;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.39891"^^xsd:float;
   ns:longitude "2.15642"^^xsd:float;
   ns:postCode 8012 .
@@ -11414,6 +11885,7 @@
   ns:addressName "TARRAGONA";
   ns:addressNumber 103;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/15>;
   ns:latitude "41.37639"^^xsd:float;
   ns:longitude "2.14732"^^xsd:float;
   ns:postCode 8014 .
@@ -11422,6 +11894,7 @@
   a ns:StreetAddress;
   ns:addressName "PASSATGE DE SENILLOSA";
   ns:addressNumber 3;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/23>;
   ns:latitude "41.39547"^^xsd:float;
   ns:longitude "2.12504"^^xsd:float;
   ns:postCode 8034 .
@@ -11430,6 +11903,7 @@
   a ns:StreetAddress;
   ns:addressName "JOSEP SAMITIER";
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.38121"^^xsd:float;
   ns:longitude "2.11908"^^xsd:float;
   ns:postCode 8028 .
@@ -11439,6 +11913,7 @@
   ns:addressName "SANT FRANCESC XAVIER";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/52>;
   ns:latitude "41.44170"^^xsd:float;
   ns:longitude "2.17815"^^xsd:float;
   ns:postCode 8016 .
@@ -11448,6 +11923,7 @@
   ns:addressName "MUNTANYA";
   ns:addressNumber 49;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/35>;
   ns:latitude "41.42094"^^xsd:float;
   ns:longitude "2.17683"^^xsd:float;
   ns:postCode 8041 .
@@ -11457,6 +11933,7 @@
   ns:addressName "PEDROSA";
   ns:addressNumber 24;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/53>;
   ns:latitude "41.44906"^^xsd:float;
   ns:longitude "2.18338"^^xsd:float;
   ns:postCode 8033 .
@@ -11466,6 +11943,7 @@
   ns:addressName "ENRIC GRANADOS";
   ns:addressNumber 35;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.38966"^^xsd:float;
   ns:longitude "2.15990"^^xsd:float;
   ns:postCode 8007 .
@@ -11475,6 +11953,7 @@
   ns:addressName "ÀVILA";
   ns:addressNumber 94;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.39845"^^xsd:float;
   ns:longitude "2.19372"^^xsd:float;
   ns:postCode 8018 .
@@ -11484,6 +11963,7 @@
   ns:addressName "PALLARS";
   ns:addressNumber 504;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/70>;
   ns:latitude "41.41405"^^xsd:float;
   ns:longitude "2.21504"^^xsd:float;
   ns:postCode 8019 .
@@ -11493,6 +11973,7 @@
   ns:addressName "BRUC";
   ns:addressNumber 66;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39348"^^xsd:float;
   ns:longitude "2.17074"^^xsd:float;
   ns:postCode 8009 .
@@ -11502,6 +11983,7 @@
   ns:addressName "AGUSTÍ DURAN I SANPERE";
   ns:addressNumber 10;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.38163"^^xsd:float;
   ns:longitude "2.16772"^^xsd:float;
   ns:postCode 8001 .
@@ -11511,6 +11993,7 @@
   ns:addressName "PAMPLONA";
   ns:addressNumber 116;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.39908"^^xsd:float;
   ns:longitude "2.18839"^^xsd:float;
   ns:postCode 8018 .
@@ -11520,6 +12003,7 @@
   ns:addressName "INDÚSTRIA";
   ns:addressNumber 329;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/63>;
   ns:latitude "41.41729"^^xsd:float;
   ns:longitude "2.18447"^^xsd:float;
   ns:postCode 8027 .
@@ -11529,6 +12013,7 @@
   ns:addressName "PALAMÓS";
   ns:addressNumber 33;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/53>;
   ns:latitude "41.44692"^^xsd:float;
   ns:longitude "2.18485"^^xsd:float;
   ns:postCode 8033 .
@@ -11538,6 +12023,7 @@
   ns:addressName "DOCTOR SALVADOR CARDENAL";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.38538"^^xsd:float;
   ns:longitude "2.12289"^^xsd:float;
   ns:postCode 8028 .
@@ -11547,6 +12033,7 @@
   ns:addressName "SELVA DE MAR";
   ns:addressNumber 230;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/72>;
   ns:latitude "41.41769"^^xsd:float;
   ns:longitude "2.19768"^^xsd:float;
   ns:postCode 8020 .
@@ -11556,6 +12043,7 @@
   ns:addressName "D'ALACANT";
   ns:addressNumber 12;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24>;
   ns:latitude "41.40007"^^xsd:float;
   ns:longitude "2.13269"^^xsd:float;
   ns:postCode 8017 .
@@ -11565,6 +12053,7 @@
   ns:addressName "ARAGÓ";
   ns:addressNumber 147;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38475"^^xsd:float;
   ns:longitude "2.15467"^^xsd:float;
   ns:postCode 8015 .
@@ -11574,6 +12063,7 @@
   ns:addressName "D'EDUARD MARISTANY";
   ns:addressNumber 1;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/70>;
   ns:latitude "41.41097"^^xsd:float;
   ns:longitude "2.21937"^^xsd:float;
   ns:postCode 8019 .
@@ -11583,6 +12073,7 @@
   ns:addressName "JEAN GENET";
   ns:addressNumber 1;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37673"^^xsd:float;
   ns:longitude "2.17400"^^xsd:float;
   ns:postCode 8001 .
@@ -11592,6 +12083,7 @@
   ns:addressName "FABRA I PUIG";
   ns:addressNumber 344;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/46>;
   ns:latitude "41.43062"^^xsd:float;
   ns:longitude "2.16710"^^xsd:float;
   ns:postCode 8031 .
@@ -11601,6 +12093,7 @@
   ns:addressName "ARAGÓ";
   ns:addressNumber 288;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39352"^^xsd:float;
   ns:longitude "2.16679"^^xsd:float;
   ns:postCode 8009 .
@@ -11610,6 +12103,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 650;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38979"^^xsd:float;
   ns:longitude "2.13286"^^xsd:float;
   ns:postCode 8017 .
@@ -11618,6 +12112,7 @@
   a ns:StreetAddress;
   ns:addressName "RDA. DE SANT PERE";
   ns:addressNumber 26;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38949"^^xsd:float;
   ns:longitude "2.17425"^^xsd:float;
   ns:postCode 8010 .
@@ -11627,6 +12122,7 @@
   ns:addressName "ESTEVE TERRADAS";
   ns:addressNumber 42;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/28>;
   ns:latitude "41.41449"^^xsd:float;
   ns:longitude "2.14024"^^xsd:float;
   ns:postCode 8023 .
@@ -11636,6 +12132,7 @@
   ns:addressName "JOSEP PLA";
   ns:addressNumber 67;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69>;
   ns:latitude "41.41138"^^xsd:float;
   ns:longitude "2.21220"^^xsd:float;
   ns:postCode 8019 .
@@ -11645,6 +12142,7 @@
   ns:addressName "JANE ADDAMS";
   ns:addressNumber 26;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13>;
   ns:latitude "41.36212"^^xsd:float;
   ns:longitude "2.13561"^^xsd:float;
   ns:postCode 8038 .
@@ -11654,6 +12152,7 @@
   ns:addressName "PARAL.LEL";
   ns:addressNumber 98;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.37517"^^xsd:float;
   ns:longitude "2.16589"^^xsd:float;
   ns:postCode 8015 .
@@ -11663,6 +12162,7 @@
   ns:addressName "CONSELL DE CENT";
   ns:addressNumber 566;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40403"^^xsd:float;
   ns:longitude "2.18314"^^xsd:float;
   ns:postCode 8013 .
@@ -11672,6 +12172,7 @@
   ns:addressName "VILADOMAT";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37557"^^xsd:float;
   ns:longitude "2.16293"^^xsd:float;
   ns:postCode 8015 .
@@ -11681,6 +12182,7 @@
   ns:addressName "DE GUIPÚSCOA";
   ns:addressNumber 158;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/73>;
   ns:latitude "41.42279"^^xsd:float;
   ns:longitude "2.20603"^^xsd:float;
   ns:postCode 8020 .
@@ -11690,6 +12192,7 @@
   ns:addressName "ESTADI";
   ns:addressNumber 12;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.36536"^^xsd:float;
   ns:longitude "2.14760"^^xsd:float;
   ns:postCode 8038 .
@@ -11699,6 +12202,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 1131;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/73>;
   ns:latitude "41.41839"^^xsd:float;
   ns:longitude "2.20581"^^xsd:float;
   ns:postCode 8020 .
@@ -11708,6 +12212,7 @@
   ns:addressName "VALLESPIR";
   ns:addressNumber 194;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38471"^^xsd:float;
   ns:longitude "2.13343"^^xsd:float;
   ns:postCode 8014 .
@@ -11717,6 +12222,7 @@
   ns:addressName "VALLCARCA";
   ns:addressNumber 196;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/28>;
   ns:latitude "41.41605"^^xsd:float;
   ns:longitude "2.14215"^^xsd:float;
   ns:postCode 8023 .
@@ -11726,6 +12232,7 @@
   ns:addressName "DIPUTACIÓ";
   ns:addressNumber 373;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39683"^^xsd:float;
   ns:longitude "2.17565"^^xsd:float;
   ns:postCode 8013 .
@@ -11735,6 +12242,7 @@
   ns:addressName "ALFAMBRA";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/21>;
   ns:latitude "41.38564"^^xsd:float;
   ns:longitude "2.11309"^^xsd:float;
   ns:postCode 8034 .
@@ -11744,6 +12252,7 @@
   ns:addressName "DELS JARDINS D'ALFÀBIA";
   ns:addressNumber 1;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/45>;
   ns:latitude "41.43733"^^xsd:float;
   ns:longitude "2.17409"^^xsd:float;
   ns:postCode 8016 .
@@ -11753,6 +12262,7 @@
   ns:addressName "SANT RAMON NONAT";
   ns:addressNumber 26;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.37701"^^xsd:float;
   ns:longitude "2.11698"^^xsd:float;
   ns:postCode 8028 .
@@ -11762,6 +12272,7 @@
   ns:addressName "ELISA";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/27>;
   ns:latitude "41.40526"^^xsd:float;
   ns:longitude "2.14202"^^xsd:float;
   ns:postCode 8023 .
@@ -11771,6 +12282,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 375;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37579"^^xsd:float;
   ns:longitude "2.14991"^^xsd:float;
   ns:postCode 8015 .
@@ -11780,6 +12292,7 @@
   ns:addressName "SANT ADRIÀ";
   ns:addressNumber 113;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59>;
   ns:latitude "41.43617"^^xsd:float;
   ns:longitude "2.20470"^^xsd:float;
   ns:postCode 8030 .
@@ -11789,6 +12302,7 @@
   ns:addressName "CASANOVA";
   ns:addressNumber 119;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.38788"^^xsd:float;
   ns:longitude "2.15529"^^xsd:float;
   ns:postCode 8036 .
@@ -11798,6 +12312,7 @@
   ns:addressName "VALLESPIR";
   ns:addressNumber 13;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.37811"^^xsd:float;
   ns:longitude "2.13786"^^xsd:float;
   ns:postCode 8014 .
@@ -11807,16 +12322,18 @@
   ns:addressName "VALÈNCIA";
   ns:addressNumber 237;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39187"^^xsd:float;
   ns:longitude "2.16202"^^xsd:float;
   ns:postCode 8007 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_a24b8771>
+  a ns:StreetAddress;
   ns:addressName "ROSSELLÓ";
   ns:addressNumber 261;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39540"^^xsd:float;
-  a ns:StreetAddress;
   ns:longitude "2.15994"^^xsd:float;
   ns:postCode 8008 .
 
@@ -11825,6 +12342,7 @@
   ns:addressName "PUJADES";
   ns:addressNumber 2;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38913"^^xsd:float;
   ns:longitude "2.18348"^^xsd:float;
   ns:postCode 8003 .
@@ -11834,6 +12352,7 @@
   ns:addressName "CASTELLA";
   ns:addressNumber 28;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40562"^^xsd:float;
   ns:longitude "2.19771"^^xsd:float;
   ns:postCode 8018 .
@@ -11843,6 +12362,7 @@
   ns:addressName "ROMÁN MACAYA";
   ns:addressNumber 8;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/25>;
   ns:latitude "41.41346"^^xsd:float;
   ns:longitude "2.13520"^^xsd:float;
   ns:postCode 8022 .
@@ -11852,6 +12372,7 @@
   ns:addressName "COMTE D'URGELL";
   ns:addressNumber 43;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.38125"^^xsd:float;
   ns:longitude "2.15947"^^xsd:float;
   ns:postCode 8011 .
@@ -11861,6 +12382,7 @@
   ns:addressName "RASOS DE PEGUERA";
   ns:addressNumber 10;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/55>;
   ns:latitude "41.46209"^^xsd:float;
   ns:longitude "2.17895"^^xsd:float;
   ns:postCode 8033 .
@@ -11870,6 +12392,7 @@
   ns:addressName "ROSA SENSAT";
   ns:addressNumber 12;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.39060"^^xsd:float;
   ns:longitude "2.19723"^^xsd:float;
   ns:postCode 8005 .
@@ -11879,6 +12402,7 @@
   ns:addressName "JOSEP TARRADELLAS";
   ns:addressNumber 58;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38500"^^xsd:float;
   ns:longitude "2.14291"^^xsd:float;
   ns:postCode 8029 .
@@ -11888,6 +12412,7 @@
   ns:addressName "LLEIDA";
   ns:addressNumber 40;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.37173"^^xsd:float;
   ns:longitude "2.15540"^^xsd:float;
   ns:postCode 8004 .
@@ -11897,6 +12422,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 179;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/16>;
   ns:latitude "41.36755"^^xsd:float;
   ns:longitude "2.13882"^^xsd:float;
   ns:postCode 8014 .
@@ -11906,6 +12432,7 @@
   ns:addressName "ANDREU NIN";
   ns:addressNumber 22;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/45>;
   ns:latitude "41.43472"^^xsd:float;
   ns:longitude "2.18177"^^xsd:float;
   ns:postCode 8016 .
@@ -11915,6 +12442,7 @@
   ns:addressName "SARDENYA";
   ns:addressNumber 66;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.39146"^^xsd:float;
   ns:longitude "2.18937"^^xsd:float;
   ns:postCode 8005 .
@@ -11924,6 +12452,7 @@
   ns:addressName "CORTS CATALANES";
   ns:addressNumber 760;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.39797"^^xsd:float;
   ns:longitude "2.18010"^^xsd:float;
   ns:postCode 8013 .
@@ -11933,6 +12462,7 @@
   ns:addressName "ROMA";
   ns:addressNumber 136;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.38525"^^xsd:float;
   ns:longitude "2.15508"^^xsd:float;
   ns:postCode 8011 .
@@ -11940,6 +12470,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_accab154>
   a ns:StreetAddress;
   ns:addressName "AMPANA DE LA MAQUINISTA (SAO PAULO I PL. DE";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59>;
   ns:latitude "41.43896"^^xsd:float;
   ns:longitude "2.19961"^^xsd:float;
   ns:postCode 8030 .
@@ -11949,6 +12480,7 @@
   ns:addressName "GARCILASO";
   ns:addressNumber 77;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/61>;
   ns:latitude "41.42284"^^xsd:float;
   ns:longitude "2.18663"^^xsd:float;
   ns:postCode 8027 .
@@ -11957,6 +12489,7 @@
   a ns:StreetAddress;
   ns:addressName "270 - CRTA. DE RIBES";
   ns:addressNumber 77;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/57>;
   ns:latitude "41.44863"^^xsd:float;
   ns:longitude "2.18983"^^xsd:float;
   ns:postCode 8033 .
@@ -11966,6 +12499,7 @@
   ns:addressName "ENRIC GRANADOS";
   ns:addressNumber 93;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.39213"^^xsd:float;
   ns:longitude "2.15635"^^xsd:float;
   ns:postCode 8008 .
@@ -11975,6 +12509,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 602;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39287"^^xsd:float;
   ns:longitude "2.14341"^^xsd:float;
   ns:postCode 8021 .
@@ -11984,6 +12519,7 @@
   ns:addressName "PERE IV";
   ns:addressNumber 301;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.40934"^^xsd:float;
   ns:longitude "2.20244"^^xsd:float;
   ns:postCode 8020 .
@@ -11993,6 +12529,7 @@
   ns:addressName "FABRA I PUIG";
   ns:addressNumber 67;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.42992"^^xsd:float;
   ns:longitude "2.18498"^^xsd:float;
   ns:postCode 8030 .
@@ -12002,6 +12539,7 @@
   ns:addressName "MARINA";
   ns:addressNumber 25;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.38814"^^xsd:float;
   ns:longitude "2.19555"^^xsd:float;
   ns:postCode 8005 .
@@ -12011,6 +12549,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 368;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.37433"^^xsd:float;
   ns:longitude "2.14793"^^xsd:float;
   ns:postCode 8010 .
@@ -12019,6 +12558,7 @@
   a ns:StreetAddress;
   ns:addressName "VIRREI AMAT";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/44>;
   ns:latitude "41.42964"^^xsd:float;
   ns:longitude "2.17444"^^xsd:float;
   ns:postCode 8016 .
@@ -12028,14 +12568,16 @@
   ns:addressName "ROSSELLÓ";
   ns:addressNumber 497;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40811"^^xsd:float;
   ns:longitude "2.17675"^^xsd:float;
-  ns:postCode "0"^^xsd:integer .
+  ns:postCode 8025 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_b40e7575>
   a ns:StreetAddress;
   ns:addressName "TERESA DE CLARAMUNT";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13>;
   ns:latitude "41.36310"^^xsd:float;
   ns:longitude "2.13983"^^xsd:float;
   ns:postCode 8038 .
@@ -12045,6 +12587,7 @@
   ns:addressName "ARGENTERA";
   ns:addressNumber 23;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/28>;
   ns:latitude "41.41176"^^xsd:float;
   ns:longitude "2.14534"^^xsd:float;
   ns:postCode 8023 .
@@ -12054,6 +12597,7 @@
   ns:addressName "DE LES CORTS";
   ns:addressNumber 20;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38544"^^xsd:float;
   ns:longitude "2.12887"^^xsd:float;
   ns:postCode 8028 .
@@ -12062,6 +12606,7 @@
   a ns:StreetAddress;
   ns:addressName "DEL MAR";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.37480"^^xsd:float;
   ns:longitude "2.18890"^^xsd:float;
   ns:postCode 8003 .
@@ -12071,6 +12616,7 @@
   ns:addressName "COMTE URGELL";
   ns:addressNumber 23;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.38039"^^xsd:float;
   ns:longitude "2.16065"^^xsd:float;
   ns:postCode 8011 .
@@ -12080,6 +12626,7 @@
   ns:addressName "PONTEVEDRA";
   ns:addressNumber 58;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.37686"^^xsd:float;
   ns:longitude "2.19067"^^xsd:float;
   ns:postCode 8003 .
@@ -12089,6 +12636,7 @@
   ns:addressName "LLUIS COMPANYS";
   ns:addressNumber 18;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.39142"^^xsd:float;
   ns:longitude "2.18056"^^xsd:float;
   ns:postCode 8018 .
@@ -12098,6 +12646,7 @@
   ns:addressName "VALL D'HEBRÓN";
   ns:addressNumber 168;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/41>;
   ns:latitude "41.42806"^^xsd:float;
   ns:longitude "2.14437"^^xsd:float;
   ns:postCode 8035 .
@@ -12107,6 +12656,7 @@
   ns:addressName "EDUARD TODA";
   ns:addressNumber 33;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43>;
   ns:latitude "41.43459"^^xsd:float;
   ns:longitude "2.15852"^^xsd:float;
   ns:postCode 8031 .
@@ -12116,6 +12666,7 @@
   ns:addressName "VILARDELL";
   ns:addressNumber 18;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/15>;
   ns:latitude "41.37452"^^xsd:float;
   ns:longitude "2.14225"^^xsd:float;
   ns:postCode 8014 .
@@ -12125,6 +12676,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 1062;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.41392"^^xsd:float;
   ns:longitude "2.20179"^^xsd:float;
   ns:postCode 8020 .
@@ -12134,6 +12686,7 @@
   ns:addressName "DELS ENAMORATS";
   ns:addressNumber 49;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40405"^^xsd:float;
   ns:longitude "2.18119"^^xsd:float;
   ns:postCode 8013 .
@@ -12142,6 +12695,7 @@
   a ns:StreetAddress;
   ns:addressName "PTGE. CALAFELL";
   ns:addressNumber 3;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/37>;
   ns:latitude "41.42377"^^xsd:float;
   ns:longitude "2.15461"^^xsd:float;
   ns:postCode 8032 .
@@ -12151,6 +12705,7 @@
   ns:addressName "JUDEA";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/39>;
   ns:latitude "41.42506"^^xsd:float;
   ns:longitude "2.14117"^^xsd:float;
   ns:postCode 8035 .
@@ -12160,6 +12715,7 @@
   ns:addressName "DE CERVELLÓ";
   ns:addressNumber 5;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37656"^^xsd:float;
   ns:longitude "2.17486"^^xsd:float;
   ns:postCode 8001 .
@@ -12169,6 +12725,7 @@
   ns:addressName "PROVENÇA";
   ns:addressNumber 310;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39596"^^xsd:float;
   ns:longitude "2.16354"^^xsd:float;
   ns:postCode 8008 .
@@ -12178,6 +12735,7 @@
   ns:addressName "COMTE BORRELL";
   ns:addressNumber 198;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38540"^^xsd:float;
   ns:longitude "2.15218"^^xsd:float;
   ns:postCode 8029 .
@@ -12187,6 +12745,7 @@
   ns:addressName "CARME KARR";
   ns:addressNumber 12;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/23>;
   ns:latitude "41.39862"^^xsd:float;
   ns:longitude "2.12049"^^xsd:float;
   ns:postCode 8034 .
@@ -12196,6 +12755,7 @@
   ns:addressName "CAN MARCET";
   ns:addressNumber 3;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/41>;
   ns:latitude "41.43418"^^xsd:float;
   ns:longitude "2.15187"^^xsd:float;
   ns:postCode 8035 .
@@ -12205,6 +12765,7 @@
   ns:addressName "CAVALLERS";
   ns:addressNumber 67;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/21>;
   ns:latitude "41.39343"^^xsd:float;
   ns:longitude "2.11510"^^xsd:float;
   ns:postCode 8034 .
@@ -12214,6 +12775,7 @@
   ns:addressName "PERE IV";
   ns:addressNumber 488;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.41489"^^xsd:float;
   ns:longitude "2.20718"^^xsd:float;
   ns:postCode 8019 .
@@ -12222,6 +12784,7 @@
   a ns:StreetAddress;
   ns:addressName "VICENÇ MARTORELL";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.38426"^^xsd:float;
   ns:longitude "2.16925"^^xsd:float;
   ns:postCode 8001 .
@@ -12231,6 +12794,7 @@
   ns:addressName "SARDENYA";
   ns:addressNumber 465;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/32>;
   ns:latitude "41.40909"^^xsd:float;
   ns:longitude "2.16563"^^xsd:float;
   ns:postCode 8025 .
@@ -12240,6 +12804,7 @@
   ns:addressName "PEDRELL";
   ns:addressNumber 52;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/36>;
   ns:latitude "41.42465"^^xsd:float;
   ns:longitude "2.16628"^^xsd:float;
   ns:postCode 8032 .
@@ -12249,6 +12814,7 @@
   ns:addressName "RAMON TURRÓ";
   ns:addressNumber 4;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.39053"^^xsd:float;
   ns:longitude "2.19063"^^xsd:float;
   ns:postCode 8005 .
@@ -12258,6 +12824,7 @@
   ns:addressName "MALATS";
   ns:addressNumber 98;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.43667"^^xsd:float;
   ns:longitude "2.18610"^^xsd:float;
   ns:postCode 8030 .
@@ -12267,6 +12834,7 @@
   ns:addressName "PARAL.LEL";
   ns:addressNumber 54;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37511"^^xsd:float;
   ns:longitude "2.17093"^^xsd:float;
   ns:postCode 8004 .
@@ -12276,6 +12844,7 @@
   ns:addressName "FRA JUNÍPER SERRA";
   ns:addressNumber 53;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59>;
   ns:latitude "41.43214"^^xsd:float;
   ns:longitude "2.20548"^^xsd:float;
   ns:postCode 8020 .
@@ -12285,6 +12854,7 @@
   ns:addressName "ÀVILA";
   ns:addressNumber 102;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.39901"^^xsd:float;
   ns:longitude "2.19289"^^xsd:float;
   ns:postCode 8018 .
@@ -12294,6 +12864,7 @@
   ns:addressName "TORRAS I BAGES";
   ns:addressNumber 129;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.44336"^^xsd:float;
   ns:longitude "2.19063"^^xsd:float;
   ns:postCode 8030 .
@@ -12301,6 +12872,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_c0235285>
   a ns:StreetAddress;
   ns:addressName "SEU DEL DISTRICTE (NOU BARRIS)";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/48>;
   ns:latitude "41.43634"^^xsd:float;
   ns:longitude "2.17067"^^xsd:float;
   ns:postCode 8042 .
@@ -12310,6 +12882,7 @@
   ns:addressName "SANT OLEGUER";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.37753"^^xsd:float;
   ns:longitude "2.17073"^^xsd:float;
   ns:postCode 8001 .
@@ -12319,6 +12892,7 @@
   ns:addressName "RAMON TURRÓ";
   ns:addressNumber 182;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.39816"^^xsd:float;
   ns:longitude "2.20085"^^xsd:float;
   ns:postCode 8005 .
@@ -12328,6 +12902,7 @@
   ns:addressName "ROC BORONAT";
   ns:addressNumber 134;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.40349"^^xsd:float;
   ns:longitude "2.19365"^^xsd:float;
   ns:postCode 8018 .
@@ -12337,6 +12912,7 @@
   ns:addressName "VALLDONZELLA";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/1>;
   ns:latitude "41.38457"^^xsd:float;
   ns:longitude "2.16626"^^xsd:float;
   ns:postCode 8001 .
@@ -12346,6 +12922,7 @@
   ns:addressName "VALLESPIR";
   ns:addressNumber 49;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.37964"^^xsd:float;
   ns:longitude "2.13682"^^xsd:float;
   ns:postCode 8014 .
@@ -12355,6 +12932,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 1118;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.41679"^^xsd:float;
   ns:longitude "2.20583"^^xsd:float;
   ns:postCode 8020 .
@@ -12364,6 +12942,7 @@
   ns:addressName "CASANOVA";
   ns:addressNumber 55;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.38477"^^xsd:float;
   ns:longitude "2.15925"^^xsd:float;
   ns:postCode 8011 .
@@ -12373,6 +12952,7 @@
   ns:addressName "ESPRONCEDA";
   ns:addressNumber 124;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40659"^^xsd:float;
   ns:longitude "2.20302"^^xsd:float;
   ns:postCode 8005 .
@@ -12382,6 +12962,7 @@
   ns:addressName "DE RIBES";
   ns:addressNumber 59;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.39828"^^xsd:float;
   ns:longitude "2.18303"^^xsd:float;
   ns:postCode 8013 .
@@ -12391,16 +12972,18 @@
   ns:addressName "CASANOVA";
   ns:addressNumber 139;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.38871"^^xsd:float;
   ns:longitude "2.15422"^^xsd:float;
   ns:postCode 8036 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_c48e7eae>
-  a ns:StreetAddress;
   ns:addressName "VILLENA";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.38860"^^xsd:float;
+  a ns:StreetAddress;
   ns:longitude "2.19219"^^xsd:float;
   ns:postCode 8005 .
 
@@ -12409,6 +12992,7 @@
   ns:addressName "BAC DE RODA";
   ns:addressNumber 11;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40233"^^xsd:float;
   ns:longitude "2.21057"^^xsd:float;
   ns:postCode 8005 .
@@ -12418,6 +13002,7 @@
   ns:addressName "PUJADES";
   ns:addressNumber 173;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40186"^^xsd:float;
   ns:longitude "2.20077"^^xsd:float;
   ns:postCode 8005 .
@@ -12426,6 +13011,7 @@
   a ns:StreetAddress;
   ns:addressName "POETA BOSCÀ";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.37932"^^xsd:float;
   ns:longitude "2.18990"^^xsd:float;
   ns:postCode 8003 .
@@ -12435,6 +13021,7 @@
   ns:addressName "VALL D'HEBRÓN";
   ns:addressNumber 80;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/28>;
   ns:latitude "41.41996"^^xsd:float;
   ns:longitude "2.14018"^^xsd:float;
   ns:postCode 8023 .
@@ -12444,6 +13031,7 @@
   ns:addressName "NÀPOLS";
   ns:addressNumber 183;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39816"^^xsd:float;
   ns:longitude "2.17548"^^xsd:float;
   ns:postCode 8013 .
@@ -12453,6 +13041,7 @@
   ns:addressName "ZONA FRANCA";
   ns:addressNumber 182;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13>;
   ns:latitude "41.36079"^^xsd:float;
   ns:longitude "2.13893"^^xsd:float;
   ns:postCode 8038 .
@@ -12462,6 +13051,7 @@
   ns:addressName "LLACUNA";
   ns:addressNumber 86;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40226"^^xsd:float;
   ns:longitude "2.19762"^^xsd:float;
   ns:postCode 8005 .
@@ -12471,6 +13061,7 @@
   ns:addressName "ARTESA DE SEGRE";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/25>;
   ns:latitude "41.40298"^^xsd:float;
   ns:longitude "2.13446"^^xsd:float;
   ns:postCode 8022 .
@@ -12479,6 +13070,7 @@
   a ns:StreetAddress;
   ns:addressName "RONDA DE SANT PAU";
   ns:addressNumber 79;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37834"^^xsd:float;
   ns:longitude "2.16331"^^xsd:float;
   ns:postCode 8015 .
@@ -12488,6 +13080,7 @@
   ns:addressName "MAIGNON";
   ns:addressNumber 31;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/30>;
   ns:latitude "41.40959"^^xsd:float;
   ns:longitude "2.15249"^^xsd:float;
   ns:postCode 8024 .
@@ -12497,6 +13090,7 @@
   ns:addressName "FLORIDABLANCA";
   ns:addressNumber 49;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.37767"^^xsd:float;
   ns:longitude "2.15723"^^xsd:float;
   ns:postCode 8015 .
@@ -12506,6 +13100,7 @@
   ns:addressName "WATT";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.37544"^^xsd:float;
   ns:longitude "2.13984"^^xsd:float;
   ns:postCode 8014 .
@@ -12515,6 +13110,7 @@
   ns:addressName "ANTILLES";
   ns:addressNumber 8;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/61>;
   ns:latitude "41.42508"^^xsd:float;
   ns:longitude "2.18728"^^xsd:float;
   ns:postCode 8027 .
@@ -12523,6 +13119,7 @@
   a ns:StreetAddress;
   ns:addressName "TARONGERS";
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.36838"^^xsd:float;
   ns:longitude "2.16450"^^xsd:float;
   ns:postCode 8038 .
@@ -12532,6 +13129,7 @@
   ns:addressName "VALÈNCIA";
   ns:addressNumber 621;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/65>;
   ns:latitude "41.41080"^^xsd:float;
   ns:longitude "2.18724"^^xsd:float;
   ns:postCode 8026 .
@@ -12541,6 +13139,7 @@
   ns:addressName "SANCHO DE ÁVILA";
   ns:addressNumber 104;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.40037"^^xsd:float;
   ns:longitude "2.19241"^^xsd:float;
   ns:postCode 8018 .
@@ -12550,6 +13149,7 @@
   ns:addressName "ALMOGÀVERS";
   ns:addressNumber 63;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.39430"^^xsd:float;
   ns:longitude "2.18602"^^xsd:float;
   ns:postCode 8018 .
@@ -12559,6 +13159,7 @@
   ns:addressName "RAMON ALBÓ";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/62>;
   ns:latitude "41.42445"^^xsd:float;
   ns:longitude "2.17731"^^xsd:float;
   ns:postCode 8027 .
@@ -12568,15 +13169,17 @@
   ns:addressName "CÒRSEGA";
   ns:addressNumber 578;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40794"^^xsd:float;
   ns:longitude "2.17486"^^xsd:float;
-  ns:postCode "0"^^xsd:integer .
+  ns:postCode 8025 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_cc8f9863>
   a ns:StreetAddress;
   ns:addressName "TUSET";
   ns:addressNumber 19;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39609"^^xsd:float;
   ns:longitude "2.15131"^^xsd:float;
   ns:postCode 8006 .
@@ -12586,6 +13189,7 @@
   ns:addressName "DOCTOR ROUX";
   ns:addressNumber 86;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24>;
   ns:latitude "41.39989"^^xsd:float;
   ns:longitude "2.12819"^^xsd:float;
   ns:postCode 8017 .
@@ -12595,6 +13199,7 @@
   ns:addressName "DEL NORD";
   ns:addressNumber 5;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40684"^^xsd:float;
   ns:longitude "2.15583"^^xsd:float;
   ns:postCode 8024 .
@@ -12603,6 +13208,7 @@
   a ns:StreetAddress;
   ns:addressName "PTGE. MALUQUER";
   ns:addressNumber 16;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/25>;
   ns:latitude "41.40954"^^xsd:float;
   ns:longitude "2.13603"^^xsd:float;
   ns:postCode 8022 .
@@ -12612,6 +13218,7 @@
   ns:addressName "CARDENAL REIG";
   ns:addressNumber 11;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.37684"^^xsd:float;
   ns:longitude "2.11402"^^xsd:float;
   ns:postCode 8028 .
@@ -12621,6 +13228,7 @@
   ns:addressName "ROSSELLÓ";
   ns:addressNumber 453;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40605"^^xsd:float;
   ns:longitude "2.17404"^^xsd:float;
   ns:postCode 8025 .
@@ -12630,6 +13238,7 @@
   ns:addressName "MARTÍ CODOLAR";
   ns:addressNumber 2;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/41>;
   ns:latitude "41.42499"^^xsd:float;
   ns:longitude "2.14819"^^xsd:float;
   ns:postCode 8035 .
@@ -12639,6 +13248,7 @@
   ns:addressName "MANUEL GIRONA";
   ns:addressNumber 7;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/23>;
   ns:latitude "41.39038"^^xsd:float;
   ns:longitude "2.121"^^xsd:float;
   ns:postCode 8034 .
@@ -12648,6 +13258,7 @@
   ns:addressName "DIPUTACIÓ";
   ns:addressNumber 303;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39263"^^xsd:float;
   ns:longitude "2.16964"^^xsd:float;
   ns:postCode 8009 .
@@ -12657,6 +13268,7 @@
   ns:addressName "MAS CASANOVAS";
   ns:addressNumber 137;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/35>;
   ns:latitude "41.41589"^^xsd:float;
   ns:longitude "2.17455"^^xsd:float;
   ns:postCode 8041 .
@@ -12666,6 +13278,7 @@
   ns:addressName "BRUC";
   ns:addressNumber 88;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39457"^^xsd:float;
   ns:longitude "2.16929"^^xsd:float;
   ns:postCode 8009 .
@@ -12675,6 +13288,7 @@
   ns:addressName "GIRONA";
   ns:addressNumber 176;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39999"^^xsd:float;
   ns:longitude "2.16445"^^xsd:float;
   ns:postCode 8037 .
@@ -12684,6 +13298,7 @@
   ns:addressName "MARÍTIM DE LA BARCELONETA";
   ns:addressNumber 6;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.37958"^^xsd:float;
   ns:longitude "2.19251"^^xsd:float;
   ns:postCode 8003 .
@@ -12693,6 +13308,7 @@
   ns:addressName "MEJÍA LEQUERICA";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.38197"^^xsd:float;
   ns:longitude "2.12686"^^xsd:float;
   ns:postCode 8028 .
@@ -12702,6 +13318,7 @@
   ns:addressName "ROSSELLÓ";
   ns:addressNumber 108;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/8>;
   ns:latitude "41.38829"^^xsd:float;
   ns:longitude "2.15087"^^xsd:float;
   ns:postCode 8036 .
@@ -12710,6 +13327,7 @@
   a ns:StreetAddress;
   ns:addressName "TRAV. DE GRÀCIA";
   ns:addressNumber 92;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39823"^^xsd:float;
   ns:longitude "2.15310"^^xsd:float;
   ns:postCode 8006 .
@@ -12719,6 +13337,7 @@
   ns:addressName "ARIZALA";
   ns:addressNumber 77;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.37890"^^xsd:float;
   ns:longitude "2.12330"^^xsd:float;
   ns:postCode 8028 .
@@ -12728,6 +13347,7 @@
   ns:addressName "SARDENYA";
   ns:addressNumber 326;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40396"^^xsd:float;
   ns:longitude "2.17290"^^xsd:float;
   ns:postCode 8025 .
@@ -12737,6 +13357,7 @@
   ns:addressName "PORTUGAL";
   ns:addressNumber 3;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/61>;
   ns:latitude "41.42582"^^xsd:float;
   ns:longitude "2.19120"^^xsd:float;
   ns:postCode 8027 .
@@ -12746,6 +13367,7 @@
   ns:addressName "PUJADES";
   ns:addressNumber 3;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/66>;
   ns:latitude "41.39212"^^xsd:float;
   ns:longitude "2.18749"^^xsd:float;
   ns:postCode 8018 .
@@ -12754,6 +13376,7 @@
   a ns:StreetAddress;
   ns:addressName "UNIVERSITAT";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.38564"^^xsd:float;
   ns:longitude "2.16343"^^xsd:float;
   ns:postCode 8011 .
@@ -12763,6 +13386,7 @@
   ns:addressName "RIBES";
   ns:addressNumber 77;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.40010"^^xsd:float;
   ns:longitude "2.18417"^^xsd:float;
   ns:postCode 8013 .
@@ -12772,6 +13396,7 @@
   ns:addressName "CASTILLEJOS";
   ns:addressNumber 258;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40645"^^xsd:float;
   ns:longitude "2.17853"^^xsd:float;
   ns:postCode 8013 .
@@ -12781,6 +13406,7 @@
   ns:addressName "CARDENER";
   ns:addressNumber 59;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.41059"^^xsd:float;
   ns:longitude "2.15798"^^xsd:float;
   ns:postCode 8024 .
@@ -12790,6 +13416,7 @@
   ns:addressName "CATALUNYA";
   ns:addressNumber 22;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.38606"^^xsd:float;
   ns:longitude "2.17024"^^xsd:float;
   ns:postCode 8002 .
@@ -12799,6 +13426,7 @@
   ns:addressName "DE MALADETA";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/45>;
   ns:latitude "41.43158"^^xsd:float;
   ns:longitude "2.17691"^^xsd:float;
   ns:postCode 8016 .
@@ -12808,6 +13436,7 @@
   ns:addressName "MARQUÉS DE L'ARGENTERA";
   ns:addressNumber 3;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/4>;
   ns:latitude "41.38359"^^xsd:float;
   ns:longitude "2.18417"^^xsd:float;
   ns:postCode 8003 .
@@ -12817,6 +13446,7 @@
   ns:addressName "SANCHO DE ÁVILA";
   ns:addressNumber 170;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40279"^^xsd:float;
   ns:longitude "2.19561"^^xsd:float;
   ns:postCode 8018 .
@@ -12826,6 +13456,7 @@
   ns:addressName "BALMES";
   ns:addressNumber 409;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/25>;
   ns:latitude "41.40741"^^xsd:float;
   ns:longitude "2.13810"^^xsd:float;
   ns:postCode 8022 .
@@ -12835,6 +13466,7 @@
   ns:addressName "GRAN CAPITÀ";
   ns:addressNumber 9;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/21>;
   ns:latitude "41.38812"^^xsd:float;
   ns:longitude "2.10915"^^xsd:float;
   ns:postCode 8034 .
@@ -12844,6 +13476,7 @@
   ns:addressName "ESCULTOR LLIMONA";
   ns:addressNumber 7;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/44>;
   ns:latitude "41.42760"^^xsd:float;
   ns:longitude "2.16975"^^xsd:float;
   ns:postCode 8031 .
@@ -12853,6 +13486,7 @@
   ns:addressName "ARAGÓ";
   ns:addressNumber 659;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/65>;
   ns:latitude "41.41206"^^xsd:float;
   ns:longitude "2.19075"^^xsd:float;
   ns:postCode 8026 .
@@ -12862,6 +13496,7 @@
   ns:addressName "BILBAO";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40083"^^xsd:float;
   ns:longitude "2.20664"^^xsd:float;
   ns:postCode 8005 .
@@ -12871,6 +13506,7 @@
   ns:addressName "MERIDIANA";
   ns:addressNumber 404;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.43041"^^xsd:float;
   ns:longitude "2.18341"^^xsd:float;
   ns:postCode 8030 .
@@ -12880,6 +13516,7 @@
   ns:addressName "GARRIGA I ROCA";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/35>;
   ns:latitude "41.41919"^^xsd:float;
   ns:longitude "2.17184"^^xsd:float;
   ns:postCode 8041 .
@@ -12889,6 +13526,7 @@
   ns:addressName "RIERA BLANCA";
   ns:addressNumber 123;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/17>;
   ns:latitude "41.37145"^^xsd:float;
   ns:longitude "2.12785"^^xsd:float;
   ns:postCode 8028 .
@@ -12897,6 +13535,7 @@
   a ns:StreetAddress;
   ns:addressName "DE COLOM (VIA LAIETANA)";
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.38062"^^xsd:float;
   ns:longitude "2.18219"^^xsd:float;
   ns:postCode 8002 .
@@ -12906,6 +13545,7 @@
   ns:addressName "DURAN I BAS";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.38540"^^xsd:float;
   ns:longitude "2.17401"^^xsd:float;
   ns:postCode 8002 .
@@ -12915,6 +13555,7 @@
   ns:addressName "VIRIAT";
   ns:addressNumber 53;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.38082"^^xsd:float;
   ns:longitude "2.14153"^^xsd:float;
   ns:postCode 8014 .
@@ -12924,6 +13565,7 @@
   ns:addressName "CALABRIA";
   ns:addressNumber 158;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38216"^^xsd:float;
   ns:longitude "2.15206"^^xsd:float;
   ns:postCode 8015 .
@@ -12933,6 +13575,7 @@
   ns:addressName "DE GARCIA FÀRIA";
   ns:addressNumber 37;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69>;
   ns:latitude "41.40321"^^xsd:float;
   ns:longitude "2.2136"^^xsd:float;
   ns:postCode 8019 .
@@ -12942,6 +13585,7 @@
   ns:addressName "RAMON TRIAS FARGAS";
   ns:addressNumber 23;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.38899"^^xsd:float;
   ns:longitude "2.19232"^^xsd:float;
   ns:postCode 8005 .
@@ -12951,6 +13595,7 @@
   ns:addressName "MONTFAR";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/14>;
   ns:latitude "41.37049"^^xsd:float;
   ns:longitude "2.14872"^^xsd:float;
   ns:postCode 8004 .
@@ -12960,6 +13605,7 @@
   ns:addressName "MARITIM";
   ns:addressNumber 23;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/3>;
   ns:latitude "41.38336"^^xsd:float;
   ns:longitude "2.19462"^^xsd:float;
   ns:postCode 8003 .
@@ -12969,6 +13615,7 @@
   ns:addressName "TARRAGONA";
   ns:addressNumber 159;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/15>;
   ns:latitude "41.37936"^^xsd:float;
   ns:longitude "2.14386"^^xsd:float;
   ns:postCode 8014 .
@@ -12977,6 +13624,7 @@
   a ns:StreetAddress;
   ns:addressName "VIA FAVÈNCIA";
   ns:addressNumber 47;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/49>;
   ns:latitude "41.44186"^^xsd:float;
   ns:longitude "2.16642"^^xsd:float;
   ns:postCode 8042 .
@@ -12986,6 +13634,7 @@
   ns:addressName "FABRA I PUIG";
   ns:addressNumber 411;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43>;
   ns:latitude "41.43579"^^xsd:float;
   ns:longitude "2.16387"^^xsd:float;
   ns:postCode 8031 .
@@ -12995,6 +13644,7 @@
   ns:addressName "ALTS FORNS";
   ns:addressNumber 77;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13>;
   ns:latitude "41.35954"^^xsd:float;
   ns:longitude "2.14177"^^xsd:float;
   ns:postCode 8038 .
@@ -13004,6 +13654,7 @@
   ns:addressName "VALLMAJOR";
   ns:addressNumber 13;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39816"^^xsd:float;
   ns:longitude "2.13867"^^xsd:float;
   ns:postCode 8021 .
@@ -13013,6 +13664,7 @@
   ns:addressName "VILLARROEL";
   ns:addressNumber 39;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/10>;
   ns:latitude "41.38213"^^xsd:float;
   ns:longitude "2.16065"^^xsd:float;
   ns:postCode 8011 .
@@ -13022,6 +13674,7 @@
   ns:addressName "SARDENYA";
   ns:addressNumber 178;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.39671"^^xsd:float;
   ns:longitude "2.18250"^^xsd:float;
   ns:postCode 8013 .
@@ -13031,6 +13684,7 @@
   ns:addressName "SANT ADRIÀ";
   ns:addressNumber 43;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/59>;
   ns:latitude "41.43520"^^xsd:float;
   ns:longitude "2.19480"^^xsd:float;
   ns:postCode 8030 .
@@ -13040,6 +13694,7 @@
   ns:addressName "JOSEP ESTIVILL";
   ns:addressNumber 32;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/63>;
   ns:latitude "41.41755"^^xsd:float;
   ns:longitude "2.18771"^^xsd:float;
   ns:postCode 8027 .
@@ -13049,6 +13704,7 @@
   ns:addressName "VALÈNCIA";
   ns:addressNumber 312;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39509"^^xsd:float;
   ns:longitude "2.16669"^^xsd:float;
   ns:postCode 8009 .
@@ -13058,6 +13714,7 @@
   ns:addressName "DE GUIPÚSCOA";
   ns:addressNumber 43;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/72>;
   ns:latitude "41.41584"^^xsd:float;
   ns:longitude "2.19597"^^xsd:float;
   ns:postCode 8020 .
@@ -13067,6 +13724,7 @@
   ns:addressName "COMTE D'URGELL";
   ns:addressNumber 75;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38302"^^xsd:float;
   ns:longitude "2.15716"^^xsd:float;
   ns:postCode 8011 .
@@ -13076,6 +13734,7 @@
   ns:addressName "ARAGÓ";
   ns:addressNumber 614;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/65>;
   ns:latitude "41.40950"^^xsd:float;
   ns:longitude "2.18850"^^xsd:float;
   ns:postCode 8018 .
@@ -13085,6 +13744,7 @@
   ns:addressName "VILADOMAT";
   ns:addressNumber 122;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38087"^^xsd:float;
   ns:longitude "2.15599"^^xsd:float;
   ns:postCode 8015 .
@@ -13094,6 +13754,7 @@
   ns:addressName "DEL GUINARDÓ";
   ns:addressNumber 32;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/64>;
   ns:latitude "41.41562"^^xsd:float;
   ns:longitude "2.18178"^^xsd:float;
   ns:postCode 8041 .
@@ -13103,6 +13764,7 @@
   ns:addressName "FERNANDO PESSOA";
   ns:addressNumber 72;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.44571"^^xsd:float;
   ns:longitude "2.19298"^^xsd:float;
   ns:postCode 8030 .
@@ -13110,6 +13772,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_e77f3a75>
   a ns:StreetAddress;
   ns:addressName "A DE PALAU";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.38241"^^xsd:float;
   ns:longitude "2.18372"^^xsd:float;
   ns:postCode 8002 .
@@ -13119,6 +13782,7 @@
   ns:addressName "QUETZAL";
   ns:addressNumber 22;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/16>;
   ns:latitude "41.36754"^^xsd:float;
   ns:longitude "2.13423"^^xsd:float;
   ns:postCode 8014 .
@@ -13128,6 +13792,7 @@
   ns:addressName "CARTAGENA";
   ns:addressNumber 308;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.41031"^^xsd:float;
   ns:longitude "2.17573"^^xsd:float;
   ns:postCode 8025 .
@@ -13137,6 +13802,7 @@
   ns:addressName "PUJADES";
   ns:addressNumber 121;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.39933"^^xsd:float;
   ns:longitude "2.19741"^^xsd:float;
   ns:postCode 8005 .
@@ -13146,6 +13812,7 @@
   ns:addressName "VILAMARÍ";
   ns:addressNumber 61;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.37907"^^xsd:float;
   ns:longitude "2.14905"^^xsd:float;
   ns:postCode 8015 .
@@ -13155,6 +13822,7 @@
   ns:addressName "SANT ANTONI Mª CLARET";
   ns:addressNumber 290;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/35>;
   ns:latitude "41.41386"^^xsd:float;
   ns:longitude "2.17772"^^xsd:float;
   ns:postCode 8041 .
@@ -13164,6 +13832,7 @@
   ns:addressName "JOAQUIM XIRAU I PALAU";
   ns:addressNumber 1;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.37853"^^xsd:float;
   ns:longitude "2.17674"^^xsd:float;
   ns:postCode 8002 .
@@ -13173,6 +13842,7 @@
   ns:addressName "DE LES ESCOLES PIES";
   ns:addressNumber 99;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24>;
   ns:latitude "41.40299"^^xsd:float;
   ns:longitude "2.12838"^^xsd:float;
   ns:postCode 8017 .
@@ -13182,6 +13852,7 @@
   ns:addressName "PROVENÇA";
   ns:addressNumber 388;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.40106"^^xsd:float;
   ns:longitude "2.16994"^^xsd:float;
   ns:postCode 8025 .
@@ -13191,6 +13862,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 652;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/19>;
   ns:latitude "41.38946"^^xsd:float;
   ns:longitude "2.13149"^^xsd:float;
   ns:postCode 8034 .
@@ -13200,6 +13872,7 @@
   ns:addressName "BRUC";
   ns:addressNumber 20;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39083"^^xsd:float;
   ns:longitude "2.17437"^^xsd:float;
   ns:postCode 8010 .
@@ -13208,6 +13881,7 @@
   a ns:StreetAddress;
   ns:addressName "ICTÍNEO";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.37762"^^xsd:float;
   ns:longitude "2.18368"^^xsd:float;
   ns:postCode 8039 .
@@ -13217,6 +13891,7 @@
   ns:addressName "VILADOMAT";
   ns:addressNumber 244;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/9>;
   ns:latitude "41.38757"^^xsd:float;
   ns:longitude "2.14693"^^xsd:float;
   ns:postCode 8029 .
@@ -13226,6 +13901,7 @@
   ns:addressName "DE L'ONZE DE SETEMBRE";
   ns:addressNumber 69;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/60>;
   ns:latitude "41.42999"^^xsd:float;
   ns:longitude "2.19024"^^xsd:float;
   ns:postCode 8030 .
@@ -13235,6 +13911,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 672;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/21>;
   ns:latitude "41.38803"^^xsd:float;
   ns:longitude "2.12562"^^xsd:float;
   ns:postCode 8034 .
@@ -13244,6 +13921,7 @@
   ns:addressName "RAMON TURRÓ";
   ns:addressNumber 160;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.39728"^^xsd:float;
   ns:longitude "2.19978"^^xsd:float;
   ns:postCode 8005 .
@@ -13253,6 +13931,7 @@
   ns:addressName "MARIE CURIE";
   ns:addressNumber 8;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/48>;
   ns:latitude "41.43668"^^xsd:float;
   ns:longitude "2.16931"^^xsd:float;
   ns:postCode 8042 .
@@ -13262,6 +13941,7 @@
   ns:addressName "BERLÍN";
   ns:addressNumber 38;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.38326"^^xsd:float;
   ns:longitude "2.13926"^^xsd:float;
   ns:postCode 8029 .
@@ -13271,6 +13951,7 @@
   ns:addressName "ZONA FRANCA";
   ns:addressNumber 54;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/12>;
   ns:latitude "41.35454"^^xsd:float;
   ns:longitude "2.14330"^^xsd:float;
   ns:postCode 8038 .
@@ -13280,6 +13961,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 592;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38637"^^xsd:float;
   ns:longitude "2.16466"^^xsd:float;
   ns:postCode 8007 .
@@ -13289,6 +13971,7 @@
   ns:addressName "DIAGONAL";
   ns:addressNumber 630;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39151"^^xsd:float;
   ns:longitude "2.13906"^^xsd:float;
   ns:postCode 8017 .
@@ -13298,6 +13981,7 @@
   ns:addressName "NÀPOLS";
   ns:addressNumber 344;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/32>;
   ns:latitude "41.40544"^^xsd:float;
   ns:longitude "2.16631"^^xsd:float;
   ns:postCode 8025 .
@@ -13307,6 +13991,7 @@
   ns:addressName "BAC DE RODA";
   ns:addressNumber 157;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.41130"^^xsd:float;
   ns:longitude "2.19872"^^xsd:float;
   ns:postCode 8018 .
@@ -13316,6 +14001,7 @@
   ns:addressName "MADRAZO";
   ns:addressNumber 39;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.40030"^^xsd:float;
   ns:longitude "2.14914"^^xsd:float;
   ns:postCode 8006 .
@@ -13324,6 +14010,7 @@
   a ns:StreetAddress;
   ns:addressName "CARLES PI I SUNYER";
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.38508"^^xsd:float;
   ns:longitude "2.17401"^^xsd:float;
   ns:postCode 8002 .
@@ -13333,6 +14020,7 @@
   ns:addressName "PAU ALSINA";
   ns:addressNumber 54;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/32>;
   ns:latitude "41.40920"^^xsd:float;
   ns:longitude "2.16400"^^xsd:float;
   ns:postCode 8025 .
@@ -13342,6 +14030,7 @@
   ns:addressName "DE L´EXPOSICIÓ";
   ns:addressNumber 38;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/11>;
   ns:latitude "41.37153"^^xsd:float;
   ns:longitude "2.16220"^^xsd:float;
   ns:postCode 8004 .
@@ -13351,6 +14040,7 @@
   ns:addressName "JOSÉ DE  AGULLÓ";
   ns:addressNumber 9;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/24>;
   ns:latitude "41.39520"^^xsd:float;
   ns:longitude "2.13348"^^xsd:float;
   ns:postCode 8017 .
@@ -13360,6 +14050,7 @@
   ns:addressName "SANTA COLOMA";
   ns:addressNumber 105;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/57>;
   ns:latitude "41.44794"^^xsd:float;
   ns:longitude "2.19767"^^xsd:float;
   ns:postCode 8030 .
@@ -13369,6 +14060,7 @@
   ns:addressName "BRUC";
   ns:addressNumber 102;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39540"^^xsd:float;
   ns:longitude "2.16819"^^xsd:float;
   ns:postCode 8009 .
@@ -13378,6 +14070,7 @@
   ns:addressName "BRUC";
   ns:addressNumber 130;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39698"^^xsd:float;
   ns:longitude "2.16618"^^xsd:float;
   ns:postCode 8037 .
@@ -13387,6 +14080,7 @@
   ns:addressName "RAMON TURRÓ";
   ns:addressNumber 91;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/67>;
   ns:latitude "41.39530"^^xsd:float;
   ns:longitude "2.19659"^^xsd:float;
   ns:postCode 8005 .
@@ -13396,6 +14090,7 @@
   ns:addressName "RAMON TURRÓ";
   ns:addressNumber 292;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69>;
   ns:latitude "41.40385"^^xsd:float;
   ns:longitude "2.20842"^^xsd:float;
   ns:postCode 8005 .
@@ -13404,6 +14099,7 @@
   a ns:StreetAddress;
   ns:addressName "SANT ANTONI";
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.37569"^^xsd:float;
   ns:longitude "2.13585"^^xsd:float;
   ns:postCode 8014 .
@@ -13412,6 +14108,7 @@
   a ns:StreetAddress;
   ns:addressName "GRAN DE GRÀCIA";
   ns:addressNumber 155;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/31>;
   ns:latitude "41.40253"^^xsd:float;
   ns:longitude "2.15247"^^xsd:float;
   ns:postCode 8012 .
@@ -13421,6 +14118,7 @@
   ns:addressName "RIERA D'HORTA";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/62>;
   ns:latitude "41.42759"^^xsd:float;
   ns:longitude "2.18396"^^xsd:float;
   ns:postCode 8027 .
@@ -13430,6 +14128,7 @@
   ns:addressName "FABRA I PUIG";
   ns:addressNumber 449;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/48>;
   ns:latitude "41.43886"^^xsd:float;
   ns:longitude "2.16575"^^xsd:float;
   ns:postCode 8042 .
@@ -13439,6 +14138,7 @@
   ns:addressName "DE GARCIA FÀRIA";
   ns:addressNumber 21;
   ns:addressType "PASSEIG";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/69>;
   ns:latitude "41.40065"^^xsd:float;
   ns:longitude "2.21019"^^xsd:float;
   ns:postCode 8005 .
@@ -13448,6 +14148,7 @@
   ns:addressName "DE LES CORTS CATALANES";
   ns:addressNumber 902;
   ns:addressType "GRAN VIA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/71>;
   ns:latitude "41.40750"^^xsd:float;
   ns:longitude "2.19301"^^xsd:float;
   ns:postCode 8018 .
@@ -13456,6 +14157,7 @@
   a ns:StreetAddress;
   ns:addressName "PINTOR RIBALTA";
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/20>;
   ns:latitude "41.37919"^^xsd:float;
   ns:longitude "2.11358"^^xsd:float;
   ns:postCode 8028 .
@@ -13465,6 +14167,7 @@
   ns:addressName "AMILCAR";
   ns:addressNumber 1;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/44>;
   ns:latitude "41.43001"^^xsd:float;
   ns:longitude "2.17201"^^xsd:float;
   ns:postCode 8031 .
@@ -13474,6 +14177,7 @@
   ns:addressName "JOAN GÜELL";
   ns:addressNumber 50;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.37863"^^xsd:float;
   ns:longitude "2.13354"^^xsd:float;
   ns:postCode 8028 .
@@ -13482,6 +14186,7 @@
   a ns:StreetAddress;
   ns:addressName "BAIXADA DE LA PLANA";
   ns:addressNumber 35;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/43>;
   ns:latitude "41.42948"^^xsd:float;
   ns:longitude "2.15908"^^xsd:float;
   ns:postCode 8032 .
@@ -13491,6 +14196,7 @@
   ns:addressName "BADAL";
   ns:addressNumber 73;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/16>;
   ns:latitude "41.36853"^^xsd:float;
   ns:longitude "2.13284"^^xsd:float;
   ns:postCode 8014 .
@@ -13500,6 +14206,7 @@
   ns:addressName "CASTILLEJOS";
   ns:addressNumber 184;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/5>;
   ns:latitude "41.40218"^^xsd:float;
   ns:longitude "2.18298"^^xsd:float;
   ns:postCode 8013 .
@@ -13508,6 +14215,7 @@
   a ns:StreetAddress;
   ns:addressName "GAVÀ";
   ns:addressNumber 81;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/16>;
   ns:latitude "41.37037"^^xsd:float;
   ns:longitude "2.13894"^^xsd:float;
   ns:postCode 8014 .
@@ -13517,17 +14225,19 @@
   ns:addressName "JOSEP VICENÇ FOIX";
   ns:addressNumber 63;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/23>;
   ns:latitude "41.39772"^^xsd:float;
   ns:longitude "2.11945"^^xsd:float;
   ns:postCode 8034 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_fb30a0a8>
-  a ns:StreetAddress;
   ns:addressName "JOSEP VICENÇ FOIX";
   ns:addressNumber 52;
   ns:addressType "AVINGUDA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/23>;
   ns:latitude "41.39487"^^xsd:float;
   ns:longitude "2.12053"^^xsd:float;
+  a ns:StreetAddress;
   ns:postCode 8034 .
 
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_fb55425f>
@@ -13535,6 +14245,7 @@
   ns:addressName "BAILÉN";
   ns:addressNumber 62;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.39525"^^xsd:float;
   ns:longitude "2.17300"^^xsd:float;
   ns:postCode 8009 .
@@ -13544,6 +14255,7 @@
   ns:addressName "INDEPENDÈNCIA";
   ns:addressNumber 379;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/64>;
   ns:latitude "41.41183"^^xsd:float;
   ns:longitude "2.17788"^^xsd:float;
   ns:postCode 8026 .
@@ -13553,6 +14265,7 @@
   ns:addressName "LAFORJA";
   ns:addressNumber 74;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/26>;
   ns:latitude "41.39761"^^xsd:float;
   ns:longitude "2.14717"^^xsd:float;
   ns:postCode 8021 .
@@ -13560,6 +14273,7 @@
 <http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_fcafbc35>
   a ns:StreetAddress;
   ns:addressName "DE COLOM (LES RAMBLES)";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/2>;
   ns:latitude "41.37643"^^xsd:float;
   ns:longitude "2.17871"^^xsd:float;
   ns:postCode 8039 .
@@ -13569,6 +14283,7 @@
   ns:addressName "LOPE DE VEGA";
   ns:addressNumber 79;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/68>;
   ns:latitude "41.40389"^^xsd:float;
   ns:longitude "2.20411"^^xsd:float;
   ns:postCode 8005 .
@@ -13578,6 +14293,7 @@
   ns:addressName "MIREIA";
   ns:addressNumber 28;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/57>;
   ns:latitude "41.45138"^^xsd:float;
   ns:longitude "2.18947"^^xsd:float;
   ns:postCode 8033 .
@@ -13586,6 +14302,7 @@
   a ns:StreetAddress;
   ns:addressName "TRAVESSERA DE GRÀCIA";
   ns:addressNumber 368;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/33>;
   ns:latitude "41.40988"^^xsd:float;
   ns:longitude "2.17152"^^xsd:float;
   ns:postCode 8025 .
@@ -13595,6 +14312,7 @@
   ns:addressName "MARBRE";
   ns:addressNumber 2;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/13>;
   ns:latitude "41.36141"^^xsd:float;
   ns:longitude "2.14761"^^xsd:float;
   ns:postCode 8038 .
@@ -13604,6 +14322,7 @@
   ns:addressName "DEL BRASIL";
   ns:addressNumber 44;
   ns:addressType "RAMBLA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/18>;
   ns:latitude "41.37830"^^xsd:float;
   ns:longitude "2.12973"^^xsd:float;
   ns:postCode 8028 .
@@ -13613,6 +14332,7 @@
   ns:addressName "DE L'ESCULTOR ORDÓÑEZ";
   ns:addressNumber 55;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/45>;
   ns:latitude "41.43408"^^xsd:float;
   ns:longitude "2.17482"^^xsd:float;
   ns:postCode 8016 .
@@ -13621,6 +14341,7 @@
   a ns:StreetAddress;
   ns:addressName "TRAVESSERA DE GRÀCIA";
   ns:addressNumber 328;
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/33>;
   ns:latitude "41.40821"^^xsd:float;
   ns:longitude "2.16899"^^xsd:float;
   ns:postCode 8025 .
@@ -13630,6 +14351,7 @@
   ns:addressName "LEPANT";
   ns:addressNumber 278;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/6>;
   ns:latitude "41.40470"^^xsd:float;
   ns:longitude "2.17651"^^xsd:float;
   ns:postCode 8013 .
@@ -13639,6 +14361,7 @@
   ns:addressName "TARRAGONA";
   ns:addressNumber 141;
   ns:addressType "CARRER";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/15>;
   ns:latitude "41.37796"^^xsd:float;
   ns:longitude "2.14504"^^xsd:float;
   ns:postCode 8014 .
@@ -13648,6 +14371,7 @@
   ns:addressName "CATALUNYA";
   ns:addressNumber 10;
   ns:addressType "PLAÇA";
+  ns:hasNeighborhood <http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/7>;
   ns:latitude "41.38749"^^xsd:float;
   ns:longitude "2.16906"^^xsd:float;
   ns:postCode 8002 .
