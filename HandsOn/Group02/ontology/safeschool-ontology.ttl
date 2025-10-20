@@ -21,25 +21,21 @@
 # CLASSES
 
 safeschool:Accident a owl:Class ;
-  rdfs:label "Traffic Accident"@en ;
   rdfs:subClassOf geo:Feature ;
   rdfs:subClassOf schema:Event ;
   rdfs:comment "A traffic accident registered in Madrid"@en .
 
 safeschool:EducationalCenter a owl:Class ;
-  rdfs:label "Educational Center"@en ;
   rdfs:subClassOf schema:EducationalOrganization ; # Subclass of schema:Place
   rdfs:subClassOf geo:Feature ;
   rdfs:comment "An educational institution in the Community of Madrid"@en .
 
 safeschool:SpeedCamera a owl:Class ;
-  rdfs:label "Speed Camera"@en ;
   rdfs:subClassOf geo:Feature ;
   rdfs:subClassOf schema:Place ;
   rdfs:comment "A fixed speed monitoring camera or radar in Madrid"@en .
 
 safeschool:District a owl:Class ;
-  rdfs:label "District"@en ;
   rdfs:subClassOf schema:AdministrativeArea ; # Subclass of schema:Place
   rdfs:comment "An administrative district within Madrid city"@en .
 
@@ -47,7 +43,6 @@ safeschool:District a owl:Class ;
 # OBJECT PROPERTIES
 
 safeschool:inDistrict a owl:ObjectProperty ;
-  rdfs:label "in district"@en ;
   rdfs:subPropertyOf schema:containedInPlace ;
   rdfs:domain [ # Domain is the union of Center and Accident
     a owl:Class ;
@@ -65,7 +60,6 @@ safeschool:inDistrict a owl:ObjectProperty ;
 # This single property applies to all geo:Feature classes
 # (Accident, EducationalCenter, SpeedCamera)
 safeschool:wktGeometry a owl:DatatypeProperty ;
-  rdfs:label "WKT Geometry"@en ;
   rdfs:subPropertyOf geo:asWKT ;
   rdfs:domain geo:Feature ;
   rdfs:range geo:wktLiteral ;
@@ -74,43 +68,36 @@ safeschool:wktGeometry a owl:DatatypeProperty ;
 # DATATYPE PROPERTIES - ACCIDENT
 
 safeschool:weatherCondition a owl:DatatypeProperty ;
-  rdfs:label "weather condition"@en ;
   rdfs:domain safeschool:Accident ;
   rdfs:range xsd:string ;
   rdfs:comment "Weather conditions at time of accident"@en .
 
 safeschool:alcoholPositive a owl:DatatypeProperty ;
-  rdfs:label "alcohol positive"@en ;
   rdfs:domain safeschool:Accident ;
   rdfs:range xsd:boolean ;
   rdfs:comment "Whether any alcohol test was positive in the accident"@en .
 
 safeschool:drugPositive a owl:DatatypeProperty ;
-  rdfs:label "drug positive"@en ;
   rdfs:domain safeschool:Accident ;
   rdfs:range xsd:boolean ;
   rdfs:comment "Whether any drug test was positive in the accident"@en .
 
 safeschool:pedestrianInvolved a owl:DatatypeProperty ;
-  rdfs:label "pedestrian involved"@en ;
   rdfs:domain safeschool:Accident ;
   rdfs:range xsd:boolean ;
   rdfs:comment "Whether one or more pedestrians were involved"@en .
 
 safeschool:vehiclesInvolved a owl:DatatypeProperty ;
-  rdfs:label "vehicles involved"@en ;
   rdfs:domain safeschool:Accident ;
   rdfs:range xsd:string ;
   rdfs:comment "Text description of vehicles involved (e.g., 'Ciclomotor, Turismo')"@en .
 
 safeschool:injuryDescription a owl:DatatypeProperty ;
-  rdfs:label "injury description"@en ;
   rdfs:domain safeschool:Accident ;
   rdfs:range xsd:string ;
   rdfs:comment "Highest level of injury description for the accident"@en .
 
 safeschool:injuryLevel a owl:DatatypeProperty ;
-  rdfs:label "injury level"@en ;
   rdfs:domain safeschool:Accident ;
   rdfs:range xsd:integer ;
   rdfs:comment "Numeric code for highest injury level"@en .
@@ -119,13 +106,11 @@ safeschool:injuryLevel a owl:DatatypeProperty ;
 # DATATYPE PROPERTIES - EDUCATIONAL CENTER
 
 safeschool:centerTypeCode a owl:DatatypeProperty ;
-  rdfs:label "center type code"@en ;
   rdfs:domain safeschool:EducationalCenter ;
   rdfs:range xsd:string ;
   rdfs:comment "3-digit code for center type"@en .
 
 safeschool:ownershipType a owl:DatatypeProperty ;
-  rdfs:label "ownership type"@en ;
   rdfs:domain safeschool:EducationalCenter ;
   rdfs:range xsd:string ;
   rdfs:comment "Public or private ownership"@en .
@@ -134,19 +119,16 @@ safeschool:ownershipType a owl:DatatypeProperty ;
 # DATATYPE PROPERTIES - SPEED CAMERA
 
 safeschool:direction a owl:DatatypeProperty ;
-  rdfs:label "direction"@en ;
   rdfs:domain safeschool:SpeedCamera ;
   rdfs:range xsd:string ;
   rdfs:comment "Direction of traffic monitored"@en .
 
 safeschool:cameraType a owl:DatatypeProperty ;
-  rdfs:label "camera type"@en ;
   rdfs:domain safeschool:SpeedCamera ;
   rdfs:range xsd:string ;
   rdfs:comment "Type of camera"@en .
 
 safeschool:speedLimit a owl:DatatypeProperty ;
-  rdfs:label "speed limit"@en ;
   rdfs:domain safeschool:SpeedCamera ;
   rdfs:range xsd:integer ;
   rdfs:comment "Posted speed limit in km/h"@en .

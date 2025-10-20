@@ -11,11 +11,12 @@
 <http://safeschool.linkeddata.es/resource/District/1> a safeschool:District ;
   schema:identifier "1" ;
   schema:name "Centro"@es .
+  rdf:label "Distrito-Centro"@es .
 
 # Accident
 <http://safeschool.linkeddata.es/resource/Accident/2025S000056> a safeschool:Accident ;
   schema:identifier "2025S000056" ;
-  schema:startDate "2025-01-01T00:49:00"^^xsd:dateTime ;
+  schema:startDate "2025-01-01T00:49:00+01:00"^^xsd:dateTime ;
   schema:description "CALL. LOPEZ DE HOYOS / CALL. ROS DE OLANO"@es ;
   schema:name "Colisión fronto-lateral"@es ; # Used for accident type
   # Linking to the full URI of the District
@@ -28,6 +29,7 @@
   safeschool:vehiclesInvolved "Ciclomotor, Turismo"@es ;
   safeschool:injuryDescription "Asistencia sanitaria sólo en el lugar del accidente"@es ;
   safeschool:injuryLevel "1"^^xsd:integer .
+  rdf:label "Accident-2025S000056"@es .
 
 # Educational Center
 <http://safeschool.linkeddata.es/resource/EducationalCenter/28004059> a safeschool:EducationalCenter ;
@@ -44,6 +46,7 @@
   schema:url <http://www.educa.madrid.org/ies.cervantes.madrid> ;
   schema:email "ies.cervantes.madrid@educa.madrid.org" ;
   safeschool:wktGeometry "POINT(-3.70320884055 40.405917222)"^^geo:wktLiteral .
+  rdf:label "EducationalCenter-CERVANTES"@es .
 
 # Speed Camera
 <http://safeschool.linkeddata.es/resource/SpeedCamera/1> a safeschool:SpeedCamera ;
@@ -54,3 +57,4 @@
   safeschool:cameraType "Fijo"@es ;
   safeschool:wktGeometry "POINT(-3.67433808 40.47934148)"^^geo:wktLiteral ;
   safeschool:speedLimit "90"^^xsd:integer .
+  rdf:label "Radar-1"@es .
