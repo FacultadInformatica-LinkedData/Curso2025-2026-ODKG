@@ -344,5 +344,143 @@
     "oldColumnName": "Rama",
     "newColumnName": "Ambit",
     "description": "Rename column Rama to Ambit"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UnniversityID",
+    "columnInsertIndex": 4,
+    "description": "Create column UnniversityID at index 4 based on column University using expression grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "University",
+    "description": "Remove column University"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Academic level",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "AcademicLevelID",
+    "columnInsertIndex": 5,
+    "description": "Create column AcademicLevelID at index 5 based on column Academic level using expression grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "UnniversityID",
+    "newColumnName": "UniversityID",
+    "description": "Rename column UnniversityID to UniversityID"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Ambit",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "AmbitID",
+    "columnInsertIndex": 7,
+    "description": "Create column AmbitID at index 7 based on column Ambit using expression grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ambit",
+    "description": "Remove column Ambit"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\") + coalesce(cells[\"Academic Level\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "DegreeID",
+    "columnInsertIndex": 3,
+    "description": "Create column DegreeID at index 3 based on column Degree using expression grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\") + coalesce(cells[\"Academic Level\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "DegreeID",
+          "expression": "value",
+          "columnName": "DegreeID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "6bc3e2e6c857067e9a27a27af44fc3a4",
+                "l": "6bc3e2e6c857067e9a27a27af44fc3a4"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DegreeID",
+    "description": "Remove column DegreeID"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\") + coalesce(cells[\"Academic level\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "DegreeID",
+    "columnInsertIndex": 3,
+    "description": "Create column DegreeID at index 3 based on column Degree using expression grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\") + coalesce(cells[\"Academic level\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Academic level",
+    "description": "Remove column Academic level"
   }
 ]
