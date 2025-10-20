@@ -12,9 +12,9 @@
 
 ### SPARQL Queries
 
-* [] Created a `queries.sparql` file under the `rdf/` directory
-* [] Defined SPARQL queries to test and validate the generated RDF data
-* [] Confirmed that queries return expected results based on the dataset
+* [✓] Created a `queries.sparql` file under the `rdf/` directory
+* [✓] Defined SPARQL queries to test and validate the generated RDF data
+* [✓] Confirmed that queries return expected results based on the dataset
 
 ### Optional YAML Mapping Rules
 
