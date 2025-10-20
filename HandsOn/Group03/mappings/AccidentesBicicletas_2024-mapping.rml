@@ -2,6 +2,7 @@
 @prefix rml: <http://semweb.mmlab.be/ns/rml#>.
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix mts: <http://madrid-transport-safety.org/ontology#> .
 @prefix resource: <http://madrid-transport-safety.org/resource/> .
 @base <http://madrid-transport-safety.org/mapping/accidents#>.
@@ -17,6 +18,13 @@
   ];
 
   rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rr:template "Accident {num_expediente}"
+    ]
+  ];
+
+  rr:predicateObjectMap [
     rr:predicate mts:caseNumber;
     rr:objectMap [
       rml:reference "num_expediente"
@@ -26,14 +34,16 @@
   rr:predicateObjectMap [
     rr:predicate mts:accidentDate;
     rr:objectMap [
-      rml:reference "fecha"
+      rml:reference "fecha";
+      rr:datatype xsd:date
     ]
   ];
 
   rr:predicateObjectMap [
     rr:predicate mts:accidentTime;
     rr:objectMap [
-      rml:reference "hora"
+      rml:reference "hora";
+      rr:datatype xsd:time
     ]
   ];
 
@@ -107,6 +117,13 @@
   ];
 
   rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "distrito"
+    ]
+  ];
+
+  rr:predicateObjectMap [
     rr:predicate mts:districtCode;
     rr:objectMap [
       rml:reference "cod_distrito";
@@ -130,6 +147,13 @@
   rr:subjectMap [
     rr:template "http://madrid-transport-safety.org/resource/person/{num_expediente}";
     rr:class mts:Person
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rr:template "Person involved in {num_expediente}"
+    ]
   ];
 
   rr:predicateObjectMap [
@@ -192,6 +216,13 @@
   rr:subjectMap [
     rr:template "http://madrid-transport-safety.org/resource/injury/{num_expediente}";
     rr:class mts:Injury
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "lesividad"
+    ]
   ];
 
   rr:predicateObjectMap [

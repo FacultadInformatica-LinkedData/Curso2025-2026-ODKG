@@ -2,6 +2,7 @@
 @prefix rml: <http://semweb.mmlab.be/ns/rml#>.
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix mts: <http://madrid-transport-safety.org/ontology#> .
 @prefix resource: <http://madrid-transport-safety.org/resource/> .
 @base <http://madrid-transport-safety.org/mapping/trafficlights#>.
@@ -14,6 +15,13 @@
   rr:subjectMap [
     rr:template "http://madrid-transport-safety.org/resource/traffic-light/{id}";
     rr:class mts:TrafficLight
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rr:template "Traffic Light {id}"
+    ]
   ];
 
   rr:predicateObjectMap [
@@ -35,7 +43,8 @@
   rr:predicateObjectMap [
     rr:predicate mts:installationDate;
     rr:objectMap [
-      rml:reference "fecha_inst"
+      rml:reference "fecha_inst";
+      rr:datatype xsd:date
     ]
   ];
 
@@ -85,6 +94,13 @@
   rr:subjectMap [
     rr:template "http://madrid-transport-safety.org/resource/district/{distrito}";
     rr:class mts:District
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rr:template "District {distrito}"
+    ]
   ];
 
   rr:predicateObjectMap [

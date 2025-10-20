@@ -2,6 +2,7 @@
 @prefix rml: <http://semweb.mmlab.be/ns/rml#>.
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix mts: <http://madrid-transport-safety.org/ontology#> .
 @prefix resource: <http://madrid-transport-safety.org/resource/> .
 @base <http://madrid-transport-safety.org/mapping/pedestrians#>.
@@ -17,16 +18,25 @@
   ];
 
   rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rr:template "Pedestrian observation at {identificador} on {fecha} at {hora}"
+    ]
+  ];
+
+  rr:predicateObjectMap [
     rr:predicate mts:pedestrianDate;
     rr:objectMap [
-      rml:reference "fecha"
+      rml:reference "fecha";
+      rr:datatype xsd:date
     ]
   ];
 
   rr:predicateObjectMap [
     rr:predicate mts:pedestrianTime;
     rr:objectMap [
-      rml:reference "hora"
+      rml:reference "hora";
+      rr:datatype xsd:time
     ]
   ];
 
@@ -91,6 +101,13 @@
   rr:subjectMap [
     rr:template "http://madrid-transport-safety.org/resource/district/{Número_distrito}";
     rr:class mts:District
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "distrito"
+    ]
   ];
 
   rr:predicateObjectMap [
