@@ -36,24 +36,9 @@ safeschool:FixedSpeedCamera a owl:Class ;
   rdfs:subClassOf schema:Place ;
   rdfs:comment "A fixed speed monitoring camera or radar in Madrid"@en .
 
-safeschool:Road a owl:Class ;
-  rdfs:label "Road"@en ;
-  rdfs:subClassOf schema:Place ;
-  rdfs:comment "A road, street, or highway in Madrid"@en .
-
-safeschool:Municipality a owl:Class ;
-  rdfs:label "Municipality"@en ;
-  rdfs:subClassOf schema:AdministrativeArea ;
-  rdfs:comment "A municipality in the Community of Madrid"@en .
-
 safeschool:Location a owl:Class ;
   rdfs:label "Geographic Location"@en ;
   rdfs:comment "Geographic coordinates"@en .
-
-safeschool:RadarSection a owl:Class ;
-  rdfs:label "Radar Section"@en ;
-  rdfs:subClassOf safeschool:FixedSpeedCamera ;
-  rdfs:comment "A section-based speed camera monitoring a road segment between two points"@en .
 
 safeschool:InvolvedParty a owl:Class ;
   rdfs:label "Involved Party"@en ;
@@ -75,43 +60,12 @@ safeschool:locatedAt a owl:ObjectProperty ;
   rdfs:range safeschool:Location ;
   rdfs:comment "Links an entity to its geographic location with coordinates"@en .
 
-safeschool:occursOnRoad a owl:ObjectProperty ;
-  rdfs:label "occurs on road"@en ;
-  rdfs:domain safeschool:Accident ;
-  rdfs:range safeschool:Road ;
-  rdfs:comment "The road where the accident occurred"@en .
-
-safeschool:inMunicipality a owl:ObjectProperty ;
-  rdfs:label "in municipality"@en ;
-  rdfs:subPropertyOf schema:containedInPlace ;
-  rdfs:domain schema:Place ;
-  rdfs:range safeschool:Municipality ;
-  rdfs:comment "The municipality where the entity is located"@en .
-
 safeschool:inDistrict a owl:ObjectProperty ;
   rdfs:label "in district"@en ;
   rdfs:subPropertyOf schema:containedInPlace ;
   rdfs:domain schema:Place ;
   rdfs:range safeschool:District ;
   rdfs:comment "The district where the entity is located (Madrid city only)"@en .
-
-safeschool:monitoredRoad a owl:ObjectProperty ;
-  rdfs:label "monitored road"@en ;
-  rdfs:domain safeschool:FixedSpeedCamera ;
-  rdfs:range safeschool:Road ;
-  rdfs:comment "The road monitored by the speed camera"@en .
-
-safeschool:hasStartLocation a owl:ObjectProperty ;
-  rdfs:label "has start location"@en ;
-  rdfs:domain safeschool:RadarSection ;
-  rdfs:range safeschool:Location ;
-  rdfs:comment "Starting point coordinates of a radar section"@en .
-
-safeschool:hasEndLocation a owl:ObjectProperty ;
-  rdfs:label "has end location"@en ;
-  rdfs:domain safeschool:RadarSection ;
-  rdfs:range safeschool:Location ;
-  rdfs:comment "Ending point coordinates of a radar section"@en .
 
 safeschool:hasInvolvedParty a owl:ObjectProperty ;
   rdfs:label "has involved party"@en ;
@@ -173,11 +127,6 @@ safeschool:locationDescription a owl:DatatypeProperty ;
   rdfs:range xsd:string ;
   rdfs:comment "Textual description of accident location"@en .
 
-safeschool:streetNumber a owl:DatatypeProperty ;
-  rdfs:label "street number"@en ;
-  rdfs:domain safeschool:Accident ;
-  rdfs:range xsd:string ;
-  rdfs:comment "Street number where accident occurred"@en .
 
 ###########################################
 # DATATYPE PROPERTIES - EDUCATIONAL CENTER
@@ -254,18 +203,6 @@ safeschool:postalCode a owl:DatatypeProperty ;
   rdfs:range xsd:string ;
   rdfs:comment "Postal code"@en .
 
-safeschool:operationalStatus a owl:DatatypeProperty ;
-  rdfs:label "operational status"@en ;
-  rdfs:domain safeschool:EducationalCenter ;
-  rdfs:range xsd:string ;
-  rdfs:comment "Operational status"@en .
-
-safeschool:foundationDate a owl:DatatypeProperty ;
-  rdfs:label "foundation date"@en ;
-  rdfs:domain safeschool:EducationalCenter ;
-  rdfs:range xsd:date ;
-  rdfs:comment "Date when the center was established"@en .
-
 safeschool:districtCode a owl:DatatypeProperty ;
   rdfs:label "district code"@en ;
   rdfs:domain safeschool:EducationalCenter ;
@@ -277,36 +214,6 @@ safeschool:districtName a owl:DatatypeProperty ;
   rdfs:domain safeschool:EducationalCenter ;
   rdfs:range xsd:string ;
   rdfs:comment "District name"@en .
-
-###########################################
-# DATATYPE PROPERTIES - MUNICIPALITY & ROAD
-###########################################
-
-safeschool:municipalityCode a owl:DatatypeProperty ;
-  rdfs:label "municipality code"@en ;
-  rdfs:domain safeschool:Municipality ;
-  rdfs:range xsd:string ;
-  rdfs:comment "3-digit official municipality code"@en .
-
-safeschool:municipalityName a owl:DatatypeProperty ;
-  rdfs:label "municipality name"@en ;
-  owl:equivalentProperty schema:name ;
-  rdfs:domain safeschool:Municipality ;
-  rdfs:range xsd:string ;
-  rdfs:comment "Name of the municipality"@en .
-
-safeschool:roadName a owl:DatatypeProperty ;
-  rdfs:label "road name"@en ;
-  owl:equivalentProperty schema:name ;
-  rdfs:domain safeschool:Road ;
-  rdfs:range xsd:string ;
-  rdfs:comment "Name of the road"@en .
-
-safeschool:roadCode a owl:DatatypeProperty ;
-  rdfs:label "road code"@en ;
-  rdfs:domain safeschool:Road ;
-  rdfs:range xsd:string ;
-  rdfs:comment "Official road code identifier"@en .
 
 ###########################################
 # DATATYPE PROPERTIES - LOCATION
