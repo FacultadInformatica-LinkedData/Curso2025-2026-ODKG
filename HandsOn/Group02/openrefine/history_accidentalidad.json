@@ -612,5 +612,28 @@
     "op": "core/column-removal",
     "columnName": "coordenada_x_utm",
     "description": "Remove column coordenada_x_utm"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "fecha",
+    "expression": "grel:if(or(isBlank(cells[\"fecha\"].value), isBlank(cells[\"hora\"].value)), null,\n  cells[\"fecha\"].value + \"T\" + cells[\"hora\"].value + \"+01:00\"\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "fecha_hora",
+    "columnInsertIndex": 2,
+    "description": "Create column fecha_hora at index 2 based on column fecha using expression grel:if(or(isBlank(cells[\"fecha\"].value), isBlank(cells[\"hora\"].value)), null,\n  cells[\"fecha\"].value + \"T\" + cells[\"hora\"].value + \"+01:00\"\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "fecha",
+    "description": "Remove column fecha"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "hora",
+    "description": "Remove column hora"
   }
 ]
