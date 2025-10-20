@@ -1,90 +1,92 @@
-@prefix : <https://linked.melbourne.example/ontology/urban-sensors#> .
-@prefix us: <https://linked.melbourne.example/ontology/urban-sensors#> .
+@prefix : <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
+@prefix us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix schema: <http://schema.org/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 #################################################################
-#    Sensor Location 1 - Bourke Street Mall (Pedestrian Sensor)
+# Sensor Locations - Town Hall (Pedestrian counting sensor) + CH1 rooftop (Microclimate sensor)
 #################################################################
 
-:site001 a us:SensorLocation ;
-    us:siteId "1" ;
-    us:hasAddress :addr001 ;
-    schema:latitude -37.81349441 ;
-    schema:longitude 144.96515323 ;
-    schema:additionalProperty "Outdoor location, Status=A" ;
-    us:hostsSensor :sensorBou292 .
+:location_001
+    a us:Location ;
+    us:inAdministrativeArea :adminArea_001 ;
+    us:hasAddress :address_001.
 
-:addr001 a us:StreetAddress ;
-    us:streetName "Bourke Street Mall" ;
-    us:streetNumber "280" ;
-    us:postcode "3000" ;
-    rdfs:label "280 Bourke Street Mall, Melbourne VIC 3000, Australia"@en .
-
-:sensorBou292 a us:PedestrianSensor ;
-    us:sensorId "Bou292_T" ;
-    us:installedAt :site001 ;
-    dcterms:created "2009-03-24"^^xsd:date ;
-    rdfs:label "Bourke Street Mall (North) Pedestrian Sensor"@en .
+:location_002
+    a us:Location ;
+    us:inAdministrativeArea :adminArea_001 ;
+    us:hasAddress :address_002.
 
 #################################################################
-#    Sensor Location 2 - Flinders Street (Microclimate Sensor)
+# Addresses
 #################################################################
 
-:site002 a us:SensorLocation ;
-    us:siteId "1008" ;
-    us:hasAddress :addr002 ;
-    schema:latitude -37.81746522 ;
-    schema:longitude 144.96705703 ;
-    schema:additionalProperty "Site active in 2021, GatewayHub=arc1045" ;
-    us:hostsSensor :sensorArc1045 .
+:address_001
+    a schema:PostalAddress ;
+    schema:streetAddress "Swanston Street 117" ;
+    schema:addressLocality "Melbourne" ;
+    schema:addressRegion "Melbourne VIC" ;
+    schema:postalCode "3008" ;
+    schema:addressCountry "Australia" .
 
-:addr002 a us:StreetAddress ;
-    us:streetName "Flinders Street" ;
-    us:streetNumber "216" ;
-    us:postcode "3000" ;
-    rdfs:label "216 Flinders Street, Melbourne VIC 3000, Australia"@en .
-
-:sensorArc1045 a us:MicroclimateSensor ;
-    us:sensorId "arc1045" ;
-    us:installedAt :site002 ;
-    dcterms:created "2021-06-14"^^xsd:date ;
-    rdfs:label "Flinders Street Microclimate Sensor"@en .
+:address_002
+    a schema:PostalAddress ;
+    schema:streetAddress "Little Collins Street 210" ;
+    schema:addressLocality "Melbourne" ;
+    schema:addressRegion "Melbourne VIC" ;
+    schema:postalCode "3000" ;
+    schema:addressCountry "Australia" .
 
 #################################################################
-#    Observation - Pedestrian Count (Fra118_T)
+# Administrative Area
 #################################################################
 
-:obs512120240614 a us:PedestrianObservation ;
-    sosa:resultTime "2024-06-14T21:00:00Z"^^xsd:dateTime ;
-    us:pedestrianCount 112 ;
-    us:observedAtLocation :site001 ;
-    rdfs:label "Pedestrian count at Bourke Street Mall (Fra118_T)"@en ;
-    schema:additionalProperty "Direction1=54, Direction2=58, Total=112" .
+:adminArea_001
+    a schema:AdministrativeArea ;
+    schema:name "City_Of_Melbourne" .
 
 #################################################################
-#    Observations - Microclimate (Flinders Street)
+# Pedestrian Sensor
 #################################################################
 
-:obsMicro001 a us:MicroclimateObservation ;
-    sosa:resultTime "2024-06-14T09:00:00Z"^^xsd:dateTime ;
-    us:airTemperature 18.5 ;
-    us:humidity 62.0 ;
-    us:pm10 14.2 ;
-    us:pm25 7.9 ;
-    us:noise 58.4 ;
-    us:observedAtLocation :site002 ;
-    rdfs:label "Morning microclimate observation at Flinders Street"@en .
+:sensorPeatonal_002
+    a us:PedestrianSensor ;
+    us:sensorId "Swa123_T" ;
+    us:direction1 "North" ;
+    us:direction2 "South" ;
+    us:locatedAt :location_001 .
 
-:obsMicro002 a us:MicroclimateObservation ;
-    sosa:resultTime "2024-06-14T15:00:00Z"^^xsd:dateTime ;
-    us:airTemperature 22.1 ;
-    us:humidity 55.0 ;
-    us:pm10 18.7 ;
-    us:pm25 9.5 ;
-    us:noise 62.0 ;
-    us:observedAtLocation :site002 ;
-    rdfs:label "Afternoon microclimate observation at Flinders Street"@en .
+#################################################################
+# Sensor de microclima
+#################################################################
+
+:sensorClima_003
+    a us:MicroclimateSensor ;
+    us:sensorId "ICTMicroclimate-03" ;
+    us:locatedAt :location_002 .
+
+#################################################################
+# Pedestrian counting observation
+#################################################################
+
+:obsPeatonal_255
+    a us:PedestrianObservation ;
+    sosa:madeBySensor :sensorPeatonal_002 ;
+    sosa:observedProperty us:pedestrianCount ;
+    sosa:resultTime "2024-12-09T01:00:00"^^xsd:dateTime ;
+    sosa:hasSimpleResult "95"^^xsd:integer ;
+    us:observedAtLocation :location_001 .
+
+#################################################################
+# Microclimate observation
+#################################################################
+
+:obsClima_002
+    a us:MicroclimateObservation ;
+    sosa:madeBySensor :sensorClima_003 ;
+    sosa:observedProperty us:airTemperature ;
+    sosa:resultTime "2024-12-30T11:54:23+11:00"^^xsd:dateTime ;
+    sosa:hasSimpleResult "23.0"^^xsd:float ;
+    us:observedAtLocation :location_002 ;
+    us:closestPedestrianSensor :sensorPeatonal_002 .
