@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Application Requirements - Madrid Intra-Urban Mobility (Weekly Analysis)</title>
+<style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    h1, h2, h3 { color: #333; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #ffe6e6; } /* A more specific color for the Madrid focus */
+    ul { margin-bottom: 20px; }
+    .data-source { font-style: italic; color: #555; }
+    .constraint { color: #d9534f; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Madrid Intra-Urban Mobility and Resource Manager (Focused on Madrid Capital)</h1>
+
+<h2>Description of the Application</h2>
+<p>
+  The application is highly specialized to analyze the <strong>internal dynamics of Madrid Capital</strong>. It exclusively uses data where the <strong>origin of the trip</strong> is within Madrid Capital.
+</p>
+<p>
+  This strict filtering allows managers to focus on <strong>intra-city challenges</strong> like local congestion, distribution of essential services within the municipal boundaries, and specific mobility patterns in the capital during the period from <strong>2025-06-02 to 2025-06-08</strong>.
+</p>
+<p class="constraint">
+  <strong>Geographical Constraint:</strong> All analysis is restricted to data pertaining to Madrid Capital (Zone ID: [28079]).
+</p>
+
+<h2>Possible Use Cases (Madrid Focus)</h2>
+<ul>
+  <li><strong>District-Level Resource Management:</strong> Optimizing sanitation, policing, and micro-mobility services by comparing flow load with residential capacity within the city's districts/sections.</li>
+  <li><strong>Local Planning:</strong> Analyzing daily commuter patterns <strong>within</strong> Madrid to fine-tune transport links between residential districts and employment/commercial hubs.</li>
+</ul>
+
+<h2>Functional Requirements</h2>
+
+<h3>Core Visualization: Intra-City Flows (Daily & Hourly)</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Requirement</th>
+            <th>Data Source (Columns Used)</th>
+            <th>Interface Mock-up / Implementation Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>1. Dynamic Load Visualization (Flow)</strong></td>
+            <td>*Flow Data:* <code>id_origin</code>, <code>hour</code>, <code>n_trips</code></td>
+            <td>
+                <p><strong>Interactive Map:</strong> The map must exclusively display the <strong>boundaries of Madrid Capital</strong>. Geographic sections (<code>id_origin</code>) are colored by the total trip count (<code>n_trips</code>) originating from that specific section. A <strong>date selector (2025-06-02 to 2025-06-08)</strong> and a <strong>time slider (0-23 hours)</strong> are the primary interactive elements.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>2. Internal Origin-Destination (O-D) Analysis</strong></td>
+            <td>*Flow Data:* <code>id_origin</code>, <code>id_destination</code>, <code>n_trips</code></td>
+            <td>
+                <p><strong>Flow Diagram Focus:</strong> Visualization of traffic flow is strictly <strong>intra-Madrid</strong>. Selection of an origin zone must show destination flows only to other zones within Madrid Capital. This emphasizes the internal <em>pull</em> of different districts.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Capacity & Load Analysis (Madrid Residents)</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Requirement</th>
+            <th>Data Source (Columns Used)</th>
+            <th>Implementation Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>3. Geographic Capacity Baseline</strong></td>
+            <td>*Zone Data:* <code>id</code>, <code>population</code>, <code>name</code></td>
+            <td>
+                <p>Displays the <strong>resident population density</strong> (<code>population</code>) for the specific sections of Madrid, serving as the static anchor for calculating relative load.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>4. Relative Load Index (KPI)</strong></td>
+            <td>*Flow and Zone Data*</td>
+            <td>
+                <p>Calculates the <strong>Load Ratio</strong> on a per-zone basis: (<code>n_trips</code> at a specific <code>hour</code>) / <strong>Resident</strong> <code>population</code>. This metric helps to understand the pressure of mobility flows in relation to the resident population.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Filtering and RDF Requirements</h3>
+<ul>
+    <li><strong>Targeted Demographic Filters:</strong> Filters for <code>age</code>, <code>gender</code>, <code>income</code>, and <code>activity</code> only apply to the trips originating *within* Madrid.</li>
+    <li><strong>Geographic Context:</strong> All zone selection and metadata must refer to the district, neighborhood, or specific municipal section names of Madrid (extracted from the <code>name</code> column using the <code>id</code>).</li>
+    <li><strong>5. RDF Integration and Metadata Pop-up</strong>
+        <p>The map consumes the RDF-transformed data. Clicking on any zone of Madrid displays an <strong>integrated metadata pop-up</strong> that retrieves: The zone's name, its <strong>resident population</strong>, and the <strong>hourly trip volume</strong>—all linked by the zone's unique geographic ID within the Madrid Capital context.</p>
+    </li>
+</ul>
+
+<h2>Application User Interface</h2>
+<p>
+  The UI emphasizes the <strong>intra-city</strong> view, using Madrid's administrative boundaries as the primary context.
+</p>
+<ul>
+  <li><strong>Map View:</strong> The map is initially zoomed and constrained to the <strong>Madrid Capital boundary</strong>.</li>
+  <li><strong>Date Range Selector:</strong> A control to select the analysis date from <strong>June 2, 2025, to June 8, 2025</strong>.</li>
+  <li><strong>Layer Control Panel:</strong> Allows managers to toggle between the key layers (e.g., Flow, Population).</li>
+  <li><strong>Unified Detail View:</strong> The zone pop-up is critical for comparing the two key numbers that define the zone's pressure: <strong>Population (static)</strong> and <strong>Trip Volume (dynamic by date/hour)</strong>.</li>
+</ul>
+
+</body>
+</html>
