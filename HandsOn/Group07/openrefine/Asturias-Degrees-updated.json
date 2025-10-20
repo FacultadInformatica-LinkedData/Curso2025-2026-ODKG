@@ -440,5 +440,11 @@
     "newColumnName": "Academic Year",
     "columnInsertIndex": 7,
     "description": "Crear la columna Academic Year en el índice 7 basada en la columna Ambit usando la expresión grel:\"2023-2024\""
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Unique Identifier",
+    "newColumnName": "Center",
+    "description": "Renombra la columna Unique Identifier a Center"
   }
 ]

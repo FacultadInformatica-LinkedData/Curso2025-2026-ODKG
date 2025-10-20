@@ -396,5 +396,81 @@
     "newColumnName": "UniversityId",
     "columnInsertIndex": 3,
     "description": "Crear la columna UniversityId en el índice 3 basada en la columna University usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unique Identifier",
+    "description": "Eliminar columna Unique Identifier"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "University",
+    "description": "Eliminar columna University"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Ambit",
+    "expression": "grel:if(\nvalue.toLowercase().contains(\"física\").or(value.toLowercase().contains(\"química\")).or(value.toLowercase().contains(\"biología\")).or(value.toLowercase().contains(\"matemáticas\")).or(value.toLowercase().contains(\"geología\")).or(value.toLowercase().contains(\"ambientales\")).or(value.toLowercase() == \"science\").or(value.toLowercase() == \"sciences\").or(value.toLowercase() == \"c\").or(value.toLowercase().contains(\"chemistry\")).or(value.toLowercase().contains(\"biotecnología\")).or(value.toLowercase().contains(\"physics\")).or(value.toLowercase().contains(\"geológicas\")).or(value.toLowercase().contains(\"de los alimentos\")),\n  \"Ciencias\",\n  if(\n    value.toLowercase().contains(\"ingeniería\")\n  .or(value.toLowercase().contains(\"informática\"))\n.or(value.toLowercase().contains(\"arquitectura\")).or(value.toLowercase() == \"engineering\").or(value.toLowercase() == \"iya\").or(value.toLowercase().contains(\"engineering\")),\n    \"Ingeniería y Arquitectura\",\n    if(\n      value.toLowercase().contains(\"medicina\")\n        .or(value.toLowercase().contains(\"enfermería\"))\n        .or(value.toLowercase().contains(\"nutrición\")).or(value.toLowercase().contains(\"farmacia\"))\n        .or(value.toLowercase().contains(\"terapia\")).or(value.toLowercase().contains(\"psicología\")).or(value.toLowercase() == \"health sciences\").or(value.toLowercase() == \"sd\").or(value.toLowercase().contains(\"nursing\")).or(value.toLowercase().contains(\"veterinaria\")).or(value.toLowercase().contains(\"medicine\")).or(value.toLowercase().contains(\"óptica\")),\n      \"Ciencias de la Salud\",\n      if(\n        value.toLowercase().contains(\"historia\")\n          .or(value.toLowercase().contains(\"filosofía\"))\n          .or(value.toLowercase().contains(\"filología\")).or(value.toLowercase().contains(\"philology\")).or(value.toLowercase().contains(\"literatura\")).or(value.toLowercase().contains(\"estudios clásicos\"))\n          .or(value.toLowercase().contains(\"franceses\")).or(value.toLowercase().contains(\"ingleses\")).or(value.toLowercase().contains(\"arte\")).or(value.toLowercase() == \"arts and humanities\").or(value.toLowercase() == \"ayh\").or(value.toLowercase().contains(\"fine arts\")).or(value.toLowercase().contains(\"philosophy\")).or(value.toLowercase() == \"arts and science\"),\n        \"Artes y Humanidades\",\n        if(\n          value.toLowercase().contains(\"sociología\")\n            .or(value.toLowercase().contains(\"educación\"))\n            .or(value.toLowercase().contains(\"política\"))\n            .or(value.toLowercase().contains(\"criminología\")).or(value.toLowercase().contains(\"antropología\")).or(value.toLowercase().contains(\"derecho\")).or(value.toLowercase().contains(\"relaciones\")).or(value.toLowercase().contains(\"economía\")).or(value.toLowercase().contains(\"administración\")).or(value.toLowercase().contains(\"contabilidad\")).or(value.toLowercase() == \"law and economics\").or(value.toLowercase() == \"social sciences\").or(value.toLowercase() == \"syj\").or(value.toLowercase().contains(\"periodismo\")).or(value.toLowercase().contains(\"trabajo social\")).or(value.toLowercase().contains(\"turismo\")).or(value.toLowercase().contains(\"marketing\")).or(value.toLowercase().contains(\"geografía\")).or(value.toLowercase().contains(\"economics\")).or(value.toLowercase().contains(\"law\")).or(value.toLowercase().contains(\"información y documentación\")),\n          \"Ciencias Sociales y Jurídicas\",\n          \"Otros\"\n        )\n      )\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "Ambit2",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna Ambit2 en el índice 7 basada en la columna Ambit usando la expresión grel:if(\nvalue.toLowercase().contains(\"física\").or(value.toLowercase().contains(\"química\")).or(value.toLowercase().contains(\"biología\")).or(value.toLowercase().contains(\"matemáticas\")).or(value.toLowercase().contains(\"geología\")).or(value.toLowercase().contains(\"ambientales\")).or(value.toLowercase() == \"science\").or(value.toLowercase() == \"sciences\").or(value.toLowercase() == \"c\").or(value.toLowercase().contains(\"chemistry\")).or(value.toLowercase().contains(\"biotecnología\")).or(value.toLowercase().contains(\"physics\")).or(value.toLowercase().contains(\"geológicas\")).or(value.toLowercase().contains(\"de los alimentos\")),\n  \"Ciencias\",\n  if(\n    value.toLowercase().contains(\"ingeniería\")\n  .or(value.toLowercase().contains(\"informática\"))\n.or(value.toLowercase().contains(\"arquitectura\")).or(value.toLowercase() == \"engineering\").or(value.toLowercase() == \"iya\").or(value.toLowercase().contains(\"engineering\")),\n    \"Ingeniería y Arquitectura\",\n    if(\n      value.toLowercase().contains(\"medicina\")\n        .or(value.toLowercase().contains(\"enfermería\"))\n        .or(value.toLowercase().contains(\"nutrición\")).or(value.toLowercase().contains(\"farmacia\"))\n        .or(value.toLowercase().contains(\"terapia\")).or(value.toLowercase().contains(\"psicología\")).or(value.toLowercase() == \"health sciences\").or(value.toLowercase() == \"sd\").or(value.toLowercase().contains(\"nursing\")).or(value.toLowercase().contains(\"veterinaria\")).or(value.toLowercase().contains(\"medicine\")).or(value.toLowercase().contains(\"óptica\")),\n      \"Ciencias de la Salud\",\n      if(\n        value.toLowercase().contains(\"historia\")\n          .or(value.toLowercase().contains(\"filosofía\"))\n          .or(value.toLowercase().contains(\"filología\")).or(value.toLowercase().contains(\"philology\")).or(value.toLowercase().contains(\"literatura\")).or(value.toLowercase().contains(\"estudios clásicos\"))\n          .or(value.toLowercase().contains(\"franceses\")).or(value.toLowercase().contains(\"ingleses\")).or(value.toLowercase().contains(\"arte\")).or(value.toLowercase() == \"arts and humanities\").or(value.toLowercase() == \"ayh\").or(value.toLowercase().contains(\"fine arts\")).or(value.toLowercase().contains(\"philosophy\")).or(value.toLowercase() == \"arts and science\"),\n        \"Artes y Humanidades\",\n        if(\n          value.toLowercase().contains(\"sociología\")\n            .or(value.toLowercase().contains(\"educación\"))\n            .or(value.toLowercase().contains(\"política\"))\n            .or(value.toLowercase().contains(\"criminología\")).or(value.toLowercase().contains(\"antropología\")).or(value.toLowercase().contains(\"derecho\")).or(value.toLowercase().contains(\"relaciones\")).or(value.toLowercase().contains(\"economía\")).or(value.toLowercase().contains(\"administración\")).or(value.toLowercase().contains(\"contabilidad\")).or(value.toLowercase() == \"law and economics\").or(value.toLowercase() == \"social sciences\").or(value.toLowercase() == \"syj\").or(value.toLowercase().contains(\"periodismo\")).or(value.toLowercase().contains(\"trabajo social\")).or(value.toLowercase().contains(\"turismo\")).or(value.toLowercase().contains(\"marketing\")).or(value.toLowercase().contains(\"geografía\")).or(value.toLowercase().contains(\"economics\")).or(value.toLowercase().contains(\"law\")).or(value.toLowercase().contains(\"información y documentación\")),\n          \"Ciencias Sociales y Jurídicas\",\n          \"Otros\"\n        )\n      )\n    )\n  )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ambit",
+    "description": "Eliminar columna Ambit"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ambit2",
+    "newColumnName": "Ambit",
+    "description": "Renombra la columna Ambit2 a Ambit"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Academic Level",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "Academic Level Id",
+    "columnInsertIndex": 6,
+    "description": "Crear la columna Academic Level Id en el índice 6 basada en la columna Academic Level usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Academic Level",
+    "description": "Eliminar columna Academic Level"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Ambit",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "AmbitId",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna AmbitId en el índice 7 basada en la columna Ambit usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ambit",
+    "description": "Eliminar columna Ambit"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CenterId",
+    "newColumnName": "FacultyId",
+    "description": "Renombra la columna CenterId a FacultyId"
   }
 ]
