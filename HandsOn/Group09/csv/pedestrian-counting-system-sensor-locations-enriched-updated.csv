@@ -1,4 +1,4 @@
-Location_ID;Sensor_Description;Sensor_Name;Installation_Date;Note;Location_Type;Status;Direction_1;Direction_2;Latitude;Longitude;Street;House_Number;Postcode;City;Country;Adress
+Location_ID;Sensor_Description;Sensor_Name;Installation_Date;Note;Location_Type;Status;Direction_1;Direction_2;Latitude;Longitude;Street;House_Number;Postcode;City;Country;Address
 1;Bourke Street Mall (North);Bou292_T;24/03/2009;;Outdoor;A;East;West;-37.81349441;144.9651532;Bourke Street Mall;280;3000;Melbourne;Australia;Cue City, 280 Bourke Street Mall, Melbourne VIC 3000, Australia
 4;Town Hall (West);Swa123_T;23/03/2009;;Outdoor;A;North;South;-37.81487988;144.9660878;Swanston Street;117;3000;Melbourne;Australia;117 Swanston Street, Melbourne VIC 3000, Australia
 10;Victoria Point;BouHbr_T;23/04/2009;;Outdoor;A;East;West;-37.81876474;144.9471055;Bourke Street;770;3008;Docklands;Australia;770 Bourke Street, Docklands VIC 3008, Australia
