@@ -1,3 +1,5 @@
+# CONSULTAS SPARQL
+
 # CONSULTA 1: Bares que están el distrito 10
 
 PREFIX ns: <http://www.barnabikes.org/ODKG/handsOn/group10/>
@@ -42,5 +44,54 @@ WHERE {
 GROUP BY ?addressName
 HAVING (COUNT(?station) > 3)
 ORDER BY DESC(?numStations)
+
+
+
+# RESULTADOS
+
+# CONSULTA 1
+
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/333173100'), rdflib.term.Literal('Razzmatazz'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/75990157647'), rdflib.term.Literal('Sala Bóveda'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/75990162835'), rdflib.term.Literal('Bar Musical Ceferino'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/75990210325'), rdflib.term.Literal('Sala Vol'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/93221210635'), rdflib.term.Literal('Bar Musical Com-tu'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/95327105318'), rdflib.term.Literal('Discoteca Wolf Barcelona'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/99400158645'), rdflib.term.Literal('Karaoke Touch Music'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/99400173593'), rdflib.term.Literal('Pepe Bar'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/99400191791'), rdflib.term.Literal('Sala Monasterio'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/99400263461'), rdflib.term.Literal('Sala Fundació Màgica'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/99400604213'), rdflib.term.Literal('Discoteca Pub Dixit 724'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/99400632797'), rdflib.term.Literal('White Shisha Lounge'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/99400701254'), rdflib.term.Literal('Bar Trash Talk'))
+(rdflib.term.URIRef('http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/99400701255'), rdflib.term.Literal('Bar Trikini'))
+
+
+# CONSULTA 2
+
+(rdflib.term.Literal('25', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')),)
+
+
+# CONSULTA 3
+
+(rdflib.term.Literal('DE LES CORTS CATALANES'), rdflib.term.Literal('14', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('DIAGONAL'), rdflib.term.Literal('10', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('PUJADES'), rdflib.term.Literal('9', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('CATALUNYA'), rdflib.term.Literal('8', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('SARDENYA'), rdflib.term.Literal('8', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('ROSSELLÓ'), rdflib.term.Literal('7', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('PROVENÇA'), rdflib.term.Literal('7', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('BRUC'), rdflib.term.Literal('7', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('PARAL.LEL'), rdflib.term.Literal('6', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('RAMON TURRÓ'), rdflib.term.Literal('6', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('DIPUTACIÓ'), rdflib.term.Literal('6', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('FABRA I PUIG'), rdflib.term.Literal('5', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('ARAGÓ'), rdflib.term.Literal('5', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('NÀPOLS'), rdflib.term.Literal('4', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('LITORAL'), rdflib.term.Literal('4', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('SANT ADRIÀ'), rdflib.term.Literal('4', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('VILADOMAT'), rdflib.term.Literal('4', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('MERIDIANA'), rdflib.term.Literal('4', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
+(rdflib.term.Literal('VALLESPIR'), rdflib.term.Literal('4', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')))
 
 

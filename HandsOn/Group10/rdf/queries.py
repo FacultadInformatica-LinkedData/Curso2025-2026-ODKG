@@ -8,15 +8,16 @@ g.parse("results.ttl", format="turtle")
 query = """
 PREFIX ns: <http://www.barnabikes.org/ODKG/handsOn/group10/>
 
-SELECT ?addressName (COUNT(?station) AS ?numStations)
+
+SELECT (COUNT(?station) AS ?numStations)
 WHERE {
   ?station a ns:BikingStation ;
            ns:hasAddress ?addr .
-  ?addr ns:addressName ?addressName .
+           
+  ?addr ns:hasNeighborhood ?neigh .
+  ?neigh ns:hasDistrict ?district .
+  ?district ns:districtId 6 .
 }
-GROUP BY ?addressName
-HAVING (COUNT(?station) > 3)
-ORDER BY DESC(?numStations)
 
 
 """
