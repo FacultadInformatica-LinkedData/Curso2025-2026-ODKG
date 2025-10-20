@@ -83,7 +83,7 @@
     ];
 
     rr:predicateObjectMap [
-        rr:predicate us:hasDirection1Count;
+        rr:predicate us:pedestrianCountD1;
         rr:objectMap [
             rml:reference "Direction_1";
             rr:datatype xsd:integer
@@ -91,7 +91,7 @@
     ];
 
     rr:predicateObjectMap [
-        rr:predicate us:hasDirection2Count;
+        rr:predicate us:pedestrianCountD2;
         rr:objectMap [
             rml:reference "Direction_2";
             rr:datatype xsd:integer
