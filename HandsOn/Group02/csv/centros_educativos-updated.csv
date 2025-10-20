@@ -1,4 +1,4 @@
-centro_codigo,centro_nombre,centro_tipo_codigo,centro_tipo_descripcion,centro_titularidad,direccion,direccion_codigo_postal,distrito_codigo,distrito_nombre,contacto_telefono1,contacto_web,contacto_email1,wktGeometry
+centro_codigo,centro_nombre,centro_tipo_codigo,centro_tipo_descripcion,centro_titularidad,direccion,direccion_codigo_postal,distrito_codigo,distrito_nombre,contacto_telefono,contacto_web,contacto_email,wktGeometry
 28004059,CERVANTES,42,INSTITUTO DE EDUCACIÓN SECUNDARIA,PÚBLICO,"Calle de Embajadores, 70",28012,1,Centro,915285061,http://www.educa.madrid.org/ies.cervantes.madrid,ies.cervantes.madrid@educa.madrid.org,POINT(-3.70320884055 40.405917222)
 28004266,DAMASO ALONSO,14,COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA,PÚBLICO,"Avda de Espinela, 1",28021,17,Villaverde,917970620,http://www.educa.madrid.org/cp.damasoalonso.madrid,cp.damasoalonso.madrid@educa.madrid.org,POINT(-3.70880385289 40.3460626099)
 28004291,CERVANTES BABY,8,ESCUELA INFANTIL PRIVADA,PRIVADO,"Calle del Avefría, 20",28025,11,Carabanchel,914615068,,cervantes_baby@yahoo.es,POINT(-3.73005661588 40.3842281568)

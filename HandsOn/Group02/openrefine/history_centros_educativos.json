@@ -2721,5 +2721,17 @@
     "op": "core/column-removal",
     "columnName": "coordenada_y_utm",
     "description": "Remove column coordenada_y_utm"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "contacto_email1",
+    "newColumnName": "contacto_email",
+    "description": "Rename column contacto_email1 to contacto_email"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "contacto_telefono1",
+    "newColumnName": "contacto_telefono",
+    "description": "Rename column contacto_telefono1 to contacto_telefono"
   }
 ]
