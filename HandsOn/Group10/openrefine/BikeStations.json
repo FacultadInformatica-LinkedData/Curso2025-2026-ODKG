@@ -2,64 +2,64 @@
   {
     "op": "core/column-removal",
     "columnName": "physical_configuration",
-    "description": "Eliminar columna physical_configuration"
+    "description": "Remove column physical_configuration"
   },
   {
     "op": "core/column-removal",
     "columnName": "name",
-    "description": "Eliminar columna name"
+    "description": "Remove column name"
   },
   {
     "op": "core/column-move",
     "columnName": "address",
     "index": 0,
-    "description": "Mueve la columna address a la posición 0"
+    "description": "Move column address to position 0"
   },
   {
     "op": "core/column-removal",
     "columnName": "rental_uris",
-    "description": "Eliminar columna rental_uris"
+    "description": "Remove column rental_uris"
   },
   {
     "op": "core/column-removal",
     "columnName": "is_valet_station",
-    "description": "Eliminar columna is_valet_station"
+    "description": "Remove column is_valet_station"
   },
   {
     "op": "core/column-removal",
     "columnName": "last_updated",
-    "description": "Eliminar columna last_updated"
+    "description": "Remove column last_updated"
   },
   {
     "op": "core/column-removal",
     "columnName": "ttl",
-    "description": "Eliminar columna ttl"
+    "description": "Remove column ttl"
   },
   {
     "op": "core/column-removal",
     "columnName": "x_ride_code_support",
-    "description": "Eliminar columna x_ride_code_support"
+    "description": "Remove column x_ride_code_support"
   },
   {
     "op": "core/column-removal",
     "columnName": "nearby_distance",
-    "description": "Eliminar columna nearby_distance"
+    "description": "Remove column nearby_distance"
   },
   {
     "op": "core/column-removal",
     "columnName": "short_name",
-    "description": "Eliminar columna short_name"
+    "description": "Remove column short_name"
   },
   {
     "op": "core/column-removal",
     "columnName": "is_charging_station",
-    "description": "Eliminar columna is_charging_station"
+    "description": "Remove column is_charging_station"
   },
   {
     "op": "core/column-move",
     "columnName": "address",
     "index": 1,
-    "description": "Mueve la columna address a la posición 1"
+    "description": "Move column address to position 1"
   },
   {
     "op": "core/column-split",
@@ -74,7 +74,7 @@
     "separator": ",",
     "regex": false,
     "maxColumns": 2,
-    "description": "Dividir columna address por separador"
+    "description": "Split column address by separator"
   },
   {
     "op": "core/text-transform",
@@ -87,7 +87,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna address 2 usando la expresión grel:if(value == null, null,\n   if(value.find(/\\d+/).length() > 0,\n      value.find(/\\d+/)[0],\n      null))"
+    "description": "Text transform on cells in column address 2 using expression grel:if(value == null, null,\n   if(value.find(/\\d+/).length() > 0,\n      value.find(/\\d+/)[0],\n      null))"
   },
   {
     "op": "core/column-split",
@@ -102,7 +102,7 @@
     "separator": "/",
     "regex": false,
     "maxColumns": 2,
-    "description": "Dividir columna cross_street por separador"
+    "description": "Split column cross_street by separator"
   },
   {
     "op": "core/column-split",
@@ -117,7 +117,7 @@
     "separator": "-",
     "regex": false,
     "maxColumns": 2,
-    "description": "Dividir columna cross_street 1 por separador"
+    "description": "Split column cross_street 1 by separator"
   },
   {
     "op": "core/column-split",
@@ -132,37 +132,37 @@
     "separator": "-",
     "regex": false,
     "maxColumns": 2,
-    "description": "Dividir columna cross_street 2 por separador"
+    "description": "Split column cross_street 2 by separator"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "cross_street 1 2",
     "newColumnName": "district_name",
-    "description": "Renombra la columna cross_street 1 2 a district_name"
+    "description": "Rename column cross_street 1 2 to district_name"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "cross_street 1 1",
     "newColumnName": "district_number",
-    "description": "Renombra la columna cross_street 1 1 a district_number"
+    "description": "Rename column cross_street 1 1 to district_number"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "cross_street 2 2",
     "newColumnName": "neighborhood_name",
-    "description": "Renombra la columna cross_street 2 2 a neighborhood_name"
+    "description": "Rename column cross_street 2 2 to neighborhood_name"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "cross_street 2 1",
     "newColumnName": "neighborhood_number",
-    "description": "Renombra la columna cross_street 2 1 a neighborhood_number"
+    "description": "Rename column cross_street 2 1 to neighborhood_number"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "address 2",
     "newColumnName": "address_number",
-    "description": "Renombra la columna address 2 a address_number"
+    "description": "Rename column address 2 to address_number"
   },
   {
     "op": "core/column-split",
@@ -177,12 +177,12 @@
     "separator": "|",
     "regex": false,
     "maxColumns": 2,
-    "description": "Dividir columna address 1 por separador"
+    "description": "Split column address 1 by separator"
   },
   {
     "op": "core/column-removal",
     "columnName": "address 1 2",
-    "description": "Eliminar columna address 1 2"
+    "description": "Remove column address 1 2"
   },
   {
     "op": "core/column-addition",
@@ -205,7 +205,7 @@
     "onError": "keep-original",
     "newColumnName": "address_type",
     "columnInsertIndex": 2,
-    "description": "Crear la columna address_type en el índice 2 basada en la columna address 1 1 usando la expresión grel:if(value == null, null,\n  if(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i).length() > 0,\n     trim(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i)[0]),\n     null)\n)"
+    "description": "Create column address_type at index 2 based on column address 1 1 using expression grel:if(value == null, null,\n  if(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i).length() > 0,\n     trim(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i)[0]),\n     null)\n)"
   },
   {
     "op": "core/text-transform",
@@ -228,7 +228,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna address 1 1 usando la expresión grel:if(value == null, null,\n  trim(\n    value.replace(\n      /^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?[\\s,]*/i,\n      \"\"\n    )\n  )\n)"
+    "description": "Text transform on cells in column address 1 1 using expression grel:if(value == null, null,\n  trim(\n    value.replace(\n      /^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?[\\s,]*/i,\n      \"\"\n    )\n  )\n)"
   },
   {
     "op": "core/text-transform",
@@ -251,7 +251,7 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna address 1 1 usando la expresión grel:value.replace(/^[\\/\\s]+/, \"\")"
+    "description": "Text transform on cells in column address 1 1 using expression grel:value.replace(/^[\\/\\s]+/, \"\")"
   },
   {
     "op": "core/text-transform",
@@ -274,19 +274,19 @@
     "onError": "keep-original",
     "repeat": false,
     "repeatCount": 10,
-    "description": "Transforma el texto de las celdas en la columna address 1 1 usando la expresión grel:value.replace(/\\/.*/, \"\").trim()"
+    "description": "Text transform on cells in column address 1 1 using expression grel:value.replace(/\\/.*/, \"\").trim()"
   },
   {
     "op": "core/column-move",
     "columnName": "address_type",
     "index": 1,
-    "description": "Mueve la columna address_type a la posición 1"
+    "description": "Move column address_type to position 1"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "address 1 1",
     "newColumnName": "address_name",
-    "description": "Renombra la columna address 1 1 a address_name"
+    "description": "Rename column address 1 1 to address_name"
   },
   {
     "op": "core/column-addition",
@@ -299,83 +299,711 @@
     "onError": "set-to-blank",
     "newColumnName": "id",
     "columnInsertIndex": 3,
-    "description": "Crear la columna id en el índice 3 basada en la columna address_name usando la expresión grel:substring(md5(cells[\"address_name\"].value + toString(cells[\"lat\"].value) + toString(cells[\"lon\"].value)), 0, 8)"
+    "description": "Create column id at index 3 based on column address_name using expression grel:substring(md5(cells[\"address_name\"].value + toString(cells[\"lat\"].value) + toString(cells[\"lon\"].value)), 0, 8)"
   },
   {
     "op": "core/column-move",
     "columnName": "id",
     "index": 0,
-    "description": "Mueve la columna id a la posición 0"
+    "description": "Move column id to position 0"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "id",
     "newColumnName": "stationId",
-    "description": "Renombra la columna id a stationId"
+    "description": "Rename column id to stationId"
   },
   {
     "op": "core/column-removal",
     "columnName": "station_id",
-    "description": "Eliminar columna station_id"
+    "description": "Remove column station_id"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "address_type",
     "newColumnName": "addressType",
-    "description": "Renombra la columna address_type a addressType"
+    "description": "Rename column address_type to addressType"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "address_name",
     "newColumnName": "addressName",
-    "description": "Renombra la columna address_name a addressName"
+    "description": "Rename column address_name to addressName"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "address_number",
     "newColumnName": "addressNumber",
-    "description": "Renombra la columna address_number a addressNumber"
+    "description": "Rename column address_number to addressNumber"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "district_number",
     "newColumnName": "districtNumber",
-    "description": "Renombra la columna district_number a districtNumber"
+    "description": "Rename column district_number to districtNumber"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "district_name",
     "newColumnName": "districtName",
-    "description": "Renombra la columna district_name a districtName"
+    "description": "Rename column district_name to districtName"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "neighborhood_number",
     "newColumnName": "neighborhoodNumber",
-    "description": "Renombra la columna neighborhood_number a neighborhoodNumber"
+    "description": "Rename column neighborhood_number to neighborhoodNumber"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "neighborhood_name",
     "newColumnName": "neighborhoodName",
-    "description": "Renombra la columna neighborhood_name a neighborhoodName"
+    "description": "Rename column neighborhood_name to neighborhoodName"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "post_code",
     "newColumnName": "postCode",
-    "description": "Renombra la columna post_code a postCode"
+    "description": "Rename column post_code to postCode"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "lat",
     "newColumnName": "latitude",
-    "description": "Renombra la columna lat a latitude"
+    "description": "Rename column lat to latitude"
   },
   {
     "op": "core/column-rename",
     "oldColumnName": "lon",
     "newColumnName": "longitude",
-    "description": "Renombra la columna lon a longitude"
+    "description": "Rename column lon to longitude"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "neighborhoodNumber",
+          "expression": "value",
+          "columnName": "neighborhoodNumber",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RBLA.",
+          "RBLA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RBLA"
+      },
+      {
+        "from": [
+          "GRAN VIA",
+          "GRAN  VIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GRAN VIA"
+      },
+      {
+        "from": [
+          "PL.",
+          "PL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PL"
+      }
+    ],
+    "description": "Mass edit cells in column addressType"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "C/",
+          "C"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CARRER"
+      }
+    ],
+    "description": "Mass edit cells in column addressType"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PL",
+          "PLAÇA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PLAÇA"
+      }
+    ],
+    "description": "Mass edit cells in column addressType"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodNumber",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column neighborhoodNumber using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "neighborhoodNumber",
+    "newColumnName": "neighborhoodId",
+    "description": "Rename column neighborhoodNumber to neighborhoodId"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column neighborhoodName using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "districtNumber",
+    "newColumnName": "districtId",
+    "description": "Rename column districtNumber to districtId"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtId",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column districtId using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "DE COLOM (VIA LAIETANA)",
+          "DE COLOM - VIA LAIETANA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DE COLOM (VIA LAIETANA)"
+      },
+      {
+        "from": [
+          "MARQUÉS DE L'ARGENTERA",
+          "MARQUÉS DE  L'ARGENTERA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MARQUÉS DE L'ARGENTERA"
+      },
+      {
+        "from": [
+          "BOLIVIA",
+          "BOLÍVIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BOLIVIA"
+      },
+      {
+        "from": [
+          "CALABRIA",
+          "CALÀBRIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CALABRIA"
+      },
+      {
+        "from": [
+          "RAMON TURRÓ",
+          "RAMÓN TURRÓ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAMON TURRÓ"
+      },
+      {
+        "from": [
+          "CRISTOBAL DE MOURA",
+          "CRISTÓBAL DE MOURA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CRISTOBAL DE MOURA"
+      },
+      {
+        "from": [
+          "WORLD  TRADE CENTER",
+          "WORLD TRADE CENTER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WORLD TRADE CENTER"
+      },
+      {
+        "from": [
+          "DE LLUIS COMPANYS (ARC DE TRIOMF)",
+          "DE LLUíS COMPANYS (ARC DE TRIOMF)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DE LLUIS COMPANYS (ARC DE TRIOMF)"
+      },
+      {
+        "from": [
+          "ENRIC  GRANADOS",
+          "ENRIC GRANADOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ENRIC GRANADOS"
+      },
+      {
+        "from": [
+          "PARAL.LEL",
+          "PARAL·LEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PARAL.LEL"
+      },
+      {
+        "from": [
+          "MARITIM",
+          "MARíTIM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MARITIM"
+      }
+    ],
+    "description": "Mass edit cells in column addressName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "FELIP II",
+          "FELIPE II"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FELIPE II"
+      }
+    ],
+    "description": "Mass edit cells in column addressName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CiutatVella"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ciutat Vella"
+      }
+    ],
+    "description": "Mass edit cells in column districtName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LesCorts"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Les Corts"
+      }
+    ],
+    "description": "Mass edit cells in column districtName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NouBarris"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Nou Barris"
+      }
+    ],
+    "description": "Mass edit cells in column districtName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SantAndreu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sant Andreu"
+      }
+    ],
+    "description": "Mass edit cells in column districtName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SantMartí"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sant Martí"
+      }
+    ],
+    "description": "Mass edit cells in column districtName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sarrià-StGervasi"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sarrià-sant Gervasi"
+      }
+    ],
+    "description": "Mass edit cells in column districtName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RONDA DE SANT PAU",
+          "RONDA SANT PAU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RONDA DE SANT PAU"
+      },
+      {
+        "from": [
+          "DE L'ONZE DE SETEMBRE",
+          "ONZE DE SETEMBRE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DE L'ONZE DE SETEMBRE"
+      },
+      {
+        "from": [
+          "COMTE D'URGELL",
+          "DEL COMTE D'URGELL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COMTE D'URGELL"
+      }
+    ],
+    "description": "Mass edit cells in column addressName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PG."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PASSEIG"
+      }
+    ],
+    "description": "Mass edit cells in column addressType"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AV."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVENGUDA"
+      }
+    ],
+    "description": "Mass edit cells in column addressType"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AVENGUDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVINGUDA"
+      }
+    ],
+    "description": "Mass edit cells in column addressType"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitude",
+    "expression": "grel:value.trim().replace(\".\", \",\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column latitude using expression grel:value.trim().replace(\".\", \",\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column latitude using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "longitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column longitude using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column latitude using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitude",
+    "expression": "grel:value.toString().split(\",\")[0] + \".\" + value.toString().split(\",\")[1].slice(0,6)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column latitude using expression grel:value.toString().split(\",\")[0] + \".\" + value.toString().split(\",\")[1].slice(0,6)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "longitude",
+    "expression": "grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,6)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column longitude using expression grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,6)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "longitude",
+    "expression": "grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,5)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column longitude using expression grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,5)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitude",
+    "expression": "grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,5)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column latitude using expression grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,5)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RBLA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAMBLA"
+      }
+    ],
+    "description": "Mass edit cells in column addressType"
   }
 ]
