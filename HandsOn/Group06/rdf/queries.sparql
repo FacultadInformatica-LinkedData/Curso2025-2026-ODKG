@@ -1,0 +1,205 @@
+# SPARQL Queries for Madrid Bus Network RDF Data Verification
+# Group 06 - Open Data and Knowledge Graphs
+
+PREFIX ex: <http://group06.linkeddata.es/ontology/madridbus/>
+PREFIX res: <http://group06.linkeddata.es/resource/>
+PREFIX gtfs: <http://vocab.gtfs.org/terms#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# ========================================================================
+# QUERY 1: Count all resources by type (verify data completeness)
+# ========================================================================
+SELECT ?type (COUNT(?resource) AS ?count)
+WHERE {
+    ?resource rdf:type ?type .
+}
+GROUP BY ?type
+ORDER BY DESC(?count)
+
+# ========================================================================
+# QUERY 2: List all bus routes with their names
+# ========================================================================
+SELECT ?route ?shortName ?longName
+WHERE {
+    ?route rdf:type ex:BusRoute ;
+           gtfs:shortName ?shortName ;
+           gtfs:longName ?longName .
+}
+ORDER BY ?shortName
+LIMIT 20
+
+# ========================================================================
+# QUERY 3: Find bus stops in Aranjuez area with coordinates
+# ========================================================================
+SELECT ?stop ?stopName ?lat ?long
+WHERE {
+    ?stop rdf:type ex:BusStop ;
+          rdfs:label ?stopName ;
+          geo:lat ?lat ;
+          geo:long ?long .
+    FILTER(CONTAINS(LCASE(?stopName), "aranjuez"))
+}
+ORDER BY ?stopName
+LIMIT 10
+
+# ========================================================================
+# QUERY 4: Get trips for a specific route (Route 1)
+# ========================================================================
+SELECT ?trip ?headsign ?direction
+WHERE {
+    ?trip rdf:type gtfs:Trip ;
+          gtfs:route res:route/9__1__013_ ;
+          gtfs:headsign ?headsign ;
+          gtfs:directionId ?direction .
+}
+LIMIT 5
+
+# ========================================================================
+# QUERY 5: Find stop times for a specific trip
+# ========================================================================
+SELECT ?stopTime ?stop ?arrivalTime ?departureTime ?sequence
+WHERE {
+    ?stopTime rdf:type gtfs:StopTime ;
+              gtfs:trip ?trip ;
+              gtfs:stop ?stop ;
+              gtfs:arrivalTime ?arrivalTime ;
+              gtfs:departureTime ?departureTime ;
+              gtfs:stopSequence ?sequence .
+    FILTER(CONTAINS(STR(?trip), "9010201_9__1__013_"))
+}
+ORDER BY ?sequence
+LIMIT 10
+
+# ========================================================================
+# QUERY 6: Get local areas with their DBpedia URIs and coordinates
+# ========================================================================
+SELECT ?area ?areaName ?areaCode ?lat ?long ?description
+WHERE {
+    ?area rdf:type ex:LocalArea ;
+          rdfs:label ?areaName ;
+          ex:areaCode ?areaCode ;
+          geo:lat ?lat ;
+          geo:long ?long ;
+          rdfs:comment ?description .
+}
+ORDER BY ?areaName
+
+# ========================================================================
+# QUERY 7: Find services operating on weekdays (Monday-Friday)
+# ========================================================================
+SELECT ?service ?rule
+WHERE {
+    ?service rdf:type gtfs:Service ;
+             gtfs:serviceRule ?rule .
+    ?rule gtfs:monday "true"^^xsd:boolean ;
+          gtfs:tuesday "true"^^xsd:boolean ;
+          gtfs:wednesday "true"^^xsd:boolean ;
+          gtfs:thursday "true"^^xsd:boolean ;
+          gtfs:friday "true"^^xsd:boolean .
+}
+LIMIT 10
+
+# ========================================================================
+# QUERY 8: Find calendar exceptions for a specific service
+# ========================================================================
+SELECT ?exception ?date ?service
+WHERE {
+    ?exception rdf:type gtfs:CalendarDateRule ;
+               gtfs:service ?service ;
+               gtfs:date ?date .
+}
+ORDER BY ?date
+LIMIT 10
+
+# ========================================================================
+# QUERY 9: Get shape points for a specific shape
+# ========================================================================
+SELECT ?shapePoint ?lat ?long ?sequence ?distance
+WHERE {
+    ?shapePoint rdf:type gtfs:ShapePoint ;
+                gtfs:shape res:shape/9__1__013__1_re_IT_2 ;
+                geo:lat ?lat ;
+                geo:long ?long ;
+                gtfs:pointSequence ?sequence ;
+                gtfs:distanceTraveled ?distance .
+}
+ORDER BY ?sequence
+LIMIT 10
+
+# ========================================================================
+# QUERY 10: Verify data types - Check that coordinates are floats
+# ========================================================================
+SELECT ?stop ?lat ?long
+WHERE {
+    ?stop rdf:type ex:BusStop ;
+          geo:lat ?lat ;
+          geo:long ?long .
+}
+LIMIT 5
+
+# ========================================================================
+# QUERY 11: Find wheelchair-accessible bus stops
+# ========================================================================
+SELECT ?stop ?stopName ?wheelchair
+WHERE {
+    ?stop rdf:type ex:BusStop ;
+          rdfs:label ?stopName ;
+          gtfs:wheelchairBoarding ?wheelchair .
+    FILTER(?wheelchair != 2)
+}
+LIMIT 10
+
+# ========================================================================
+# QUERY 12: Get service calendar rules with date ranges
+# ========================================================================
+SELECT ?rule ?startDate ?endDate ?monday ?friday
+WHERE {
+    ?rule rdf:type gtfs:CalendarRule ;
+          schema:startDate ?startDate ;
+          schema:endDate ?endDate ;
+          gtfs:monday ?monday ;
+          gtfs:friday ?friday .
+}
+LIMIT 10
+
+# ========================================================================
+# QUERY 13: Count resources per entity type (detailed breakdown)
+# ========================================================================
+SELECT 
+    (COUNT(DISTINCT ?route) AS ?totalRoutes)
+    (COUNT(DISTINCT ?stop) AS ?totalStops)
+    (COUNT(DISTINCT ?trip) AS ?totalTrips)
+    (COUNT(DISTINCT ?stopTime) AS ?totalStopTimes)
+    (COUNT(DISTINCT ?area) AS ?totalAreas)
+WHERE {
+    OPTIONAL { ?route rdf:type ex:BusRoute }
+    OPTIONAL { ?stop rdf:type ex:BusStop }
+    OPTIONAL { ?trip rdf:type gtfs:Trip }
+    OPTIONAL { ?stopTime rdf:type gtfs:StopTime }
+    OPTIONAL { ?area rdf:type ex:LocalArea }
+}
+
+# ========================================================================
+# QUERY 14: Verify URI naming strategy - Check if URIs follow pattern
+# ========================================================================
+SELECT ?resource ?type
+WHERE {
+    ?resource rdf:type ?type .
+    FILTER(STRSTARTS(STR(?resource), "http://group06.linkeddata.es/resource/"))
+}
+LIMIT 20
+
+# ========================================================================
+# QUERY 15: Find all properties used in the dataset
+# ========================================================================
+SELECT DISTINCT ?property (COUNT(?s) AS ?usage)
+WHERE {
+    ?s ?property ?o .
+}
+GROUP BY ?property
+ORDER BY DESC(?usage)
+

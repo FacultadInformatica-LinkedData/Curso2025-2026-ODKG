@@ -1,1 +1,6 @@
 area_id,area_name,area_code,dbpedia_uri,area_lat,area_lon,description
+area_aranjuez,Aranjuez,ARJ,http://dbpedia.org/resource/Aranjuez,40.0333,-3.603,"Historic town south of Madrid, UNESCO World Heritage Site"
+area_pinto,Pinto,PIN,"http://dbpedia.org/resource/Pinto,_Madrid",40.2431,-3.6996,Municipality in the Community of Madrid
+area_valdemoro,Valdemoro,VAL,http://dbpedia.org/resource/Valdemoro,40.1919,-3.6739,Town in the southern area of the Community of Madrid
+area_leganes,Leganés,LEG,http://dbpedia.org/resource/Legan%C3%A9s,40.3267,-3.7636,City in the Community of Madrid
+area_getafe,Getafe,GET,http://dbpedia.org/resource/Getafe,40.3057,-3.7327,City in the south of the Community of Madrid

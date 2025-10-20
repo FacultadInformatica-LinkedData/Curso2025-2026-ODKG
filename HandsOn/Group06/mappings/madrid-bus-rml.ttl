@@ -1,0 +1,525 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gtfs: <http://vocab.gtfs.org/terms#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://group06.linkeddata.es/ontology/madridbus/> .
+@prefix res: <http://group06.linkeddata.es/resource/> .
+
+#################################################################
+# TRIPLES MAP 1: BUS ROUTES
+# Source: gtfs_merged_for_rdf-updated.csv (routes data)
+#################################################################
+
+<#BusRouteMap>
+    rml:logicalSource [
+        rml:source "../data-processed/gtfs_merged_for_rdf-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/route/{route_id}" ;
+        rr:class ex:BusRoute
+    ] ;
+    
+    # route_short_name
+    rr:predicateObjectMap [
+        rr:predicate gtfs:shortName ;
+        rr:objectMap [
+            rml:reference "route_short_name"
+        ]
+    ] ;
+    
+    # route_long_name
+    rr:predicateObjectMap [
+        rr:predicate gtfs:longName ;
+        rr:objectMap [
+            rml:reference "route_long_name"
+        ]
+    ] ;
+    
+    # route_type
+    rr:predicateObjectMap [
+        rr:predicate gtfs:routeType ;
+        rr:objectMap [
+            rml:reference "route_type" ;
+            rr:datatype xsd:integer
+        ]
+    ] ;
+    
+    # Label
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "route_long_name"
+        ]
+    ] .
+
+#################################################################
+# TRIPLES MAP 2: BUS STOPS
+# Source: gtfs_merged_for_rdf-updated.csv (stops data)
+#################################################################
+
+<#BusStopMap>
+    rml:logicalSource [
+        rml:source "../data-processed/gtfs_merged_for_rdf-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/stop/{stop_id}" ;
+        rr:class ex:BusStop
+    ] ;
+    
+    # stop_name (label)
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "stop_name"
+        ]
+    ] ;
+    
+    # stop_lat
+    rr:predicateObjectMap [
+        rr:predicate geo:lat ;
+        rr:objectMap [
+            rml:reference "stop_lat" ;
+            rr:datatype xsd:float
+        ]
+    ] ;
+    
+    # stop_lon
+    rr:predicateObjectMap [
+        rr:predicate geo:long ;
+        rr:objectMap [
+            rml:reference "stop_lon" ;
+            rr:datatype xsd:float
+        ]
+    ] ;
+    
+    # wheelchair_boarding
+    rr:predicateObjectMap [
+        rr:predicate gtfs:wheelchairBoarding ;
+        rr:objectMap [
+            rml:reference "wheelchair_boarding" ;
+            rr:datatype xsd:integer
+        ]
+    ] .
+
+#################################################################
+# TRIPLES MAP 3: TRIPS
+# Source: gtfs_merged_for_rdf-updated.csv (trips data)
+#################################################################
+
+<#TripMap>
+    rml:logicalSource [
+        rml:source "../data-processed/gtfs_merged_for_rdf-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/trip/{trip_id}" ;
+        rr:class gtfs:Trip
+    ] ;
+    
+    # Link to route
+    rr:predicateObjectMap [
+        rr:predicate gtfs:route ;
+        rr:objectMap [
+            rr:template "http://group06.linkeddata.es/resource/route/{route_id}" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+    
+    # Link to service
+    rr:predicateObjectMap [
+        rr:predicate gtfs:service ;
+        rr:objectMap [
+            rr:template "http://group06.linkeddata.es/resource/service/{service_id}" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+    
+    # trip_headsign
+    rr:predicateObjectMap [
+        rr:predicate gtfs:headsign ;
+        rr:objectMap [
+            rml:reference "trip_headsign"
+        ]
+    ] ;
+    
+    # direction_id
+    rr:predicateObjectMap [
+        rr:predicate gtfs:directionId ;
+        rr:objectMap [
+            rml:reference "direction_id" ;
+            rr:datatype xsd:integer
+        ]
+    ] ;
+    
+    # shape_id (link to shape)
+    rr:predicateObjectMap [
+        rr:predicate gtfs:shape ;
+        rr:objectMap [
+            rr:template "http://group06.linkeddata.es/resource/shape/{shape_id}" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+    
+    # Label
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "trip_headsign"
+        ]
+    ] .
+
+#################################################################
+# TRIPLES MAP 4: STOP TIMES
+# Source: gtfs_merged_for_rdf-updated.csv (stop_times data)
+#################################################################
+
+<#StopTimeMap>
+    rml:logicalSource [
+        rml:source "../data-processed/gtfs_merged_for_rdf-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/stoptime/{trip_id}-{stop_id}-{stop_sequence}" ;
+        rr:class gtfs:StopTime
+    ] ;
+    
+    # Link to trip
+    rr:predicateObjectMap [
+        rr:predicate gtfs:trip ;
+        rr:objectMap [
+            rr:template "http://group06.linkeddata.es/resource/trip/{trip_id}" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+    
+    # Link to stop
+    rr:predicateObjectMap [
+        rr:predicate gtfs:stop ;
+        rr:objectMap [
+            rr:template "http://group06.linkeddata.es/resource/stop/{stop_id}" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+    
+    # arrival_time
+    rr:predicateObjectMap [
+        rr:predicate gtfs:arrivalTime ;
+        rr:objectMap [
+            rml:reference "arrival_time" ;
+            rr:datatype xsd:time
+        ]
+    ] ;
+    
+    # departure_time
+    rr:predicateObjectMap [
+        rr:predicate gtfs:departureTime ;
+        rr:objectMap [
+            rml:reference "departure_time" ;
+            rr:datatype xsd:time
+        ]
+    ] ;
+    
+    # stop_sequence
+    rr:predicateObjectMap [
+        rr:predicate gtfs:stopSequence ;
+        rr:objectMap [
+            rml:reference "stop_sequence" ;
+            rr:datatype xsd:integer
+        ]
+    ] .
+
+#################################################################
+# TRIPLES MAP 5: LOCAL AREAS
+# Source: local_areas-updated.csv
+#################################################################
+
+<#LocalAreaMap>
+    rml:logicalSource [
+        rml:source "../data-processed/local_areas-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/area/{area_id}" ;
+        rr:class ex:LocalArea
+    ] ;
+    
+    # area_name (label)
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "area_name"
+        ]
+    ] ;
+    
+    # area_code
+    rr:predicateObjectMap [
+        rr:predicate ex:areaCode ;
+        rr:objectMap [
+            rml:reference "area_code"
+        ]
+    ] ;
+    
+    # area_lat
+    rr:predicateObjectMap [
+        rr:predicate geo:lat ;
+        rr:objectMap [
+            rml:reference "area_lat" ;
+            rr:datatype xsd:float
+        ]
+    ] ;
+    
+    # area_lon
+    rr:predicateObjectMap [
+        rr:predicate geo:long ;
+        rr:objectMap [
+            rml:reference "area_lon" ;
+            rr:datatype xsd:float
+        ]
+    ] ;
+    
+    # description
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment ;
+        rr:objectMap [
+            rml:reference "description"
+        ]
+    ] .
+
+#################################################################
+# TRIPLES MAP 6: SERVICES & CALENDAR
+# Source: calendar-updated.csv
+#################################################################
+
+<#ServiceMap>
+    rml:logicalSource [
+        rml:source "../data-processed/calendar-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/service/{service_id}" ;
+        rr:class gtfs:Service
+    ] ;
+    
+    # Link to calendar rule
+    rr:predicateObjectMap [
+        rr:predicate gtfs:serviceRule ;
+        rr:objectMap [
+            rr:template "http://group06.linkeddata.es/resource/calendarrule/{service_id}" ;
+            rr:termType rr:IRI
+        ]
+    ] .
+
+<#CalendarRuleMap>
+    rml:logicalSource [
+        rml:source "../data-processed/calendar-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/calendarrule/{service_id}" ;
+        rr:class gtfs:CalendarRule
+    ] ;
+    
+    # Days of week (as booleans)
+    rr:predicateObjectMap [
+        rr:predicate gtfs:monday ;
+        rr:objectMap [
+            rml:reference "monday" ;
+            rr:datatype xsd:boolean
+        ]
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate gtfs:tuesday ;
+        rr:objectMap [
+            rml:reference "tuesday" ;
+            rr:datatype xsd:boolean
+        ]
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate gtfs:wednesday ;
+        rr:objectMap [
+            rml:reference "wednesday" ;
+            rr:datatype xsd:boolean
+        ]
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate gtfs:thursday ;
+        rr:objectMap [
+            rml:reference "thursday" ;
+            rr:datatype xsd:boolean
+        ]
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate gtfs:friday ;
+        rr:objectMap [
+            rml:reference "friday" ;
+            rr:datatype xsd:boolean
+        ]
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate gtfs:saturday ;
+        rr:objectMap [
+            rml:reference "saturday" ;
+            rr:datatype xsd:boolean
+        ]
+    ] ;
+    
+    rr:predicateObjectMap [
+        rr:predicate gtfs:sunday ;
+        rr:objectMap [
+            rml:reference "sunday" ;
+            rr:datatype xsd:boolean
+        ]
+    ] ;
+    
+    # start_date
+    rr:predicateObjectMap [
+        rr:predicate schema:startDate ;
+        rr:objectMap [
+            rml:reference "start_date" ;
+            rr:datatype xsd:date
+        ]
+    ] ;
+    
+    # end_date
+    rr:predicateObjectMap [
+        rr:predicate schema:endDate ;
+        rr:objectMap [
+            rml:reference "end_date" ;
+            rr:datatype xsd:date
+        ]
+    ] .
+
+#################################################################
+# TRIPLES MAP 7: CALENDAR DATE EXCEPTIONS
+# Source: calendar_dates-updated.csv
+#################################################################
+
+<#CalendarDateMap>
+    rml:logicalSource [
+        rml:source "../data-processed/calendar_dates-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/calendardate/{service_id}-{date}" ;
+        rr:class gtfs:CalendarDateRule
+    ] ;
+    
+    # Link to service
+    rr:predicateObjectMap [
+        rr:predicate gtfs:service ;
+        rr:objectMap [
+            rr:template "http://group06.linkeddata.es/resource/service/{service_id}" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+    
+    # date
+    rr:predicateObjectMap [
+        rr:predicate gtfs:date ;
+        rr:objectMap [
+            rml:reference "date" ;
+            rr:datatype xsd:date
+        ]
+    ] ;
+    
+    # exception_type
+    rr:predicateObjectMap [
+        rr:predicate gtfs:dateAddition ;
+        rr:objectMap [
+            rml:reference "exception_type" ;
+            rr:datatype xsd:integer
+        ]
+    ] .
+
+#################################################################
+# TRIPLES MAP 8: SHAPES
+# Source: shapes-updated.csv
+#################################################################
+
+<#ShapeMap>
+    rml:logicalSource [
+        rml:source "../data-processed/shapes-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/shape/{shape_id}" ;
+        rr:class gtfs:Shape
+    ] .
+
+<#ShapePointMap>
+    rml:logicalSource [
+        rml:source "../data-processed/shapes-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    
+    rr:subjectMap [
+        rr:template "http://group06.linkeddata.es/resource/shapepoint/{shape_id}-{shape_pt_sequence}" ;
+        rr:class gtfs:ShapePoint
+    ] ;
+    
+    # Link to shape
+    rr:predicateObjectMap [
+        rr:predicate gtfs:shape ;
+        rr:objectMap [
+            rr:template "http://group06.linkeddata.es/resource/shape/{shape_id}" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+    
+    # shape_pt_lat
+    rr:predicateObjectMap [
+        rr:predicate geo:lat ;
+        rr:objectMap [
+            rml:reference "shape_pt_lat" ;
+            rr:datatype xsd:float
+        ]
+    ] ;
+    
+    # shape_pt_lon
+    rr:predicateObjectMap [
+        rr:predicate geo:long ;
+        rr:objectMap [
+            rml:reference "shape_pt_lon" ;
+            rr:datatype xsd:float
+        ]
+    ] ;
+    
+    # shape_pt_sequence
+    rr:predicateObjectMap [
+        rr:predicate gtfs:pointSequence ;
+        rr:objectMap [
+            rml:reference "shape_pt_sequence" ;
+            rr:datatype xsd:integer
+        ]
+    ] ;
+    
+    # shape_dist_traveled
+    rr:predicateObjectMap [
+        rr:predicate gtfs:distanceTraveled ;
+        rr:objectMap [
+            rml:reference "shape_dist_traveled" ;
+            rr:datatype xsd:double
+        ]
+    ] .
+
