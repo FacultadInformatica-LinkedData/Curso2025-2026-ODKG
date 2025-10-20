@@ -17,109 +17,74 @@
     rml:referenceFormulation ql:CSV .
 
 #################################################################
-# Entity mapping (Location and Sensor)
+# Entity Mapping
 #################################################################
 
-<#LocationTriplesMap> a rr:TriplesMap;
+<#ObservationPedestrian> a rr:TriplesMap;
     rml:logicalSource <#PedestrianCounts>;
     rr:subjectMap [
-        rr:template "https://smartcity.linkeddata.es/lcc/resource/Location/{Location_ID}";
-        rr:class us:Location
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdfs:label;
-        rr:objectMap [ rr:template "Ubicación {Location_ID}" ]
-    ].
-
-<#SensorTriplesMap> a rr:TriplesMap;
-    rml:logicalSource <#PedestrianCounts>;
-    rr:subjectMap [
-        rr:template "https://smartcity.linkeddata.es/lcc/resource/Sensor/{Sensor_Name}";
-        rr:class us:PedestrianSensor
-    ];
-    rr:predicateObjectMap [
-        rr:predicate rdfs:label;
-        rr:objectMap [ rml:reference "Sensor_Name" ]
-    ];
-    # Enlaza el Sensor con su Ubicación
-    rr:predicateObjectMap [
-        rr:predicate sosa:isLocatedAt; 
-        rr:objectMap [
-            rr:template "https://smartcity.linkeddata.es/lcc/resource/Location/{Location_ID}";
-            rr:termType rr:IRI
-        ]
-    ].
-
-#################################################################
-# Mapeo de Observación (Modelo B: 1 por Fila)
-#################################################################
-
-# --- 3. Mapeo para la Observación (1 por fila) ---
-<#ObservationTriplesMap> a rr:TriplesMap;
-    rml:logicalSource <#PedestrianCounts>;
-    rr:subjectMap [
-        # Se usa el ID base, sin sufijos
         rr:template "https://smartcity.linkeddata.es/lcc/resource/Observation/{PedObserv_ID}";
         rr:class sosa:Observation;
         rr:class us:PedestrianObservation
     ];
     
-    # Enlace al Sensor
     rr:predicateObjectMap [
         rr:predicate sosa:madeBySensor;
         rr:objectMap [
-            rr:template "https://smartcity.linkeddata.es/lcc/resource/Sensor/{Sensor_Name}";
-            rr:termType rr:IRI
+            rr:parentTriplesMap <#PedestrianSensor>;
+            rr:joinCondition [
+                rr:child "Sensor_Name";
+                rr:parent "Sensor_Name";
+            ]
         ]
     ];
     
-    # Enlace a la Ubicación (FeatureOfInterest)
     rr:predicateObjectMap [
-        rr:predicate sosa:hasFeatureOfInterest;
+        rr:predicate us:observedAtLocation;
         rr:objectMap [
-            rr:template "https://smartcity.linkeddata.es/lcc/resource/Location/{Location_ID}";
-            rr:termType rr:IRI
+            rr:parentTriplesMap <#PedestrianLocation>;
+            rr:joinCondition [
+                rr:child "Location_ID";
+                rr:parent "Location_ID";
+            ]
         ]
     ];
     
-    # Propiedad de tiempo
     rr:predicateObjectMap [
         rr:predicate sosa:resultTime;
         rr:objectMap [
-            rr:template "{Sensing_Date}T{HourDay}:00:00";
+            rr:reference "DateTime";
             rr:datatype xsd:dateTime
         ]
     ];
 
-    # --- Propiedades y Resultados (Tu modelo) ---
-
-    # El "Resultado Principal" (El Total)
     rr:predicateObjectMap [
-        rr:predicate sosa:observedProperty;
-        rr:objectMap [ rr:constant us:pedestrianCount ]
-    ];
-    rr:predicateObjectMap [
-        rr:predicate sosa:hasSimpleResult;
+        rr:predicate us:pedestrianCount;
         rr:objectMap [
             rml:reference "Total_of_Directions";
             rr:datatype xsd:integer
         ]
     ];
 
-    # La propiedad personalizada para Direction_1
     rr:predicateObjectMap [
-        rr:predicate us:hasDirection1Count; # <-- Propiedad nueva
+        rr:predicate us:hasDirection1Count;
         rr:objectMap [
             rml:reference "Direction_1";
             rr:datatype xsd:integer
         ]
     ];
 
-    # La propiedad personalizada para Direction_2
     rr:predicateObjectMap [
-        rr:predicate us:hasDirection2Count; # <-- Propiedad nueva
+        rr:predicate us:hasDirection2Count;
         rr:objectMap [
             rml:reference "Direction_2";
             rr:datatype xsd:integer
+        ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:template "Pedestrian observation on {DateTime}"
         ]
     ].
