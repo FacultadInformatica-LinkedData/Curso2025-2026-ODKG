@@ -1,0 +1,447 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "curso_academico",
+    "newColumnName": "Academic Year",
+    "description": "Renombra la columna curso_academico a Academic Year"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_universidad",
+    "newColumnName": "University",
+    "description": "Renombra la columna des_universidad a University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_tipo_estudio",
+    "newColumnName": "Academic Level",
+    "description": "Renombra la columna des_tipo_estudio a Academic Level"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Academic Level",
+          "expression": "value",
+          "columnName": "Academic Level",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Doctorado",
+                "l": "Doctorado"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_tipo_estudio",
+    "description": "Eliminar columna cod_tipo_estudio"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cod_titulacion",
+    "newColumnName": "Code",
+    "description": "Renombra la columna cod_titulacion a Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_titulacion",
+    "newColumnName": "Degree",
+    "description": "Renombra la columna des_titulacion a Degree"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_rama",
+    "description": "Eliminar columna cod_rama"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_interuniversitario",
+    "description": "Eliminar columna cod_interuniversitario"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_idioma_extranjero",
+    "description": "Eliminar columna cod_idioma_extranjero"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_grado_presencialidad",
+    "description": "Eliminar columna cod_grado_presencialidad"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "des_situacion_actual",
+          "expression": "value",
+          "columnName": "des_situacion_actual",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "En proceso de extinción",
+                "l": "En proceso de extinción"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "des_situacion_actual",
+          "expression": "value",
+          "columnName": "des_situacion_actual",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Extinguido en el curso de referencia",
+                "l": "Extinguido en el curso de referencia"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "des_situacion_actual",
+          "expression": "value",
+          "columnName": "des_situacion_actual",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Inactivo",
+                "l": "Inactivo"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_tipo_unidad_responsable",
+    "description": "Eliminar columna cod_tipo_unidad_responsable"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "des_tipo_unidad_responsable",
+    "description": "Eliminar columna des_tipo_unidad_responsable"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_situacion_actual",
+    "description": "Eliminar columna cod_situacion_actual"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "des_situacion_actual",
+    "description": "Eliminar columna des_situacion_actual"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Year",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2024-25"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2024-2025"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Academic Year"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cod_universidad",
+    "newColumnName": "UniversityCode",
+    "description": "Renombra la columna cod_universidad a UniversityCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cod_unidad_responsable",
+    "newColumnName": "ResponsibleUnitCode",
+    "description": "Renombra la columna cod_unidad_responsable a ResponsibleUnitCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_unidad_responsable",
+    "newColumnName": "ResponsibleUnit",
+    "description": "Renombra la columna des_unidad_responsable a ResponsibleUnit"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cod_municipio",
+    "newColumnName": "MunicipalityCode",
+    "description": "Renombra la columna cod_municipio a MunicipalityCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_municipio",
+    "newColumnName": "Municipality",
+    "description": "Renombra la columna des_municipio a Municipality"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cod_campus",
+    "newColumnName": "CampusCode",
+    "description": "Renombra la columna cod_campus a CampusCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_campus",
+    "newColumnName": "Campus",
+    "description": "Renombra la columna des_campus a Campus"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_rama",
+    "newColumnName": "Ambit",
+    "description": "Renombra la columna des_rama a Ambit"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_rol_coordinacion",
+    "description": "Eliminar columna cod_rol_coordinacion"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_impartido",
+    "description": "Eliminar columna cod_impartido"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "des_impartido",
+          "expression": "value",
+          "columnName": "des_impartido",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "No se imparte en el curso académico de referencia",
+                "l": "No se imparte en el curso académico de referencia"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "des_impartido",
+    "description": "Eliminar columna des_impartido"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "anio_inicio",
+    "newColumnName": "StartYear",
+    "description": "Renombra la columna anio_inicio a StartYear"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_grado_presencialidad",
+    "newColumnName": "DeliveryMode",
+    "description": "Renombra la columna des_grado_presencialidad a DeliveryMode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_idioma_extranjero",
+    "newColumnName": "ForeignLanguage",
+    "description": "Renombra la columna des_idioma_extranjero a ForeignLanguage"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "precio_credito_1",
+    "newColumnName": "CreditPrice1",
+    "description": "Renombra la columna precio_credito_1 a CreditPrice1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "precio_credito_2",
+    "description": "Eliminar columna precio_credito_2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "precio_credito_3",
+    "description": "Eliminar columna precio_credito_3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "precio_credito_4",
+    "description": "Eliminar columna precio_credito_4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "precio_credito_5",
+    "description": "Eliminar columna precio_credito_5"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "precio_tutela",
+    "description": "Eliminar columna precio_tutela"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "num_creditos_ofertados",
+    "description": "Eliminar columna num_creditos_ofertados"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "num_creditos_necesarios",
+    "newColumnName": "RequiredCredits",
+    "description": "Renombra la columna num_creditos_necesarios a RequiredCredits"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_interuniversitario",
+    "newColumnName": "InteruniversityProgram",
+    "description": "Renombra la columna des_interuniversitario a InteruniversityProgram"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "des_rol_coordinacion",
+    "newColumnName": "CoordinationRole",
+    "description": "Renombra la columna des_rol_coordinacion a CoordinationRole"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "Degree",
+          "columnName": "Degree",
+          "query": "doble",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "grel:value.replace(/Grado/, \"Doble Grado\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Level usando la expresión grel:value.replace(/Grado/, \"Doble Grado\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/GRADO EN/, \"\").replace(/DOBLE/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/GRADO EN/, \"\").replace(/DOBLE/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/MÁSTER UNIVERSITARIO EN/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/MÁSTER UNIVERSITARIO EN/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión value.toTitlecase()"
+  }
+]
