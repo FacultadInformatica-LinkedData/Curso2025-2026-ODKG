@@ -1,0 +1,195 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <http://schema.org/> .
+@prefix us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@base <https://smartcity.linkeddata.es/lcc/resource/> .
+
+#################################################################
+# Logical Source
+#################################################################
+
+<#MicroclimateSource>
+    a rml:LogicalSource ;
+    rml:source "../csv/microclimate-sensors-data-enriched-updated.csv" ;
+    rml:referenceFormulation ql:CSV .
+
+#################################################################
+# Sensor Mapping
+#################################################################
+
+<#MicroclimateSensor>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/sensor/{Sensor_Name}" ;
+        rr:class us:MicroclimateSensor ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate us:sensorId ;
+        rr:objectMap [ rml:reference "Location_ID" ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:madeObservation ;
+        rr:objectMap [
+            rr:parentTriplesMap <#MicroclimateObservation> ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate us:locatedAt ;
+        rr:objectMap [
+            rr:parentTriplesMap <#Location> ;
+        ] ;
+    ] .
+
+#################################################################
+# Observation Mapping
+#################################################################
+
+<#MicroclimateObservation>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/observation/{Sensor_Name}-{Time}" ;
+        rr:class us:MicroclimateObservation ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:resultTime ;
+        rr:objectMap [ rml:reference "Time" ; rr:datatype xsd:dateTime ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:madeBySensor ;
+        rr:objectMap [
+            rr:parentTriplesMap <#MicroclimateSensor> ;
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate us:observedAtLocation ;
+        rr:objectMap [
+            rr:parentTriplesMap <#Location> ;
+        ] ;
+    ] ;
+
+    # Observable properties
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:object us:airTemperature ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "AirTemperature" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:object us:relativeHumidity ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "RelativeHumidity" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:object us:averageWindSpeed ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "AverageWindSpeed" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:object us:averageWindDirection ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "AverageWindDirection" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:object us:atmosphericPressure ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "AtmosphericPressure" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:object us:pm10 ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "PM10" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:object us:noise ;
+    ] ;
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "Noise" ; rr:datatype xsd:float ] ;
+    ] .
+
+#################################################################
+# Location Mapping
+#################################################################
+
+<#Location>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/location/{Location_ID}" ;
+        rr:class us:Location ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate wgs84_pos:lat ;
+        rr:objectMap [ rml:reference "Latitude" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate wgs84_pos:long ;
+        rr:objectMap [ rml:reference "Longitude" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate us:closestPedestrianSensor ;
+        rr:objectMap [ rml:reference "Closest_PedestrianCount_Sensor" ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:streetAddress ;
+        rr:objectMap [ rml:reference "Address" ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:addressLocality ;
+        rr:objectMap [ rml:reference "City" ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:postalCode ;
+        rr:objectMap [ rml:reference "Postcode" ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:addressCountry ;
+        rr:objectMap [ rml:reference "Country" ] ;
+    ] .
