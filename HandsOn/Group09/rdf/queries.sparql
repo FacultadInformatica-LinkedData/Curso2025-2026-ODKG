@@ -1,5 +1,5 @@
 ##############################################################
-# Lista de todos los sensores
+# List of the Microclimate sensors
 ##############################################################
 PREFIX us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
 
@@ -9,7 +9,7 @@ WHERE {
 }
 
 ##############################################################
-# Direcciones de las calles de los sensores
+# Locations of the streets for Microclimate sensor
 ##############################################################
 
 PREFIX us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
@@ -24,7 +24,7 @@ WHERE {
 LIMIT 5
 
 ##############################################################
-# Ubicaciones y coordenadas de los sensores
+# Locations and coordinates for both types of sensors
 ##############################################################
 PREFIX wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 PREFIX us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
@@ -38,7 +38,7 @@ WHERE {
 LIMIT 5
 
 ##############################################################
-# Observación de un sensor (airTemperature)
+# Observation of a microclimate sensor (averageWindDirection)
 ##############################################################
 
 PREFIX us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
@@ -59,3 +59,29 @@ WHERE {
   ?loc schema:streetAddress ?address .
 }
 LIMIT 1
+
+##############################################################
+# List of Pedestrian Sensors
+##############################################################
+
+PREFIX us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
+
+SELECT ?sensor
+WHERE {
+  ?sensor a us:MicroclimateSensor .
+}
+
+##############################################################
+# Locations of Pedestrian sensors
+##############################################################
+
+PREFIX us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?sensor ?address
+WHERE {
+  ?sensor a us:PedestrianSensor ;
+          us:locatedAt ?loc .
+  ?loc schema:streetAddress ?address .
+}
+LIMIT 10
