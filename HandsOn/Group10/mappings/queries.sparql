@@ -1,0 +1,17 @@
+PREFIX ns: <http://www.barnabikes.org/ODKG/handsOn/group10/>
+
+# CONSULTA 1: Mostrar los bares que están el distrito con districtId= 10
+
+SELECT ?bar ?barName
+WHERE {
+  ?bar a ns:Bar ;
+       ns:barName ?barName ;
+       ns:hasAddress ?addr .
+       
+  ?addr ns:hasNeighborhood ?neigh .
+  ?neigh ns:hasDistrict ?district .
+  ?district ns:districtId 10 .
+}
+
+
+# CONSULTA 2:
