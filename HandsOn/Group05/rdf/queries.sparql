@@ -14,6 +14,16 @@ SELECT ?trip ?fromStation ?fromName ?toStation ?toName ?unlockDate ?lockDate ?du
   ?toStation   ex:hasStation_name ?toName .
 }
 
+# Que bici se ha usado en un viaje
+
+PREFIX ns: http://example.org/ns
+
+SELECT ?trip ?bike
+WHERE {
+  ?trip a ns:Trial ;
+        ns:hasBike ?bike .
+}
+
 
 # Estaciones más visitadas desde una estación en especifico
 
@@ -39,3 +49,16 @@ WHERE {
   ?trip a ns:Trial ;
         ns:hasBike ?bike .
 }
+
+
+
+# numero de viajes desde una estacion
+PREFIX ns: <http://example.org/ns#>
+
+SELECT ?station (COUNT(?trip) AS ?numViajes)
+WHERE {
+  ?trip a ns:Trial ;
+        ns:hasUnLockStation ?station .
+}
+GROUP BY ?station
+ORDER BY DESC(?numViajes)
