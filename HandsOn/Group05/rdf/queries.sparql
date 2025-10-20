@@ -40,19 +40,7 @@ GROUP BY ?dest
 ORDER BY DESC(?numViajes)
 
 
-# Que bici se ha usado en un viaje
-
-PREFIX ns: http://example.org/ns
-
-SELECT ?trip ?bike
-WHERE {
-  ?trip a ns:Trial ;
-        ns:hasBike ?bike .
-}
-
-
-
-# numero de viajes desde una estacion
+# Numero de viajes desde una estacion
 PREFIX ns: <http://example.org/ns#>
 
 SELECT ?station (COUNT(?trip) AS ?numViajes)
