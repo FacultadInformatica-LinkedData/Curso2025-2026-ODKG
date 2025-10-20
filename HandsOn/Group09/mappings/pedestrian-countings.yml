@@ -1,0 +1,54 @@
+prefixes:
+  rr: "http://www.w3.org/ns/r2rml#"
+  rml: "http://semweb.mmlab.be/ns/rml#"
+  ql: "http://semweb.mmlab.be/ns/ql#"
+  us: "https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#"
+  sosa: "http://www.w3.org/ns/sosa/"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  schema: "http://schema.org/"
+
+mappings:
+  ObservationPedestrian:
+    sources:
+      - access: "../csv/pedestrian-counting-system-monthly-counts-per-hour-final.csv"
+        referenceFormulation: ql:CSV
+
+    s: "https://smartcity.linkeddata.es/lcc/resource/Observation/{PedObserv_ID}"
+    po:
+      - [a, sosa:Observation]
+      - [a, us:PedestrianObservation]
+
+      - p: sosa:madeBySensor
+        o:
+          - reference: "Sensor_Name"
+            datatype: xsd:string
+
+      - p: us:observedAtLocation
+        o:
+          - reference: "Location_ID"
+            datatype: xsd:string
+
+      - p: sosa:resultTime
+        o:
+          - reference: "DateTime"
+            datatype: xsd:dateTime
+
+      - p: us:pedestrianCount
+        o:
+          - reference: "Total_of_Directions"
+            datatype: xsd:integer
+
+      - p: us:hasDirection1Count
+        o:
+          - reference: "Direction_1"
+            datatype: xsd:integer
+
+      - p: us:hasDirection2Count
+        o:
+          - reference: "Direction_2"
+            datatype: xsd:integer
+
+      - p: rdfs:label
+        o:
+          - template: "Pedestrian observation on {DateTime}"
