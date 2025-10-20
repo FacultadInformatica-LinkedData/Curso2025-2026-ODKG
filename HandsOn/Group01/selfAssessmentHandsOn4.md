@@ -2,23 +2,23 @@
 
 ## Checklist
 
-**The “rml-map.ttl” file:**
+**The “rml-map-Final.ttl” file:**
 
 - [X] Contains the RML mappings from the source `../csv/combinado-updated.csv`.
 
-**The “mapping-rules.yml” file:**
-- [X] Contains the YARRRML version of the mappings from the same source.
-
 **The "mappings" directory:**
 
-- [X] Contains the rml-map.ttl file.
-- [X] Contains the mapping-rules.yml file.
+- [X] Contains the rml-map-Final.ttl file.
 
 **The "queries.sparql" file:**
 
 - [X] Includes SPARQL queries to verify the correctness of the generated RDF data.
 
+**The "tripletas.nt" file:**
 
+- [X] Includes the RDF triples generated from the original data source according to the RML mapping.
+
+**The csv files updated**
 
 
 
