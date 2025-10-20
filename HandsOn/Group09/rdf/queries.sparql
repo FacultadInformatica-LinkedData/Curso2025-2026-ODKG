@@ -84,6 +84,7 @@ WHERE {
           us:locatedAt ?loc .
   ?loc schema:streetAddress ?address .
 }
+<<<<<<< HEAD
 LIMIT 10
 
 
@@ -164,3 +165,6 @@ ORDER BY DESC(?time)
 (rdflib.term.Literal('FliS_T'), rdflib.term.Literal('21', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('46', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('25', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('2024-12-02T02:00:00', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#dateTime')))
 (rdflib.term.Literal('FliS_T'), rdflib.term.Literal('38', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('85', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('47', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('2024-12-02T01:00:00', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#dateTime')))
 (rdflib.term.Literal('FliS_T'), rdflib.term.Literal('51', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('166', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('115', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#integer')), rdflib.term.Literal('2024-12-02T00:00:00', datatype=rdflib.term.URIRef('http://www.w3.org/2001/XMLSchema#dateTime')))
+=======
+LIMIT 10
+>>>>>>> bc1074208cf645893a7a9b44074d7eaf474116fd
