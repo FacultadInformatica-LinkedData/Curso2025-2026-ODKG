@@ -41,13 +41,19 @@ LIMIT 5
 # Observation of a microclimate sensor (averageWindDirection)
 ##############################################################
 
-SELECT ?sensor ?address ?awindD ?time
+PREFIX us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?sensor ?address ?temp ?time
 WHERE {
   ?obs a us:MicroclimateObservation ;
-       sosa:observedProperty us:averageWindDirection ;
-       sosa:hasSimpleResult ?awindD ;
+       sosa:hasResult ?res ;
        sosa:madeBySensor ?sensor ;
        sosa:resultTime ?time .
+
+  ?res sosa:observedProperty us:airTemperature ;
+       sosa:hasSimpleResult ?temp .
 
   ?sensor us:locatedAt ?loc .
   ?loc schema:streetAddress ?address .
