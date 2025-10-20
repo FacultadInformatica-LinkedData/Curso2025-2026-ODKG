@@ -9,8 +9,8 @@ PREFIX schema: <https://schema.org/>
 SELECT ?center ?name ?type
 WHERE {
   ?center a safeschool:EducationalCenter ;
-          safeschool:centerName ?name ;
-          safeschool:centerType ?type .
+          schema:name ?name ;
+          schema:description ?type .
 }
 LIMIT 10
 
@@ -21,23 +21,24 @@ LIMIT 10
 SELECT ?center ?name ?website
 WHERE {
   ?center a safeschool:EducationalCenter ;
-          safeschool:centerName ?name ;
+          schema:name ?name ;
           safeschool:ownershipType "PÚBLICO" ;
-          safeschool:districtName "Centro" .
-  OPTIONAL { ?center safeschool:contactWebsite ?website . }
+          safeschool:inDistrict ?district .
+  ?district schema:name "CENTRO" .
+  OPTIONAL { ?center schema:url ?website . }
 }
 
 ---
 
-# Query 3: Get the UTM coordinates for the educational center with code "28004059" (CERVANTES).
-# This is a crucial query to verify that the object property link between an EducationalCenter and its Location was created correctly.
-SELECT ?name ?utmX ?utmY
+# Query 3: Get the WKT geometry for the educational center with code "28004059" (CERVANTES).
+# This query verifies that the geometry data and district link were created correctly.
+SELECT ?name ?geometry ?districtName
 WHERE {
-  ?center safeschool:centerCode "28004059" ;
-          safeschool:centerName ?name ;
-          safeschool:locatedAt ?location .
-  ?location safeschool:utmX ?utmX ;
-            safeschool:utmY ?utmY .
+  ?center schema:identifier "28004059" ;
+          schema:name ?name ;
+          safeschool:wktGeometry ?geometry ;
+          safeschool:inDistrict ?district .
+  ?district schema:name ?districtName .
 }
 
 ---
@@ -47,7 +48,8 @@ WHERE {
 SELECT ?districtName (COUNT(?center) AS ?numberOfCenters)
 WHERE {
     ?center a safeschool:EducationalCenter ;
-            safeschool:districtName ?districtName .
+            safeschool:inDistrict ?district .
+    ?district schema:name ?districtName .
 }
 GROUP BY ?districtName
 ORDER BY DESC(?numberOfCenters)
@@ -60,3 +62,70 @@ SELECT (COUNT(?center) AS ?totalCenters)
 WHERE {
   ?center a safeschool:EducationalCenter .
 }
+
+---
+
+# Query 6: Get the first 10 accidents with pedestrians involved.
+# This query verifies that the accident mapping is working correctly.
+SELECT ?accident ?location ?date ?weather
+WHERE {
+  ?accident a safeschool:Accident ;
+            schema:description ?location ;
+            schema:startDate ?date ;
+            safeschool:weatherCondition ?weather ;
+            safeschool:pedestrianInvolved true .
+}
+LIMIT 10
+
+---
+
+# Query 7: Count accidents by district.
+# This query verifies the link between accidents and districts.
+SELECT ?districtName (COUNT(?accident) AS ?numberOfAccidents)
+WHERE {
+  ?accident a safeschool:Accident ;
+            safeschool:inDistrict ?district .
+  ?district schema:name ?districtName .
+}
+GROUP BY ?districtName
+ORDER BY DESC(?numberOfAccidents)
+
+---
+
+# Query 8: Find accidents with positive alcohol or drug tests.
+# This query checks boolean data properties.
+SELECT ?accident ?location ?date ?alcohol ?drug
+WHERE {
+  ?accident a safeschool:Accident ;
+            schema:description ?location ;
+            schema:startDate ?date ;
+            safeschool:alcoholPositive ?alcohol ;
+            safeschool:drugPositive ?drug .
+  FILTER(?alcohol = true || ?drug = true)
+}
+LIMIT 10
+
+---
+
+# Query 9: Get information about speed cameras.
+# This query verifies that the speed camera mapping is working correctly.
+SELECT ?camera ?location ?type ?speedLimit
+WHERE {
+  ?camera a safeschool:SpeedCamera ;
+          schema:description ?location ;
+          safeschool:cameraType ?type ;
+          safeschool:speedLimit ?speedLimit .
+}
+LIMIT 10
+
+---
+
+# Query 10: Count total number of resources by type.
+# This query gives an overview of all transformed data.
+SELECT ?type (COUNT(?resource) AS ?count)
+WHERE {
+  ?resource a ?type .
+  FILTER(?type IN (safeschool:Accident, safeschool:EducationalCenter, safeschool:SpeedCamera, safeschool:District))
+}
+GROUP BY ?type
+ORDER BY DESC(?count)
