@@ -1,0 +1,378 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "EQUIPAMIENTO",
+    "expression": "grel:with(\n  value.replace(/(?i).*?(?:aforo[^0-9]*([0-9]{1,4})|([0-9]{1,4})\\s*(?:personas|butacas|plazas|puestos|localidades)).*/,\"$1$2\"),\n  r,\n  if(r==value, null, toNumber(r))\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "AFORO",
+    "columnInsertIndex": 3,
+    "description": "Create column AFORO at index 3 based on column EQUIPAMIENTO using expression grel:with(\n  value.replace(/(?i).*?(?:aforo[^0-9]*([0-9]{1,4})|([0-9]{1,4})\\s*(?:personas|butacas|plazas|puestos|localidades)).*/,\"$1$2\"),\n  r,\n  if(r==value, null, toNumber(r))\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TRANSPORTE",
+    "expression": "grel:if(value.contains(\"líneas\"),\n  value.split(\"líneas\")[1].split(\")\")[0]\n    .replace(\"C\",\"\")\n    .replace(\"Regional\",\"\")\n    .trim(),\n  if(value.contains(\"línea\"),\n    value.split(\"línea\")[1].split(\")\")[0]\n      .replace(\"C\",\"\")\n      .replace(\"Regional\",\"\")\n      .trim(),\n    null\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "METRO",
+    "columnInsertIndex": 5,
+    "description": "Create column METRO at index 5 based on column TRANSPORTE using expression grel:if(value.contains(\"líneas\"),\n  value.split(\"líneas\")[1].split(\")\")[0]\n    .replace(\"C\",\"\")\n    .replace(\"Regional\",\"\")\n    .trim(),\n  if(value.contains(\"línea\"),\n    value.split(\"línea\")[1].split(\")\")[0]\n      .replace(\"C\",\"\")\n      .replace(\"Regional\",\"\")\n      .trim(),\n    null\n  )\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TRANSPORTE",
+    "expression": "grel:if(\n  value.contains(\"Bus:\"),\n  if(value.split(\"Bus:\").length() > 1,\n    value.split(\"Bus:\")[1].trim(),\n    null\n  ),\n  if(\n    value.contains(\"Autobuses\"),\n    if(value.split(\"Autobuses\").length() > 1,\n      value.split(\"Autobuses\")[1]\n        .replace(\"de la EMT\",\"\")\n        .replace(\"Líneas:\",\"\")\n        .replace(\"Línea:\",\"\")\n        .trim(),\n      null\n    ),\n    if(\n      value.contains(\"Autobús:\"),\n      if(value.split(\"Autobús:\").length() > 1,\n        value.split(\"Autobús:\")[1].trim(),\n        null\n      ),\n      null\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "AUTOBUSES",
+    "columnInsertIndex": 5,
+    "description": "Create column AUTOBUSES at index 5 based on column TRANSPORTE using expression grel:if(\n  value.contains(\"Bus:\"),\n  if(value.split(\"Bus:\").length() > 1,\n    value.split(\"Bus:\")[1].trim(),\n    null\n  ),\n  if(\n    value.contains(\"Autobuses\"),\n    if(value.split(\"Autobuses\").length() > 1,\n      value.split(\"Autobuses\")[1]\n        .replace(\"de la EMT\",\"\")\n        .replace(\"Líneas:\",\"\")\n        .replace(\"Línea:\",\"\")\n        .trim(),\n      null\n    ),\n    if(\n      value.contains(\"Autobús:\"),\n      if(value.split(\"Autobús:\").length() > 1,\n        value.split(\"Autobús:\")[1].trim(),\n        null\n      ),\n      null\n    )\n  )\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TRANSPORTE",
+    "expression": "grel:if(value.contains(\"Cercanías\"),\n  if(value.split(\"Cercanías\").length() > 1, value.split(\"Cercanías\")[1].trim(), null),\n  if(value.toLowercase().contains(\"renfe\"),\n    if(value.split(\"Renfe\").length() > 1, value.split(\"Renfe\")[1].trim(), null),\n    null\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "CERCANIAS",
+    "columnInsertIndex": 5,
+    "description": "Create column CERCANIAS at index 5 based on column TRANSPORTE using expression grel:if(value.contains(\"Cercanías\"),\n  if(value.split(\"Cercanías\").length() > 1, value.split(\"Cercanías\")[1].trim(), null),\n  if(value.toLowercase().contains(\"renfe\"),\n    if(value.split(\"Renfe\").length() > 1, value.split(\"Renfe\")[1].trim(), null),\n    null\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-VIA",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOMBRE-VIA using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CLASE-VIAL",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CLASE-VIAL using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LOCALIDAD using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column BARRIO using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DISTRITO using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CLASE-VIAL",
+    "expression": "join ([cells['CLASE-VIAL'].value,cells['NOMBRE-VIA'].value],' ')",
+    "onError": "keep-original",
+    "newColumnName": "VIA",
+    "columnInsertIndex": 12,
+    "description": "Create column VIA at index 12 based on column CLASE-VIAL using expression join ([cells['CLASE-VIAL'].value,cells['NOMBRE-VIA'].value],' ')"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NOMBRE-VIA",
+    "description": "Remove column NOMBRE-VIA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CLASE-VIAL",
+    "description": "Remove column CLASE-VIAL"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "HORARIO",
+    "description": "Remove column HORARIO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "grel:value.split(\"/\")[-1].replace(/([A-Z])/, \" $1\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIPO using expression grel:value.split(\"/\")[-1].replace(/([A-Z])/, \" $1\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOMBRE using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EQUIPAMIENTO",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column EQUIPAMIENTO using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AFORO",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AFORO using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TRANSPORTE",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TRANSPORTE using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CERCANIAS",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CERCANIAS using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AUTOBUSES",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AUTOBUSES using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "METRO",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column METRO using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ACCESIBILIDAD",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ACCESIBILIDAD using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CONTENT-URL",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CONTENT-URL using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "VIA",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column VIA using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LOCALIDAD using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CODIGO-POSTAL",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CODIGO-POSTAL using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column BARRIO using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TELEFONO using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "EMAIL",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column EMAIL using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "grel:if(isNull(value), \"Informacion no disponible\",value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIPO using expression grel:if(isNull(value), \"Informacion no disponible\",value)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "EQUIPAMIENTO",
+    "description": "Remove column EQUIPAMIENTO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TRANSPORTE",
+    "description": "Remove column TRANSPORTE"
+  }
+]

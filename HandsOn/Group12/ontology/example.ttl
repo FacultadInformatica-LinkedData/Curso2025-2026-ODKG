@@ -1,0 +1,39 @@
+@prefix beca: <https://iambasa.github.io/BECA/ontology/ChargingOntology#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<https://iambasa.github.io/BECA/resource/City#wien> a beca:City .
+<https://iambasa.github.io/BECA/resource/Country#at> a beca:Country ; beca:countryCode "AT"^^xsd:string .
+<https://iambasa.github.io/BECA/resource/City#wien> beca:isCityOf <https://iambasa.github.io/BECA/resource/Country#at> .
+
+<https://iambasa.github.io/BECA/resource/Operator#wienenerg> a beca:Operator .
+<https://iambasa.github.io/BECA/resource/District#19> a beca:District ; beca:districtCity <https://iambasa.github.io/BECA/resource/City#wien> .
+
+<https://iambasa.github.io/BECA/resource/ChargingStation#ATVNAE1190570023> a beca:ChargingStation ;
+  beca:hasID "1722768"^^xsd:string ;
+  beca:hasEuId "AT*VNA*E1190570023"^^xsd:string ;
+  beca:hasAddress "19., Budinskygasse 18"^^xsd:string ;
+  beca:hasName "Budinskygasse 18"^^xsd:string ;
+  beca:directPayment 0^^xsd:integer ;
+  beca:geoLoc "POINT (16.33665000530945 48.24279006633755)"^^xsd:string ;
+  beca:isOperatedBy <https://iambasa.github.io/BECA/resource/Operator#wienenerg> ;
+  beca:isInDistrict <https://iambasa.github.io/BECA/resource/District#19> .
+
+<https://iambasa.github.io/BECA/resource/ChargingStation#ATVNAE1190570024> a beca:ChargingStation ;
+  beca:hasID "1722769"^^xsd:string ;
+  beca:hasEuId "AT*VNA*E1190570024"^^xsd:string ;
+  beca:hasAddress "19., Leopold-Steiner-Gasse 33"^^xsd:string ;
+  beca:hasName "Leopold Steiner G.33"^^xsd:string ;
+  beca:directPayment 0^^xsd:integer ;
+  beca:geoLoc "POINT (16.337208005558537 48.2507950660681)"^^xsd:string ;
+  beca:isOperatedBy <https://iambasa.github.io/BECA/resource/Operator#wienenerg> ;
+  beca:isInDistrict <https://iambasa.github.io/BECA/resource/District#19> .
+
+<https://iambasa.github.io/BECA/resource/ChargingStation#ATVNAE1190570025> a beca:ChargingStation ;
+  beca:hasID "1722770"^^xsd:string ;
+  beca:hasEuId "AT*VNA*E1190570025"^^xsd:string ;
+  beca:hasAddress "19., Sieveringer Straße 109"^^xsd:string ;
+  beca:hasName "Sieveringer Str.109"^^xsd:string ;
+  beca:directPayment 0^^xsd:integer ;
+  beca:geoLoc "POINT (16.328023005732096 48.24846206619336)"^^xsd:string ;
+  beca:isOperatedBy <https://iambasa.github.io/BECA/resource/Operator#wienenerg> ;
+  beca:isInDistrict <https://iambasa.github.io/BECA/resource/District#19> .

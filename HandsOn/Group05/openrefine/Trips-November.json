@@ -1,0 +1,205 @@
+[
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "fleet",
+          "expression": "value",
+          "columnName": "fleet",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "fleet",
+    "description": "Eliminar columna fleet"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "fecha",
+    "description": "Eliminar columna fecha"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_lock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "Lock_Coord_x",
+    "columnInsertIndex": 8,
+    "description": "Crear la columna Lock_Coord_x en el índice 8 basada en la columna geolocation_lock usando la expresión jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_lock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Lock_Coord_y",
+    "columnInsertIndex": 8,
+    "description": "Crear la columna Lock_Coord_y en el índice 8 basada en la columna geolocation_lock usando la expresión jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "geolocation_lock",
+    "description": "Eliminar columna geolocation_lock"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_x",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna Unlock_Coor_x en el índice 3 basada en la columna geolocation_unlock usando la expresión jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_y",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna Unlock_Coor_y en el índice 3 basada en la columna geolocation_unlock usando la expresión jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Unlock_Coor_y",
+    "newColumnName": "Unlock_Coord_y",
+    "description": "Renombra la columna Unlock_Coor_y a Unlock_Coord_y"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Unlock_Coor_x",
+    "newColumnName": "Unlock_Coord_x",
+    "description": "Renombra la columna Unlock_Coor_x a Unlock_Coord_x"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "geolocation_unlock",
+    "description": "Eliminar columna geolocation_unlock"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "unlock_station_name",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q2221906",
+        "name": "geographic location"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column unlock_station_name to type Q2221906"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "lock_station_name",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q2221906",
+        "name": "geographic location"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column lock_station_name to type Q2221906"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "unlock_station_name",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "UL-Station-WikiData",
+    "columnInsertIndex": 15,
+    "description": "Crear la columna UL-Station-WikiData en el índice 15 basada en la columna unlock_station_name usando la expresión cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "unlock_station_name",
+    "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+    "onError": "set-to-blank",
+    "newColumnName": "UL-Station-WikiData-URI",
+    "columnInsertIndex": 15,
+    "description": "Crear la columna UL-Station-WikiData-URI en el índice 15 basada en la columna unlock_station_name usando la expresión if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lock_station_name",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "L-Station-WikiData",
+    "columnInsertIndex": 20,
+    "description": "Crear la columna L-Station-WikiData en el índice 20 basada en la columna lock_station_name usando la expresión cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lock_station_name",
+    "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+    "onError": "set-to-blank",
+    "newColumnName": "L-Station-WikiData-URI",
+    "columnInsertIndex": 20,
+    "description": "Crear la columna L-Station-WikiData-URI en el índice 20 basada en la columna lock_station_name usando la expresión if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+  }
+]

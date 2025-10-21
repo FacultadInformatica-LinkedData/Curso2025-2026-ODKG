@@ -1,0 +1,32 @@
+List all charging stations:
+
+PREFIX ns1: <https://iamabsa.github.io/chargingstation#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?station ?label ?address ?evseId ?operator ?district
+WHERE {
+  ?station a ns1:ChargingStation ;
+           rdfs:label ?label ;
+           ns1:address ?address ;
+           ns1:evseId ?evseId ;
+           ns1:isOperatedBy ?operator ;
+           ns1:isInDistrict ?district .
+} 
+ORDER BY ?label
+
+Find charging stations in district 21/
+
+PREFIX ns1: <https://iamabsa.github.io/chargingstation#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?station ?label ?address ?evseId ?operator
+WHERE {
+  ?station a ns1:ChargingStation ;
+           rdfs:label ?label ;
+           ns1:address ?address ;
+           ns1:evseId ?evseId ;
+           ns1:isOperatedBy ?operator ;
+           ns1:isInDistrict <https://iamabsa.github.io/chargingstation/resource/district/21> .
+}
+ORDER BY ?label
+

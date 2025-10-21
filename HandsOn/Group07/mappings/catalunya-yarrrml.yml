@@ -1,0 +1,82 @@
+prefixes:
+  rr: "http://www.w3.org/ns/r2rml#"
+  rml: "http://semweb.mmlab.be/ns/rml#"
+  rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  ql: "http://semweb.mmlab.be/ns/ql#"
+  map: "http://mapping.example.com/"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  lude: "https://spanishuniversities.data/ontology/lude#"
+  id: "https://spanishuniversities.data/id/lude/"
+
+mappings:
+
+  catalunyaDegree:
+    sources:
+      - access: "Catalunya_Notes_de_tall_d_acc_s_als_estudis_universitaris__convocat_ries_de_juny_2023-actualitat__i_nombre_de_places-updated.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/Degree/{DegreeID}"
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year)]
+      - [lude:cutOff, $(Cut-Off), xsd:string]
+      - [lude:numberOfPlaces, $(Number of Places), xsd:integer]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: catalunyaLevel
+          condition:
+            child: "Academic Level ID"
+            parent: "Academic Level ID"
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: catalunyaKnowledgeArea
+          condition:
+            child: "Knowledge Area ID"
+            parent: "Knowledge Area ID"
+      - p: lude:offeredBy
+        o:
+          mapping: catalunyaUniversity
+          condition:
+            child: "UniversityID"
+            parent: "UniversityID"
+
+  catalunyaLevel:
+    sources:
+      - access: "Catalunya-Universities.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/AcademicLevel/{Academic Level ID}"
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+
+  catalunyaKnowledgeArea:
+    sources:
+      - access: "Catalunya-Universities.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/KnowledgeArea/{Knowledge Area ID}"
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(Knowledge Area)]
+
+  catalunyaUniversity:
+    sources:
+      - access: "Catalunya-Universities.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/University/{UniversityID}"
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:acronym, $(Acronymn)]
+      - [lude:type, $(Type)]
+      - [lude:modality, $(Modality)]
+      - [lude:address, $(Address)]
+      - [lude:municipality, $(Municipality)]
+      - [lude:province, $(Province)]
+      - [lude:hasFaculty, $(Faculty)]
+      - p: lude:hasDegree
+        o:
+          mapping: catalunyaDegree
+          condition:
+            child: "UniversityID"
+            parent: "UniversityID"

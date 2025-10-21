@@ -1,0 +1,126 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix mts: <http://madrid-transport-safety.org/ontology#> .
+@prefix resource: <http://madrid-transport-safety.org/resource/> .
+@base <http://madrid-transport-safety.org/mapping/bicycles#>.
+
+<#BicycleDataMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "../csv/BICICLETAS_2024-updated.csv" ;
+    rml:referenceFormulation ql:CSV 
+  ];
+  rr:subjectMap [
+    rr:template "http://madrid-transport-safety.org/resource/bicycle-observation/{identificador}/{fecha}/{hora}";
+    rr:class mts:BicycleData
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rr:template "Bicycle observation at {identificador} on {fecha} at {hora}"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:bicycleDate;
+    rr:objectMap [
+      rml:reference "fecha";
+      rr:datatype xsd:date
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:bicycleTime;
+    rr:objectMap [
+      rml:reference "hora";
+      rr:datatype xsd:time
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:bicycleIdentifier;
+    rr:objectMap [
+      rml:reference "identificador"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:bicycleCounter;
+    rr:objectMap [
+      rml:reference "bicicletas";
+      rr:datatype xsd:integer
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:bicycleStreetName;
+    rr:objectMap [
+      rml:reference "direccion"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:bicycleObservationDirection;
+    rr:objectMap [
+      rml:reference "observaciones_direccion"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:bicycleLatitude;
+    rr:objectMap [
+      rml:reference "latitude";
+      rr:datatype xsd:decimal
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:bicycleLongitude;
+    rr:objectMap [
+      rml:reference "longitude";
+      rr:datatype xsd:decimal
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:locatedInDistrict;
+    rr:objectMap [
+      rr:parentTriplesMap <#DistrictMap>
+    ]
+  ] .
+
+
+<#DistrictMap> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "../csv/BICICLETAS_2024-updated.csv" ;
+    rml:referenceFormulation ql:CSV 
+  ];
+  rr:subjectMap [
+    rr:template "http://madrid-transport-safety.org/resource/district/{Número_distrito}";
+    rr:class mts:District
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "distrito"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:districtCode;
+    rr:objectMap [
+      rml:reference "Número_distrito";
+      rr:datatype xsd:integer
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate mts:districtName;
+    rr:objectMap [
+      rml:reference "distrito"
+    ]
+  ] .
