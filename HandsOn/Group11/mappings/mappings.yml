@@ -1,0 +1,192 @@
+prefixes:
+  base: "http://crtm-urban-buses.org/opendata/handsOn/group11/"
+  ont: "http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#"
+  dcterms: "http://purl.org/dc/terms/"
+  geo: "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  mod: "http://w3id.org/mod#"
+  owl: "http://www.w3.org/2002/07/owl#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  schema: "http://schema.org/"
+  time: "http://www.w3.org/2006/time#"
+  vann: "http://purl.org/vocab/vann/"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+
+mappings:
+  agency:
+    sources:
+      - [csv/agency-updated.csv~csv]
+    s: base:resource/agency/$(agency_id)
+    po:
+      - [a, ont:Agency]
+      - [ont:agencyId, $(agency_id), xsd:string]
+      - [schema:name, $(agency_name), xsd:string]
+      - [schema:url, $(agency_url), xsd:anyURI]
+      - [ont:timezone, $(agency_timezone), xsd:string]
+      - [schema:inLanguage, $(agency_lang), xsd:string]
+
+  busroute:
+    sources:
+      - [csv/routes-updated.csv~csv]
+    s: base:resource/route/$(route_id)
+    po:
+      - [a, ont:BusRoute]
+      - [ont:routeId, $(route_id), xsd:string]
+      - [ont:routeShortName, $(route_short_name), xsd:string]
+      - [ont:routeLongName, $(route_long_name), xsd:string]
+      - [schema:url, $(route_url), xsd:anyURI]
+      - p: ont:operatedBy
+        o:
+          value: base:resource/agency/$(agency_id)
+          type: iri
+
+  agency_operates_route:
+    sources:
+      - [csv/routes-updated.csv~csv]
+    s: base:resource/agency/$(agency_id)
+    po:
+      - p: ont:operatesRoute
+        o:
+          value: base:resource/route/$(route_id)
+          type: iri
+
+  trip:
+    sources:
+      - [csv/trips-updated.csv~csv]
+    s: base:resource/trip/$(trip_id)
+    po:
+      - [a, ont:Trip]
+      - [ont:tripId, $(trip_id), xsd:string]
+      - [ont:tripHeadsignComplete, $(trip_headsign_complete), xsd:string]
+      - [ont:tripHeadsign, $(trip_headsign), xsd:string]
+      - [ont:tripShortName, $(trip_short_name), xsd:string]
+      - [ont:busNumber, $(bus_number), xsd:string]
+      - [ont:directionId, $(direction_id), xsd:string]
+      - [ont:blockId, $(block_id), xsd:string]
+      - [ont:wheelChairAccessible, $(wheelchair_accessible), xsd:integer]
+      - p: ont:belongsToRoute
+        o:
+          value: base:resource/route/$(route_id)
+          type: iri
+      - p: ont:hasCalendar
+        o:
+          value: base:resource/calendar/$(service_id)
+          type: iri
+      - p: ont:hasShape
+        o:
+          value: base:resource/shape/$(shape_id)
+          type: iri
+
+  bus_route_has_trip:
+    sources:
+      - [csv/trips-updated.csv~csv]
+    s: base:resource/route/$(route_id)
+    po:
+      - p: ont:hasTrip
+        o:
+          value: base:resource/trip/$(trip_id)
+          type: iri
+
+  stop:
+    sources:
+      - [csv/stops-updated.csv~csv]
+    s: base:resource/stop/$(stop_id)
+    po:
+      - [a, ont:Stop]
+      - [ont:stopId, $(stop_id), xsd:string]
+      - [ont:stopCode, $(stop_code), xsd:string]
+      - [schema:name, $(stop_name), xsd:string]
+      - [schema:description, $(stop_desc), xsd:string]
+      - [ont:stopDescNumber, $(stop_desc_number), xsd:string]
+      - [ont:stopDescName, $(stop_desc_name), xsd:string]
+      - [geo:lat, $(stop_lat), xsd:decimal]
+      - [geo:long, $(stop_lon), xsd:decimal]
+      - [ont:zoneId, $(zone_id), xsd:string]
+      - [schema:url, $(stop_url), xsd:anyURI]
+      - [ont:locationType, $(location_type), xsd:integer]
+      - [ont:stopTimeZone, $(stop_timezone), xsd:string]
+      - [ont:wheelChairBoarding, $(wheelchair_boarding), xsd:integer]
+      - p: ont:parentStation
+        o:
+          value: base:resource/stop/$(parent_station)
+          type: iri
+      - p: ont:hasChildStop
+        o:
+          value: base:resource/stop/$(stop_id) 
+          type: iri
+
+  stoptime:
+    sources:
+      - [csv/stop-times-updated.csv~csv]
+    s: base:resource/stoptime/$(trip_id)_$(stop_sequence)
+    po:
+      - [a, ont:StopTime]
+      - [ont:arrivalTime, $(arrival_time), xsd:string]
+      - [ont:departureTime, $(departure_time), xsd:string]
+      - [ont:stopSequence, $(stop_sequence), xsd:integer]
+      - p: ont:belongsToTrip
+        o:
+          value: base:resource/trip/$(trip_id)
+          type: iri
+      - p: ont:refersToStop
+        o:
+          value: base:resource/stop/$(stop_id)
+          type: iri
+
+  trip_has_stop_time:
+    sources:
+      - [csv/stop-times-updated.csv~csv]
+    s: base:resource/trip/$(trip_id)
+    po:
+      - p: ont:hasStopTime
+        o:
+          value: base:resource/stoptime/$(trip_id)_$(stop_sequence)
+          type: iri
+
+  calendar:
+    sources:
+      - [csv/calendar-updated.csv~csv]
+    s: base:resource/calendar/$(service_id)
+    po:
+      - [a, ont:CalendarService]
+      - [ont:serviceId, $(service_id)]
+      - [ont:operatesOnMonday, $(monday), xsd:integer]
+      - [ont:operatesOnTuesday, $(tuesday), xsd:integer]
+      - [ont:operatesOnWednesday, $(wednesday), xsd:integer]
+      - [ont:operatesOnThursday, $(thursday), xsd:integer]
+      - [ont:operatesOnFriday, $(friday), xsd:integer]
+      - [ont:operatesOnSaturday, $(saturday), xsd:integer]
+      - [ont:operatesOnSunday, $(sunday), xsd:integer]
+      - [ont:startDate, $(start_date), xsd:string]
+      - [ont:endDate, $(end_date), xsd:string]
+
+  calendar_is_calendar_of:
+    sources:
+      - [csv/trips-updated.csv~csv]
+    s: base:resource/calendar/$(service_id)
+    po:
+      - p: ont:isCalendarOf
+        o:
+          value: base:resource/trip/$(trip_id)
+          type: iri
+
+  shape:
+    sources:
+      - [csv/shapes.csv~csv]
+    s: base:resource/shape/$(shape_id)_$(shape_pt_sequence)
+    po:
+      - [a, ont:Shape]
+      - [ont:shapeId, $(shape_id), xsd:string]
+      - [geo:lat, $(shape_pt_lat), xsd:decimal]
+      - [geo:long, $(shape_pt_lon), xsd:decimal]
+      - [ont:shapeSequence, $(shape_pt_sequence), xsd:integer]
+      - [ont:shapeDistTraveled, $(shape_dist_traveled), xsd:decimal]
+
+  shape_is_shape_of:
+    sources:
+      - [csv/trips-updated.csv~csv]
+    s: base:resource/shape/$(shape_id)
+    po:
+      - p: ont:isShapeOf
+        o:
+          value: base:resource/trip/$(trip_id)
+          type: iri

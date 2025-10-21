@@ -1,26 +1,62 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns: <http://www.barnabikes.org/ODKG/handsOn/group10/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# Prefijos según la estrategia de nombrado
-@prefix ns: <http://www.barnabikes.org/ODKG/handsOn/group10/ontology#> .
-@prefix resource: <http://www.barnabikes.org/ODKG/handsOn/group10/resource/> .
+# --- Importamos la ontología que define las clases y propiedades ---
+# Asume que el fichero de la ontología se llama 'ontologia.ttl'
+<http://example.org/instancias> a owl:Ontology ;
+    owl:imports ns: .
 
+# --- Instancias de Distrito ---
+# Creamos una instancia para el distrito "Ciutat Vella"
+ns:District_1 a owl:NamedIndividual,
+        ns:District ;
+    ns:districtId 1 ;
+    ns:districtName "Ciutat Vella" .
 
-resource:CiutatVella rdf:type ns:District ;
-    rdfs:label "Ciutat Vella" ;
-    ns:name "Ciutat Vella"^^xsd:string .
+# --- Instancias de Barrio ---
+# Creamos una instancia para el barrio "La Barceloneta"
+ns:Neighborhood_3 a owl:NamedIndividual,
+        ns:Neighborhood ;
+    ns:neighborhoodId 3 ;
+    ns:neighborhoodName "La Barceloneta" ;
+    ns:hasDistrict ns:District_1 . # Conectamos el barrio a su distrito
 
-resource:PasseigDeGracia rdf:type ns:Street ;
-    rdfs:label "Passeig de Gràcia" ;
-    ns:name "Passeig de Gràcia"^^xsd:string .
+# --- Instancias de Bares y sus Direcciones ---
 
-resource:Station_45 rdf:type ns:BikingStation ;
-    rdfs:label "Estació Bicing 45 - La Rambla" ;
-    ns:hasDistrict resource:CiutatVella ;
-    ns:hasStreet resource:LaRambla .
-s
-resource:CafeModerno rdf:type ns:Bar ;
-    rdfs:label "Bar: Cafe Moderno" ;
-    ns:locatedIn resource:CiutatVella ;
-    ns:onStreet resource:PasseigDeGracia .
+# --- Bar 1: Restaurant Maná 75 ---
+ns:Bar_99400533969 a owl:NamedIndividual,
+        ns:Bar ;
+    ns:barId 99400533969 ;
+    ns:barName "Restaurant Maná 75" ;
+    ns:barType "Cocteleries|Xampanyeries|Restaurants" ;
+    ns:hasAddress ns:StreetAddress_99400533969 . # Conectamos el bar a su dirección
+
+ns:StreetAddress_99400533969 a owl:NamedIndividual,
+        ns:StreetAddress ;
+    ns:addressType "PASSEIG" ;
+    ns:addressName "Joan Borbó Comte Barcelona" ; 
+    ns:addressNumber 101 ;                           
+    ns:postCode 8039 ;
+    ns:latitude 41.37133 ;
+    ns:longitude 2.18762 ;
+    ns:hasNeighborhood ns:Neighborhood_3 . # Conectamos la dirección a su barrio
+
+# --- Bar 2: Restaurant Nº 30 ---
+ns:Bar_99400533974 a owl:NamedIndividual,
+        ns:Bar ;
+    ns:barId 99400533974 ;
+    ns:barName "Restaurant Nº 30" ;
+    ns:barType "Cocteleries|Xampanyeries|Restaurants" ;
+    ns:hasAddress ns:StreetAddress_99400533974 . # Conectamos el bar a su dirección
+
+ns:StreetAddress_99400533974 a owl:NamedIndividual,
+        ns:StreetAddress ;
+    ns:addressType "PASSEIG" ;
+    ns:addressName "Joan Borbó Comte Barcelona" ; 
+    ns:addressNumber 30 ;                            
+    ns:postCode 8003 ;
+    ns:latitude 41.37904 ;
+    ns:longitude 2.18804 ;
+    ns:hasNeighborhood ns:Neighborhood_3 . # Reutilizamos la instancia del barrio "La Barceloneta"
