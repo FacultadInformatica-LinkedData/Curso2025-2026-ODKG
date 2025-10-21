@@ -1,0 +1,215 @@
+prefixes:
+  id: https://spanishuniversitites.data/id/lude/
+  lude: https://spanishuniversitites.data/ontology/lude#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+
+mappings:
+
+  UniversityMapping:
+    sources:
+      - [universidades-updated.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University), xsd:string]
+      - [lude:publicationYear, $(Year of Publication), xsd:gYear]
+      - [lude:modality, $(Modality), xsd:string]
+      - [lude:url, $(URL), xsd:anyURI]
+      - [lude:email, $(Email), xsd:string]
+      - [lude:telephone, $(Phone), xsd:string]
+      - [lude:cif, $(CIF), xsd:string]
+      - [lude:acronym, $(Acronym), xsd:string]
+      - [lude:type, $(Type), xsd:string]
+      - p: lude:hasAddress
+        o: 
+          - mapping: AddressMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AddressID)]
+                - [str2, $(AddressID)]
+      - p: lude:offer
+        o: 
+          - mapping: NavarraDegreeMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+          - mapping: LaRiojaDegreeMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+          - mapping: PaisVascoDegreeMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+         
+  GeoMapping:
+    sources:
+      - [Coordenadas_Universidades_de_Espana-updated.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [geo:lat, $(Latitude), xsd:float]
+      - [geo:long, $(Longitude), xsd:float]
+
+  AddressMapping:
+    sources:
+      - [universidades_address-updated.csv~csv]
+    s: id:Address/$(AddressID)
+    po:
+      - [rdf:type, lude:Address]
+      - [rdfs:label, $(Address), xsd:string]
+      - [lude:postalCode, $(Postal Code), xsd:string]
+      - p: lude:locatedInMunicipality
+        o: 
+          - mapping: MunicipalityMapping
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(MunicipalityID)]
+                - [str2, $(MunicipalityID)]
+
+  MunicipalityMapping:
+    sources:
+      - [universidades_municipality-updated.csv~csv]
+    s: id:Municipality/$(MunicipalityID)
+    po:
+      - [rdf:type, lude:Municipality]
+      - [rdfs:label, $(Municipality), xsd:string]
+      - p: lude:partOfProvince
+        o: 
+          - mapping: ProvinceMapping
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(ProvinceID)]
+                - [str2, $(ProvinceID)]
+                
+  ProvinceMapping:
+    sources:
+      - [universidades_province-updated.csv~csv]
+    s: id:Province/$(ProvinceID)
+    po:
+      - [rdf:type, lude:Province]
+      - [rdfs:label, $(Province), xsd:string]
+      - p: lude:partOfAutonomousCommunity
+        o:
+          - mapping: AutonomousCommunityMapping
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AutonomousCommunityID)]
+                - [str2, $(AutonomousCommunityID)]
+
+  AutonomousCommunityMapping:
+    sources:
+      - [universidades_autonomousCommunity-updated.csv~csv]
+    s: id:AutonomousCommunity/$(AutonomousCommunityID)
+    po:
+      - [rdf:type, lude:AutonomousCommunity]
+      - [rdfs:label, $(Autonomous Community), xsd:string]
+
+  KnowledgeAreaMapping:
+    sources:
+      - [ambit-otros.csv~csv]
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit), xsd:string]
+      
+  AcademicLevelMapping:
+    sources:
+      - [academic_level-updated.csv~csv]
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level), xsd:string]
+      
+  NavarraDegreeMapping:
+    sources:
+      - [Navarra_listaestudios-updated.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - p: lude:hasKnowledgeArea
+        o:
+          - mapping: KnowledgeAreaMapping
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AmbitID)]
+                - [str2, $(id)]
+      - p: lude:hasAcademicLevel
+        o:
+          - mapping: AcademicLevelMapping
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelID)]
+                - [str2, $(AcademicLevelID)]
+
+  LaRiojaDegreeMapping:
+    sources:
+      - [LaRioja_listaestudios-updated.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - p: lude:hasKnowledgeArea
+        o:
+          - mapping: KnowledgeAreaMapping
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AmbitID)]
+                - [str2, $(id)]
+      - p: lude:hasAcademicLevel
+        o:
+          - mapping: AcademicLevelMapping
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelID)]
+                - [str2, $(AcademicLevelID)]
+ 
+  PaisVascoDegreeMapping:
+    sources:
+      - [PaisVasco_listaestudios-updated.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - p: lude:hasKnowledgeArea
+        o:
+          - mapping: KnowledgeAreaMapping
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AmbitID)]
+                - [str2, $(id)]
+      - p: lude:hasAcademicLevel
+        o:
+          - mapping: AcademicLevelMapping
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelID)]
+                - [str2, $(AcademicLevelID)]
+
+  
+  

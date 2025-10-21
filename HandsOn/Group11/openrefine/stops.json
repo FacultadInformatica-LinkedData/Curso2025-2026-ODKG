@@ -1,0 +1,692 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_id",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_id usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_code",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_code usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_id",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_id usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_code",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_code usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_id",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_id usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_code",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_code usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_desc",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_desc usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_lat",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_lat usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_lon",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_lon usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zone_id",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna zone_id usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_url",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_url usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location_type",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna location_type usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "parent_station",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna parent_station usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_timezone",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_timezone usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "wheelchair_boarding",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna wheelchair_boarding usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_id",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_id usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_code",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_code usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_desc",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_desc usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_lat",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_lat usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_lon",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_lon usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zone_id",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna zone_id usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_url",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_url usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location_type",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna location_type usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "parent_station",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna parent_station usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_timezone",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna stop_timezone usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "wheelchair_boarding",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 0,
+    "description": "Transforma el texto de las celdas en la columna wheelchair_boarding usando la expresión value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "INTERCAMBIADOR DE PLAZA CASTILLA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INTERCAMBIADOR DE PLAZA CASTILLA"
+      },
+      {
+        "from": [
+          "INTERCAMBIADOR DE AVENIDA AMÉRICA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INTERCAMBIADOR DE AVENIDA AMÉRICA"
+      },
+      {
+        "from": [
+          "INTERCAMBIADOR DE PLAZA ELÍPTICA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INTERCAMBIADOR DE PLAZA ELÍPTICA"
+      },
+      {
+        "from": [
+          "INTERCAMBIADOR DE MONCLOA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INTERCAMBIADOR DE MONCLOA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna stop_name"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(isBlank(value), value, value.trim().replace(/^C\\/\\s*/i,\"Calle \"))",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(isBlank(value), value, value.trim().replace(/^C\\/\\s*/i,\"Calle \"))"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(isBlank(value), value, value.toString().toUppercase())",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(isBlank(value), value, value.toString().toUppercase())"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value.trim()\n    .replace(/(?i)^c\\/\\s*/,\"Calle \")\n    .replace(/(?i)^c\\.\\s*/,\"Calle \")\n    .replace(/(?i)\\bavda\\.?\\b/,\"Avenida \")\n    .replace(/(?i)\\bav\\.?\\b/,\"Avenida \")\n    .replace(/(?i)\\bpº\\b/,\"Paseo \")\n    .replace(/(?i)\\bps\\.?\\b/,\"Paseo \")\n    .replace(/(?i)\\bpl\\.?\\b/,\"Plaza \")\n    .replace(/(?i)\\bctra\\.?\\b/,\"Carretera \")\n    .replace(/(?i)\\bcra\\.?\\b/,\"Carretera \")\n    .replace(/(?i)\\bcr\\b/,\"Carretera \")\n    .replace(/(?i)\\burg\\.?\\b/,\"Urbanización \")\n    .replace(/(?i)\\bpg\\.?\\b/,\"Passeig \")\n    .replace(/(?i)\\brda\\.?\\b/,\"Ronda \")\n    .replace(/(?i)\\btrv[\\.º]?\\b/,\"Travesía \")\n    .toUppercase()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value.trim()\n    .replace(/(?i)^c\\/\\s*/,\"Calle \")\n    .replace(/(?i)^c\\.\\s*/,\"Calle \")\n    .replace(/(?i)\\bavda\\.?\\b/,\"Avenida \")\n    .replace(/(?i)\\bav\\.?\\b/,\"Avenida \")\n    .replace(/(?i)\\bpº\\b/,\"Paseo \")\n    .replace(/(?i)\\bps\\.?\\b/,\"Paseo \")\n    .replace(/(?i)\\bpl\\.?\\b/,\"Plaza \")\n    .replace(/(?i)\\bctra\\.?\\b/,\"Carretera \")\n    .replace(/(?i)\\bcra\\.?\\b/,\"Carretera \")\n    .replace(/(?i)\\bcr\\b/,\"Carretera \")\n    .replace(/(?i)\\burg\\.?\\b/,\"Urbanización \")\n    .replace(/(?i)\\bpg\\.?\\b/,\"Passeig \")\n    .replace(/(?i)\\brda\\.?\\b/,\"Ronda \")\n    .replace(/(?i)\\btrv[\\.º]?\\b/,\"Travesía \")\n    .toUppercase()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value.trim()\n    .replace(/(?i)^C\\/\\s*/,\"Calle \")\n    .replace(/(?i)^C\\.\\s*/,\"Calle \")\n    .replace(/(?i)\\bAVDA\\.?\\b/,\"Avenida \")\n    .replace(/(?i)\\bAV\\.?\\b/,\"Avenida \")\n    .replace(/(?i)\\bPº\\b/,\"Paseo \")\n    .replace(/(?i)\\bPS\\.?\\b/,\"Paseo \")\n    .replace(/(?i)\\bPL\\.?\\b/,\"Plaza \")\n    .replace(/(?i)\\bCTRA\\.?\\b/,\"Carretera \")\n    .replace(/(?i)\\bCRA\\.?\\b/,\"Carretera \")\n    .replace(/(?i)\\bCR\\b/,\"Carretera \")\n    .replace(/(?i)\\bURG\\.?\\b/,\"Urbanización \")\n    .replace(/(?i)\\bPG\\.?\\b/,\"Passeig \")\n    .replace(/(?i)\\bRDA\\.?\\b/,\"Ronda \")\n    .replace(/(?i)\\btTRV[\\.º]?\\b/,\"Travesía \")\n    .toUppercase()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value.trim()\n    .replace(/(?i)^C\\/\\s*/,\"Calle \")\n    .replace(/(?i)^C\\.\\s*/,\"Calle \")\n    .replace(/(?i)\\bAVDA\\.?\\b/,\"Avenida \")\n    .replace(/(?i)\\bAV\\.?\\b/,\"Avenida \")\n    .replace(/(?i)\\bPº\\b/,\"Paseo \")\n    .replace(/(?i)\\bPS\\.?\\b/,\"Paseo \")\n    .replace(/(?i)\\bPL\\.?\\b/,\"Plaza \")\n    .replace(/(?i)\\bCTRA\\.?\\b/,\"Carretera \")\n    .replace(/(?i)\\bCRA\\.?\\b/,\"Carretera \")\n    .replace(/(?i)\\bCR\\b/,\"Carretera \")\n    .replace(/(?i)\\bURG\\.?\\b/,\"Urbanización \")\n    .replace(/(?i)\\bPG\\.?\\b/,\"Passeig \")\n    .replace(/(?i)\\bRDA\\.?\\b/,\"Ronda \")\n    .replace(/(?i)\\btTRV[\\.º]?\\b/,\"Travesía \")\n    .toUppercase()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value.replace(/(?i)p[º°]\\s*/,\"Paseo \").replace(/\\s+/,\" \").trim().toUppercase()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value.replace(/(?i)p[º°]\\s*/,\"Paseo \").replace(/\\s+/,\" \").trim().toUppercase()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value.replace(/(?i)c[º°]\\s*/,\"Camino \").replace(/\\s+/,\" \").trim().toUppercase()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value.replace(/(?i)c[º°]\\s*/,\"Camino \").replace(/\\s+/,\" \").trim().toUppercase()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_desc",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value.toString().trim()\n    .replace(/(?i)^c\\/\\s*/,\"Calle \")\n    .replace(/(?i)^c\\.\\s*/,\"Calle \")\n    .replace(/(?i)\\bavda\\.?\\b/,\"Avenida\")\n    .replace(/(?i)\\bav\\.?\\b/,\"Avenida\")\n    .replace(/(?i)p[º°]\\s*/,\"Paseo \")\n    .replace(/(?i)\\bps\\.?\\b/,\"Paseo\")\n    .replace(/(?i)\\bpza\\.?\\b/,\"Plaza\")\n    .replace(/(?i)\\bplz?\\.?\\b/,\"Plaza\")\n    .replace(/(?i)\\bgta\\.?\\b/,\"Glorieta\")\n    .replace(/(?i)\\bglta\\.?\\b/,\"Glorieta\")\n    .replace(/(?i)\\bctra\\.?\\b/,\"Carretera\")\n    .replace(/(?i)\\bcra\\.?\\b/,\"Carretera\")\n    .replace(/(?i)\\bcr\\b/,\"Carretera\")\n    .replace(/(?i)\\brda\\.?\\b/,\"Ronda\")\n    .replace(/(?i)\\burg\\.?\\b/,\"Urbanización\")\n    .replace(/(?i)\\bpol\\.?\\b/,\"Polígono\")\n    .replace(/(?i)\\best\\.?\\b/,\"Estación\")\n    .replace(/(?i)\\btrva?\\.?[º]?\\b/,\"Travesía\")\n    .replace(/(?i)\\bpque\\.?\\b/,\"Parque\")\n    .replace(/(?i)\\bfco\\.?\\b/,\"Francisco\")\n    .replace(/(?i)\\bdr\\.?\\b/,\"Doctor\")\n    .replace(/(?i)\\bsta\\.?\\b/,\"Santa\")\n    .replace(/(?i)\\bntra\\.?\\b/,\"Nuestra\")\n    .replace(/(?i)\\bsra\\.?\\b/,\"Señora\")\n    .replace(/(?i)\\bhnos\\.?\\b/,\"Hermanos\")\n    .replace(/(?i)\\bfdez\\.?\\b/,\"Fernández\")\n    .replace(/(?i)\\bglez\\.?\\b/,\"González\")\n    .replace(/(?i)\\buniv\\.?\\b/,\"Universidad\")\n    .replace(/\\s+/, \" \").trim()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_desc usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value.toString().trim()\n    .replace(/(?i)^c\\/\\s*/,\"Calle \")\n    .replace(/(?i)^c\\.\\s*/,\"Calle \")\n    .replace(/(?i)\\bavda\\.?\\b/,\"Avenida\")\n    .replace(/(?i)\\bav\\.?\\b/,\"Avenida\")\n    .replace(/(?i)p[º°]\\s*/,\"Paseo \")\n    .replace(/(?i)\\bps\\.?\\b/,\"Paseo\")\n    .replace(/(?i)\\bpza\\.?\\b/,\"Plaza\")\n    .replace(/(?i)\\bplz?\\.?\\b/,\"Plaza\")\n    .replace(/(?i)\\bgta\\.?\\b/,\"Glorieta\")\n    .replace(/(?i)\\bglta\\.?\\b/,\"Glorieta\")\n    .replace(/(?i)\\bctra\\.?\\b/,\"Carretera\")\n    .replace(/(?i)\\bcra\\.?\\b/,\"Carretera\")\n    .replace(/(?i)\\bcr\\b/,\"Carretera\")\n    .replace(/(?i)\\brda\\.?\\b/,\"Ronda\")\n    .replace(/(?i)\\burg\\.?\\b/,\"Urbanización\")\n    .replace(/(?i)\\bpol\\.?\\b/,\"Polígono\")\n    .replace(/(?i)\\best\\.?\\b/,\"Estación\")\n    .replace(/(?i)\\btrva?\\.?[º]?\\b/,\"Travesía\")\n    .replace(/(?i)\\bpque\\.?\\b/,\"Parque\")\n    .replace(/(?i)\\bfco\\.?\\b/,\"Francisco\")\n    .replace(/(?i)\\bdr\\.?\\b/,\"Doctor\")\n    .replace(/(?i)\\bsta\\.?\\b/,\"Santa\")\n    .replace(/(?i)\\bntra\\.?\\b/,\"Nuestra\")\n    .replace(/(?i)\\bsra\\.?\\b/,\"Señora\")\n    .replace(/(?i)\\bhnos\\.?\\b/,\"Hermanos\")\n    .replace(/(?i)\\bfdez\\.?\\b/,\"Fernández\")\n    .replace(/(?i)\\bglez\\.?\\b/,\"González\")\n    .replace(/(?i)\\buniv\\.?\\b/,\"Universidad\")\n    .replace(/\\s+/, \" \").trim()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value.trim()\n    .replace(/(?i)^c\\/\\s*/,\"Calle \")\n    .replace(/(?i)^c\\.\\s*/,\"Calle \")\n    .replace(/(?i)\\bavda\\.?/,\"Avenida \")\n    .replace(/(?i)\\bav\\.?/,\"Avenida \")\n    .replace(/(?i)p[º°]\\s*/,\"Paseo \")\n    .replace(/(?i)\\bps\\.?\\b/,\"Paseo\")\n    .replace(/(?i)\\bpza\\.?\\b/,\"Plaza\")\n    .replace(/(?i)\\bplz?\\.?\\b/,\"Plaza\")\n    .replace(/(?i)\\bgta\\.?\\b/,\"Glorieta\")\n    .replace(/(?i)\\bglta\\.?\\b/,\"Glorieta\")\n    .replace(/(?i)\\bctra\\.?\\b/,\"Carretera\")\n    .replace(/(?i)\\bcra\\.?\\b/,\"Carretera\")\n    .replace(/(?i)\\bcr\\b/,\"Carretera\")\n    .replace(/(?i)\\brda\\.?\\b/,\"Ronda\")\n    .replace(/(?i)\\burg\\.?\\b/,\"Urbanización\")\n    .replace(/(?i)\\bpol\\.?\\b/,\"Polígono\")\n    .replace(/(?i)\\best\\.?\\b/,\"Estación\")\n    .replace(/(?i)\\btrva?\\.?[º]?\\b/,\"Travesía\")\n    .replace(/(?i)\\bpque\\.?\\b/,\"Parque\")\n    .replace(/(?i)\\bfco\\.?\\b/,\"Francisco\")\n    .replace(/(?i)\\bdr\\.?\\b/,\"Doctor\")\n    .replace(/(?i)\\bsta\\.?\\b/,\"Santa\")\n    .replace(/(?i)\\bntra\\.?\\b/,\"Nuestra\")\n    .replace(/(?i)\\bsra\\.?\\b/,\"Señora\")\n    .replace(/(?i)\\bhnos\\.?\\b/,\"Hermanos\")\n    .replace(/(?i)\\bfdez\\.?\\b/,\"Fernández\")\n    .replace(/(?i)\\bglez\\.?\\b/,\"González\")\n    .replace(/(?i)\\buniv\\.?\\b/,\"Universidad\")\n    .replace(/\\s+/, \" \").trim()\n    .toUppercase()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value.trim()\n    .replace(/(?i)^c\\/\\s*/,\"Calle \")\n    .replace(/(?i)^c\\.\\s*/,\"Calle \")\n    .replace(/(?i)\\bavda\\.?/,\"Avenida \")\n    .replace(/(?i)\\bav\\.?/,\"Avenida \")\n    .replace(/(?i)p[º°]\\s*/,\"Paseo \")\n    .replace(/(?i)\\bps\\.?\\b/,\"Paseo\")\n    .replace(/(?i)\\bpza\\.?\\b/,\"Plaza\")\n    .replace(/(?i)\\bplz?\\.?\\b/,\"Plaza\")\n    .replace(/(?i)\\bgta\\.?\\b/,\"Glorieta\")\n    .replace(/(?i)\\bglta\\.?\\b/,\"Glorieta\")\n    .replace(/(?i)\\bctra\\.?\\b/,\"Carretera\")\n    .replace(/(?i)\\bcra\\.?\\b/,\"Carretera\")\n    .replace(/(?i)\\bcr\\b/,\"Carretera\")\n    .replace(/(?i)\\brda\\.?\\b/,\"Ronda\")\n    .replace(/(?i)\\burg\\.?\\b/,\"Urbanización\")\n    .replace(/(?i)\\bpol\\.?\\b/,\"Polígono\")\n    .replace(/(?i)\\best\\.?\\b/,\"Estación\")\n    .replace(/(?i)\\btrva?\\.?[º]?\\b/,\"Travesía\")\n    .replace(/(?i)\\bpque\\.?\\b/,\"Parque\")\n    .replace(/(?i)\\bfco\\.?\\b/,\"Francisco\")\n    .replace(/(?i)\\bdr\\.?\\b/,\"Doctor\")\n    .replace(/(?i)\\bsta\\.?\\b/,\"Santa\")\n    .replace(/(?i)\\bntra\\.?\\b/,\"Nuestra\")\n    .replace(/(?i)\\bsra\\.?\\b/,\"Señora\")\n    .replace(/(?i)\\bhnos\\.?\\b/,\"Hermanos\")\n    .replace(/(?i)\\bfdez\\.?\\b/,\"Fernández\")\n    .replace(/(?i)\\bglez\\.?\\b/,\"González\")\n    .replace(/(?i)\\buniv\\.?\\b/,\"Universidad\")\n    .replace(/\\s+/, \" \").trim()\n    .toUppercase()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value.replace(/(?i)\\bavenida\\s+enida\\b/,\"Avenida\").toUppercase()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value.replace(/(?i)\\bavenida\\s+enida\\b/,\"Avenida\").toUppercase()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_lat",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_lat usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_lon",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_lon usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_lat",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_lat usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_lon",
+    "expression": "grel:value.replace(\",\", \".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_lon usando la expresión grel:value.replace(\",\", \".\")"
+  },
+  {
+    "op": "core/row-duplicate-removal",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "criteria": [
+      "stop_id",
+      "stop_code",
+      "stop_name",
+      "stop_desc",
+      "stop_lat",
+      "stop_lon",
+      "zone_id",
+      "stop_url",
+      "location_type",
+      "parent_station",
+      "stop_timezone",
+      "wheelchair_boarding"
+    ],
+    "description": "Remove duplicate rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_url",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_url usando la expresión value.trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "stop_desc",
+    "expression": "grel:if(\n  isBlank(value),\n  null,\n  with(\n    value.toString().trim()\n      .replace(/[.,)]\\s*$/,\"\")\n      .replace(/\\s+/,\" \")\n      .replace(/(?i)\\bs\\s*\\/\\s*n\\b/,\"s/n\")\n      .replace(/\\s+(\\d+)\\s+([A-Za-z\\/\\-]+)$/,\" $1$2\"),\n    s,\n    s.replace(/\\s*(\\d+[A-Za-z\\/\\-]*|s\\/?n)\\s*$/i,\"\").trim()\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "stop_desc_name",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna stop_desc_name en el índice 4 basada en la columna stop_desc usando la expresión grel:if(\n  isBlank(value),\n  null,\n  with(\n    value.toString().trim()\n      .replace(/[.,)]\\s*$/,\"\")\n      .replace(/\\s+/,\" \")\n      .replace(/(?i)\\bs\\s*\\/\\s*n\\b/,\"s/n\")\n      .replace(/\\s+(\\d+)\\s+([A-Za-z\\/\\-]+)$/,\" $1$2\"),\n    s,\n    s.replace(/\\s*(\\d+[A-Za-z\\/\\-]*|s\\/?n)\\s*$/i,\"\").trim()\n  )\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "stop_desc",
+    "expression": "grel:if(\n  isBlank(value),\n  null,\n  with(\n    value.toString().trim()\n      .replace(/[.,)]\\s*$/,\"\")\n      .replace(/\\s+/,\" \")\n      .replace(/\\s+(\\d+)\\s+([A-Za-zºª\\/\\-]+)\\s*$/,\" $1$2\"),\n    s,\n    if(s.find(/\\d+/).length()>0, s.replace(/^.*?(\\d+[A-Za-zºª\\/\\-]*).*$/,\"$1\").toUppercase(), null)\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "stop_desc_number",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna stop_desc_number en el índice 4 basada en la columna stop_desc usando la expresión grel:if(\n  isBlank(value),\n  null,\n  with(\n    value.toString().trim()\n      .replace(/[.,)]\\s*$/,\"\")\n      .replace(/\\s+/,\" \")\n      .replace(/\\s+(\\d+)\\s+([A-Za-zºª\\/\\-]+)\\s*$/,\" $1$2\"),\n    s,\n    if(s.find(/\\d+/).length()>0, s.replace(/^.*?(\\d+[A-Za-zºª\\/\\-]*).*$/,\"$1\").toUppercase(), null)\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value.replace(/(?i)\\bplaza([A-ZÁÉÍÓÚÜÑ])/,\"Plaza $1\").toUppercase()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value.replace(/(?i)\\bplaza([A-ZÁÉÍÓÚÜÑ])/,\"Plaza $1\").toUppercase()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value\n    .replace(/(?i)\\bglorieta(?=[A-ZÁÉÍÓÚÜÑ])/,\"Glorieta \")\n    .replace(/\\s+/,\" \")\n    .trim()\n    .toUppercase()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value\n    .replace(/(?i)\\bglorieta(?=[A-ZÁÉÍÓÚÜÑ])/,\"Glorieta \")\n    .replace(/\\s+/,\" \")\n    .trim()\n    .toUppercase()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_name",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value\n    .replace(/(?i)\\bpol[ií]gono(?=[A-ZÁÉÍÓÚÜÑ])/,\"Polígono \")\n    .replace(/\\s+/,\" \")\n    .trim()\n    .toUppercase()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_name usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value\n    .replace(/(?i)\\bpol[ií]gono(?=[A-ZÁÉÍÓÚÜÑ])/,\"Polígono \")\n    .replace(/\\s+/,\" \")\n    .trim()\n    .toUppercase()\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_desc",
+    "expression": "grel:if(\n  isBlank(value),\n  value,\n  value\n    .replace(/(?i)\\bcmno\\.?\\s*/,\"camino \")\n    .replace(/\\s+/,\" \")\n    .trim()\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna stop_desc usando la expresión grel:if(\n  isBlank(value),\n  value,\n  value\n    .replace(/(?i)\\bcmno\\.?\\s*/,\"camino \")\n    .replace(/\\s+/,\" \")\n    .trim()\n)"
+  }
+]

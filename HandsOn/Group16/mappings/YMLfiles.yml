@@ -1,0 +1,60 @@
+prefixes:
+  rr:  http://www.w3.org/ns/r2rml#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  schema: http://schema.org/
+  rml: http://semweb.mmlab.be/ns/rml#
+  ql:  http://semweb.mmlab.be/ns/ql#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  ns:  http://goPlan.linkeddata.es/
+  vocab: http://example.org#
+
+mappings:
+
+
+  triplesmap1:
+    sources:
+      - [agenda-eventos-culturales.csv~csv]
+    s: http://goPlan.linkeddata.es/event/$(TITULO)
+    po:
+      - [a, schema:Event]
+      - [ns:eventName, $(TITULO)]
+      - [schema:isAccessibleForFree, $(GRATUITO)]
+      - [schema:startDate, $(FECHA-INICIO), xsd:date]
+      - [schema:endDate, $(FECHA-FIN), xsd:date]
+      - [schema:doorTime, $(HORA), xsd:time]
+      - [schema:audience, $(AUDIENCIA)]
+      - [ns:weekDays, $(DIAS-SEMANA)]
+      - [ns:eventType, $(TIPO)]
+
+
+      - p: ns:hasPlace
+        o:
+          mapping: triplesmap2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(NOMBRE-INSTALACION)]
+              - [str2, $(NOMBRE)]
+
+
+  triplesmap2:
+    sources:
+      - [Centros-Culturales.csv~csv]
+    s: http://goPlan.linkeddata.es/place/$(NOMBRE)
+    po:
+      - [a, schema:Place]
+      - [ns:placeName, $(NOMBRE)]
+      - [ns:accessibilityLevel, $(ACCESIBILIDAD)]
+      - [ns:placeType, $(TIPO)]
+      - [schema:maximumAttendeeCapacity, $(AFORO), xsd:integer]
+      - [schema:telephone,$(TELEFONO)]
+      - [schema:email,$(EMAIL)]
+      - [schema:busNumber,$(AUTOBUSES)]
+      - [schema:trainNumber,$(CERCANIAS)]
+      - [schema:SubwayStation,$(METRO),xsd:integer]
+      - [schema:latitude,$(LATITUD),xsd:float]
+      - [schema:longitude,$(LONGITUD),xsd:float]
+      - [schema:address,$(VIA)]
+      - [ns:district,$(DISTRITO)]
+      - [ns:neighborhood,$(BARRIO)]
+      - [schema:postalCode,$(CODIGO-POSTAL),xsd:integer]
