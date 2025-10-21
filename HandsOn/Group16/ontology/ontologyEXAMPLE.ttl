@@ -1,0 +1,244 @@
+@prefix : <http://www.owl-ontologies.com/schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix schema: <http://www.owl-ontologies.com/schema#> .
+@prefix ns: <http://www.owl-ontologies.com/ns#> .
+@prefix 20: <http://www.owl-ontologies.com/20#> .
+@prefix http: <http://www.owl-ontologies.com/http#> .
+@base <http://www.owl-ontologies.com/schema#> .
+
+<http://www.owl-ontologies.com/schema#> rdf:type owl:Ontology ;
+			mod:createdWith <https://chowlk.linkeddata.es/> .
+
+#################################
+#    Object Properties
+#################################
+
+## schema:geo
+schema:geo rdf:type owl:ObjectProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "geo" .
+
+#################################
+#    Data Properties
+#################################
+
+## ns:eventName
+ns:eventName rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:range xsd:39º Certamen Coreográfico de Madrid ;
+		rdfs:label "event name" .
+
+## ns:type
+ns:type rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:label "type" .
+
+## schema:isAccessibleForFree
+schema:isAccessibleForFree rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:range xsd:boolean ;
+		rdfs:label "is accessible for free" .
+
+## schema:startDate
+schema:startDate rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:range xsd:18/10/2025 ;
+		rdfs:label "start date" .
+
+## schema:endDate
+schema:endDate rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:range xsd:18/10/2025 ;
+		rdfs:label "end date" .
+
+## schema:doorTime
+schema:doorTime rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:range 20:30 ;
+		rdfs:label "door time" .
+
+## schema:url
+schema:url rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:range http://www.madrid.es/sites/ ;
+		rdfs:label "url" .
+
+## <#v/index.jsp?vgnextchannel=>
+<#v/index.jsp?vgnextchannel=> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:label "index.jsp?vgnextchannel=" .
+
+## <#ca9671ee4a9eb410VgnVCM10000017>
+<#ca9671ee4a9eb410VgnVCM10000017> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:label "ca9671ee4a9eb410 vgn v c m10000017" .
+
+## <#1f5a0aRCRD&vgnextoid=>
+<#1f5a0aRCRD&vgnextoid=> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:label "1f5a0a r c r d&vgnextoid=" .
+
+## <#cc7d854b9b489910VgnVCM200>
+<#cc7d854b9b489910VgnVCM200> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:label "cc7d854b9b489910 vgn v c m200" .
+
+## <#000f921e388RCRD>
+<#000f921e388RCRD> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:label "000f921e388 r c r d" .
+
+## schema:audience
+schema:audience rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:range xsd:usuario/niños ;
+		rdfs:label "audience" .
+
+## ns:weekDays
+ns:weekDays rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Event ;
+		rdfs:range xsd:M,X,J,V,S,D ;
+		rdfs:label "week days" .
+
+## ns:placeName
+ns:placeName rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:range xsd:Auditorio y sala de exposiciones Paco de Lucía ;
+		rdfs:label "place name" .
+
+## ns:accessibilityLevel
+ns:accessibilityLevel rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:range xsd:4 ;
+		rdfs:label "accessibility level" .
+
+## schema:url
+schema:url rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:range http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d ;
+		rdfs:label "url" .
+
+## <#6bb410VgnVCM10000017>
+<#6bb410VgnVCM10000017> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "6bb410 vgn v c m10000017" .
+
+## <#1f5a0aRCRD&vgnextoid=>
+<#1f5a0aRCRD&vgnextoid=> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "1f5a0a r c r d&vgnextoid=" .
+
+## <#6089ba61e681c010VgnVCM>
+<#6089ba61e681c010VgnVCM> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "6089ba61e681c010 vgn v c m" .
+
+## <#1000000b205a0aRCRD>
+<#1000000b205a0aRCRD> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "1000000b205a0a r c r d" .
+
+## ns:placeType
+ns:placeType rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:range xsd:/contenido/entidadesY ;
+		rdfs:label "place type" .
+
+## <#organismos/CentrosCulturales>
+<#organismos/CentrosCulturales> rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "centros culturales" .
+
+## ns:openingHours
+ns:openingHours rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "opening hours" .
+
+## ns:equipment
+ns:equipment rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "equipment" .
+
+## ns:transporte
+ns:transporte rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "transporte" .
+
+## schema:telephone
+schema:telephone rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "telephone" .
+
+## ns:email
+ns:email rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:Place ;
+		rdfs:label "email" .
+
+## schema:address
+schema:address rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:GeoCoordinates ;
+		rdfs:range xsd:AVENIDA LAS AGUILAS ;
+		rdfs:label "address" .
+
+## ns:district
+ns:district rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:GeoCoordinates ;
+		rdfs:range xsd:LATINA ;
+		rdfs:label "district" .
+
+## ns:neighborhood
+ns:neighborhood rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:GeoCoordinates ;
+		rdfs:range xsd:LAS AGUILAS ;
+		rdfs:label "neighborhood" .
+
+## schema:postalCode
+schema:postalCode rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:GeoCoordinates ;
+		rdfs:range xsd:28044 ;
+		rdfs:label "postal code" .
+
+## schema:latitude
+schema:latitude rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:GeoCoordinates ;
+		rdfs:range xsd:40.3849392992034 ;
+		rdfs:label "latitude" .
+
+## schema:longitude
+schema:longitude rdf:type owl:DatatypeProperty ;
+		rdfs:domain schema:GeoCoordinates ;
+		rdfs:range xsd:-3.57849086160037 ;
+		rdfs:label "longitude" .
+
+#################################
+#    Classes
+#################################
+
+## schema:Place
+schema:Place rdf:type owl:Class ;
+	rdfs:label "Place" .
+
+## schema:Event
+schema:Event rdf:type owl:Class ;
+	rdfs:label "Event" .
+
+## schema:GeoCoordinates
+schema:GeoCoordinates rdf:type owl:Class ;
+	rdfs:label "Geo Coordinates" .
+
+#################################
+#    Instances
+#################################
+
+#################################
+#    General Axioms
+#################################
+

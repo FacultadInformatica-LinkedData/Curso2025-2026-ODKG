@@ -1,0 +1,292 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Name",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Name-Wikidata",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna Name-Wikidata en el índice 4 basada en la columna Name usando la expresión grel:value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Name-Wikidata",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q174782",
+        "name": "square"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Name-Wikidata to type Q174782"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Name-Wikidata",
+    "expression": "grel:\"https://www.wikidata.org/entity/\" + cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Name-URI-Wikidata",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna Name-URI-Wikidata en el índice 5 basada en la columna Name-Wikidata usando la expresión grel:\"https://www.wikidata.org/entity/\" + cell.recon.match.id"
+  },
+  {
+    "op": "core/recon-match-best-candidates",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name-Wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name-Wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Name-Wikidata",
+    "description": "Emparejar cada celda con su mejor candidato de cotejo en la columna Name-Wikidata"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name-URI-Wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name-URI-Wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(blank)",
+                "l": "(blank)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Address",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Address-Wikidata",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna Address-Wikidata en el índice 1 basada en la columna Address usando la expresión grel:value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name-URI-Wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name-URI-Wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(blank)",
+                "l": "(blank)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Address-Wikidata",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://termennetwerk-api.netwerkdigitaalerfgoed.nl/reconcile/https://www.goudatijdmachine.nl/id/straten%23streets",
+      "identifierSpace": "https://www.goudatijdmachine.nl/id/straten",
+      "schemaSpace": "http://www.w3.org/2004/02/skos/core#Concept",
+      "type": {
+        "id": "http://www.w3.org/2004/02/skos/core#Concept",
+        "name": "Concept"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Address-Wikidata to type http://www.w3.org/2004/02/skos/core#Concept"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name-URI-Wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name-URI-Wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(blank)",
+                "l": "(blank)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Address-Wikidata",
+    "clearData": false,
+    "description": "Descartar juicios de cotejo para celdas en la columna Address-Wikidata"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name-URI-Wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name-URI-Wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(blank)",
+                "l": "(blank)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Address-Wikidata",
+    "clearData": true,
+    "description": "Descartar juicios de cotejo y borrar datos de reconocimiento para celdas en la columna Address-Wikidata"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Name-URI-Wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Name-URI-Wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(blank)",
+                "l": "(blank)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Address-Wikidata",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q35120",
+        "name": "entity"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Address-Wikidata to type Q35120"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Address-Wikidata: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Address-Wikidata",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Address-Wikidata",
+    "expression": "grel:\"https://www.wikidata.org/entity/\" + cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Address-Wiki-URI",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna Address-Wiki-URI en el índice 2 basada en la columna Address-Wikidata usando la expresión grel:\"https://www.wikidata.org/entity/\" + cell.recon.match.id"
+  }
+]

@@ -1,0 +1,1020 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix v: <http://rdf.data-vocabulary.org/#> .
+@prefix schema: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix vocab: <http://example.org#> .
+@prefix lude: <https://spanishuniversities.data/ontology/lude#> .
+@prefix id: <https://spanishuniversities.data/id/lude/> .
+
+<https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> rdf:type "https://spanishuniversities.data/ontology/lude#AcademicLevel" ;
+	rdfs:label "Grado" .
+
+<https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> rdf:type "https://spanishuniversities.data/ontology/lude#AcademicLevel" ;
+	rdfs:label "Máster" .
+
+<https://spanishuniversities.data/id/lude/AcademicLevel/fba30e9ec1935ca7d36277ba76dddbba> rdf:type "https://spanishuniversities.data/ontology/lude#AcademicLevel" ;
+	rdfs:label "Doble Grado" .
+
+<https://spanishuniversities.data/id/lude/Degree/00f0ecd3de42cef2863d0e008a4fed2f> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Veterinaria" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501905" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe> .
+
+<https://spanishuniversities.data/id/lude/Degree/019ad889cb81c4e76fa4fbdfba96175f> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Competencias Digitales Docentes" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "3500789" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/01b9e022ed557615f3424086431b6c7d> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Física y Matemática" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2504592" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> .
+
+<https://spanishuniversities.data/id/lude/Degree/09c141d960bc1f2212b15bedf08eb272> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Relaciones Hispano Africanas" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4313928" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/0dcbfa3e8507c240d9f372a0b8053885> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Economía" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501909" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/1265fb051808a1436ec99f97ea72ea6c> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Educación Infantil" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501911" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/17bd007e38e64d40a1df07951d6c5df1> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería de Tecnologías de Telecomunicación" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501927" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/232b560c40deed4663c7293c64332e85> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Biotecnología" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "1500187" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> .
+
+<https://spanishuniversities.data/id/lude/Degree/23f883b46bdc0289a2064c304f1356d0> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Educación Social" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501914" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/267503fee7f8e6ab8eb992ed501b9306> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Traducción e Interpretación. Inglés-Alemán" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501053" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/277f2e85a3dda98db04f200b68b888fd> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Civil" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501923" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/2dfe6016ac7495abd15dd0aac9a8f293> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Psicología" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "1500551" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe> .
+
+<https://spanishuniversities.data/id/lude/Degree/2f86d3a1d2a7b6eedee6192cf24fa249> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Enfermería" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2502350" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe> .
+
+<https://spanishuniversities.data/id/lude/Degree/3ac6339373186768aa46e48ca5a3a463> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Relaciones Laborales y Recursos Humanos" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501916" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/3c51d08bafd044d0da8581d53435f13e> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería de Telecomunicación" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4313706" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/4434c7c437a42152961c4928370a07e7> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Química Industrial" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2503003" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/4f6e70da0fd83ad51a126c91111ae69e> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Sanidad Animal y Seguridad Alimentaria" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4312658" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> .
+
+<https://spanishuniversities.data/id/lude/Degree/531e554a436e8d76017ced222be2256b> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Fisioterapia" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2502351" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe> .
+
+<https://spanishuniversities.data/id/lude/Degree/5c06e0cc4667a6412dc58adcee840b59> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Estudios Africanos" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "3500251" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/6490ceacd1ec2201b00d19d84f636d3a> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ciencia e Ingeniería de Datos" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2504047" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/64b7c5b06cb6aa7a9ea8b43022ee5148> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería de Caminos, Canales y Puertos" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "3500041" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/6804dabb934d69e827dedfb18009a316> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Enseñanza del Español y su Cultura" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4310170" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/6bc3e2e6c857067e9a27a27af44fc3a4> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Biomédica" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2504760" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/70ade7a2db0de445f5f6e8b5eac724c7> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ciencias de la Actividad Física y del Deporte" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2500351" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> .
+
+<https://spanishuniversities.data/id/lude/Degree/74687cec48040b5c442114f3476bb009> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Geomática" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2503257" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/749fc99e23364a735e2ca99e81309c27> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Geografía y Ordenación del Territorio" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2500714" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/7967791d08c33bfa3caa5e521b7957bb> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Historia" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2500350" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/7db0088adb4227bca7ec932661e392df> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Trabajo Social" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501918" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/82296a258311079a3cc3701bf92fcd88> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Química" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501932" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> .
+
+<https://spanishuniversities.data/id/lude/Degree/89dec507a758d95274e7a64bc98c69a7> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Cultivos Marinos" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4310168" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> .
+
+<https://spanishuniversities.data/id/lude/Degree/8ca5d111b48245023efe2841014f4051> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Administración y Dirección de Empresas" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501906" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/8e4455946fc7d30c0dbae9e12c61668b> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ciencias del Mar" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2502349" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> .
+
+<https://spanishuniversities.data/id/lude/Degree/911aa7bfb4afb461aef62ffa0e7966d2> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Patrimonio Histórico, Cultural y Natural" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4313927" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/9367ea80d53d8b68c2487d8589299ba3> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería en Diseño Industrial y Desarrollo de Productos" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501924" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/99258f19e16b5766a612a72f0e6360f1> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Prevención de Riesgos Laborales" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4316038" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/99eb4faa70869419112d05fc22c02dc0> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Traducción Profesional y Mediación Intercultural" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4313743" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/9a36809818c234a5fcef842fdc982f62> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Turismo: Digitalización, Innovación e Inteligencia" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "3500700" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/a6472d3a0212514f093022cdc7a69881> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Sistemas Inteligentes y Aplicaciones Numéricas en la Ingeniería" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4310173" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/a9deea8fec2904185d932f824b63f09c> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Filología Hispánica" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2502352" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/aa560d3b0e907572018285da660d209c> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Dirección de Empresas y Recursos Humanos" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4314014" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/b0a649f74ea71727835c7889a43ed7c8> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Mecánica" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2502980" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/b2f7ab0ac61dd0c305e0f896ef1fb12e> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Medicina" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501904" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe> .
+
+<https://spanishuniversities.data/id/lude/Degree/be7d531d4c9bc257760fcb96f0d5226c> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Lenguas Modernas" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501903" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/c683953fb380c5979295b9909907b805> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería en Organización Industrial" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2502503" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/c96ce8acfed4ccbd2369a8da4f6d3059> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Tecnologías y Procesos Industriales Avanzados" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4317253" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> .
+
+<https://spanishuniversities.data/id/lude/Degree/d3d6772f96992a2cb6309332fb284d34> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Marketing y Comercio Internacional" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4313941" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/d55a2744fdc84f2064a32f26da865002> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Industrial" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4314767" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/d6b27a2aa00e772e92a7aa9979a7e37f> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería en Tecnología Naval" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501934" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/d70ba4ba84344ff1e6ab1f7da167c499> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Gestión Sostenible de Recursos Pesqueros" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4312538" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/da808dc5eb8d11810412e39cba73466a> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Electrónica y Tecnología Digital Aplicada" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "3500491" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/dcb201b195282662b8b152c9a5196f39> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Derecho" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501908" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/dd3d92520a27d48725c16351891852aa> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Traducción e Interpretación. Inglés-Francés" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501054" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/de278e4cbb9f646b119881ab941df714> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Cultura Audiovisual y Literaria" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4314497" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> .
+
+<https://spanishuniversities.data/id/lude/Degree/e2e96f7f6ceeba36ec850aa4928a4a9d> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Turismo y Desarrollo Sostenible / Master in Tourism and Sustainable Development" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "3500494" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/f2eed6aeb9e41372c3dc48b5a779a97c> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Electrónica Industrial y Automática" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2503004" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/f370a20c1a671e202f2400f42f3a250f> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Informática" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501930" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/f41ce320df5124de7c071dce8d79e3fb> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Educación Primaria" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501912" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/fbbc2d00c5d3f816d27b10a6e5e6a7ce> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Ingeniería Eléctrica" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2502983" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/Degree/fd2bb0f4b4f3a137b19efe53e6c4c97b> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Abogacía y Procura" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "4314967" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/fe41b8a8d47c3778ccc690e239356b03> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Turismo" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501920" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/fe654cc390e934e95325dde306e64720> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Seguridad y Control de Riesgos" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2502832" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> .
+
+<https://spanishuniversities.data/id/lude/Degree/feb7f9412b6ea62597b6aec005f3a589> rdf:type "https://spanishuniversities.data/ontology/lude#Degree" ;
+	rdfs:label "Arquitectura" ;
+	lude:academicYear "2023-2024" ;
+	lude:code "2501921" ;
+	lude:hasAcademicLevel <https://spanishuniversities.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> ;
+	lude:hasKnowledgeArea <https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> .
+
+<https://spanishuniversities.data/id/lude/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> rdf:type "https://spanishuniversities.data/ontology/lude#KnowledgeArea" ;
+	rdfs:label "Ciencias Sociales y Jurídicas" .
+
+<https://spanishuniversities.data/id/lude/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> rdf:type "https://spanishuniversities.data/ontology/lude#KnowledgeArea" ;
+	rdfs:label "Ingeniería y Arquitectura" .
+
+<https://spanishuniversities.data/id/lude/KnowledgeArea/3a55b686cea34a8923b6ea395549772e> rdf:type "https://spanishuniversities.data/ontology/lude#KnowledgeArea" ;
+	rdfs:label "Otros" .
+
+<https://spanishuniversities.data/id/lude/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> rdf:type "https://spanishuniversities.data/ontology/lude#KnowledgeArea" ;
+	rdfs:label "Artes y Humanidades" .
+
+<https://spanishuniversities.data/id/lude/KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe> rdf:type "https://spanishuniversities.data/ontology/lude#KnowledgeArea" ;
+	rdfs:label "Ciencias de la Salud" .
+
+<https://spanishuniversities.data/id/lude/KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> rdf:type "https://spanishuniversities.data/ontology/lude#KnowledgeArea" ;
+	rdfs:label "Ciencias" .
+
+<https://spanishuniversities.data/id/lude/University/080475033eeb8f14c9bd1119f9fa6871> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Nacional de Educación a Distancia" ;
+	lude:acronym "UNED" ;
+	lude:cif "Q2818016D" ;
+	lude:email "infouned@adm.uned.es" ;
+	lude:modality "No Presencial" ;
+	lude:publicationYear "1972"^^xsd:gYear ;
+	lude:telephone "91398600" ;
+	lude:type "Pública" ;
+	lude:url "www.uned.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/094757ed9d7e9bb8929a087e18874962> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Oviedo" ;
+	lude:acronym "UOV" ;
+	lude:cif "Q3318001I" ;
+	lude:email "rectorado@uniovi.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1608"^^xsd:gYear ;
+	lude:telephone "985104058" ;
+	lude:type "Pública" ;
+	lude:url "www.uniovi.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/15d26bf729b84e22210b99d94c66cd90> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Vigo" ;
+	lude:acronym "UVI" ;
+	lude:cif "Q8650002B" ;
+	lude:email "informacion@uvigo.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1989"^^xsd:gYear ;
+	lude:telephone "986812000" ;
+	lude:type "Pública" ;
+	lude:url "www.uvigo.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/16249b9d3890e9951fa8dcc315733ea8> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Extremadura" ;
+	lude:acronym "UEX" ;
+	lude:cif "Q0618001B" ;
+	lude:email "virtual@unex.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1973"^^xsd:gYear ;
+	lude:telephone "924289300" ;
+	lude:type "Pública" ;
+	lude:url "www.unex.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/17a1b9e0f1c1e0719761a30d50700965> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Las Palmas de Gran Canaria" ;
+	lude:acronym "UPGC" ;
+	lude:cif "Q3518001G" ;
+	lude:email "universidad@ulpgc.es" ;
+	lude:modality "Presencial" ;
+	lude:offers <https://spanishuniversities.data/id/lude/Degree/00f0ecd3de42cef2863d0e008a4fed2f>, <https://spanishuniversities.data/id/lude/Degree/019ad889cb81c4e76fa4fbdfba96175f>, <https://spanishuniversities.data/id/lude/Degree/01b9e022ed557615f3424086431b6c7d>, <https://spanishuniversities.data/id/lude/Degree/09c141d960bc1f2212b15bedf08eb272>, <https://spanishuniversities.data/id/lude/Degree/0dcbfa3e8507c240d9f372a0b8053885>, <https://spanishuniversities.data/id/lude/Degree/1265fb051808a1436ec99f97ea72ea6c>, <https://spanishuniversities.data/id/lude/Degree/17bd007e38e64d40a1df07951d6c5df1>, <https://spanishuniversities.data/id/lude/Degree/232b560c40deed4663c7293c64332e85>, <https://spanishuniversities.data/id/lude/Degree/23f883b46bdc0289a2064c304f1356d0>, <https://spanishuniversities.data/id/lude/Degree/267503fee7f8e6ab8eb992ed501b9306>, <https://spanishuniversities.data/id/lude/Degree/277f2e85a3dda98db04f200b68b888fd>, <https://spanishuniversities.data/id/lude/Degree/2dfe6016ac7495abd15dd0aac9a8f293>, <https://spanishuniversities.data/id/lude/Degree/2f86d3a1d2a7b6eedee6192cf24fa249>, <https://spanishuniversities.data/id/lude/Degree/3ac6339373186768aa46e48ca5a3a463>, <https://spanishuniversities.data/id/lude/Degree/3c51d08bafd044d0da8581d53435f13e>, <https://spanishuniversities.data/id/lude/Degree/4434c7c437a42152961c4928370a07e7>, <https://spanishuniversities.data/id/lude/Degree/4f6e70da0fd83ad51a126c91111ae69e>, <https://spanishuniversities.data/id/lude/Degree/531e554a436e8d76017ced222be2256b>, <https://spanishuniversities.data/id/lude/Degree/5c06e0cc4667a6412dc58adcee840b59>, <https://spanishuniversities.data/id/lude/Degree/6490ceacd1ec2201b00d19d84f636d3a>, <https://spanishuniversities.data/id/lude/Degree/64b7c5b06cb6aa7a9ea8b43022ee5148>, <https://spanishuniversities.data/id/lude/Degree/6804dabb934d69e827dedfb18009a316>, <https://spanishuniversities.data/id/lude/Degree/6bc3e2e6c857067e9a27a27af44fc3a4>, <https://spanishuniversities.data/id/lude/Degree/70ade7a2db0de445f5f6e8b5eac724c7>, <https://spanishuniversities.data/id/lude/Degree/74687cec48040b5c442114f3476bb009>, <https://spanishuniversities.data/id/lude/Degree/749fc99e23364a735e2ca99e81309c27>, <https://spanishuniversities.data/id/lude/Degree/7967791d08c33bfa3caa5e521b7957bb>, <https://spanishuniversities.data/id/lude/Degree/7db0088adb4227bca7ec932661e392df>, <https://spanishuniversities.data/id/lude/Degree/82296a258311079a3cc3701bf92fcd88>, <https://spanishuniversities.data/id/lude/Degree/89dec507a758d95274e7a64bc98c69a7>, <https://spanishuniversities.data/id/lude/Degree/8ca5d111b48245023efe2841014f4051>, <https://spanishuniversities.data/id/lude/Degree/8e4455946fc7d30c0dbae9e12c61668b>, <https://spanishuniversities.data/id/lude/Degree/911aa7bfb4afb461aef62ffa0e7966d2>, <https://spanishuniversities.data/id/lude/Degree/9367ea80d53d8b68c2487d8589299ba3>, <https://spanishuniversities.data/id/lude/Degree/99258f19e16b5766a612a72f0e6360f1>, <https://spanishuniversities.data/id/lude/Degree/99eb4faa70869419112d05fc22c02dc0>, <https://spanishuniversities.data/id/lude/Degree/9a36809818c234a5fcef842fdc982f62>, <https://spanishuniversities.data/id/lude/Degree/a6472d3a0212514f093022cdc7a69881>, <https://spanishuniversities.data/id/lude/Degree/a9deea8fec2904185d932f824b63f09c>, <https://spanishuniversities.data/id/lude/Degree/aa560d3b0e907572018285da660d209c>, <https://spanishuniversities.data/id/lude/Degree/b0a649f74ea71727835c7889a43ed7c8>, <https://spanishuniversities.data/id/lude/Degree/b2f7ab0ac61dd0c305e0f896ef1fb12e>, <https://spanishuniversities.data/id/lude/Degree/be7d531d4c9bc257760fcb96f0d5226c>, <https://spanishuniversities.data/id/lude/Degree/c683953fb380c5979295b9909907b805>, <https://spanishuniversities.data/id/lude/Degree/c96ce8acfed4ccbd2369a8da4f6d3059>, <https://spanishuniversities.data/id/lude/Degree/d3d6772f96992a2cb6309332fb284d34>, <https://spanishuniversities.data/id/lude/Degree/d55a2744fdc84f2064a32f26da865002>, <https://spanishuniversities.data/id/lude/Degree/d6b27a2aa00e772e92a7aa9979a7e37f>, <https://spanishuniversities.data/id/lude/Degree/d70ba4ba84344ff1e6ab1f7da167c499>, <https://spanishuniversities.data/id/lude/Degree/da808dc5eb8d11810412e39cba73466a>, <https://spanishuniversities.data/id/lude/Degree/dcb201b195282662b8b152c9a5196f39>, <https://spanishuniversities.data/id/lude/Degree/dd3d92520a27d48725c16351891852aa>, <https://spanishuniversities.data/id/lude/Degree/de278e4cbb9f646b119881ab941df714>, <https://spanishuniversities.data/id/lude/Degree/e2e96f7f6ceeba36ec850aa4928a4a9d>, <https://spanishuniversities.data/id/lude/Degree/f2eed6aeb9e41372c3dc48b5a779a97c>, <https://spanishuniversities.data/id/lude/Degree/f370a20c1a671e202f2400f42f3a250f>, <https://spanishuniversities.data/id/lude/Degree/f41ce320df5124de7c071dce8d79e3fb>, <https://spanishuniversities.data/id/lude/Degree/fbbc2d00c5d3f816d27b10a6e5e6a7ce>, <https://spanishuniversities.data/id/lude/Degree/fd2bb0f4b4f3a137b19efe53e6c4c97b>, <https://spanishuniversities.data/id/lude/Degree/fe41b8a8d47c3778ccc690e239356b03>, <https://spanishuniversities.data/id/lude/Degree/fe654cc390e934e95325dde306e64720>, <https://spanishuniversities.data/id/lude/Degree/feb7f9412b6ea62597b6aec005f3a589> ;
+	lude:publicationYear "1989"^^xsd:gYear ;
+	lude:telephone "928451000" ;
+	lude:type "Pública" ;
+	lude:url "www.ulpgc.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/186d47028db001c7a7d88906c21f5fee> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Politécnica de Catalunya" ;
+	lude:acronym "UPC" ;
+	lude:cif "Q0818003F" ;
+	lude:email "info@upc.edu" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1971"^^xsd:gYear ;
+	lude:telephone "934016200" ;
+	lude:type "Pública" ;
+	lude:url "www.upc.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/24e63f7c3d8596b44655e9ad9bfdf5f5> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Zaragoza" ;
+	lude:acronym "UZA" ;
+	lude:cif "Q5018001G" ;
+	lude:email "ciu@unizar.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1542"^^xsd:gYear ;
+	lude:telephone "976761001" ;
+	lude:type "Pública" .
+
+<https://spanishuniversities.data/id/lude/University/26e6f2790707f868f9d05141e6f2f906> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universitat de Girona" ;
+	lude:acronym "UDG" ;
+	lude:cif "Q6750002E" ;
+	lude:email "informacio@udg.edu" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1992"^^xsd:gYear ;
+	lude:telephone "972418046" ;
+	lude:type "Pública" .
+
+<https://spanishuniversities.data/id/lude/University/2ddd97caa885c032af0e206d1a7b5c85> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Internacional de Andalucía" ;
+	lude:acronym "UNIA" ;
+	lude:cif "Q7350007F" ;
+	lude:email "postgrado@unia.es" ;
+	lude:modality "Especial" ;
+	lude:publicationYear "2013"^^xsd:gYear ;
+	lude:telephone "954462299" ;
+	lude:type "Pública" .
+
+<https://spanishuniversities.data/id/lude/University/2f0fa6cb7c08610911b3258fd5f2738a> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universitat de les Illes Balears" ;
+	lude:acronym "UIB" ;
+	lude:cif "Q0718001A" ;
+	lude:email "informacio@uib.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1978"^^xsd:gYear ;
+	lude:telephone "971173000" ;
+	lude:type "Pública" ;
+	lude:url "www.uib.es/"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/30962703623f1f1d21c737a0c0673761> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Málaga" ;
+	lude:acronym "UMA" ;
+	lude:cif "Q2918001E" ;
+	lude:email "informacion@uma.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1972"^^xsd:gYear ;
+	lude:telephone "952131000" ;
+	lude:type "Pública" ;
+	lude:url "www.uma.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/3105c9fd85b6cfd224f8d1b92970ab2f> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Cantabria" ;
+	lude:acronym "UCN" ;
+	lude:cif "Q3918001C" ;
+	lude:email "acceso@unican.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1972"^^xsd:gYear ;
+	lude:telephone "942200984" ;
+	lude:type "Pública" ;
+	lude:url "www.unican.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/330a9bcca27a6c6e467081bfdc1e65cd> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Alcalá" ;
+	lude:acronym "UAH" ;
+	lude:cif "Q2818018J" ;
+	lude:email "ciu@uah.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1977"^^xsd:gYear ;
+	lude:telephone "918854000" ;
+	lude:type "Pública" ;
+	lude:url "www.uah.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/3bd27a309cbe4e2d7f35ec99b74525c0> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Pompeu Fabra" ;
+	lude:acronym "UPF" ;
+	lude:cif "Q5850017D" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1990"^^xsd:gYear ;
+	lude:telephone "935422000" ;
+	lude:type "Pública" ;
+	lude:url "www.upf.edu"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/4bf5231621b187a3ed12c5741fc3f19d> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Politécnica de Madrid" ;
+	lude:acronym "UPM" ;
+	lude:cif "Q2818015F" ;
+	lude:email "gabinete.rector@upm.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1971"^^xsd:gYear ;
+	lude:telephone "913366200" ;
+	lude:type "Pública" ;
+	lude:url "www.upm.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/4d9d7d9cad3c91e4f4fff77c396ee9ee> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universitat Politècnica de València" ;
+	lude:acronym "UPV" ;
+	lude:cif "Q4618002B" ;
+	lude:email "informacion@upv.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1971"^^xsd:gYear ;
+	lude:telephone "963877000" ;
+	lude:type "Pública" ;
+	lude:url "www.upv.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/51dcd00716a08519e65a732cb87c3b71> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Salamanca" ;
+	lude:acronym "USAL" ;
+	lude:cif "Q3718001E" ;
+	lude:email "infogral@usal.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1218"^^xsd:gYear ;
+	lude:telephone "923294400" ;
+	lude:type "Pública" ;
+	lude:url "www.usal.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/64597f645a8194bb9beed6a3aa675d5b> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de La Laguna" ;
+	lude:acronym "ULL" ;
+	lude:cif "Q3818001D" ;
+	lude:email "prensa1@ull.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1792"^^xsd:gYear ;
+	lude:telephone "922319000" ;
+	lude:type "Pública" ;
+	lude:url "www.ull.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/703d90006d377d97e3212ab3312a4e0d> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Santiago de Compostela" ;
+	lude:acronym "USC" ;
+	lude:cif "Q1518001A" ;
+	lude:email "reitor@usc.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1504"^^xsd:gYear ;
+	lude:telephone "981563100" ;
+	lude:type "Pública" ;
+	lude:url "www.usc.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/79c02c40f6f40e7dbda1c9193c995152> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Pablo de Olavide" ;
+	lude:acronym "UPO" ;
+	lude:cif "Q9150016E" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1997"^^xsd:gYear ;
+	lude:telephone "954349200" ;
+	lude:type "Pública" ;
+	lude:url "www.upo.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/7a90ec99428048f3a58539d18c749ea7> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Rey Juan Carlos" ;
+	lude:acronym "URJC" ;
+	lude:cif "Q2803011B" ;
+	lude:email "info@urjc.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1996"^^xsd:gYear ;
+	lude:telephone "916655060" ;
+	lude:type "Pública" ;
+	lude:url "www.urjc.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/7ce4c67f7247673210d9b6d8aa5e7570> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Barcelona" ;
+	lude:acronym "UBA" ;
+	lude:cif "Q0818001J" ;
+	lude:email "comunicacio@ub.edu" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1450"^^xsd:gYear ;
+	lude:telephone "934035417" ;
+	lude:type "Pública" ;
+	lude:url "www.ub.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/871a4d42a733c080da0f1935663a2f05> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Internacional Menéndez Pelayo" ;
+	lude:acronym "UIMP" ;
+	lude:cif "Q2818022B" ;
+	lude:modality "Especial" ;
+	lude:publicationYear "1945"^^xsd:gYear ;
+	lude:telephone "915920600" ;
+	lude:type "Pública" ;
+	lude:url "www.uimp.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/8841d88268e139663a8723e418715e78> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Rovira i Virgili" ;
+	lude:acronym "URV" ;
+	lude:cif "Q9350003A" ;
+	lude:email "info@urv.cat" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1992"^^xsd:gYear ;
+	lude:telephone "977558000" ;
+	lude:type "Pública" ;
+	lude:url "www.urv.cat/ca"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/91aa5268851f200c64bd1a238ed37fcf> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Autónoma de Barcelona" ;
+	lude:acronym "UAB" ;
+	lude:cif "Q0818002H" ;
+	lude:email "informacio@uab.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1968"^^xsd:gYear ;
+	lude:telephone "935811000" ;
+	lude:type "Pública" ;
+	lude:url "www.uab.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/92c081b3e4299316155ea45962241086> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Valladolid" ;
+	lude:acronym "UVA" ;
+	lude:cif "Q4718001C" ;
+	lude:email "valladolid@uva.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1241"^^xsd:gYear ;
+	lude:telephone "983423000" ;
+	lude:type "Pública" .
+
+<https://spanishuniversities.data/id/lude/University/92c852850da0a33857691151f42ac19a> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Jaume I de Castellón" ;
+	lude:acronym "UJI" ;
+	lude:cif "Q6250003H" ;
+	lude:email "info@uji.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1991"^^xsd:gYear ;
+	lude:telephone "964728000" ;
+	lude:type "Pública" ;
+	lude:url "www.uji.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/9d791fc58c21adf30d157657e55c4355> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Cádiz" ;
+	lude:acronym "UCA" ;
+	lude:cif "Q1132001G" ;
+	lude:email "relaciones.institucionales@uca.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1979"^^xsd:gYear ;
+	lude:telephone "956015033" ;
+	lude:type "Pública" ;
+	lude:url "www.uca.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/a0b65722ec5194abfd7f9ba621a7dd1d> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Jaén" ;
+	lude:acronym "UJA" ;
+	lude:cif "Q7350006H" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1993"^^xsd:gYear ;
+	lude:telephone "953212121" ;
+	lude:type "Pública" ;
+	lude:url "www.ujaen.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/a62a164f781be26dd225dfda47b78c12> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Castilla-La Mancha" ;
+	lude:acronym "UCLM" ;
+	lude:cif "Q1368009E" ;
+	lude:email "webmaster@uclm.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1982"^^xsd:gYear ;
+	lude:telephone "902204100" ;
+	lude:type "Pública" ;
+	lude:url "www.uclm.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/aeaa439db599d073395f84fb7fa10a54> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Pública de Navarra" ;
+	lude:acronym "UPNA" ;
+	lude:cif "Q3150012G" ;
+	lude:email "infoweb@unavarra.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1987"^^xsd:gYear ;
+	lude:telephone "948169000" ;
+	lude:type "Pública" ;
+	lude:url "www.unavarra.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/bd5d3da0c4dfc8205ca85ea0c1699a62> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Miguel Hernández de Elche" ;
+	lude:acronym "UMH" ;
+	lude:cif "Q5350015C" ;
+	lude:email "info@umh.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1996"^^xsd:gYear ;
+	lude:telephone "966658500" ;
+	lude:type "Pública" ;
+	lude:url "www.umh.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/bf0d31e1fd4ee242c0fe00c2ee08b759> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Lleida" ;
+	lude:acronym "UDL" ;
+	lude:cif "Q7550001G" ;
+	lude:email "info@udl.cat" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1992"^^xsd:gYear ;
+	lude:telephone "973702000" ;
+	lude:type "Pública" ;
+	lude:url "www.udl.es/ca/es/"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/c50901012309aca2785eb50ea4c8f87b> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Carlos III de Madrid" ;
+	lude:acronym "UCAR" ;
+	lude:cif "Q2818029G" ;
+	lude:email "futurosestudiantes@uc3m.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1989"^^xsd:gYear ;
+	lude:telephone "916249500" ;
+	lude:type "Pública" ;
+	lude:url "www.uc3m.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/c6abab9cddd0b921adc603debfcca50e> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Almería" ;
+	lude:acronym "UAL" ;
+	lude:cif "Q5450008G" ;
+	lude:email "gprensa@ual.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1993"^^xsd:gYear ;
+	lude:telephone "950015570" ;
+	lude:type "Pública" ;
+	lude:url "www.ual.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/c73f658b0a9e2a5097a9ae889dd56474> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universitat de València" ;
+	lude:acronym "UV" ;
+	lude:cif "Q4618001D" ;
+	lude:email "servei.estudiants@uv.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1502"^^xsd:gYear ;
+	lude:telephone "963864100" ;
+	lude:type "Pública" ;
+	lude:url "www.uv.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/c8b4be930789e86c8d8b17d773af6d7e> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de León" ;
+	lude:acronym "ULE" ;
+	lude:cif "Q2432001B" ;
+	lude:email "webmaster@unileon.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1979"^^xsd:gYear ;
+	lude:telephone "987291000" ;
+	lude:type "Pública" ;
+	lude:url "www.unileon.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/d30bbd19fa77d8470334a259e060006e> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad del País Vasco/Euskal Herriko Unibertsitatea" ;
+	lude:acronym "EHU" ;
+	lude:cif "Q4818001B" ;
+	lude:email "rgzadmin@lg.ehu.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1968"^^xsd:gYear ;
+	lude:telephone "946012000" ;
+	lude:type "Pública" ;
+	lude:url "www.ehu.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/d4092e4beec5ade3eb17379b7450f0b9> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Córdoba" ;
+	lude:acronym "UCO" ;
+	lude:cif "Q1418001B" ;
+	lude:email "informacion@uco.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1972"^^xsd:gYear ;
+	lude:telephone "957218000" ;
+	lude:type "Pública" ;
+	lude:url "www.uco.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/dbca02858a647c576208370194649766> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Granada" ;
+	lude:acronym "UGR" ;
+	lude:cif "Q1818002F" ;
+	lude:email "csirc@ugr.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1531"^^xsd:gYear ;
+	lude:telephone "958243000" ;
+	lude:type "Pública" ;
+	lude:url "www.ugr.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/dcbcd7e79ed9bec816e6a427d84bbf64> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de La Rioja" ;
+	lude:acronym "UR" ;
+	lude:cif "Q2618002F" ;
+	lude:email "sec.general@unirioja.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1992"^^xsd:gYear ;
+	lude:telephone "941299104" ;
+	lude:type "Pública" ;
+	lude:url "www.unirioja.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/e00161d1619c9c29b683d70c49b1341c> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Alicante" ;
+	lude:acronym "UA" ;
+	lude:cif "Q0332001G" ;
+	lude:email "informacio@ua.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1979"^^xsd:gYear ;
+	lude:telephone "965903400" ;
+	lude:type "Pública" ;
+	lude:url "www.ua.es/"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/e2aed65db4fa77f98f5f2990371c7a23> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Complutense de Madrid" ;
+	lude:acronym "UCM" ;
+	lude:cif "Q2818014I" ;
+	lude:email "infocom@ucm.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1836"^^xsd:gYear ;
+	lude:telephone "914520400" ;
+	lude:type "Pública" ;
+	lude:url "www.ucm.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/e4aee90dd75f5fd5dc35bc4653bd9065> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Politécnica de Cartagena" ;
+	lude:acronym "UPCT" ;
+	lude:cif "Q8050013E" ;
+	lude:email "gestion.academica@upct.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1998"^^xsd:gYear ;
+	lude:telephone "968325400" ;
+	lude:type "Pública" ;
+	lude:url "www.upct.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/e97892b0ccf3c19ce40f9ef9d8ac91ef> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de A Coruña" ;
+	lude:acronym "UDC" ;
+	lude:cif "Q6550005J" ;
+	lude:email "reitor@udc.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1989"^^xsd:gYear ;
+	lude:telephone "981167000" ;
+	lude:type "Pública" ;
+	lude:url "www.udc.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/f5636bc297db763f969bab88b5492ba3> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Murcia" ;
+	lude:acronym "UMU" ;
+	lude:cif "Q3018001B" ;
+	lude:email "rector@um.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1272"^^xsd:gYear ;
+	lude:telephone "968363000" ;
+	lude:type "Pública" ;
+	lude:url "www.um.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/f6ce2593f6cfc9e08dc9effe2e0077e9> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Huelva" ;
+	lude:acronym "UHU" ;
+	lude:cif "Q7150008F" ;
+	lude:email "www@uhu.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1993"^^xsd:gYear ;
+	lude:telephone "959218000" ;
+	lude:type "Pública" ;
+	lude:url "www.uhu.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/f8c4e120daa6420626c03e582958ebd3> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Sevilla" ;
+	lude:acronym "USE" ;
+	lude:cif "Q4118001I" ;
+	lude:email "gabiprensa@us.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1505"^^xsd:gYear ;
+	lude:telephone "954551000" ;
+	lude:type "Pública" ;
+	lude:url "www.us.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/f9d30a624b678c838a4bb422a0bc148b> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad Autónoma de Madrid" ;
+	lude:acronym "UAM" ;
+	lude:cif "Q2818013A" ;
+	lude:email "informacion.general@uam.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1968"^^xsd:gYear ;
+	lude:telephone "914975000" ;
+	lude:type "Pública" ;
+	lude:url "www.uam.es"^^xsd:anyURI .
+
+<https://spanishuniversities.data/id/lude/University/f9f0a05fbac13ce20a2af52247c2b93f> rdf:type "https://spanishuniversities.data/ontology/lude#University" ;
+	rdfs:label "Universidad de Burgos" ;
+	lude:acronym "UBU" ;
+	lude:cif "Q0968272E" ;
+	lude:email "ubuestudiantes@ubu.es" ;
+	lude:modality "Presencial" ;
+	lude:publicationYear "1994"^^xsd:gYear ;
+	lude:telephone "947258700" ;
+	lude:type "Pública" ;
+	lude:url "www.ubu.es"^^xsd:anyURI .
+

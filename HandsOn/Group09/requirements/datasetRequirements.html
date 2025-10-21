@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Hands-on 1 · Dataset Requirements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;max-width:980px;margin:56px auto 40px;padding:0 16px;line-height:1.55}
+    h1{margin:0 0 18px}
+    h2{margin:28px 0 12px}
+    p.lead{margin:10px 0 18px;color:#374151}
+    code,pre{background:#f6f8fa;padding:2px 6px;border-radius:6px}
+    table{border-collapse:collapse;width:100%;margin:14px 0}
+    th,td{border:1px solid #ddd;padding:10px;vertical-align:top}
+    th{background:#fafafa;text-align:left}
+    .ok{color:#157347;font-weight:600}
+    .id{font-family:ui-monospace,Consolas,monospace}
+    .note{background:#fff7cc;border:1px solid #ffe58f;padding:10px;border-radius:8px;margin-top:8px}
+    .foot{margin-top:32px;font-size:.92em;color:#555}
+    hr{margin:18px 0 22px;border:none;border-top:1px solid #e5e7eb}
+    ol.ds-list{padding-left:1.2em}
+    ol.ds-list > li{margin:20px 0 28px}
+    .ds-title{display:block;font-weight:700;margin:0 0 6px}
+    .meta{margin:6px 0 0;color:#374151}
+    .meta em{font-style:normal;color:#0f172a}
+    .key{margin:10px 0 6px}
+  </style>
+</head>
+<body>
+
+<h1>Dataset Requirements</h1>
+<p class="lead"><strong>Group:</strong> 09 · <strong>Members:</strong> Andosilla Herráiz, Lucas — Beamonte González, Sergio — Gil Planes, Germán — Herrero Míguez, Paula — Hunziker Cadabal, Celina </p>
+
+<hr/>
+
+<h2>Selected datasets</h2>
+
+<ol class="ds-list">
+  <li>
+    <span class="ds-title"><a href="https://data.melbourne.vic.gov.au/explore/dataset/pedestrian-counting-system-monthly-counts-per-hour/information/" >City of Melbourne — Pedestrian Counting System (Monthly counts per hour)</a></span>
+    <p class="meta"><em>Identifier:</em> <span class="id">pedestrian-counting-system-monthly-counts-per-hour</span></p>
+    <p class="meta"><em>Updated:</em> monthly</p>
+    <p class="meta"><em>Theme:</em> Transport</p>
+    <p class="meta"><em>Language:</em> English</p>
+    <p class="key"><em>Key columns:</em> <span class="id">id</span>, <span class="id">location_id</span>, <span class="id">sensing_date</span>, <span class="id">hourday</span>, <span class="id">pedestriancount</span>, <span class="id">sensor_name</span>, <span class="id">location</span>.</p>
+    <div class="note">Hourly pedestrian counts since 2009; mergeable with “Sensor Locations” via <span class="id">sensor_id/location_id</span>.</div>
+  </li>
+
+  <li>
+    <span class="ds-title"><a href="https://data.melbourne.vic.gov.au/explore/dataset/pedestrian-counting-system-sensor-locations/information/">City of Melbourne — Pedestrian Counting System · Sensor Locations</a></span>
+    <p class="meta"><em>Identifier:</em> <span class="id">pedestrian-counting-system-sensor-locations</span></p>
+    <p class="meta"><em>Updated:</em> daily</p>
+    <p class="meta"><em>Theme:</em> Transport</p>
+    <p class="key"><em>Key columns:</em> <span class="id">location_id</span>, <span class="id">sensor_name</span>, <span class="id">status</span>, <span class="id">latitude</span>, <span class="id">longitude</span>, <span class="id">location</span>.</p>
+    <div class="note">Provides geographic reference for pedestrian sensors. Joinable to counts via <span class="id">location_id</span>.</div>
+  </li>
+
+  <li>
+    <span class="ds-title">Pedestrian Sensor Locations (Enriched)</span>
+    <p class="meta"><em>Identifier:</em> <span class="id">pedestrian-counting-system-sensor-locations_enriched</span></p>
+    <p class="meta"><em>Theme:</em> Transport / Urban context</p>
+    <p class="key"><em>Key columns:</em> <span class="id">location_id</span>, <span class="id">sensor_name</span>, <span class="id">status</span>, <span class="id">latitude</span>, <span class="id">longitude</span>, <span class="id">street</span>, <span class="id">housenumber</span>, <span class="id">postcode</span>, <span class="id">city</span>, <span class="id">country</span>, <span class="id">formatted</span>, <span class="id">latitude</span>, <span class="id">longitude</span>.</p>
+    <div class="note">Enhances the original “Sensor Locations” dataset with geocoded address fields (street, postcode, city, etc.) obtained via API, enabling precise spatial linkage with microclimate data and administrative boundaries.</div>
+  </li>
+
+  <li>
+    <span class="ds-title"><a href="https://data.melbourne.vic.gov.au/explore/dataset/microclimate-sensors-data/information/">Microclimate Sensors Data</a></span>
+    <p class="meta"><em>Identifier:</em> <span class="id">microclimate-sensors-data</span></p>
+    <p class="meta"><em>Theme:</em> Environment / Weather</p>
+    <p class="key"><em>Key columns:</em> <span class="id">Device_id</span>, <span class="id">Time</span>, <span class="id">SensorLocation</span>, <span class="id">AirTemperature</span>, <span class="id">RelativeHumidity</span>, <span class="id">AverageWindSpeed</span>, <span class="id">PM25</span>, <span class="id">Noise</span>.</p>
+    <div class="note">Provides detailed environmental readings from each microclimate sensor, linkable to sensor locations via <span class="id">Device_id/SensorLocation</span> for spatial and temporal analysis.</div>
+  </li>
+
+  <li>
+    <span class="ds-title">Microclimate Sensors Data (Enriched)</span>
+    <p class="meta"><em>Identifier:</em> <span class="id">microclimate-sensors-data-enriched</span></p>
+    <p class="meta"><em>Theme:</em> Environment / Weather</p>
+    <p class="key"><em>Key columns:</em> <span class="id">Device_id</span>, <span class="id">Location_ID</span>, <span class="id">Time</span>, <span class="id">AirTemperature</span>, <span class="id">RelativeHumidity</span>, <span class="id">AverageWindSpeed</span>, <span class="id">PM25</span>, <span class="id">Noise</span>, <span class="id">closest_pedestrianCount_sensor</span>.</p>
+    <div class="note">Extends the base microclimate sensing data linking the locations to address and geocoding fields retrieved via API, improving linkage with pedestrian and administrative datasets. A new field has been included for joining with pedestrian dataset.</div>
+  </li>
+</ol>
+
+<h2>Requirements assessment (R1–R6)</h2>
+
+<table>
+  <thead>
+    <tr><th>Req.</th><th>What it asks</th><th>Status</th><th>Evidence / comments</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>R1</strong></td>
+      <td>Smart-city domain</td>
+      <td class="ok">Meets</td>
+      <td>All datasets belong to smart-city domains: <em>Transport</em> (pedestrian counts, sensors) and <em>Environment</em> (microclimate). They support mobility, climate, and planning analyses.</td>
+    </tr>
+
+    <tr>
+      <td><strong>R2</strong></td>
+      <td>Available as CSV</td>
+      <td class="ok">Meets</td>
+      <td>All datasets are provided or exported as CSV files, enabling easy integration and processing.</td>
+    </tr>
+
+    <tr>
+      <td><strong>R3</strong></td>
+      <td>Open license</td>
+      <td class="ok">Meets</td>
+      <td>Datasets from the City of Melbourne portal are released under <strong>Creative Commons Attribution 4.0 (CC BY 4.0)</strong>.   
+        All datasets are therefore open, reusable, and publishable.</td>
+    </tr>
+
+    <tr>
+      <td><strong>R4</strong></td>
+      <td>Linkable to generic entities</td>
+      <td class="ok">Meets</td>
+      <td>Linking keys: <span class="id">sensor_id/location_id</span> (pedestrian ↔ locations) and geospatial coordinates (↔ microclimate sensors, districts, POIs). Enriched versions add address-level attributes to facilitate linkage to generic real-world entities.</td>
+    </tr>
+
+    <tr>
+      <td><strong>R5</strong></td>
+      <td>Documentation (optional)</td>
+      <td class="ok">Meets</td>
+      <td>Each dataset includes metadata, data dictionaries, or field descriptions on the open-data portal or accompanying notes.</td>
+    </tr>
+
+    <tr>
+      <td><strong>R6</strong></td>
+      <td>Multiple sources (optional)</td>
+      <td class="ok">Meets</td>
+      <td>Data integrate multiple smart-city sources: pedestrian counts, enriched location data and climate sensor networks, enabling multi-domain analytics (mobility ↔ weather).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Licenses</h2>
+
+<ul>
+  <li><strong>Pedestrian Counting System — Monthly counts per hour:</strong> CC BY 4.0 — <a href="https://creativecommons.org/licenses/by/4.0/legalcode">link</a></li>
+  <li><strong>Pedestrian Counting System — Sensor Locations:</strong> CC BY 4.0 — <a href="https://creativecommons.org/licenses/by/4.0/legalcode">link</a></li>
+  <li><strong>Pedestrian Sensor Locations (Enriched):</strong> Derived from CC BY 4.0 data — maintained under same license.</li>
+  <li><strong>Microclimate Sensors Data (Enriched):</strong> CC BY 4.0 — <a href="https://creativecommons.org/licenses/by/4.0/legalcode">link</a></li>
+</ul>
+
+<h2>Entities in the selected datasets that can be linked</h2>
+<ul>
+  <li><strong>Locations:</strong> latitude/longitude, street, postcode → link to districts or Wikidata POIs.</li>
+  <li><strong>Sensors:</strong> <span class="id">sensor_id/location_id</span>, <span class="id">sensor_name</span>, <span class="id">type</span>.</li>
+  <li><strong>Time:</strong> <span class="id">sensing_date</span>, <span class="id">hourday</span>, <span class="id">timestamp</span> → link to public holidays or external events.</li>
+  <li><strong>Weather variables:</strong> temperature, humidity, wind speed, particulate matter, noise — joinable by time and location with pedestrian data.</li>
+</ul>
+
+<h2>Entities in other datasets that can be linked to ours</h2>
+<ul>
+  <li><strong>Wikidata / DBpedia:</strong> POIs, squares, and districts corresponding to sensor locations.</li>
+  <li><strong>Geonames:</strong> geographic hierarchy (city, suburb, postcode).</li>
+  <li><strong>Australian Government APIs:</strong> official holidays and events datasets.</li>
+  <li><strong>Open weather or climate APIs:</strong> to validate or enrich microclimate sensor data.</li>
+</ul>
+
+<p class="foot"><strong>Scope note:</strong> The document covers dataset identification and evaluation under R1–R6. Enriched datasets enable more complete spatial linking across mobility, environment and event data.</p>
+
+</body>
+</html>

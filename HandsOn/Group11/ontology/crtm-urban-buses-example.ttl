@@ -1,0 +1,143 @@
+@prefix ont: <http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#> .
+@prefix base: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/> .
+@prefix agency: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/> .
+@prefix route: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/> .
+@prefix trip: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/> .
+@prefix stop: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/> .
+@prefix stoptime: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stoptime/> .
+@prefix calendar: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/> .
+@prefix shape: <http://crtm-urban-buses.org/opendata/handsOn/group11/resource/shape/> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+agency:CRTM a ont:Agency ;
+  ont:agencyId "CRTM" ;
+  schema:name "Consorcio Regional de Transportes de Madrid" ;
+  schema:url <https://www.crtm.es/> ;
+  ont:timezone "Europe/Madrid" ;
+  schema:inLanguage "es" .
+
+agency:AISA a ont:Agency ;
+  ont:agencyId "AISA" ;
+  schema:name "Automóviles Interurbanos, S.A." ;
+  schema:url <https://www.avanzagrupo.com/> ;
+  ont:timezone "Europe/Madrid" ;
+  schema:inLanguage "es" .
+
+route:422 a ont:BusRoute ;
+  ont:routeId "422" ;
+  ont:routeShortName "422" ;
+  ont:routeLongName "Madrid (Legazpi) - Valdemoro" ;
+  ont:operatedBy agency:AISA ;
+  ont:routeColor "008000" ;
+  ont:routeTextColor "FFFFFF" .
+
+stop:intercambiador-legazpi a ont:Stop ;
+  ont:stopId "station-legazpi" ;
+  ont:stopCode "17513" ;
+  schema:name "Intercambiador de Legazpi" ;
+  geo:lat "40.3901"^^xsd:decimal ;
+  geo:long "-3.6965"^^xsd:decimal ;
+  ont:zoneId "A" ;
+  ont:locationType 1 .
+
+stop:legazpi-darsena a ont:Stop ;
+  ont:stopId "stop-legazpi" ;
+  ont:stopCode "17513-darsena" ;
+  schema:name "P.º de la Chopera - Legazpi" ;
+  ont:stopDescNumber "17513" ;
+  ont:stopDescName "Paseo de la Chopera - Plaza de Legazpi" ;
+  ont:stopTimeZone "Europe/Madrid" ;
+  geo:lat "40.3905"^^xsd:decimal ;
+  geo:long "-3.6955"^^xsd:decimal ;
+  ont:zoneId "A" ;
+  ont:locationType 0 ;
+  ont:wheelChairBoarding 1 ;
+  ont:parentStation stop:intercambiador-legazpi .
+
+stop:pinto-terreros a ont:Stop ;
+  ont:stopId "stop-pinto-terreros" ;
+  ont:stopCode "16834" ;
+  schema:name "Av. España - Terreros (Pinto)" ;
+  geo:lat "40.2450"^^xsd:decimal ;
+  geo:long "-3.7001"^^xsd:decimal ;
+  ont:zoneId "B2" ;
+  ont:locationType 0 ;
+  ont:wheelChairBoarding 1 .
+
+stop:valdemoro-estacion a ont:Stop ;
+  ont:stopId "stop-valdemoro-estacion" ;
+  ont:stopCode "10878" ;
+  schema:name "Av. Andalucía - P.º Estación (Valdemoro)" ;
+  geo:lat "40.1873"^^xsd:decimal ;
+  geo:long "-3.6765"^^xsd:decimal ;
+  ont:zoneId "B3" ;
+  ont:locationType 0 ;
+  ont:wheelChairBoarding 1 .
+
+calendar:laborables a ont:CalendarService ;
+  ont:serviceId "LAB" ;
+  ont:startDate "2025-01-01"^^xsd:date ;
+  ont:endDate   "2025-12-31"^^xsd:date ;
+  ont:operatesOnMonday 1 ;
+  ont:operatesOnTuesday 1 ;
+  ont:operatesOnWednesday 1 ;
+  ont:operatesOnThursday 1 ;
+  ont:operatesOnFriday 1 ;
+  ont:operatesOnSaturday 0 ;
+  ont:operatesOnSunday 0 .
+
+trip:422-valdemoro-madrid-morning a ont:Trip ;
+  ont:tripId "422-VM-M-0800" ;
+  ont:tripHeadsign "Madrid (Legazpi)" ;
+  ont:tripHeadsignComplete "Viaje de las 08:00 desde Valdemoro a Madrid" ;
+  ont:busNumber "315" ;
+  ont:blockId "BLOCK422A" ;
+  ont:directionId "1" ;
+  ont:wheelChairAccessible 1 ;
+  ont:belongsToRoute route:422 ;
+  ont:hasCalendar calendar:laborables .
+
+stoptime:valdemoro-start a ont:StopTime ;
+  ont:arrivalTime "08:00:00" ;
+  ont:departureTime "08:00:00" ;
+  ont:stopSequence 1 ;
+  ont:belongsToTrip trip:422-valdemoro-madrid-morning ;
+  ont:refersToStop stop:valdemoro-estacion .
+
+stoptime:pinto-mid a ont:StopTime ;
+  ont:arrivalTime "08:15:00" ;
+  ont:departureTime "08:15:00" ;
+  ont:stopSequence 2 ;
+  ont:belongsToTrip trip:422-valdemoro-madrid-morning ;
+  ont:refersToStop stop:pinto-terreros .
+
+stoptime:legazpi-end a ont:StopTime ;
+  ont:arrivalTime "08:40:00" ;
+  ont:departureTime "08:40:00" ;
+  ont:stopSequence 3 ;
+  ont:belongsToTrip trip:422-valdemoro-madrid-morning ;
+  ont:refersToStop stop:legazpi-darsena .
+
+shape:s422-vuelta a ont:Shape ;
+  ont:shapeId "shape-422-vuelta" ;
+  ont:isShapeOf trip:422-valdemoro-madrid-morning .
+
+shape:s422-vuelta-p1 a ont:Shape ;
+  ont:shapeId "shape-422-vuelta" ;
+  geo:lat "40.1873"^^xsd:decimal ;
+  geo:long "-3.6765"^^xsd:decimal ;
+  ont:shapeSequence 1 .
+
+shape:s422-vuelta-p2 a ont:Shape ;
+  ont:shapeId "shape-422-vuelta" ;
+  geo:lat "40.2450"^^xsd:decimal ;
+  geo:long "-3.7001"^^xsd:decimal ;
+  ont:shapeSequence 2 .
+
+shape:s422-vuelta-p3 a ont:Shape ;
+  ont:shapeId "shape-422-vuelta" ;
+  geo:lat "40.3905"^^xsd:decimal ;
+  geo:long "-3.6955"^^xsd:decimal ;
+  ont:shapeSequence 3 .

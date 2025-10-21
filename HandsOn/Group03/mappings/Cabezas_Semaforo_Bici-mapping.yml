@@ -1,0 +1,38 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  rml: http://semweb.mmlab.be/ns/rml#
+  ql: http://semweb.mmlab.be/ns/ql#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  mts: http://madrid-transport-safety.org/ontology#
+  resource: http://madrid-transport-safety.org/resource/
+
+mappings:
+  TrafficLightMap:
+    sources:
+      - [../csv/Cabezas_Semaforo_Bici-updated.csv~csv]
+    s: http://madrid-transport-safety.org/resource/traffic-light/$(id)
+    po:
+      - [a, mts:TrafficLight]
+      - [mts:trafficLightIdentifier, $(id), xsd:integer]
+      - [mts:intersectionId, $(id_cruce), xsd:integer]
+      - [mts:installationDate, $(fecha_inst)]
+      - [mts:trafficLightType, $(tipo_semaforo)]
+      - [mts:lightsType, $(tipo_luz)]
+      - [mts:trafficLightLongitude, $(longitud), xsd:decimal]
+      - [mts:trafficLightLatitude, $(latitud), xsd:decimal]
+      - p: mts:locatedInDistrict
+        o:
+          mapping: DistrictMap
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(distrito)]
+              - [str2, $(distrito)]
+
+  DistrictMap:
+    sources:
+      - [../csv/Cabezas_Semaforo_Bici-updated.csv~csv]
+    s: http://madrid-transport-safety.org/resource/district/$(distrito)
+    po:
+      - [a, mts:District]
+      - [mts:districtCode, $(distrito), xsd:integer]

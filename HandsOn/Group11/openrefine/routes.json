@@ -1,0 +1,100 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "route_text_color",
+    "description": "Eliminar columna route_text_color"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "route_color",
+    "description": "Eliminar columna route_color"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "route_type",
+    "description": "Eliminar columna route_type"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "route_desc",
+    "description": "Eliminar columna route_desc"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "route_long_name",
+    "expression": "value.replace(\"Av.\",\"Avenida\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna route_long_name usando la expresión value.replace(\"Av.\",\"Avenida\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "route_long_name",
+    "expression": "value.replace(\"Est.\",\"Estación\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna route_long_name usando la expresión value.replace(\"Est.\",\"Estación\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "route_long_name",
+    "expression": "value.replace(\"Avda.\",\"Avenida\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna route_long_name usando la expresión value.replace(\"Avda.\",\"Avenida\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "route_long_name",
+    "expression": "value.replace(\"Urb.\",\"Urbanización\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna route_long_name usando la expresión value.replace(\"Urb.\",\"Urbanización\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "route_long_name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna route_long_name usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "route_long_name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna route_long_name usando la expresión value.trim()"
+  }
+]

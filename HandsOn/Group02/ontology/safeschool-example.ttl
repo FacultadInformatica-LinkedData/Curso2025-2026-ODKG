@@ -1,0 +1,60 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema:  <https://schema.org/> .
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .
+@prefix safeschool: <http://safeschool.linkeddata.es/ontology#> .
+
+# District
+<http://safeschool.linkeddata.es/resource/District/1> a safeschool:District ;
+  schema:identifier "1" ;
+  schema:name "Centro"@es .
+  rdf:label "Distrito-Centro"@es .
+
+# Accident
+<http://safeschool.linkeddata.es/resource/Accident/2025S000056> a safeschool:Accident ;
+  schema:identifier "2025S000056" ;
+  schema:startDate "2025-01-01T00:49:00+01:00"^^xsd:dateTime ;
+  schema:description "CALL. LOPEZ DE HOYOS / CALL. ROS DE OLANO"@es ;
+  schema:name "Colisión fronto-lateral"@es ; # Used for accident type
+  # Linking to the full URI of the District
+  safeschool:inDistrict <http://safeschool.linkeddata.es/resource/District/1> ;
+  safeschool:weatherCondition "Despejado"@es ;
+  safeschool:wktGeometry "POINT(-3.67254596772 40.4451628345)"^^geo:wktLiteral ;
+  safeschool:alcoholPositive "false"^^xsd:boolean ;
+  safeschool:drugPositive "false"^^xsd:boolean ;
+  safeschool:pedestrianInvolved "false"^^xsd:boolean ;
+  safeschool:vehiclesInvolved "Ciclomotor, Turismo"@es ;
+  safeschool:injuryDescription "Asistencia sanitaria sólo en el lugar del accidente"@es ;
+  safeschool:injuryLevel "1"^^xsd:integer .
+  rdf:label "Accident-2025S000056"@es .
+
+# Educational Center
+<http://safeschool.linkeddata.es/resource/EducationalCenter/28004059> a safeschool:EducationalCenter ;
+  schema:identifier "28004059" ;
+  schema:name "CERVANTES"@es ;
+  safeschool:centerTypeCode "42" ;
+  schema:description "INSTITUTO DE EDUCACIÓN SECUNDARIA"@es ;
+  safeschool:ownershipType "PÚBLICO"@es ;
+  schema:streetAddress "Calle de Embajadores, 70"@es ;
+  schema:postalCode "28012" ;
+  # Linking to the full URI of the District
+  safeschool:inDistrict <http://safeschool.linkeddata.es/resource/District/1> ;
+  schema:telephone "915285061" ;
+  schema:url <http://www.educa.madrid.org/ies.cervantes.madrid> ;
+  schema:email "ies.cervantes.madrid@educa.madrid.org" ;
+  safeschool:wktGeometry "POINT(-3.70320884055 40.405917222)"^^geo:wktLiteral .
+  rdf:label "EducationalCenter-CERVANTES"@es .
+
+# Speed Camera
+<http://safeschool.linkeddata.es/resource/SpeedCamera/1> a safeschool:SpeedCamera ;
+  schema:identifier "1" ;
+  schema:description "M-30, ENTRADA DE LA A-1, SENTIDO PUENTE DE VENTAS P.K. 0,500"@es ;
+  schema:streetAddress "M-30"@es ; # Using streetAddress for roadway
+  safeschool:direction "Calzada Interior"@es ;
+  safeschool:cameraType "Fijo"@es ;
+  safeschool:wktGeometry "POINT(-3.67433808 40.47934148)"^^geo:wktLiteral ;
+  safeschool:speedLimit "90"^^xsd:integer .
+  rdf:label "Radar-1"@es .

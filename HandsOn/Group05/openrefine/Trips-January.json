@@ -1,0 +1,403 @@
+[
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "fecha",
+          "expression": "value",
+          "columnName": "fecha",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "fecha",
+          "expression": "value",
+          "columnName": "fecha",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "fecha",
+    "description": "Eliminar columna fecha"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "fleet",
+    "description": "Eliminar columna fleet"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_lock",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Coord_x",
+    "columnInsertIndex": 9,
+    "description": "Crear la columna Coord_x en el índice 9 basada en la columna geolocation_lock usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_lock",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Coord_y",
+    "columnInsertIndex": 9,
+    "description": "Crear la columna Coord_y en el índice 9 basada en la columna geolocation_lock usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "geolocation_lock",
+    "description": "Eliminar columna geolocation_lock"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Coord_y",
+    "expression": "jython:value = value.split(\",\")\nvalue = value[1].split(\"[\")[1]\nreturn value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Coord_y usando la expresión jython:value = value.split(\",\")\nvalue = value[1].split(\"[\")[1]\nreturn value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Coord_x",
+    "expression": "jython:value = value.split(\",\")\n#value = value[1].split(\"[\")[1]\nreturn value[2].split(\"]\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Coord_x usando la expresión jython:value = value.split(\",\")\n#value = value[1].split(\"[\")[1]\nreturn value[2].split(\"]\")[0]"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Coord_y",
+    "newColumnName": "Lock_Coord_y",
+    "description": "Renombra la columna Coord_y a Lock_Coord_y"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Coord_x",
+    "newColumnName": "Lock_Coord_x",
+    "description": "Renombra la columna Coord_x a Lock_Coord_x"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_x",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna Unlock_Coor_x en el índice 4 basada en la columna geolocation_unlock usando la expresión jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_y",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna Unlock_Coor_y en el índice 4 basada en la columna geolocation_unlock usando la expresión jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "geolocation_unlock",
+    "description": "Eliminar columna geolocation_unlock"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "lock_station_name",
+    "expression": "jython:return value",
+    "onError": "set-to-blank",
+    "newColumnName": "L-Station-WikiData",
+    "columnInsertIndex": 19,
+    "description": "Crear la columna L-Station-WikiData en el índice 19 basada en la columna lock_station_name usando la expresión jython:return value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "L-Station-WikiData",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q174782",
+        "name": "square"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column L-Station-WikiData to type Q174782"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "unlock_station_name",
+    "expression": "jython:return value",
+    "onError": "set-to-blank",
+    "newColumnName": "UL-Station-WikiData",
+    "columnInsertIndex": 16,
+    "description": "Crear la columna UL-Station-WikiData en el índice 16 basada en la columna unlock_station_name usando la expresión jython:return value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "L-Station-WikiData: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "L-Station-WikiData",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "L-Station-WikiData",
+    "expression": "grel:\"https://www.wikidata.org/entity/\" + cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "L-Station-WikiData-URI",
+    "columnInsertIndex": 21,
+    "description": "Crear la columna L-Station-WikiData-URI en el índice 21 basada en la columna L-Station-WikiData usando la expresión grel:\"https://www.wikidata.org/entity/\" + cell.recon.match.id"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "L-Station-WikiData: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "L-Station-WikiData",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UL-Station-WikiData",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q79007",
+        "name": "street"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column UL-Station-WikiData to type Q79007"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "UL-Station-WikiData: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "UL-Station-WikiData",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "matched",
+                "l": "matched"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "UL-Station-WikiData",
+    "clearData": true,
+    "description": "Descartar juicios de cotejo y borrar datos de reconocimiento para celdas en la columna UL-Station-WikiData"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UL-Station-WikiData",
+    "clearData": false,
+    "description": "Descartar juicios de cotejo para celdas en la columna UL-Station-WikiData"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UL-Station-WikiData",
+    "clearData": true,
+    "description": "Descartar juicios de cotejo y borrar datos de reconocimiento para celdas en la columna UL-Station-WikiData"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "UL-Station-WikiData",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q35120",
+        "name": "entity"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column UL-Station-WikiData to type Q35120"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "UL-Station-WikiData",
+    "expression": "grel:\"https://www.wikidata.org/entity/\" + cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "UL-Station-WikiData-URI",
+    "columnInsertIndex": 17,
+    "description": "Crear la columna UL-Station-WikiData-URI en el índice 17 basada en la columna UL-Station-WikiData usando la expresión grel:\"https://www.wikidata.org/entity/\" + cell.recon.match.id"
+  }
+]
