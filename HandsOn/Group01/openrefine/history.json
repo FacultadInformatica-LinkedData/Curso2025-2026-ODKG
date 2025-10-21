@@ -762,5 +762,1100 @@
     "newColumnName": "tieneInstalacionesDeportivas",
     "columnInsertIndex": 4,
     "description": "Crear la columna tieneInstalacionesDeportivas en el índice 4 basada en la columna EQUIPAMIENTO usando la expresión grel:if(isBlank(cells[\"EQUIPAMIENTO\"].value), \"no especifica\", if(or(cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalaciones deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"circuito deportivo\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"zonas deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"pista deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalación deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"polideportivos\")),\"sí\", \"no\"))"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(find(/\\d+/, v), n, n).join(\"\\n\")\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "metro_lines",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna metro_lines en el índice 10 basada en la columna Metro usando la expresión grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(find(/\\d+/, v), n, n).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "metro_lines",
+    "description": "Eliminar columna metro_lines"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      v.split(/[^0-9]+/),\n      n,\n      if(isBlank(n), null, n)\n    ).join(\"\\n\")\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "metro lines",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna metro lines en el índice 10 basada en la columna Metro usando la expresión grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      v.split(/[^0-9]+/),\n      n,\n      if(isBlank(n), null, n)\n    ).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "metro lines",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(\"\\n\"),\n        n,\n        if(isBlank(n), null, n.trim())\n      ).uniques(),\n      u,\n      u\n    ).join(\"\\n\")\n  )\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna metro lines usando la expresión grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(\"\\n\"),\n        n,\n        if(isBlank(n), null, n.trim())\n      ).uniques(),\n      u,\n      u\n    ).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Bus",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(/[^0-9]+/),\n        n,\n        if(isBlank(n), null, n.trim())\n      ).uniques(),\n      u,\n      u\n    ).join(\"\\n\")\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "bus line",
+    "columnInsertIndex": 12,
+    "description": "Crear la columna bus line en el índice 12 basada en la columna Bus usando la expresión grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(/[^0-9]+/),\n        n,\n        if(isBlank(n), null, n.trim())\n      ).uniques(),\n      u,\n      u\n    ).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(/[^0-9]+/),\n        n,\n        if(isBlank(n), null, \"C-\" + n)\n      ).uniques(),\n      u, u\n    ).join(\"\\n\")\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "cercanias line",
+    "columnInsertIndex": 9,
+    "description": "Crear la columna cercanias line en el índice 9 basada en la columna Cercanias usando la expresión grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(/[^0-9]+/),\n        n,\n        if(isBlank(n), null, \"C-\" + n)\n      ).uniques(),\n      u, u\n    ).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Cantoblanco Universidad\"), \"Cantoblanco Universidad C4\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Cantoblanco Universidad\"), \"Cantoblanco Universidad C4\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Doce de Octubre\"), \"doce de octubre C5\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Doce de Octubre\"), \"doce de octubre C5\", value)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: 12 de Octubre"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE:doce de Octubre"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Asamblea de Madrid - Entrevías",
+          "Renfe: Asamblea de Madrid - Entrevías",
+          "Renfe: Asamblea de Madrid, Entrevías",
+          "Renfe: Asamblea de Madrid- Entrevías"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Asamblea de Madrid - Entrevías C2, C7, C8"
+      },
+      {
+        "from": [
+          "Renfe: Aluche",
+          "RENFE: Aluche"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Aluche C5"
+      },
+      {
+        "from": [
+          "RENFE: Santa Eugenia",
+          "Renfe: Santa Eugenia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Santa Eugenia C2"
+      },
+      {
+        "from": [
+          "Renfe:  San Cristóbal",
+          "Renfe: San Cristóbal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe:  San Cristóbal C3"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Aluche C5",
+          "Renfe: Aluche (C5)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Aluche C5"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"octubre\"), \"doce de octubre C5\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"octubre\"), \"doce de octubre C5\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Octubre\"), \"doce de octubre C5\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Octubre\"), \"doce de octubre C5\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Aravaca\"), \"Aravaca C7 C10\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Aravaca\"), \"Aravaca C7 C10\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Vicálvaro\"), \"Vicálvaro C2\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Vicálvaro\"), \"Vicálvaro C2\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Vallecas\"), \"Vallecas C1 C2 C7\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Cercanias usando la expresión grel:if(value.contains(\"Vallecas\"), \"Vallecas C1 C2 C7\", value)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Ramón y Cajal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Ramón y Cajal C10 C8 C3"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Ramón y Cajal (líneas C10, C8-A, C8-B)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Ramón y Cajal (líneas C10, C8-A, C8-B, C3)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Puente Alcocer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Puente Alcocer (C5)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Pirámides"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Pirámides (líneas C1 y C10)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Príncipe Pío"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Príncipe Pío (Líneas C1, C7, C10)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Príncipe Pío, Pirámides"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Príncipe Pío C1 C7 C19, Pirámides"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Estación Atocha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Estación Atocha líneas C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: El Pozo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: El Pozo C2 C7 C8"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Las Águilas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Las Águilas C5"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cercanías: Príncipe Pío"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cercanías: Príncipe Pío C1, C7, C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Atocha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Atocha C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Méndez Alvaro, Atocha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Méndez Alvaro, Atocha C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cercanías: Villaverde Bajo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cercanías: Villaverde Bajo c3 c4"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Atocha-Alcalá de Henares (líneas C2 y C7)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Atocha-Alcalá de Henares (líneas C2 y C7) C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Chamartín"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Chamartín C1, C2, C3, C4a, C4b, C7 y C8"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Delicias"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Delicias c1 c10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Laguna"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Laguna c5"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Maestra Justa Freire-Polideportivo Aluche (antigua estación de Fanjul)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Maestra Justa Freire-Polideportivo Aluche (antigua estación de Fanjul) C5"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Méndez Álvaro"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Méndez Álvaro c1 c5 c10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Nuevos Ministerios"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Nuevos Ministerios (líneas C-1, C-3, C-4, C-7, C-8, C-10)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Orcasitas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Orcasitas (línea C5)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Recoletos"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Recoletos C1 C2 C7 C8 C10"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Villaverde Bajo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Villaverde Bajo C3 C4"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Cercanias"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cercanias line",
+    "newColumnName": "cercanias_line",
+    "description": "Renombra la columna cercanias line a cercanias_line"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "metro lines",
+    "newColumnName": "metro_line",
+    "description": "Renombra la columna metro lines a metro_line"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "bus line",
+    "newColumnName": "bus_line",
+    "description": "Renombra la columna bus line a bus_line"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE",
+    "expression": "grel:value.replace(/\\s+/,\"-\").replace(/[áÁ]/,\"a\").replace(/[éÉ]/,\"e\").replace(/[íÍ]/,\"i\").replace(/[óÓ]/,\"o\").replace(/[úÚ]/,\"u\").replace(/[ñÑ]/,\"n\")",
+    "onError": "set-to-blank",
+    "newColumnName": "IDNOMBRE",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna IDNOMBRE en el índice 1 basada en la columna NOMBRE usando la expresión grel:value.replace(/\\s+/,\"-\").replace(/[áÁ]/,\"a\").replace(/[éÉ]/,\"e\").replace(/[íÍ]/,\"i\").replace(/[óÓ]/,\"o\").replace(/[úÚ]/,\"u\").replace(/[ñÑ]/,\"n\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "superficieLimpia",
+    "expression": "grel:coalesce(value.toString().trim().replace(\",\", \".\"), value)",
+    "onError": "set-to-blank",
+    "newColumnName": "superficie_SinespaciosPuntos",
+    "columnInsertIndex": 17,
+    "description": "Crear la columna superficie_SinespaciosPuntos en el índice 17 basada en la columna superficieLimpia usando la expresión grel:coalesce(value.toString().trim().replace(\",\", \".\"), value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "superficie_SinespaciosPuntos",
+    "expression": "grel:if(value.contains(\"ha\"), value.replace(\"ha\", \"\").trim().toNumber() * 10000, value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superficie_3",
+    "columnInsertIndex": 18,
+    "description": "Crear la columna Superficie_3 en el índice 18 basada en la columna superficie_SinespaciosPuntos usando la expresión grel:if(value.contains(\"ha\"), value.replace(\"ha\", \"\").trim().toNumber() * 10000, value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superficie_3",
+    "expression": "grel:if(value.toString().trim().toLowercase().contains(\"no especificado\"), null, value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superficie 4",
+    "columnInsertIndex": 19,
+    "description": "Crear la columna Superficie 4 en el índice 19 basada en la columna Superficie_3 usando la expresión grel:if(value.toString().trim().toLowercase().contains(\"no especificado\"), null, value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superficie 4",
+    "expression": "grel:if(value.toString().contains(\"m²\"), value.toString().replace(\"m²\", \"\").trim(), value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superfice 5",
+    "columnInsertIndex": 20,
+    "description": "Crear la columna Superfice 5 en el índice 20 basada en la columna Superficie 4 usando la expresión grel:if(value.toString().contains(\"m²\"), value.toString().replace(\"m²\", \"\").trim(), value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superfice 5",
+    "expression": "grel:if(type(value) == \"string\", value.toNumber(), value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superficie 6",
+    "columnInsertIndex": 21,
+    "description": "Crear la columna Superficie 6 en el índice 21 basada en la columna Superfice 5 usando la expresión grel:if(type(value) == \"string\", value.toNumber(), value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superficie 6",
+    "expression": "grel:if(type(value) == \"number\", value.round(), value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superfice_ColFinal",
+    "columnInsertIndex": 22,
+    "description": "Crear la columna Superfice_ColFinal en el índice 22 basada en la columna Superficie 6 usando la expresión grel:if(type(value) == \"number\", value.round(), value)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superficie 6",
+    "description": "Eliminar columna Superficie 6"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superfice 5",
+    "description": "Eliminar columna Superfice 5"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superficie 4",
+    "description": "Eliminar columna Superficie 4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superficie_3",
+    "description": "Eliminar columna Superficie_3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "superficie_SinespaciosPuntos",
+    "description": "Eliminar columna superficie_SinespaciosPuntos"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "superficieLimpia",
+    "description": "Eliminar columna superficieLimpia"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro",
+    "expression": "grel:value.replace(\"Metro: \", \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro Station 2",
+    "columnInsertIndex": 12,
+    "description": "Crear la columna Metro Station 2 en el índice 12 basada en la columna Metro usando la expresión grel:value.replace(\"Metro: \", \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro Station 2",
+    "expression": "grel:value.replace(/\\(.*?\\)/, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro Station 3",
+    "columnInsertIndex": 13,
+    "description": "Crear la columna Metro Station 3 en el índice 13 basada en la columna Metro Station 2 usando la expresión grel:value.replace(/\\(.*?\\)/, \"\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Superfice_ColFinal",
+    "newColumnName": "Superfice m²",
+    "description": "Renombra la columna Superfice_ColFinal a Superfice m²"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "HORARIO",
+    "description": "Eliminar columna HORARIO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DESCRIPCION-ENTIDAD",
+    "description": "Eliminar columna DESCRIPCION-ENTIDAD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "EQUIPAMIENTO",
+    "description": "Eliminar columna EQUIPAMIENTO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro",
+    "expression": "grel:value.replace(/Arg&amp;uuml;elles/i, \"Arguelles\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro C",
+    "columnInsertIndex": 9,
+    "description": "Crear la columna Metro C en el índice 9 basada en la columna Metro usando la expresión grel:value.replace(/Arg&amp;uuml;elles/i, \"Arguelles\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro C",
+    "expression": "grel:value.replace(\"Metro: \", \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro C2",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna Metro C2 en el índice 10 basada en la columna Metro C usando la expresión grel:value.replace(\"Metro: \", \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro C2",
+    "expression": "grel:value.replace(/\\(.*?\\)/, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro C3",
+    "columnInsertIndex": 11,
+    "description": "Crear la columna Metro C3 en el índice 11 basada en la columna Metro C2 usando la expresión grel:value.replace(/\\(.*?\\)/, \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro C",
+    "expression": "grel:value.replace(/(\\s*B[uúUÚ]s.*)/, \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro C Limpia Buses",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna Metro C Limpia Buses en el índice 10 basada en la columna Metro C usando la expresión grel:value.replace(/(\\s*B[uúUÚ]s.*)/, \"\").trim()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro C2",
+    "description": "Eliminar columna Metro C2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro C3",
+    "description": "Eliminar columna Metro C3"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro C Limpia Buses",
+    "expression": "grel:value.replace(\"Metro: \", \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro Limpia 222",
+    "columnInsertIndex": 11,
+    "description": "Crear la columna Metro Limpia 222 en el índice 11 basada en la columna Metro C Limpia Buses usando la expresión grel:value.replace(\"Metro: \", \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro Limpia 222",
+    "expression": "grel:value.replace(/\\(.*?\\)/, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro_Station",
+    "columnInsertIndex": 12,
+    "description": "Crear la columna Metro_Station en el índice 12 basada en la columna Metro Limpia 222 usando la expresión grel:value.replace(/\\(.*?\\)/, \"\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro",
+    "description": "Eliminar columna Metro"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro C",
+    "description": "Eliminar columna Metro C"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Metro C Limpia Buses",
+    "newColumnName": "Metro",
+    "description": "Renombra la columna Metro C Limpia Buses a Metro"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro Limpia 222",
+    "description": "Eliminar columna Metro Limpia 222"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro Station 2",
+    "description": "Eliminar columna Metro Station 2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro Station 3",
+    "description": "Eliminar columna Metro Station 3"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias",
+    "expression": "grel:value.replace(\"Renfe: \", \"\").replace(\"RENFE\", \"\").replace(\"RENFE: \", \"\").replace(\"Cercanías\", \"\").replace(\"Renfe\", \"\").replace(\"líneas\", \"\").replace(\"Cercanías: \", \"\").replace(/(\\s*\\(.*?\\))|(\\s*[C,c]\\d.*)/, \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias Station",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna Cercanias Station en el índice 7 basada en la columna Cercanias usando la expresión grel:value.replace(\"Renfe: \", \"\").replace(\"RENFE\", \"\").replace(\"RENFE: \", \"\").replace(\"Cercanías\", \"\").replace(\"Renfe\", \"\").replace(\"líneas\", \"\").replace(\"Cercanías: \", \"\").replace(/(\\s*\\(.*?\\))|(\\s*[C,c]\\d.*)/, \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias sin -",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna Cercanias sin - en el índice 7 basada en la columna Cercanias usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Cercanias sin -",
+    "description": "Eliminar columna Cercanias sin -"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias",
+    "expression": "grel:value.replace(\"-\", \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias sin -",
+    "columnInsertIndex": 7,
+    "description": "Crear la columna Cercanias sin - en el índice 7 basada en la columna Cercanias usando la expresión grel:value.replace(\"-\", \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias sin -",
+    "expression": "grel:with(value, v, if(isBlank(v), \"\", forEach( forEach( v.split(/[^0-9]+/), n, if(isBlank(n), null, \"C-\" + n) ).uniques(), u, u ).join(\"\\n\") ) )",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias Lines",
+    "columnInsertIndex": 8,
+    "description": "Crear la columna Cercanias Lines en el índice 8 basada en la columna Cercanias sin - usando la expresión grel:with(value, v, if(isBlank(v), \"\", forEach( forEach( v.split(/[^0-9]+/), n, if(isBlank(n), null, \"C-\" + n) ).uniques(), u, u ).join(\"\\n\") ) )"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Cercanias",
+    "description": "Eliminar columna Cercanias"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Cercanias sin -",
+    "newColumnName": "Cercanias",
+    "description": "Renombra la columna Cercanias sin - a Cercanias"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cercanias_line",
+    "description": "Eliminar columna cercanias_line"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DESCRIPCION",
+    "description": "Eliminar columna DESCRIPCION"
   }
 ]

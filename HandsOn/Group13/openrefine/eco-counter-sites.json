@@ -1061,5 +1061,18 @@
     "oldColumnName": "coordinates",
     "newColumnName": "geopoint",
     "description": "Renombra la columna coordinates a geopoint"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "site_active",
+    "expression": "grel:value == \"Yes\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna site_active usando la expresión grel:value == \"Yes\""
   }
 ]

@@ -1,380 +1,60 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix schema:  <https://schema.org/> .
-@prefix wgs84:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .
 @prefix safeschool: <http://safeschool.linkeddata.es/ontology#> .
-@prefix resource: <http://safeschool.linkeddata.es/resource/> .
-@prefix dbr:     <http://dbpedia.org/resource/> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
 
+# District
+<http://safeschool.linkeddata.es/resource/District/1> a safeschool:District ;
+  schema:identifier "1" ;
+  schema:name "Centro"@es .
+  rdf:label "Distrito-Centro"@es .
 
+# Accident
+<http://safeschool.linkeddata.es/resource/Accident/2025S000056> a safeschool:Accident ;
+  schema:identifier "2025S000056" ;
+  schema:startDate "2025-01-01T00:49:00+01:00"^^xsd:dateTime ;
+  schema:description "CALL. LOPEZ DE HOYOS / CALL. ROS DE OLANO"@es ;
+  schema:name "Colisión fronto-lateral"@es ; # Used for accident type
+  # Linking to the full URI of the District
+  safeschool:inDistrict <http://safeschool.linkeddata.es/resource/District/1> ;
+  safeschool:weatherCondition "Despejado"@es ;
+  safeschool:wktGeometry "POINT(-3.67254596772 40.4451628345)"^^geo:wktLiteral ;
+  safeschool:alcoholPositive "false"^^xsd:boolean ;
+  safeschool:drugPositive "false"^^xsd:boolean ;
+  safeschool:pedestrianInvolved "false"^^xsd:boolean ;
+  safeschool:vehiclesInvolved "Ciclomotor, Turismo"@es ;
+  safeschool:injuryDescription "Asistencia sanitaria sólo en el lugar del accidente"@es ;
+  safeschool:injuryLevel "1"^^xsd:integer .
+  rdf:label "Accident-2025S000056"@es .
 
-##########################################################
-# DISTRICTS (Madrid City)
-##########################################################
-
-resource:District-05 a safeschool:District ;
-  dcterms:identifier "05" ;
-  safeschool:districtCode "05" ;
-  schema:name "CHAMARTÍN"@es ;
-  safeschool:districtName "CHAMARTÍN"@es .
-
-resource:District-09 a safeschool:District ;
-  dcterms:identifier "09" ;
-  safeschool:districtCode "09" ;
-  schema:name "MONCLOA-ARAVACA"@es ;
-  safeschool:districtName "MONCLOA-ARAVACA"@es .
-
-##########################################################
-# LOCATIONS (Geographic Coordinates)
-##########################################################
-
-resource:Location-Center-28000029 a safeschool:Location ;
-  safeschool:utmX 458832 ;
-  safeschool:utmY 4487797 ;
-  wgs84:lat "40.5234"^^xsd:decimal ;
-  wgs84:long "-3.4567"^^xsd:decimal .
-
-resource:Location-Center-28000042 a safeschool:Location ;
-  safeschool:utmX 415961 ;
-  safeschool:utmY 4453703 ;
-  wgs84:lat "40.2045"^^xsd:decimal ;
-  wgs84:long "-3.9123"^^xsd:decimal .
-
-resource:Location-Center-28000054 a safeschool:Location ;
-  safeschool:utmX 468386 ;
-  safeschool:utmY 4482313 ;
-  wgs84:lat "40.4789"^^xsd:decimal ;
-  wgs84:long "-3.3654"^^xsd:decimal .
-
-resource:Location-Center-28000066 a safeschool:Location ;
-  safeschool:utmX 468658 ;
-  safeschool:utmY 4481259 ;
-  wgs84:lat "40.4694"^^xsd:decimal ;
-  wgs84:long "-3.3621"^^xsd:decimal .
-
-resource:Location-Center-28000078 a safeschool:Location ;
-  safeschool:utmX 469547 ;
-  safeschool:utmY 4481511 ;
-  wgs84:lat "40.4717"^^xsd:decimal ;
-  wgs84:long "-3.3512"^^xsd:decimal .
-
-resource:Location-Center-28000081 a safeschool:Location ;
-  safeschool:utmX 468826 ;
-  safeschool:utmY 4481956 ;
-  wgs84:lat "40.4757"^^xsd:decimal ;
-  wgs84:long "-3.3601"^^xsd:decimal .
-
-resource:Location-Accident-2025S000056 a safeschool:Location ;
-  safeschool:utmX 442966 ;
-  safeschool:utmY 4477385 ;
-  wgs84:lat "40.4620"^^xsd:decimal ;
-  wgs84:long "-3.6741"^^xsd:decimal .
-
-resource:Location-Accident-2025S000057 a safeschool:Location ;
-  safeschool:utmX 433911 ;
-  safeschool:utmY 4478290 ;
-  wgs84:lat "40.4702"^^xsd:decimal ;
-  wgs84:long "-3.7852"^^xsd:decimal .
-
-resource:Location-Camera-1 a safeschool:Location ;
-  safeschool:utmX 442843 ;
-  safeschool:utmY 4481180 ;
-  wgs84:lat "40.47934148"^^xsd:decimal ;
-  wgs84:long "-3.67433808"^^xsd:decimal .
-
-resource:Location-Camera-2 a safeschool:Location ;
-  safeschool:utmX 442847 ;
-  safeschool:utmY 4481180 ;
-  wgs84:lat "40.47934175"^^xsd:decimal ;
-  wgs84:long "-3.67429089"^^xsd:decimal .
-
-resource:Location-Camera-3 a safeschool:Location ;
-  safeschool:utmX 443295 ;
-  safeschool:utmY 4478910 ;
-  wgs84:lat "40.45892328"^^xsd:decimal ;
-  wgs84:long "-3.66880283"^^xsd:decimal .
-
-resource:Location-Camera-4 a safeschool:Location ;
-  safeschool:utmX 444002 ;
-  safeschool:utmY 4475270 ;
-  wgs84:lat "40.42618023"^^xsd:decimal ;
-  wgs84:long "-3.66014384"^^xsd:decimal .
-
-##########################################################
-# EDUCATIONAL CENTERS
-##########################################################
-
-resource:EducationalCenter-28000029 a safeschool:EducationalCenter ;
-  dcterms:identifier "28000029" ;
-  safeschool:centerCode "28000029" ;
-  schema:name "SAN BLAS"@es ;
-  safeschool:centerName "SAN BLAS"@es ;
-  safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL, PRIMARIA Y SECUNDARIA"@es ;
-  safeschool:centerTypeCode "070" ;
-  safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:streetType "CALLE"@es ;
-  safeschool:streetName "Víctor Hurtado"@es ;
-  safeschool:streetNumber "s/n"@es ;
-  safeschool:postalCode "28864"@es ;
-  schema:telephone "918844589" ;
-  safeschool:phone "918844589" ;
-  schema:url <http://www.educa.madrid.org/cp.sanblas.ajalvir> ;
-  safeschool:contactWebsite <http://www.educa.madrid.org/cp.sanblas.ajalvir> ;
-  schema:email "cp.sanblas.ajalvir@educa.madrid.org" ;
-  safeschool:contactEmail "cp.sanblas.ajalvir@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000029 .
-
-resource:EducationalCenter-28000042 a safeschool:EducationalCenter ;
-  dcterms:identifier "28000042" ;
-  safeschool:centerCode "28000042" ;
-  schema:name "EL ALAMO"@es ;
-  safeschool:centerName "EL ALAMO"@es ;
-  safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA"@es ;
-  safeschool:centerTypeCode "14" ;
-  safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:streetType "CALLE"@es ;
-  safeschool:streetName "del Río Alagón"@es ;
-  safeschool:streetNumber "1"@es ;
-  safeschool:postalCode "28607"@es ;
-  schema:telephone "918120652" ;
-  safeschool:phone "918120652" ;
-  schema:url <http://www.educa.madrid.org/cp.elalamo.elalamo> ;
-  safeschool:contactWebsite <http://www.educa.madrid.org/cp.elalamo.elalamo> ;
-  schema:email "cp.elalamo.elalamo@educa.madrid.org" ;
-  safeschool:contactEmail "cp.elalamo.elalamo@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000042 .
-
-resource:EducationalCenter-28000054 a safeschool:EducationalCenter ;
-  dcterms:identifier "28000054" ;
-  safeschool:centerCode "28000054" ;
-  schema:name "ANTONIO DE NEBRIJA"@es ;
-  safeschool:centerName "ANTONIO DE NEBRIJA"@es ;
-  safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA"@es ;
-  safeschool:centerTypeCode "14" ;
-  safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:streetType "CALLE"@es ;
-  safeschool:streetName "San Ignacio de Loyola"@es ;
-  safeschool:streetNumber "13"@es ;
-  safeschool:postalCode "28806"@es ;
-  schema:telephone "918882368" ;
-  safeschool:phone "918882368" ;
-  schema:url <http://www.educa.madrid.org/cp.antoniodenebrija.alcala> ;
-  safeschool:contactWebsite <http://www.educa.madrid.org/cp.antoniodenebrija.alcala> ;
-  schema:email "cp.antoniodenebrija.alcala@educa.madrid.org" ;
-  safeschool:contactEmail "cp.antoniodenebrija.alcala@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000054 .
-
-resource:EducationalCenter-28000066 a safeschool:EducationalCenter ;
-  dcterms:identifier "28000066" ;
-  safeschool:centerCode "28000066" ;
-  schema:name "CARDENAL CISNEROS"@es ;
-  safeschool:centerName "CARDENAL CISNEROS"@es ;
-  safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA"@es ;
-  safeschool:centerTypeCode "014" ;
-  safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:streetType "CALLE"@es ;
-  safeschool:streetName "San Juan"@es ;
-  safeschool:streetNumber "2"@es ;
-  safeschool:postalCode "28801"@es ;
-  schema:telephone "918880447" ;
-  safeschool:phone "918880447" ;
-  schema:url <http://www.educa.madrid.org/cp.cardenalcisnero.alcala> ;
-  safeschool:contactWebsite <http://www.educa.madrid.org/cp.cardenalcisnero.alcala> ;
-  schema:email "cp.cardenalcisnero.alcala@educa.madrid.org" ;
-  safeschool:contactEmail "cp.cardenalcisnero.alcala@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000066 .
-
-resource:EducationalCenter-28000078 a safeschool:EducationalCenter ;
-  dcterms:identifier "28000078" ;
-  safeschool:centerCode "28000078" ;
+# Educational Center
+<http://safeschool.linkeddata.es/resource/EducationalCenter/28004059> a safeschool:EducationalCenter ;
+  schema:identifier "28004059" ;
   schema:name "CERVANTES"@es ;
-  safeschool:centerName "CERVANTES"@es ;
-  safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA"@es ;
-  safeschool:centerTypeCode "014" ;
+  safeschool:centerTypeCode "42" ;
+  schema:description "INSTITUTO DE EDUCACIÓN SECUNDARIA"@es ;
   safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:streetType "CALLE"@es ;
-  safeschool:streetName "Giner de los Ríos"@es ;
-  safeschool:streetNumber "5"@es ;
-  safeschool:postalCode "28800"@es ;
-  schema:telephone "918889973" ;
-  safeschool:phone "918889973" ;
-  schema:url <http://www.educa.madrid.org/cp.cervantes.alcala> ;
-  safeschool:contactWebsite <http://www.educa.madrid.org/cp.cervantes.alcala> ;
-  schema:email "cp.cervantes.alcala@educa.madrid.org" ;
-  safeschool:contactEmail "cp.cervantes.alcala@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000078 .
+  schema:streetAddress "Calle de Embajadores, 70"@es ;
+  schema:postalCode "28012" ;
+  # Linking to the full URI of the District
+  safeschool:inDistrict <http://safeschool.linkeddata.es/resource/District/1> ;
+  schema:telephone "915285061" ;
+  schema:url <http://www.educa.madrid.org/ies.cervantes.madrid> ;
+  schema:email "ies.cervantes.madrid@educa.madrid.org" ;
+  safeschool:wktGeometry "POINT(-3.70320884055 40.405917222)"^^geo:wktLiteral .
+  rdf:label "EducationalCenter-CERVANTES"@es .
 
-resource:EducationalCenter-28000081 a safeschool:EducationalCenter ;
-  dcterms:identifier "28000081" ;
-  safeschool:centerCode "28000081" ;
-  schema:name "DAOIZ Y VELARDE"@es ;
-  safeschool:centerName "DAOIZ Y VELARDE"@es ;
-  safeschool:centerType "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA"@es ;
-  safeschool:centerTypeCode "014" ;
-  safeschool:ownershipType "PÚBLICO"@es ;
-  safeschool:operationalStatus "ALTA"@es ;
-  safeschool:foundationDate "1900-01-01"^^xsd:date ;
-  safeschool:streetType "CALLE"@es ;
-  safeschool:streetName "Infantado"@es ;
-  safeschool:streetNumber "2"@es ;
-  safeschool:postalCode "28807"@es ;
-  schema:telephone "918880958" ;
-  safeschool:phone "918880958" ;
-  schema:url <http://www.educa.madrid.org/cp.daoizyvelarde.alcala> ;
-  safeschool:contactWebsite <http://www.educa.madrid.org/cp.daoizyvelarde.alcala> ;
-  schema:email "cp.daoizyvelarde.alcala@educa.madrid.org" ;
-  safeschool:contactEmail "cp.daoizyvelarde.alcala@educa.madrid.org" ;
-  safeschool:locatedAt resource:Location-Center-28000081 .
-
-##########################################################
-# TRAFFIC ACCIDENTS
-##########################################################
-
-resource:Accident-2025S000056 a safeschool:Accident ;
-  dcterms:identifier "2025S000056" ;
-  safeschool:accidentId "2025S000056" ;
-  schema:name "Traffic accident 2025S000056"@en ;
-  safeschool:occurrenceDate "2025-01-01"^^xsd:date ;
-  safeschool:occurrenceTime "00:49:00"^^xsd:time ;
-  safeschool:accidentType "Colisión fronto-lateral"@es ;
-  safeschool:weatherCondition "Despejado"@es ;
-  safeschool:locationDescription "CALL. LOPEZ DE HOYOS / CALL. ROS DE OLANO"@es ;
-  safeschool:streetNumber "140"@es ;
-  safeschool:alcoholPositive false ;
-  safeschool:drugPositive false ;
-  safeschool:locatedAt resource:Location-Accident-2025S000056 ;
-  safeschool:inDistrict resource:District-05 ;
-  safeschool:hasInvolvedParty resource:InvolvedParty-2025S000056-1 ,
-                                resource:InvolvedParty-2025S000056-2 ,
-                                resource:InvolvedParty-2025S000056-3 .
-
-resource:Accident-2025S000057 a safeschool:Accident ;
-  dcterms:identifier "2025S000057" ;
-  safeschool:accidentId "2025S000057" ;
-  schema:name "Traffic accident 2025S000057"@en ;
-  safeschool:occurrenceDate "2025-01-01"^^xsd:date ;
-  safeschool:occurrenceTime "02:20:00"^^xsd:time ;
-  safeschool:accidentType "Colisión lateral"@es ;
-  safeschool:weatherCondition "Despejado"@es ;
-  safeschool:locationDescription "GTA. RIO ZANCARA / CALL. ARROYO DE POZUELO"@es ;
-  safeschool:streetNumber "1"@es ;
-  safeschool:alcoholPositive false ;
-  safeschool:drugPositive false ;
-  safeschool:locatedAt resource:Location-Accident-2025S000057 ;
-  safeschool:inDistrict resource:District-09 ;
-  safeschool:hasInvolvedParty resource:InvolvedParty-2025S000057-1 ,
-                                resource:InvolvedParty-2025S000057-2 .
-
-##########################################################
-# INVOLVED PARTIES
-##########################################################
-
-# Accident 2025S000056 - Party 1: Ciclomotor driver
-resource:InvolvedParty-2025S000056-1 a safeschool:InvolvedParty ;
-  schema:name "Involved party 1 - Accident 2025S000056"@en ;
-  safeschool:personType "Conductor"@es ;
-  safeschool:vehicleType "Ciclomotor"@es ;
-  schema:gender "Hombre"@es ;
-  safeschool:gender "Hombre"@es ;
-  safeschool:ageRange "De 30 a 34 años"@es ;
-  safeschool:injurySeverity "Asistencia sanitaria sólo en el lugar del accidente"@es ;
-  safeschool:injurySeverityCode "7" .
-
-# Accident 2025S000056 - Party 2: Turismo driver
-resource:InvolvedParty-2025S000056-2 a safeschool:InvolvedParty ;
-  schema:name "Involved party 2 - Accident 2025S000056"@en ;
-  safeschool:personType "Conductor"@es ;
-  safeschool:vehicleType "Turismo"@es ;
-  schema:gender "Hombre"@es ;
-  safeschool:gender "Hombre"@es ;
-  safeschool:ageRange "De 40 a 44 años"@es ;
-  safeschool:injurySeverity "Sin asistencia sanitaria"@es ;
-  safeschool:injurySeverityCode "14" .
-
-# Accident 2025S000056 - Party 3: Turismo passenger
-resource:InvolvedParty-2025S000056-3 a safeschool:InvolvedParty ;
-  schema:name "Involved party 3 - Accident 2025S000056"@en ;
-  safeschool:personType "Pasajero"@es ;
-  safeschool:vehicleType "Turismo"@es ;
-  schema:gender "Mujer"@es ;
-  safeschool:gender "Mujer"@es ;
-  safeschool:ageRange "De 40 a 44 años"@es ;
-  safeschool:injurySeverity "Sin asistencia sanitaria"@es ;
-  safeschool:injurySeverityCode "14" .
-
-# Accident 2025S000057 - Party 1: First driver
-resource:InvolvedParty-2025S000057-1 a safeschool:InvolvedParty ;
-  schema:name "Involved party 1 - Accident 2025S000057"@en ;
-  safeschool:personType "Conductor"@es ;
-  safeschool:vehicleType "Turismo"@es ;
-  schema:gender "Hombre"@es ;
-  safeschool:gender "Hombre"@es ;
-  safeschool:ageRange "De 21 a 24 años"@es .
-
-# Accident 2025S000057 - Party 2: Second driver
-resource:InvolvedParty-2025S000057-2 a safeschool:InvolvedParty ;
-  schema:name "Involved party 2 - Accident 2025S000057"@en ;
-  safeschool:personType "Conductor"@es ;
-  safeschool:vehicleType "Turismo"@es ;
-  schema:gender "Hombre"@es ;
-  safeschool:gender "Hombre"@es ;
-  safeschool:ageRange "De 45 a 49 años"@es .
-
-##########################################################
-# FIXED SPEED CAMERAS
-##########################################################
-
-resource:SpeedCamera-1 a safeschool:FixedSpeedCamera ;
-  dcterms:identifier "1" ;
-  safeschool:cameraIdentifier "1" ;
-  schema:name "Speed Camera 1 - M-30"@en ;
+# Speed Camera
+<http://safeschool.linkeddata.es/resource/SpeedCamera/1> a safeschool:SpeedCamera ;
+  schema:identifier "1" ;
+  schema:description "M-30, ENTRADA DE LA A-1, SENTIDO PUENTE DE VENTAS P.K. 0,500"@es ;
+  schema:streetAddress "M-30"@es ; # Using streetAddress for roadway
+  safeschool:direction "Calzada Interior"@es ;
   safeschool:cameraType "Fijo"@es ;
-  safeschool:speedLimit 90 ;
-  safeschool:trafficDirection "Calzada interior"@es ;
-  safeschool:lane "4"@es ;
-  safeschool:responsibleAuthority "DGP"@es ;
-  safeschool:locationDescription "M-30, ENTRADA DE LA A-1, SENTIDO PUENTE DE VENTAS P.K. 0,500"@es ;
-  safeschool:locatedAt resource:Location-Camera-1 ;
-  safeschool:monitoredRoad resource:Road-M30 .
-
-resource:SpeedCamera-2 a safeschool:FixedSpeedCamera ;
-  dcterms:identifier "2" ;
-  safeschool:cameraIdentifier "2" ;
-  schema:name "Speed Camera 2 - M-30"@en ;
-  safeschool:cameraType "Fijo"@es ;
-  safeschool:speedLimit 90 ;
-  safeschool:trafficDirection "Calzada interior"@es ;
-  safeschool:lane "5"@es ;
-  safeschool:responsibleAuthority "DGP"@es ;
-  safeschool:locationDescription "M-30, ENTRADA DE LA A-1, SENTIDO PUENTE DE VENTAS P.K. 0,500"@es ;
-  safeschool:locatedAt resource:Location-Camera-2 ;
-  safeschool:monitoredRoad resource:Road-M30 .
-
-resource:SpeedCamera-3 a safeschool:FixedSpeedCamera ;
-  dcterms:identifier "3" ;
-  safeschool:cameraIdentifier "3" ;
-  schema:name "Speed Camera 3 - Paso Inferior Costa Rica"@en ;
-  safeschool:cameraType "Fijo"@es ;
-  safeschool:speedLimit 50 ;
-  safeschool:trafficDirection "Sentido Príncipe de Vergara"@es ;
-  safeschool:lane "Todos"@es ;
-  safeschool:responsibleAuthority "DGP"@es ;
-  safeschool:locationDescription "PASO INFERIOR COSTA RICA, SENTIDO PRÍNCIPE DE VERGARA"@es ;
-  safeschool:locatedAt resource:Location-Camera-3 ;
-  safeschool:monitoredRoad resource:Road-PasoInferiorCostaRica .
-
-resource:SpeedCamera-4 a safeschool:FixedSpeedCamera ;
-  dcterms:identifier "4" ;
-  safeschool:cameraIdentifier "4" ;
-  schema:name "Speed Camera 4 - M-30"@en ;
-  safeschool:cameraType "Fijo"@es ;
-  safeschool:speedLimit 90 ;
-  safeschool:trafficDirection "Tronco calzada interior"@es ;
-  safeschool:lane "1"@es ;
-  safeschool:responsibleAuthority "DGP"@es ;
-  safeschool:locationDescription "M-30, PTE. DE VENTAS. SENTIDO SUR A O´DONNELL P.K. 6,700"@es ;
-  safeschool:locatedAt resource:Location-Camera-4 ;
-  safeschool:monitoredRoad resource:Road-M30 .
+  safeschool:wktGeometry "POINT(-3.67433808 40.47934148)"^^geo:wktLiteral ;
+  safeschool:speedLimit "90"^^xsd:integer .
+  rdf:label "Radar-1"@es .

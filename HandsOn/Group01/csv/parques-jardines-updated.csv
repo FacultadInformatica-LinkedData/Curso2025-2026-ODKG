@@ -1,0 +1,777 @@
+NOMBRE,IDNOMBRE,tieneInstalacionesDeportivas,tieneWifi,generoAlumnos,TRANSPORTE,Cercanias,Cercanias Lines,Cercanias Station,Metro,Metro_Station,metro_line,Bus,bus_line,Superfice m²,ACCESIBILIDAD,NOMBRE-VIA,NUM,LOCALIDAD,PROVINCIA,CODIGO-POSTAL,BARRIO,DISTRITO,LATITUD,LONGITUD,TELEFONO,EMAIL,TIPO,TipoInstalacion
+Jardines Gregorio Ordóñez,Jardines-Gregorio-Ordonez,no,,,"Metro: Núñez de Balboa (líneas 5 y 9) Bus: 1, 29, 52, 74  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Núñez de Balboa (líneas 5 y 9),Núñez de Balboa,"5
+9","Bus: 1, 29, 52, 74","1
+29
+52
+74",3975,Instalación parcialmente accesible para personas con movilidad reducida,PRINCIPE DE VERGARA,68,MADRID,MADRID,28006,LISTA,SALAMANCA,40.43346186779773,-3.6785954778654113,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines San Francisco el Grande,Jardines-San-Francisco-el-Grande,no especifica,,,"Bus: 3, 60 y 148.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 3, 60 y 148","3
+60
+148",4346,Instalación parcialmente accesible para personas con movilidad reducida,GRAN VIA DE SAN FRANCISCO,25,MADRID,MADRID,28005,PALACIO,CENTRO,40.41002249621306,-3.7144199127869557,,,/contenido/entidadesYorganismos/ParquesJardines/ColeccionesBotanicas,ParquesJardines
+Jardines de Andrés Saborit,Jardines-de-Andres-Saborit,no,,,"Metro: Nuevos Ministerios (líneas 6, 8 y 10) Bus: 5, 68, 149, C1, C2 RENFE: Nuevos Ministerios  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","Renfe: Nuevos Ministerios (líneas C1, C3, C4, C7, C8, C10)","C-1
+C-3
+C-4
+C-7
+C-8
+C-10",Nuevos Ministerios,"Metro: Nuevos Ministerios (líneas 6, 8 y 10)",Nuevos Ministerios,"6
+8
+10","Bus: 5, 68, 149, C1, C2","5
+68
+149
+1
+2",8491,Instalación parcialmente accesible para personas con movilidad reducida,RAIMUNDO FERNANDEZ VILLAVERDE,32,MADRID,MADRID,28003,RIOS ROSAS,CHAMBERI,40.44613326792272,-3.6989699295578347,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de El Buen Retiro,Jardines-de-El-Buen-Retiro,sí,,,"Metro: Retiro (línea 2), Príncipe de Vergara (líneas 2 y 9), Ibiza (línea 9), Atocha (línea 1), Atocha. Renfe (línea 1) Autobuses: 1, 2, 9, 14, 15, 19, 20, 26, 28, 32, 51, 52, 61, 63, 74, 146, 152, 202, C  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Renfe (línea 1),C-1,,"Metro: Retiro (línea 2), Príncipe de Vergara (líneas 2 y 9), Ibiza (línea 9), Atocha (línea 1), Atocha","Retiro , Príncipe de Vergara , Ibiza , Atocha , Atocha","2
+9
+1","buses: 1, 2, 9, 14, 15, 19, 20, 26, 28, 32, 51, 52, 61, 63, 74, 146, 152, 202, C","1
+2
+9
+14
+15
+19
+20
+26
+28
+32
+51
+52
+61
+63
+74
+146
+152
+202",1177300,Instalación parcialmente accesible para personas con movilidad reducida,INDEPENDENCIA,7,MADRID,MADRID,28001,LOS JERONIMOS,RETIRO,40.41964087412762,-3.68793370943788,"915744024
+915280938
+913769197",,/contenido/entidadesYorganismos/ParquesJardines/ParquesHistoricos,ParquesJardines
+Jardines de Gloria Fuertes,Jardines-de-Gloria-Fuertes,no,,,"Metro: línea 9 (Colombia) Bus: 16,29,150  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: línea 9 (Colombia),línea 9,9,"Bus: 16,29,150","16
+29
+150",1663,Instalación parcialmente accesible para personas con movilidad reducida,MADRE DE DIOS,2,MADRID,MADRID,28016,NUEVA ESPAÑA,CHAMARTIN,40.461517637696026,-3.6751179007317614,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de José Luis Jiménez Manso,Jardines-de-Jose-Luis-Jimenez-Manso,no,,,"Metro: Estrella (línea 9) Bus: 20, 30, 32  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Estrella (línea 9),Estrella,9,"Bus: 20, 30, 32","20
+30
+32",10775,Instalación parcialmente accesible para personas con movilidad reducida,CAMINO DE LOS VINATEROS,1,MADRID,MADRID,28030,MEDIA LEGUA,MORATALAZ,40.410944943237865,-3.660501733743551,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de Perón,Jardines-de-Peron,sí,,,"Metro: Santiago Bernabéu (línea 10) Bus: 3, 5, 43, 149  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Santiago Bernabéu (línea 10),Santiago Bernabéu,10,"Bus: 3, 5, 43, 149","3
+5
+43
+149",18605,Instalación parcialmente accesible para personas con movilidad reducida,GENERAL PERON,21,MADRID,MADRID,28020,CUATRO CAMINOS,TETUAN,40.45257591499544,-3.6957817548357257,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de Sabatini,Jardines-de-Sabatini,no especifica,,,"Metro: Opera   Bus: 2, 146   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Opera,Opera,,"Bus: 2, 146","2
+146",,Instalación parcialmente accesible para personas con movilidad reducida,BAILEN,2,MADRID,MADRID,28013,PALACIO,CENTRO,40.419911287101144,-3.713185308888602,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de San Fernando,Jardines-de-San-Fernando,no,,,"Metro: Cuzco (línea 10) Bús: 5, 11, 40, 140, 150  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Cuzco (línea 10),Cuzco,"10
+5
+11
+40
+140
+150",,,12000,Instalación parcialmente accesible para personas con movilidad reducida,ALBERTO ALCOCER,9,MADRID,MADRID,28036,NUEVA ESPAÑA,CHAMARTIN,40.45978849094378,-3.687352342212426,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de la Avenida de Brasil,Jardines-de-la-Avenida-de-Brasil,no,,,"Bus: 5, 126, 149  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 5, 126, 149","5
+126
+149",16955,Instalación parcialmente accesible para personas con movilidad reducida,BRASIL,31,MADRID,MADRID,28020,CASTILLEJOS,TETUAN,40.458706953002235,-3.6934625569379387,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de la Basílica,Jardines-de-la-Basilica,no especifica,,,"Metro: Nuevos Ministerios (líneas 6, 8 y 10) RENFE: Nuevos Ministerios Bus: 5 , 69 y 149  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","Renfe: Nuevos Ministerios (líneas C1, C3, C4, C7, C8, C10)","C-1
+C-3
+C-4
+C-7
+C-8
+C-10",Nuevos Ministerios,"Metro: Nuevos Ministerios (líneas 6, 8 y 10)",Nuevos Ministerios,"6
+8
+10","Bus: 5 , 69 y 149","5
+69
+149",2410,Instalación parcialmente accesible para personas con movilidad reducida,BASILICA,15,MADRID,MADRID,28020,CUATRO CAMINOS,TETUAN,40.44903638127448,-3.695615530710886,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de la Cuesta de la Vega,Jardines-de-la-Cuesta-de-la-Vega,no especifica,,,"Bus: 31 , 41 , 50 , 65  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 31 , 41 , 50 , 65","31
+41
+50
+65",2817,Instalación parcialmente accesible para personas con movilidad reducida,VEGA,1,MADRID,MADRID,28013,PALACIO,CENTRO,40.41476219795408,-3.7154411142835397,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de la Plaza Conde del Valle de Suchil,Jardines-de-la-Plaza-Conde-del-Valle-de-Suchil,no,,,"Metro: San Bernardo (líneas 2 y 4) Bus: 16, 21, 61  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: San Bernardo (líneas 2 y 4),San Bernardo,"2
+4","Bus: 16, 21, 61","16
+21
+61",5233,Instalación parcialmente accesible para personas con movilidad reducida,RODRIGUEZ SAN PEDRO,3,MADRID,MADRID,28015,ARAPILES,CHAMBERI,40.43137597367309,-3.7064685006782208,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de la Plaza de Chamberí,Jardines-de-la-Plaza-de-Chamberi,no,,,"Metro: Iglesia (línea 1) Bus: 3, 40 y 147  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Iglesia (línea 1),Iglesia,1,"Bus: 3, 40 y 147","3
+40
+147",2650,Instalación parcialmente accesible para personas con movilidad reducida,CHAMBERI,1,MADRID,MADRID,28010,ALMAGRO,CHAMBERI,40.43285328749453,-3.697594475998512,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de la Plaza de España,Jardines-de-la-Plaza-de-Espana,no especifica,,,"Metro: Plaza España (línea 2 y 3) Bus: 1, 2, 44, 74, C  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Plaza España (línea 2 y 3),Plaza España,"2
+3","Bus: 1, 2, 44, 74, C","1
+2
+44
+74",195230,Instalación parcialmente accesible para personas con movilidad reducida,ESPAÑA,20,MADRID,MADRID,28008,ARGUELLES,MONCLOA-ARAVACA,40.42372251184839,-3.7116577340508523,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de la Plaza de Olavide,Jardines-de-la-Plaza-de-Olavide,no,,,"Metro: Bilbao (línea 1, 4) Bus: 3, 16, 37, 40, 61, 149  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Bilbao (línea 1, 4)",Bilbao,"1
+4","Bus: 3, 16, 37, 40, 61, 149","3
+16
+37
+40
+61
+149",5732,Instalación parcialmente accesible para personas con movilidad reducida,OLAVIDE,16,MADRID,MADRID,28010,TRAFALGAR,CHAMBERI,40.43247362678542,-3.7007855621824293,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+"Jardines de la Plaza de Oriente, Lepanto y Cabo Noval","Jardines-de-la-Plaza-de-Oriente,-Lepanto-y-Cabo-Noval",no,,,"Metro: Ópera (líneas 2, 5 y ramal) Autobús: 25, 39  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Ópera (líneas 2, 5 y ramal)",Ópera,"2
+5","Autobús: 25, 39","25
+39",29000,Instalación parcialmente accesible para personas con movilidad reducida,BAILEN,17,MADRID,MADRID,28013,PALACIO,CENTRO,40.41835486065351,-3.712838830603048,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de la Plaza de la Villa de París,Jardines-de-la-Plaza-de-la-Villa-de-Paris,sí,,,"Metro: Colón (línea 4) Bus: 5, 14, 21 ,27, 37, 45, 53, 150  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Colón (línea 4),Colón,4,"Bus: 5, 14, 21 ,27, 37, 45, 53, 150","5
+14
+21
+27
+37
+45
+53
+150",10700,Instalación parcialmente accesible para personas con movilidad reducida,GENERAL CASTAÑOS,6,MADRID,MADRID,28004,JUSTICIA,CENTRO,40.42620255233654,-3.6934468983675846,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines de las Vistillas,Jardines-de-las-Vistillas,no,,,"Bus: 3, 31, 50, 65, 148  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 3, 31, 50, 65, 148","3
+31
+50
+65
+148",12100,Instalación parcialmente accesible para personas con movilidad reducida,MORERIA,12,MADRID,MADRID,28005,PALACIO,CENTRO,40.41281392212301,-3.7143597156687056,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines del Arquitecto Ribera,Jardines-del-Arquitecto-Ribera,no,,,"Metro: Tribunal (líneas 1 y 10) Bus: 3, 40, 149  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Tribunal (líneas 1 y 10),Tribunal,"1
+10","Bus: 3, 40, 149","3
+40
+149",4282,Instalación parcialmente accesible para personas con movilidad reducida,BARCELO,2,MADRID,MADRID,28004,JUSTICIA,CENTRO,40.42640449792336,-3.7002981748621955,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines del Descubrimiento,Jardines-del-Descubrimiento,no,,,"Metro: Colón (línea 4) y Serrano (línea 4) Bus: 1, 5, 9, 14, 19, 21, 27, 45, 51, 53, 74 y 150  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Colón (línea 4) y Serrano (línea 4),Colón  y Serrano,4,"Bus: 1, 5, 9, 14, 19, 21, 27, 45, 51, 53, 74 y 150","1
+5
+9
+14
+19
+21
+27
+45
+51
+53
+74
+150",20200,Accesible,GOYA,2,MADRID,MADRID,28001,RECOLETOS,SALAMANCA,40.42518540300912,-3.6887800207651495,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines del Doctor Fleming,Jardines-del-Doctor-Fleming,no especifica,,,"Metro: Cuzco (línea 10) Bus: 27, 40 , 126, 147 y 150  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Cuzco (línea 10),Cuzco,10,"Bus: 27, 40 , 126, 147 y 150","27
+40
+126
+147
+150",7363,Instalación parcialmente accesible para personas con movilidad reducida,DOCTOR FLEMING,1,MADRID,MADRID,28036,HISPANOAMERICA,CHAMARTIN,40.45454215758879,-3.6893863385035783,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines del Mundial. Castellana,Jardines-del-Mundial.-Castellana,no especifica,,,"Metro: Santiago Bernabéu (línea 10) Bús: 14, 27, 40, 126, 147, 150  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Santiago Bernabéu (línea 10),Santiago Bernabéu,"10
+14
+27
+40
+126
+147
+150",,,3547,Instalación parcialmente accesible para personas con movilidad reducida,CASTELLANA,142,MADRID,MADRID,28046,HISPANOAMERICA,CHAMARTIN,40.4530917282714,-3.6893833082867062,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardines del Príncipe de Anglona,Jardines-del-Principe-de-Anglona,no especifica,,,"Metro: La Latina (línea 5) Bus: 3 , 31 , 50 , 65 , 148   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: La Latina (línea 5),La Latina,5,"Bus: 3 , 31 , 50 , 65 , 148","3
+31
+50
+65
+148",678,Instalación parcialmente accesible para personas con movilidad reducida,PAJA,6,MADRID,MADRID,28005,PALACIO,CENTRO,40.413417349090764,-3.711466649831885,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín Botánico de Pradolongo,Jardin-Botanico-de-Pradolongo,no especifica,,,"Metro: Hospital Doce de Octubre (línea 3) Bus: 6 , 60 , 78 , 81 , 121 , 131 RENFE: Doce de Octubre  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",doce de octubre C5,C-5,doce de octubre,Metro: Hospital Doce de Octubre (línea 3),Hospital Doce de Octubre,3,"Bus: 6 , 60 , 78 , 81 , 121 , 131","6
+60
+78
+81
+121
+131",,Instalación parcialmente accesible para personas con movilidad reducida,RAFAELA YBARRA,0,MADRID,MADRID,28026,PRADOLONGO,USERA,40.373745996607155,-3.712180056298639,,,/contenido/entidadesYorganismos/ParquesJardines/ColeccionesBotanicas,ParquesJardines
+Jardín Concejal Alejandro Muñoz Revenga,Jardin-Concejal-Alejandro-Munoz-Revenga,no,,,"Bus: 2, 16, 61 y 202  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 2, 16, 61 y 202","2
+16
+61
+202",2713,Instalación parcialmente accesible para personas con movilidad reducida,MELENDEZ VALDES,32,MADRID,MADRID,28015,GAZTAMBIDE,CHAMBERI,40.43304334055123,-3.712227582685096,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín Doña Concha Piquer,Jardin-Dona-Concha-Piquer,no,,,"Metro: Pirámides (línea 5) Bus: 18 , 23 , 34 , 35 , 36 , 116 , 118 , 119  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Pirámides (línea 5),Pirámides,5,"Bus: 18 , 23 , 34 , 35 , 36 , 116 , 118 , 119","18
+23
+34
+35
+36
+116
+118
+119",3061,Instalación parcialmente accesible para personas con movilidad reducida,IMPERIAL,93,MADRID,MADRID,28005,IMPERIAL,ARGANZUELA,40.402080397498985,-3.714965086287463,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín Fachada Pirámides I,Jardin-Fachada-Piramides-I,no especifica,,,"Metro: Pirámides (Linea 5) Bus: 18, 23 , 34, 35, 36, 116, 118, 119  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Pirámides (Linea 5),Pirámides,5,"Bus: 18, 23 , 34, 35, 36, 116, 118, 119","18
+23
+34
+35
+36
+116
+118
+119",3104,Instalación parcialmente accesible para personas con movilidad reducida,ACACIAS,60,MADRID,MADRID,28005,ACACIAS,ARGANZUELA,40.40148810908036,-3.713132255123738,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín Glorieta de Azorín,Jardin-Glorieta-de-Azorin,no especifica,,,"Bus: 31 , 41 , 50 , 65  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 31 , 41 , 50 , 65","31
+41
+50
+65",2896,Instalación parcialmente accesible para personas con movilidad reducida,VEGA,3,MADRID,MADRID,28013,PALACIO,CENTRO,40.414757673901924,-3.7161718357850444,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín Jazmín,Jardin-Jazmin,sí,,,"Bus: 29, 125, 129, 150  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 29, 125, 129, 150","29
+125
+129
+150",59734,Instalación parcialmente accesible para personas con movilidad reducida,ROQUETAS DE MAR,10,MADRID,MADRID,28033,APOSTOL SANTIAGO,HORTALEZA,40.481785094079584,-3.660098332215654,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín Palacio O'Reilly,Jardin-Palacio-O'Reilly,no especifica,,,"Bus: 31, 50, 65  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 31, 50, 65","31
+50
+65",1109,Instalación parcialmente accesible para personas con movilidad reducida,CRUZ VERDE,2,MADRID,MADRID,28005,PALACIO,CENTRO,40.41418990040181,-3.7118283820550775,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín de Embajadores M-30,Jardin-de-Embajadores-M-30,sí,,,"Bus: 62 y 88  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 62 y 88,"62
+88",8222,Instalación parcialmente accesible para personas con movilidad reducida,PUERTO DE LA CRUZ VERDE,29,MADRID,MADRID,28045,LEGAZPI,ARGANZUELA,40.38418473435094,-3.685817452497564,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín de Larra,Jardin-de-Larra,no especifica,,,"Metro: Opera (líneas 2, 5 y ramal) Bus: 3, 148  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Opera (líneas 2, 5 y ramal)",Opera,"2
+5","Bus: 3, 148","3
+148",5599,Instalación parcialmente accesible para personas con movilidad reducida,FACTOR,7,MADRID,MADRID,28013,PALACIO,CENTRO,40.41631909566782,-3.712793771176405,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín de la Colonia Congosto,Jardin-de-la-Colonia-Congosto,no,,,"Metro: Congosto (línea 1) Bus: 54 y L1  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Congosto (línea 1),Congosto,1,Bus: 54 y L1,"54
+1",6653,Instalación parcialmente accesible para personas con movilidad reducida,CONGOSTO,70,MADRID,MADRID,28031,CASCO H.VALLECAS,VILLA DE VALLECAS,40.37089825532696,-3.618365854832584,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín de la Transición Española,Jardin-de-la-Transicion-Espanola,no especifica,,,"Metro: Gregorio Marañón (líneas 7 y 10) Bús: 7, 12, 14, 27, 40, 45, 147 y 150  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Gregorio Marañón (líneas 7 y 10),Gregorio Marañón,"7
+10
+12
+14
+27
+40
+45
+147
+150",,,10300,Instalación parcialmente accesible para personas con movilidad reducida,CASTELLANA,78,MADRID,MADRID,28046,EL VISO,CHAMARTIN,40.4390037057741,-3.6905481652485355,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín del Bulevar de Peña Gorbea,Jardin-del-Bulevar-de-Pena-Gorbea,no especifica,,,"Metro: Puente Vallecas (línea 1) Bus: 10, 24, 54, 57, 58, 310 y 410  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Puente Vallecas (línea 1),Puente Vallecas,1,"Bus: 10, 24, 54, 57, 58, 310 y 410","10
+24
+54
+57
+58
+310
+410",4247,Instalación parcialmente accesible para personas con movilidad reducida,PEÑA GORBEA,17,MADRID,MADRID,28053,SAN DIEGO,PUENTE DE VALLECAS,40.3957812018463,-3.6670346724676173,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín del Maestro Padilla,Jardin-del-Maestro-Padilla,no,,,"Bus: 25, 33, 39, 41, 68, 69, 138  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 25, 33, 39, 41, 68, 69, 138","25
+33
+39
+41
+68
+69
+138",5689,Instalación parcialmente accesible para personas con movilidad reducida,SAN ALEJANDRO,1,MADRID,MADRID,28005,IMPERIAL,ARGANZUELA,40.404491323444994,-3.7213308239798675,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín del Templo de Debod,Jardin-del-Templo-de-Debod,no,,,"Metro: Plaza de España (líneas 3 y 10), Ventura Rodríguez (línea 3) Bus: 25, 33, 39, 46, 74, 75, 148  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Plaza de España (líneas 3 y 10), Ventura Rodríguez (línea 3)","Plaza de España , Ventura Rodríguez","3
+10","Bus: 25, 33, 39, 46, 74, 75, 148","25
+33
+39
+46
+74
+75
+148",58512,Instalación parcialmente accesible para personas con movilidad reducida,FERRAZ,1,MADRID,MADRID,28008,CASA DE CAMPO,MONCLOA-ARAVACA,40.42425096551599,-3.716531855540272,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín del paseo Federico García Lorca,Jardin-del-paseo-Federico-Garcia-Lorca,no,,,"Metro: Villa Vallecas (línea 1) Bus: 54 , 58 , 103 , 142 , 143 , N9 , L1  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Villa Vallecas (línea 1),Villa Vallecas,1,"Bus: 54 , 58 , 103 , 142 , 143 , N9 , L1","54
+58
+103
+142
+143
+9
+1",2406,Instalación parcialmente accesible para personas con movilidad reducida,FEDERICO GARCIA LORCA,21,MADRID,MADRID,28031,CASCO H.VALLECAS,VILLA DE VALLECAS,40.37740868500615,-3.6206400361863036,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín el Torero,Jardin-el-Torero,sí,,,"Bus: 23 , 55 , 60  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 23 , 55 , 60","23
+55
+60",7130,Instalación parcialmente accesible para personas con movilidad reducida,TORERO,6,MADRID,MADRID,28026,MOSCARDO,USERA,40.39218269145896,-3.7056345651289417,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Jardín histórico El Capricho de la Alameda Osuna,Jardin-historico-El-Capricho-de-la-Alameda-Osuna,no especifica,,,"Metro: El Capricho (linea 5) Autobús: 101, 105 y 151  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: El Capricho (linea 5),El Capricho,5,"Autobús: 101, 105 y 151","101
+105
+151",171630,Instalación parcialmente accesible para personas con movilidad reducida,ALAMEDA DE OSUNA,25,MADRID,MADRID,28042,ALAMEDA DE OSUNA,BARAJAS,40.45446361509569,-3.6000964360303476,,parqueshistoricos@madrid.es,/contenido/entidadesYorganismos/ParquesJardines/ParquesHistoricos,ParquesJardines
+Palacio de Cristal de la Arganzuela: Invernadero,Palacio-de-Cristal-de-la-Arganzuela:-Invernadero,no especifica,,,"Metro: Legazpi (Línea 3 y línea 6) Bus: 6, 18, 19, 45, 47, 59, 62, 76, 78, 86, 148, 247  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Legazpi (Línea 3 y línea 6),Legazpi,"3
+6","Bus: 6, 18, 19, 45, 47, 59, 62, 76, 78, 86, 148, 247","6
+18
+19
+45
+47
+59
+62
+76
+78
+86
+148
+247",7100,Instalación parcialmente accesible para personas con movilidad reducida,CHOPERA,10,MADRID,MADRID,28045,CHOPERA,ARGANZUELA,40.3933877847248,-3.698565632659468,,,/contenido/entidadesYorganismos/ParquesJardines/ColeccionesBotanicas,ParquesJardines
+Parque Agustín Rodríguez Sahagún y Parque de los Pinos,Parque-Agustin-Rodriguez-Sahagun-y-Parque-de-los-Pinos,sí,,,"Bus: 49 , 126 , 128  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 49 , 126 , 128","49
+126
+128",185040,Instalación parcialmente accesible para personas con movilidad reducida,DIRECCION,301,MADRID,MADRID,28029,VALDEACEDERAS,TETUAN,40.47022952429582,-3.7038792453996385,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Alcalde Jesús Pérez Quijano,Parque-Alcalde-Jesus-Perez-Quijano,sí,,,"Metro: Valdebernardo (línea 9) Bus: 20  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Valdebernardo (línea 9),Valdebernardo,9,Bus: 20,20,55222,Instalación parcialmente accesible para personas con movilidad reducida,LADERA DE LOS ALMENDROS,0,MADRID,MADRID,28032,CASCO H.VICALVARO,VICALVARO,40.40418961057298,-3.622901144863193,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Alfredo Kraus,Parque-Alfredo-Kraus,no especifica,,,"Metro: 'Mar de Cristal', líneas 4 y 8 Autobuses: 87, 120, 125 y 172  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: 'Mar de Cristal', líneas 4 y 8","'Mar de Cristal', líneas 4 y 8","4
+8","buses: 87, 120, 125 y 172","87
+120
+125
+172",38000,Instalación parcialmente accesible para personas con movilidad reducida,MAR ADRIATICO,5,MADRID,MADRID,28033,PINAR DEL REY,HORTALEZA,40.47098300036034,-3.6393251567222045,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Almansa,Parque-Almansa,no especifica,,,"Metro: 'Cuatro Caminos', líneas 1, 2 y 6 Autobuses: 45  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: 'Cuatro Caminos', líneas 1, 2 y 6","'Cuatro Caminos', líneas 1, 2 y 6","1
+2
+6",buses: 45,45,,Instalación parcialmente accesible para personas con movilidad reducida,ALMANSA,97,MADRID,MADRID,28040,CIUDAD UNIVERSITARIA,MONCLOA-ARAVACA,40.449252672650985,-3.7133420888843105,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Aluche,Parque-Aluche,sí,,,"Metro: Aluche (linea 5) Bus: 25, 121, 131 y 138 RENFE: Aluche",Renfe: Aluche C5,C-5,Aluche,Metro: Aluche (linea 5),Aluche,5,"Bus: 25, 121, 131 y 138","25
+121
+131
+138",143788,Instalación parcialmente accesible para personas con movilidad reducida,TEMBLEQUE,45,MADRID,MADRID,28024,ALUCHE,LATINA,40.394320359418835,-3.7592814565910553,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Aluche - Poblados,Parque-Aluche---Poblados,sí,,,"Metro: Aluche (linea 5) Bus: 17, 117, 139 Renfe: Aluche  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Renfe: Aluche C5,C-5,Aluche,Metro: Aluche (linea 5),Aluche,5,"Bus: 17, 117, 139","17
+117
+139",24003,Instalación parcialmente accesible para personas con movilidad reducida,GUAREÑA,22,MADRID,MADRID,28044,LAS AGUILAS,LATINA,40.38543450752234,-3.765190215590101,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Alzola,Parque-Alzola,no,,,"Bus: 60 , 131  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 60 , 131","60
+131",10495,Instalación parcialmente accesible para personas con movilidad reducida,BEASAIN,2,MADRID,MADRID,28041,ORCASITAS,USERA,40.36716919688689,-3.7136655626692887,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Antonio Pirala,Parque-Antonio-Pirala,sí,,,"Metro: Carmen, Ventas (linea 5 y linea 2) Bus: 38, 106, 110, 146, 210  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Carmen, Ventas (linea 5 y linea 2)","Carmen, Ventas","5
+2","Bus: 38, 106, 110, 146, 210","38
+106
+110
+146
+210",21675,Instalación parcialmente accesible para personas con movilidad reducida,ANTONIO PIRALA,8,MADRID,MADRID,28017,VENTAS,CIUDAD LINEAL,40.428652595625735,-3.659649292346212,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Anunciación,Parque-Anunciacion,no especifica,,,"Bus: 20, 26, 63.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 20, 26, 63","20
+26
+63",4088,Instalación parcialmente accesible para personas con movilidad reducida,ANUNCIACION,1,MADRID,MADRID,28009,NIÑO JESUS,RETIRO,40.41192841997151,-3.67583331713166,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Arquitecto Antonio Palacios,Parque-Arquitecto-Antonio-Palacios,no,,,"Metro: Torre Arias (línea 5) Bus: 28, 48  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Torre Arias (línea 5),Torre Arias,5,"Bus: 28, 48","28
+48",13850,Instalación parcialmente accesible para personas con movilidad reducida,FENELON,17,MADRID,MADRID,28022,CANILLEJAS,SAN BLAS-CANILLEJAS,40.43847239256322,-3.6087501533089923,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Arroyo Fontarrón,Parque-Arroyo-Fontarron,no,,,"Bus: 8, 20, 30, 100  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 8, 20, 30, 100","8
+20
+30
+100",35450,Instalación parcialmente accesible para personas con movilidad reducida,ARROYO FONTARRON,22,MADRID,MADRID,28030,PAVONES,MORATALAZ,40.39476596114844,-3.6361646051817518,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Arroyo Fresno - Tomás y Valiente,Parque-Arroyo-Fresno---Tomas-y-Valiente,sí,,,"Bus: 49  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 49,49,107657,Accesible,VENTISQUERO DE LA CONDESA,43,MADRID,MADRID,28035,MIRASIERRA,FUENCARRAL-EL PARDO,40.49284296962057,-3.7169069720385446,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Arroyo Pozuelo,Parque-Arroyo-Pozuelo,sí,,,"Transporte más próximo:  Autobús: 160  Otros trasportes cercanos:  Autobús: 161 Autobús interurbano: 658 Tren: Estación de Aravaca (Líneas C-7 y C-10) Metro-ligero/Tranvía: Estación de Aravaca (Línea 2)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Aravaca C7 C10,"C-7
+C-10",Aravaca,Metro-ligero/Tranvía: Estación de Aravaca (Línea 2),Metro-ligero/Tranvía: Estación de Aravaca,2,Autobús interurbano: 658,658,78802,Instalación parcialmente accesible para personas con movilidad reducida,Arroyo Pozuelo,,MADRID,MADRID,,,MONCLOA-ARAVACA,40.45451429342977,-3.7856220495572703,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Arroyo de los Pinos,Parque-Arroyo-de-los-Pinos,no,,,"Metro: Antonio Machado (linea 7) Bus: 132  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Antonio Machado (linea 7),Antonio Machado,7,Bus: 132,132,25798,Instalación parcialmente accesible para personas con movilidad reducida,JOAQUIN LORENZO,21,MADRID,MADRID,28035,PEÑA GRANDE,FUENCARRAL-EL PARDO,40.47343735166941,-3.7241915440169024,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Avenida de Portugal,Parque-Avenida-de-Portugal,no especifica,,,"Bus: 25, 33, 31, 36, 39, 65, 138  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 25, 33, 31, 36, 39, 65, 138","25
+33
+31
+36
+39
+65
+138",30719,Instalación parcialmente accesible para personas con movilidad reducida,A-5,300,MADRID,MADRID,28011,PUERTA DEL ANGEL,LATINA,40.41214880704316,-3.7356620312409365,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Azorín,Parque-Azorin,sí,,,"Metro: Buenos Aires (línea 1) Bus: 10, 54, 58, 103, 136  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Buenos Aires (línea 1),Buenos Aires,1,"Bus: 10, 54, 58, 103, 136","10
+54
+58
+103
+136",47434,Instalación parcialmente accesible para personas con movilidad reducida,ALBUFERA,142,MADRID,MADRID,28038,PALOMERAS BAJAS,PUENTE DE VALLECAS,40.39144717132174,-3.6545377410677498,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Barrio Las Musas,Parque-Barrio-Las-Musas,no,,,"Metro: Las Musas (linea 7) Bus: 38, 140   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Las Musas (linea 7),Las Musas,7,"Bus: 38, 140","38
+140",8818,Instalación parcialmente accesible para personas con movilidad reducida,NIZA,55,MADRID,MADRID,28022,ROSAS,SAN BLAS-CANILLEJAS,40.43173953068984,-3.607628369908832,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Begoña,Parque-Begona,no especifica,,,"Bus: 125 y 135 RENFE: Ramón y Cajal  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",RENFE: Ramón y Cajal C10 C8 C3,"C-10
+C-8
+C-3",: Ramón y Cajal,,,,Bus: 125 y 135,"125
+135",21071,Instalación parcialmente accesible para personas con movilidad reducida,SAN MODESTO,1,MADRID,MADRID,28034,VALVERDE,FUENCARRAL-EL PARDO,40.48390626699566,-3.687220746230517,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Biosaludable,Parque-Biosaludable,sí,,,"Metro: El Capricho (línea 5) Bus: 101, 114, 115 y 151  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: El Capricho (línea 5),El Capricho,5,"Bus: 101, 114, 115 y 151","101
+114
+115
+151",95955,Instalación parcialmente accesible para personas con movilidad reducida,ALAMEDA DE OSUNA,8,MADRID,MADRID,28042,ALAMEDA DE OSUNA,BARAJAS,40.452057731817305,-3.6036483614197765,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Campo de la Paloma,Parque-Campo-de-la-Paloma,no,,,,,,,,,,,,38010,Instalación parcialmente accesible para personas con movilidad reducida,RAFAEL ALBERTI,38,MADRID,MADRID,28018,PALOMERAS SURESTE,PUENTE DE VALLECAS,40.38339946706653,-3.643762543356842,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Caramuel,Parque-Caramuel,sí,,,"Bus: 138  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 138,138,55433,Accesible,CARAMUEL,53,MADRID,MADRID,28011,PUERTA DEL ANGEL,LATINA,40.4081704733386,-3.729395994595502,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Cerro Almodóvar,Parque-Cerro-Almodovar,sí,,,"Bus: 25, 31 y 138  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 25, 31 y 138","25
+31
+138",173477,Accesible,MARCELINO CASTILLO,29,MADRID,MADRID,28047,ALUCHE,LATINA,40.393928614376,-3.744713323980896,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Cerro Peñabel,Parque-Cerro-Penabel,no,,,"Bus: 42, 132 y 137  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 42, 132 y 137","42
+132
+137",24366,Instalación parcialmente accesible para personas con movilidad reducida,CANDIDO MATEOS,12,MADRID,MADRID,28035,PEÑA GRANDE,FUENCARRAL-EL PARDO,40.47406043289477,-3.718181785566969,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Cerro del Tío Pío,Parque-Cerro-del-Tio-Pio,sí,,,"Bus: 54, 141 y 143  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 54, 141 y 143","54
+141
+143",159745,Instalación parcialmente accesible para personas con movilidad reducida,BENJAMIN PALENCIA,2,MADRID,MADRID,28038,NUMANCIA,PUENTE DE VALLECAS,40.39701982315709,-3.655239797848888,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Cerro Águila,Parque-Cerro-aguila,no especifica,,,"Bus: 160  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 160,160,,Instalación parcialmente accesible para personas con movilidad reducida,CERRO DEL AGUILA,1,MADRID,MADRID,28023,ARAVACA,MONCLOA-ARAVACA,40.45190771190827,-3.761757187185669,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Ciudad de los Ángeles,Parque-Ciudad-de-los-angeles,sí,,,"Metro: Villaverde Bajo Cruce (linea 3) Bus: 18, 126 y 86  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Villaverde Bajo Cruce (linea 3),Villaverde Bajo Cruce,3,"Bus: 18, 126 y 86","18
+126
+86",36696,Instalación parcialmente accesible para personas con movilidad reducida,ANOETA,14,MADRID,MADRID,28041,LOS ANGELES,VILLAVERDE,40.352850949880235,-3.6963807727286353,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Concejal Miguel Martín Vela,Parque-Concejal-Miguel-Martin-Vela,no,,,"Bus: 601  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 601,601,33954,Instalación parcialmente accesible para personas con movilidad reducida,GUARDIA,4,MADRID,MADRID,28048,EL PARDO,FUENCARRAL-EL PARDO,40.5186002228516,-3.7753787533567573,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Cuesta del Galbán,Parque-Cuesta-del-Galban,no especifica,,,"Bus: 160  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 160,160,70882,Instalación parcialmente accesible para personas con movilidad reducida,GALBAN,2,MADRID,MADRID,28023,ARAVACA,MONCLOA-ARAVACA,40.45019927443574,-3.768070614824996,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Cuña Verde de Vicálvaro. Zona A,Parque-Cuna-Verde-de-Vicalvaro.-Zona-A,sí,,,"Metro: Vicálvaro (linea 9) Bus: E3  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Vicálvaro (linea 9),Vicálvaro,9,Bus: E3,3,41293,Instalación parcialmente accesible para personas con movilidad reducida,DAROCA,300,MADRID,MADRID,28032,AMBROZ,VICALVARO,40.40969329689759,-3.618025439807104,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Cuña Verde de Vicálvaro. Zona B,Parque-Cuna-Verde-de-Vicalvaro.-Zona-B,sí,,,"Metro: San Cipriano (linea 9) Bus: 4 , E3, 100  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: San Cipriano (linea 9),San Cipriano,9,"Bus: 4 , E3, 100","4
+3
+100",115119,Instalación parcialmente accesible para personas con movilidad reducida,DAROCA,299,MADRID,MADRID,28032,AMBROZ,VICALVARO,40.40930295868704,-3.616890442862423,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Cuña Verde de Vicálvaro. Zona C,Parque-Cuna-Verde-de-Vicalvaro.-Zona-C,no,,,"Metro: Avenida de Guadalajara (línea 2) Bus: E2  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Avenida de Guadalajara (línea 2),Avenida de Guadalajara,2,Bus: E2,2,127835,Instalación parcialmente accesible para personas con movilidad reducida,CANILLEJAS A VICALVARO,102,MADRID,MADRID,28032,CASCO H.VICALVARO,VICALVARO,40.41672706688541,-3.610853061814312,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Dehesa de la Villa,Parque-Dehesa-de-la-Villa,sí,,,"Metro: Francos Rodriguez y Valdezarza (línea 7). Autobús: 44, 64, 82, 126, 127 y 132  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Francos Rodriguez y Valdezarza (línea 7),Francos Rodriguez y Valdezarza,7,"Autobús: 44, 64, 82, 126, 127 y 132","44
+64
+82
+126
+127
+132",645309,Instalación parcialmente accesible para personas con movilidad reducida,DEHESA DE LA VILLA,1,MADRID,MADRID,28040,CIUDAD UNIVERSITARIA,MONCLOA-ARAVACA,40.45817981904011,-3.7207253118064827,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesHistoricos,ParquesJardines
+Parque Duque de Ahumada,Parque-Duque-de-Ahumada,no,,,"Metro: San Cipriano (línea 9)  Bus: 4 , 106  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: San Cipriano (línea 9),San Cipriano,9,"Bus: 4 , 106","4
+106",5248,Instalación parcialmente accesible para personas con movilidad reducida,LAGO VAN,16,MADRID,MADRID,28032,CASCO H.VICALVARO,VICALVARO,40.4048457851104,-3.6062315414157613,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque El Calero,Parque-El-Calero,sí,,,"Metro: Quintana y Carmen (línea 5) Bus: 21, 48 y 146  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Quintana y Carmen (línea 5),Quintana y Carmen,5,"Bus: 21, 48 y 146","21
+48
+146",67975,Instalación parcialmente accesible para personas con movilidad reducida,JOSE DEL HIERRO,1,MADRID,MADRID,28027,CONCEPCION,CIUDAD LINEAL,40.43555222953495,-3.6519351470803567,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque El Cedral,Parque-El-Cedral,sí,,,"Bus: 7, 9, 70, 72 y 87  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 7, 9, 70, 72 y 87","7
+9
+70
+72
+87",6856,Instalación parcialmente accesible para personas con movilidad reducida,ARTURO SORIA,233,MADRID,MADRID,28033,ATALAYA,CIUDAD LINEAL,40.462882951414265,-3.6650441004626564,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque El Cruce,Parque-El-Cruce,sí,,,"Metro: Villaverde Bajo - Cruce (línea 3) Autobús: 18, 22, 86, 116 y 130  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Villaverde Bajo - Cruce (línea 3),Villaverde Bajo - Cruce,3,"Autobús: 18, 22, 86, 116 y 130","18
+22
+86
+116
+130",,Instalación parcialmente accesible para personas con movilidad reducida,ALCOCER,1,MADRID,MADRID,28021,LOS ANGELES,VILLAVERDE,40.350970403692386,-3.6944891243298597,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Emir Mohamed I,Parque-Emir-Mohamed-I,no especifica,,,"Bus: 3, 31 , 41 , 50 , 65  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 3, 31 , 41 , 50 , 65","3
+31
+41
+50
+65",3942,Instalación parcialmente accesible para personas con movilidad reducida,RAMON,1,MADRID,MADRID,28013,PALACIO,CENTRO,40.41438785232736,-3.7147888896558188,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Emperatriz María de Austria,Parque-Emperatriz-Maria-de-Austria,sí,,,"Bus: 47 , 81 , 108 , 116 , 121 , 131 , 155 Metro: Plaza Elíptica (línea 6 y 11) , Abrantes (línea 11)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Plaza Elíptica (línea 6 y 11) , Abrantes (línea 11)","Plaza Elíptica  , Abrantes","6
+11","Bus: 47 , 81 , 108 , 116 , 121 , 131 , 155","47
+81
+108
+116
+121
+131
+155",597458,Instalación parcialmente accesible para personas con movilidad reducida,VIA LUSITANA,3,MADRID,MADRID,28025,ABRANTES,CARABANCHEL,40.382311100280766,-3.7227552919050586,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Enrique Tierno Galván,Parque-Enrique-Tierno-Galvan,sí,,,"Bus: 148  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 148,148,,Instalación parcialmente accesible para personas con movilidad reducida,MENESES,4,MADRID,MADRID,28045,LEGAZPI,ARGANZUELA,40.39210151448589,-3.681620654746187,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Entrevías Forestal,Parque-Entrevias-Forestal,no,,,"Bus: 88  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 88,88,497213,Instalación parcialmente accesible para personas con movilidad reducida,EMBAJADORES,251,MADRID,MADRID,28053,ENTREVIAS,PUENTE DE VALLECAS,40.36782603611024,-3.6670181171393064,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Entrevías Urbano,Parque-Entrevias-Urbano,sí,,,"Bus: 102, 111 Renfe: Asamblea de Madrid, Entrevías  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","RENFE: Asamblea de Madrid  Entrevías C2, C7, C8","C-2
+C-7
+C-8",: Asamblea de Madrid - Entrevías,,,,"Bus: 102, 111","102
+111",121178,Instalación parcialmente accesible para personas con movilidad reducida,SUR,8,MADRID,MADRID,28053,ENTREVIAS,PUENTE DE VALLECAS,40.37253969509114,-3.6698091602059613,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Este de Valdebernardo,Parque-Este-de-Valdebernardo,no,,,"Metro: Valdebernardo (línea 9) Bus: 71  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Valdebernardo (línea 9),Valdebernardo,9,Bus: 71,71,71585,Instalación parcialmente accesible para personas con movilidad reducida,DEMOCRACIA,25,MADRID,MADRID,28031,CASCO H.VICALVARO,VICALVARO,40.393429973468265,-3.6183833916362733,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Eugenia de Montijo,Parque-Eugenia-de-Montijo,sí,,,"Metro: Eugenia de Montijo (línea 5) Bus: 17 , 35 , 121 , 131 , 139  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Eugenia de Montijo (línea 5),Eugenia de Montijo,5,"Bus: 17 , 35 , 121 , 131 , 139","17
+35
+121
+131
+139",72933,Instalación parcialmente accesible para personas con movilidad reducida,PARQUE EUGENIA DE MONTIJO,3,MADRID,MADRID,28047,VISTA ALEGRE,CARABANCHEL,40.37942623334737,-3.7527174453988774,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Eva Duarte,Parque-Eva-Duarte,sí,,,"Metro: Manuel Becerra (línea 2 y 6) Bus: 12, 43, 56, 143, 156   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Manuel Becerra (línea 2 y 6),Manuel Becerra,"2
+6","Bus: 12, 43, 56, 143, 156","12
+43
+56
+143
+156",29700,Instalación parcialmente accesible para personas con movilidad reducida,DOCTOR GOMEZ ULLA,9,MADRID,MADRID,28028,GUINDALERA,SALAMANCA,40.42985671996897,-3.668031432543624,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Forestal Fuente Carrantona,Parque-Forestal-Fuente-Carrantona,no,,,"Autobuses: E2, E4, 30, 100, 140 Metro: Alsacia (L2)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Alsacia (L2),Alsacia,2,"buses: E2, E4, 30, 100, 140","2
+4
+30
+100
+140",,Instalación parcialmente accesible para personas con movilidad reducida,FUENTE CARRANTONA,38,MADRID,MADRID,28030,HORCAJO,MORATALAZ,40.410083041012584,-3.6297141827859876,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Forestal Julio Alguacil Gómez,Parque-Forestal-Julio-Alguacil-Gomez,no,,,"Acceso en coche:  Desde M-40 por salida 24, dirección Ctra Carabanchel a Villaverde. Desde Avenida de los Poblados, a calle Rafaela Ibarra, continuación hasta Ctra Carabanchel a Villaverde Desde Calle Alcocer, Calle Villalonso o Av Real de Pinto, hasta intersección con Ctra Carabanchel a Villaverde    Acceso en transporte público:  autobús MT 131   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,autobús MT 131,131,445879,Instalación parcialmente accesible para personas con movilidad reducida,Ctra Carabanchel a Villaverde  con vuelta Calle Verde Viento,,MADRID,MADRID,,,DISTRITO,40.36073540960827,-3.7177186736043275,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Forestal de Valdebebas-Felipe VI,Parque-Forestal-de-Valdebebas-Felipe-VI,no especifica,,,"Bus: 174 y SE  799.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 174 y SE  799,"174
+799",,Instalación parcialmente accesible para personas con movilidad reducida,LAS FUERZAS ARMADAS,11,MADRID,MADRID,28055,VALDEFUENTES,HORTALEZA,40.48494412599755,-3.641451621738692,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesForestales,ParquesJardines
+Parque Forestal de Vicálvaro,Parque-Forestal-de-Vicalvaro,sí,,,"Metro: San Cipriano, Puerta de Arganda (linea 9) Bus: E3 Renfe: Vicálvaro  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Vicálvaro C2,C-2,Vicálvaro,"Metro: San Cipriano, Puerta de Arganda (linea 9)","San Cipriano, Puerta de Arganda",9,Bus: E3,3,,Instalación parcialmente accesible para personas con movilidad reducida,POLIDEPORTIVO,1,MADRID,MADRID,28032,AMBROZ,VICALVARO,40.41022401774968,-3.60626801415248,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesForestales,ParquesJardines
+Parque Félix Rodríguez de la Fuente,Parque-Felix-Rodriguez-de-la-Fuente,sí,,,"Metro: Avenida la Paz (línea 4) Bus: 9 , 72 , 73 , 120  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Avenida la Paz (línea 4),Avenida la Paz,4,"Bus: 9 , 72 , 73 , 120","9
+72
+73
+120",14700,Instalación parcialmente accesible para personas con movilidad reducida,PADRE CLARET,38,MADRID,MADRID,28002,PROSPERIDAD,CHAMARTIN,40.45205238274073,-3.6653500732558792,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque General Fanjul - Santa Margarita,Parque-General-Fanjul---Santa-Margarita,sí,,,"Bus: 17, 34, 39, 117, 139 Renfe: Las Águilas  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Renfe: Las Águilas C5,C-5,Las Águilas,,,,"Bus: 17, 34, 39, 117, 139","17
+34
+39
+117
+139",12166,Instalación parcialmente accesible para personas con movilidad reducida,DE LAS ÁGUILAS,144,MADRID,MADRID,28044,LAS AGUILAS,LATINA,40.38033890061462,-3.7834984766161837,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Hortaleza,Parque-Hortaleza,sí,,,"Bus: 7 , 9 , 29 , 72 , 87 , 107 , 129 , 172 , 172SF  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 7 , 9 , 29 , 72 , 87 , 107 , 129 , 172 , 172SF","7
+9
+29
+72
+87
+107
+129
+172",62863,Instalación parcialmente accesible para personas con movilidad reducida,ESTACION DE HORTALEZA,18,MADRID,MADRID,28033,PINAR DEL REY,HORTALEZA,40.48024318499327,-3.650809942180937,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Huerta del Obispo.,Parque-Huerta-del-Obispo.,sí,,,"Bus: 22 , 76 , 79  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 22 , 76 , 79","22
+76
+79",11053,Instalación parcialmente accesible para personas con movilidad reducida,PALOMARES,34,MADRID,MADRID,28021,SAN ANDRES,VILLAVERDE,40.346980092315505,-3.712145719392749,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Juan Carlos I,Parque-Juan-Carlos-I,sí,,,"Metro: Feria de Madrid (línea 8)  Bus: 104, 112, 122  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Feria de Madrid (línea 8),Feria de Madrid,8,"Bus: 104, 112, 122","104
+112
+122",1473974,Instalación parcialmente accesible para personas con movilidad reducida,"S.A.R. DON JUAN DE BORBON Y BATTEMBERG, 5",5,MADRID,MADRID,28042,CORRALEJOS,BARAJAS,40.45999848510341,-3.6148888706303586,"630630710
+917210079",parquejuancarlos@madrid.es,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Juan Pablo II,Parque-Juan-Pablo-II,sí,,,"Bus: 112 , 122  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 112 , 122","112
+122",104100,Instalación parcialmente accesible para personas con movilidad reducida,MACHUPICHU,1,MADRID,MADRID,28043,PIOVERA,HORTALEZA,40.45544764269407,-3.623539375307719,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Juan de la Cosa,Parque-Juan-de-la-Cosa,no,,,"Metro: líneas 8 y 9 (Colombia)  Bus: 14,7,16,29,51",,,,Metro: líneas 8 y 9 (Colombia),líneas 8 y 9,"8
+9","Bus: 14,7,16,29,51","14
+7
+16
+29
+51",3707,Instalación parcialmente accesible para personas con movilidad reducida,VICTOR ANDRES BELAUNDE,1,MADRID,MADRID,28016,HISPANOAMERICA,CHAMARTIN,40.45424210617104,-3.679171627391412,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque La Viña,Parque-La-Vina,sí,,,Bus: 102 Renfe: Asamblea de Madrid- Entrevías,"RENFE: Asamblea de Madrid  Entrevías C2, C7, C8","C-2
+C-7
+C-8",: Asamblea de Madrid - Entrevías,,,,Bus: 102,102,43738,Instalación parcialmente accesible para personas con movilidad reducida,TIMOTEO PEREZ RUBIO,9,MADRID,MADRID,28053,ENTREVIAS,PUENTE DE VALLECAS,40.38556774381467,-3.67430914572838,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Ladera de los Almendros,Parque-Ladera-de-los-Almendros,no,,,"Bus: 8 , 71  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 8 , 71","8
+71",,Instalación parcialmente accesible para personas con movilidad reducida,LADERA DE LOS ALMENDROS,46,MADRID,MADRID,28032,VALDEBERNARDO,VICALVARO,40.39616431537003,-3.6261065047300303,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Lineal de Palomeras,Parque-Lineal-de-Palomeras,no especifica,,,"Bus: 54, 58, 103, 142, 143, 310 Metro: Miguel Hernández  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Miguel Hernández,Miguel Hernández,,"Bus: 54, 58, 103, 142, 143, 310","54
+58
+103
+142
+143
+310",394496,Instalación parcialmente accesible para personas con movilidad reducida,ALBUFERA,293,MADRID,MADRID,28038,PALOMERAS SURESTE,PUENTE DE VALLECAS,40.38581882868559,-3.6363631773029352,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Lineal del Manzanares (Usera - Pte de Vallecas),Parque-Lineal-del-Manzanares-(Usera---Pte-de-Vallecas),sí,,,"Metro: Doce de Octubre (línea 3) Bus: 23 , 123 , 78  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Doce de Octubre (línea 3),Doce de Octubre,3,"Bus: 23 , 123 , 78","23
+123
+78",447342,Instalación parcialmente accesible para personas con movilidad reducida,PERALES,47,MADRID,MADRID,28026,ALMENDRALES,USERA,40.379745,-3.690042,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Madrid Río,Parque-Madrid-Rio,sí,,,"Metro: Príncipe Pío (línea 6 y 10), Puerta del Ángel (línea 6), Pirámides (línea 5), Marqués de Vadillo (línea 5), Legazpi (línea 3 y 6) y Almendrales (línea 3). RENFE: Príncipe Pío, Pirámides. Aparcamiento Público (próximo): Paseo de Extremadura y Principe Pio.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","RENFE: Príncipe Pío C1 C7 C19, Pirámides","C-1
+C-7
+C-19",: Príncipe Pío,"Metro: Príncipe Pío (línea 6 y 10), Puerta del Ángel (línea 6), Pirámides (línea 5), Marqués de Vadillo (línea 5), Legazpi (línea 3 y 6) y Almendrales (línea 3)","Príncipe Pío , Puerta del Ángel , Pirámides , Marqués de Vadillo , Legazpi  y Almendrales","6
+10
+5
+3",,,,Instalación parcialmente accesible para personas con movilidad reducida,PASEO DE LAS YESERIAS,,MADRID,MADRID,,,DISTRITO,40.39815439895114,-3.7125359439695975,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Martala,Parque-Martala,sí,,,"Bus: 32, 71  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 32, 71","32
+71",49158,Instalación parcialmente accesible para personas con movilidad reducida,MORATALAZ,183,MADRID,MADRID,28030,MARROQUINA,MORATALAZ,40.40882236801765,-3.643898652734279,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Martin Luther King,Parque-Martin-Luther-King,sí,,,"Metro: Conde de Casal (línea 6). Bus: 8 , 10 , 24 , 54 , 56 , 57 , 113 , 136, 141 , 148 , 310.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Conde de Casal (línea 6),Conde de Casal,6,"Bus: 8 , 10 , 24 , 54 , 56 , 57 , 113 , 136, 141 , 148 , 310","8
+10
+24
+54
+56
+57
+113
+136
+141
+148
+310",33700,Instalación parcialmente accesible para personas con movilidad reducida,CERRO NEGRO,1,MADRID,MADRID,28007,ADELFAS,RETIRO,40.398195733324194,-3.6701340560704026,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Mirador de Tierno Galván,Parque-Mirador-de-Tierno-Galvan,no especifica,,,"Bus: 148  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 148,148,22200,Instalación parcialmente accesible para personas con movilidad reducida,NEBULOSAS,7,MADRID,MADRID,28045,DELICIAS,ARGANZUELA,40.394735491209424,-3.6856299107811368,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Mirador de las Cárcavas,Parque-Mirador-de-las-Carcavas,sí,,,"Bus: 87  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 87,87,38134,Instalación parcialmente accesible para personas con movilidad reducida,RAFAELA APARICIO,2,MADRID,MADRID,28055,VALDEFUENTES,HORTALEZA,40.47917989766592,-3.6330084507532687,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Mujeres de Orcasitas,Parque-Mujeres-de-Orcasitas,sí,,,"Bus: 60  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 60,60,48413,Instalación parcialmente accesible para personas con movilidad reducida,COOPERATIVAS,6,MADRID,MADRID,28041,ORCASITAS,USERA,40.3673502443602,-3.7076605178679096,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Norte - Carmen Tagle,Parque-Norte---Carmen-Tagle,sí,,,"Bus: 124, 137  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 124, 137","124
+137",195230,Instalación parcialmente accesible para personas con movilidad reducida,ARZOBISPO MORCILLO,7,MADRID,MADRID,28029,LA PAZ,FUENCARRAL-EL PARDO,40.48106787416528,-3.6933504628706095,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Nudo Norte de Begoña,Parque-Nudo-Norte-de-Begona,sí,,,"Metro: Begoña (línea 10) Bus: 124, 137  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Begoña (línea 10),Begoña,10,"Bus: 124, 137","124
+137",21071,Instalación parcialmente accesible para personas con movilidad reducida,LLANO CASTELLANO,1,MADRID,MADRID,28034,VALVERDE,FUENCARRAL-EL PARDO,40.483895554775785,-3.6844715393162772,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Olof Palme,Parque-Olof-Palme,no,,,"Metro: Plaza Elíptica (línea 6 y 11) Bús: 47 , 60 , 81 , 247  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Plaza Elíptica (línea 6 y 11),Plaza Elíptica,"6
+11
+47
+60
+81
+247",,,48867,Instalación parcialmente accesible para personas con movilidad reducida,CERECINOS,1,MADRID,MADRID,28026,ZOFIO,USERA,40.38439900273861,-3.7129519968429445,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Orlando Zapata Tamayo,Parque-Orlando-Zapata-Tamayo,sí,,,"Metro: líneas 8 y 9 (Colombia)  Bus: 52  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: líneas 8 y 9 (Colombia),líneas 8 y 9,"8
+9",Bus: 52,52,12900,Instalación parcialmente accesible para personas con movilidad reducida,URUGUAY,6,MADRID,MADRID,28016,HISPANOAMERICA,CHAMARTIN,40.455011305200735,-3.6743070613284736,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Paseo Muñoz Grandes,Parque-Paseo-Munoz-Grandes,no,,,"Bus: 34 , 35  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 34 , 35","34
+35",2750,Instalación parcialmente accesible para personas con movilidad reducida,MARCELINO CAMACHO,6,MADRID,MADRID,28025,VISTA ALEGRE,CARABANCHEL,40.385086008433305,-3.7398326701482016,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Payaso Fofó,Parque-Payaso-Fofo,sí,,,"Bus: 310, 410, 144, 57, 136 RENFE: Asamblea de Madrid - Entrevías.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","RENFE: Asamblea de Madrid  Entrevías C2, C7, C8","C-2
+C-7
+C-8",: Asamblea de Madrid - Entrevías,,,,"Bus: 310, 410, 144, 57, 136","310
+410
+144
+57
+136",76844,Instalación parcialmente accesible para personas con movilidad reducida,PAYASO FOFO,11,MADRID,MADRID,28018,PALOMERAS BAJAS,PUENTE DE VALLECAS,40.38901086962944,-3.6599692832803825,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Peñuelas,Parque-Penuelas,no,,,"Metro: Pirámides (línea 5) Bus:18, 62  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Pirámides (línea 5),Pirámides,5,"Bus:18, 62","18
+62",27400,Instalación parcialmente accesible para personas con movilidad reducida,GARGANTILLA,2,MADRID,MADRID,28005,ACACIAS,ARGANZUELA,40.39900396358797,-3.703926416750334,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Pinar de la Elipa,Parque-Pinar-de-la-Elipa,sí,,,"Bus: 28 , 71 , 110 , 113 , 210  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 28 , 71 , 110 , 113 , 210","28
+71
+110
+113
+210",144715,Instalación parcialmente accesible para personas con movilidad reducida,FELIX RODRIGUEZ DE LA FUENTE,26,MADRID,MADRID,28017,VENTAS,CIUDAD LINEAL,40.418806485625446,-3.6563469592354387,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Pinar del Rey,Parque-Pinar-del-Rey,no,,,"Bus: 9 , 72 , 87 , 125 , 229  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 9 , 72 , 87 , 125 , 229","9
+72
+87
+125
+229",30593,Instalación parcialmente accesible para personas con movilidad reducida,CANILLAS,1,MADRID,MADRID,28043,CANILLAS,HORTALEZA,40.463441129364256,-3.6556488853143465,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Plaza Chozas de Canales,Parque-Plaza-Chozas-de-Canales,no,,,"Metro: Villaverde Bajo Cruce (línea 3) Bus: 22, 59, 79, 85, 123, 130  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Villaverde Bajo Cruce (línea 3),Villaverde Bajo Cruce,3,"Bus: 22, 59, 79, 85, 123, 130","22
+59
+79
+85
+123
+130",9423,Instalación parcialmente accesible para personas con movilidad reducida,VILLAVERDE A VALLECAS,10,MADRID,MADRID,28021,LOS ROSALES,VILLAVERDE,40.35277786522202,-3.6905392176697744,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Plaza Colonia Oroquieta,Parque-Plaza-Colonia-Oroquieta,sí,,,"Metro: Villaverde Cruce (línea 3) Bus: 22, 59, 79, 85, 123, 130  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Villaverde Cruce (línea 3),Villaverde Cruce,3,"Bus: 22, 59, 79, 85, 123, 130","22
+59
+79
+85
+123
+130",,Instalación parcialmente accesible para personas con movilidad reducida,VILLAVERDE A VALLECAS,1,MADRID,MADRID,28041,LOS ROSALES,VILLAVERDE,40.35239211569256,-3.691771736219469,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Quinta de los Molinos,Parque-Quinta-de-los-Molinos,sí,,,"Metro: Suanzes (línea 5) Bus: 77, 104, 105, L5  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Suanzes (línea 5),Suanzes,5,"Bus: 77, 104, 105, L5","77
+104
+105
+5",212619,Instalación parcialmente accesible para personas con movilidad reducida,ALCALA,527,MADRID,MADRID,28027,EL SALVADOR,SAN BLAS-CANILLEJAS,40.44245748722783,-3.6217095632137375,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesHistoricos,ParquesJardines
+Parque Ramírez de Prado,Parque-Ramirez-de-Prado,sí,,,"Metro: Delicias (línea 3)  Bus: 8, 102, 152, N11, N13  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Delicias (línea 3),Delicias,3,"Bus: 8, 102, 152, N11, N13","8
+102
+152
+11
+13",20900,Instalación parcialmente accesible para personas con movilidad reducida,RAMIREZ DE PRADO,2,MADRID,MADRID,28045,DELICIAS,ARGANZUELA,40.39932569185547,-3.6894842200951024,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Roma,Parque-Roma,sí,,,"Metro: Saínz de Baranda (línea 6 y 9) Autobús: 30 , 56 , 143, 215  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Saínz de Baranda (línea 6 y 9),Saínz de Baranda,"6
+9","Autobús: 30 , 56 , 143, 215","30
+56
+143
+215",112100,Instalación parcialmente accesible para personas con movilidad reducida,JUAN ESPLANDIU,4,MADRID,MADRID,28007,ESTRELLA,RETIRO,40.41641041087398,-3.662606100328213,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Salvador de Madariaga,Parque-Salvador-de-Madariaga,sí,,,"Bus: 21 , 48 , 53  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 21 , 48 , 53","21
+48
+53",8672,Instalación parcialmente accesible para personas con movilidad reducida,SALVADOR DE MADARIAGA,9,MADRID,MADRID,28027,SAN PASCUAL,CIUDAD LINEAL,40.439387584092685,-3.6571484128652396,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque San Blas. El Paraíso,Parque-San-Blas.-El-Paraiso,sí,,,"Metro: Simancas (línea 7) Bus: 38, 109 y L7  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Simancas (línea 7),Simancas,7,"Bus: 38, 109 y L7","38
+109
+7",167106,Instalación parcialmente accesible para personas con movilidad reducida,ARCENTALES,4,MADRID,MADRID,28037,HELLIN,SAN BLAS-CANILLEJAS,40.42996840999023,-3.622184001035289,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque San José de Calasanz,Parque-San-Jose-de-Calasanz,no,,,"Bus: 2, 16, 61, 202  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 2, 16, 61, 202","2
+16
+61
+202",1831,Instalación parcialmente accesible para personas con movilidad reducida,JOAQUIN MARIA LOPEZ,39,MADRID,MADRID,28015,GAZTAMBIDE,CHAMBERI,40.43761436823094,-3.7145867743039878,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque San Juan Bautista,Parque-San-Juan-Bautista,sí,,,"Bus: 53  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 53,53,10302,Instalación parcialmente accesible para personas con movilidad reducida,AGASTIA,87,MADRID,MADRID,28043,SAN JUAN BAUTISTA,CIUDAD LINEAL,40.451304609076615,-3.6558964974118364,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Sancho Dávila,Parque-Sancho-Davila,no,,,"Metro: Ventas (línea 2 y 5) Bus: 12  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Ventas (línea 2 y 5),Ventas,"2
+5",Bus: 12,12,43000,Instalación parcialmente accesible para personas con movilidad reducida,AMERICA ESPAÑOLA,4,MADRID,MADRID,28028,FUENTE DEL BERRO,SALAMANCA,40.42949627920971,-3.6617795915510434,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Santa Eugenia,Parque-Santa-Eugenia,sí,,,"Bus: 58 , 63 , N9 , 145  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 58 , 63 , N9 , 145","58
+63
+9
+145",20003,Instalación parcialmente accesible para personas con movilidad reducida,Cerro Almodóvar,1,MADRID,MADRID,28031,SANTA EUGENIA,VILLA DE VALLECAS,40.38131130575197,-3.608459149580722,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Santa Rita,Parque-Santa-Rita,sí,,,"Bus: 34  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 34,34,27870,Instalación parcialmente accesible para personas con movilidad reducida,ALBA DE TORMES,2,MADRID,MADRID,28025,PUERTA BONITA,CARABANCHEL,40.379040097900265,-3.742770522229555,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Segura,Parque-Segura,sí,,,"Bus: 60  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 60,60,21979,Instalación parcialmente accesible para personas con movilidad reducida,SEGURA,5,MADRID,MADRID,28041,ORCASITAS,USERA,40.368011394592635,-3.7158770172855813,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Soto de Entrevías,Parque-Soto-de-Entrevias,no,,,"Bus:  102, 111  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus:  102, 111","102
+111",33491,Instalación parcialmente accesible para personas con movilidad reducida,ACCESO A LA ESTACION DE AUTOBUSES DE LA E.M.T.,9,MADRID,MADRID,28053,ENTREVIAS,PUENTE DE VALLECAS,40.376563359161366,-3.675043967167776,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Urpisa,Parque-Urpisa,no especifica,,,"Bus: 54, 58, 103, 142 y N9 Metro: Villa de Vallecas (línea 1)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Villa de Vallecas (línea 1),Villa de Vallecas,1,"Bus: 54, 58, 103, 142 y N9","54
+58
+103
+142
+9",4487,Instalación parcialmente accesible para personas con movilidad reducida,VASARES,2,MADRID,MADRID,28031,CASCO H.VALLECAS,VILLA DE VALLECAS,40.38289158525453,-3.619641837988416,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Valdebernardo Este,Parque-Valdebernardo-Este,sí,,,"Metro: Valdebernardo (línea 9) Bus: 71  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Valdebernardo (línea 9),Valdebernardo,9,Bus: 71,71,82747,Instalación parcialmente accesible para personas con movilidad reducida,CORDEL DE PAVONES,2,MADRID,MADRID,28032,CASCO H.VICALVARO,VICALVARO,40.4027578376722,-3.617738099849234,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Valle de Enmedio,Parque-Valle-de-Enmedio,sí,,,"Bus: 64 Metro: Lacoma (línea 7)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Lacoma (línea 7),Lacoma,7,Bus: 64,64,61722,Instalación parcialmente accesible para personas con movilidad reducida,MIRADOR DE LA REINA,22,MADRID,MADRID,28035,MIRASIERRA,FUENCARRAL-EL PARDO,40.48922371593969,-3.7237594350747143,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Vallecas Villa,Parque-Vallecas-Villa,sí,,,"Bus: 54, 103, 142 y N9 Metro: Congosto (línea 1)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Congosto (línea 1),Congosto,1,"Bus: 54, 103, 142 y N9","54
+103
+142
+9",31987,Instalación parcialmente accesible para personas con movilidad reducida,BABILAFUENTE,2,MADRID,MADRID,28031,CASCO H.VALLECAS,VILLA DE VALLECAS,40.37217516332789,-3.6238430832643598,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Vandel,Parque-Vandel,no,,,"Bus: 32  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 32,32,58930,Instalación parcialmente accesible para personas con movilidad reducida,MOLINA DE SEGURA,10,MADRID,MADRID,28030,MARROQUINA,MORATALAZ,40.4049148503112,-3.636955454805149,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque Virgen de la Esperanza,Parque-Virgen-de-la-Esperanza,sí,,,"Bus: 22 , 76 , 79  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 22 , 76 , 79","22
+76
+79",33300,Instalación parcialmente accesible para personas con movilidad reducida,ANOETA,45,MADRID,MADRID,28041,LOS ANGELES,VILLAVERDE,40.351030215596516,-3.7010015933831006,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Alfonso XIII,Parque-de-Alfonso-XIII,sí,,,"Bus: 52  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 52,52,10400,Instalación parcialmente accesible para personas con movilidad reducida,ALFONSO XIII,136,MADRID,MADRID,28016,NUEVA ESPAÑA,CHAMARTIN,40.45990434942118,-3.669142805075655,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Amós Acero,Parque-de-Amos-Acero,no,,,"Bus: 103, 111, 57, 144, 310  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 103, 111, 57, 144, 310","103
+111
+57
+144
+310",9987,Instalación parcialmente accesible para personas con movilidad reducida,SIERRA MOLINA,1,MADRID,MADRID,28053,SAN DIEGO,PUENTE DE VALLECAS,40.38903628994235,-3.6665321826830297,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Ana Tutor,Parque-de-Ana-Tutor,sí,,,"Bus: 49, 64  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 49, 64","49
+64",36913,Instalación parcialmente accesible para personas con movilidad reducida,VALLE DE PINARES LLANOS,1,MADRID,MADRID,28035,PEÑA GRANDE,FUENCARRAL-EL PARDO,40.48559668319756,-3.7174080145343464,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Arriaga,Parque-de-Arriaga,sí,,,"Bus: 106 , 109  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 106 , 109","106
+109",52896,Instalación parcialmente accesible para personas con movilidad reducida,DAROCA,95,MADRID,MADRID,28017,PUEBLO NUEVO,CIUDAD LINEAL,40.425090271008656,-3.6427216652412877,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Atenas,Parque-de-Atenas,sí,,,"Bus: 3 , 31 , 41 , 50 , 65 , 148 , C1 , L3   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 3 , 31 , 41 , 50 , 65 , 148 , C1 , L3","3
+31
+41
+50
+65
+148
+1",46200,Instalación parcialmente accesible para personas con movilidad reducida,SEGOVIA,28,MADRID,MADRID,28005,PALACIO,CENTRO,40.413971277014085,-3.715138075489171,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Berlín,Parque-de-Berlin,sí,,,"Metro: Concha Espina (línea 9) Bus: 16, 29, 43, 52 y 120  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Concha Espina (línea 9),Concha Espina,9,"Bus: 16, 29, 43, 52 y 120","16
+29
+43
+52
+120",49100,Accesible,RAMON Y CAJAL,2,MADRID,MADRID,28016,CIUDAD JARDIN,CHAMARTIN,40.45150372849227,-3.6760645355093797,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Breogán,Parque-de-Breogan,sí,,,"Metro: Parque Avenidas (línea 7) Bus: 21, 43, 48 , 53 y 74  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Parque Avenidas (línea 7),Parque Avenidas,7,"Bus: 21, 43, 48 , 53 y 74","21
+43
+48
+53
+74",22300,Instalación parcialmente accesible para personas con movilidad reducida,BRASILIA,2,MADRID,MADRID,28028,GUINDALERA,SALAMANCA,40.437140971249754,-3.6608995093418306,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Canillejas,Parque-de-Canillejas,sí,,,"Bus: 28, 48   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 28, 48","28
+48",11237,Instalación parcialmente accesible para personas con movilidad reducida,CIRCE,57,MADRID,MADRID,28022,CANILLEJAS,SAN BLAS-CANILLEJAS,40.44191186628217,-3.610832880429799,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Comillas,Parque-de-Comillas,sí,,,"Bus: 55, 60 y 116  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 55, 60 y 116","55
+60
+116",35337,Instalación parcialmente accesible para personas con movilidad reducida,MIGUEL SORIANO,1,MADRID,MADRID,28019,COMILLAS,CARABANCHEL,40.39191419121823,-3.7141505979369023,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Darwin,Parque-de-Darwin,sí,,,"Bus: 8, 20 y 113.   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 8, 20 y 113","8
+20
+113",41123,Instalación parcialmente accesible para personas con movilidad reducida,MANUEL MARIA ARRILLAGA,29,MADRID,MADRID,28030,FONTARRON,MORATALAZ,40.40687979108534,-3.660862691056585,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Enrique Herreros,Parque-de-Enrique-Herreros,sí,,,"Metro: Canal (líneas 2, 7) Bus: 3 , 12 , 37 , 149  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Canal (líneas 2, 7)",Canal,"2
+7","Bus: 3 , 12 , 37 , 149","3
+12
+37
+149",6667,Instalación parcialmente accesible para personas con movilidad reducida,BRAVO MURILLO,49,MADRID,MADRID,28003,VALLEHERMOSO,CHAMBERI,40.43934359051524,-3.7043941647283263,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Francos Rodríguez,Parque-de-Francos-Rodriguez,no,,,"Bus: 132, 44 Metro: Francos Rodríguez (línea 7)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Francos Rodríguez (línea 7),Francos Rodríguez,7,"Bus: 132, 44","132
+44",26407,Instalación parcialmente accesible para personas con movilidad reducida,DOCTOR FEDERICO RUBIO Y GALI,63,MADRID,MADRID,28040,CIUDAD UNIVERSITARIA,MONCLOA-ARAVACA,40.45374298443811,-3.714179732136829,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Fuencarral,Parque-de-Fuencarral,sí,,,"Bus: 66, 137  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 66, 137","66
+137",21677,Instalación parcialmente accesible para personas con movilidad reducida,NUESTRA SEÑORA DE VALVERDE,151,MADRID,MADRID,28034,VALVERDE,FUENCARRAL-EL PARDO,40.50021894773631,-3.6861244200250765,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Fuentechica,Parque-de-Fuentechica,no especifica,,,"Bus: 66, 137   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 66, 137","66
+137",20350,Instalación parcialmente accesible para personas con movilidad reducida,ANASTASIA LOPEZ,21,MADRID,MADRID,28034,VALVERDE,FUENCARRAL-EL PARDO,40.49571829898632,-3.6915305267345935,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Fuentelarreina,Parque-de-Fuentelarreina,no,,,"Bus: 67, 82  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 67, 82","67
+82",43963,Instalación parcialmente accesible para personas con movilidad reducida,ROSALIA DE CASTRO,80,MADRID,MADRID,28035,PEÑA GRANDE,FUENCARRAL-EL PARDO,40.48346692636297,-3.7337736098964642,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Gabriela Mistral,Parque-de-Gabriela-Mistral,sí,,,"Bus: 67  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 67,67,125503,Instalación parcialmente accesible para personas con movilidad reducida,ROSALIA DE CASTRO,69,MADRID,MADRID,28035,PEÑA GRANDE,FUENCARRAL-EL PARDO,40.484467522541834,-3.7336783173806616,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Isabel Clara Eugenia,Parque-de-Isabel-Clara-Eugenia,no especifica,,,"Bus: 9, 72, 125, 229",,,,,,,"Bus: 9, 72, 125, 229","9
+72
+125
+229",23301,Instalación parcialmente accesible para personas con movilidad reducida,MAR CASPIO,4,MADRID,MADRID,28033,PINAR DEL REY,HORTALEZA,40.473611797871555,-3.646133317289789,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Juan XXIII,Parque-de-Juan-XXIII,no,,,"Metro: Guzmán el Bueno (línea 6 y 7)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Guzmán el Bueno (línea 6 y 7),Guzmán el Bueno,"6
+7",,,14381,Instalación parcialmente accesible para personas con movilidad reducida,JUAN XXIII,21,MADRID,MADRID,28040,CIUDAD UNIVERSITARIA,MONCLOA-ARAVACA,40.450619984285915,-3.7136749543495617,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de La Rinconada,Parque-de-La-Rinconada,no,,,"Bus: 160  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 160,160,42739,Instalación parcialmente accesible para personas con movilidad reducida,HIENDELAENCINA,9,MADRID,MADRID,28023,ARAVACA,MONCLOA-ARAVACA,40.45750725687833,-3.7664554910416252,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Las Cruces,Parque-de-Las-Cruces,sí,,,"Metro: Aluche (línea 5) Bus: 17, 117, 121, 131, 139, 155 Renfe: Aluche  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Renfe: Aluche C5,C-5,Aluche,Metro: Aluche (línea 5),Aluche,5,"Bus: 17, 117, 121, 131, 139, 155","17
+117
+121
+131
+139
+155",451973,Instalación parcialmente accesible para personas con movilidad reducida,POBLADOS,74,MADRID,MADRID,28044,BUENAVISTA,CARABANCHEL,40.37746689917427,-3.7547689345277977,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Malmoe,Parque-de-Malmoe,no,,,"Bus: 106  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 106,106,42654,Instalación parcialmente accesible para personas con movilidad reducida,MALMOE,2,MADRID,MADRID,28032,PUEBLO NUEVO,CIUDAD LINEAL,40.41540866888321,-3.625727333816089,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Manoteras,Parque-de-Manoteras,no especifica,,,"Metro: Manoteras (línea 4) Bus: 7, 29  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Manoteras (línea 4),Manoteras,4,"Bus: 7, 29","7
+29",18484,Instalación parcialmente accesible para personas con movilidad reducida,BACARES,22,MADRID,MADRID,28033,APOSTOL SANTIAGO,HORTALEZA,40.476654320025524,-3.662490150184719,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Pan Bendito,Parque-de-Pan-Bendito,no,,,"Bus: 47 , 108 , 118 , 121 , 131 Metro: Pan Bendito (línea 11)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Pan Bendito (línea 11),Pan Bendito,11,"Bus: 47 , 108 , 118 , 121 , 131","47
+108
+118
+121
+131",15711,Instalación parcialmente accesible para personas con movilidad reducida,POBLADOS,35,MADRID,MADRID,28044,LAS AGUILAS,CARABANCHEL,40.38951896001857,-3.76740436374511,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Peñagrande,Parque-de-Penagrande,no,,,"Bus: 82  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 82,82,30687,Instalación parcialmente accesible para personas con movilidad reducida,LEOPOLDO ALAS CLARIN,53,MADRID,MADRID,28035,PEÑA GRANDE,FUENCARRAL-EL PARDO,40.48185149371301,-3.732800354586844,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Pinar de Barajas,Parque-de-Pinar-de-Barajas,no especifica,,,"Bus: 114 , 115  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 114 , 115","114
+115",,Instalación parcialmente accesible para personas con movilidad reducida,A-2,700,MADRID,MADRID,28027,PIOVERA,HORTALEZA,40.44943999585466,-3.6315854281089894,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Plata y Castañar,Parque-de-Plata-y-Castanar,sí,,,"Bus: 22, 76  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 22, 76","22
+76",217933,Instalación parcialmente accesible para personas con movilidad reducida,MIRADOR DEL SUR,1,MADRID,MADRID,28021,SAN ANDRES,VILLAVERDE,40.348762550258805,-3.715284870727623,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Pradolongo,Parque-de-Pradolongo,sí,,,"Metro: Hospital 12 de Octubre (línea 3) Bus: 6 , 60 , 78 , 81 , 121 , 131 Cercanías RENFE: 12 de Octubre   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",doce de octubre C5,C-5,doce de octubre,Metro: Hospital 12 de Octubre (línea 3),Hospital 12 de Octubre,"12
+3","Bus: 6 , 60 , 78 , 81 , 121 , 131","6
+60
+78
+81
+121
+131",597000,Instalación parcialmente accesible para personas con movilidad reducida,RAFAELA YBARRA,85,MADRID,MADRID,28026,PRADOLONGO,USERA,40.37557617692429,-3.711963730232908,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Rafael Finat,Parque-de-Rafael-Finat,no,,,"Bus: 17, 117, 139  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 17, 117, 139","17
+117
+139",10011,Instalación parcialmente accesible para personas con movilidad reducida,VIDAUBA,4,MADRID,MADRID,28044,LAS AGUILAS,LATINA,40.383406554321375,-3.7639655933540093,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Salvador Allende,Parque-de-Salvador-Allende,no,,,"Bus: 35, 118,155, SE1, SE832 Metro: La Peseta (línea 11)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: La Peseta (línea 11),La Peseta,11,"Bus: 35, 118,155, SE1, SE832","35
+118
+155
+1
+832",37283,Instalación parcialmente accesible para personas con movilidad reducida,SALVADOR ALLENDE,3,MADRID,MADRID,28054,BUENAVISTA,CARABANCHEL,40.364341448699825,-3.757402071835875,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de San Isidro,Parque-de-San-Isidro,sí,,,"Metro: Marqués de Vadillo (línea 5) Bus: 17 , 50  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Marqués de Vadillo (línea 5),Marqués de Vadillo,5,"Bus: 17 , 50","17
+50",270076,Instalación parcialmente accesible para personas con movilidad reducida,ERMITA DEL SANTO,74,MADRID,MADRID,28019,SAN ISIDRO,CARABANCHEL,40.39924815906885,-3.7284983869120603,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Santa Ana,Parque-de-Santa-Ana,no,,,"Bus: 66, 137  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 66, 137","66
+137",19913,Instalación parcialmente accesible para personas con movilidad reducida,SAN CUGAT DEL VALLES,4,MADRID,MADRID,28034,VALVERDE,FUENCARRAL-EL PARDO,40.49738155071247,-3.6936009892949127,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de Villa Rosa-Paco Caño,Parque-de-Villa-Rosa-Paco-Cano,sí,,,"Bus: 73 y 104  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 73 y 104,"73
+104",49603,Instalación parcialmente accesible para personas con movilidad reducida,ACONCAGUA,2,MADRID,MADRID,28043,CANILLAS,HORTALEZA,40.468674190501815,-3.631588640594873,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Alcazaba,Parque-de-la-Alcazaba,sí,,,"Bus: 42  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 42,42,119657,Instalación parcialmente accesible para personas con movilidad reducida,RIBADAVIA,45,MADRID,MADRID,28029,EL PILAR,FUENCARRAL-EL PARDO,40.47266915640937,-3.707125226601671,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Almudena,Parque-de-la-Almudena,no,,,"Bus: 70 , 106  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 70 , 106","70
+106",33443,Instalación parcialmente accesible para personas con movilidad reducida,NICOLAS SALMERON,4,MADRID,MADRID,28017,PUEBLO NUEVO,CIUDAD LINEAL,40.42060649869604,-3.6324237307227616,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Amistad,Parque-de-la-Amistad,sí,,,"Metro: Villaverde Bajo - Cruce (linea 3) Bus: 18, 116  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Villaverde Bajo - Cruce (linea 3),Villaverde Bajo - Cruce,3,"Bus: 18, 116","18
+116",19420,Instalación parcialmente accesible para personas con movilidad reducida,SANTA PETRONILA,21,MADRID,MADRID,28021,LOS ROSALES,VILLAVERDE,40.348326631620154,-3.6921658727994773,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Bombilla,Parque-de-la-Bombilla,sí,,,"Metro: Príncipe Pío (líneas 6, 10 y R) Bus : 41, 46, 75, N20 Renfe: Príncipe Pío (Líneas C1, C7, C10 y Regional)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","Renfe: Príncipe Pío (Líneas C1, C7, C10 y Regional)","C-1
+C-7
+C-10",Príncipe Pío,"Metro: Príncipe Pío (líneas 6, 10 y R)",Príncipe Pío,"6
+10","Bus : 41, 46, 75, N20","41
+46
+75
+20",110231,Instalación parcialmente accesible para personas con movilidad reducida,VALLADOLID,4,MADRID,MADRID,28008,CASA DE CAMPO,MONCLOA-ARAVACA,40.42834456035844,-3.728941931668392,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Casa de Campo,Parque-de-la-Casa-de-Campo,no especifica,,,"Metro: Batán (línea 10)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Batán (línea 10),Batán,10,,,15355200,Instalación parcialmente accesible para personas con movilidad reducida,PUERTA DEL ANGEL,1,MADRID,MADRID,28011,CASA DE CAMPO,MONCLOA-ARAVACA,40.41472407139105,-3.7301857404819767,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesHistoricos,ParquesJardines
+Parque de la Cuña Verde de Latina,Parque-de-la-Cuna-Verde-de-Latina,sí,,,"Metro: Laguna (linea 6) Bus: 17 , 25 , 31 , 55 , 119  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Laguna (linea 6),Laguna,6,"Bus: 17 , 25 , 31 , 55 , 119","17
+25
+31
+55
+119",653281,Instalación parcialmente accesible para personas con movilidad reducida,CONCEJAL FRANCISCO JOSE JIMENEZ MARTIN,11,MADRID,MADRID,28047,LUCERO,LATINA,40.39998426244181,-3.7486569900905633,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Cuña Verde de O´Donnell,Parque-de-la-Cuna-Verde-de-O´Donnell,sí,,,"Bus: 140  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 140,140,413588,Instalación parcialmente accesible para personas con movilidad reducida,FUENTE CARRANTONA,61,MADRID,MADRID,28030,MARROQUINA,MORATALAZ,40.41220177650095,-3.628985975935673,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesForestales,ParquesJardines
+Parque de la Dehesa Boyal,Parque-de-la-Dehesa-Boyal,sí,,,"Bus: 59 y 79  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 59 y 79,"59
+79",12700,Instalación parcialmente accesible para personas con movilidad reducida,BURJASOT,1,MADRID,MADRID,28021,SAN CRISTOBAL,VILLAVERDE,40.34452019989438,-3.686887364713823,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Gavia,Parque-de-la-Gavia,no especifica,,,"Metro: La Gavia, Congosto (linea 1) Autobús: Línea 103  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: La Gavia, Congosto (linea 1)","La Gavia, Congosto",1,Autobús: Línea 103,103,195000,Instalación parcialmente accesible para personas con movilidad reducida,MAYORAZGO,26,MADRID,MADRID,28051,CASCO H.VALLECAS,VILLA DE VALLECAS,40.36791659504536,-3.6283267501780205,917210079,parquelagavia@madrid.es,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Maceta,Parque-de-la-Maceta,sí,,,"Metro: Vicálvaro (línea 9)  Bus: E3 , 4 , 100 , 106 , 130   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Vicálvaro (línea 9),Vicálvaro,9,"Bus: E3 , 4 , 100 , 106 , 130","3
+4
+100
+106
+130",12922,Instalación parcialmente accesible para personas con movilidad reducida,DAROCA,301,MADRID,MADRID,28032,AMBROZ,VICALVARO,40.40838172678723,-3.6156327652234856,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Montaña Templo de Debod,Parque-de-la-Montana-Templo-de-Debod,no especifica,,,,,,,,,,,,,Instalación parcialmente accesible para personas con movilidad reducida,PROFESOR MARTIN ALMAGRO BASCH,,MADRID,MADRID,28008,CASA DE CAMPO,MONCLOA-ARAVACA,40.423065607234435,-3.7168927333258734,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Supermanzana,Parque-de-la-Supermanzana,sí,,,"Metro: Herrera Oria (línea 9) Bus: 67, 83  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Herrera Oria (línea 9),Herrera Oria,9,"Bus: 67, 83","67
+83",23747,Instalación parcialmente accesible para personas con movilidad reducida,SANGENJO,27,MADRID,MADRID,28034,LA PAZ,FUENCARRAL-EL PARDO,40.48531189120052,-3.7006858825216624,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Ventilla,Parque-de-la-Ventilla,sí,,,"Bus: 42 , 67 , 147  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 42 , 67 , 147","42
+67
+147",,Instalación parcialmente accesible para personas con movilidad reducida,VIA LIMITE,51,MADRID,MADRID,28029,ALMENARA,TETUAN,40.47342193811745,-3.6929061067371793,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Vicalvarada,Parque-de-la-Vicalvarada,sí,,,"Bus: 4 , 100 , 106  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 4 , 100 , 106","4
+100
+106",49712,Instalación parcialmente accesible para personas con movilidad reducida,VILLABLANCA,1,MADRID,MADRID,28032,AMBROZ,VICALVARO,40.40930182229157,-3.608605091516184,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de la Volatería,Parque-de-la-Volateria,no,,,"Metro: línea 11 (San Francisco)  Bus: 116,121,131,155",,,,Metro: línea 11 (San Francisco),línea 11,11,"Bus: 116,121,131,155","116
+121
+131
+155",158058,Instalación parcialmente accesible para personas con movilidad reducida,POBLADOS,110,MADRID,MADRID,28054,BUENAVISTA,CARABANCHEL,40.37342722778796,-3.732581210214349,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de las Avenidas,Parque-de-las-Avenidas,sí,,,"Metro: Parque de las Avenidas (línea 7) Bus: 53, 122, 74, 43, N3.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Parque de las Avenidas (línea 7),Parque de las Avenidas,7,"Bus: 53, 122, 74, 43, N3","53
+122
+74
+43
+3",47000,Instalación parcialmente accesible para personas con movilidad reducida,BRASILIA,6,MADRID,MADRID,28028,GUINDALERA,SALAMANCA,40.44185168357492,-3.6610753472863737,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de las Delicias,Parque-de-las-Delicias,no,,,"Metro: Delicias (línea 3) Bus: 8, 19, 45, 47, 59, 85, 86 y 247  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Delicias (línea 3),Delicias,3,"Bus: 8, 19, 45, 47, 59, 85, 86 y 247","8
+19
+45
+47
+59
+85
+86
+247",23400,Instalación parcialmente accesible para personas con movilidad reducida,PARROCO EUSEBIO CUENCA,13,MADRID,MADRID,28045,DELICIAS,ARGANZUELA,40.396280768551875,-3.6893809207693966,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de los Llanos,Parque-de-los-Llanos,sí,,,"Metro: Canillas (línea 4). Bus: 73 , 112 , 120 , 122 , 153.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Canillas (línea 4),Canillas,4,"Bus: 73 , 112 , 120 , 122 , 153","73
+112
+120
+122
+153",95058,Instalación parcialmente accesible para personas con movilidad reducida,DIONISIO INCA YUPANQUI,8,MADRID,MADRID,28043,PIOVERA,HORTALEZA,40.461621132349094,-3.6281020785174873,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque de los Tilos,Parque-de-los-Tilos,no,,,"Bus: 70 y 106  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,Bus: 70 y 106,"70
+106",19931,Instalación parcialmente accesible para personas con movilidad reducida,NICOLAS SALMERON,1,MADRID,MADRID,28017,PUEBLO NUEVO,CIUDAD LINEAL,40.422169759145554,-3.6348548961758254,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque del Bronce,Parque-del-Bronce,no,,,"Bus: 62, 88 y 148  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,,,,"Bus: 62, 88 y 148","62
+88
+148",28800,Instalación parcialmente accesible para personas con movilidad reducida,BRONCE,5,MADRID,MADRID,28045,LEGAZPI,ARGANZUELA,40.390471636161195,-3.6875778883164587,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque del Espinillo,Parque-del-Espinillo,sí,,,"Metro: Ciudad de los Ángeles (línea 3) Bus: 23, 130  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Ciudad de los Ángeles (línea 3),Ciudad de los Ángeles,3,"Bus: 23, 130","23
+130",73188,Instalación parcialmente accesible para personas con movilidad reducida,UNANIMIDAD,23,MADRID,MADRID,28041,LOS ROSALES,VILLAVERDE,40.361196526923834,-3.6853017812008,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque del Museo del Prado,Parque-del-Museo-del-Prado,no especifica,,,"Metro: Atocha (línea 1). Bus: 10 , 14 , 27 , 34 , 37 , 45 , 59 , 141. RENFE: Atocha RENFE.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",RENFE,,,Metro: Atocha (línea 1),Atocha,1,"Bus: 10 , 14 , 27 , 34 , 37 , 45 , 59 , 141","10
+14
+27
+34
+37
+45
+59
+141",12900,Instalación parcialmente accesible para personas con movilidad reducida,PRADO,11,MADRID,MADRID,28014,LOS JERONIMOS,RETIRO,40.41374876020892,-3.6924939830736947,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Parque del Oeste,Parque-del-Oeste,sí,,,"Metro: Moncloa (línea 3 y 6) , Plaza de España (línea 2, 3 y 10) y Príncipe Pío (línea 6 y 10) Bus: 21, 46, 74, 160, 161, A Cercanías: Príncipe Pío   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","Cercanías: Príncipe Pío C1, C7, C10","C-1
+C-7
+C-10",: Príncipe Pío,"Metro: Moncloa (línea 3 y 6) , Plaza de España (línea 2, 3 y 10) y Príncipe Pío (línea 6 y 10)","Moncloa  , Plaza de España  y Príncipe Pío","3
+6
+2
+10","Bus: 21, 46, 74, 160, 161, A","21
+46
+74
+160
+161",,Instalación parcialmente accesible para personas con movilidad reducida,CAMOENS Y VALERO,4,MADRID,MADRID,28008,CASA DE CAMPO,MONCLOA-ARAVACA,40.43179642724134,-3.7281634896577027,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesHistoricos,ParquesJardines
+Pinar Santa Eugenia,Pinar-Santa-Eugenia,no especifica,,,"Bus: 14, 58 RENFE: Santa Eugenia  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",RENFE: Santa Eugenia C2,C-2,: Santa Eugenia,,,,"Bus: 14, 58","14
+58",136270,Instalación parcialmente accesible para personas con movilidad reducida,CERRO DE ALMODOVAR,1,MADRID,MADRID,28031,CASCO H.VICALVARO,VICALVARO,40.386190698831044,-3.605345456872275,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesForestales,ParquesJardines
+Plaza Mayor de Barajas,Plaza-Mayor-de-Barajas,no especifica,,,"Metro: Línea 8 (Barajas)  Bus: 101  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Línea 8 (Barajas),Línea 8,8,Bus: 101,101,,Instalación parcialmente accesible para personas con movilidad reducida,MAYOR DE BARAJAS,1,MADRID,MADRID,28042,CASCO H.BARAJAS,BARAJAS,40.4735113714068,-3.57805132010274,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Plaza de Murillo,Plaza-de-Murillo,no especifica,,,"Metro: línea 1 (Atocha)  Bus: 10,14, 27, 34, 37, 45  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: línea 1 (Atocha),línea 1,1,"Bus: 10,14, 27, 34, 37, 45","10
+14
+27
+34
+37
+45",5436,Instalación parcialmente accesible para personas con movilidad reducida,MURILLO,1,MADRID,MADRID,28014,LOS JERONIMOS,RETIRO,40.41290521872114,-3.692004931820884,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Plaza de la Lealtad,Plaza-de-la-Lealtad,no especifica,,,"Metro: línea 1 (Atocha), línea 2 (Banco de España) Bus: 10, 14,27,34,37,45  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: línea 1 (Atocha), línea 2 (Banco de España)","línea 1 , línea 2","1
+2","Bus: 10, 14,27,34,37,45","10
+14
+27
+34
+37
+45",8600,Instalación parcialmente accesible para personas con movilidad reducida,PLAZA DE LA LEALTAD,,MADRID,MADRID,28014,,RETIRO,40.41687551533723,-3.6934169057776667,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Quinta de Torre Arias,Quinta-de-Torre-Arias,no especifica,,,"Metro: Torre Arias (línea 5) Bus: 104, 77, 140, 153.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Torre Arias (línea 5),Torre Arias,5,"Bus: 104, 77, 140, 153","104
+77
+140
+153",,Instalación parcialmente accesible para personas con movilidad reducida,ALCALA,551,MADRID,MADRID,28027,EL SALVADOR,SAN BLAS-CANILLEJAS,40.443385945708435,-3.6182513751654133,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesHistoricos,ParquesJardines
+Quinta de la Fuente del Berro,Quinta-de-la-Fuente-del-Berro,sí,,,"Metro: O'Donnell (linea 6) Autobuses: 2, 56, 69, 71, 143, 15, 28  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: O'Donnell (linea 6),O'Donnell,6,"buses: 2, 56, 69, 71, 143, 15, 28","2
+56
+69
+71
+143
+15
+28",74200,Instalación parcialmente accesible para personas con movilidad reducida,ENRIQUE D'ALMONTE,1,MADRID,MADRID,28028,FUENTE DEL BERRO,SALAMANCA,40.42299730556785,-3.6625213630031794,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesHistoricos,ParquesJardines
+Rosaleda de Madrid. Parque del Oeste,Rosaleda-de-Madrid.-Parque-del-Oeste,no especifica,,,"Transporte más próximo Bus: 41, 46, 75   También puedes acceder desde metro:   Arg&amp;uuml;elles   Príncipe Pío",,,,metro:   Arguelles   Príncipe Pío,metro:   Arguelles   Príncipe Pío,,"Bus: 41, 46, 75","41
+46
+75",32000,Instalación parcialmente accesible para personas con movilidad reducida,ROSALEDA,1,MADRID,MADRID,28008,CASA DE CAMPO,MONCLOA-ARAVACA,40.42633204176242,-3.722298777408928,"915489512
+3",sviveros@madrid.es,/contenido/entidadesYorganismos/ParquesJardines/ColeccionesBotanicas,ParquesJardines
+Vivero Estufas de El Retiro,Vivero-Estufas-de-El-Retiro,no especifica,,,"Metro: Atocha (línea 1), Ibiza (línea 9) Bus: 26, 63 , 152, C1, C2  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Atocha (línea 1), Ibiza (línea 9)","Atocha , Ibiza","1
+9","Bus: 26, 63 , 152, C1, C2","26
+63
+152
+1
+2",35000,Instalación parcialmente accesible para personas con movilidad reducida,ANGEL CAIDO,4,MADRID,MADRID,28009,LOS JERONIMOS,RETIRO,40.409899256936335,-3.6823305487957123,915280938,viveroestufasretiro@madrid.es,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Vivero de la Casa de Campo,Vivero-de-la-Casa-de-Campo,no especifica,,,"Metro: Príncipe Pío (líneas 6 y 10 y ramal), Lago (línea 10)  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Príncipe Pío (líneas 6 y 10 y ramal), Lago (línea 10)","Príncipe Pío , Lago","6
+10",,,170000,Instalación parcialmente accesible para personas con movilidad reducida,AZUL,2,MADRID,MADRID,28011,CASA DE CAMPO,MONCLOA-ARAVACA,40.41984158690351,-3.7286969080235455,"915267703
+915268142",viverocasacampo@madrid.es  o infocasacampo@madrid.es,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Vivero municipal de Migas Calientes,Vivero-municipal-de-Migas-Calientes,no especifica,,,,,,,,,,,,73000,No accesible,M-30,2200,MADRID,MADRID,28040,CIUDAD UNIVERSITARIA,MONCLOA-ARAVACA,40.445355536117184,-3.7399742609916697,626527364,viveromigascalientes@madrid.es,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Zona verde C/ Fresnedillas,Zona-verde-C/-Fresnedillas,no,,,,,,,,,,,,,Instalación parcialmente accesible para personas con movilidad reducida,FRESNEDILLAS,1,MADRID,MADRID,28035,FUENTELARREINA,FUENCARRAL-EL PARDO,40.477263871475174,-3.7430025162285188,,,/contenido/entidadesYorganismos/ParquesJardines,ParquesJardines
+Área Forestal de Tres Cantos,area-Forestal-de-Tres-Cantos,no especifica,,,,,,,,,,,,2285600,Instalación parcialmente accesible para personas con movilidad reducida,M-607,2100,MADRID,MADRID,28049,EL PARDO,FUENCARRAL-EL PARDO,40.582362517713584,-3.7054314643264945,,,/contenido/entidadesYorganismos/ParquesJardines/ParquesForestales,ParquesJardines

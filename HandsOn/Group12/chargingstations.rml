@@ -1,0 +1,163 @@
+@prefix rr:   <http://www.w3.org/ns/r2rml#> .
+@prefix rml:  <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:   <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix :   <https://iamabsa.github.io/chargingstation/resource/> .
+@prefix ns: <https://iamabsa.github.io/chargingstation#> .
+
+@base <https://iamabsa.github.io/chargingstation#> .
+
+#######################################################################
+# TriplesMap: Charging Station  (no joins; links via URI templates)
+#######################################################################
+
+<#TriplesMap_Station> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/chargingstation/resource/{EVSEID}" ;
+    rr:class ns:ChargingStation
+  ] ;
+
+  # Literals / attributes
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "DESIGNATION" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ns:evseId ;
+    rr:objectMap [ rml:reference "EVSEID" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ns:address ;
+    rr:objectMap [ rml:reference "ADDRESS" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ns:countryCode ;
+    rr:objectMap [ rml:reference "COUNTRYCODE" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ns:directPayment ;
+    rr:objectMap [ rml:reference "DIRECTPAYMENT" ; rr:datatype xsd:boolean ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ns:shapeWKT ;
+    rr:objectMap [ rml:reference "SHAPE" ]
+  ] ;
+
+  # Object links via URI templates (no parentTriplesMap needed)
+  rr:predicateObjectMap [
+    rr:predicate ns:isOperatedBy ;
+    rr:objectMap [
+      rr:template "https://iamabsa.github.io/chargingstation/resource/{OPERATORNAME}" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ns:isInDistrict ;
+    rr:objectMap [
+      rr:template "https://iamabsa.github.io/chargingstation/resource/{BEZIRK}" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+#######################################################################
+# TriplesMap: Operator
+#######################################################################
+
+<#TriplesMap_Operator> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/chargingstation/resource/{OPERATORNAME}" ;
+    rr:class ns:Operator
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "OPERATORNAME" ]
+  ] .
+
+#######################################################################
+# TriplesMap: District  (links to City via URI template)
+#######################################################################
+
+<#TriplesMap_District> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/chargingstation/resource/{BEZIRK}" ;
+    rr:class ns:District
+  ] ;
+  
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "BEZIRK" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:districtCity ;
+    rr:objectMap [
+      rr:template "https://iamabsa.github.io/chargingstation/resource/{CITY}" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+#######################################################################
+# TriplesMap: City  (links to Country via URI template)
+#######################################################################
+
+<#TriplesMap_City> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/chargingstation/resource/{CITY}" ;
+    rr:class ns:City
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "CITY" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:isCityOf ;
+    rr:objectMap [
+      rr:template "https://iamabsa.github.io/chargingstation/resource/{COUNTRYCODE}" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+#######################################################################
+# TriplesMap: Country
+#######################################################################
+
+<#TriplesMap_Country> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/chargingstation/resource/{COUNTRYCODE}" ;
+    rr:class ns:Country
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "COUNTRYCODE" ]
+  ] .

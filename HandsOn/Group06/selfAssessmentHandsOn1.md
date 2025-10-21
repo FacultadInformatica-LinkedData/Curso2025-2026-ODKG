@@ -23,5 +23,5 @@
 
 ## Comments on the self-assessment
 CSV files were too big to push to repo so we left only initial rows as representation.
-For now we are using data from the city of Palermo.
+Now we are using data from the city of Madrid.
 The decisions made can suffer changes in the future if a better solution is found.
