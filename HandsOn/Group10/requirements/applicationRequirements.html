@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Requirements: BCN Urban Connect</title>
+    <style> 
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.7; 
+            margin: 0 auto; 
+            max-width: 900px; 
+            padding: 2em;
+            color: #333;
+        } 
+        h1, h2, h3 { 
+            color: #111; 
+            border-bottom: 2px solid #007bff; 
+            padding-bottom: 8px;
+        }
+        h3 {
+            border-bottom: 1px solid #ccc;
+        }
+        .mockup {
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin: 2em 0;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .mockup p {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Application Requirements: "BCN Urban Connect"</h1>
+
+    <h2>1. General Application Description</h2>
+    <p>
+        <strong>BCN Urban Connect</strong> is a minimalist web application designed to help users find leisure spots (bars) and mobility points (Bicing stations) in Barcelona. The app's main goal is to answer two simple questions: "What are the nearest bars to this Bicing station?" and "What are the nearest Bicing stations to this bar?". It provides a clean, map-based interface for intuitive urban navigation and planning.
+    </p>
+
+    <h2>2. Functional Requirements (What the app will do)</h2>
+    <ul>
+        <li><strong>FR-01:</strong> The application will display all Bicing stations and all selected bars on an interactive map, using distinct icons for each location type.</li>
+        <li><strong>FR-02:</strong> When a user clicks on a <strong>Bicing station icon</strong>, the map will update to show only that station and the 5 nearest bars to it.</li>
+        <li><strong>FR-03:</strong> When a user clicks on a <strong>bar icon</strong>, the map will update to show only that bar and the 3 nearest Bicing stations to it.</li>
+        <li><strong>FR-04:</strong> The user can click on a bar icon (in any view) to see a pop-up with detailed information, such as its name, address, and type.</li>
+        <li><strong>FR-05:</strong> The application will provide a "Reset View" button to return the map to its initial state.</li>
+    </ul>
+
+    <h2>3. Non-Functional Requirements (How the app will be)</h2>
+    <ul>
+        <li><strong>NFR-01 (Performance):</strong> The initial map should load in under 5 seconds. Filtering actions should feel instantaneous (under 1 second).</li>
+        <li><strong>NFR-02 (Usability):</strong> The interface will be minimalist and intuitive, with easily distinguishable icons.</li>
+    </ul>
+
+    <h2>4. Mock-ups (Interface Wireframes)</h2>
+
+    <div class="mockup">
+        <h3>Mock-up 1: Initial View</h3>
+        <p>This wireframe shows the main web interface on startup. The map displays all locations with two different icons for Bicing stations and bars.</p>
+        <img src="./../mockup/mockup1.jpeg" alt="Mock-up 1: Initial View" style="width:100%; border:1px solid #ccc; border-radius:5px;">
+    </div>
+
+    <div class="mockup">
+        <h3>Mock-up 2: Bicing Station Selected</h3>
+        <p>This view shows the result of clicking on a Bicing station. Only the selected station and its nearest bars are visible, visually linking mobility with leisure.</p>
+        <img src="./../mockup/mockup2.jpeg" alt="Mock-up 2: Bicing Station Selected" style="width:100%; border:1px solid #ccc; border-radius:5px;">
+    </div>
+    
+    <div class="mockup">
+        <h3>Mock-up 3: Bar Selected</h3>
+        <p>This view shows the result of clicking on a bar. The map now only displays the selected bar and the closest Bicing stations, helping users plan their transportation.</p>
+        <img src="./../mockup/mockup3.jpeg" alt="Mock-up 3: Bar Selected" style="width:100%; border:1px solid #ccc; border-radius:5px;">
+    </div>
+
+    <div class="mockup">
+        <h3>Mock-up 4: Venue Detail View</h3>
+        <p>This mock-up shows the detailed information pop-up that appears when a user clicks on a specific bar, displaying its name, address, and category.</p>
+        <img src="./../mockup/mockup4.jpeg" alt="Mock-up 4: Venue Detail View" style="width:100%; border:1px solid #ccc; border-radius:5px;">
+    </div>
+
+</body>
+</html>

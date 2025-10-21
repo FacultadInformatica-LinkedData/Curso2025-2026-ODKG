@@ -1,0 +1,34 @@
+# ======================
+# SPARQL Verification Queries
+# ======================
+
+PREFIX lude: <https://spainuniversities.data/ontology/lude#>
+PREFIX res: <https://spainuniversities.data/id/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Query 1: List all universities and their names
+SELECT DISTINCT ?university ?name
+WHERE {
+  ?university a lude:University ;
+              rdfs:label ?name .
+}
+LIMIT 20
+
+# Query 2: Count how many degrees each university offers
+SELECT ?university (COUNT(?degree) AS ?numDegrees)
+WHERE {
+  ?degree a lude:Degree ;
+          lude:isOfferedBy ?university .
+}
+GROUP BY ?university
+ORDER BY DESC(?numDegrees)
+
+# Query 3: Show degrees with their cutoff grade
+SELECT ?degree ?degreeName ?cutOff
+WHERE {
+  ?degree a lude:Degree ;
+           rdfs:label ?degreeName ;
+           lude:cutOffGrade ?cutOff .
+}
+ORDER BY DESC(?cutOff)
+LIMIT 10
