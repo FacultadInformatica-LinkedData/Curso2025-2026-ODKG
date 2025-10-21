@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus App Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #000; 
+        }
+        h3 {
+            color: #05057f; 
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        strong {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bus App Dataset Requirement Satisfaction</h1>
+        
+        <section>
+            <h2>Overview</h2>
+            <p>
+                This dataset contains information regarding the schedules, stops, frequencies and other information of the Municipal Transport Company (EMT) of the city 
+                of Madrid. 
+            </p>
+        </section>
+        
+        <section>
+            <h2>Meeting the specified requirements:</h2>
+                <section>
+                    <h3>R1. Data are in one of the smart city domains.</h3>
+                        <p>
+                            Yes. It is part of the city's effort to track the public transport to better inform the users,
+                            either through third party applications or official outlets that would have easier access to such information.
+                            
+                        </p>
+                        
+
+                </section>
+                <section>
+                    <h3>R2. Data are available as a CSV file.</h3>
+                        <p>
+                            Yes. All files are CSVs even if the extension is ".txt".
+                        </p>
+                        
+
+                </section>
+                <section>
+                    <h3>R3. Data have an open license so they can be published.</h3>
+                        <p>
+                            Yes. Its license allows for distribution of this information either through the same license or a different one.
+                        </p>
+                        
+
+                </section>
+                <section>
+                    <h3>R4. Data can be easily linked with generic real-world entities (e.g., locations).</h3>
+                        <p>
+                            Yes. The "stops" file for example, contains coordinates to be able to display them in a map.
+                        </p>
+                        
+
+                </section>
+                <section>
+                    <h3>R5. Documentation exists for the data (optional).</h3>
+                        <p>
+                            Yes. It can be found <a href="https://developers.google.com/transit/gtfs/reference?csw=1&hl=es-419">here</a>.
+                            It relates more to Google Transit than solely on the dataset itself but it can be very useful.
+                        </p>
+                        
+
+                </section>
+                <section>
+                    <h3>R6. Data can come from multiple data sources (optional).</h3>
+                        <p>
+                            Data in this dataset only comes from the EMT. But, we think it has a high potential for integration with other datasets.
+                        </p>
+                        
+
+                </section>
+
+
+        </section>
+
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX schema: <https://schema.org/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sc: <http://smartcity.linkeddata.es/lcc/ontology#>
+
+#List all municipal facilities with their names
+
+SELECT ?facility ?name
+WHERE {
+  ?facility a sc:Facility ;
+            schema:name ?name .
+}
+LIMIT 20
+
+
+#Count the number of facilities per district
+
+SELECT ?district (COUNT(?facility) AS ?numFacilities)
+WHERE {
+  ?facility a sc:Facility ;
+            schema:streetAddress ?address .
+  ?address schema:streetAddress ?district .
+}
+GROUP BY ?district
+ORDER BY DESC(?numFacilities)
+
+
+# Facilities with accessibility information
+
+SELECT ?facility ?access
+WHERE {
+  ?facility a sc:Facility ;
+            sc:hasAccessibility ?access .
+}
+LIMIT 15
+
+
+
+# Facilities that have Wi-Fi available
+SELECT ?facility
+WHERE {
+  ?facility a sc:Facility ;
+            sc:haveWifi "sí" .
+}
+
+
+# Facilities linked to external datasets (Wikidata / DBpedia)
+
+SELECT ?facility ?link
+WHERE {
+  ?facility a sc:Facility ;
+            owl:sameAs ?link .
+}
+LIMIT 15

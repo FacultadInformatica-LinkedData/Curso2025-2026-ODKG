@@ -1,0 +1,78 @@
+prefixes:
+  lude:  "https://linkeduniversities.es/vocab/"
+  ex:    "https://linkeduniversities.es/resource/"
+  xsd:   "http://www.w3.org/2001/XMLSchema#"
+  rdf:   "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  rdfs:  "http://www.w3.org/2000/01/rdf-schema#"
+
+mappings:
+
+  DegreeIslasBalearesMapping:
+    sources:
+      - ['data/ISLASBALEARES-degree.csv~csv']
+    s: ex:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:code, $(Code)]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: AcademicLevelMapping
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AcademicLevelID)]   # aus Degree-CSV
+              - [str2, $(AcademicLevelID)]   # aus AcademicLevel-CSV (ggf. anpassen)
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: KnowledgeAreaMapping
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AmbitID)]           # aus Degree-CSV
+              - [str2, $(id)]           # aus KnowledgeArea-CSV (ggf. anpassen)
+      - p: lude:offers
+        o:
+          mapping: UniversityMapping
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityID)]
+
+
+  AcademicLevelMapping:
+    sources:
+      - ['data/academic_level-updated.csv~csv']
+    s: ex:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+      - [lude:code, $(AcademicLevelID)]
+
+  KnowledgeAreaMapping:
+    sources:
+      - ['data/ambit-otros.csv~csv']
+    s: ex:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit)]
+      - [lude:code, $(id)]
+  
+  
+  UniversityMapping:
+    sources:
+      - ['data/universidades-updated.csv~csv']
+    s: ex:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:id, $(UniversityID)]
+      - [lude:acronym, $(Acronym)] 
+      - [lude:cif, $(CIF)]
+      - [lude:type, $(Type)]
+      - [lude:modality, $(Modality)]
+      - [lude:url, $(URL)]
+      - [lude:email, $(Email)]
+      - [lude:telephone, $(Phone)]
+      - [lude:publicationYear, $(Year of Publication)]
