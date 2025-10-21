@@ -7,13 +7,13 @@ Original file is located at
     https://colab.research.google.com/drive/1MxhBw01y63aQ8dY-lopZnGoMnqNl-kVQ
 """
 
-!pip install rdflib
+#!pip install rdflib
 import urllib.request
 url = 'https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/refs/heads/master/Assignment4/course_materials/python/validation.py'
 urllib.request.urlretrieve(url, 'validation.py')
 github_storage = "https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/master/Assignment4/course_materials"
 
-from rdflib import Graph, Namespace, Literal, XSD
+from rdflib import Graph, Namespace, Literal, XSD, URIRef
 from rdflib.namespace import RDF, RDFS
 from validation import Report
 g = Graph()
@@ -25,17 +25,11 @@ g.add((ns.Researcher, RDF.type, RDFS.Class))
 for s, p, o in g:
   print(s,p,o)
 
-from rdflib import Graph, Namespace, Literal, XSD, URIRef
-from rdflib.namespace import RDF, RDFS
-
 ONT = Namespace("http://oeg.fi.upm.es/def/people#")          # clases/propiedades
 PER = Namespace("http://oeg.fi.upm.es/resource/person/")     # individuos
 
 g.bind("ontology", ONT)
 g.bind("person", PER)
-
-# (opcional) elimina restos previos que te estén “ensuciando” el grafo (p.ej. mydomain.org#Researcher)
-g.remove((URIRef("http://mydomain.org#Researcher"), None, None))
 
 # Clases
 g.add((ONT.Person, RDF.type, RDFS.Class))
