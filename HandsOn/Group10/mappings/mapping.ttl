@@ -1,0 +1,246 @@
+@base <http://www.barnabikes.org/ODKG/handsOn/group10/mappings/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix ns: <http://www.barnabikes.org/ODKG/handsOn/group10/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+# =================================================================
+# === MAPEOS DESDE MusicaCopas-updated.csv (BARES) ===
+# =================================================================
+
+# --- 1. TriplesMap para District (desde Bares) ---
+# Genera entidades de Distrito a partir de las columnas de distrito en el CSV de bares
+<#DistrictTriplesMap_Bars> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "MusicaCopas-updated.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/{districtId}";
+        rr:termType rr:IRI;
+        rr:class ns:District
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate ns:districtId;
+        rr:objectMap [ rml:reference "districtId"; rr:datatype xsd:integer ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ns:districtName;
+        rr:objectMap [ rml:reference "districtName"; rr:datatype xsd:string ]
+    ].
+
+# --- 2. TriplesMap para Neighborhood (desde Bares) ---
+# Genera Barrios y los enlaza a sus Distritos
+<#NeighborhoodTriplesMap_Bars> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "MusicaCopas-updated.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/{neighborhoodId}";
+        rr:class ns:Neighborhood
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate ns:neighborhoodId;
+        rr:objectMap [ rml:reference "neighborhoodId"; rr:datatype xsd:integer ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ns:neighborhoodName;
+        rr:objectMap [ rml:reference "neighborhoodName"; rr:datatype xsd:string ]
+    ];
+
+    # --- Relación: Neighborhood -> hasDistrict -> District ---
+    rr:predicateObjectMap [
+        rr:predicate ns:hasDistrict;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictTriplesMap_Bars>;
+            rr:joinCondition [
+                rr:child "districtId";
+                rr:parent "districtId";
+            ]
+        ]
+    ].
+
+# --- 3. TriplesMap para StreetAddress (desde Bares) ---
+# Genera Direcciones y las enlaza a sus Barrios
+<#AddressTriplesMap_Bars> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "MusicaCopas-updated.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+
+    rr:subjectMap [
+        # Creamos una URI de dirección única usando el barId (ya que no hay addressId)
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/{latitude}_{longitude}";
+        rr:class ns:StreetAddress
+    ];
+
+    rr:predicateObjectMap [ rr:predicate ns:addressName; rr:objectMap [ rml:reference "addressName" ; rr:datatype xsd:string ] ];
+    rr:predicateObjectMap [ rr:predicate ns:addressNumber; rr:objectMap [ rml:reference "addressNumber"; rr:datatype xsd:integer ] ];
+    rr:predicateObjectMap [ rr:predicate ns:addressType; rr:objectMap [ rml:reference "addressType" ; rr:datatype xsd:string] ];
+    rr:predicateObjectMap [ rr:predicate ns:postCode; rr:objectMap [ rml:reference "postCode"; rr:datatype xsd:integer ] ];
+    rr:predicateObjectMap [ rr:predicate ns:latitude; rr:objectMap [ rml:reference "latitude"; rr:datatype xsd:float ] ];
+    rr:predicateObjectMap [ rr:predicate ns:longitude; rr:objectMap [ rml:reference "longitude"; rr:datatype xsd:float ] ];
+    
+    # --- Relación: StreetAddress -> hasNeighborhood -> Neighborhood ---
+    rr:predicateObjectMap [
+        rr:predicate ns:hasNeighborhood;
+        rr:objectMap [
+            rr:parentTriplesMap <#NeighborhoodTriplesMap_Bars>;
+            rr:joinCondition [
+                rr:child "neighborhoodId";
+                rr:parent "neighborhoodId";
+            ]
+        ]
+    ].
+
+# --- 4. TriplesMap para Bar ---
+# Genera Bares y los enlaza a sus Direcciones
+<#BarTriplesMap> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "MusicaCopas-updated.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/{barId}";
+        rr:class ns:Bar
+    ];
+
+    rr:predicateObjectMap [ rr:predicate ns:barId; rr:objectMap [ rml:reference "barId"; rr:datatype xsd:string ] ];
+    rr:predicateObjectMap [ rr:predicate ns:barName; rr:objectMap [ rml:reference "barName"; rr:datatype xsd:string ] ];
+    rr:predicateObjectMap [ rr:predicate ns:barType; rr:objectMap [ rml:reference "barType"; rr:datatype xsd:string ] ];
+
+    # --- Relación: Bar -> hasAddress -> StreetAddress ---
+    rr:predicateObjectMap [
+        rr:predicate ns:hasAddress;
+        rr:objectMap [
+            rr:parentTriplesMap <#AddressTriplesMap_Bars>;
+            rr:joinCondition [
+                rr:child "barId";
+                rr:parent "barId";
+            ]
+        ]
+    ].
+
+# =================================================================
+# === MAPEOS DESDE BikeStations-updated.csv (ESTACIONES) ===
+# =================================================================
+
+# --- 1. TriplesMap para District (desde Estaciones) ---
+<#DistrictTriplesMap_Stations> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "BikeStations-updated.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/{districtId}";
+        rr:class ns:District
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate ns:districtId;
+        rr:objectMap [ rml:reference "districtId"; rr:datatype xsd:integer ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ns:districtName;
+        rr:objectMap [ rml:reference "districtName"; rr:datatype xsd:string ]
+    ].
+
+# --- 2. TriplesMap para Neighborhood (desde Estaciones) ---
+<#NeighborhoodTriplesMap_Stations> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "BikeStations-updated.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/{neighborhoodId}";
+        rr:class ns:Neighborhood
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate ns:neighborhoodId;
+        rr:objectMap [ rml:reference "neighborhoodId"; rr:datatype xsd:integer ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ns:neighborhoodName;
+        rr:objectMap [ rml:reference "neighborhoodName"; rr:datatype xsd:string ]
+    ];
+
+    # --- Relación: Neighborhood -> hasDistrict -> District ---
+    rr:predicateObjectMap [
+        rr:predicate ns:hasDistrict;
+        rr:objectMap [
+            rr:parentTriplesMap <#DistrictTriplesMap_Stations>;
+            rr:joinCondition [
+                rr:child "districtId";
+                rr:parent "districtId";
+            ]
+        ]
+    ].
+
+# --- 3. TriplesMap para StreetAddress (desde Estaciones) ---
+<#AddressTriplesMap_Stations> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "BikeStations-updated.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+
+    rr:subjectMap [
+        # Creamos una URI de dirección única usando el stationId
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/station_{stationId}";
+        rr:class ns:StreetAddress
+    ];
+
+    rr:predicateObjectMap [ rr:predicate ns:addressName; rr:objectMap [ rml:reference "addressName" ; rr:datatype xsd:string ] ];
+    rr:predicateObjectMap [ rr:predicate ns:addressNumber; rr:objectMap [ rml:reference "addressNumber"; rr:datatype xsd:integer ] ];
+    rr:predicateObjectMap [ rr:predicate ns:addressType; rr:objectMap [ rml:reference "addressType"; rr:datatype xsd:string ] ];
+    rr:predicateObjectMap [ rr:predicate ns:postCode; rr:objectMap [ rml:reference "postCode"; rr:datatype xsd:integer ] ];
+    rr:predicateObjectMap [ rr:predicate ns:latitude; rr:objectMap [ rml:reference "latitude"; rr:datatype xsd:float ] ];
+    rr:predicateObjectMap [ rr:predicate ns:longitude; rr:objectMap [ rml:reference "longitude"; rr:datatype xsd:float ] ];
+    
+    # --- Relación: StreetAddress -> hasNeighborhood -> Neighborhood ---
+    rr:predicateObjectMap [
+        rr:predicate ns:hasNeighborhood;
+        rr:objectMap [
+            rr:parentTriplesMap <#NeighborhoodTriplesMap_Stations>;
+            rr:joinCondition [
+                rr:child "neighborhoodId";
+                rr:parent "neighborhoodId";
+            ]
+        ]
+    ].
+
+# --- 4. TriplesMap para BikingStation ---
+<#StationTriplesMap> a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "BikeStations-updated.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+
+    rr:subjectMap [
+        rr:template "http://www.barnabikes.org/ODKG/handsOn/group10/resource/BikingStation/{stationId}";
+        rr:class ns:BikingStation
+    ];
+
+    rr:predicateObjectMap [ rr:predicate ns:stationId; rr:objectMap [ rml:reference "stationId"; rr:datatype xsd:string ] ];
+    rr:predicateObjectMap [ rr:predicate ns:capacity; rr:objectMap [ rml:reference "capacity"; rr:datatype xsd:integer ] ];
+
+    # --- Relación: BikingStation -> hasAddress -> StreetAddress ---
+    rr:predicateObjectMap [
+        rr:predicate ns:hasAddress;
+        rr:objectMap [
+            rr:parentTriplesMap <#AddressTriplesMap_Stations>;
+            rr:joinCondition [
+                rr:child "stationId";
+                rr:parent "stationId";
+            ]
+        ]
+    ].

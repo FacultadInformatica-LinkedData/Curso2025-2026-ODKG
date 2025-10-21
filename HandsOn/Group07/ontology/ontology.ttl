@@ -1,0 +1,284 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix lude: <https://spanishuniversities.data/ontology/lude#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+schema1:url a owl:DatatypeProperty ;
+    rdfs:label "url" ;
+    rdfs:range xsd:anyURI .
+
+rdfs:label a owl:DatatypeProperty ;
+    rdfs:label "label" ;
+    rdfs:domain lude:AutonomousCommunity,
+        lude:Degree,
+        lude:Faculty,
+        lude:KnowledgeArea,
+        lude:Municipality,
+        lude:Province,
+        lude:University,
+        lude:academicLevel ;
+    rdfs:range xsd:string .
+
+geo1:lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:float .
+
+geo1:long a owl:DatatypeProperty ;
+    rdfs:label "long" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:float .
+
+lude:academicYear a owl:DatatypeProperty ;
+    rdfs:label "academic year" ;
+    rdfs:range xsd:string .
+
+lude:acronym a owl:DatatypeProperty ;
+    rdfs:label "acronym" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:string .
+
+lude:address a owl:DatatypeProperty ;
+    rdfs:label "address" ;
+    rdfs:domain lude:Address ;
+    rdfs:range xsd:string .
+
+lude:adjudicationRound a owl:DatatypeProperty ;
+    rdfs:label "adjudication round" ;
+    rdfs:range xsd:string .
+
+lude:admissionPathway a owl:DatatypeProperty ;
+    rdfs:label "admission pathway" ;
+    rdfs:range xsd:string .
+
+lude:anecaAssessmentReportDate a owl:DatatypeProperty ;
+    rdfs:label "aneca assessment report date" ;
+    rdfs:range xsd:date .
+
+lude:basicTrainingCredits a owl:DatatypeProperty ;
+    rdfs:label "basic training credits" ;
+    rdfs:range xsd:integer .
+
+lude:campus a owl:DatatypeProperty ;
+    rdfs:label "campus" ;
+    rdfs:range xsd:string .
+
+lude:cif a owl:DatatypeProperty ;
+    rdfs:label "cif" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:string .
+
+lude:code a owl:DatatypeProperty ;
+    rdfs:label "code" ;
+    rdfs:domain lude:Degree ;
+    rdfs:range xsd:string .
+
+lude:codeCif a owl:DatatypeProperty ;
+    rdfs:label "code cif" ;
+    rdfs:range xsd:integer .
+
+lude:codeSac a owl:DatatypeProperty ;
+    rdfs:label "code sac" ;
+    rdfs:range xsd:integer .
+
+lude:councilOfUniversitiesReportDate a owl:DatatypeProperty ;
+    rdfs:label "council of universities report date" ;
+    rdfs:range xsd:date .
+
+lude:cutoffGrade a owl:DatatypeProperty ;
+    rdfs:label "cutoff grade" ;
+    rdfs:range xsd:float .
+
+lude:deliveredAt a owl:ObjectProperty ;
+    rdfs:label "delivered at" ;
+    rdfs:domain lude:Degree ;
+    rdfs:range lude:Faculty .
+
+lude:ectsCredits a owl:DatatypeProperty ;
+    rdfs:label "ects credits" ;
+    rdfs:range xsd:integer .
+
+lude:email a owl:DatatypeProperty ;
+    rdfs:label "email" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:string .
+
+lude:hasAcademicLevel a owl:ObjectProperty ;
+    rdfs:label "has academic level" ;
+    rdfs:domain lude:Degree ;
+    rdfs:range lude:academicLevel .
+
+lude:hasAddress a owl:ObjectProperty ;
+    rdfs:label "has address" ;
+    rdfs:domain lude:University ;
+    rdfs:range lude:Address .
+
+lude:hasFaculty a owl:ObjectProperty ;
+    rdfs:label "has faculty" ;
+    rdfs:domain lude:University ;
+    rdfs:range lude:Faculty .
+
+lude:hasKnowledgeArea a owl:ObjectProperty ;
+    rdfs:label "has knowledge area" ;
+    rdfs:domain lude:Degree ;
+    rdfs:range lude:KnowledgeArea .
+
+lude:id a owl:DatatypeProperty ;
+    rdfs:label "id" ;
+    rdfs:domain lude:Address,
+        lude:AutonomousCommunity,
+        lude:Degree,
+        lude:Faculty,
+        lude:KnowledgeArea,
+        lude:Municipality,
+        lude:Province,
+        lude:University,
+        lude:academicLevel ;
+    rdfs:range xsd:string .
+
+lude:language a owl:DatatypeProperty ;
+    rdfs:label "language" ;
+    rdfs:range xsd:string .
+
+lude:locality a owl:DatatypeProperty ;
+    rdfs:label "locality" ;
+    rdfs:domain lude:Address ;
+    rdfs:range xsd:string .
+
+lude:locatedInMunicipality a owl:ObjectProperty ;
+    rdfs:label "located in municipality" ;
+    rdfs:domain lude:Address ;
+    rdfs:range lude:Municipality .
+
+lude:modality a owl:DatatypeProperty ;
+    rdfs:label "modality" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:string .
+
+lude:newStudentsPosts a owl:DatatypeProperty ;
+    rdfs:label "new students posts" ;
+    rdfs:range xsd:integer .
+
+lude:offeredCredits a owl:DatatypeProperty ;
+    rdfs:label "offered credits" ;
+    rdfs:range xsd:integer .
+
+lude:offers a owl:ObjectProperty ;
+    rdfs:label "offers" ;
+    rdfs:domain lude:University ;
+    rdfs:range lude:Degree .
+
+lude:partOfAutonomousCommunity a owl:ObjectProperty ;
+    rdfs:label "part of autonomous community" ;
+    rdfs:domain lude:Province ;
+    rdfs:range lude:AutonomousCommunity .
+
+lude:partOfProvince a owl:ObjectProperty ;
+    rdfs:label "part of province" ;
+    rdfs:domain lude:Municipality ;
+    rdfs:range lude:Province .
+
+lude:postalCode a owl:DatatypeProperty ;
+    rdfs:label "postal code" ;
+    rdfs:domain lude:Address ;
+    rdfs:range xsd:integer .
+
+lude:publicationYear a owl:DatatypeProperty ;
+    rdfs:label "publication year" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:gYear .
+
+lude:sameAsWikidata a owl:ObjectProperty ;
+    rdfs:label "same as wikidata" ;
+    rdfs:domain lude:AutonomousCommunity,
+        lude:Municipality,
+        lude:Province,
+        lude:University ;
+    rdfs:range rdfs:Resource .
+
+lude:seatsAvailable a owl:DatatypeProperty ;
+    rdfs:label "seats available" ;
+    rdfs:range xsd:integer .
+
+lude:teachingModaliy a owl:DatatypeProperty ;
+    rdfs:label "teaching modaliy" ;
+    rdfs:range xsd:string .
+
+lude:telephone a owl:DatatypeProperty ;
+    rdfs:label "telephone" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:string .
+
+lude:type a owl:DatatypeProperty ;
+    rdfs:label "type" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:string .
+
+lude:updateDate a owl:DatatypeProperty ;
+    rdfs:label "update date" ;
+    rdfs:range xsd:date .
+
+lude:url a owl:DatatypeProperty ;
+    rdfs:label "url" ;
+    rdfs:domain lude:University ;
+    rdfs:range xsd:anyURI .
+
+rdfs:Resource a owl:Class ;
+    rdfs:label "Resource" .
+
+<https://spainuniversities.data/ontology/lude#> a owl:Ontology ;
+    dcterms:created "2025-10-16"^^xsd:date ;
+    dcterms:description "Vocabulary for universities, faculties, degrees, program offerings and cut-offs across Spanish regions."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "Linked Universities Data Explorer Ontology"@en ;
+    vann:preferredNamespacePrefix "lude" ;
+    vann:preferredNamespaceUri <https://spainuniversities.data/ontology/lude#> ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+lude:KnowledgeArea a owl:Class ;
+    rdfs:label "Knowledge Area" .
+
+lude:academicLevel a owl:Class,
+        owl:DatatypeProperty ;
+    rdfs:label "academic Level",
+        "academic level" ;
+    rdfs:range xsd:string .
+
+lude:AutonomousCommunity a owl:Class ;
+    rdfs:label "Autonomous Community" .
+
+lude:Faculty a owl:Class ;
+    rdfs:label "Faculty" .
+
+lude:Municipality a owl:Class ;
+    rdfs:label "Municipality" .
+
+lude:Province a owl:Class ;
+    rdfs:label "Province" .
+
+lude:Address a owl:Class ;
+    rdfs:label "Address" .
+
+lude:Degree a owl:Class ;
+    rdfs:label "Degree" .
+
+lude:University a owl:Class ;
+    rdfs:label "University" .
+

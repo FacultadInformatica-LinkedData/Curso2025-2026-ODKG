@@ -1,0 +1,69 @@
+PREFIX base: <http://crtm-urban-buses.org/opendata/handsOn/group11/>
+PREFIX ont: <http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#>
+PREFIX schema: <http://schema.org/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Lists up to 100 bus routes (short name, long name, and URL) operated by the "CRTM" agency.
+SELECT ?routeShortName ?routeLongName ?routeUrl
+WHERE {
+  ?agency a ont:Agency ;
+          schema:name "CRTM" ;
+          ont:operatesRoute ?route .
+
+  ?route a ont:BusRoute ;
+         ont:routeShortName ?routeShortName ;
+         ont:routeLongName ?routeLongName .
+  
+  OPTIONAL { ?route schema:url ?routeUrl . }
+}
+ORDER BY ASC(?routeShortName)
+LIMIT 100
+
+# Finds the first 20 wheelchair-accessible trips, along with their headsigns, for bus route "1".
+SELECT ?trip ?tripHeadsign
+WHERE {
+  ?route a ont:BusRoute ;
+         ont:routeShortName "1" ;
+         ont:hasTrip ?trip .
+
+  ?trip a ont:Trip ;
+        ont:tripHeadsign ?tripHeadsign ;
+        ont:wheelChairAccessible "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+}
+LIMIT 20
+
+# Retrieves the ordered sequence of stops, including stop names and times, for a single trip on route "MADRID (Legazpi)-VALDEMORO".
+SELECT ?sequence ?stopName ?arrivalTime ?departureTime
+WHERE {
+  {
+    SELECT ?trip
+    WHERE {
+      ?route ont:routeShortName "MADRID (Legazpi)-VALDEMORO" ;
+             ont:hasTrip ?trip .
+    }
+    LIMIT 1
+  }
+
+  ?trip ont:hasStopTime ?stopTime .
+
+  ?stopTime ont:stopSequence ?sequence ;
+            ont:arrivalTime ?arrivalTime ;
+            ont:departureTime ?departureTime ;
+            ont:refersToStop ?stop .
+  
+  ?stop schema:name ?stopName .
+}
+ORDER BY ASC(?sequence)
+
+# Finds up to 100 bus stops located within a specific geographical bounding box (an area around Madrid's center).
+SELECT ?stopName ?lat ?lon
+WHERE {
+  ?stop a ont:Stop ;
+        schema:name ?stopName ;
+        geo:lat ?lat ;
+        geo:long ?lon .
+  FILTER(?lat > 40.41 && ?lat < 40.42)
+  FILTER(?lon > -3.71 && ?lon < -3.70)
+}
+LIMIT 100

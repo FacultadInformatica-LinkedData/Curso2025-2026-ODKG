@@ -1,0 +1,181 @@
+PREFIX safeschool: <http://safeschool.linkeddata.es/ontology#>
+PREFIX schema: <https://schema.org/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+
+# =========================================================================
+
+# Query 1: Get the names and types of the first 10 educational centers.
+# This query verifies that the basic mapping of centers is working.
+SELECT ?center ?name ?type
+WHERE {
+  ?center a safeschool:EducationalCenter ;
+          schema:name ?name ;
+          schema:description ?type .
+}
+LIMIT 10
+
+---
+
+# Query 2: Find all public schools ("PÚBLICO") in the "Centro" district and their websites.
+# This query checks if filtering by data properties works as expected.
+SELECT ?center ?name ?website
+WHERE {
+  ?center a safeschool:EducationalCenter ;
+          schema:name ?name ;
+          safeschool:ownershipType "PÚBLICO" ;
+          safeschool:inDistrict ?district .
+  ?district schema:name "CENTRO" .
+  OPTIONAL { ?center schema:url ?website . }
+}
+
+---
+
+# Query 3: Get the WKT geometry for the educational center with code "28004059" (CERVANTES).
+# This query verifies that the geometry data and district link were created correctly.
+SELECT ?name ?geometry ?districtName
+WHERE {
+  ?center schema:identifier "28004059" ;
+          schema:name ?name ;
+          safeschool:wktGeometry ?geometry ;
+          safeschool:inDistrict ?district .
+  ?district schema:name ?districtName .
+}
+
+---
+
+# Query 4: Count the number of educational centers in each district.
+# This query is useful for aggregating data and verifying the transformation on a larger scale.
+SELECT ?districtName (COUNT(?center) AS ?numberOfCenters)
+WHERE {
+    ?center a safeschool:EducationalCenter ;
+            safeschool:inDistrict ?district .
+    ?district schema:name ?districtName .
+}
+GROUP BY ?districtName
+ORDER BY DESC(?numberOfCenters)
+
+---
+
+# Query 5: Count the total number of all educational centers.
+# This query gives a final count to check if all rows from the CSV have been transformed.
+SELECT (COUNT(?center) AS ?totalCenters)
+WHERE {
+  ?center a safeschool:EducationalCenter .
+}
+
+---
+
+# Query 6: Get the first 10 accidents with pedestrians involved.
+# This query verifies that the accident mapping is working correctly.
+SELECT ?accident ?location ?date ?weather
+WHERE {
+  ?accident a safeschool:Accident ;
+            schema:description ?location ;
+            schema:startDate ?date ;
+            safeschool:weatherCondition ?weather ;
+            safeschool:pedestrianInvolved true .
+}
+LIMIT 10
+
+---
+
+# Query 7: Count accidents by district.
+# This query verifies the link between accidents and districts.
+SELECT ?districtName (COUNT(?accident) AS ?numberOfAccidents)
+WHERE {
+  ?accident a safeschool:Accident ;
+            safeschool:inDistrict ?district .
+  ?district schema:name ?districtName .
+}
+GROUP BY ?districtName
+ORDER BY DESC(?numberOfAccidents)
+
+---
+
+# Query 8: Find accidents with positive alcohol or drug tests.
+# This query checks boolean data properties.
+SELECT ?accident ?location ?date ?alcohol ?drug
+WHERE {
+  ?accident a safeschool:Accident ;
+            schema:description ?location ;
+            schema:startDate ?date ;
+            safeschool:alcoholPositive ?alcohol ;
+            safeschool:drugPositive ?drug .
+  FILTER(?alcohol = true || ?drug = true)
+}
+LIMIT 10
+
+---
+
+# Query 9: Get information about speed cameras.
+# This query verifies that the speed camera mapping is working correctly.
+SELECT ?camera ?location ?type ?speedLimit
+WHERE {
+  ?camera a safeschool:SpeedCamera ;
+          schema:description ?location ;
+          safeschool:cameraType ?type ;
+          safeschool:speedLimit ?speedLimit .
+}
+LIMIT 10
+
+---
+
+# Query 10: Count total number of resources by type.
+# This query gives an overview of all transformed data.
+SELECT ?type (COUNT(?resource) AS ?count)
+WHERE {
+  ?resource a ?type .
+  FILTER(?type IN (safeschool:Accident, safeschool:EducationalCenter, safeschool:SpeedCamera, safeschool:District))
+}
+GROUP BY ?type
+ORDER BY DESC(?count)
+
+---
+
+# Query 11: GeoSPARQL - Find accidents within 500 meters of a specific school.
+# This query tests the geospatial data and relationships.
+SELECT ?accident ?accident_date ?distance
+WHERE {
+  # Find the school named "CERVANTES" and get its location
+  ?school a safeschool:EducationalCenter ;
+          schema:name "CERVANTES" ;
+          safeschool:wktGeometry ?school_geometry .
+
+  # Find all accidents and get their locations and dates
+  ?accident a safeschool:Accident ;
+            schema:startDate ?accident_date ;
+            safeschool:wktGeometry ?accident_geometry .
+
+  # Calculate the distance between the school and each accident in meters
+  BIND(geof:distance(?school_geometry, ?accident_geometry, uom:metre) AS ?distance)
+
+  # Filter the results to only include accidents within 500 meters
+  FILTER(?distance < 500)
+}
+# Order the results by the closest accidents first
+ORDER BY ASC(?distance)
+
+---
+
+# Query 12: GeoSPARQL - Find accidents within 500 meters of any speed camera
+#This query finds accidents that occurred near any speed camera.
+SELECT ?accident ?camera_id ?distance
+WHERE {
+  # Find all speed cameras and get their locations and IDs
+  ?camera a safeschool:SpeedCamera ;
+          schema:identifier ?camera_id ;
+          safeschool:wktGeometry ?camera_geometry .
+
+  # Find all accidents and get their locations
+  ?accident a safeschool:Accident ;
+            safeschool:wktGeometry ?accident_geometry .
+
+  # Calculate the distance between each camera and each accident
+  BIND(geof:distance(?camera_geometry, ?accident_geometry, uom:metre) AS ?distance)
+
+  # Filter for accidents within a 500-meter radius
+  FILTER(?distance < 500)
+}
+ORDER BY ?camera_id ASC(?distance)

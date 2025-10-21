@@ -1,14 +1,14 @@
-@prefix ns: <http://www.barnabikes.org/ODKG/handsOn/group10/ontology#> .
+@prefix ns: <http://www.barnabikes.org/ODKG/handsOn/group10/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix mod: <https://w3id.org/mod#> .
 
-# Ontology metadata
-<http://www.barnabikes.org/ODKG/handsOn/group10/ontology> a owl:Ontology ;
+# --- Ontología ---
+ns: a owl:Ontology ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
-# ---------- CLASSES ----------
+# --- Clases ---
 ns:Bar a owl:Class ;
     rdfs:label "Bar" .
 
@@ -18,32 +18,112 @@ ns:BikingStation a owl:Class ;
 ns:District a owl:Class ;
     rdfs:label "District" .
 
-ns:Street a owl:Class ;
-    rdfs:label "Street" .
+ns:Neighborhood a owl:Class ;
+    rdfs:label "Neighborhood" .
 
-# ---------- OBJECT PROPERTIES ----------
+ns:StreetAddress a owl:Class ;
+    rdfs:label "Street Address" .
+
+# --- Propiedades de Objeto (Relaciones) ---
+ns:hasAddress a owl:ObjectProperty ;
+    rdfs:label "has address" ;
+    # Dominio: SÍ (unión de ambas clases de origen)
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf ( ns:Bar ns:BikingStation )
+    ] .
+    # Rango: NO (porque la flecha es discontinua según la leyenda)
+    # No se define rdfs:range.
+
 ns:hasDistrict a owl:ObjectProperty ;
     rdfs:label "has district" ;
-    rdfs:domain ns:BikingStation ;
+    # Dominio: SÍ, Rango: SÍ (flecha sólida)
+    rdfs:domain ns:Neighborhood ;
     rdfs:range ns:District .
 
-ns:hasStreet a owl:ObjectProperty ;
-    rdfs:label "has street" ;
+ns:hasNeighborhood a owl:ObjectProperty ;
+    rdfs:label "has neighborhood" ;
+    # Dominio: SÍ, Rango: SÍ (flecha sólida)
+    rdfs:domain ns:StreetAddress ;
+    rdfs:range ns:Neighborhood .
+
+# --- Propiedades de Datos (Atributos) ---
+
+# --- Atributos de Bar ---
+ns:barId a owl:DatatypeProperty ;
+    rdfs:label "barId" ;
+    rdfs:domain ns:Bar ;
+    rdfs:range xsd:string .
+
+ns:barName a owl:DatatypeProperty ;
+    rdfs:label "barName" ;
+    rdfs:domain ns:Bar ;
+    rdfs:range xsd:string .
+
+ns:barType a owl:DatatypeProperty ;
+    rdfs:label "barType" ;
+    rdfs:domain ns:Bar ;
+    rdfs:range xsd:string .
+
+# --- Atributos de BikingStation ---
+ns:stationId a owl:DatatypeProperty ;
+    rdfs:label "stationId" ;
     rdfs:domain ns:BikingStation ;
-    rdfs:range ns:Street .
+    rdfs:range xsd:string .
 
-ns:locatedIn a owl:ObjectProperty ;
-    rdfs:label "located in" ;
-    rdfs:domain ns:Bar ;
-    rdfs:range ns:District .
+ns:capacity a owl:DatatypeProperty ;
+    rdfs:label "capacity" ;
+    rdfs:domain ns:BikingStation ;
+    rdfs:range xsd:integer .
 
-ns:onStreet a owl:ObjectProperty ;
-    rdfs:label "on street" ;
-    rdfs:domain ns:Bar ;
-    rdfs:range ns:Street .
+# --- Atributos de StreetAddress ---
+ns:addressName a owl:DatatypeProperty ;
+    rdfs:label "addressName" ;
+    rdfs:domain ns:StreetAddress ;
+    rdfs:range xsd:string .
 
-# ---------- DATATYPE PROPERTY ----------
-ns:name a owl:DatatypeProperty ;
-    rdfs:label "name" ;
+ns:addressNumber a owl:DatatypeProperty ;
+    rdfs:label "addressNumber" ;
+    rdfs:domain ns:StreetAddress ;
+    rdfs:range xsd:integer .
+
+ns:addressType a owl:DatatypeProperty ;
+    rdfs:label "addressType" ;
+    rdfs:domain ns:StreetAddress ;
+    rdfs:range xsd:string .
+
+ns:postCode a owl:DatatypeProperty ;
+    rdfs:label "postCode" ;
+    rdfs:domain ns:StreetAddress ;
+    rdfs:range xsd:integer .
+
+ns:latitude a owl:DatatypeProperty ;
+    rdfs:label "latitude" ;
+    rdfs:domain ns:StreetAddress ;
+    rdfs:range xsd:float .
+
+ns:longitude a owl:DatatypeProperty ;
+    rdfs:label "longitude" ;
+    rdfs:domain ns:StreetAddress ;
+    rdfs:range xsd:float .
+
+# --- Atributos de Neighborhood ---
+ns:neighborhoodId a owl:DatatypeProperty ;
+    rdfs:label "neighborhoodId" ;
+    rdfs:domain ns:Neighborhood ;
+    rdfs:range xsd:integer .
+
+ns:neighborhoodName a owl:DatatypeProperty ;
+    rdfs:label "neighborhoodName" ;
+    rdfs:domain ns:Neighborhood ;
+    rdfs:range xsd:string .
+
+# --- Atributos de District ---
+ns:districtId a owl:DatatypeProperty ;
+    rdfs:label "districtId" ;
+    rdfs:domain ns:District ;
+    rdfs:range xsd:integer .
+
+ns:districtName a owl:DatatypeProperty ;
+    rdfs:label "districtName" ;
     rdfs:domain ns:District ;
     rdfs:range xsd:string .

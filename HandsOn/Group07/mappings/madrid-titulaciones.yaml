@@ -1,0 +1,94 @@
+prefixes:
+  lude: https://linkeduniversities.es/vocab/
+  ex: https://linkeduniversities.es/resource/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+
+mappings:
+
+  MadridDegreeMapping:
+    sources:
+      - [uc3m-urjc-ucm-uam-titulaciones-updated.csv~csv]
+    s: ex:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [lude:ectsCredits, $(ectsCredits), xsd:integer]
+      - [lude:teachingModality, $(teachingModality), xsd:string]
+      - [lude:language, $(Language), xsd:string]
+      - p: lude:hasAcademicLevel
+        o: 
+          - mapping: AcademicLevelMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelId)]
+                - [str2, $(AcademicLevelID)]
+      - p: lude:hasKnowledgeArea
+        o: 
+          - mapping: KnowledgeAreaMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AmbitId)]
+                - [str2, $(id)]
+      - p: lude:deliveredAt
+        o: 
+          - mapping: FacultyMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(FacultyId)]
+                - [str2, $(FacultyId)]
+  AcademicLevelMapping:
+    sources:
+      - [academic_level-updated.csv~csv]
+    s: ex:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(AcademicLevel)]
+ 
+  KnowledgeAreaMapping:
+    sources:
+      - [ambit-otros.csv~csv]
+    s: ex:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit)]
+      
+  FacultyMapping:
+    sources:
+      - [faculty-madrid.csv~csv] 
+    s: ex:Faculty/$(FacultyId)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty)]
+      - [lude:campus, $(Campus)]
+  UniversityMapping:
+    sources:
+      - [universidades-updated.csv~csv]
+    s: ex:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:updateDate, $(Year of Publication), xsd:gYear]
+      - [lude:teachingModality, $(Modality), xsd:string]
+      - [lude:URL, $(URL), xsd:anyURI]
+      - [lude:Email, $(Email), xsd:string]
+      - [lude:Phone, $(Phone), xsd:string]
+      - [lude:CIF, $(CIF), xsd:string]
+      - [lude:Acronym, $(Acronym), xsd:string]
+      - [lude:Type, $(Type), xsd:string]
+      - p: lude:offers
+        o: 
+          - mapping: MadridDegreeMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+  
+      

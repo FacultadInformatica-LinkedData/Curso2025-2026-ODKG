@@ -571,5 +571,38 @@
     "oldColumnName": "Y (WGS84)",
     "newColumnName": "coordenada_y_utm",
     "description": "Rename column Y (WGS84) to coordenada_y_utm"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "longitud",
+    "expression": "grel:\"POINT(\" + cells['longitud'].value + \" \" + cells['latitud'].value + \")\"",
+    "onError": "set-to-blank",
+    "newColumnName": "wktGeometry",
+    "columnInsertIndex": 9,
+    "description": "Create column wktGeometry at index 9 based on column longitud using expression grel:\"POINT(\" + cells['longitud'].value + \" \" + cells['latitud'].value + \")\""
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "coordenada_x_utm",
+    "description": "Remove column coordenada_x_utm"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "coordenada_y_utm",
+    "description": "Remove column coordenada_y_utm"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "longitud",
+    "description": "Remove column longitud"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "latitud",
+    "description": "Remove column latitud"
   }
 ]

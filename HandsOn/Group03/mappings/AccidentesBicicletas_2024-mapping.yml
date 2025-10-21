@@ -1,0 +1,79 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  rml: http://semweb.mmlab.be/ns/rml#
+  ql: http://semweb.mmlab.be/ns/ql#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  mts: http://madrid-transport-safety.org/ontology#
+  resource: http://madrid-transport-safety.org/resource/
+
+mappings:
+  AccidentMap:
+    sources:
+      - [../csv/AccidentesBicicletas_2024-updated.csv~csv]
+    s: http://madrid-transport-safety.org/resource/accident/$(num_expediente)
+    po:
+      - [a, mts:Accident]
+      - [mts:caseNumber, $(num_expediente)]
+      - [mts:accidentDate, $(fecha)]
+      - [mts:accidentTime, $(hora)]
+      - [mts:accidentLocation, $(localizacion)]
+      - [mts:houseNumber, $(numero)]
+      - [mts:accidentType, $(tipo_accidente)]
+      - [mts:weatherCondition, $(estado_meteorológico)]
+      - [mts:vehicleType, $(tipo_vehiculo)]
+      - [mts:x_utm, $(coordenada_x_utm), xsd:decimal]
+      - [mts:y_utm, $(coordenada_y_utm), xsd:decimal]
+      - p: mts:locatedInDistrict
+        o:
+          mapping: DistrictMap
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(cod_distrito)]
+              - [str2, $(cod_distrito)]
+
+  DistrictMap:
+    sources:
+      - [../csv/AccidentesBicicletas_2024-updated.csv~csv]
+    s: http://madrid-transport-safety.org/resource/district/$(cod_distrito)
+    po:
+      - [a, mts:District]
+      - [mts:districtCode, $(cod_distrito), xsd:integer]
+      - [mts:districtName, $(distrito)]
+
+  PersonMap:
+    sources:
+      - [../csv/AccidentesBicicletas_2024-updated.csv~csv]
+    s: http://madrid-transport-safety.org/resource/person/$(num_expediente)
+    po:
+      - [a, mts:Person]
+      - [mts:personType, $(tipo_persona)]
+      - [mts:ageRange, $(rango_edad)]
+      - [mts:gender, $(sexo)]
+      - [mts:alcoholPositive, $(positiva_alcohol), xsd:boolean]
+      - [mts:drugPositive, $(positiva_droga), xsd:boolean]
+      - p: mts:involvedInAccident
+        o:
+          mapping: AccidentMap
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(num_expediente)]
+              - [str2, $(num_expediente)]
+      - p: mts:hasInjury
+        o:
+          mapping: InjuryMap
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(num_expediente)]
+              - [str2, $(num_expediente)]
+
+  InjuryMap:
+    sources:
+      - [../csv/AccidentesBicicletas_2024-updated.csv~csv]
+    s: http://madrid-transport-safety.org/resource/injury/$(num_expediente)
+    po:
+      - [a, mts:Injury]
+      - [mts:injuryCode, $(cod_lesividad), xsd:integer]
+      - [mts:injuryDescription, $(lesividad)]
