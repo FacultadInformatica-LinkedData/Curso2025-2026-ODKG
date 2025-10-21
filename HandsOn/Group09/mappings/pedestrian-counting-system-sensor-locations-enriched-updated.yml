@@ -1,0 +1,42 @@
+prefixes:
+  us: "https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  sosa: "http://www.w3.org/ns/sosa/"
+  schema: "http://schema.org/"
+  wgs84_pos: "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  base: "https://smartcity.linkeddata.es/lcc/resource/"
+
+mappings:
+
+  PedestrianLocation:
+    sources:
+      - [pedestrian-counting-system-sensor-locations-enriched-updated.csv~csv]
+    s: https://smartcity.linkeddata.es/lcc/resource/location/$(Location_ID)
+    po:
+      - [rdf:type, us:Location]
+      - [schema:identifier, $(Location_ID), xsd:string]
+      - [rdfs:comment, $(Location_Type), xsd:string]
+      - [wgs84_pos:lat, $(Latitude), xsd:float]
+      - [wgs84_pos:long, $(Longitude), xsd:float]
+      - [schema:postalCode, $(Postcode), xsd:string]
+      - [schema:addressLocality, $(City), xsd:string]
+      - [schema:addressCountry, $(Country), xsd:string]
+      - [schema:streetAddress, "$(Street) $(House_Number)", xsd:string]
+      - [us:hasAddress, $(Address), xsd:string]
+      - [us:MicroclimateSensor, $(Closest_Microclimate_Sensor_Name), xsd:string]
+
+  PedestrianSensor:
+    sources:
+      - [pedestrian-counting-system-sensor-locations-enriched-updated.csv~csv]
+    s: https://smartcity.linkeddata.es/lcc/resource/sensor/$(Sensor_Name)
+    po:
+      - [rdf:type, us:PedestrianSensor]
+      - [schema:description, $(Sensor_Description), xsd:string]
+      - [us:sensorId, $(Sensor_Name), xsd:string]
+      - [schema:dateInstalled, $(Installation_Date), xsd:date]
+      - [rdfs:comment, $(Note), xsd:string]
+      - [schema:status, $(Status), xsd:string]
+      - [us:direction1, $(Direction_1), xsd:string]
+      - [us:direction2, $(Direction_2), xsd:string]
+      - [us:locatedAt, https://smartcity.linkeddata.es/lcc/resource/location/$(Location_ID)]

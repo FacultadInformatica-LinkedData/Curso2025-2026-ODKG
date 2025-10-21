@@ -1,0 +1,142 @@
+# SPARQL Queries for Madrid Transport Safety Data Verification
+# Group 03 - Hands-On Assignment 4
+
+# Query 1: Complete accident data retrieval
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?accident ?date ?time ?type ?district ?vehicle ?alcohol ?drug
+WHERE {
+  ?accident a :Accident ;
+            :accidentDate ?date ;
+            :accidentTime ?time ;
+            :accidentType ?type ;
+            :vehicleType ?vehicle ;
+            :locatedInDistrict ?district .
+  OPTIONAL {
+    ?p a :Person ;
+       :involvedInAccident ?accident ;
+       :alcoholPositive ?alcohol ;
+       :drugPositive ?drug .
+  }
+}
+LIMIT 50
+
+# Query 2: Pedestrian observation data
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+
+SELECT ?pedestrianData ?date ?count ?district ?lat ?long
+WHERE {
+  ?pedestrianData a :PedestrianData .
+  OPTIONAL { ?pedestrianData :pedestrianDate ?date }
+  OPTIONAL { ?pedestrianData :pedestrianCounter ?count }
+  OPTIONAL { ?pedestrianData :locatedInDistrict ?district }
+  OPTIONAL { ?pedestrianData :pedestrianLatitude ?lat }
+  OPTIONAL { ?pedestrianData :pedestrianLongitude ?long }
+}
+LIMIT 50
+
+# Query 3: Bicycle observation data
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+
+SELECT ?bicycleData ?date ?time ?count ?district ?lat ?long
+WHERE {
+  ?bicycleData a :BicycleData .
+  OPTIONAL { ?bicycleData :bicycleDate ?date }
+  OPTIONAL { ?bicycleData :bicycleTime ?time }
+  OPTIONAL { ?bicycleData :bicycleCounter ?count }
+  OPTIONAL { ?bicycleData :bicycleLatitude ?lat }
+  OPTIONAL { ?bicycleData :bicycleLongitude ?long }
+  OPTIONAL { ?bicycleData :locatedInDistrict ?district }
+}
+LIMIT 50
+
+# Query 4: Traffic light infrastructure
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+
+SELECT ?light ?type ?district ?lon ?lat
+WHERE {
+  ?light a :TrafficLight ;
+         :trafficLightType ?type ;
+         :trafficLightLongitude ?lon ;
+         :trafficLightLatitude ?lat ;
+         :locatedInDistrict ?district .
+}
+LIMIT 50
+
+# Query 5: Accidents by district distribution
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?district (COUNT(?accident) AS ?accidentCount)
+WHERE {
+  ?accident rdf:type :Accident ;
+            :locatedInDistrict ?district .
+}
+GROUP BY ?district
+ORDER BY DESC(?accidentCount)
+
+# Query 6: Vehicle types involved in accidents
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?vehicleType (COUNT(?accident) AS ?count)
+WHERE {
+  ?accident rdf:type :Accident ;
+            :vehicleType ?vehicleType .
+}
+GROUP BY ?vehicleType
+ORDER BY DESC(?count)
+
+# Query 7: Alcohol and drug positive cases
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?person ?accident ?alcoholPositive ?drugPositive
+WHERE {
+  ?person rdf:type :Person ;
+          :involvedInAccident ?accident .
+  OPTIONAL { ?person :alcoholPositive ?alcoholPositive }
+  OPTIONAL { ?person :drugPositive ?drugPositive }
+  FILTER(?alcoholPositive = true || ?drugPositive = true)
+}
+LIMIT 50
+
+# Query 8: Monthly accident trends
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?date (COUNT(?accident) AS ?count)
+WHERE {
+  ?accident rdf:type :Accident ;
+            :accidentDate ?date .
+}
+GROUP BY ?date
+ORDER BY ?date
+LIMIT 12
+
+# Query 9: District information catalog
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?district ?districtCode ?districtName
+WHERE {
+  ?district rdf:type :District .
+  OPTIONAL { ?district :districtCode ?districtCode }
+  OPTIONAL { ?district :districtName ?districtName }
+}
+ORDER BY ?districtCode
+
+# Query 10: Traffic light distribution by district
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?district (COUNT(?trafficLight) AS ?lightCount)
+WHERE {
+  ?trafficLight rdf:type :TrafficLight ;
+                :locatedInDistrict ?district .
+}
+GROUP BY ?district
+ORDER BY DESC(?lightCount)

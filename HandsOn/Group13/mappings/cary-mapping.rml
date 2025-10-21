@@ -1,0 +1,232 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix smc: <http://smartmobility.townofcary.org/ontology#> .
+@prefix smr: <http://smartmobility.townofcary.org/resource/> .
+@base <http://smartmobility.townofcary.org/resource/> .
+
+
+<#EcoCounterSiteMap>
+    a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "csv/eco-counter-sites.-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    rr:subjectMap [
+        rr:template "http://smartmobility.townofcary.org/resource/EcoCounterSite/{id}" ;
+        rr:class smc:EcoCounterSite
+    ] ;
+
+    # Identifiers & basic info
+    rr:predicateObjectMap [
+        rr:predicate smc:siteId ;
+        rr:objectMap [ rml:reference "id" ; rr:datatype xsd:integer ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:siteName ;
+        rr:objectMap [ rml:reference "area" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:siteOwner ;
+        rr:objectMap [ rml:reference "site_owner" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:siteActive ;
+        rr:objectMap [ rml:reference "site_active" ; rr:datatype xsd:boolean ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:userType ;
+        rr:objectMap [ rml:reference "user_type" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:installationDate ;
+        rr:objectMap [ rml:reference "installation_date" ; rr:datatype xsd:dateTime ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:counterId ;
+        rr:objectMap [ rml:reference "counter" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:photoURL ;
+        rr:objectMap [ rml:reference "photos" ; rr:datatype xsd:anyURI ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate wgs84_pos:lat ;
+        rr:objectMap [ rml:reference "latitude" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate wgs84_pos:long ;
+        rr:objectMap [ rml:reference "longitude" ; rr:datatype xsd:decimal ]
+    ] .
+
+
+<#EcoCounterDataMap>
+    a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "csv/eco-counter-data.-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    rr:subjectMap [
+        # Use site id + observation datetime to build a readable subject URI
+        rr:template "http://smartmobility.townofcary.org/resource/EcoCounterData/{id}_{date}" ;
+        rr:class smc:EcoCounterData
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:observationDateTime ;
+        rr:objectMap [ rml:reference "date" ; rr:datatype xsd:dateTime ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:dayOfWeek ;
+        rr:objectMap [ rml:reference "day_of_week" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:counts ;
+        rr:objectMap [ rml:reference "counts" ; rr:datatype xsd:integer ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:userType ;
+        rr:objectMap [ rml:reference "user_type" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:installationDate ;
+        rr:objectMap [ rml:reference "installation_date" ; rr:datatype xsd:dateTime ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:recordedAt ;
+        rr:objectMap [
+            rr:parentTriplesMap <#EcoCounterSiteMap> ;
+            rr:joinCondition [
+                rr:child "id" ;
+                rr:parent "id"
+            ]
+        ]
+    ] .
+
+
+<#EVStationMap>
+    a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "csv/electric-vehicle-charging-stations.-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    rr:subjectMap [
+        rr:template "http://smartmobility.townofcary.org/resource/ElectricVehicleChargingStation/{ev_station_name}" ;
+        rr:class smc:ElectricVehicleChargingStation
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:stationName ;
+        rr:objectMap [ rml:reference "ev_station_name" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:address ;
+        rr:objectMap [ rml:reference "address_1" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:address ;
+        rr:objectMap [ rml:reference "address_2" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:city ;
+        rr:objectMap [ rml:reference "city" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:stateProvince ;
+        rr:objectMap [ rml:reference "state_province" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:zipCode ;
+        rr:objectMap [ rml:reference "zip_postal_code" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:fee ;
+        rr:objectMap [ rml:reference "fee" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:modelNumber ;
+        rr:objectMap [ rml:reference "model_number" ; rr:datatype xsd:string ]
+    ] ;
+
+    # Geo coordinates for the station
+    rr:predicateObjectMap [
+        rr:predicate wgs84_pos:lat ;
+        rr:objectMap [ rml:reference "latitude" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate wgs84_pos:long ;
+        rr:objectMap [ rml:reference "longitude" ; rr:datatype xsd:decimal ]
+    ] .
+
+
+<#ChargingSessionMap>
+    a rr:TriplesMap;
+    rml:logicalSource [
+        rml:source "csv/electric-vehicle-charging-stations.-updated.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+    rr:subjectMap [
+        rr:template "http://smartmobility.townofcary.org/resource/ChargingSession/{start_date}_{ev_station_name}_{charger_post}" ;
+        rr:class smc:ChargingSession
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:startDateTime ;
+        rr:objectMap [ rml:reference "start_date" ; rr:datatype xsd:dateTime ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:sessionDuration ;
+        rr:objectMap [ rml:reference "elapsed_charging_seconds" ; rr:datatype xsd:integer ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:energyConsumed ;
+        rr:objectMap [ rml:reference "energy_kwh" ; rr:datatype xsd:decimal ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:stationName ;
+        rr:objectMap [ rml:reference "ev_station_name" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:chargerPost ;
+        rr:objectMap [ rml:reference "charger_post" ; rr:datatype xsd:string ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate smc:occurredAt ;
+        rr:objectMap [
+            rr:parentTriplesMap <#EVStationMap> ;
+            rr:joinCondition [
+                rr:child "ev_station_name" ;
+                rr:parent "ev_station_name"
+            ]
+        ]
+    ] .
+

@@ -1,18 +1,28 @@
-# Hands-on Assignment 3 – Self Assessment
+# Hands-on assignment 3 – Self assessment
 
-## Data–Ontology Consistency Checklist
+## Checklist
 
-### Resources (CSV)
-- [x] Every resource has a unique identifier in a column (not auto-incremented).
-- [x] Every resource is related to a class in the ontology.
+**Every resource described in the CSV file:**
 
-### Classes (Ontology)
-- [x] Every class is related to at least one resource described in the CSV file.
+- [X] Has a unique identifier in a column (not an auto-increased integer)
+- [X] Is related to a class in the ontology
 
-### Columns (CSV)
-- [x] All values are trimmed (no leading/trailing whitespace).
-- [x] All values are properly encoded (e.g., dates, booleans).
-- [x] Every column is related to a property in the ontology.
+**Every class in the ontology:**
 
-### Properties (Ontology)
-- [x] Every property is related to a column in the CSV file.
+- [X] Is related to a resource described in the CSV file
+
+**Every column in the CSV file:**
+
+- [X] Is trimmed
+- [X] Is properly encoded (e.g., dates, booleans)
+- [X] Is related to a property in the ontology
+
+**Every property in the ontology:**
+
+- [X] Is related to a column in the CSV file
+
+## Comments on the self-assessment
+
+All CSVs were cleaned (ids, string trim, date encoding) and mapped to ontology classes/properties.  
+The datasets meet requirements and are ready for RDF transformation.
+local_areas-updated.csv was created empty because its instances will be created on runtime.
