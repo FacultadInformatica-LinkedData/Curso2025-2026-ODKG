@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/resource/> .
+
+:Class01
+   a rdfs:Class ;
+   rdfs:label "Class01" ;
+   rdfs:member :Sensor029 , :Computer101 .
+
+:Sensor029
+   a rdfs:Resource ;
+   rdfs:label "Sensor029" ;
+   rdfs:seeAlso :Measurement8401 .
+
+:Computer101
+   a rdfs:Resource ;
+   rdfs:label "Computer101" ;
+   rdfs:isDefinedBy :User10A .
+
+:Measurement8401
+   a rdfs:Resource ;
+   rdfs:label "Measurement8401" ;
+   rdfs:comment 29 ;
+   rdfs:isDefinedBy "2010-06-12T12:00:12"^^xsd:dateTime .
+
+:User10A
+   a rdfs:Resource ;
+   rdfs:label "User10A" ;
+   rdfs:label "Pedro" .
