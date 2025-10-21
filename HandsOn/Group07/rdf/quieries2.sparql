@@ -1,0 +1,65 @@
+###########################################################
+# SPARQL Query Set para LUDE (Spanish Universities)
+# Ontology base: https://spanishuniversities.data/ontology/lude#
+# Resource base: https://spainuniversities.data/id/lude/
+###########################################################
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX lude: <https://spanishuniversities.data/ontology/lude#>
+PREFIX id:   <https://spainuniversities.data/id/lude/>
+
+###########################################################
+# 1. List all classes represented in the dataset
+###########################################################
+SELECT DISTINCT ?class
+WHERE {
+  ?s rdf:type ?class .
+  FILTER(STRSTARTS(STR(?class), STR(lude:)))
+}
+ORDER BY ?class
+
+###########################################################
+# 2. Retrieve all properties (object and data) used in the dataset
+###########################################################
+SELECT DISTINCT ?property
+WHERE {
+  ?s ?property ?o .
+  FILTER(STRSTARTS(STR(?property), STR(lude:)))
+}
+ORDER BY ?property
+
+###########################################################
+# 3. Count number of instances per LUDE class
+###########################################################
+SELECT ?class (COUNT(?s) AS ?numInstances)
+WHERE {
+  ?s rdf:type ?class .
+  FILTER(STRSTARTS(STR(?class), STR(lude:)))
+}
+GROUP BY ?class
+ORDER BY DESC(?numInstances)
+
+###########################################################
+# 4. Universities and number of offered degrees
+###########################################################
+SELECT ?university (COUNT(DISTINCT ?degree) AS ?numDegrees)
+WHERE {
+  ?university rdf:type lude:University ;
+              lude:offers ?degree .
+  ?degree rdf:type lude:Degree .
+}
+GROUP BY ?university
+ORDER BY DESC(?numDegrees)
+
+###########################################################
+# 5. Degrees grouped by academic ambit (field)
+###########################################################
+SELECT ?ambit (COUNT(DISTINCT ?degree) AS ?numDegrees)
+WHERE {
+  ?degree rdf:type lude:Degree ;
+          lude:hasAmbit ?ambit .
+}
+GROUP BY ?ambit
+ORDER BY DESC(?numDegrees)
