@@ -41,13 +41,11 @@ report.validate_07_1a(result)
 # TASK 7.1b
 query = """
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?c ?sc
+SELECT DISTINCT ?c ?sc
 WHERE {
-  ?c a rdfs:Class .
-  OPTIONAL { ?c rdfs:subClassOf ?sc }
-  BIND(STR(COALESCE(?sc, "")) AS ?scs)
+  ?c rdf:type rdfs:Class .
+  OPTIONAL { ?c rdfs:subClassOf ?sc . }
 }
-ORDER BY STR(?c) ?scs
 """
 
 for r in g.query(query):
