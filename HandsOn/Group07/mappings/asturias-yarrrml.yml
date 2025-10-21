@@ -1,0 +1,103 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  foaf: http://xmlns.com/foaf/0.1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rev: http://purl.org/stuff/rev#
+  schema: http://schema.org/
+  dct: http://purl.org/dc/terms/
+  rml: http://semweb.mmlab.be/ns/rml#
+  ql: http://semweb.mmlab.be/ns/ql#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  vocab: http://example.org#
+  lude: https://spanishuniversities.data/ontology/lude#
+  id: https://spanishuniversities.data/id/lude/
+  
+mappings:
+  asturiasUniversityUD:
+    sources:
+      - [universidades-updated.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type,lude:University]
+      - [rdfs:label,$(University),xsd:string]
+      - [lude:acronym,$(Acronym),xsd:string]
+      - [lude:type,$(Type),xsd:string]
+      - [lude:cif,$(CIF),xsd:string]
+      - [lude:modality,$(Modality),xsd:string]
+      - [lude:url,$(URL),xsd:anyURI]
+      - [lude:email,$(Email),xsd:string]
+      - [lude:telephone,$(Phone),xsd:string]
+      - [lude:publicationYear,$(Year of Publication),xsd:gYear]
+      - p: lude:offers
+        o:
+          mapping: asturiasDegreeUD
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityId)]
+
+  asturiasDegreeUD:
+    sources:
+      - [Asturias-Degrees-updated.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:code,$(Code),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+
+  asturiasDegreeDK:
+    sources:
+      - [Asturias-Degrees-updated.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:code,$(Code),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: asturiasKnowledgeDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AmbitId)]
+              - [str2, $(id)]
+
+              
+  asturiasKnowledgeDK:
+    sources:
+      - [ambit-otros.csv~csv]
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label,$(ambit),xsd:string] 
+
+  asturiasDegreeDK:
+    sources:
+      - [Asturias-Degrees-updated.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:code,$(Code),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: asturiasLevelDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level Id)]
+              - [str2, $(AcademicLevelID)]
+
+              
+  asturiasLevelDK:
+    sources:
+      - [academic_level-updated.csv~csv]
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label,$(Academic Level),xsd:string]
