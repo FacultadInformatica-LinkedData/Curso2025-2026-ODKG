@@ -1,0 +1,105 @@
+@prefix smc: <http://smartmobility.townofcary.org/ontology#> .
+@prefix smr: <http://smartmobility.townofcary.org/resource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#################################
+# EcoCounter Sites
+#################################
+
+smr:ecocounter-site/site001
+    rdf:type smc:EcoCounterSite ;
+    smc:siteId "site001" ;
+    smc:siteName "Downtown Cary Pedestrian Counter" ;
+    smc:siteActive true ;
+    smc:siteOwner "Town of Cary" ;
+    smc:userType "Pedestrian" ;
+    smc:installationDate "2024-05-15"^^xsd:date ;
+    geo:lat 35.7915 ;
+    geo:long -78.7811 ;
+    smc:photoURL "http://smartmobility.townofcary.org/photos/site001.jpg" ;
+    smc:hasObservation smr:ecocounter-data/obs20250101001 .
+
+smr:ecocounter-site/site002
+    rdf:type smc:EcoCounterSite ;
+    smc:siteId "site002" ;
+    smc:siteName "Greenway Bike Counter" ;
+    smc:siteActive true ;
+    smc:siteOwner "Town of Cary" ;
+    smc:userType "Bicycle" ;
+    smc:installationDate "2023-09-10"^^xsd:date ;
+    geo:lat 35.7872 ;
+    geo:long -78.7850 ;
+    smc:photoURL "http://smartmobility.townofcary.org/photos/site002.jpg" ;
+    smc:hasObservation smr:ecocounter-data/obs20250101002 .
+
+#################################
+# EcoCounter Data
+#################################
+
+smr:ecocounter-data/obs20250101001
+    rdf:type smc:EcoCounterData ;
+    smc:observationDateTime "2025-01-01T08:00:00"^^xsd:dateTime ;
+    smc:counts 120 ;
+    smc:status "OK" ;
+    smc:recordedAt smr:ecocounter-site/site001 .
+
+smr:ecocounter-data/obs20250101002
+    rdf:type smc:EcoCounterData ;
+    smc:observationDateTime "2025-01-01T08:00:00"^^xsd:dateTime ;
+    smc:counts 85 ;
+    smc:status "OK" ;
+    smc:recordedAt smr:ecocounter-site/site002 .
+
+#################################
+# EV Charging Stations
+#################################
+
+smr:ev-station/station001
+    rdf:type smc:ElectricVehicleChargingStation ;
+    smc:stationName "Cary Town Center Station" ;
+    smc:address "123 High House Rd" ;
+    smc:city "Cary" ;
+    smc:stateProvince "NC" ;
+    smc:zipCode "27513" ;
+    smc:fee "0.20" ;
+    smc:modelNumber "EVChargerX-200" ;
+    smc:geoPoint "35.7915,-78.7811" ;
+    geo:lat 35.7915 ;
+    geo:long -78.7811 ;
+    smc:hasChargingSession smr:charging-session/session20250101001 .
+
+smr:ev-station/station002
+    rdf:type smc:ElectricVehicleChargingStation ;
+    smc:stationName "Walnut Street EV Station" ;
+    smc:address "456 Walnut St" ;
+    smc:city "Cary" ;
+    smc:stateProvince "NC" ;
+    smc:zipCode "27511" ;
+    smc:fee "0.25" ;
+    smc:modelNumber "EVChargerY-100" ;
+    smc:geoPoint "35.7872,-78.7850" ;
+    geo:lat 35.7872 ;
+    geo:long -78.7850 ;
+    smc:hasChargingSession smr:charging-session/session20250101002 .
+
+#################################
+# Charging Sessions
+#################################
+
+smr:charging-session/session20250101001
+    rdf:type smc:ChargingSession ;
+    smc:sessionDate "2025-01-01"^^xsd:date ;
+    smc:energyConsumed 12.5 ;
+    smc:sessionDuration 45 ;
+    smc:ocurredAt smr:ev-station/station001 .
+
+smr:charging-session/session20250101002
+    rdf:type smc:ChargingSession ;
+    smc:sessionDate "2025-01-01"^^xsd:date ;
+    smc:energyConsumed 8.2 ;
+    smc:sessionDuration 30 ;
+    smc:ocurredAt smr:ev-station/station002 .
