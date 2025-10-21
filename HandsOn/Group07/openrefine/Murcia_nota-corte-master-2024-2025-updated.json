@@ -1,0 +1,212 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "curso_academico_cod",
+    "description": "Remove column curso_academico_cod"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "curso_academico",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2024/2025"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2024-2025"
+      }
+    ],
+    "description": "Mass edit cells in column curso_academico"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ciclo_titulacion_cod",
+    "description": "Remove column ciclo_titulacion_cod"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "curso_academico",
+    "newColumnName": "Academic Year",
+    "description": "Rename column curso_academico to Academic Year"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tipo_centro",
+    "description": "Remove column tipo_centro"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "centro_cod",
+    "description": "Remove column centro_cod"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "centro_cod_mec",
+    "newColumnName": "Centre Code",
+    "description": "Rename column centro_cod_mec to Centre Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "centro",
+    "newColumnName": "Centre",
+    "description": "Rename column centro to Centre"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ciclo_titulacion",
+    "newColumnName": "Academic Level",
+    "description": "Rename column ciclo_titulacion to Academic Level"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "titulacion_cod",
+    "description": "Remove column titulacion_cod"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "titulacion_cod_mec",
+    "newColumnName": "Degree Code",
+    "description": "Rename column titulacion_cod_mec to Degree Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "titulacion",
+    "newColumnName": "Degree",
+    "description": "Rename column titulacion to Degree"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "especialidad",
+    "description": "Remove column especialidad"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "convocatoria_cod",
+    "description": "Remove column convocatoria_cod"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/Máster Universitario en /, \"\").replace(/ por la Universidad.*/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Degree using expression grel:value.replace(/Máster Universitario en /, \"\").replace(/ por la Universidad.*/, \"\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "nota_corte_mujer",
+    "description": "Remove column nota_corte_mujer"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "nota_corte_hombre",
+    "description": "Remove column nota_corte_hombre"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree Code",
+    "description": "Blank down cells in column Degree Code"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree Code",
+          "expression": "value",
+          "columnName": "Degree Code",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:if(\nvalue.toLowercase().contains(\"física\").or(value.toLowercase().contains(\"química\")).or(value.toLowercase().contains(\"biología\")).or(value.toLowercase().contains(\"matemáticas\")).or(value.toLowercase().contains(\"geología\")).or(value.toLowercase().contains(\"ambientales\")),\n  \"Ciencias\",\n  if(\n    value.toLowercase().contains(\"ingeniería\")\n  .or(value.toLowercase().contains(\"informática\"))\n.or(value.toLowercase().contains(\"arquitectura\")),\n    \"Ingeniería y Arquitectura\",\n    if(\n      value.toLowercase().contains(\"medicina\")\n        .or(value.toLowercase().contains(\"enfermería\"))\n        .or(value.toLowercase().contains(\"nutrición\")).or(value.toLowercase().contains(\"farmacia\"))\n        .or(value.toLowercase().contains(\"terapia\")).or(value.toLowercase().contains(\"psicología\")),\n      \"Ciencias de la Salud\",\n      if(\n        value.toLowercase().contains(\"historia\")\n          .or(value.toLowercase().contains(\"filosofía\"))\n          .or(value.toLowercase().contains(\"filología\")).or(value.toLowercase().contains(\"literatura\"))\n          .or(value.toLowercase().contains(\"franceses\")).or(value.toLowercase().contains(\"ingleses\")).or(value.toLowercase().contains(\"arte\")),\n        \"Artes y Humanidades\",\n        if(\n          value.toLowercase().contains(\"sociología\")\n            .or(value.toLowercase().contains(\"educación\"))\n            .or(value.toLowercase().contains(\"política\"))\n            .or(value.toLowercase().contains(\"criminología\")).or(value.toLowercase().contains(\"antropología\")),\n          \"Ciencias Sociales\",\n          if(\n            value.toLowercase().contains(\"derecho\")\n              .or(value.toLowercase().contains(\"relaciones\")).or(value.toLowercase().contains(\"economía\"))\n              .or(value.toLowercase().contains(\"administración\"))\n              .or(value.toLowercase().contains(\"contabilidad\")),\n            \"Ciencias Sociales y Jurídicas\",\n            \"Other\"\n          )\n        )\n      )\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "Ambit",
+    "columnInsertIndex": 6,
+    "description": "Create column Ambit at index 6 based on column Degree using expression grel:if(\nvalue.toLowercase().contains(\"física\").or(value.toLowercase().contains(\"química\")).or(value.toLowercase().contains(\"biología\")).or(value.toLowercase().contains(\"matemáticas\")).or(value.toLowercase().contains(\"geología\")).or(value.toLowercase().contains(\"ambientales\")),\n  \"Ciencias\",\n  if(\n    value.toLowercase().contains(\"ingeniería\")\n  .or(value.toLowercase().contains(\"informática\"))\n.or(value.toLowercase().contains(\"arquitectura\")),\n    \"Ingeniería y Arquitectura\",\n    if(\n      value.toLowercase().contains(\"medicina\")\n        .or(value.toLowercase().contains(\"enfermería\"))\n        .or(value.toLowercase().contains(\"nutrición\")).or(value.toLowercase().contains(\"farmacia\"))\n        .or(value.toLowercase().contains(\"terapia\")).or(value.toLowercase().contains(\"psicología\")),\n      \"Ciencias de la Salud\",\n      if(\n        value.toLowercase().contains(\"historia\")\n          .or(value.toLowercase().contains(\"filosofía\"))\n          .or(value.toLowercase().contains(\"filología\")).or(value.toLowercase().contains(\"literatura\"))\n          .or(value.toLowercase().contains(\"franceses\")).or(value.toLowercase().contains(\"ingleses\")).or(value.toLowercase().contains(\"arte\")),\n        \"Artes y Humanidades\",\n        if(\n          value.toLowercase().contains(\"sociología\")\n            .or(value.toLowercase().contains(\"educación\"))\n            .or(value.toLowercase().contains(\"política\"))\n            .or(value.toLowercase().contains(\"criminología\")).or(value.toLowercase().contains(\"antropología\")),\n          \"Ciencias Sociales\",\n          if(\n            value.toLowercase().contains(\"derecho\")\n              .or(value.toLowercase().contains(\"relaciones\")).or(value.toLowercase().contains(\"economía\"))\n              .or(value.toLowercase().contains(\"administración\"))\n              .or(value.toLowercase().contains(\"contabilidad\")),\n            \"Ciencias Sociales y Jurídicas\",\n            \"Other\"\n          )\n        )\n      )\n    )\n  )\n)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Ambit",
+          "expression": "value",
+          "columnName": "Ambit",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Ciencias Sociales",
+                "l": "Ciencias Sociales"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ciencias Sociales"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ciencias Sociales y Jurídicas"
+      }
+    ],
+    "description": "Mass edit cells in column Ambit"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Centre",
+    "expression": "grel:\"Universidad de Murcia\"",
+    "onError": "set-to-blank",
+    "newColumnName": "University",
+    "columnInsertIndex": 3,
+    "description": "Create column University at index 3 based on column Centre using expression grel:\"Universidad de Murcia\""
+  }
+]
