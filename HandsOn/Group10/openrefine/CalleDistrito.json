@@ -1,0 +1,213 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "COORD_X",
+    "description": "Remove column COORD_X"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORD_Y",
+    "description": "Remove column COORD_Y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LONGITUD",
+    "description": "Remove column LONGITUD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ANGLE",
+    "description": "Remove column ANGLE"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "C_Nus_I",
+    "description": "Remove column C_Nus_I"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "C_Nus_F",
+    "description": "Remove column C_Nus_F"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Distric_E",
+    "description": "Remove column Distric_E"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NDistric_E",
+    "description": "Remove column NDistric_E"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Illa_E",
+    "description": "Remove column Illa_E"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CVia_E",
+    "description": "Remove column CVia_E"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TVia_E",
+    "description": "Remove column TVia_E"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "NVia_E",
+    "description": "Remove column NVia_E"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Tram_Esq",
+    "description": "Remove column Tram_Esq"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "FID",
+    "description": "Remove column FID"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Distric_D",
+    "expression": "grel:value.trim() + \"||\" + cells[\"NDistric_D\"].value.trim() + \"||\" + cells[\"NVia_D\"].value.trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "clave",
+    "columnInsertIndex": 2,
+    "description": "Create column clave at index 2 based on column Distric_D using expression grel:value.trim() + \"||\" + cells[\"NDistric_D\"].value.trim() + \"||\" + cells[\"NVia_D\"].value.trim()"
+  },
+  {
+    "op": "core/row-duplicate-removal",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "criteria": [
+      "clave"
+    ],
+    "description": "Remove duplicate rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "clave",
+    "description": "Remove column clave"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NVia_D",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          " "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "lñ"
+      }
+    ],
+    "description": "Mass edit cells in column NVia_D"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NVia_D",
+          "expression": "value",
+          "columnName": "NVia_D",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "lñ",
+                "l": "lñ"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Distric_D",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Distric_D using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CVia_D",
+    "description": "Remove column CVia_D"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Illa_D",
+    "description": "Remove column Illa_D"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Tram_Dret",
+    "description": "Remove column Tram_Dret"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TVia_D",
+    "newColumnName": "TipoVia",
+    "description": "Rename column TVia_D to TipoVia"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NVia_D",
+    "newColumnName": "NameVia",
+    "description": "Rename column NVia_D to NameVia"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TipoVia",
+    "newColumnName": "TypeVia",
+    "description": "Rename column TipoVia to TypeVia"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NDistric_D",
+    "newColumnName": "NameDistrict",
+    "description": "Rename column NDistric_D to NameDistrict"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Distric_D",
+    "newColumnName": "NumberDistrict",
+    "description": "Rename column Distric_D to NumberDistrict"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "C_Tram",
+    "newColumnName": "id",
+    "description": "Rename column C_Tram to id"
+  }
+]

@@ -1,0 +1,1078 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "id",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna id usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "coordinates",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": ", ",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Dividir columna coordinates por separador"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "coordinates 1",
+    "newColumnName": "latitude",
+    "description": "Renombra la columna coordinates 1 a latitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "coordinates 2",
+    "newColumnName": "longitude",
+    "description": "Renombra la columna coordinates 2 a longitude"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "coordinates",
+    "index": 5,
+    "description": "Mueve la columna coordinates a la posición 5"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "coordinates",
+    "index": 6,
+    "description": "Mueve la columna coordinates a la posición 6"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "coordinates",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna coordinates usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "installation_date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna installation_date usando la expresión value.toDate()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "APX_SAL_E",
+          "APX_SAL_W"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "APX_SAL"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CRY_LOU_E",
+          "CRY_LOU_W"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CRY_LOU"
+      },
+      {
+        "from": [
+          "WKF_MAI_E",
+          "WKF_MAI_W"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WKF_MAI"
+      },
+      {
+        "from": [
+          "RAL_RID_E",
+          "RAL_RID_W"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAL_RID"
+      },
+      {
+        "from": [
+          "RAL_CAM_N",
+          "RAL_CAM_S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAL_CAM"
+      },
+      {
+        "from": [
+          "RAL_HAR_N",
+          "RAL_HAR_S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAL_HAR"
+      },
+      {
+        "from": [
+          "RAL_HIL_N",
+          "RAL_HIL_S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAL_HIL"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "White Oak Creek Greenway - West"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "White Oak Creek Greenway"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "White Oak Creek Greenway"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "White Oak Creek Greenway"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "White Oak Creek Greenway - East"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "White Oak Creek Greenway"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "New Hope Disc Golf Back Loop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New Hope Disc Golf Loop"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "New Hope Disc Golf Front Loop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New Hope Disc Golf Loop"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CRY_LKP_E (Cary Lake Pine Drive - East)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CRY_LKP (Cary Lake Pine Drive)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CRY_LKP_W (Cary Lake Pine Drive - West)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CRY_LKP_W (Cary Lake Pine Drive)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CRY_LKP_W (Cary Lake Pine Drive)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CRY_LKP (Cary Lake Pine Drive)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna name"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "name",
+    "newColumnName": "area",
+    "description": "Renombra la columna name a area"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "area",
+    "expression": "grel:value.split(\"_\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "location",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna location en el índice 4 basada en la columna area usando la expresión grel:value.split(\"_\")[0]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "grel:if(value.contains(\"_\"), value.split(\"_\")[1], value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna area usando la expresión grel:if(value.contains(\"_\"), value.split(\"_\")[1], value)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "APX"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Apex"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Black Creek Greenway (Cole Stream Court)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Black Creek Greenway"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Black Creek Greenway (High House x NW Maynard)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Black Creek Greenway"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Black Creek Greenway Bridge BCG-21"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Black Creek Greenway"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Raleigh"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "WKF"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wake Forest"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Panther Creek Greenway"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "New Hope Disc Golf Loop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Amberly Lake Greenway"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "American Tobacco Trail"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cary Park Lake Greenway"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CRY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hemlock Bluffs Main Entrance"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hemlock Bluffs Nature Preserve Trailhead"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Middle Creek Disc Golf"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Apex"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Symphony Lake"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Wake Forest"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Winston-Salem"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "White Oak Creek Greenway"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "location",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Black Creek Greenway"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cary"
+      }
+    ],
+    "description": "Editar celdas en masa en columna location"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BCT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Black Creek Greenway"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CAM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cameron Street"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CCG"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Crabtree Creek Greenway"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "HAR"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hargett Street"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hemlock Bluffs Main Entrance"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hemlock Bluffs Nature Preserve"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hemlock Bluffs Nature Preserve Trailhead"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hemlock Bluffs Nature Preserve"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "HIL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hillsborough Street"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LKP (Cary Lake Pine Drive)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lake Pine Drive"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LOU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Louis Stephens Drive"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "New Hope Disc Golf Loop"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New Hope Disc Golf"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NHC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "New Hope Church"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "NRG"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Neuse Road Greenway"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "OLI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Olive Chapel Road"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RBT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rocky Branch Trail"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RID"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ridge Road"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "area",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Salem Street"
+      }
+    ],
+    "description": "Editar celdas en masa en columna area"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "coordinates",
+    "newColumnName": "geopoint",
+    "description": "Renombra la columna coordinates a geopoint"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "site_active",
+    "expression": "grel:value == \"Yes\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna site_active usando la expresión grel:value == \"Yes\""
+  }
+]
