@@ -1,0 +1,2029 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix schema: <http://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix base: <https://smartcity.linkeddata.es/lcc/resource/> .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/1> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "1" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Bourke Street Mall 280" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81349441"^^xsd:float ;
+	wgs84_pos:long "144.96515323"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "Cue City 280 Bourke Street Mall Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/10> schema:addressCountry "Australia" ;
+	schema:addressLocality "Docklands" ;
+	schema:identifier "10" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Bourke Street 770" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81876474"^^xsd:float ;
+	wgs84_pos:long "144.94710545"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "770 Bourke Street Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/107> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "107" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "William Street 288" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81246271"^^xsd:float ;
+	wgs84_pos:long "144.95690188"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "288 William Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/109> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "109" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "La Trobe Street 433" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81193681"^^xsd:float ;
+	wgs84_pos:long "144.95621105"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "433 La Trobe Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/11> schema:addressCountry "Australia" ;
+	schema:addressLocality "Docklands" ;
+	schema:identifier "11" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Newquay Promenade 84" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81564989"^^xsd:float ;
+	wgs84_pos:long "144.93970694"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "84 Newquay Promenade Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/117> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "117" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Street 114" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81629332"^^xsd:float ;
+	wgs84_pos:long "144.97090877"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-02" ;
+	us:hasAddress "114 Flinders Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/118> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "118" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Street 120" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81632783"^^xsd:float ;
+	wgs84_pos:long "144.97090512"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-02" ;
+	us:hasAddress "120 Flinders Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/12> schema:addressCountry "Australia" ;
+	schema:addressLocality "Docklands" ;
+	schema:identifier "12" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Newquay Promenade 24" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81457988"^^xsd:float ;
+	wgs84_pos:long "144.94292398"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "24 Newquay Promenade Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/123> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "123" ;
+	schema:postalCode "3000" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81753741"^^xsd:float ;
+	wgs84_pos:long "144.97329734"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-01" ;
+	us:hasAddress "Batman Avenue Bridge Batman Avenue Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/124> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "124" ;
+	schema:postalCode "3000" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81757416"^^xsd:float ;
+	wgs84_pos:long "144.97329934"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-01" ;
+	us:hasAddress "Batman Avenue Bridge Batman Avenue Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/130> schema:addressCountry "Australia" ;
+	schema:addressLocality "Docklands" ;
+	schema:identifier "130" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Bourke Street 890" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.8204637"^^xsd:float ;
+	wgs84_pos:long "144.94126826"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "890 Bourke Street Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/131> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "131" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Street 502" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.82009057"^^xsd:float ;
+	wgs84_pos:long "144.95758725"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "502 Flinders Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/132> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "132" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "King Street 333" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81267639"^^xsd:float ;
+	wgs84_pos:long "144.95386444"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "333 King Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/133> schema:addressCountry "Australia" ;
+	schema:addressLocality "Docklands" ;
+	schema:identifier "133" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Spencer Street 227" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81531435"^^xsd:float ;
+	wgs84_pos:long "144.95227769"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "227 Spencer Street Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/134> schema:addressCountry "Australia" ;
+	schema:addressLocality "Docklands" ;
+	schema:identifier "134" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Spencer Street 165" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81694221"^^xsd:float ;
+	wgs84_pos:long "144.95303935"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "165 Spencer Street Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/135> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "135" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Spencer Street 99" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.8172861"^^xsd:float ;
+	wgs84_pos:long "144.95319102"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "Southern Cross 99 Spencer Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/136> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "136" ;
+	schema:postalCode "3004" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.8184141"^^xsd:float ;
+	wgs84_pos:long "144.97357915"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-01" ;
+	us:hasAddress "Birrarung Marr Melbourne VIC 3004 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/137> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "137" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Harbour Esplanade 95-117" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81894815"^^xsd:float ;
+	wgs84_pos:long "144.94612292"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "95-117 Harbour Esplanade Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/138> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "138" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Street 469" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81996544"^^xsd:float ;
+	wgs84_pos:long "144.95981454"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "469 Flinders Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/139> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "139" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Banana Alley Wharf 3" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81959923"^^xsd:float ;
+	wgs84_pos:long "144.9632832"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "3 Banana Alley Wharf Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/14> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "14" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Banana Alley Wharf 3" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.82011242"^^xsd:float ;
+	wgs84_pos:long "144.96291897"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "3 Banana Alley Wharf Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/140> schema:addressCountry "Australia" ;
+	schema:addressLocality "Southbank" ;
+	schema:identifier "140" ;
+	schema:postalCode "3006" ;
+	schema:streetAddress "Balston Street 26" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.82590962"^^xsd:float ;
+	wgs84_pos:long "144.96185972"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-04" ;
+	us:hasAddress "26 Balston Street Southbank VIC 3006 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/141> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "141" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Street 478" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81997273"^^xsd:float ;
+	wgs84_pos:long "144.95834911"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "478 Flinders Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/142> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "142" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "St Kilda Road 100" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81970749"^^xsd:float ;
+	wgs84_pos:long "144.96795734"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "Trocadero 100 St Kilda Road Southbank VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/143> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "143" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Rebecca Walk 88" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.821728"^^xsd:float ;
+	wgs84_pos:long "144.95557015"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-04" ;
+	us:hasAddress "88 Rebecca Walk Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/161> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "161" ;
+	schema:postalCode "3000" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81851276"^^xsd:float ;
+	wgs84_pos:long "144.97131336"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-01" ;
+	us:hasAddress "Birrarung Marr Walk Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/162> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "162" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Elizabeth Street 489" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80740397"^^xsd:float ;
+	wgs84_pos:long "144.95987909"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "Jasper Hotel 489 Elizabeth Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/164> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "164" ;
+	schema:postalCode "3003" ;
+	schema:streetAddress "La Trobe Street 526" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.813005"^^xsd:float ;
+	wgs84_pos:long "144.95160411"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "526 La Trobe Street West Melbourne VIC 3003 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/165> schema:addressCountry "Australia" ;
+	schema:addressLocality "West Melbourne" ;
+	schema:identifier "165" ;
+	schema:postalCode "3003" ;
+	schema:streetAddress "Spencer Street 473" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80953359"^^xsd:float ;
+	wgs84_pos:long "144.94939004"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "473 Spencer Street West Melbourne VIC 3003 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/166> schema:addressCountry "Australia" ;
+	schema:addressLocality "West Melbourne" ;
+	schema:identifier "166" ;
+	schema:postalCode "3003" ;
+	schema:streetAddress "Spencer Street 486" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80896733"^^xsd:float ;
+	wgs84_pos:long "144.94931703"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "486 Spencer Street West Melbourne VIC 3003 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/167> schema:addressCountry "Australia" ;
+	schema:addressLocality "West Melbourne" ;
+	schema:identifier "167" ;
+	schema:postalCode "3003" ;
+	schema:streetAddress "La Trobe Street 530" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81304149"^^xsd:float ;
+	wgs84_pos:long "144.95155955"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "530 La Trobe Street West Melbourne VIC 3003 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/17> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "17" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Collins Street 13-15" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81362543"^^xsd:float ;
+	wgs84_pos:long "144.97323591"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-10" ;
+	us:hasAddress "13-15 Collins Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/179> schema:addressCountry "Australia" ;
+	schema:addressLocality "Southbank" ;
+	schema:identifier "179" ;
+	schema:postalCode "3006" ;
+	schema:streetAddress "Power Street 65" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.82392385"^^xsd:float ;
+	wgs84_pos:long "144.96299677"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "65 Power Street Southbank VIC 3006 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/18> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "18" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Collins Street 18-22" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81344862"^^xsd:float ;
+	wgs84_pos:long "144.97305353"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-10" ;
+	us:hasAddress "18-22 Collins Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/180> schema:addressCountry "Australia" ;
+	schema:addressLocality "Kensington" ;
+	schema:identifier "180" ;
+	schema:postalCode "3031" ;
+	schema:streetAddress "Macaulay Road 334" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.79497059"^^xsd:float ;
+	wgs84_pos:long "144.93530329"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "334 Macaulay Road Kensington VIC 3031 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/181> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "181" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Elizabeth Street 370" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81009465"^^xsd:float ;
+	wgs84_pos:long "144.96143149"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "370 Elizabeth Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/19> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "19" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Little Bourke Street 248" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81237202"^^xsd:float ;
+	wgs84_pos:long "144.96550671"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "248 Little Bourke Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/2> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "2" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Bourke Street 285" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81380668"^^xsd:float ;
+	wgs84_pos:long "144.96516718"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "285 Bourke Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/20> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "20" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Coverlid Place 27" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81172914"^^xsd:float ;
+	wgs84_pos:long "144.9682466"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "27 Coverlid Place Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/21> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "21" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Russell Street 155" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81267313"^^xsd:float ;
+	wgs84_pos:long "144.96788288"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "155 Russell Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/23> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "23" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Collins Street 623" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81909256"^^xsd:float ;
+	wgs84_pos:long "144.95452748"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-04" ;
+	us:hasAddress "Batman s Hill on Collins 623 Collins Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/24> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "24" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Collins Street 620" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81887963"^^xsd:float ;
+	wgs84_pos:long "144.95449198"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-04" ;
+	us:hasAddress "Liberty Tower 620 Collins Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/25> schema:addressCountry "Australia" ;
+	schema:addressLocality "South Wharf" ;
+	schema:identifier "25" ;
+	schema:postalCode "3006" ;
+	schema:streetAddress "Clarendon Street 10" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.82401776"^^xsd:float ;
+	wgs84_pos:long "144.95604426"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-04" ;
+	us:hasAddress "10 Clarendon Street South Wharf VIC 3006 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/27> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "27" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Victoria Street 155" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80606888"^^xsd:float ;
+	wgs84_pos:long "144.95644692"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "155 Victoria Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/28> schema:addressCountry "Australia" ;
+	schema:addressLocality "Southbank" ;
+	schema:identifier "28" ;
+	schema:postalCode "3006" ;
+	schema:streetAddress "St Kilda Road 88" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.82129925"^^xsd:float ;
+	wgs84_pos:long "144.96879309"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "88 St Kilda Road Southbank VIC 3006 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/29> schema:addressCountry "Australia" ;
+	schema:addressLocality "Southbank" ;
+	schema:identifier "29" ;
+	schema:postalCode "3006" ;
+	schema:streetAddress "St Kilda Road 14" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.8199817"^^xsd:float ;
+	wgs84_pos:long "144.96872865"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "14 St Kilda Road Southbank VIC 3006 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/3> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "3" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Swanston Street 303" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81101524"^^xsd:float ;
+	wgs84_pos:long "144.96429485"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "303 Swanston Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/30> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "30" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Lonsdale Street 197" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.8112185"^^xsd:float ;
+	wgs84_pos:long "144.96656806"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "Tsindos Greek Restaurant 197 Lonsdale Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/31> schema:addressCountry "Australia" ;
+	schema:addressLocality "Carlton" ;
+	schema:identifier "31" ;
+	schema:postalCode "3053" ;
+	schema:streetAddress "Lygon Street 169" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80169681"^^xsd:float ;
+	wgs84_pos:long "144.96658911"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "169 Lygon Street Carlton VIC 3053 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/35> schema:addressCountry "Australia" ;
+	schema:addressLocality "Southbank" ;
+	schema:identifier "35" ;
+	schema:postalCode "3006" ;
+	schema:streetAddress "Southgate Avenue 2" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.82018685"^^xsd:float ;
+	wgs84_pos:long "144.96508508"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "2 Southgate Avenue Southbank VIC 3006 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/36> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "36" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Collins Street 394" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81652527"^^xsd:float ;
+	wgs84_pos:long "144.96121062"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-05" ;
+	us:hasAddress "394 Collins Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/37> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "37" ;
+	schema:postalCode "3053" ;
+	schema:streetAddress "Lygon Street 260" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80107122"^^xsd:float ;
+	wgs84_pos:long "144.96704554"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "260 Lygon Street Carlton VIC 3053 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/39> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "39" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Alfred Place 23" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81379749"^^xsd:float ;
+	wgs84_pos:long "144.96995745"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-02" ;
+	us:hasAddress "23 Alfred Place Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/4> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "4" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Swanston Street 117" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81487988"^^xsd:float ;
+	wgs84_pos:long "144.9660878"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "117 Swanston Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/40> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "40" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Spring Street 207" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80999341"^^xsd:float ;
+	wgs84_pos:long "144.97227587"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-10" ;
+	us:hasAddress "207 Spring Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/41> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "41" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Swanston Street 35" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81668634"^^xsd:float ;
+	wgs84_pos:long "144.96689733"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "35 Swanston Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/42> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "42" ;
+	schema:postalCode "3052" ;
+	schema:streetAddress "Swanston Street 757" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80008566"^^xsd:float ;
+	wgs84_pos:long "144.96386412"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "Melbourne University/Swanston Street 757 Swanston Street Parkville VIC 3052 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/43> schema:addressCountry "Australia" ;
+	schema:addressLocality "Parkville" ;
+	schema:identifier "43" ;
+	schema:postalCode "3052" ;
+	schema:streetAddress "Swanston Street 793" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.79844526"^^xsd:float ;
+	wgs84_pos:long "144.96411782"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "793 Swanston Street Parkville VIC 3052 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/44> schema:addressCountry "Australia" ;
+	schema:addressLocality "Parkville" ;
+	schema:identifier "44" ;
+	schema:postalCode "3052" ;
+	schema:streetAddress "Swanston Street 823" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.79698741"^^xsd:float ;
+	wgs84_pos:long "144.96441306"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "823 Swanston Street Parkville VIC 3052 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/45> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "45" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Swanston Street 144" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81414075"^^xsd:float ;
+	wgs84_pos:long "144.96609379"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "144 Swanston Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/46> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "46" ;
+	schema:postalCode "3053" ;
+	schema:streetAddress "Pelham Street 147-155" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80240719"^^xsd:float ;
+	wgs84_pos:long "144.9615673"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "155 Pelham St (Building 264) 147-155 Pelham Street Carlton VIC 3053 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/47> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "47" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Elizabeth Street 250" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81258467"^^xsd:float ;
+	wgs84_pos:long "144.9625775"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "250 Elizabeth Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/48> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "48" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Victoria Street 75" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80631581"^^xsd:float ;
+	wgs84_pos:long "144.95866697"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "75 Victoria Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/49> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "49" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Therry Street 81" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80730068"^^xsd:float ;
+	wgs84_pos:long "144.95956055"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "81 Therry Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/5> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "5" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Street 207-361" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81874249"^^xsd:float ;
+	wgs84_pos:long "144.96787656"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "207-361 Flinders Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/50> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "50" ;
+	schema:postalCode "3053" ;
+	schema:streetAddress "Lygon Street 309" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.79808192"^^xsd:float ;
+	wgs84_pos:long "144.96721013"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "Readings 309 Lygon Street Carlton VIC 3053 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/51> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "51" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Franklin Street 118" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80841815"^^xsd:float ;
+	wgs84_pos:long "144.95906316"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "118 Franklin Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/52> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "52" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Lonsdale Street 353" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81252157"^^xsd:float ;
+	wgs84_pos:long "144.9619401"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "353 Lonsdale Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/53> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "53" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Collins Street 250" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81564191"^^xsd:float ;
+	wgs84_pos:long "144.965499"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "250 Collins Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/54> schema:addressCountry "Australia" ;
+	schema:addressLocality "Carlton" ;
+	schema:identifier "54" ;
+	schema:postalCode "3053" ;
+	schema:streetAddress "Swanston Street 613" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.804024"^^xsd:float ;
+	wgs84_pos:long "144.96308399"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "613 Swanston Street Carlton VIC 3053 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/56> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "56" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Lonsdale Street 368" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81234775"^^xsd:float ;
+	wgs84_pos:long "144.96153311"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "368 Lonsdale Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/58> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "58" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Bourke Street 690" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81686075"^^xsd:float ;
+	wgs84_pos:long "144.95358075"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "690 Bourke Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/59> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "59" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Swanston Street 437" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80825648"^^xsd:float ;
+	wgs84_pos:long "144.96304859"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "437 Swanston Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/6> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "6" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Street 207-361" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81911705"^^xsd:float ;
+	wgs84_pos:long "144.96558255"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "207-361 Flinders Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/61> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "61" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Swanston Street 414" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80767455"^^xsd:float ;
+	wgs84_pos:long "144.96309114"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "414 Swanston Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/62> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "62" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "La Trobe Street 254" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80996494"^^xsd:float ;
+	wgs84_pos:long "144.96216521"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "254 La Trobe Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/63> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "63" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Bourke Street 233" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81333081"^^xsd:float ;
+	wgs84_pos:long "144.96675571"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "233 Bourke Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/66> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "66" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Little Lonsdale Street 255" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81057846"^^xsd:float ;
+	wgs84_pos:long "144.96444294"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-03" ;
+	us:hasAddress "255 Little Lonsdale Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/67> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "67" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Lane 265" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81688755"^^xsd:float ;
+	wgs84_pos:long "144.96562569"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "265 Flinders Lane Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/68> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "68" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Lane 258" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.8168479"^^xsd:float ;
+	wgs84_pos:long "144.96559789"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "EzyMart 258 Flinders Lane Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/69> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "69" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Lane 258" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81687226"^^xsd:float ;
+	wgs84_pos:long "144.96559144"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "EzyMart 258 Flinders Lane Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/70> schema:addressCountry "Australia" ;
+	schema:addressLocality "North Melbourne" ;
+	schema:identifier "70" ;
+	schema:postalCode "3051" ;
+	schema:streetAddress "Errol Street 22" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80456984"^^xsd:float ;
+	wgs84_pos:long "144.94946228"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "22 Errol Street North Melbourne VIC 3051 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/71> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "71" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Exhibition Street 136" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81235775"^^xsd:float ;
+	wgs84_pos:long "144.97136962"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-02" ;
+	us:hasAddress "Absolute MMA CBD 136 Exhibition Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/72> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "72" ;
+	schema:postalCode "3004" ;
+	schema:streetAddress "Flinders Street 169" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81726338"^^xsd:float ;
+	wgs84_pos:long "144.96872809"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "169 Flinders Street Melbourne VIC 3004 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/75> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "75" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Spring Street 3" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81515276"^^xsd:float ;
+	wgs84_pos:long "144.97467661"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-11" ;
+	us:hasAddress "3 Spring Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/76> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "76" ;
+	schema:postalCode "3031" ;
+	schema:streetAddress "Macaulay Road 475" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.79453803"^^xsd:float ;
+	wgs84_pos:long "144.93036194"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "Kensington Healthcare 475 Macaulay Road Kensington VIC 3031 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/77> schema:addressCountry "Australia" ;
+	schema:addressLocality "Docklands" ;
+	schema:identifier "77" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Harbour Esplanade 197" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81441438"^^xsd:float ;
+	wgs84_pos:long "144.94433026"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "197 Harbour Esplanade Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/78> schema:addressCountry "Australia" ;
+	schema:addressLocality "Docklands" ;
+	schema:identifier "78" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "La Trobe Street 1010" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81471642"^^xsd:float ;
+	wgs84_pos:long "144.9446508"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "Stop D2: Central Pier 1010 La Trobe Street Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/79> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "79" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Street 207-361" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81794046"^^xsd:float ;
+	wgs84_pos:long "144.96616678"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "207-361 Flinders Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/8> schema:addressCountry "Australia" ;
+	schema:addressLocality "Docklands" ;
+	schema:identifier "8" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Navigation Drive 1-5" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.82293543"^^xsd:float ;
+	wgs84_pos:long "144.9471751"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "1-5 Navigation Drive Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/84> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "84" ;
+	schema:postalCode "3000" ;
+	schema:streetAddress "Flinders Street 276" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81798049"^^xsd:float ;
+	wgs84_pos:long "144.96503383"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-08" ;
+	us:hasAddress "Rocket Burgers and Fries 276 Flinders Street Melbourne VIC 3000 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/85> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "85" ;
+	schema:postalCode "3031" ;
+	schema:streetAddress "Macaulay Road 488" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.79432415"^^xsd:float ;
+	wgs84_pos:long "144.92973378"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "Edward Thomas 488 Macaulay Road Kensington VIC 3031 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/86> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "86" ;
+	schema:postalCode "3051" ;
+	schema:streetAddress "Queensberry Street 547-553" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80309992"^^xsd:float ;
+	wgs84_pos:long "144.94908064"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "547-553 Queensberry Street North Melbourne VIC 3051 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/87> schema:addressCountry "Australia" ;
+	schema:addressLocality "North Melbourne" ;
+	schema:identifier "87" ;
+	schema:postalCode "3051" ;
+	schema:streetAddress "Errol Street 19" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.80454949"^^xsd:float ;
+	wgs84_pos:long "144.94921863"^^xsd:float ;
+	us:MicroclimateSensor "aws5-0999" ;
+	us:hasAddress "19 Errol Street North Melbourne VIC 3051 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/location/9> schema:addressCountry "Australia" ;
+	schema:addressLocality "Melbourne" ;
+	schema:identifier "9" ;
+	schema:postalCode "3008" ;
+	schema:streetAddress "Collins Street 700" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> ;
+	rdfs:comment "Outdoor" ;
+	wgs84_pos:lat "-37.81982992"^^xsd:float ;
+	wgs84_pos:long "144.95102555"^^xsd:float ;
+	us:MicroclimateSensor "ICTMicroclimate-09" ;
+	us:hasAddress "The Australian Bureau of Meteorology Building 700 Collins Street Docklands VIC 3008 Australia" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/280Will_T> schema:dateInstalled "2022-10-08"^^xsd:date ;
+	schema:description "Flagstaff station (East)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/107> ;
+	us:sensorId "280Will_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/474Fl_T> schema:dateInstalled "2023-11-10"^^xsd:date ;
+	schema:description "Awning of Nationwide Parking 474 Flinders Street" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/141> ;
+	us:sensorId "474Fl_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/488Mac_T> schema:dateInstalled "2021-12-21"^^xsd:date ;
+	schema:description "Macaulay Rd (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/85> ;
+	us:sensorId "488Mac_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/574Qub_T> schema:dateInstalled "2021-12-21"^^xsd:date ;
+	schema:description "Queensberry St - Errol St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/86> ;
+	us:sensorId "574Qub_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/ACMI_T> schema:dateInstalled "2020-11-30"^^xsd:date ;
+	schema:description "Flinders St- ACMI" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/72> ;
+	us:sensorId "ACMI_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/AG_T> schema:dateInstalled "2013-10-11"^^xsd:date ;
+	schema:description "St Kilda Rd-Alexandra Gardens" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "sensor upgraded from laser to 3D on 19/12/2019" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/29> ;
+	us:sensorId "AG_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/AlfPl_T> schema:dateInstalled "2019-12-04"^^xsd:date ;
+	schema:description "Alfred Place" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "In 4/12/2019 sensor upgraded" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/39> ;
+	us:sensorId "AlfPl_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/BirArt1109_T> schema:dateInstalled "2024-06-04"^^xsd:date ;
+	schema:description "Birrarung Marr - COM - Pole 1109" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/161> ;
+	us:sensorId "BirArt1109_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/BirBridge_T_1> schema:dateInstalled "2023-06-02"^^xsd:date ;
+	schema:description "Birrarung Marr East - Batman Ave Bridge Entry" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/123> ;
+	us:sensorId "BirBridge_T_1" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/BirBridge_T_2> schema:dateInstalled "2023-06-02"^^xsd:date ;
+	schema:description "Birrarung Marr East - Batman Ave Bridge Entry" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/124> ;
+	us:sensorId "BirBridge_T_2" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/BirFed1120_T> schema:dateInstalled "2023-11-03"^^xsd:date ;
+	schema:description "COM Pole 1120 - Towards the City Near Federation Square Bridge" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/136> ;
+	us:sensorId "BirFed1120_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Bou231_T> schema:dateInstalled "2020-01-07"^^xsd:date ;
+	schema:description "231 Bourke St" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/63> ;
+	us:sensorId "Bou231_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Bou283_T> schema:dateInstalled "2009-03-30"^^xsd:date ;
+	schema:description "Bourke Street Mall (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/2> ;
+	us:sensorId "Bou283_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Bou292_T> schema:dateInstalled "2009-03-24"^^xsd:date ;
+	schema:description "Bourke Street Mall (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/1> ;
+	us:sensorId "Bou292_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Bou688_T> schema:dateInstalled "2018-09-27"^^xsd:date ;
+	schema:description "Bourke St - Spencer St (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/58> ;
+	us:sensorId "Bou688_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Bou892T> schema:dateInstalled "2023-09-25"^^xsd:date ;
+	schema:description "I-Hub 892 Bourke Street" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/130> ;
+	us:sensorId "Bou892T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/BouHbr2353_T> schema:dateInstalled "2023-11-03"^^xsd:date ;
+	schema:description "COM Pole 2353 - Towards the city NAB Building" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/137> ;
+	us:sensorId "BouHbr2353_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/BouHbr_T> schema:dateInstalled "2009-04-23"^^xsd:date ;
+	schema:description "Victoria Point" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/10> ;
+	us:sensorId "BouHbr_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Bourke155_T> schema:dateInstalled "2013-09-02"^^xsd:date ;
+	schema:description "155-161 Russell Street" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/21> ;
+	us:sensorId "Bourke155_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Boyd2837_T> schema:dateInstalled "2023-11-02"^^xsd:date ;
+	schema:description "COM Pole 2837 - Boyd Park" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/140> ;
+	us:sensorId "Boyd2837_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Col12_T> schema:dateInstalled "2009-03-30"^^xsd:date ;
+	schema:description "Collins Place (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/18> ;
+	us:sensorId "Col12_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Col15_T> schema:dateInstalled "2009-03-30"^^xsd:date ;
+	schema:description "Collins Place (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Device is upgraded in 26/02/2020" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/17> ;
+	us:sensorId "Col15_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Col254_T> schema:dateInstalled "2015-09-23"^^xsd:date ;
+	schema:description "Collins Street (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/53> ;
+	us:sensorId "Col254_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Col620_T> schema:dateInstalled "2013-09-02"^^xsd:date ;
+	schema:description "Spencer St-Collins St (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/24> ;
+	us:sensorId "Col620_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Col623_T> schema:dateInstalled "2013-09-02"^^xsd:date ;
+	schema:description "Spencer St-Collins St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 25/07/2023" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/23> ;
+	us:sensorId "Col623_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Col700_T> schema:dateInstalled "2009-03-23"^^xsd:date ;
+	schema:description "Southern Cross Station" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/9> ;
+	us:sensorId "Col700_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/ElFi_T> schema:dateInstalled "2021-12-03"^^xsd:date ;
+	schema:description "Elizabeth St - Flinders St (East) - New footpath" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/84> ;
+	us:sensorId "ElFi_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Eli250_T> schema:dateInstalled "2017-08-24"^^xsd:date ;
+	schema:description "Melbourne Central-Elizabeth St (East)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 25/07/2023. Move to 250 Elizabeth Street from adjacent St. Francis Church at 266 Elizabeth." ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/47> ;
+	us:sensorId "Eli250_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Eli263_T> schema:dateInstalled "2017-07-31"^^xsd:date ;
+	schema:description "Elizabeth St-Lonsdale St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 25/07/2023" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/52> ;
+	us:sensorId "Eli263_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Eli368_T> schema:dateInstalled "2025-03-26"^^xsd:date ;
+	schema:description "368 Elizabeth Street" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Moved from 380 Elizabeth Street" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/181> ;
+	us:sensorId "Eli368_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Eli489_T> schema:dateInstalled "2024-07-01"^^xsd:date ;
+	schema:description "iHub 489 Elizabeth Street" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/162> ;
+	us:sensorId "Eli489_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Eli501_T> schema:dateInstalled "2017-11-29"^^xsd:date ;
+	schema:description "QVM-Therry St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 20/07/2023" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/49> ;
+	us:sensorId "Eli501_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/EntPark1671_T> schema:dateInstalled "2023-11-20"^^xsd:date ;
+	schema:description "COM Pole 1671 - Enterprize Park Queens Bridge" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/138> ;
+	us:sensorId "EntPark1671_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Errol20_T> schema:dateInstalled "2020-10-12"^^xsd:date ;
+	schema:description "Errol Street (East)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/70> ;
+	us:sensorId "Errol20_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Errol23_T> schema:dateInstalled "2022-05-20"^^xsd:date ;
+	schema:description "Errol St (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/87> ;
+	us:sensorId "Errol23_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/FLDegC_T> schema:dateInstalled "2020-06-03"^^xsd:date ;
+	schema:description "Flinders Ln -Degraves St (Crossing)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/69> ;
+	us:sensorId "FLDegC_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/FLDegN_T> schema:dateInstalled "2020-06-03"^^xsd:date ;
+	schema:description "Flinders Ln -Degraves St (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/68> ;
+	us:sensorId "FLDegN_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/FLDegS_T> schema:dateInstalled "2020-06-03"^^xsd:date ;
+	schema:description "Flinders Ln -Degraves St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/67> ;
+	us:sensorId "FLDegS_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Fli114C_T> schema:dateInstalled "2022-12-06"^^xsd:date ;
+	schema:description "114 Flinders Street Car Park Crossing" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/118> ;
+	us:sensorId "Fli114C_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Fli114F_T> schema:dateInstalled "2022-12-06"^^xsd:date ;
+	schema:description "114 Flinders Street Car Park Footpath" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/117> ;
+	us:sensorId "Fli114F_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/FliSS_T> schema:dateInstalled "2021-09-10"^^xsd:date ;
+	schema:description "Flinders St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/79> ;
+	us:sensorId "FliSS_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/FliS_T> schema:dateInstalled "2009-03-25"^^xsd:date ;
+	schema:description "Flinders Street Station Underpass" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Upgraded on 8/09/21" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/6> ;
+	us:sensorId "FliS_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Fra118_T> schema:dateInstalled "2017-11-30"^^xsd:date ;
+	schema:description "QVM-Franklin St (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 20/07/2023" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/51> ;
+	us:sensorId "Fra118_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Hammer1584_T> schema:dateInstalled "2023-11-03"^^xsd:date ;
+	schema:description "COM Pole 1584 - Hammer Hall Entrance" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/142> ;
+	us:sensorId "Hammer1584_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/HarEsB_T> schema:dateInstalled "2021-03-30"^^xsd:date ;
+	schema:description "Harbour Esplanade (West) - Bike Path" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/78> ;
+	us:sensorId "HarEsB_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/HarEsP_T> schema:dateInstalled "2021-03-25"^^xsd:date ;
+	schema:description "Harbour Esplanade (West) - Pedestrian path" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Replaced - water damaged" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/77> ;
+	us:sensorId "HarEsP_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/KenMac_T> schema:dateInstalled "2021-02-20"^^xsd:date ;
+	schema:description "Macaulay Rd- Bellair St" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/76> ;
+	us:sensorId "KenMac_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/King2_T> schema:dateInstalled "2023-09-25"^^xsd:date ;
+	schema:description "I-Hub Corner of King Street and Flinders Street (2-6 King)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/131> ;
+	us:sensorId "King2_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/King335_T> schema:dateInstalled "2023-09-25"^^xsd:date ;
+	schema:description "I-Hub Corner of King Street and Latrobe Street (317-335 King)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/132> ;
+	us:sensorId "King335_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Lat224_T> schema:dateInstalled "2019-09-25"^^xsd:date ;
+	schema:description "La Trobe St (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/62> ;
+	us:sensorId "Lat224_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Lat526_T_1> schema:dateInstalled "2024-08-14"^^xsd:date ;
+	schema:description "I-Hub 526 La Trobe Street (Footpath)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/164> ;
+	us:sensorId "Lat526_T_1" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Lat526_T_2> schema:dateInstalled "2024-08-14"^^xsd:date ;
+	schema:description "I-Hub 526 La Trobe Street (Crossing)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/167> ;
+	us:sensorId "Lat526_T_2" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/LatWill_T> schema:dateInstalled "2022-10-08"^^xsd:date ;
+	schema:description "La Trobe St- William St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/109> ;
+	us:sensorId "LatWill_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Lon189_T> schema:dateInstalled "2013-10-14"^^xsd:date ;
+	schema:description "Lonsdale St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 20/07/2023" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/30> ;
+	us:sensorId "Lon189_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Lon364_T> schema:dateInstalled "2018-07-25"^^xsd:date ;
+	schema:description "Lonsdale St - Elizabeth St (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Sensor device has been replaced" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/56> ;
+	us:sensorId "Lon364_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/LtB170_T> schema:dateInstalled "2013-09-06"^^xsd:date ;
+	schema:description "Chinatown-Lt Bourke St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 20/07/2023" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/20> ;
+	us:sensorId "LtB170_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/LtB210_T> schema:dateInstalled "2013-09-02"^^xsd:date ;
+	schema:description "Chinatown-Swanston St (North)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 20/07/2023" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/19> ;
+	us:sensorId "LtB210_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Lyg161_T> schema:dateInstalled "2013-10-10"^^xsd:date ;
+	schema:description "Lygon St (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 25/07/2023" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/31> ;
+	us:sensorId "Lyg161_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Lyg260_T> schema:dateInstalled "2015-02-11"^^xsd:date ;
+	schema:description "Lygon St (East)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 30/06/2023. Move from 174 to 260 Lygon Street (12/08/2024)" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/37> ;
+	us:sensorId "Lyg260_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Lyg309_T> schema:dateInstalled "2017-11-30"^^xsd:date ;
+	schema:description "Faraday St-Lygon St (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 25/07/2023" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/50> ;
+	us:sensorId "Lyg309_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/MCEC_T> schema:dateInstalled "2013-08-28"^^xsd:date ;
+	schema:description "Melbourne Convention Exhibition Centre" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/25> ;
+	us:sensorId "MCEC_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Mac330_T> schema:dateInstalled "2025-03-11"^^xsd:date ;
+	schema:description "Pumping Station No.2 330 Macaulay Road" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/180> ;
+	us:sensorId "Mac330_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/NewQ_T> schema:dateInstalled "2009-01-21"^^xsd:date ;
+	schema:description "New Quay" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/12> ;
+	us:sensorId "NewQ_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Pel147_T> schema:dateInstalled "2017-07-10"^^xsd:date ;
+	schema:description "Pelham St (South)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/46> ;
+	us:sensorId "Pel147_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Pow61_T> schema:dateInstalled "2024-12-19"^^xsd:date ;
+	schema:description "61-67 Power Street Southbank" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/179> ;
+	us:sensorId "Pow61_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/PriNW_T> schema:dateInstalled "2009-03-26"^^xsd:date ;
+	schema:description "Princes Bridge" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Replace with: 00:6e:02:01:9e:54" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/5> ;
+	us:sensorId "PriNW_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/QVMQ_T> schema:dateInstalled "2017-10-02"^^xsd:date ;
+	schema:description "QVM-Queen St (East)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 03/07/2023" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/48> ;
+	us:sensorId "QVMQ_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/QVN_T> schema:dateInstalled "2020-04-06"^^xsd:date ;
+	schema:description "State Library - New" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/66> ;
+	us:sensorId "QVN_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Que85_T> schema:dateInstalled "2015-01-20"^^xsd:date ;
+	schema:description "Queen St (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 03/08/2023" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/36> ;
+	us:sensorId "Que85_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/RMIT14_T> schema:dateInstalled "2019-06-28"^^xsd:date ;
+	schema:description "RMIT Building 14" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/61> ;
+	us:sensorId "RMIT14_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/RMIT_T> schema:dateInstalled "2019-02-13"^^xsd:date ;
+	schema:description "Building 80 RMIT" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/59> ;
+	us:sensorId "RMIT_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/SanBri_T> schema:dateInstalled "2009-03-24"^^xsd:date ;
+	schema:description "Sandridge Bridge" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Sensor relocated to sensor ID 25 on 2/10/2019" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/14> ;
+	us:sensorId "SanBri_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Signal1647_T> schema:dateInstalled "2023-11-20"^^xsd:date ;
+	schema:description "COM Pole 1647 - Sandridge Bridge Signal Box" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/139> ;
+	us:sensorId "Signal1647_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/SouthB_T> schema:dateInstalled "2016-04-11"^^xsd:date ;
+	schema:description "Southbank" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Device replaced with two new sensors on 15-4-21" ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/35> ;
+	us:sensorId "SouthB_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Spen161_T> schema:dateInstalled "2023-09-25"^^xsd:date ;
+	schema:description "I-Hub Southern Cross Station - Bourke Street Entrance - South" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/135> ;
+	us:sensorId "Spen161_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Spen201_T> schema:dateInstalled "2023-09-25"^^xsd:date ;
+	schema:description "I-Hub Southern Cross Station - Bourke Street Entrance - North" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/134> ;
+	us:sensorId "Spen201_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Spen229_T> schema:dateInstalled "2023-09-25"^^xsd:date ;
+	schema:description "I-Hub Southern Cross Station - Lonsdale Street Entrance - South" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/133> ;
+	us:sensorId "Spen229_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Spen475_T> schema:dateInstalled "2024-08-14"^^xsd:date ;
+	schema:description "475 Spencer Street" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/165> ;
+	us:sensorId "Spen475_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Spen484_T> schema:dateInstalled "2024-09-25"^^xsd:date ;
+	schema:description "484 Spencer Street" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Former sensor 227 Bourke Street   City Lab" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/166> ;
+	us:sensorId "Spen484_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Spencer_T> schema:dateInstalled "2024-04-10"^^xsd:date ;
+	schema:description "Mounted on Toilet - Spencer Street Batman Park" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/143> ;
+	us:sensorId "Spencer_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Spr201_T> schema:dateInstalled "2015-01-19"^^xsd:date ;
+	schema:description "Lonsdale St-Spring St (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 03/08/2023" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/40> ;
+	us:sensorId "Spr201_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/SprFli_T> schema:dateInstalled "2020-12-18"^^xsd:date ;
+	schema:description "Spring St- Flinders st (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/75> ;
+	us:sensorId "SprFli_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Swa123_T> schema:dateInstalled "2009-03-23"^^xsd:date ;
+	schema:description "Town Hall (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/4> ;
+	us:sensorId "Swa123_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Swa148_T> schema:dateInstalled "2017-06-29"^^xsd:date ;
+	schema:description "Little Collins St-Swanston St (East)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 03/08/2023" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/45> ;
+	us:sensorId "Swa148_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Swa295_T> schema:dateInstalled "2009-03-25"^^xsd:date ;
+	schema:description "Melbourne Central" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/3> ;
+	us:sensorId "Swa295_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Swa31> schema:dateInstalled "2017-06-29"^^xsd:date ;
+	schema:description "Flinders La-Swanston St (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/41> ;
+	us:sensorId "Swa31" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Swa607_T> schema:dateInstalled "2018-06-26"^^xsd:date ;
+	schema:description "Lincoln-Swanston (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/54> ;
+	us:sensorId "Swa607_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/UM1_T> schema:dateInstalled "2015-04-15"^^xsd:date ;
+	schema:description "Grattan St-Swanston St (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/42> ;
+	us:sensorId "UM1_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/UM2_T> schema:dateInstalled "2015-04-15"^^xsd:date ;
+	schema:description "Monash Rd-Swanston St (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/43> ;
+	us:sensorId "UM2_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/UM3_T> schema:dateInstalled "2015-04-15"^^xsd:date ;
+	schema:description "Tin Alley-Swanston St (West)" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	rdfs:comment "Pushbox Upgrade 30/06/2023" ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/44> ;
+	us:sensorId "UM3_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/VAC_T> schema:dateInstalled "2013-08-23"^^xsd:date ;
+	schema:description "The Arts Centre" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/28> ;
+	us:sensorId "VAC_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/Vic_T> schema:dateInstalled "2013-08-16"^^xsd:date ;
+	schema:description "QV Market-Peel St" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/27> ;
+	us:sensorId "Vic_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/WatCit_T> schema:dateInstalled "2009-01-20"^^xsd:date ;
+	schema:description "Waterfront City" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "East" ;
+	us:direction2 "West" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/11> ;
+	us:sensorId "WatCit_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/WebBN_T> schema:dateInstalled "2009-03-24"^^xsd:date ;
+	schema:description "Webb Bridge" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/8> ;
+	us:sensorId "WebBN_T" .
+
+<https://smartcity.linkeddata.es/lcc/resource/sensor/WestWP_T> schema:dateInstalled "2020-10-16"^^xsd:date ;
+	schema:description "Westwood Place" ;
+	schema:status "A" ;
+	rdf:type <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#PedestrianSensor> ;
+	us:direction1 "North" ;
+	us:direction2 "South" ;
+	us:locatedAt <https://smartcity.linkeddata.es/lcc/resource/location/71> ;
+	us:sensorId "WestWP_T" .
+
