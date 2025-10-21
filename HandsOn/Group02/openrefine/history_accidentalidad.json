@@ -386,5 +386,254 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column localizacion using expression grel:if(isBlank(value), value, value.split(\",\")[0].trim())"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "num_expediente",
+    "expression": "grel:value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column num_expediente using expression grel:value.trim()"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "num_expediente",
+    "description": "Blank down cells in column num_expediente"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "num_expediente",
+    "expression": "grel:if(\n  isBlank(cells[\"num_expediente\"].value),\n  null,\n  forNonBlank(row.record.cells[\"tipo_persona\"], c, c.value, null)\n    .join(\"||\")\n    .contains(\"Peatón\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "peaton_involucrado",
+    "columnInsertIndex": 1,
+    "description": "Create column peaton_involucrado at index 1 based on column num_expediente using expression grel:if(\n  isBlank(cells[\"num_expediente\"].value),\n  null,\n  forNonBlank(row.record.cells[\"tipo_persona\"], c, c.value, null)\n    .join(\"||\")\n    .contains(\"Peatón\")\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "num_expediente",
+    "expression": "grel:if(\n  isBlank(cells[\"num_expediente\"].value),\n  null,\n  forNonBlank(row.record.cells[\"tipo_vehiculo\"], c, c.value, null)\n    .uniques()\n    .join(\", \")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "vehiculos_involucrados",
+    "columnInsertIndex": 1,
+    "description": "Create column vehiculos_involucrados at index 1 based on column num_expediente using expression grel:if(\n  isBlank(cells[\"num_expediente\"].value),\n  null,\n  forNonBlank(row.record.cells[\"tipo_vehiculo\"], c, c.value, null)\n    .uniques()\n    .join(\", \")\n)"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "num_expediente",
+    "description": "Blank down cells in column num_expediente"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "cod_lesividad",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column cod_lesividad using expression value.toNumber()"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "num_expediente",
+    "description": "Blank down cells in column num_expediente"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "num_expediente",
+    "expression": "grel:if(\n  isBlank(cells[\"num_expediente\"].value),\n  null,\n  with(\n    forNonBlank(row.record.cells[\"cod_lesividad\"], c, c.value, null),\n    C,\n    with(\n      forEach(C, x, if(isError(toNumber(x)), null, toNumber(x))),\n      nums,\n      with(\n        filter(nums, n, n != null),\n        nums2,\n        with(\n          if(nums2.length() > 0, nums2.sort().reverse()[0], null),\n          maxcod,\n          if(\n            isBlank(maxcod),\n            5,\n            if(maxcod == 1, 6,\n            if(maxcod == 2, 7,\n            if(maxcod == 3, 8,\n            if(maxcod == 4, 10,\n            if(maxcod == 5, 4,\n            if(maxcod == 6, 5,\n            if(maxcod == 7, 3,\n            if(maxcod == 14, 1, 5\n            ))))))))\n          )\n        )\n      )\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "nivel_lesividad",
+    "columnInsertIndex": 1,
+    "description": "Create column nivel_lesividad at index 1 based on column num_expediente using expression grel:if(\n  isBlank(cells[\"num_expediente\"].value),\n  null,\n  with(\n    forNonBlank(row.record.cells[\"cod_lesividad\"], c, c.value, null),\n    C,\n    with(\n      forEach(C, x, if(isError(toNumber(x)), null, toNumber(x))),\n      nums,\n      with(\n        filter(nums, n, n != null),\n        nums2,\n        with(\n          if(nums2.length() > 0, nums2.sort().reverse()[0], null),\n          maxcod,\n          if(\n            isBlank(maxcod),\n            5,\n            if(maxcod == 1, 6,\n            if(maxcod == 2, 7,\n            if(maxcod == 3, 8,\n            if(maxcod == 4, 10,\n            if(maxcod == 5, 4,\n            if(maxcod == 6, 5,\n            if(maxcod == 7, 3,\n            if(maxcod == 14, 1, 5\n            ))))))))\n          )\n        )\n      )\n    )\n  )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tipo_vehiculo",
+    "description": "Remove column tipo_vehiculo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "tipo_persona",
+    "description": "Remove column tipo_persona"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cod_lesividad",
+    "description": "Remove column cod_lesividad"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "rango_edad",
+    "description": "Remove column rango_edad"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "num_expediente",
+    "description": "Blank down cells in column num_expediente"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "num_expediente",
+          "expression": "grel:isBlank(value)",
+          "columnName": "num_expediente",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "num_expediente",
+      "fecha",
+      "hora",
+      "localizacion",
+      "cod_distrito",
+      "distrito",
+      "tipo_accidente",
+      "estado_meteorológico",
+      "sexo",
+      "coordenada_x_utm",
+      "coordenada_y_utm",
+      "positiva_alcohol",
+      "positiva_droga",
+      "peaton_involucrado",
+      "vehiculos_involucrados",
+      "lesividad",
+      "nivel_lesividad"
+    ],
+    "description": "Reorder columns"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "sexo",
+    "description": "Remove column sexo"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "positiva_alcohol",
+    "expression": "grel:if( value==\"false\",false,true)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column positiva_alcohol using expression grel:if( value==\"false\",false,true)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "positiva_droga",
+    "expression": "grel:if( value==\"false\",false,true)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column positiva_droga using expression grel:if( value==\"false\",false,true)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "coordenada_x_utm",
+    "expression": "jython:# Import the Java classes we need\nfrom org.locationtech.proj4j import CRSFactory, CoordinateReferenceSystem\nfrom org.locationtech.proj4j import CoordinateTransformFactory, ProjCoordinate\n\n# --- Setup the transformation (this runs once) ---\nif \"transformer\" not in globals():\n    global ctFactory, crsFactory, transformer\n    global srcCRS, targetCRS\n\n    ctFactory = CoordinateTransformFactory()\n    crsFactory = CRSFactory()\n\n    # Source: Your UTM Zone (e.g., EPSG:32630 for Zone 30N)\n    # Verify this is the correct EPSG code for your specific UTM zone!\n    srcCRS = crsFactory.createFromName(\"EPSG:32630\")\n    # Target: Standard Lat/Lon (WGS84)\n    targetCRS = crsFactory.createFromName(\"EPSG:4326\")\n\n    # Create the transformer object\n    transformer = ctFactory.createTransform(srcCRS, targetCRS)\n\n# --- Run the transformation for each row ---\ntry:\n    # Get x and y strings from your columns\n    # !!! CHANGE THESE column names if yours are different !!!\n    x_utm_string = cells['coordenada_x_utm'].value\n    y_utm_string = cells['coordenada_y_utm'].value\n\n    # Convert the strings to numbers (float)\n    x_utm = float(x_utm_string)\n    y_utm = float(y_utm_string)\n\n    # Create coordinate objects\n    srcCoord = ProjCoordinate(x_utm, y_utm)\n    targetCoord = ProjCoordinate()\n\n    # Perform the transformation\n    transformer.transform(srcCoord, targetCoord)\n\n    # Return as a WKT string (Lon Lat)\n    return \"POINT(\" + str(targetCoord.x) + \" \" + str(targetCoord.y) + \")\"\n\nexcept Exception as e:\n    # Handle blank cells or non-numeric errors\n    return None",
+    "onError": "set-to-blank",
+    "newColumnName": "wktGeometry",
+    "columnInsertIndex": 9,
+    "description": "Create column wktGeometry at index 9 based on column coordenada_x_utm using expression jython:# Import the Java classes we need\nfrom org.locationtech.proj4j import CRSFactory, CoordinateReferenceSystem\nfrom org.locationtech.proj4j import CoordinateTransformFactory, ProjCoordinate\n\n# --- Setup the transformation (this runs once) ---\nif \"transformer\" not in globals():\n    global ctFactory, crsFactory, transformer\n    global srcCRS, targetCRS\n\n    ctFactory = CoordinateTransformFactory()\n    crsFactory = CRSFactory()\n\n    # Source: Your UTM Zone (e.g., EPSG:32630 for Zone 30N)\n    # Verify this is the correct EPSG code for your specific UTM zone!\n    srcCRS = crsFactory.createFromName(\"EPSG:32630\")\n    # Target: Standard Lat/Lon (WGS84)\n    targetCRS = crsFactory.createFromName(\"EPSG:4326\")\n\n    # Create the transformer object\n    transformer = ctFactory.createTransform(srcCRS, targetCRS)\n\n# --- Run the transformation for each row ---\ntry:\n    # Get x and y strings from your columns\n    # !!! CHANGE THESE column names if yours are different !!!\n    x_utm_string = cells['coordenada_x_utm'].value\n    y_utm_string = cells['coordenada_y_utm'].value\n\n    # Convert the strings to numbers (float)\n    x_utm = float(x_utm_string)\n    y_utm = float(y_utm_string)\n\n    # Create coordinate objects\n    srcCoord = ProjCoordinate(x_utm, y_utm)\n    targetCoord = ProjCoordinate()\n\n    # Perform the transformation\n    transformer.transform(srcCoord, targetCoord)\n\n    # Return as a WKT string (Lon Lat)\n    return \"POINT(\" + str(targetCoord.x) + \" \" + str(targetCoord.y) + \")\"\n\nexcept Exception as e:\n    # Handle blank cells or non-numeric errors\n    return None"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "coordenada_y_utm",
+    "description": "Remove column coordenada_y_utm"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "coordenada_x_utm",
+    "description": "Remove column coordenada_x_utm"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "fecha",
+    "expression": "grel:if(or(isBlank(cells[\"fecha\"].value), isBlank(cells[\"hora\"].value)), null,\n  cells[\"fecha\"].value + \"T\" + cells[\"hora\"].value + \"+01:00\"\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "fecha_hora",
+    "columnInsertIndex": 2,
+    "description": "Create column fecha_hora at index 2 based on column fecha using expression grel:if(or(isBlank(cells[\"fecha\"].value), isBlank(cells[\"hora\"].value)), null,\n  cells[\"fecha\"].value + \"T\" + cells[\"hora\"].value + \"+01:00\"\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "fecha",
+    "description": "Remove column fecha"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "hora",
+    "description": "Remove column hora"
   }
 ]
