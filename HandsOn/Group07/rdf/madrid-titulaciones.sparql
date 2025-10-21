@@ -1,0 +1,31 @@
+###########################################################
+# SPARQL Query Set for Madrid-Titulaciones Ontology
+# Dataset: Spanish Universities Knowledge Graph (Madrid subset)
+# Ontology base: https://linkeduniversities.es/vocab/
+# Verified tool: GraphD
+###########################################################
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX lude: <https://linkeduniversities.es/vocab/>
+PREFIX ex:   <https://linkeduniversities.es/resource/>
+
+###########################################################
+# List all classes represented in the dataset
+###########################################################
+SELECT DISTINCT ?class
+WHERE {
+  ?s rdf:type ?class .
+}
+ORDER BY ?class
+
+###########################################################
+# Retrieve all properties (relationships) used in the dataset
+###########################################################
+SELECT DISTINCT ?property
+WHERE {
+  ?s ?property ?o .
+  FILTER(STRSTARTS(STR(?property), STR(lude:)))
+}
+ORDER BY ?property

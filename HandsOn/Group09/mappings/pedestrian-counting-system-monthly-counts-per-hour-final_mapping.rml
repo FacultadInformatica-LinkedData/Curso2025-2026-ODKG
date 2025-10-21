@@ -1,0 +1,107 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix schema: <http://schema.org/>.
+
+#################################################################
+# Logical Source
+#################################################################
+
+<#PedestrianCounts> 
+    a rml:LogicalSource;
+    rml:source "../csv/pedestrian-counting-system-monthly-counts-per-hour-final.csv";
+    rml:referenceFormulation ql:CSV .
+
+#################################################################
+# Entity Mapping
+#################################################################
+
+<#ObservationPedestrian> a rr:TriplesMap;
+    rml:logicalSource <#PedestrianCounts>;
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/Observation/{PedObserv_ID}";
+        rr:class sosa:Observation;
+        rr:class us:PedestrianObservation
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:madeBySensor;
+        rr:objectMap [
+            rml:reference "Sensor_Name";
+            rr:datatype xsd:string
+        ]
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate us:observedAtLocation;
+        rr:objectMap [
+            rml:reference "Location_ID";
+            rr:datatype xsd:string
+        ]
+    ];
+    
+    # rr:predicateObjectMap [
+    #     rr:predicate sosa:madeBySensor;
+    #     rr:objectMap [
+    #         rr:parentTriplesMap <#PedestrianSensor>;
+    #         rr:joinCondition [
+    #             rr:child "Sensor_Name";
+    #             rr:parent "Sensor_Name";
+    #         ]
+    #     ]
+    # ];
+    
+    # rr:predicateObjectMap [
+    #     rr:predicate us:observedAtLocation;
+    #     rr:objectMap [
+    #         rr:parentTriplesMap <#PedestrianLocation>;
+    #         rr:joinCondition [
+    #             rr:child "Location_ID";
+    #             rr:parent "Location_Id";
+    #         ]
+    #     ]
+    # ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sosa:resultTime;
+        rr:objectMap [
+            rml:reference "DateTime";
+            rr:datatype xsd:dateTime
+        ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate us:pedestrianCount;
+        rr:objectMap [
+            rml:reference "Total_of_Directions";
+            rr:datatype xsd:integer
+        ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate us:pedestrianCountD1;
+        rr:objectMap [
+            rml:reference "Direction_1";
+            rr:datatype xsd:integer
+        ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate us:pedestrianCountD2;
+        rr:objectMap [
+            rml:reference "Direction_2";
+            rr:datatype xsd:integer
+        ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [
+            rr:template "Pedestrian observation on {DateTime}";
+            rr:termType rr:Literal
+        ]
+    ] .

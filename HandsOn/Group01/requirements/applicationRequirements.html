@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Application Requirements</title>
+</head>
+<body>
+
+<h1>Non-Municipal Facilities in Madrid</h1>
+
+<h2>Description of the Application</h2>
+<p>
+  The application’s primary goal is to help people <strong>discover, locate, and compare non-municipal facilities</strong>
+  (universities, parks and gardens, sports centers and libraries) across Madrid.
+  Users can quickly find what they need by <strong>area</strong> (district/neighbourhood/municipality), by <strong>category</strong>
+  (type of facility), or by <strong>proximity</strong> to a chosen point. For each facility, the app highlights practical
+  details—address, opening hours, contact info—and, when available, <strong>nearby public transport</strong> (metro, bus, train)
+  to make planning a visit fast and convenient.
+</p>
+<p>
+  Typical tasks include: “show all universities in Chamartín,” “find libraries in Prosperidad,” or
+  “list sports centers near me that are easy to reach by Metro.” The emphasis is on <strong>clear, actionable results</strong> rather than raw data.
+</p>
+
+<h2>Possible use cases</h2>
+<ul>
+  <li>Residents searching for specific facility types within their district or neighbourhood and checking how to get there.</li>
+  <li>Visitors identifying facilities of interest near a location and reviewing nearby metro/bus/train lines.</li>
+  <li>Analysts exploring coverage and diversity of facility types per administrative area to support planning.</li>
+</ul>
+
+<h2>Functional Requirements</h2>
+<ul>
+  <li><strong>Search and Filter by Area:</strong>
+    <p>
+      Users can select a <em>district</em>, <em>neighbourhood</em>, or <em>municipality</em> (where applicable) to retrieve all facilities within that boundary.
+      Results must update instantly when the user switches area, and the interface should clearly display the current area context (e.g., breadcrumb or header tags).
+    </p>
+  </li>
+
+  <li><strong>Filter by Facility Type (Category):</strong>
+    <p>
+      Users can refine results using a <em>type</em> facet (e.g., university, library, sport center, park).
+      Multiple selections are allowed, and each selection updates the result list and counts. The system should remember selected filters when users navigate between pages or the map.
+    </p>
+  </li>
+
+  <li><strong>Keyword Search:</strong>
+    <p>
+      A free-text search matches <em>names</em> and <em>descriptions</em> (e.g., “Universidad Politécnica”, “Parque del Oeste”).
+      It should tolerate minor typos and support simple operators (quoted phrases, AND/OR) to narrow or broaden queries.
+    </p>
+  </li>
+
+  <li><strong>Map-Based Exploration:</strong>
+    <p>
+      An interactive map allows panning/zooming to explore facilities visually. The visible viewport determines which results appear in the side list.
+      Clicking a marker opens a concise preview (name, type, address, transport hints) with a link to the full detail.
+    </p>
+  </li>
+
+  <li><strong>Facility Detail View:</strong>
+    <p>
+      Each facility page (or drawer) shows: name, type(s), description, opening hours (if provided), address with “open in maps”, 
+      contact details (phone, email, website), district/neighbourhood labels, coordinates, accessibility note (if any), and transport hints (e.g., “Metro L7; Bus 27, 53”).
+      Provide consistent formatting and clearly mark missing fields.
+    </p>
+  </li>
+
+  <li><strong>Public Transport Context:</strong>
+    <p>
+      When the dataset includes transport information, display it prominently in the detail view. If additional transport datasets are integrated later,
+      show nearby <em>stops/lines</em> within a configurable radius and let users filter results by transport mode (metro/bus/train).
+      Where possible, provide quick links to official timetables or network maps.
+    </p>
+  </li>
+
+  <li><strong>Proximity and “Near Me” Queries:</strong>
+    <p>
+      Users can search “near a point” (by typing an address or clicking the map) with a distance slider (e.g., 200–2000 m).
+      Results should be sortable by distance and show an approximate walking time badge when coordinates are available.
+    </p>
+  </li>
+
+  <li><strong>Administrative Facets and Summaries:</strong>
+    <p>
+      Present <em>facets</em> and <em>counts</em> by district and neighbourhood (e.g., “Universities (12) in Chamartín”), enabling quick drill-down.
+      Area summary pages should list top facility types and provide a compact overview (e.g., “Most common categories in this area”).
+    </p>
+  </li>
+
+  </li>
+</ul>
+
+<h2>Non-Functional Requirements</h2>
+<ul>
+  <li><strong>Performance:</strong> The application should load quickly and handle large datasets efficiently, especially when users perform searches or interact with the map.</li>
+  <li><strong>Security:</strong> Ensure that data privacy and security measures are implemented when accessing or storing data. Users should not be able to access sensitive or unauthorized information.</li>
+  <li><strong>Accessibility:</strong> The application should be fully accessible, following best practices for web accessibility (WCAG standards). This includes support for screen readers, keyboard navigation, and mobile responsiveness.</li>
+</ul>
+
+<h2>Application User Interface</h2>
+<p>
+  The interface should be <strong>clean, approachable, and responsive</strong>, promoting clarity and speed. The following components will be included:
+</p>
+<ul>
+  <li><strong>Prominent Search Bar:</strong> A forgiving, fast search across names and descriptions with suggestions for common facility types and areas.</li>
+  <li><strong>Intuitive Filters Panel:</strong> Clear, multi-select filters for area (district → neighbourhood), facility type, and—when available—transport mode; chips/badges reflect active filters.</li>
+  <li><strong>Two-Pane Layout (Map + Results):</strong> An elegant split view with a dynamic map on the left and a sortable, paginated results list on the right; hover/click keeps both in sync.</li>
+  <li><strong>Concise Detail Drawer/Page:</strong> A well-structured detail view with readable sections (Overview, Address & Contact, Transport, Hours) and an easy “open in maps” action.</li>
+  <li><strong>Helpful Empty States:</strong> Friendly guidance when no results match, suggesting filter tweaks or nearby areas.</li>
+</ul>
+
+</body>
+</html>
+
