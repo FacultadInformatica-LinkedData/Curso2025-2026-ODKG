@@ -1,0 +1,361 @@
+[
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Detalle",
+          "expression": "value",
+          "columnName": "Detalle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(TITULACIÓN A EXTINGUIR)",
+                "l": "(TITULACIÓN A EXTINGUIR)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Detalle",
+          "expression": "value",
+          "columnName": "Detalle",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(TITULACIÓN EXTINGUIDA)",
+                "l": "(TITULACIÓN EXTINGUIDA)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Nivel académico",
+          "expression": "value",
+          "columnName": "Nivel académico",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Doctor - RD 99/2011 (0)",
+                "l": "Doctor - RD 99/2011 (0)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Nivel académico",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grado - RD 1393/2007 (1)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grado"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Nivel académico"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Nivel académico",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grado - RD 822/2021 (2)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grado"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Nivel académico"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Nivel académico",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Máster - RD 1393/2007 (1)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Máster"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Nivel académico"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Nivel académico",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Máster - RD 822/2021 (3)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Máster"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Nivel académico"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ámbito",
+    "description": "Eliminar columna Ámbito"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Estado",
+    "description": "Eliminar columna Estado"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Detalle",
+    "description": "Eliminar columna Detalle"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Código",
+    "expression": "grel:'2024-2025'",
+    "onError": "set-to-blank",
+    "newColumnName": "Academic Year",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna Academic Year en el índice 1 basada en la columna Código usando la expresión grel:'2024-2025'"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Academic Year",
+    "index": 0,
+    "description": "Mueve la columna Academic Year a la posición 0"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código",
+    "newColumnName": "Code",
+    "description": "Renombra la columna Código a Code"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Título",
+    "newColumnName": "Degree",
+    "description": "Renombra la columna Título a Degree"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Universidad",
+    "newColumnName": "University",
+    "description": "Renombra la columna Universidad a University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Nivel académico",
+    "newColumnName": "Academic Level",
+    "description": "Renombra la columna Nivel académico a Academic Level"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Rama",
+    "newColumnName": "Ambit",
+    "description": "Renombra la columna Rama a Ambit"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/Máster Universitario en/, \"\").replace(/ por la Universidad.*/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/Máster Universitario en/, \"\").replace(/ por la Universidad.*/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/Graduado o Graduada en/, \"\").replace(/ por la Universidad.*/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/Graduado o Graduada en/, \"\").replace(/ por la Universidad.*/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/Máster Universitario en/, \"\").replace(/ por la Universidad.*/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/Máster Universitario en/, \"\").replace(/ por la Universidad.*/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(/Máster Universitario/, \"\").replace(/ por la Universidad.*/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(/Máster Universitario/, \"\").replace(/ por la Universidad.*/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "(Conjunto)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Universidad Jaume I de Castellón"
+      }
+    ],
+    "description": "Editar celdas en masa en columna University"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "(Conjunto Internacional)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Universidad Jaume I de Castellón"
+      }
+    ],
+    "description": "Editar celdas en masa en columna University"
+  }
+]
