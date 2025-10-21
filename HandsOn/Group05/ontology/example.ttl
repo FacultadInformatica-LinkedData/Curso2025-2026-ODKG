@@ -1,0 +1,42 @@
+@prefix ns: <http://example.org/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/resource/> .
+
+
+###  Bicycle 
+ex:Bike7265 rdf:type ns:Bicycle .
+
+###  Address of Museo Reina Sofía 
+ex:Address_MuseoReinaSofia rdf:type ns:Address ;
+    ns:address_name "Calle de Santa Isabel (esquina con plaza del Emperador Carlos V)" .
+
+###  Address of Antón Martín 
+ex:Address_AntonMartin rdf:type ns:Address ;
+    ns:address_name "Calle Atocha nº 56" .
+
+###  Station: Museo Reina Sofía 
+ex:Station_MuseoReinaSofia rdf:type ns:Station ;
+    ns:station_name "Museo Reina Sofía" ;
+    ns:coord_x -3.6933463 ;
+    ns:coord_y 40.4083684 ;
+    ns:capacity 50 ;
+    ns:hasAddress ex:Address_MuseoReinaSofia .
+
+###  Station: Antón Martín 
+ex:Station_AntonMartin rdf:type ns:Station ;
+    ns:station_name "Antón Martín" ;
+    ns:coord_x -3.6991147 ;
+    ns:coord_y 40.4122047 ;
+    ns:capacity 41 ;
+    ns:hasAddress ex:Address_AntonMartin .
+
+###  Travel instance 
+ex:Trip_52863628Z_7265_2022-01-01T01:46:23 rdf:type ns:Travel ;
+    ns:duration 6.73 ;
+    ns:unLockDate "2022-01-01T01:39:39" ;
+    ns:lockDate "2022-01-01T01:46:23" ;
+    ns:hasBike ex:Bike7265 ;
+    ns:hasUnLockStation ex:Station_MuseoReinaSofia ;
+    ns:hasLockStation ex:Station_AntonMartin .

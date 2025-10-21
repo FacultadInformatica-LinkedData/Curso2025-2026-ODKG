@@ -1,0 +1,414 @@
+NOMBRE,IDNOMBRE,tieneInstalacionesDeportivas,tieneWifi,generoAlumnos,TRANSPORTE,Cercanias,Cercanias Lines,Cercanias Station,Metro,Metro_Station,metro_line,Bus,bus_line,Superfice m²,ACCESIBILIDAD,NOMBRE-VIA,NUM,LOCALIDAD,PROVINCIA,CODIGO-POSTAL,BARRIO,DISTRITO,LATITUD,LONGITUD,TELEFONO,EMAIL,TIPO,TipoInstalacion
+Centro Deportivo Municipal Alcántara,Centro-Deportivo-Municipal-Alcantara,,,,"Metro: Lista, Manuel Becerra.  Bus: 21, 43, 53, 146.  Renfe: Cercanías.  Bicicletas:  El centro dispone de aparca bicicletas exterior con capacidad para 12 bicicletas.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Cercanías,,,"Metro: Lista, Manuel Becerra","Lista, Manuel Becerra",,"Bus: 21, 43, 53, 146","21
+43
+53
+146",,Accesible,ALCANTARA,26,MADRID,MADRID,28006,GOYA,SALAMANCA,40.42810291538114,-3.6737317205040503,917373641,alcantara@viding.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Alfredo Goyeneche,Centro-Deportivo-Municipal-Alfredo-Goyeneche,,,,"Bus: 160, 161, 658  Renfe:  Aravaca   Bicicleta: El centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas.",Aravaca C7 C10,"C-7
+C-10",Aravaca,,,,"Bus: 160, 161, 658","160
+161
+658",,Accesible,ARROYO DE POZUELO,99,MADRID,MADRID,28023,ARAVACA,MONCLOA-ARAVACA,40.45212135012858,-3.783283203719198,913571228,idmagoyeneche@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Aluche,Centro-Deportivo-Municipal-Aluche,,,,"Metro: Aluche  Bus: 17, 34, 139  Cercanías Renfe: Maestra Justa Freire-Polideportivo Aluche (antigua estación de Fanjul).    Bicicletas:  el centro dispone de aparca bicicletas exterior  con capacidad para 6 bicicletas.",Renfe: Maestra Justa FreirePolideportivo Aluche (antigua estación de Fanjul) C5,C-5,Maestra Justa Freire-Polideportivo Aluche,Metro: Aluche,Aluche,,"Bus: 17, 34, 139","17
+34
+139",,Accesible,DE LAS AGUILAS,14,MADRID,MADRID,28044,LAS AGUILAS,LATINA,40.382720517194784,-3.773653600881568,917062868,idmaluche@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Antiguo Canódromo,Centro-Deportivo-Municipal-Antiguo-Canodromo,,,,"Bus: 17 , 25 , 119.",,,,,,,"Bus: 17 , 25 , 119","17
+25
+119",,Accesible,VIA CARPETANA,57,MADRID,MADRID,28047,SAN ISIDRO,CARABANCHEL,40.39801608457685,-3.7352725040539525,618439332,cdmantiguocanodromo@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Antonio Díaz Miguel,Centro-Deportivo-Municipal-Antonio-Diaz-Miguel,,,,Metro: VentillaBus: 42,,,,Metro: Ventilla,Ventilla,,Bus: 42,42,,Accesible,JOAQUIN DICENTA,1,MADRID,MADRID,28029,ALMENARA,TETUAN,40.471254265861454,-3.6953256978963807,913145437,idmadm@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Barajas,Centro-Deportivo-Municipal-Barajas,,,,"Metro: Barajas , Alameda de Osuna.  Bus: Urbanos (105, 112, 115, 151) / Interurbanos (211, 212, 827).  Bicicleta: el centro dispone de aparcabicicletas exterior con capacidad para 6 bicicletas.",,,,"Metro: Barajas , Alameda de Osuna","Barajas , Alameda de Osuna",,"Bus: Urbanos (105, 112, 115, 151) / Interurbanos (211, 212, 827)","105
+112
+115
+151
+211
+212
+827",,Accesible,LOGROÑO,70,MADRID,MADRID,28042,ALAMEDA DE OSUNA,BARAJAS,40.46301382809657,-3.587693324074623,913290602,idmbarajas@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Barceló,Centro-Deportivo-Municipal-Barcelo,,,,"Metro: Tribunal, Alonso Martínez, Bilbao.  Bus: 3, 21, 37, 40, 147, 149.  Bicicleta:  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Tribunal, Alonso Martínez, Bilbao","Tribunal, Alonso Martínez, Bilbao",,"Bus: 3, 21, 37, 40, 147, 149","3
+21
+37
+40
+147
+149",,No accesible,BARCELO,6,MADRID,MADRID,28004,JUSTICIA/ CENTRO,DISTRITO,40.42671069347762,-3.6988277636112716,910285389,infobarcelo@forus.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Blanca Fernández Ochoa (La Mina),Centro-Deportivo-Municipal-Blanca-Fernandez-Ochoa-(La-Mina),,,,"Metro: Carabanchel , Eugenia de Montijo.  Bus: 17 , 34 , 35 , 113 , 484 ,  481.  Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para  4  bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,"Metro: Carabanchel , Eugenia de Montijo","Carabanchel , Eugenia de Montijo",,"Bus: 17 , 34 , 35 , 113 , 484 ,  481","17
+34
+35
+113
+484
+481",,Accesible,MONSEÑOR OSCAR ROMERO,41,MADRID,MADRID,28025,VISTA ALEGRE,CARABANCHEL,40.38238220944523,-3.746452142917399,"914661278
+914661732",idmlamina@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Casa de Campo,Centro-Deportivo-Municipal-Casa-de-Campo,,,,"Metro: Lago, Puerta del Ángel.  Bus:  31, 33, 36, 39, 65, 138.   Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 10 bicicletas.  Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones",,,,"Metro: Lago, Puerta del Ángel","Lago, Puerta del Ángel",,"Bus:  31, 33, 36, 39, 65, 138","31
+33
+36
+39
+65
+138",,Accesible,PUERTA DEL ANGEL,7,MADRID,MADRID,28011,CASA DE CAMPO,MONCLOA-ARAVACA,40.41612628789201,-3.733536573641621,"914630050
+914649889",idmccampo@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Centro Integrado Arganzuela,Centro-Deportivo-Municipal-Centro-Integrado-Arganzuela,,,,"Metro: Palos de la Frontera  Bus: 6, 8, 19, 45, 47, 55, 59, 85, 86, 102, 247  Renfe: Delicias.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 6 bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",Renfe: Delicias c1 c10,"C-1
+C-10",Delicias,Metro: Palos de la Frontera,Palos de la Frontera,,"Bus: 6, 8, 19, 45, 47, 55, 59, 85, 86, 102, 247","6
+8
+19
+45
+47
+55
+59
+85
+86
+102
+247",,Accesible,CANARIAS,17,MADRID,MADRID,28045,PALOS DE MOGUER,ARGANZUELA,40.40207279862862,-3.6955325387824014,915273938,idmestacionsur@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Cerro Almodóvar,Centro-Deportivo-Municipal-Cerro-Almodovar,,,,"Bus: 58, 63, 145  Renfe: Santa Eugenia",RENFE: Santa Eugenia C2,C-2,: Santa Eugenia,,,,"Bus: 58, 63, 145","58
+63
+145",,Accesible,CERRO DE ALMODOVAR,9,MADRID,MADRID,28031,SANTA EUGENIA,VILLA DE VALLECAS,40.38168820146643,-3.602327770076511,913314047,idmcalmodovar@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Chamartín,Centro-Deportivo-Municipal-Chamartin,,,,"Metro: Pío XII.  Bus: 16 , 29 , 51 , 150.  Bicicleta:  El centro dispone de aparcabicicletas interior con capacidad para 12 bicicletas.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Pío XII,Pío XII,,"Bus: 16 , 29 , 51 , 150","16
+29
+51
+150",,Accesible,PIO XII,2,MADRID,MADRID,28016,NUEVA ESPAÑA,CHAMARTIN,40.46113349830694,-3.676208246061129,913593339,infochamartin@forus.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Circuito BMX,Centro-Deportivo-Municipal-Circuito-BMX,,,,"Metro: LegazpiBus: 62, T-32",,,,Metro: Legazpi,Legazpi,,"Bus: 62, T-32","62
+32",,No accesible,EMBAJADORES,316,MADRID,MADRID,28045,LEGAZPI,ARGANZUELA,40.385539006771225,-3.6898722494765366,915279704,idmcircuitobmx@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/CanchasBaloncesto,CentrosEspaciosDeporte
+Centro Deportivo Municipal Ciudad de los Poetas,Centro-Deportivo-Municipal-Ciudad-de-los-Poetas,,,,"Metro: Antonio Machado, Valdez arza   Bus : 126, 127, 132  Bicicleta:el centro dispone de aparca bicicletas  exterior con capacidad para 5 bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,"Metro: Antonio Machado, Valdez arza","Antonio Machado, Valdez arza",,"Bus : 126, 127, 132","126
+127
+132",,No accesible,ANTONIO MACHADO,12,MADRID,MADRID,28035,VALDEZARZA,MONCLOA-ARAVACA,40.465920678080856,-3.7189325594658573,913732739,idmcpoetas@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Concepción,Centro-Deportivo-Municipal-Concepcion,,,,"Metro: Barrio de la Concepción, Pueblo Nuevo, Quintana.  Bus: 21 ,146, 48.  Bicicleta: el centro dispone de aparca bicicletas,    exterior con capacidad para 11 bicicletas.  interior con capacidad para 6 bicicletas.    Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,"Metro: Barrio de la Concepción, Pueblo Nuevo, Quintana","Barrio de la Concepción, Pueblo Nuevo, Quintana",,"Bus: 21 ,146, 48","21
+146
+48",,No accesible,JOSE DEL HIERRO,5,MADRID,MADRID,28027,CONCEPCION,CIUDAD LINEAL,40.43725652047252,-3.6484498132292025,"914039020
+914039021
+914058719",idmconcepcion@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Cuatro Caminos,Centro-Deportivo-Municipal-Cuatro-Caminos,,,,"Metro: Cuatro Caminos (líneas 1, 2 y 7), Guzmán el Bueno (Líneas 6 y 7) Islas Filipinas (Línea 7), Alvarado (Línea 1) Canal (Líneas 2 y 7).  Bus: Circular 1 y 2, líneas 3, 37. 45, 64, 66, 124, 127, 128, 149 y N23.  Bicicleta:   Servicio Bicimad: Estación 132 de calle Santa Engracia 168 y estación 204 de calle Doctor Santero 1.para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Cuatro Caminos (líneas 1, 2 y 7), Guzmán el Bueno (Líneas 6 y 7) Islas Filipinas (Línea 7), Alvarado (Línea 1) Canal (Líneas 2 y 7)","Cuatro Caminos , Guzmán el Bueno  Islas Filipinas , Alvarado  Canal","1
+2
+7
+6","Bus: Circular 1 y 2, líneas 3, 37","1
+2
+3
+37",,"Instalación parcialmente accesible para personas con movilidad reducida
+Lengua de signos",BRAVO MURILLO,107,MADRID,MADRID,28020,BELLAS VISTAS,TETUAN,40.44793969377676,-3.7040303744815635,911177107,info@sportrade.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Daoíz y Velarde 1,Centro-Deportivo-Municipal-Daoiz-y-Velarde-1,,,,"Metro: Pacífico, Menéndez Pelayo Bus: 37, 57, 10, 54, 24, 141  Renfe: Méndez Alvaro, Atocha  Bicicleta: el centro dispone de aparcabicicletas exterior con capacidad para 5 bicicletas.   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","Renfe: Méndez Alvaro, Atocha C1,C2,C3,C4,C5,C6,C7,C8 y C10","C-1
+C-2
+C-3
+C-4
+C-5
+C-6
+C-7
+C-8
+C-10","Méndez Alvaro, Atocha","Metro: Pacífico, Menéndez Pelayo","Pacífico, Menéndez Pelayo",,"Bus: 37, 57, 10, 54, 24, 141","37
+57
+10
+54
+24
+141",,"Accesible
+Señalización podotáctil
+Bucle de inducción magnético",DAOÍZ Y VELARDE,5,MADRID,MADRID,28007,PACIFICO,RETIRO,40.40236990974131,-3.6772808932293217,"914338950
+914338770",idmdvelarde@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Daoíz y Velarde 2,Centro-Deportivo-Municipal-Daoiz-y-Velarde-2,,,,"Metro: Pacífico.  Bus: 37 , 57.  Renfe: Méndez Álvaro.  Bicicleta:   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Renfe: Méndez Álvaro c1 c5 c10,"C-1
+C-5
+C-10",Méndez Álvaro,Metro: Pacífico,Pacífico,,"Bus: 37 , 57","37
+57",,Accesible,ALBERCHE,21,MADRID,MADRID,28007,PACIFICO,RETIRO,40.400799189712316,-3.6778902970366896,914332758,secretaria@fmkarate.com,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal El Espinillo,Centro-Deportivo-Municipal-El-Espinillo,,,,"Bus: 23, 123, 130  Metro: Villaverde Bajo Cruce  Renfe: Villaverde Bajo  Bicicleta: el centro dispone de aparca bicicletas interior con capacidad para 4 bicicletas.",Renfe: Villaverde Bajo C3 C4,"C-3
+C-4",Villaverde Bajo,Metro: Villaverde Bajo Cruce,Villaverde Bajo Cruce,,"Bus: 23, 123, 130","23
+123
+130",,Accesible,VILLAVERDE A VALLECAS,19,MADRID,MADRID,28041,LOS ROSALES,VILLAVERDE,40.35634193991933,-3.686595141820635,913603265,idmespinillo@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Piscinas,CentrosEspaciosDeporte
+Centro Deportivo Municipal El Olivillo,Centro-Deportivo-Municipal-El-Olivillo,,,,"Metro: Lucero.  Bus: 31, 33, 36, 39, 65.",,,,Metro: Lucero,Lucero,,"Bus: 31, 33, 36, 39, 65","31
+33
+36
+39
+65",,No accesible,OLIVILLO,4,MADRID,MADRID,28011,LUCERO,LATINA,40.40652470221465,-3.745889233801086,914790212,idmolivillo@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal El Quijote,Centro-Deportivo-Municipal-El-Quijote,,,,"Metro:  Francos Rodríguez.  Bus:  44, 64, 126, 127, 128, 132.  Bicicleta:    Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones",,,,Metro:  Francos Rodríguez,Francos Rodríguez,,"Bus:  44, 64, 126, 127, 128, 132","44
+64
+126
+127
+128
+132",,Accesible,NUMANCIA,11,MADRID,MADRID,28039,CIUDAD UNIVERSITARIA,MONCLOA-ARAVACA,40.45357807068047,-3.7130529027048587,914599871,idmelquijote@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Piscinas,CentrosEspaciosDeporte
+Centro Deportivo Municipal Entrevías,Centro-Deportivo-Municipal-Entrevias,,,,"Bus: 24, 102, 103, 111.  Renfe: Asamblea de Madrid - Entrevías.  Bicicleta:  El centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","RENFE: Asamblea de Madrid  Entrevías C2, C7, C8","C-2
+C-7
+C-8",: Asamblea de Madrid - Entrevías,,,,"Bus: 24, 102, 103, 111","24
+102
+103
+111",,Accesible,SUR,4,MADRID,MADRID,28053,ENTREVIAS,PUENTE DE VALLECAS,40.378413212706285,-3.674532317137481,917854214,idmentrevias@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/CamposEstadiosFutbol,CentrosEspaciosDeporte
+Centro Deportivo Municipal Escuelas de San Antón,Centro-Deportivo-Municipal-Escuelas-de-San-Anton,,,,"Bus: 3.  Metro: Chueca y Tribunal.  Bicicleta:   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Chueca y Tribunal,Chueca y Tribunal,,Bus: 3,3,,Accesible,FARMACIA,13,MADRID,MADRID,28004,JUSTICIA,CENTRO,40.42382670120857,-3.699010103263697,918289006,info@cdmescuelassananton.com,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Estadio de Atletismo Vallehermoso,Centro-Deportivo-Municipal-Estadio-de-Atletismo-Vallehermoso,,,,"Metro: Canal (L2, L7), Guzmán el Bueno (L6, L7), Islas Filipinas (L7), Ríos Rosas (L1)  Bus: 2, 12, 44, N21  Bicicleta:  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones",,,,"Metro: Canal (L2, L7), Guzmán el Bueno (L6, L7), Islas Filipinas (L7), Ríos Rosas (L1)","Canal , Guzmán el Bueno , Islas Filipinas , Ríos Rosas","2
+7
+6
+1","Bus: 2, 12, 44, N21","2
+12
+44
+21",,"No accesible
+Señalización podotáctil
+Bucle de inducción magnético",MELQUIADES ALVAREZ,19,MADRID,,28003,VALLEHERMOSO,CHAMBERI,40.44220302362995,-3.7105841985334544,"914804751
+915132774",estadiovallehermoso@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte,CentrosEspaciosDeporte
+Centro Deportivo Municipal Estanque del Retiro,Centro-Deportivo-Municipal-Estanque-del-Retiro,,,,"Metro: Retiro e Ibiza.  Bus: 1, 2, 9, 15, 19, 20, 28, 51, 52, 74, 146, 152 y 202.  Renfe: Recoletos.   Bicicleta:   servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",Renfe: Recoletos C1 C2 C7 C8 C10,"C-1
+C-2
+C-7
+C-8
+C-10",Recoletos,Metro: Retiro e Ibiza,Retiro e Ibiza,,"Bus: 1, 2, 9, 15, 19, 20, 28, 51, 52, 74, 146, 152 y 202","1
+2
+9
+15
+19
+20
+28
+51
+52
+74
+146
+152
+202",,Instalación parcialmente accesible para personas con movilidad reducida,COLOMBIA,2,MADRID,MADRID,28009,LOS JERONIMOS,RETIRO,40.418436005960814,-3.6845031319515718,"915744024
+915571994",idmretiro@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Embarcaderos,CentrosEspaciosDeporte
+Centro Deportivo Municipal Fabián Roncero,Centro-Deportivo-Municipal-Fabian-Roncero,,,,"Bus: 77.  Metro: Canillejas.  Bicicleta:   El centro dispone de aparcabicicletas exterior con capacidad para 25 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Canillejas,Canillejas,,Bus: 77,77,,Accesible,SEPTIMA,68,MADRID,MADRID,28022,REJAS,SAN BLAS-CANILLEJAS,40.44965684114441,-3.597577201182505,917462995,recepcionfr@thinkingup.fitness,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Faustina Valladolid (antiguo Valdebernardo),Centro-Deportivo-Municipal-Faustina-Valladolid-(antiguo-Valdebernardo),,,,"Metro: Valdebernardo.  Bus:   8 , 71 , 130.    Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para 5bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,Metro: Valdebernardo,Valdebernardo,,"Bus:   8 , 71 , 130","8
+71
+130",,"Accesible
+Señalización podotáctil
+Bucle de inducción magnético",LADERA DE LOS ALMENDROS,2,MADRID,MADRID,28032,CASCO H.VICALVARO,VICALVARO,40.40418961057298,-3.622901144863193,917723591,idmvaldebernardo@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Fernando Martín,Centro-Deportivo-Municipal-Fernando-Martin,,,,"Metro: Francos Rodríguez.  Bus:  44, 64, 126, 127, 132.",,,,Metro: Francos Rodríguez,Francos Rodríguez,,"Bus:  44, 64, 126, 127, 132","44
+64
+126
+127
+132",,Accesible,SANTO ANGEL DE LA GUARDA,6,MADRID,MADRID,28039,VALDEZARZA,MONCLOA-ARAVACA,40.460935404623164,-3.7121918299288628,"914507344
+914505530",idmfmartin@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Francisco Fernández Ochoa,Centro-Deportivo-Municipal-Francisco-Fernandez-Ochoa,,,,"Metro: La Peseta , San Francisco  Bus: 108 , 155  Bicicleta:  El centro dispone de aparcabicicletas interior con capacidad para 15 bicicletas.",,,,"Metro: La Peseta , San Francisco","La Peseta , San Francisco",,"Bus: 108 , 155","108
+155",,Accesible,CATORCE OLIVAS,1,MADRID,MADRID,28054,BUENAVISTA,CARABANCHEL,40.36581776978113,-3.740893980533789,"915883623
+915883731",idmffochoa@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Fuente del Berro,Centro-Deportivo-Municipal-Fuente-del-Berro,,,,"Metro: O'Donnell  Bus: 2 , 28 , 30 , 56 , 71 , 143 , C.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 8 bicicletas.   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: O'Donnell,O'Donnell,,"Bus: 2 , 28 , 30 , 56 , 71 , 143 , C","2
+28
+30
+56
+71
+143",,Accesible,ELVIRA,36,MADRID,MADRID,28028,FUENTE DEL BERRO,SALAMANCA,40.42171956854877,-3.6652515154670167,915881369,idmfuentedelberro@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Félix Rubio,Centro-Deportivo-Municipal-Felix-Rubio,,,,"Bus: 22, 23, 59, 79, 85 123, 130.  Metro: Ciudad de los Angeles.  Renfe: Villaverde Bajo.",Renfe: Villaverde Bajo C3 C4,"C-3
+C-4",Villaverde Bajo,Metro: Ciudad de los Angeles,Ciudad de los Angeles,,"Bus: 22, 23, 59, 79, 85 123, 130","22
+23
+59
+79
+85
+123
+130",,Accesible,ALIANZA,4,MADRID,MADRID,28041,LOS ROSALES,VILLAVERDE,40.357429678675295,-3.691528804696943,913180435,idmfrubio@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Rocodromo,CentrosEspaciosDeporte
+Centro Deportivo Municipal Gallur,Centro-Deportivo-Municipal-Gallur,,,,"Metro: Carpetana, Laguna. Bus: 17 y 25. Renfe: Laguna.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 8 bicicletas.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Renfe: Laguna c5,C-5,Laguna,"Metro: Carpetana, Laguna","Carpetana, Laguna",,Bus: 17 y 25,"17
+25",,Accesible,GALLUR,2,MADRID,MADRID,28047,LOS CARMENES,LATINA,40.398474762124025,-3.735371180736436,"915089401
+915251059",idmgallur@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Gimnasio Moscardó,Centro-Deportivo-Municipal-Gimnasio-Moscardo,,,,"Metro: Avenida de América, Cartagena, Diego de León.  Bus: 1, 115 , C  Bicicleta:  El centro dispone de aparcabicicletas  exterior con capacidad para 25 bicicletas.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Avenida de América, Cartagena, Diego de León","Avenida de América, Cartagena, Diego de León",,"Bus: 1, 115 , C","1
+115",,Accesible,PILAR DE ZARAGOZA,93,MADRID,MADRID,28028,GUINDALERA,SALAMANCA,40.437945289676996,-3.674502029997267,"913553201
+919246793",idmgmoscardo@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Hortaleza,Centro-Deportivo-Municipal-Hortaleza,,,,"Metro: Parque de Santamaría, Hortaleza.  Bus: 9, 107, 172.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas.   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Parque de Santamaría, Hortaleza","Parque de Santamaría, Hortaleza",,"Bus: 9, 107, 172","9
+107
+172",,Accesible,ESTACION DE HORTALEZA,11,MADRID,MADRID,28033,APOSTOL SANTIAGO,HORTALEZA,40.4787279264401,-3.6527183525553006,913818260,idmhortaleza@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal José María Cagigal,Centro-Deportivo-Municipal-Jose-Maria-Cagigal,,,,"Bus:  41, 46, 75.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas.  Servicio Bicimad , para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones  .",,,,,,,"Bus:  41, 46, 75","41
+46
+75",,Accesible,SANTA POLA,22,MADRID,MADRID,28008,CASA DE CAMPO,MONCLOA-ARAVACA,40.43214955342785,-3.7369645992831364,608268794,idmjmcagigal@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Juan de Dios Román,Centro-Deportivo-Municipal-Juan-de-Dios-Roman,,,,"Bus:  142, 145.  Metro: Las suertes.  Bicicleta:  el centro dispone de  aparca bicicletas dentro del recinto de la instalación  con capacidad para 6 bicicletas.    Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones .",,,,Metro: Las suertes,Las suertes,,"Bus:  142, 145","142
+145",,"Accesible
+Señalización podotáctil",JOSE GUTIERREZ MAROTO,34,MADRID,MADRID,28051,ENSANCHE DE VALLECAS,VILLA DE VALLECAS,40.36391581480007,-3.60518607500416,914801231,idmjdroman@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal La Almudena,Centro-Deportivo-Municipal-La-Almudena,,,,"Metro: Alsacia.  Bus: 70 , 106 , 110.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 4 bicicletas.   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Alsacia,Alsacia,,"Bus: 70 , 106 , 110","70
+106
+110",,Accesible,NICOLAS SALMERÓN,8,MADRID,MADRID,28017,PUEBLO NUEVO,CIUDAD LINEAL,40.42060649869604,-3.6324237307227616,"915882355
+915133745",idmalmudena@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Piscinas,CentrosEspaciosDeporte
+Centro Deportivo Municipal La Bombilla,Centro-Deportivo-Municipal-La-Bombilla,,,,"Metro: Príncipe Pío.  Bus: 46, A, 160, 161.  Renfe: Príncipe Pío.  Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para  14  bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .","Renfe: Príncipe Pío (Líneas C1, C7, C10)","C-1
+C-7
+C-10",Príncipe Pío,Metro: Príncipe Pío,Príncipe Pío,,"Bus: 46, A, 160, 161","46
+160
+161",,Accesible,SENDA DEL REY,8,MADRID,MADRID,28008,CASA DE CAMPO,MONCLOA-ARAVACA,40.43267260040589,-3.731936574991669,"917588677
+915592090
+649841445",idmlabombilla@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/PistasTenisBadminton,CentrosEspaciosDeporte
+Centro Deportivo Municipal La Cebada (antigua La Latina),Centro-Deportivo-Municipal-La-Cebada-(antigua-La-Latina),,,,"Metro: La Latina L5.  Bus:  2, 17, 18, 23, 35, 60.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones .",,,,Metro: La Latina L5,La Latina L5,5,"Bus:  2, 17, 18, 23, 35, 60","2
+17
+18
+23
+35
+60",,"Accesible
+Señalización podotáctil",CEBADA,15,MADRID,MADRID,28005,PALACIO,CENTRO,40.410546084176566,-3.70940146763504,697121149,info@cdmlacebada.com,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal La Chopera,Centro-Deportivo-Municipal-La-Chopera,,,,"Metro: Atocha, Retiro.  Bus: 1, 2, 15, 19, 28, 146.  Renfe: Atocha.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 12bicicletas.  Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .","Renfe: Atocha C1,C2,C3,C4,C5,C6,C7,C8 y C10","C-1
+C-2
+C-3
+C-4
+C-5
+C-6
+C-7
+C-8
+C-10",Atocha,"Metro: Atocha, Retiro","Atocha, Retiro",,"Bus: 1, 2, 15, 19, 28, 146","1
+2
+15
+19
+28
+146",,Accesible,FERNAN NUÑEZ,3,MADRID,MADRID,28009,LOS JERONIMOS,RETIRO,40.41167030849678,-3.6856756521012146,914201154,idmlachopera@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal La Elipa,Centro-Deportivo-Municipal-La-Elipa,,,,"Metro: Estrella.  Bus: 71 , 113.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 30 bicicletas.  Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones.",,,,Metro: Estrella,Estrella,,"Bus: 71 , 113","71
+113",,Accesible,ALCALDE GARRIDO JUARISTI,17,MADRID,MADRID,28030,MEDIA LEGUA,MORATALAZ,40.41433123768487,-3.6559498758522833,914303511,idmlaelipa@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal La Fundi,Centro-Deportivo-Municipal-La-Fundi,,,,"Metro: Legazpi, Arganzuela Planetario   Bus: 8, 19, 45, 47, 59, 76, 85  Bicicleta:  El centro dispone de aparcabicicletas exterior con capacidad para 5 bicicletas  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Legazpi, Arganzuela Planetario","Legazpi, Arganzuela Planetario",,"Bus: 8, 19, 45, 47, 59, 76, 85","8
+19
+45
+47
+59
+76
+85",,Accesible,ALICANTE,14,MADRID,MADRID,28045,DELICIAS,ARGANZUELA,40.39437715885103,-3.691341060146108,"914305871
+915288879",idmlafundi@madrid.es - JMD Arganzuela ? ID La Fundi,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal La Masó- Luis de la Fuente,Centro-Deportivo-Municipal-La-Maso--Luis-de-la-Fuente,,,,"Metro: Herrera Oria , Lacoma, Avenida de la Ilustración.  Bus: 49, 64, 83, 124, 134.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 4 bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .     Parking  público gratuito.",,,,"Metro: Herrera Oria , Lacoma, Avenida de la Ilustración","Herrera Oria , Lacoma, Avenida de la Ilustración",,"Bus: 49, 64, 83, 124, 134","49
+64
+83
+124
+134",,"Accesible
+Señalización podotáctil
+Bucle de inducción magnético",MASO,80,MADRID,MADRID,28034,MIRASIERRA,FUENCARRAL-EL PARDO,40.48442599932086,-3.7144222564719858,917397555,idmlamaso@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Lago Casa de Campo,Centro-Deportivo-Municipal-Lago-Casa-de-Campo,,,,"Metro: Lago , Puerta del Ángel.  Bus: 31 , 33 , 36 , 39 , 65 , 138.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 10 bicicletas.   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,"Metro: Lago , Puerta del Ángel","Lago , Puerta del Ángel",,"Bus: 31 , 33 , 36 , 39 , 65 , 138","31
+33
+36
+39
+65
+138",,Accesible,EMBARCADERO,8,MADRID,MADRID,28011,CASA DE CAMPO,MONCLOA-ARAVACA,40.417013097503705,-3.7314952685679943,914644610,idmlagocc@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Embarcaderos,CentrosEspaciosDeporte
+Centro Deportivo Municipal Las Cruces,Centro-Deportivo-Municipal-Las-Cruces,,,,"Metro: Aluche , Eugenia de Montijo.  Bus: 121 , 131 , 139.  Renfe: Aluche.  Bicicleta:  El centro dispone de aparca bicicletas exterior con capacidad para 4 bicicletas.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Renfe: Aluche C5,C-5,Aluche,"Metro: Aluche , Eugenia de Montijo","Aluche , Eugenia de Montijo",,"Bus: 121 , 131 , 139","121
+131
+139",,Accesible,POBLADOS,72,MADRID,MADRID,28044,LAS AGUILAS,LATINA,40.3788548435727,-3.7562612113384777,915888600,idmlascruces@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/CamposEstadiosFutbol,CentrosEspaciosDeporte
+Centro Deportivo Municipal Los Prunos,Centro-Deportivo-Municipal-Los-Prunos,,,,Metro: Feria de Madrid  Bus: 153  Bicicleta:   El centro dispones de aparcabicicletas exterior con capacidad para 6 bicicletas.,,,,Metro: Feria de Madrid,Feria de Madrid,,Bus: 153,153,,Accesible,PETUNIAS,30,MADRID,MADRID,28042,PALOMAS,HORTALEZA,40.453257453448046,-3.6186956428199863,917432001,recepcion@aqalosprunos.com,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Luis Aragonés,Centro-Deportivo-Municipal-Luis-Aragones,,,,"Metro: Canillas.  Bus: 73, 120.  Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para10 bicicletas.    Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",,,,Metro: Canillas,Canillas,,"Bus: 73, 120","73
+120",,"Accesible
+Señalización podotáctil
+Bucle de inducción magnético",EL PROVENCIO,20,MADRID,MADRID,28043,CANILLAS,HORTALEZA,40.464650948053816,-3.6275877145025817,913003612,idmlaragones@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Margot Moles (Vicálvaro),Centro-Deportivo-Municipal-Margot-Moles-(Vicalvaro),,,,"Metro: San Cipriano, Puerta de Arganda.  Bus: 4 , 100 , 106 , 130.  Renfe: Vicálvaro.  Bicicleta:   El centro dispone de  aparca bicicletas exterior  con capacidad para 10 bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",Vicálvaro C2,C-2,Vicálvaro,"Metro: San Cipriano, Puerta de Arganda","San Cipriano, Puerta de Arganda",,"Bus: 4 , 100 , 106 , 130","4
+100
+106
+130",,Accesible,POLIDEPORTIVO,3,MADRID,MADRID,28032,AMBROZ,VICALVARO,40.40914061858403,-3.603264732850392,917769874,idmvicalvaro@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Marqués de Samaranch,Centro-Deportivo-Municipal-Marques-de-Samaranch,,,,"Metro: Puerta de Toledo , Pirámides.  Bus: 17, 36, 41, C, 62.  Renfe: Pirámides.  Bicicleta:  el centro dispone de  aparca bicicletas exterior   con capacidad para 5 bicicletas.    Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",Renfe: Pirámides (líneas C1 y C10),"C-1
+C-10",Pirámides,"Metro: Puerta de Toledo , Pirámides","Puerta de Toledo , Pirámides",,"Bus: 17, 36, 41, C, 62","17
+36
+41
+62",,"Accesible
+Señalización podotáctil
+Bucle de inducción magnético",IMPERIAL,20,MADRID,MADRID,28005,IMPERIAL,ARGANZUELA,40.40761501410649,-3.7173807221939192,914220344,idmmsamaranch@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal María Jesús Rosa (La Vaguada),Centro-Deportivo-Municipal-Maria-Jesus-Rosa-(La-Vaguada),,,,"Metro: Barrio del Pilar , Peñagrande.   Bus: 42, 49, 67, 83, 128, 134, 137.",,,,"Metro: Barrio del Pilar , Peñagrande","Barrio del Pilar , Peñagrande",,"Bus: 42, 49, 67, 83, 128, 134, 137","42
+49
+67
+83
+128
+134
+137",,Accesible,MONFORTE DE LEMOS,38,MADRID,MADRID,28029,EL PILAR,FUENCARRAL-EL PARDO,40.47876758357458,-3.7086993281311904,914800476,idmlavaguada@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Piscinas,CentrosEspaciosDeporte
+Centro Deportivo Municipal Miguel Guillén Prim,Centro-Deportivo-Municipal-Miguel-Guillen-Prim,,,,"Bus:  54, 103, 142.  Metro: Congosto.  Renfe: Vallecas.  Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para 10 bicicletas.    Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones .",Vallecas C1 C2 C7,"C-1
+C-2
+C-7",Vallecas,Metro: Congosto,Congosto,,"Bus:  54, 103, 142","54
+103
+142",,Accesible,FUENTIDUEÑA,6,MADRID,MADRID,28031,CASCO H.VALLECAS,VILLA DE VALLECAS,40.37381855452167,-3.623151468598157,913053451,idmmguillen@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Moratalaz,Centro-Deportivo-Municipal-Moratalaz,,,,"Metro: Pavones.  Bus: 8, 20, 32, 71, 142, 144.  Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para    interior (10), exterior (8) bicicletas.    Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,Metro: Pavones,Pavones,,"Bus: 8, 20, 32, 71, 142, 144","8
+20
+32
+71
+142
+144",,Accesible,VALDEBERNARDO,2,MADRID,MADRID,28030,PAVONES,MORATALAZ,40.39885854572339,-3.632432290214539,"917727100
+917727121",idmmoratalaz@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Moscardó,Centro-Deportivo-Municipal-Moscardo,,,,"Metro: Usera.  Bus: 6, 47, 60.",,,,Metro: Usera,Usera,,"Bus: 6, 47, 60","6
+47
+60",,Accesible,ANDRES ARTEAGA,5,MADRID,MADRID,28026,MOSCARDO,USERA,40.38850290426967,-3.706303079808029,915003940,cdmmoscardo@clubnatacionmadrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Orcasitas,Centro-Deportivo-Municipal-Orcasitas,,,,"Metro: Plaza Elíptica.  Bus: 6, 60, 78, 81, 116, 121, 131.  Renfe: Doce de Octubre, Orcasitas.  Bicicleta:  el centro dispone de  aparca bicicletas exterior   con capacidad para 10 bicicletas.    Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",doce de octubre C5,C-5,doce de octubre,Metro: Plaza Elíptica,Plaza Elíptica,,"Bus: 6, 60, 78, 81, 116, 121, 131","6
+60
+78
+81
+116
+121
+131",,"Instalación parcialmente accesible para personas con movilidad reducida
+Señalización podotáctil
+Bucle de inducción magnético",RAFAELA YBARRA,52,MADRID,MADRID,28026,ZOFIO,USERA,40.37558213858424,-3.71245854352948,914692374,idmorcasitas@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Orcasur,Centro-Deportivo-Municipal-Orcasur,,,,"Bus:  78, 116  Renfe: Orcasitas.  Metro:   San Fermín - Orcasur.    Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para 5 bicicletas.",Renfe: Orcasitas (línea C5),C-5,Orcasitas,Metro:   San Fermín - Orcasur,San Fermín - Orcasur,,"Bus:  78, 116","78
+116",,Accesible,MOREJA,11,MADRID,MADRID,28041,ORCASUR,USERA,40.37021993373859,-3.6994689006077444,913171062,idmorcasur@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Pabellón Villa de Madrid,Centro-Deportivo-Municipal-Pabellon-Villa-de-Madrid,,,,"Bus: 105 , 112 , 114 , 115 , 151",,,,,,,"Bus: 105 , 112 , 114 , 115 , 151","105
+112
+114
+115
+151",,Accesible,BREZOS,6,MADRID,MADRID,28042,ALAMEDA DE OSUNA,BARAJAS,40.46145708324958,-3.5891069291726105,913294219,idmbarajas@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Palomeras,Centro-Deportivo-Municipal-Palomeras,,,,"Transporte más próximo    Metro: Miguel Hernández, Sierra de Guadalupe.  Bus: 54, 103, 142, 143, 58.  Renfe: Vallecas.  Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para 5 bicicletas.",Vallecas C1 C2 C7,"C-1
+C-2
+C-7",Vallecas,"Metro: Miguel Hernández, Sierra de Guadalupe","Miguel Hernández, Sierra de Guadalupe",,"Bus: 54, 103, 142, 143, 58","54
+103
+142
+143
+58",,Accesible,TRANVIA DE ARGANDA,4,MADRID,MADRID,28031,PALOMERAS SURESTE,PUENTE DE VALLECAS,40.38260362230282,-3.6337151808372496,917774901,idmpalomeras@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Paseo de la Dirección,Centro-Deportivo-Municipal-Paseo-de-la-Direccion,,,,"Metro: Francos Rodríguez, Valdeacederas, Valdezarza, Tetuán Bus: 128, 177. Bicicleta: el centro dispone de aparca bicicletas interiores con capacidad para 6 bicicletas.",,,,"Metro: Francos Rodríguez, Valdeacederas, Valdezarza, Tetuán","Francos Rodríguez, Valdeacederas, Valdezarza, Tetuán",,"Bus: 128, 177","128
+177",,Accesible,"DIRECCION (entrada por C/Isla de Gomera, 10)",125,MADRID,MADRID,28039,BERRUGUETE,TETUAN,40.462319557096045,-3.706806505404298,919246717,cdmpaseodireccion@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Pepu Hernández,Centro-Deportivo-Municipal-Pepu-Hernandez,,,,"Transporte más próximo    Metro: Las Musas.  Bus: 38 , 140.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 7bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,Metro: Las Musas,Las Musas,,"Bus: 38 , 140","38
+140",,Accesible,NIZA,8,MADRID,MADRID,28022,ROSAS,SAN BLAS-CANILLEJAS,40.42763842661562,-3.606311072744069,"671356014
+912794565",atencionalcliente.pepuhernandez@agoramsp.com,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Peñagrande,Centro-Deportivo-Municipal-Penagrande,,,,"Metro: Peñagrande Bus:  42,126,132,137",,,,Metro: Peñagrande,Peñagrande,,"Bus:  42,126,132,137","42
+126
+132
+137",,Accesible,MONFORTE DE LEMOS,184,MADRID,MADRID,28035,PEÑA GRANDE,FUENCARRAL-EL PARDO,40.476792184653526,-3.717566523014736,911332488,fuencarral@go-fit.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Peñuelas,Centro-Deportivo-Municipal-Penuelas,,,,"Metro: Acacias, Embajadores, Pirámides  Bus: 18, 36, 62  Renfe: Pirámides  Bicicleta:  El centro dispone de aparcabicicletas exterior con capacidad para 5 bicicletas. Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Renfe: Pirámides (líneas C1 y C10),"C-1
+C-10",Pirámides,"Metro: Acacias, Embajadores, Pirámides","Acacias, Embajadores, Pirámides",,"Bus: 18, 36, 62","18
+36
+62",,Accesible,ARGANDA,25,MADRID,MADRID,28005,ACACIAS,ARGANZUELA,40.39865532340664,-3.704959759845779,"915883465
+917791205",idmpenuelas@madrid.es; idmarganzuela@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Piscinas,CentrosEspaciosDeporte
+Centro Deportivo Municipal Plata y Castañar,Centro-Deportivo-Municipal-Plata-y-Castanar,,,,Bus:  76.   Renfe: Puente Alcocer.,Renfe: Puente Alcocer (C5),C-5,Puente Alcocer,,,,Bus:  76,76,,Accesible,PLATA Y CASTAÑAR,7,MADRID,MADRID,28021,SAN ANDRES,VILLAVERDE,40.34998997348078,-3.7178413073202856,"915051532
+915051195",idmpcastanar@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Playa Victoria,Centro-Deportivo-Municipal-Playa-Victoria,,,,"Metro: Tetuán.  Bus:  64, 66, 124, 126, 128.   Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para  5   bicicletas.    Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,Metro: Tetuán,Tetuán,,"Bus:  64, 66, 124, 126, 128","64
+66
+124
+126
+128",,Accesible,HIERBABUENA,2,MADRID,MADRID,28039,BERRUGUETE,TETUAN,40.4592763472204,-3.7021136988422567,915701841,idmpvictoria@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Pradillo,Centro-Deportivo-Municipal-Pradillo,,,,"Metro: Alfonso XIII, Concha Espina.  Bus: 9, 40, 43, 72, 73.  Bicicleta:  El centro dispone de aparcabicicletas exterior   con   capacidad para 25 bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,"Metro: Alfonso XIII, Concha Espina","Alfonso XIII, Concha Espina",,"Bus: 9, 40, 43, 72, 73","9
+40
+43
+72
+73",,"Accesible
+Señalización podotáctil
+Bucle de inducción magnético",PRADILLO,33,MADRID,MADRID,28002,CIUDAD JARDIN,CHAMARTIN,40.44910622626739,-3.671618277009419,914137105,idmpradillo@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Pueblo Nuevo,Centro-Deportivo-Municipal-Pueblo-Nuevo,,,,"Metro: Ascao.  Bus: 28 , 109.",,,,Metro: Ascao,Ascao,,"Bus: 28 , 109","28
+109",,Accesible,FRANCISCO RIOJA,14,MADRID,MADRID,28017,PUEBLO NUEVO,CIUDAD LINEAL,40.43003240158625,-3.638536354805483,913770251,,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Raúl González,Centro-Deportivo-Municipal-Raul-Gonzalez,,,,"Bus: 59 , 79.  Renfe:  San Cristóbal.   Metro:   San Cristóbal.    Bicicleta:El centro dispone de aparca bicicletas exterior  con capacidad para 4 bicicletas. Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",Renfe:  San Cristóbal C3,C-3,San Cristóbal,Metro:   San Cristóbal,San Cristóbal,,"Bus: 59 , 79","59
+79",,Accesible,BENIMAMET,137,MADRID,MADRID,28021,SAN CRISTOBAL,VILLAVERDE,40.346220026067044,-3.684337728806363,917953792,idmrgonzalez@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal San Blas,Centro-Deportivo-Municipal-San-Blas,,,,"Metro: San Blas.  Bus: 38 , 48 , 153, 4.  Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para 6 bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,Metro: San Blas,San Blas,,"Bus: 38 , 48 , 153, 4","38
+48
+153
+4",,Accesible,HELLIN,47,MADRID,MADRID,28037,HELLIN,SAN BLAS-CANILLEJAS,40.428933838154435,-3.615229739080561,913209818,idmsanblas@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal San Cristóbal,Centro-Deportivo-Municipal-San-Cristobal,,,,"Metro: San Cristóbal.  Renfe: San Cristóbal.  Bus: 59, 79.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas.  Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.",Renfe:  San Cristóbal C3,C-3,San Cristóbal,Metro: San Cristóbal,San Cristóbal,,"Bus: 59, 79","59
+79",,Accesible,PINAZO,9,MADRID,MADRID,28021,SAN CRISTOBAL,VILLAVERDE,40.34267317099495,-3.6914487380508842,917950911,idmsancristobal@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal San Fermín,Centro-Deportivo-Municipal-San-Fermin,,,,"Bus: 18, 22, 23, 59, 76, 78, 79, 85, 86, 123.  Metro: Hospital 12 de Octubre, San Fermín.",,,,"Metro: Hospital 12 de Octubre, San Fermín","Hospital 12 de Octubre, San Fermín",12,"Bus: 18, 22, 23, 59, 76, 78, 79, 85, 86, 123","18
+22
+23
+59
+76
+78
+79
+85
+86
+123",,Accesible,SAN MARIO,18,MADRID,MADRID,28041,SAN FERMIN,USERA,40.37530577421291,-3.6927010241442946,914550721,idmsanfermin@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Piscinas,CentrosEspaciosDeporte
+Centro Deportivo Municipal San Juan Bautista,Centro-Deportivo-Municipal-San-Juan-Bautista,,,,"Metro: Avenida de la Paz.  Bus: 11, 53,122.  Bicicleta:   El centro dispone de  aparca bicicletas exterior  con capacidad para 3 bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,Metro: Avenida de la Paz,Avenida de la Paz,,"Bus: 11, 53,122","11
+53
+122",,Instalación parcialmente accesible para personas con movilidad reducida,TREVIANA,1,MADRID,MADRID,28043,SAN JUAN BAUTISTA,CIUDAD LINEAL,40.44864976316054,-3.6585711797466836,914164259,idmsjbautista@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Santa Ana,Centro-Deportivo-Municipal-Santa-Ana,,,,"Metro: Fuencarral, Tres Olivos.  Bus: 66, 137.  Bicicleta:   El centro dispone de  aparca bicicletas exterior  con capacidad para 5 bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,"Metro: Fuencarral, Tres Olivos","Fuencarral, Tres Olivos",,"Bus: 66, 137","66
+137",,Instalación parcialmente accesible para personas con movilidad reducida,ALAMEDILLAS,5,MADRID,MADRID,28034,VALVERDE,FUENCARRAL-EL PARDO,40.49809469315447,-3.696358010199944,919241481,idmsantaana@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/CamposEstadiosFutbol,CentrosEspaciosDeporte
+Centro Deportivo Municipal Tenis Casa de Campo,Centro-Deportivo-Municipal-Tenis-Casa-de-Campo,,,,"Metro: Lago  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 10 bicicletas.    Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones",,,,Metro: Lago,Lago,,,,,Accesible,PRINCIPE,2,MADRID,MADRID,28011,CASA DE CAMPO,MONCLOA-ARAVACA,40.421436625700565,-3.735739625664774,914649617,idmteniscc@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/PistasTenisBadminton,CentrosEspaciosDeporte
+Centro Deportivo Municipal Triángulo de Oro,Centro-Deportivo-Municipal-Triangulo-de-Oro,,,,"Metro: Plaza de Castilla, Valdeacederas  Bus: 27, 42, 49, 66, 124  Renfe: Chamartín","Renfe: Chamartín C1, C2, C3, C4a, C4b, C7 y C8","C-1
+C-2
+C-3
+C-4
+C-7
+C-8",Chamartín,"Metro: Plaza de Castilla, Valdeacederas","Plaza de Castilla, Valdeacederas",,"Bus: 27, 42, 49, 66, 124","27
+42
+49
+66
+124",,Accesible,BRAVO MURILLO,376,MADRID,MADRID,28020,CASTILLEJOS,TETUAN,40.46512519238624,-3.6928208378255807,915714117,idmtoro@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Vallecas Verano,Centro-Deportivo-Municipal-Vallecas-Verano,,,,"Metro: Portazgo.  Bus: 10, 54, 58, 103.",,,,Metro: Portazgo,Portazgo,,"Bus: 10, 54, 58, 103","10
+54
+58
+103",,Accesible,ARROYO DEL OLIVAR,51,MADRID,MADRID,28018,PALOMERAS BAJAS,PUENTE DE VALLECAS,40.390368919782446,-3.657213682860775,915133623,idmvallecas@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Piscinas,CentrosEspaciosDeporte
+Centro Deportivo Municipal Vallehermoso,Centro-Deportivo-Municipal-Vallehermoso,,,,"Metro: Islas Filipinas, Canal.  Bus: 2, 12, 202.  Bicicleta:   El centro dispone de  aparca bicicletas exterior.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,"Metro: Islas Filipinas, Canal","Islas Filipinas, Canal",,"Bus: 2, 12, 202","2
+12
+202",,Accesible,FILIPINAS,7,MADRID,MADRID,28003,VALLEHERMOSO,CHAMBERI,40.44064843863945,-3.709053489027435,915902959,vallehermoso@go-fit.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Vicente del Bosque,Centro-Deportivo-Municipal-Vicente-del-Bosque,,,,"Metro: Begoña, Barrio del Pilar.  Bus: 134, 137.  Renfe: Chamartín.  Bicicleta: el centro dispone de aparca bicicletas exterior con capacidad para 5 bicicletas.   Servicio Bicimad, para consultar la estación más cercana, acceda al mapa de geolocalización de las estaciones.","Renfe: Chamartín C1, C2, C3, C4a, C4b, C7 y C8","C-1
+C-2
+C-3
+C-4
+C-7
+C-8",Chamartín,"Metro: Begoña, Barrio del Pilar","Begoña, Barrio del Pilar",,"Bus: 134, 137","134
+137",,Accesible,MONFORTE DE LEMOS,13,MADRID,MADRID,28029,LA PAZ,FUENCARRAL-EL PARDO,40.4789135943213,-3.693540659747283,917767502,idmvicentedelbosque@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Wilfred Agbonavbare (antiguo Alberto García),Centro-Deportivo-Municipal-Wilfred-Agbonavbare-(antiguo-Alberto-Garcia),,,,"Bus: 24, 102, 310  Renfe: El Pozo  Bicicleta: el centro dispone de aparcabicicletas  exterior con capacidad para 10 bicicletas.",Renfe: El Pozo C2 C7 C8,"C-2
+C-7
+C-8",El Pozo,,,,"Bus: 24, 102, 310","24
+102
+310",,Accesible,"REGUERA DE TOMATEROS, 39B",,MADRID,MADRID,28053,ENTREVIAS,PUENTE DE VALLECAS,40.372421418063425,-3.6574515621755173,917854751,cdmwilfreda@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Centro Deportivo Municipal Ángel Nieto (antiguo Puente de Vallecas),Centro-Deportivo-Municipal-angel-Nieto-(antiguo-Puente-de-Vallecas),,,,"Metro: Portazgo.  Bus:   10 , 54 , 57 , 58 , 103.    Bicicleta:  el centro dispone de  aparca bicicletas exterior  con capacidad para 4 bicicletas.   Servicio Bicimad , para consultar la estación más cercana, acceda al  mapa de geolocalización de las estaciones .",,,,Metro: Portazgo,Portazgo,,"Bus:   10 , 54 , 57 , 58 , 103","10
+54
+57
+58
+103",,Accesible,PAYASO FOFO,7,MADRID,MADRID,28018,PALOMERAS BAJAS,PUENTE DE VALLECAS,40.39146194707861,-3.6598636029775866,914781492,idmpvallecas@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/Gimnasios,CentrosEspaciosDeporte
+Instalación Deportiva Municipal Básica Parque de la Vicalvarada (centro deportivo),Instalacion-Deportiva-Municipal-Basica-Parque-de-la-Vicalvarada-(centro-deportivo),,,,"Metro: VicálvaroBus: 4 , 100 , 106 , 130",,,,Metro: Vicálvaro,Vicálvaro,,"Bus: 4 , 100 , 106 , 130","4
+100
+106
+130",,No accesible,VEREDA DEL PINAR,1,MADRID,MADRID,28032,AMBROZ,VICALVARO,40.41079351896063,-3.607616723630345,,,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/CamposEstadiosFutbol,CentrosEspaciosDeporte
+Instalación Deportiva Municipal Básica Torrespaña - Fuente del Berro (centro deportivo),Instalacion-Deportiva-Municipal-Basica-Torrespana---Fuente-del-Berro-(centro-deportivo),,,,"Metro: O'Donnell.  Bus: 15, 28, 71, 110, 210",,,,Metro: O'Donnell,O'Donnell,,"Bus: 15, 28, 71, 110, 210","15
+28
+71
+110
+210",,Accesible,NUDO M-30 C/V ALCALDE SAINZ DE BARANDA,94,MADRID,MADRID,28007,FUENTE DEL BERRO,SALAMANCA,40.42129422167342,-3.6608740643380497,917654330,,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/CamposEstadiosFutbol,CentrosEspaciosDeporte
+Instalación Deportiva Municipal Básica Victoria Hernández (El Espinillo II - centro deportivo),Instalacion-Deportiva-Municipal-Basica-Victoria-Hernandez-(El-Espinillo-II---centro-deportivo),,,,"Metro: Ciudad de los ÁngelesBus: 23 , 123 , 130",,,,Metro: Ciudad de los Ángeles,Ciudad de los Ángeles,,"Bus: 23 , 123 , 130","23
+123
+130",,No accesible,CONSENSO,5,MADRID,MADRID,28041,LOS ROSALES,VILLAVERDE,40.36060552171134,-3.686214416479886,913180857,idbvictoriah@madrid.es,/contenido/entidadesYorganismos/CentrosEspaciosDeporte/CamposEstadiosFutbol,CentrosEspaciosDeporte

@@ -1,0 +1,828 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "Archive",
+    "description": "Eliminar columna Archive"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "File",
+    "description": "Eliminar columna File"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Universidad Aut贸noma de Madrid"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Universidad Autónoma de Madrid"
+      }
+    ],
+    "description": "Editar celdas en masa en columna University"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Centro de Educaci贸n Superior CEDEU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Centro de Educación Superior CEDEU"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Centro de Educaci贸n Superior de Negocios, Innovaci贸n y Tecnolog铆a"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Centro de Educación Superior de Negocios, Innovación y Tecnología"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Centro de Ense帽anza Superior en Humanidades y Ciencias de la Educaci贸n \"Don Bosco\""
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Centro de Enseñanza Superior en Humanidades y Ciencias de la Educación \"Don Bosco\""
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Centro Universitario Gesti贸n IEB Global"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Centro Universitario Gestión IEB Global"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Escuela de M谩steres Oficiales"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Escuela de Másteres Oficiales"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Escuela Polit茅cnica Superior"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Escuela Politécnica Superior"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Escuela Polit茅cnica Superior (Colmenarejo)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Escuela Politécnica Superior (Colmenarejo)"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Facultad de Educaci贸n"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Facultad de Educación"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value.replace(/[‘’‚‛‹›‚]/,\"\\'\").replace(/[“”«»„]/,\"\\\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ResponsibleUnit usando la expresión value.replace(/[‘’‚‛‹›‚]/,\"\\'\").replace(/[“”«»„]/,\"\\\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "grel:value.replace(\"铆\", \"í\").replace(\"贸\", \"ó\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ResponsibleUnit usando la expresión grel:value.replace(\"铆\", \"í\").replace(\"贸\", \"ó\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ResponsibleUnit",
+          "expression": "value",
+          "columnName": "ResponsibleUnit",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Escuela T茅cnica Superior de Ingenieria de Telecomunicaciones",
+                "l": "Escuela T茅cnica Superior de Ingenieria de Telecomunicaciones"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "grel:value.replace(\"茅\", \"é\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ResponsibleUnit usando la expresión grel:value.replace(\"茅\", \"é\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "grel:value.replace(\"茅\", \"é\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ResponsibleUnit usando la expresión grel:value.replace(\"茅\", \"é\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(\"茅\", \"é\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(\"茅\", \"é\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Campus",
+    "expression": "grel:value.replace(\"茅\", \"é\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Campus usando la expresión grel:value.replace(\"茅\", \"é\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit",
+    "expression": "grel:value.replace(\"茅\", \"é\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ambit usando la expresión grel:value.replace(\"茅\", \"é\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ForeignLanguage",
+    "expression": "grel:value.replace(\"茅\", \"é\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ForeignLanguage usando la expresión grel:value.replace(\"茅\", \"é\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(\"铆\",\"í\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(\"铆\",\"í\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit",
+    "expression": "grel:value.replace(\"铆\",\"í\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ambit usando la expresión grel:value.replace(\"铆\",\"í\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Campus",
+    "expression": "grel:value.replace(\"铆\",\"í\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Campus usando la expresión grel:value.replace(\"铆\",\"í\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Municipality",
+    "expression": "grel:value.replace(\"铆\",\"í\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Municipality usando la expresión grel:value.replace(\"铆\",\"í\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "grel:value.replace(\"谩\",\"á\").replace(\"煤\",\"ú\").replace(\"贸\",\"ó\").replace(\"帽\",\"ñ\").replace(\"眉\",\"ü\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Degree usando la expresión grel:value.replace(\"谩\",\"á\").replace(\"煤\",\"ú\").replace(\"贸\",\"ó\").replace(\"帽\",\"ñ\").replace(\"眉\",\"ü\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "脡tica Aplicada"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Óptica Aplicada"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Degree"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "脫ptica Y Optometría"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Óptica Y Optometría"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Degree"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tecnologías 脫pticas Y De La Imagen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tecnologías ópticas Y De La Imagen"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Degree"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Política Internacional: Estudios Sectoriales Y De 脕rea"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Política Internacional: Estudios Sectoriales Y De Área"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Degree"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Estudios Contemporáneos Sobre Mundo 脕rabe Y Comunidades Musulmanas: Mediación Social Y Gestión De Conflictos"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Estudios Contemporáneos Sobre Mundo Árabe Y Comunidades Musulmanas: Mediación Social Y Gestión De Conflictos"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Degree"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Instituto de Estudios Burs谩tiles"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Instituto de Estudios Bursátiles"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "grel:value.replace(\"谩\",\"á\").replace(\"煤\",\"ú\").replace(\"贸\",\"ó\").replace(\"帽\",\"ñ\").replace(\"眉\",\"ü\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ResponsibleUnit usando la expresión grel:value.replace(\"谩\",\"á\").replace(\"煤\",\"ú\").replace(\"贸\",\"ó\").replace(\"帽\",\"ñ\").replace(\"眉\",\"ü\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ResponsibleUnit",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Facultad de 脫ptica y Optometría"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Facultad de Óptica y Optometría"
+      }
+    ],
+    "description": "Editar celdas en masa en columna ResponsibleUnit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Municipality",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ALCORC脫N"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ALCORCÓN"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Municipality"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Municipality",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LEGAN脡S"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LEGANÉS"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Municipality"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Municipality",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "M脫STOLES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MÓSTOLES"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Municipality"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Municipality",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "POZUELO DE ALARC脫N"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "POZUELO DE ALARCÓN"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Municipality"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Campus",
+    "expression": "grel:value.replace(\"谩\",\"á\").replace(\"煤\",\"ú\").replace(\"贸\",\"ó\").replace(\"帽\",\"ñ\").replace(\"眉\",\"ü\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Campus usando la expresión grel:value.replace(\"谩\",\"á\").replace(\"煤\",\"ú\").replace(\"贸\",\"ó\").replace(\"帽\",\"ñ\").replace(\"眉\",\"ü\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ForeignLanguage",
+    "newColumnName": "Language",
+    "description": "Renombra la columna ForeignLanguage a Language"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CreditPrice1",
+    "description": "Eliminar columna CreditPrice1"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "RequiredCredits",
+    "newColumnName": "ectsCredits",
+    "description": "Renombra la columna RequiredCredits a ectsCredits"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DeliveryMode",
+    "newColumnName": "teachingModality",
+    "description": "Renombra la columna DeliveryMode a teachingModality"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "UniversityCode",
+    "description": "Eliminar columna UniversityCode"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ResponsibleUnitCode",
+    "description": "Eliminar columna ResponsibleUnitCode"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MunicipalityCode",
+    "description": "Eliminar columna MunicipalityCode"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "InteruniversityProgram",
+    "description": "Eliminar columna InteruniversityProgram"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CoordinationRole",
+    "description": "Eliminar columna CoordinationRole"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Doble M谩ster"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Doble Máster"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Academic Level"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "M谩ster"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Máster"
+      }
+    ],
+    "description": "Editar celdas en masa en columna Academic Level"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "StartYear",
+    "description": "Eliminar columna StartYear"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ResponsibleUnit",
+    "newColumnName": "Faculty",
+    "description": "Renombra la columna ResponsibleUnit a Faculty"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Municipality",
+    "description": "Eliminar columna Municipality"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CampusCode",
+    "description": "Eliminar columna CampusCode"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Campus",
+    "description": "Eliminar columna Campus"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Faculty",
+    "expression": "grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Faculty\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "FacultyId",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna FacultyId en el índice 4 basada en la columna Faculty usando la expresión grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Faculty\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Faculty",
+    "description": "Eliminar columna Faculty"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UniversityID",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna UniversityID en el índice 4 basada en la columna University usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Level usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ambit usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "DegreeID",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna DegreeID en el índice 3 basada en la columna Degree usando la expresión grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "University",
+    "description": "Eliminar columna University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Academic Level",
+    "newColumnName": "AcademicLevelId",
+    "description": "Renombra la columna Academic Level a AcademicLevelId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ambit",
+    "newColumnName": "AmbitId",
+    "description": "Renombra la columna Ambit a AmbitId"
+  }
+]
