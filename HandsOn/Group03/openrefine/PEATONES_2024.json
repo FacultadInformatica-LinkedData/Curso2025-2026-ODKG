@@ -1093,5 +1093,31 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column observaciones_direccion using expression grel:value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha",
+    "expression": "grel:value.toDate('dd/MM/yyyy').toString('yyyy-MM-dd')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha using expression grel:value.toDate('dd/MM/yyyy').toString('yyyy-MM-dd')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "hora",
+    "expression": "grel:(if(length(split(value,\":\")[0])==1, \"0\"+split(value,\":\")[0], split(value,\":\")[0])) + \":\" + split(value,\":\")[1] + \":00\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column hora using expression grel:(if(length(split(value,\":\")[0])==1, \"0\"+split(value,\":\")[0], split(value,\":\")[0])) + \":\" + split(value,\":\")[1] + \":00\""
   }
 ]
