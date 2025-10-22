@@ -1,0 +1,97 @@
+[
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "idTrip",
+          "expression": "isBlank(value)",
+          "columnName": "idTrip",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "fleet",
+    "description": "Eliminar columna fleet"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_y",
+    "columnInsertIndex": 6,
+    "description": "Crear la columna Unlock_Coor_y en el índice 6 basada en la columna geolocation_unlock usando la expresión jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_unlock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "Unlock_Coor_x",
+    "columnInsertIndex": 6,
+    "description": "Crear la columna Unlock_Coor_x en el índice 6 basada en la columna geolocation_unlock usando la expresión jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "geolocation_unlock",
+    "description": "Eliminar columna geolocation_unlock"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_lock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Lock_Coor_y",
+    "columnInsertIndex": 12,
+    "description": "Crear la columna Lock_Coor_y en el índice 12 basada en la columna geolocation_lock usando la expresión jython:value = value.split(\",\")\nreturn value[2].split(\"]\")[0]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "geolocation_lock",
+    "expression": "jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]",
+    "onError": "set-to-blank",
+    "newColumnName": "Lock_Coor_x",
+    "columnInsertIndex": 12,
+    "description": "Crear la columna Lock_Coor_x en el índice 12 basada en la columna geolocation_lock usando la expresión jython:value = value.split(\",\")\nreturn value[1].split(\"[\")[1]"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "geolocation_lock",
+    "description": "Eliminar columna geolocation_lock"
+  }
+]
