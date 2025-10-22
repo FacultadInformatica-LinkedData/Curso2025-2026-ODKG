@@ -145,7 +145,7 @@ for r in g.query(q):
   print(r.name, r.type)
 
 ## Validation: Do not remove
-report.validate_07_03(g, query)
+report.validate_07_03(g, q)
 
 """**Task 7.4: List the name of those entities who have a colleague with a dog, or that have a collegue who has a colleague who has a dog (in SPARQL). Return the results in a variable called name**"""
 
