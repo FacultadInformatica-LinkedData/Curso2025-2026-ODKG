@@ -44,31 +44,35 @@ g.bind("per", per)
 
 # TO DO
 # Clase= var
-Person = per.Person
-Profesor = per.Profesor
-FullProfessor = per.FullProfessor
-AssociateProfessor = per.AssociateProfessor
-InterimAssociateProfessor = per.InterimAssociateProfessor
+Person = ont.Person
+Professor = ont.Professor
+FullProfessor = ont.FullProfessor
+AssociateProfessor = ont.AssociateProfessor
+InterimAssociateProfessor = ont.InterimAssociateProfessor
 
 # declarar cada uris como clase de rdfs
 g.add((Person, RDF.type, RDFS.Class))
-g.add((Profesor,RDF.type,RDFS.Class))
+g.add((Professor,RDF.type,RDFS.Class))
 g.add((FullProfessor, RDF.type, RDFS.Class))
 g.add((AssociateProfessor, RDF.type, RDFS.Class))
 g.add((InterimAssociateProfessor, RDF.type, RDFS.Class))
 
 # declarando las jerarquias
-g.add((Profesor, RDFS.subClassOf, Person))
-g.add((FullProfessor,RDFS.subClassOf,Profesor))
-g.add((AssociateProfessor,RDFS.subClassOf, Profesor))
+g.add((Professor, RDFS.subClassOf, Person))
+g.add((FullProfessor,RDFS.subClassOf,Professor))
+g.add((AssociateProfessor,RDFS.subClassOf, Professor))
 g.add((InterimAssociateProfessor,RDFS.subClassOf, AssociateProfessor))
 
 # etiquetas
 g.add((Person, RDFS.label, Literal("Person",datatype=XSD.string)))
-g.add((Profesor, RDFS.label, Literal("Profesor",datatype=XSD.string)))
-g.add((FullProfessor, RDFS.label, Literal("Full Professor",datatype=XSD.string)))
-g.add((AssociateProfessor, RDFS.label, Literal("Associate Professor",datatype=XSD.string)))
-g.add((InterimAssociateProfessor, RDFS.label, Literal("Interim Associate Professor",datatype=XSD.string)))
+g.add((Professor, RDFS.label, Literal("Professor",datatype=XSD.string)))
+g.add((FullProfessor, RDFS.label, Literal("FullProfessor",datatype=XSD.string)))
+g.add((AssociateProfessor, RDFS.label, Literal("AssociateProfessor",datatype=XSD.string)))
+g.add((InterimAssociateProfessor, RDFS.label, Literal("InterimAssociateProfessor",datatype=XSD.string)))
+
+# Visualize the results
+for s, p, o in g:
+  print(s,p,o)
 
 # Visualize the results
 for s, p, o in g:
