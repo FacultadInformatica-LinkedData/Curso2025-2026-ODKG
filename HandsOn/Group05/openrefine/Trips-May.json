@@ -1,0 +1,31 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "fecha",
+    "description": "Eliminar columna fecha"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Unlock_Coor_x",
+    "newColumnName": "Unlock_Coord_x",
+    "description": "Renombra la columna Unlock_Coor_x a Unlock_Coord_x"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Unlock_Coor_y",
+    "newColumnName": "Unlock_Coord_y",
+    "description": "Renombra la columna Unlock_Coor_y a Unlock_Coord_y"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Lock_Coor_x",
+    "newColumnName": "Lock_Coord_x",
+    "description": "Renombra la columna Lock_Coor_x a Lock_Coord_x"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Lock_Coor_y",
+    "newColumnName": "Lock_Coord_y",
+    "description": "Renombra la columna Lock_Coor_y a Lock_Coord_y"
+  }
+]
