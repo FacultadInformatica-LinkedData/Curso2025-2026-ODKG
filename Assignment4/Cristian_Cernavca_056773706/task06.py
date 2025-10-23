@@ -10,9 +10,9 @@ Original file is located at
 """
 
 #!pip install rdflib
-import urllib.request
-url = 'https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/refs/heads/master/Assignment4/course_materials/python/validation.py'
-urllib.request.urlretrieve(url, 'validation.py')
+#import urllib.request
+#url = 'https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/refs/heads/master/Assignment4/course_materials/python/validation.py'
+#urllib.request.urlretrieve(url, 'validation.py')
 github_storage = "https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/master/Assignment4/course_materials"
 
 """Import RDFLib main methods"""
