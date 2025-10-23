@@ -1,0 +1,4 @@
+*.ipynb
+.venv
+__pycache__
+*.txt
