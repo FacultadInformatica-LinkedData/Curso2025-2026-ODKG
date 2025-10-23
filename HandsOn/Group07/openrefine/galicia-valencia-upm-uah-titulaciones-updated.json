@@ -1,0 +1,81 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "Archive",
+    "description": "Eliminar columna Archive"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "File",
+    "description": "Eliminar columna File"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UniversityID",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna UniversityID en el índice 4 basada en la columna University usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Level usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ambit usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "DegreeID",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna DegreeID en el índice 3 basada en la columna Degree usando la expresión grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "University",
+    "description": "Eliminar columna University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Academic Level",
+    "newColumnName": "AcademicLevelId",
+    "description": "Renombra la columna Academic Level a AcademicLevelId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ambit",
+    "newColumnName": "AmbitId",
+    "description": "Renombra la columna Ambit a AmbitId"
+  }
+]
