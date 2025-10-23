@@ -1,0 +1,143 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns: <http://example.org/ns#> .
+@base <http://example.org/mapping/> .
+
+<#AddressMapping>
+  rml:logicalSource [
+    rml:source "bike_station.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "http://example.org/address/{Address}" ;
+    rr:class ns:Address
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasAddress_name ;
+    rr:objectMap [
+      rml:reference "Address" ;
+      rr:datatype xsd:string
+    ]
+  ] .
+
+<#StationMapping>
+  rml:logicalSource [
+    rml:source "bike_station.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "http://example.org/bikeStation/{Name}" ;
+    rr:class ns:Bike_Station
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasStation_name ;
+    rr:objectMap [
+      rml:reference "Name" ;
+      rr:datatype xsd:string
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasCoord_x ;
+    rr:objectMap [
+      rml:reference "POINT_X" ;
+      rr:datatype xsd:float
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasCoord_y ;
+    rr:objectMap [
+      rml:reference "POINT_Y" ;
+      rr:datatype xsd:float
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasCapacity ;
+    rr:objectMap [
+      rml:reference "DockBikes" ;
+      rr:datatype xsd:int
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasAddress ;
+    rr:objectMap [
+      rr:template "http://example.org/address/{Address}"
+    ]
+  ] .
+
+<#BikeMapping>
+  rml:logicalSource [
+    rml:source "trip.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "http://example.org/bike/{idBike}" ;
+    rr:class ns:Bicycle
+  ] .
+
+<#TrialMapping>
+  rml:logicalSource [
+    rml:source "trip.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "http://example.org/trip/{idTrip}" ;
+    rr:class ns:Trial
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasDuration ;
+    rr:objectMap [
+      rml:reference "trip_minutes" ;
+      rr:datatype xsd:float
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasUnlock_date ;
+    rr:objectMap [
+      rml:reference "unlock_date" ;
+      rr:datatype xsd:dateTime
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasLock_date ;
+    rr:objectMap [
+      rml:reference "lock_date" ;
+      rr:datatype xsd:dateTime
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasLockStation ;
+    rr:objectMap [
+      rr:template "http://example.org/bikeStation/{lock_station_name}"
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasUnLockStation ;
+    rr:objectMap [
+      rr:template "http://example.org/bikeStation/{unlock_station_name}"
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasBike ;
+    rr:objectMap [
+      rr:template "http://example.org/bike/{idBike}"
+    ]
+  ] .
