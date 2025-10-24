@@ -1,0 +1,92 @@
+@prefix : <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
+@prefix us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Sensor Locations - Town Hall (Pedestrian counting sensor) + CH1 rooftop (Microclimate sensor)
+#################################################################
+
+:location_001
+    a us:Location ;
+    us:inAdministrativeArea :adminArea_001 ;
+    us:hasAddress :address_001.
+
+:location_002
+    a us:Location ;
+    us:inAdministrativeArea :adminArea_001 ;
+    us:hasAddress :address_002.
+
+#################################################################
+# Addresses
+#################################################################
+
+:address_001
+    a schema:PostalAddress ;
+    schema:streetAddress "Swanston Street 117" ;
+    schema:addressLocality "Melbourne" ;
+    schema:addressRegion "Melbourne VIC" ;
+    schema:postalCode "3008" ;
+    schema:addressCountry "Australia" .
+
+:address_002
+    a schema:PostalAddress ;
+    schema:streetAddress "Little Collins Street 210" ;
+    schema:addressLocality "Melbourne" ;
+    schema:addressRegion "Melbourne VIC" ;
+    schema:postalCode "3000" ;
+    schema:addressCountry "Australia" .
+
+#################################################################
+# Administrative Area
+#################################################################
+
+:adminArea_001
+    a schema:AdministrativeArea ;
+    schema:name "City_Of_Melbourne" .
+
+#################################################################
+# Pedestrian Sensor
+#################################################################
+
+:sensorPeatonal_002
+    a us:PedestrianSensor ;
+    us:sensorId "Swa123_T" ;
+    us:direction1 "North" ;
+    us:direction2 "South" ;
+    us:locatedAt :location_001 .
+
+#################################################################
+# Sensor de microclima
+#################################################################
+
+:sensorClima_003
+    a us:MicroclimateSensor ;
+    us:sensorId "ICTMicroclimate-03" ;
+    us:locatedAt :location_002 .
+
+#################################################################
+# Pedestrian counting observation
+#################################################################
+
+:obsPeatonal_255
+    a us:PedestrianObservation ;
+    sosa:madeBySensor :sensorPeatonal_002 ;
+    sosa:observedProperty us:pedestrianCount ;
+    sosa:resultTime "2024-12-09T01:00:00"^^xsd:dateTime ;
+    sosa:hasSimpleResult "95"^^xsd:integer ;
+    us:observedAtLocation :location_001 .
+
+#################################################################
+# Microclimate observation
+#################################################################
+
+:obsClima_002
+    a us:MicroclimateObservation ;
+    sosa:madeBySensor :sensorClima_003 ;
+    sosa:observedProperty us:airTemperature ;
+    sosa:resultTime "2024-12-30T11:54:23+11:00"^^xsd:dateTime ;
+    sosa:hasSimpleResult "23.0"^^xsd:float ;
+    us:observedAtLocation :location_002 ;
+    us:closestPedestrianSensor :sensorPeatonal_002 .

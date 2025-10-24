@@ -1,0 +1,134 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema:  <https://schema.org/> .
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .
+@prefix safeschool: <http://safeschool.linkeddata.es/ontology#> .
+
+<http://safeschool.linkeddata.es/ontology> a owl:Ontology ;
+  dcterms:title "SafeSchool Madrid Ontology"@en ;
+  dcterms:description "Ontology for linking Madrid traffic accidents, educational centers, and fixed speed cameras for school safety zone analysis."@en ;
+  dcterms:creator "Hands-On Group 02" ;
+  dcterms:created "2024-10-06"^^xsd:date ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:source <https://datos.gob.es/es/catalogo/a13002908-centros-educativos-de-la-comunidad-de-madrid1> ,
+                 <https://datos.madrid.es/portal/site/egob/> ;
+  owl:versionInfo "1.0.10" . 
+
+
+# CLASSES
+
+safeschool:Accident a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf schema:Event ;
+  rdfs:comment "A traffic accident registered in Madrid"@en .
+
+safeschool:EducationalCenter a owl:Class ;
+  rdfs:subClassOf schema:EducationalOrganization ; # Subclass of schema:Place
+  rdfs:subClassOf geo:Feature ;
+  rdfs:comment "An educational institution in the Community of Madrid"@en .
+
+safeschool:SpeedCamera a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf schema:Place ;
+  rdfs:comment "A fixed speed monitoring camera or radar in Madrid"@en .
+
+safeschool:District a owl:Class ;
+  rdfs:subClassOf schema:AdministrativeArea ; # Subclass of schema:Place
+  rdfs:comment "An administrative district within Madrid city"@en .
+
+
+# OBJECT PROPERTIES
+
+safeschool:inDistrict a owl:ObjectProperty ;
+  rdfs:subPropertyOf schema:containedInPlace ;
+  rdfs:domain [ # Domain is the union of Center and Accident
+    a owl:Class ;
+    owl:unionOf (
+      safeschool:EducationalCenter
+      safeschool:Accident
+    )
+  ] ;
+  rdfs:range safeschool:District ;
+  rdfs:comment "The district where the entity is located (Madrid city only)"@en .
+
+
+# DATATYPE PROPERTIES - GEOSPARQL
+
+# This single property applies to all geo:Feature classes
+# (Accident, EducationalCenter, SpeedCamera)
+safeschool:wktGeometry a owl:DatatypeProperty ;
+  rdfs:subPropertyOf geo:asWKT ;
+  rdfs:domain geo:Feature ;
+  rdfs:range geo:wktLiteral ;
+  rdfs:comment "Geometry in WKT format (e.g., POINT(Lon Lat))"@en .
+
+# DATATYPE PROPERTIES - ACCIDENT
+
+safeschool:weatherCondition a owl:DatatypeProperty ;
+  rdfs:domain safeschool:Accident ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Weather conditions at time of accident"@en .
+
+safeschool:alcoholPositive a owl:DatatypeProperty ;
+  rdfs:domain safeschool:Accident ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "Whether any alcohol test was positive in the accident"@en .
+
+safeschool:drugPositive a owl:DatatypeProperty ;
+  rdfs:domain safeschool:Accident ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "Whether any drug test was positive in the accident"@en .
+
+safeschool:pedestrianInvolved a owl:DatatypeProperty ;
+  rdfs:domain safeschool:Accident ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "Whether one or more pedestrians were involved"@en .
+
+safeschool:vehiclesInvolved a owl:DatatypeProperty ;
+  rdfs:domain safeschool:Accident ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Text description of vehicles involved (e.g., 'Ciclomotor, Turismo')"@en .
+
+safeschool:injuryDescription a owl:DatatypeProperty ;
+  rdfs:domain safeschool:Accident ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Highest level of injury description for the accident"@en .
+
+safeschool:injuryLevel a owl:DatatypeProperty ;
+  rdfs:domain safeschool:Accident ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "Numeric code for highest injury level"@en .
+
+
+# DATATYPE PROPERTIES - EDUCATIONAL CENTER
+
+safeschool:centerTypeCode a owl:DatatypeProperty ;
+  rdfs:domain safeschool:EducationalCenter ;
+  rdfs:range xsd:string ;
+  rdfs:comment "3-digit code for center type"@en .
+
+safeschool:ownershipType a owl:DatatypeProperty ;
+  rdfs:domain safeschool:EducationalCenter ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Public or private ownership"@en .
+
+
+# DATATYPE PROPERTIES - SPEED CAMERA
+
+safeschool:direction a owl:DatatypeProperty ;
+  rdfs:domain safeschool:SpeedCamera ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Direction of traffic monitored"@en .
+
+safeschool:cameraType a owl:DatatypeProperty ;
+  rdfs:domain safeschool:SpeedCamera ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Type of camera"@en .
+
+safeschool:speedLimit a owl:DatatypeProperty ;
+  rdfs:domain safeschool:SpeedCamera ;
+  rdfs:range xsd:integer ;
+  rdfs:comment "Posted speed limit in km/h"@en .
