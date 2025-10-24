@@ -1,0 +1,257 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha_inst",
+    "expression": "grel:value.toDate(\"dd/MM/yy\").toString(\"dd/MM/yyyy\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha_inst using expression grel:value.toDate(\"dd/MM/yy\").toString(\"dd/MM/yyyy\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "utm_x",
+    "description": "Remove column utm_x"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "utm_y",
+    "description": "Remove column utm_y"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "longitud",
+    "expression": "grel:\"-\" + value.replace(\".\", \"\").substring(1, 2) + \".\" + value.replace(\".\", \"\").substring(2)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column longitud using expression grel:\"-\" + value.replace(\".\", \"\").substring(1, 2) + \".\" + value.replace(\".\", \"\").substring(2)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitud",
+    "expression": "grel:value.replace(\".\", \"\").substring(0, 2) + \".\" + value.replace(\".\", \"\").substring(2)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column latitud using expression grel:value.replace(\".\", \"\").substring(0, 2) + \".\" + value.replace(\".\", \"\").substring(2)"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "tipo_elem",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "lengths",
+    "fieldLengths": [
+      15
+    ],
+    "description": "Split column tipo_elem by field lengths"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "tipo_elem",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SEMAFORO 2/200 BICI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BICI"
+      }
+    ],
+    "description": "Mass edit cells in column tipo_elem"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "tipo_elem",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SEMAFORO 2/200 PEATON - BICI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PEATON - BICI"
+      }
+    ],
+    "description": "Mass edit cells in column tipo_elem"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "tipo_elem",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SEMAFORO 3/100 BICI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BICI"
+      }
+    ],
+    "description": "Mass edit cells in column tipo_elem"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "tipo_elem",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SEMAFORO 3/200 BICI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BICI"
+      }
+    ],
+    "description": "Mass edit cells in column tipo_elem"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "tipo_elem 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SEMAFORO 2/200 "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "2/200 "
+      }
+    ],
+    "description": "Mass edit cells in column tipo_elem 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "tipo_elem 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SEMAFORO 3/100 "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3/100 "
+      }
+    ],
+    "description": "Mass edit cells in column tipo_elem 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "tipo_elem 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "SEMAFORO 3/200 "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "3/200 "
+      }
+    ],
+    "description": "Mass edit cells in column tipo_elem 1"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "tipo_elem",
+    "newColumnName": "tipo_semaforo",
+    "description": "Rename column tipo_elem to tipo_semaforo"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "tipo_elem 1",
+    "newColumnName": "tipo_luz",
+    "description": "Rename column tipo_elem 1 to tipo_luz"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "longitud",
+    "expression": "grel:value.split(\".\")[0] + \".\" + value.split(\".\")[1].substring(0, 6)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column longitud using expression grel:value.split(\".\")[0] + \".\" + value.split(\".\")[1].substring(0, 6)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitud",
+    "expression": "grel:value.split(\".\")[0] + \".\" + value.split(\".\")[1].substring(0, 6)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column latitud using expression grel:value.split(\".\")[0] + \".\" + value.split(\".\")[1].substring(0, 6)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha_inst",
+    "expression": "grel:value.toDate('dd/MM/yyyy').toString('yyyy-MM-dd')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha_inst using expression grel:value.toDate('dd/MM/yyyy').toString('yyyy-MM-dd')"
+  }
+]

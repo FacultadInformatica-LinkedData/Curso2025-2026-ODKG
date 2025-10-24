@@ -1,0 +1,973 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix map: <http://mapping.example.com/> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix base: <http://crtm-urban-buses.org/opendata/handsOn/group11/> .
+@prefix ont: <http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix mod: <http://w3id.org/mod#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+map:map_agency_000 rml:logicalSource map:source_000 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "agency" ;
+	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002, map:pom_003, map:pom_004, map:pom_005 ;
+	rr:subjectMap map:s_000 .
+
+map:map_agency_operates_route_000 rml:logicalSource map:source_002 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "agency_operates_route" ;
+	rr:predicateObjectMap map:pom_012 ;
+	rr:subjectMap map:s_002 .
+
+map:map_bus_route_has_trip_000 rml:logicalSource map:source_004 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "bus_route_has_trip" ;
+	rr:predicateObjectMap map:pom_025 ;
+	rr:subjectMap map:s_004 .
+
+map:map_busroute_000 rml:logicalSource map:source_001 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "busroute" ;
+	rr:predicateObjectMap map:pom_006, map:pom_007, map:pom_008, map:pom_009, map:pom_010, map:pom_011 ;
+	rr:subjectMap map:s_001 .
+
+map:map_calendar_000 rml:logicalSource map:source_008 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "calendar" ;
+	rr:predicateObjectMap map:pom_049, map:pom_050, map:pom_051, map:pom_052, map:pom_053, map:pom_054, map:pom_055, map:pom_056, map:pom_057, map:pom_058, map:pom_059 ;
+	rr:subjectMap map:s_008 .
+
+map:map_calendar_is_calendar_of_000 rml:logicalSource map:source_009 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "calendar_is_calendar_of" ;
+	rr:predicateObjectMap map:pom_060 ;
+	rr:subjectMap map:s_009 .
+
+map:map_shape_000 rml:logicalSource map:source_010 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "shape" ;
+	rr:predicateObjectMap map:pom_061, map:pom_062, map:pom_063, map:pom_064, map:pom_065, map:pom_066 ;
+	rr:subjectMap map:s_010 .
+
+map:map_shape_is_shape_of_000 rml:logicalSource map:source_011 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "shape_is_shape_of" ;
+	rr:predicateObjectMap map:pom_067 ;
+	rr:subjectMap map:s_011 .
+
+map:map_stop_000 rml:logicalSource map:source_005 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "stop" ;
+	rr:predicateObjectMap map:pom_026, map:pom_027, map:pom_028, map:pom_029, map:pom_030, map:pom_031, map:pom_032, map:pom_033, map:pom_034, map:pom_035, map:pom_036, map:pom_037, map:pom_038, map:pom_039, map:pom_040, map:pom_041 ;
+	rr:subjectMap map:s_005 .
+
+map:map_stoptime_000 rml:logicalSource map:source_006 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "stoptime" ;
+	rr:predicateObjectMap map:pom_042, map:pom_043, map:pom_044, map:pom_045, map:pom_046, map:pom_047 ;
+	rr:subjectMap map:s_006 .
+
+map:map_trip_000 rml:logicalSource map:source_003 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "trip" ;
+	rr:predicateObjectMap map:pom_013, map:pom_014, map:pom_015, map:pom_016, map:pom_017, map:pom_018, map:pom_019, map:pom_020, map:pom_021, map:pom_022, map:pom_023, map:pom_024 ;
+	rr:subjectMap map:s_003 .
+
+map:map_trip_has_stop_time_000 rml:logicalSource map:source_007 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "trip_has_stop_time" ;
+	rr:predicateObjectMap map:pom_048 ;
+	rr:subjectMap map:s_007 .
+
+map:om_000 rdf:type rr:ObjectMap ;
+	rr:constant ont:Agency ;
+	rr:termType rr:IRI .
+
+map:om_001 rml:reference "agency_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_002 rml:reference "agency_name" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_003 rml:reference "agency_url" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:anyURI ;
+	rr:termType rr:Literal .
+
+map:om_004 rml:reference "agency_timezone" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_005 rml:reference "agency_lang" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_006 rdf:type rr:ObjectMap ;
+	rr:constant ont:BusRoute ;
+	rr:termType rr:IRI .
+
+map:om_007 rml:reference "route_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_008 rml:reference "route_short_name" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_009 rml:reference "route_long_name" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_010 rml:reference "route_url" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:anyURI ;
+	rr:termType rr:Literal .
+
+map:om_011 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/{agency_id}" ;
+	rr:termType rr:IRI .
+
+map:om_012 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}" ;
+	rr:termType rr:IRI .
+
+map:om_013 rdf:type rr:ObjectMap ;
+	rr:constant ont:Trip ;
+	rr:termType rr:IRI .
+
+map:om_014 rml:reference "trip_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_015 rml:reference "trip_headsign_complete" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_016 rml:reference "trip_headsign" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_017 rml:reference "trip_short_name" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_018 rml:reference "bus_number" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_019 rml:reference "direction_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_020 rml:reference "block_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_021 rml:reference "wheelchair_accessible" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_022 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}" ;
+	rr:termType rr:IRI .
+
+map:om_023 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/{service_id}" ;
+	rr:termType rr:IRI .
+
+map:om_024 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/shape/{shape_id}" ;
+	rr:termType rr:IRI .
+
+map:om_025 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" ;
+	rr:termType rr:IRI .
+
+map:om_026 rdf:type rr:ObjectMap ;
+	rr:constant ont:Stop ;
+	rr:termType rr:IRI .
+
+map:om_027 rml:reference "stop_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_028 rml:reference "stop_code" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_029 rml:reference "stop_name" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_030 rml:reference "stop_desc" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_031 rml:reference "stop_desc_number" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_032 rml:reference "stop_desc_name" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_033 rml:reference "stop_lat" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:decimal ;
+	rr:termType rr:Literal .
+
+map:om_034 rml:reference "stop_lon" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:decimal ;
+	rr:termType rr:Literal .
+
+map:om_035 rml:reference "zone_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_036 rml:reference "stop_url" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:anyURI ;
+	rr:termType rr:Literal .
+
+map:om_037 rml:reference "location_type" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_038 rml:reference "stop_timezone" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_039 rml:reference "wheelchair_boarding" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_040 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{parent_station}" ;
+	rr:termType rr:IRI .
+
+map:om_041 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{stop_id}" ;
+	rr:termType rr:IRI .
+
+map:om_042 rdf:type rr:ObjectMap ;
+	rr:constant ont:StopTime ;
+	rr:termType rr:IRI .
+
+map:om_043 rml:reference "arrival_time" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_044 rml:reference "departure_time" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_045 rml:reference "stop_sequence" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_046 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" ;
+	rr:termType rr:IRI .
+
+map:om_047 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{stop_id}" ;
+	rr:termType rr:IRI .
+
+map:om_048 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stoptime/{trip_id}_{stop_sequence}" ;
+	rr:termType rr:IRI .
+
+map:om_049 rdf:type rr:ObjectMap ;
+	rr:constant ont:CalendarService ;
+	rr:termType rr:IRI .
+
+map:om_050 rml:reference "service_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_051 rml:reference "monday" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_052 rml:reference "tuesday" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_053 rml:reference "wednesday" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_054 rml:reference "thursday" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_055 rml:reference "friday" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_056 rml:reference "saturday" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_057 rml:reference "sunday" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_058 rml:reference "start_date" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_059 rml:reference "end_date" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_060 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" ;
+	rr:termType rr:IRI .
+
+map:om_061 rdf:type rr:ObjectMap ;
+	rr:constant ont:Shape ;
+	rr:termType rr:IRI .
+
+map:om_062 rml:reference "shape_id" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:string ;
+	rr:termType rr:Literal .
+
+map:om_063 rml:reference "shape_pt_lat" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:decimal ;
+	rr:termType rr:Literal .
+
+map:om_064 rml:reference "shape_pt_lon" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:decimal ;
+	rr:termType rr:Literal .
+
+map:om_065 rml:reference "shape_pt_sequence" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_066 rml:reference "shape_dist_traveled" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:decimal ;
+	rr:termType rr:Literal .
+
+map:om_067 rdf:type rr:ObjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" ;
+	rr:termType rr:IRI .
+
+map:pm_000 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_001 rdf:type rr:PredicateMap ;
+	rr:constant ont:agencyId .
+
+map:pm_002 rdf:type rr:PredicateMap ;
+	rr:constant schema:name .
+
+map:pm_003 rdf:type rr:PredicateMap ;
+	rr:constant schema:url .
+
+map:pm_004 rdf:type rr:PredicateMap ;
+	rr:constant ont:timezone .
+
+map:pm_005 rdf:type rr:PredicateMap ;
+	rr:constant schema:inLanguage .
+
+map:pm_006 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_007 rdf:type rr:PredicateMap ;
+	rr:constant ont:routeId .
+
+map:pm_008 rdf:type rr:PredicateMap ;
+	rr:constant ont:routeShortName .
+
+map:pm_009 rdf:type rr:PredicateMap ;
+	rr:constant ont:routeLongName .
+
+map:pm_010 rdf:type rr:PredicateMap ;
+	rr:constant schema:url .
+
+map:pm_011 rdf:type rr:PredicateMap ;
+	rr:constant ont:operatedBy .
+
+map:pm_012 rdf:type rr:PredicateMap ;
+	rr:constant ont:operatesRoute .
+
+map:pm_013 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_014 rdf:type rr:PredicateMap ;
+	rr:constant ont:tripId .
+
+map:pm_015 rdf:type rr:PredicateMap ;
+	rr:constant ont:tripHeadsignComplete .
+
+map:pm_016 rdf:type rr:PredicateMap ;
+	rr:constant ont:tripHeadsign .
+
+map:pm_017 rdf:type rr:PredicateMap ;
+	rr:constant ont:tripShortName .
+
+map:pm_018 rdf:type rr:PredicateMap ;
+	rr:constant ont:busNumber .
+
+map:pm_019 rdf:type rr:PredicateMap ;
+	rr:constant ont:directionId .
+
+map:pm_020 rdf:type rr:PredicateMap ;
+	rr:constant ont:blockId .
+
+map:pm_021 rdf:type rr:PredicateMap ;
+	rr:constant ont:wheelChairAccessible .
+
+map:pm_022 rdf:type rr:PredicateMap ;
+	rr:constant ont:belongsToRoute .
+
+map:pm_023 rdf:type rr:PredicateMap ;
+	rr:constant ont:hasCalendar .
+
+map:pm_024 rdf:type rr:PredicateMap ;
+	rr:constant ont:hasShape .
+
+map:pm_025 rdf:type rr:PredicateMap ;
+	rr:constant ont:hasTrip .
+
+map:pm_026 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_027 rdf:type rr:PredicateMap ;
+	rr:constant ont:stopId .
+
+map:pm_028 rdf:type rr:PredicateMap ;
+	rr:constant ont:stopCode .
+
+map:pm_029 rdf:type rr:PredicateMap ;
+	rr:constant schema:name .
+
+map:pm_030 rdf:type rr:PredicateMap ;
+	rr:constant schema:description .
+
+map:pm_031 rdf:type rr:PredicateMap ;
+	rr:constant ont:stopDescNumber .
+
+map:pm_032 rdf:type rr:PredicateMap ;
+	rr:constant ont:stopDescName .
+
+map:pm_033 rdf:type rr:PredicateMap ;
+	rr:constant geo:lat .
+
+map:pm_034 rdf:type rr:PredicateMap ;
+	rr:constant geo:long .
+
+map:pm_035 rdf:type rr:PredicateMap ;
+	rr:constant ont:zoneId .
+
+map:pm_036 rdf:type rr:PredicateMap ;
+	rr:constant schema:url .
+
+map:pm_037 rdf:type rr:PredicateMap ;
+	rr:constant ont:locationType .
+
+map:pm_038 rdf:type rr:PredicateMap ;
+	rr:constant ont:stopTimeZone .
+
+map:pm_039 rdf:type rr:PredicateMap ;
+	rr:constant ont:wheelChairBoarding .
+
+map:pm_040 rdf:type rr:PredicateMap ;
+	rr:constant ont:parentStation .
+
+map:pm_041 rdf:type rr:PredicateMap ;
+	rr:constant ont:hasChildStop .
+
+map:pm_042 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_043 rdf:type rr:PredicateMap ;
+	rr:constant ont:arrivalTime .
+
+map:pm_044 rdf:type rr:PredicateMap ;
+	rr:constant ont:departureTime .
+
+map:pm_045 rdf:type rr:PredicateMap ;
+	rr:constant ont:stopSequence .
+
+map:pm_046 rdf:type rr:PredicateMap ;
+	rr:constant ont:belongsToTrip .
+
+map:pm_047 rdf:type rr:PredicateMap ;
+	rr:constant ont:refersToStop .
+
+map:pm_048 rdf:type rr:PredicateMap ;
+	rr:constant ont:hasStopTime .
+
+map:pm_049 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_050 rdf:type rr:PredicateMap ;
+	rr:constant ont:serviceId .
+
+map:pm_051 rdf:type rr:PredicateMap ;
+	rr:constant ont:operatesOnMonday .
+
+map:pm_052 rdf:type rr:PredicateMap ;
+	rr:constant ont:operatesOnTuesday .
+
+map:pm_053 rdf:type rr:PredicateMap ;
+	rr:constant ont:operatesOnWednesday .
+
+map:pm_054 rdf:type rr:PredicateMap ;
+	rr:constant ont:operatesOnThursday .
+
+map:pm_055 rdf:type rr:PredicateMap ;
+	rr:constant ont:operatesOnFriday .
+
+map:pm_056 rdf:type rr:PredicateMap ;
+	rr:constant ont:operatesOnSaturday .
+
+map:pm_057 rdf:type rr:PredicateMap ;
+	rr:constant ont:operatesOnSunday .
+
+map:pm_058 rdf:type rr:PredicateMap ;
+	rr:constant ont:startDate .
+
+map:pm_059 rdf:type rr:PredicateMap ;
+	rr:constant ont:endDate .
+
+map:pm_060 rdf:type rr:PredicateMap ;
+	rr:constant ont:isCalendarOf .
+
+map:pm_061 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_062 rdf:type rr:PredicateMap ;
+	rr:constant ont:shapeId .
+
+map:pm_063 rdf:type rr:PredicateMap ;
+	rr:constant geo:lat .
+
+map:pm_064 rdf:type rr:PredicateMap ;
+	rr:constant geo:long .
+
+map:pm_065 rdf:type rr:PredicateMap ;
+	rr:constant ont:shapeSequence .
+
+map:pm_066 rdf:type rr:PredicateMap ;
+	rr:constant ont:shapeDistTraveled .
+
+map:pm_067 rdf:type rr:PredicateMap ;
+	rr:constant ont:isShapeOf .
+
+map:pom_000 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_000 ;
+	rr:predicateMap map:pm_000 .
+
+map:pom_001 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_001 ;
+	rr:predicateMap map:pm_001 .
+
+map:pom_002 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_002 ;
+	rr:predicateMap map:pm_002 .
+
+map:pom_003 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_003 ;
+	rr:predicateMap map:pm_003 .
+
+map:pom_004 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_004 ;
+	rr:predicateMap map:pm_004 .
+
+map:pom_005 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_005 ;
+	rr:predicateMap map:pm_005 .
+
+map:pom_006 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_006 ;
+	rr:predicateMap map:pm_006 .
+
+map:pom_007 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_007 ;
+	rr:predicateMap map:pm_007 .
+
+map:pom_008 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_008 ;
+	rr:predicateMap map:pm_008 .
+
+map:pom_009 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_009 ;
+	rr:predicateMap map:pm_009 .
+
+map:pom_010 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_010 ;
+	rr:predicateMap map:pm_010 .
+
+map:pom_011 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_011 ;
+	rr:predicateMap map:pm_011 .
+
+map:pom_012 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_012 ;
+	rr:predicateMap map:pm_012 .
+
+map:pom_013 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_013 ;
+	rr:predicateMap map:pm_013 .
+
+map:pom_014 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_014 ;
+	rr:predicateMap map:pm_014 .
+
+map:pom_015 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_015 ;
+	rr:predicateMap map:pm_015 .
+
+map:pom_016 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_016 ;
+	rr:predicateMap map:pm_016 .
+
+map:pom_017 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_017 ;
+	rr:predicateMap map:pm_017 .
+
+map:pom_018 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_018 ;
+	rr:predicateMap map:pm_018 .
+
+map:pom_019 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_019 ;
+	rr:predicateMap map:pm_019 .
+
+map:pom_020 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_020 ;
+	rr:predicateMap map:pm_020 .
+
+map:pom_021 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_021 ;
+	rr:predicateMap map:pm_021 .
+
+map:pom_022 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_022 ;
+	rr:predicateMap map:pm_022 .
+
+map:pom_023 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_023 ;
+	rr:predicateMap map:pm_023 .
+
+map:pom_024 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_024 ;
+	rr:predicateMap map:pm_024 .
+
+map:pom_025 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_025 ;
+	rr:predicateMap map:pm_025 .
+
+map:pom_026 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_026 ;
+	rr:predicateMap map:pm_026 .
+
+map:pom_027 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_027 ;
+	rr:predicateMap map:pm_027 .
+
+map:pom_028 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_028 ;
+	rr:predicateMap map:pm_028 .
+
+map:pom_029 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_029 ;
+	rr:predicateMap map:pm_029 .
+
+map:pom_030 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_030 ;
+	rr:predicateMap map:pm_030 .
+
+map:pom_031 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_031 ;
+	rr:predicateMap map:pm_031 .
+
+map:pom_032 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_032 ;
+	rr:predicateMap map:pm_032 .
+
+map:pom_033 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_033 ;
+	rr:predicateMap map:pm_033 .
+
+map:pom_034 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_034 ;
+	rr:predicateMap map:pm_034 .
+
+map:pom_035 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_035 ;
+	rr:predicateMap map:pm_035 .
+
+map:pom_036 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_036 ;
+	rr:predicateMap map:pm_036 .
+
+map:pom_037 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_037 ;
+	rr:predicateMap map:pm_037 .
+
+map:pom_038 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_038 ;
+	rr:predicateMap map:pm_038 .
+
+map:pom_039 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_039 ;
+	rr:predicateMap map:pm_039 .
+
+map:pom_040 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_040 ;
+	rr:predicateMap map:pm_040 .
+
+map:pom_041 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_041 ;
+	rr:predicateMap map:pm_041 .
+
+map:pom_042 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_042 ;
+	rr:predicateMap map:pm_042 .
+
+map:pom_043 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_043 ;
+	rr:predicateMap map:pm_043 .
+
+map:pom_044 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_044 ;
+	rr:predicateMap map:pm_044 .
+
+map:pom_045 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_045 ;
+	rr:predicateMap map:pm_045 .
+
+map:pom_046 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_046 ;
+	rr:predicateMap map:pm_046 .
+
+map:pom_047 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_047 ;
+	rr:predicateMap map:pm_047 .
+
+map:pom_048 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_048 ;
+	rr:predicateMap map:pm_048 .
+
+map:pom_049 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_049 ;
+	rr:predicateMap map:pm_049 .
+
+map:pom_050 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_050 ;
+	rr:predicateMap map:pm_050 .
+
+map:pom_051 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_051 ;
+	rr:predicateMap map:pm_051 .
+
+map:pom_052 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_052 ;
+	rr:predicateMap map:pm_052 .
+
+map:pom_053 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_053 ;
+	rr:predicateMap map:pm_053 .
+
+map:pom_054 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_054 ;
+	rr:predicateMap map:pm_054 .
+
+map:pom_055 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_055 ;
+	rr:predicateMap map:pm_055 .
+
+map:pom_056 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_056 ;
+	rr:predicateMap map:pm_056 .
+
+map:pom_057 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_057 ;
+	rr:predicateMap map:pm_057 .
+
+map:pom_058 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_058 ;
+	rr:predicateMap map:pm_058 .
+
+map:pom_059 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_059 ;
+	rr:predicateMap map:pm_059 .
+
+map:pom_060 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_060 ;
+	rr:predicateMap map:pm_060 .
+
+map:pom_061 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_061 ;
+	rr:predicateMap map:pm_061 .
+
+map:pom_062 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_062 ;
+	rr:predicateMap map:pm_062 .
+
+map:pom_063 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_063 ;
+	rr:predicateMap map:pm_063 .
+
+map:pom_064 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_064 ;
+	rr:predicateMap map:pm_064 .
+
+map:pom_065 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_065 ;
+	rr:predicateMap map:pm_065 .
+
+map:pom_066 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_066 ;
+	rr:predicateMap map:pm_066 .
+
+map:pom_067 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_067 ;
+	rr:predicateMap map:pm_067 .
+
+map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_agency_000, map:map_agency_operates_route_000, map:map_bus_route_has_trip_000, map:map_busroute_000, map:map_calendar_000, map:map_calendar_is_calendar_of_000, map:map_shape_000, map:map_shape_is_shape_of_000, map:map_stop_000, map:map_stoptime_000, map:map_trip_000, map:map_trip_has_stop_time_000 ;
+	rdf:type <http://rdfs.org/ns/void#Dataset> .
+
+map:s_000 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/{agency_id}" .
+
+map:s_001 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}" .
+
+map:s_002 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/{agency_id}" .
+
+map:s_003 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" .
+
+map:s_004 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}" .
+
+map:s_005 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{stop_id}" .
+
+map:s_006 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stoptime/{trip_id}_{stop_sequence}" .
+
+map:s_007 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" .
+
+map:s_008 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/{service_id}" .
+
+map:s_009 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/{service_id}" .
+
+map:s_010 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/shape/{shape_id}_{shape_pt_sequence}" .
+
+map:s_011 rdf:type rr:SubjectMap ;
+	rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/shape/{shape_id}" .
+
+map:source_000 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/agency-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_001 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/routes-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_002 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/routes-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_003 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/trips-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_004 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/trips-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_005 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/stops-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_006 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/stop-times-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_007 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/stop-times-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_008 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/calendar-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_009 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/trips-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_010 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/shapes.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_011 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/trips-updated.csv" ;
+	rdf:type rml:LogicalSource .
+

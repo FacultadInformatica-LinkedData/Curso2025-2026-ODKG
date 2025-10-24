@@ -1,0 +1,639 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Universidad",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Universidad using expression value.trim()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Administración Educativa Responsable",
+    "description": "Remove column Administración Educativa Responsable"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Con ánimo de lucro",
+    "description": "Remove column Con ánimo de lucro"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Código postal",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Código postal using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "EMail",
+    "newColumnName": "Email",
+    "description": "Rename column EMail to Email"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Teléfono 1 using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Teléfono 1 using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Teléfono 1 using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Teléfono 1 using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "828 019 019"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "828019019"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "915 55 25 28"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "915552528"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "917 340 413"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "917340413"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "919 032 201"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "919032201"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "922 985 050"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "922985050"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "941 209 743"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "941209743"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "942 244 244"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "942244244"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "951 562 168"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "951562168"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Teléfono 1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "960 452 849"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "960452849"
+      }
+    ],
+    "description": "Mass edit cells in column Teléfono 1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Tipo disposición",
+    "description": "Remove column Tipo disposición"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fecha disposición",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Fecha disposición using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fecha publicación",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Fecha publicación using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fecha entrada en Vigor",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Fecha entrada en Vigor using expression value.toDate()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Fecha disposición",
+    "description": "Remove column Fecha disposición"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Tipo",
+          "expression": "value",
+          "columnName": "Tipo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Pública",
+                "l": "Pública"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Tipo",
+          "expression": "value",
+          "columnName": "Tipo",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Pública",
+                "l": "Pública"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Fecha entrada en Vigor",
+    "description": "Remove column Fecha entrada en Vigor"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Fecha publicación",
+    "description": "Remove column Fecha publicación"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Año publicación",
+    "newColumnName": "Year of Publication",
+    "description": "Rename column Año publicación to Year of Publication"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Tipo Boletín",
+    "description": "Remove column Tipo Boletín"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Teléfono 1",
+    "newColumnName": "Phone",
+    "description": "Rename column Teléfono 1 to Phone"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Comunidad Autónoma",
+    "newColumnName": "Autonomous Community",
+    "description": "Rename column Comunidad Autónoma to Autonomous Community"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Provincia",
+    "newColumnName": "Province",
+    "description": "Rename column Provincia to Province"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Municipio",
+    "newColumnName": "Municipality",
+    "description": "Rename column Municipio to Municipality"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Universidad",
+    "newColumnName": "University",
+    "description": "Rename column Universidad to University"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Código",
+    "description": "Remove column Código"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Acrónimo",
+    "newColumnName": "Acronim",
+    "description": "Rename column Acrónimo to Acronim"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Acronim",
+    "newColumnName": "Acronym",
+    "description": "Rename column Acronim to Acronym"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Tipo",
+    "newColumnName": "Type",
+    "description": "Rename column Tipo to Type"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Domicilio",
+    "newColumnName": "Address",
+    "description": "Rename column Domicilio to Address"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Modalidad",
+    "newColumnName": "Modality",
+    "description": "Rename column Modalidad to Modality"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código postal",
+    "newColumnName": "Postal Code",
+    "description": "Rename column Código postal to Postal Code"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(value.trim().toLowercase())",
+    "onError": "set-to-blank",
+    "newColumnName": "UniversityID",
+    "columnInsertIndex": 1,
+    "description": "Create column UniversityID at index 1 based on column University using expression grel:md5(value.trim().toLowercase())"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Postal Code",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Postal Code using expression value.toString()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Address",
+    "expression": "grel:md5(value.trim().toLowercase())",
+    "onError": "set-to-blank",
+    "newColumnName": "AddressID",
+    "columnInsertIndex": 7,
+    "description": "Create column AddressID at index 7 based on column Address using expression grel:md5(value.trim().toLowercase())"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Localidad",
+    "description": "Remove column Localidad"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Municipality",
+    "expression": "grel:md5(value.trim().toLowercase())",
+    "onError": "set-to-blank",
+    "newColumnName": "MunicipalityID",
+    "columnInsertIndex": 10,
+    "description": "Create column MunicipalityID at index 10 based on column Municipality using expression grel:md5(value.trim().toLowercase())"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Province",
+    "expression": "grel:md5(value.trim().toLowercase())",
+    "onError": "set-to-blank",
+    "newColumnName": "ProvinceID",
+    "columnInsertIndex": 12,
+    "description": "Create column ProvinceID at index 12 based on column Province using expression grel:md5(value.trim().toLowercase())"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Autonomous Community",
+    "expression": "grel:md5(value.trim().toLowercase())",
+    "onError": "set-to-blank",
+    "newColumnName": "AutonomousCommunityID",
+    "columnInsertIndex": 14,
+    "description": "Create column AutonomousCommunityID at index 14 based on column Autonomous Community using expression grel:md5(value.trim().toLowercase())"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UniversityID2",
+    "columnInsertIndex": 1,
+    "description": "Create column UniversityID2 at index 1 based on column University using expression grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "UniversityID",
+    "description": "Remove column UniversityID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "UniversityID2",
+    "newColumnName": "UniversityID",
+    "description": "Rename column UniversityID2 to UniversityID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Autonomous Community",
+    "description": "Remove column Autonomous Community"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Province",
+    "description": "Remove column Province"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Municipality",
+    "description": "Remove column Municipality"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Address",
+    "description": "Remove column Address"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MunicipalityID",
+    "description": "Remove column MunicipalityID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ProvinceID",
+    "description": "Remove column ProvinceID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "AutonomousCommunityID",
+    "description": "Remove column AutonomousCommunityID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Postal Code",
+    "description": "Remove column Postal Code"
+  }
+]

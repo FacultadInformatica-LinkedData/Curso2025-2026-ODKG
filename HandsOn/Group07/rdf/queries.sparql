@@ -1,0 +1,161 @@
+###########################################################
+# SPARQL Query Set for LUDE Ontology
+# Dataset: Spanish Universities Knowledge Graph
+# Author: Wenwen Yang
+# Tool used to verify: GraphDB
+###########################################################
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX lude: <https://spanishuniversitites.data/ontology/lude#>
+PREFIX id: <https://spanishuniversitites.data/id/lude/>
+
+###########################################################
+# 1️⃣ List all classes defined in the ontology
+###########################################################
+SELECT DISTINCT ?class
+WHERE {
+  ?s rdf:type ?class .
+}
+ORDER BY ?class
+
+# -------------------------------------------------------------------------
+# | class                                                                 |
+# =========================================================================
+# | "https://spanishuniversitites.data/ontology/lude#AcademicLevel"       |
+# | "https://spanishuniversitites.data/ontology/lude#Address"             |
+# | "https://spanishuniversitites.data/ontology/lude#AutonomousCommunity" |
+# | "https://spanishuniversitites.data/ontology/lude#Degree"              |
+# | "https://spanishuniversitites.data/ontology/lude#KnowledgeArea"       |
+# | "https://spanishuniversitites.data/ontology/lude#Municipality"        |
+# | "https://spanishuniversitites.data/ontology/lude#Province"            |
+# | "https://spanishuniversitites.data/ontology/lude#University"          |
+# -------------------------------------------------------------------------
+
+###########################################################
+# 2️⃣ Retrieve all Academic Levels (e.g., Grado, Máster)
+###########################################################
+SELECT ?academicLevel ?label
+WHERE {
+  ?academicLevel a lude:AcademicLevel ;
+                 rdfs:label ?label .
+}
+ORDER BY ?label
+
+# --------------------------------------------------------------------------------------------------------------
+# | academicLevel                                                                              | label         |
+# ==============================================================================================================
+# | <https://spanishuniversitites.data/id/lude/AcademicLevel/fba30e9ec1935ca7d36277ba76dddbba> | "Doble Grado" |
+# | <https://spanishuniversitites.data/id/lude/AcademicLevel/d6d85d89b4612501521435bd3f620a9a> | "Grado"       |
+# | <https://spanishuniversitites.data/id/lude/AcademicLevel/eb0a191797624dd3a48fa681d3061212> | "Máster"      |
+# --------------------------------------------------------------------------------------------------------------
+
+###########################################################
+# 3️⃣ Retrieve all addresses with postal codes
+###########################################################
+SELECT ?address ?label ?postalCode
+WHERE {
+  ?address a lude:Address ;
+           rdfs:label ?label ;
+           lude:postalCode ?postalCode .
+}
+ORDER BY ?label
+
+###########################################################
+# 4️⃣ Retrieve addresses and their municipalities (if available)
+###########################################################
+SELECT ?address ?addressLabel ?municipality
+WHERE {
+  ?address a lude:Address ;
+           rdfs:label ?addressLabel ;
+           lude:locatedInMunicipality ?municipality .
+}
+ORDER BY ?addressLabel
+
+###########################################################
+# 5️⃣ Retrieve addresses with both postal codes and municipality
+###########################################################
+SELECT ?address ?addressLabel ?municipality ?postalCode
+WHERE {
+  ?address a lude:Address ;
+           rdfs:label ?addressLabel ;
+           lude:locatedInMunicipality ?municipality ;
+           lude:postalCode ?postalCode .
+}
+ORDER BY ?addressLabel
+
+###########################################################
+# 6️⃣ Count how many addresses exist in the dataset
+###########################################################
+SELECT (COUNT(?address) AS ?numberOfAddresses)
+WHERE {
+  ?address a lude:Address .
+}
+
+###########################################################
+# 7️⃣ Search for specific postal code pattern (e.g. starting with '28')
+###########################################################
+SELECT ?address ?label ?postalCode
+WHERE {
+  ?address a lude:Address ;
+           rdfs:label ?label ;
+           lude:postalCode ?postalCode .
+  FILTER(STRSTARTS(?postalCode, "28"))
+}
+ORDER BY ?label
+
+###########################################################
+# 8️⃣ Get all municipalities linked to addresses
+###########################################################
+SELECT DISTINCT ?municipality
+WHERE {
+  ?address a lude:Address ;
+           lude:locatedInMunicipality ?municipality .
+}
+ORDER BY ?municipality
+
+###########################################################
+# 9️⃣ Explore relationships defined by the LUDE ontology
+###########################################################
+SELECT DISTINCT ?property
+WHERE {
+  ?s ?property ?o .
+  FILTER(STRSTARTS(STR(?property), STR(lude:)))
+}
+ORDER BY ?property
+
+###########################################################
+# 🔟 Degrees in "Universidad Pública de Navarra"
+###########################################################
+SELECT ?degree ?degreeName
+WHERE {
+  ?university a lude:University ;
+              rdfs:label "Universidad Pública de Navarra" ;
+              lude:offer ?degree .
+  
+  ?degree rdfs:label ?degreeName .
+}
+ORDER BY ?degreeName
+
+###########################################################
+# 11 Degrees from the ambit "Ciencias" in universities in "País Vasco"
+###########################################################
+SELECT ?universityName ?degreeName
+WHERE {
+  ?university a lude:University ;
+              rdfs:label ?universityName ;
+              lude:offer ?degree ;
+              lude:hasAddress ?address .
+  
+  ?address lude:locatedInMunicipality ?municipality .
+  ?municipality lude:partOfProvince ?province .
+  ?province lude:partOfAutonomousCommunity ?ac .
+  ?ac rdfs:label "Comunidad Autónoma del País Vasco" .
+  
+  ?degree rdfs:label ?degreeName ;
+          lude:hasKnowledgeArea ?ka .
+  ?ka rdfs:label "Ciencias" .
+}
+ORDER BY ?universityName ?degreeName

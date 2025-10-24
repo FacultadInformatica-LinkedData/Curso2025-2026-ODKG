@@ -1,0 +1,97 @@
+prefixes:
+  lude:  "https://linkeduniversities.es/vocab/"
+  ex:    "https://linkeduniversities.es/resource/"
+  xsd:   "http://www.w3.org/2001/XMLSchema#"
+  rdf:   "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  rdfs:  "http://www.w3.org/2000/01/rdf-schema#"
+
+mappings:
+  
+  DegreeCastillaLaManchaMapping:
+    sources:
+      - ['data/CASTILLALAMANCHA-degree.csv~csv']
+    s: ex:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:academicYear, $(Academic Year)]
+      - [lude:ectsCredits, $(Credits)]
+      - [lude:offeredCredits, $(Offered Credits)]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: AcademicLevelMapping
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AcademicLevelID)]   # aus Degree-CSV
+              - [str2, $(AcademicLevelID)]   # aus AcademicLevel-CSV (ggf. anpassen)
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: KnowledgeAreaMapping
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Ambit-id)]           # aus Degree-CSV
+              - [str2, $(id)]           # aus KnowledgeArea-CSV (ggf. anpassen)
+      
+      - p: lude:deliveredAt
+        o:
+          mapping: FacultyMappingCastillaLaMancha
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(FacultyID)]         # aus Degree-CSV
+              - [str2, $(FacultyID)]         # aus Faculty-CSV (ggf. anpassen)
+      
+
+  AcademicLevelMapping:
+    sources:
+      - ['data/academic_level-updated.csv~csv']
+    s: ex:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+      - [lude:code, $(AcademicLevelID)]
+
+  KnowledgeAreaMapping:
+    sources:
+      - ['data/ambit-otros.csv~csv']
+    s: ex:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit)]
+      - [lude:code, $(id)]
+  
+  FacultyMappingCastillaLaMancha:
+    sources:
+      - ['data/CASTILLALAMANCHA-faculty.csv~csv']
+    s: ex:Faculty/$(FacultyID)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty)]
+      - p: lude:hasFaculty
+        o:
+          mapping: UniversityMapping
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]         # aus Faculty-CSV
+              - [str2, $(UniversityID)]         # aus University-CSV (ggf. anpassen)
+
+  
+  UniversityMapping:
+    sources:
+      - ['data/universidades-updated.csv~csv']
+    s: ex:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:id, $(UniversityID)]
+      - [lude:acronym, $(Acronym)] 
+      - [lude:cif, $(CIF)]
+      - [lude:type, $(Type)]
+      - [lude:modality, $(Modality)]
+      - [lude:url, $(URL)]
+      - [lude:email, $(Email)]
+      - [lude:telephone, $(Phone)]
+      - [lude:publicationYear, $(Year of Publication)]

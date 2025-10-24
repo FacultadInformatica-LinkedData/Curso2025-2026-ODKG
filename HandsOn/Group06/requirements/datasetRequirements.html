@@ -33,8 +33,8 @@
   <header>
     <h1>Dataset Requirements Check — GTFS Static Feed</h1>
     <p class="dim small">
-      Selected dataset: <strong>GTFS static transit feed for Madrid</strong> (Consorcio Regional de Transportes de Madrid - CRTM).  
-      This feed consists of multiple text files that are CSV-formatted as per the GTFS specification.
+      Selected dataset: <strong>GTFS static bus feed for Madrid</strong> (Consorcio Regional de Transportes de Madrid - CRTM).  
+      This feed covers the Madrid bus network and consists of multiple text files that are CSV-formatted as per the GTFS specification.
     </p>
     <div class="card small">
       <strong>Documentation used</strong>:
@@ -47,16 +47,44 @@
   </header>
 
   <section class="card">
-    <h2>Summary</h2>
-    <p>This GTFS feed represents public transport information for Madrid. It is a standard open-data format widely used by transit agencies worldwide. It ships as multiple CSV-like text files (e.g., <code>stops.txt</code>, <code>routes.txt</code>, <code>trips.txt</code>, <code>stop_times.txt</code>, <code>calendar.txt</code>, <code>shapes.txt</code>) that are relationally linked by IDs (e.g., <code>stop_id</code>, <code>route_id</code>, <code>trip_id</code>).</p>
+    <h2>1. Dataset Summary</h2>
+    <p>This GTFS feed represents Madrid's bus network information. It is a standard open-data format widely used by transit agencies worldwide. It ships as multiple CSV-like text files (e.g., <code>stops.txt</code>, <code>routes.txt</code>, <code>trips.txt</code>, <code>stop_times.txt</code>, <code>calendar.txt</code>, <code>shapes.txt</code>) that are relationally linked by IDs (e.g., <code>stop_id</code>, <code>route_id</code>, <code>trip_id</code>).</p>
     <div class="grid grid-2 small">
-      <div><strong>Domain</strong>: Smart City — Urban Mobility (Public Transport)</div>
-      <div><strong>Granularity</strong>: Stops, routes, trips, stop-times (schedule-level, with geocoordinates)</div>
+      <div><strong>Domain</strong>: Smart City — Urban Mobility (Bus Transport)</div>
+      <div><strong>Granularity</strong>: Bus stops, routes, trips, stop-times (schedule-level, with geocoordinates)</div>
+      <div><strong>Coverage</strong>: Madrid metropolitan region bus network (CRTM)</div>
+      <div><strong>Scale</strong>: 460 routes · 8,295 stops · 69,370 trips · 1.75M stop-times</div>
     </div>
   </section>
 
   <section class="card">
-    <h2>Files present (typical)</h2>
+    <h2>2. Selection Rationale</h2>
+    <p><strong>Why we selected Madrid CRTM GTFS:</strong></p>
+    <ul class="small">
+      <li><strong>Application Alignment:</strong> Our bus navigation app requires detailed stop locations, schedules, and routes — GTFS provides exactly this structured data.</li>
+      <li><strong>Geographic Linkability:</strong> 8,295 bus stops with precise coordinates enable runtime geographic queries to DBpedia for our location-based quiz feature.</li>
+      <li><strong>Standard Format:</strong> GTFS is a well-documented, internationally recognized standard, simplifying RDF transformation and ensuring quality.</li>
+      <li><strong>Official Source:</strong> Data maintained by CRTM (official transport authority) ensures accuracy and reliability.</li>
+      <li><strong>Open License:</strong> Clear legal framework permits publication and reuse for educational purposes.</li>
+      <li><strong>Real-World Data:</strong> Actual operational bus schedules (not synthetic) across Madrid's metropolitan area.</li>
+      <li><strong>Local Relevance:</strong> Madrid provides rich cultural and historical context for DBpedia integration in our quiz game.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>3. Data Access & Retrieval</h2>
+    <div class="callout small">
+      <p><strong>Source:</strong> Mobility Database — <a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank" rel="noopener noreferrer">mdb-2820</a></p>
+      <p><strong>Provider:</strong> Consorcio Regional de Transportes de Madrid (CRTM)</p>
+      <p><strong>Access Method:</strong> Direct HTTP download from publicly accessible URL (no authentication required)</p>
+      <p><strong>Format Received:</strong> ZIP archive containing 12 text files</p>
+      <p><strong>File Size:</strong> Approximately 350 MB (uncompressed)</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>4. GTFS Files Structure</h2>
+    <p class="small">The dataset contains the following files with their respective roles:</p>
     <table class="small">
       <thead><tr><th>File</th><th>Role</th><th>Key fields for linking</th></tr></thead>
       <tbody>
@@ -72,7 +100,7 @@
   </section>
 
   <section class="card">
-    <h2>Requirement Check</h2>
+    <h2>5. Requirement Verification</h2>
 
     <h3>R1. Data are in the smart cities domain <span class="badge ok">Satisfied</span></h3>
     <p>Public transport is a core smart-city vertical (urban mobility). The feed describes transit infrastructure (routes, stops, services) used for routing, planning, and civic applications.</p>
@@ -94,7 +122,7 @@
     </div>
 
     <h3>R4. Data can be easily linked with generic real-world entities <span class="badge ok">Satisfied</span></h3>
-    <p>The feed includes <code>stop_lat</code>/<code>stop_lon</code> and human-readable names for stations/stops, which can be aligned to generic entities such as places in OpenStreetMap, Wikidata, DBpedia, or GeoNames. Agencies and routes can also be linked to organization and transport entities. Dates in the calendar files can be linked to standard time ontologies.</p>
+    <p>The feed includes <code>stop_lat</code>/<code>stop_lon</code> and human-readable names for bus stops, which can be aligned to generic entities such as places in OpenStreetMap, DBpedia, or GeoNames. Bus routes can be linked to organization and transport entities. Dates in the calendar files can be linked to standard time ontologies.</p>
 
     <h3>R5. Documentation exists for the data (optional) <span class="badge ok">Satisfied</span></h3>
     <p>GTFS has extensive public documentation (schema, field constraints, examples) and a well-maintained open-source validator with transparent rules:

@@ -1,0 +1,1333 @@
+[
+  {
+    "op": "core/row-duplicate-removal",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "criteria": [
+      "AÑO ACADÉMICO",
+      "CAMPUS",
+      "CENTRO",
+      "TITULACIÓN",
+      "RAMA DE ENSEÑANZA",
+      "TIPO_ESTUDIO",
+      "CRÉDITOS NECESARIOS",
+      "CRÉDITOS OFERTADOS",
+      "PRECIO CRÉDITO 1ª MATRÍCULA",
+      "PRECIO CRÉDITO 2ª MATRÍCULA",
+      "PRECIO CRÉDITO 3ª MATRÍCULA",
+      "PRECIO CRÉDITO 4ª MATRÍCULA"
+    ],
+    "description": "Remove duplicate rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CRÉDITOS NECESARIOS",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CRÉDITOS NECESARIOS using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CRÉDITOS NECESARIOS",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CRÉDITOS NECESARIOS using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CRÉDITOS NECESARIOS",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CRÉDITOS NECESARIOS using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CRÉDITOS OFERTADOS",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CRÉDITOS OFERTADOS using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CRÉDITOS OFERTADOS",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CRÉDITOS OFERTADOS using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PRECIO CRÉDITO 1ª MATRÍCULA",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PRECIO CRÉDITO 1ª MATRÍCULA using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PRECIO CRÉDITO 1ª MATRÍCULA",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PRECIO CRÉDITO 1ª MATRÍCULA using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PRECIO CRÉDITO 2ª MATRÍCULA",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PRECIO CRÉDITO 2ª MATRÍCULA using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PRECIO CRÉDITO 2ª MATRÍCULA",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PRECIO CRÉDITO 2ª MATRÍCULA using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PRECIO CRÉDITO 3ª MATRÍCULA",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PRECIO CRÉDITO 3ª MATRÍCULA using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PRECIO CRÉDITO 3ª MATRÍCULA",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PRECIO CRÉDITO 3ª MATRÍCULA using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PRECIO CRÉDITO 4ª MATRÍCULA",
+    "expression": "value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PRECIO CRÉDITO 4ª MATRÍCULA using expression value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "PRECIO CRÉDITO 4ª MATRÍCULA",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column PRECIO CRÉDITO 4ª MATRÍCULA using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CAMPUS",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "campus-tidy",
+    "columnInsertIndex": 2,
+    "description": "Create column campus-tidy at index 2 based on column CAMPUS using expression grel:value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "campus-tidy",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q2074737",
+        "name": "municipality of Spain"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column campus-tidy to type Q2074737"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "campus-tidy",
+    "similarValue": "TOLEDO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5836",
+      "name": "Toledo",
+      "types": [
+        "Q2074737",
+        "Q515"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Toledo (Q5836) for cells containing \"TOLEDO\" in column campus-tidy"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "RAMA DE ENSEÑANZA",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "branch-tidy",
+    "columnInsertIndex": 6,
+    "description": "Create column branch-tidy at index 6 based on column RAMA DE ENSEÑANZA using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "branch-tidy",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "INGENIERÍA Y ARQUITECTURA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Engineering"
+      }
+    ],
+    "description": "Mass edit cells in column branch-tidy"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "branch-tidy",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CIENCIAS DE LA SALUD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Health Sciences"
+      }
+    ],
+    "description": "Mass edit cells in column branch-tidy"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "branch-tidy",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "ARTES Y HUMANIDADES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Arts and Humanities"
+      }
+    ],
+    "description": "Mass edit cells in column branch-tidy"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "branch-tidy",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CIENCIAS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Science"
+      }
+    ],
+    "description": "Mass edit cells in column branch-tidy"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "branch-tidy",
+          "expression": "value",
+          "columnName": "branch-tidy",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CIENCIAS SOCIALES Y JURÍDICAS",
+                "l": "CIENCIAS SOCIALES Y JURÍDICAS"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "branch-tidy",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column branch-tidy using expression null"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "branch-tidy",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Law and Economics"
+      }
+    ],
+    "description": "Mass edit cells in column branch-tidy"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RAMA DE ENSEÑANZA",
+          "expression": "value",
+          "columnName": "RAMA DE ENSEÑANZA",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CIENCIAS SOCIALES Y JURÍDICAS",
+                "l": "CIENCIAS SOCIALES Y JURÍDICAS"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "branch-tidy",
+    "expression": "\"\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column branch-tidy using expression \"\""
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "RAMA DE ENSEÑANZA",
+          "expression": "value",
+          "columnName": "RAMA DE ENSEÑANZA",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CIENCIAS SOCIALES Y JURÍDICAS",
+                "l": "CIENCIAS SOCIALES Y JURÍDICAS"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "branch-tidy",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Social Sciences"
+      }
+    ],
+    "description": "Mass edit cells in column branch-tidy"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "CENTRO",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "facultad-tidy",
+    "columnInsertIndex": 4,
+    "description": "Create column facultad-tidy at index 4 based on column CENTRO using expression grel:value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "facultad-tidy",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column facultad-tidy to type null"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "facultad-tidy",
+    "similarValue": "ESCUELA TÉCNICA SUPERIOR DE INGENIERÍA INDUSTRIAL DE ALBACETE",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11682940",
+      "name": "Escuela de Ingenieros Industriales de Albacete",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Escuela de Ingenieros Industriales de Albacete (Q11682940) for cells containing \"ESCUELA TÉCNICA SUPERIOR DE INGENIERÍA INDUSTRIAL DE ALBACETE\" in column facultad-tidy"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "facultad-tidy",
+    "similarValue": "ESCUELA TÉCNICA SUPERIOR DE INGENIERÍA AGRONÓMICA Y DE MONTES Y BIOTECNOLOGÍA DE ALBACETE",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5402423",
+      "name": "Escuela Técnica Superior de Ingenieros Agrónomos y de Montes de Albacete",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Escuela Técnica Superior de Ingenieros Agrónomos y de Montes de Albacete (Q5402423) for cells containing \"ESCUELA TÉCNICA SUPERIOR DE INGENIERÍA AGRONÓMICA Y DE MONTES Y BIOTECNOLOGÍA DE ALBACETE\" in column facultad-tidy"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "AÑO ACADÉMICO",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "university-tidy",
+    "columnInsertIndex": 1,
+    "description": "Create column university-tidy at index 1 based on column AÑO ACADÉMICO using expression grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CAMPUS",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CAMPUS using expression null"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CAMPUS",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Universidad de Castilla-La Mancha"
+      }
+    ],
+    "description": "Mass edit cells in column CAMPUS"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CAMPUS",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q875538",
+        "name": "public university"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column CAMPUS to type Q875538"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "facultad-tidy",
+    "description": "Remove column facultad-tidy"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TITULACIÓN",
+    "expression": "value.replace(\"GRADO EN \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TITULACIÓN using expression value.replace(\"GRADO EN \",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TITULACIÓN",
+    "expression": "value.replace(\"DOBLE GRADO \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TITULACIÓN using expression value.replace(\"DOBLE GRADO \",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TITULACIÓN",
+    "expression": "value.replace(\"MAESTRO EN \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TITULACIÓN using expression value.replace(\"MAESTRO EN \",\"\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "RAMA DE ENSEÑANZA",
+    "description": "Remove column RAMA DE ENSEÑANZA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PRECIO CRÉDITO 4ª MATRÍCULA",
+    "description": "Remove column PRECIO CRÉDITO 4ª MATRÍCULA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PRECIO CRÉDITO 3ª MATRÍCULA",
+    "description": "Remove column PRECIO CRÉDITO 3ª MATRÍCULA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PRECIO CRÉDITO 2ª MATRÍCULA",
+    "description": "Remove column PRECIO CRÉDITO 2ª MATRÍCULA"
+  },
+  {
+    "op": "core/row-duplicate-removal",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "criteria": [
+      "AÑO ACADÉMICO",
+      "university-tidy",
+      "CAMPUS",
+      "campus-tidy",
+      "CENTRO",
+      "TITULACIÓN",
+      "branch-tidy",
+      "TIPO_ESTUDIO",
+      "CRÉDITOS NECESARIOS"
+    ],
+    "description": "Remove duplicate rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PRECIO CRÉDITO 1ª MATRÍCULA",
+    "description": "Remove column PRECIO CRÉDITO 1ª MATRÍCULA"
+  },
+  {
+    "op": "core/row-star",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "starred": false,
+    "description": "Unstar rows"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "university-tidy",
+    "expression": "value.replace(\"2024-2025\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column university-tidy using expression value.replace(\"2024-2025\",\"\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "university-tidy",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2024-25"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column university-tidy"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "university-tidy",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column university-tidy using expression null"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "university-tidy",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Universidad de Castilla-La Mancha"
+      }
+    ],
+    "description": "Mass edit cells in column university-tidy"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CAMPUS",
+    "newColumnName": "university-wikidata",
+    "description": "Rename column CAMPUS to university-wikidata"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "AÑO ACADÉMICO",
+    "newColumnName": "Academic Year",
+    "description": "Rename column AÑO ACADÉMICO to Academic Year"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "university-tidy",
+    "newColumnName": "University",
+    "description": "Rename column university-tidy to University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "university-wikidata",
+    "newColumnName": "University Wikidata",
+    "description": "Rename column university-wikidata to University Wikidata"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "campus-tidy",
+    "newColumnName": "Municipality Wikidata",
+    "description": "Rename column campus-tidy to Municipality Wikidata"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Municipality Wikidata",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Municipality",
+    "columnInsertIndex": 4,
+    "description": "Create column Municipality at index 4 based on column Municipality Wikidata using expression grel:value"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CENTRO",
+    "newColumnName": "Centre",
+    "description": "Rename column CENTRO to Centre"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TITULACIÓN",
+    "newColumnName": "Degree",
+    "description": "Rename column TITULACIÓN to Degree"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "branch-tidy",
+    "newColumnName": "Ambit",
+    "description": "Rename column branch-tidy to Ambit"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPO_ESTUDIO",
+    "newColumnName": "Academic Level",
+    "description": "Rename column TIPO_ESTUDIO to Academic Level"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CRÉDITOS NECESARIOS",
+    "newColumnName": "Credits",
+    "description": "Rename column CRÉDITOS NECESARIOS to Credits"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CRÉDITOS OFERTADOS",
+    "newColumnName": "Offered Credits",
+    "description": "Rename column CRÉDITOS OFERTADOS to Offered Credits"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Municipality Wikidata",
+    "description": "Remove column Municipality Wikidata"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Ambit",
+    "expression": "grel:if(\nvalue.toLowercase().contains(\"física\").or(value.toLowercase().contains(\"química\")).or(value.toLowercase().contains(\"biología\")).or(value.toLowercase().contains(\"matemáticas\")).or(value.toLowercase().contains(\"geología\")).or(value.toLowercase().contains(\"ambientales\")).or(value.toLowercase() == \"science\").or(value.toLowercase() == \"sciences\").or(value.toLowercase() == \"c\").or(value.toLowercase().contains(\"chemistry\")).or(value.toLowercase().contains(\"biotecnología\")).or(value.toLowercase().contains(\"physics\")).or(value.toLowercase().contains(\"geológicas\")).or(value.toLowercase().contains(\"de los alimentos\")),\n  \"Ciencias\",\n  if(\n    value.toLowercase().contains(\"ingeniería\")\n  .or(value.toLowercase().contains(\"informática\"))\n.or(value.toLowercase().contains(\"arquitectura\")).or(value.toLowercase() == \"engineering\").or(value.toLowercase() == \"iya\").or(value.toLowercase().contains(\"engineering\")),\n    \"Ingeniería y Arquitectura\",\n    if(\n      value.toLowercase().contains(\"medicina\")\n        .or(value.toLowercase().contains(\"enfermería\"))\n        .or(value.toLowercase().contains(\"nutrición\")).or(value.toLowercase().contains(\"farmacia\"))\n        .or(value.toLowercase().contains(\"terapia\")).or(value.toLowercase().contains(\"psicología\")).or(value.toLowercase() == \"health sciences\").or(value.toLowercase() == \"sd\").or(value.toLowercase().contains(\"nursing\")).or(value.toLowercase().contains(\"veterinaria\")).or(value.toLowercase().contains(\"medicine\")).or(value.toLowercase().contains(\"óptica\")),\n      \"Ciencias de la Salud\",\n      if(\n        value.toLowercase().contains(\"historia\")\n          .or(value.toLowercase().contains(\"filosofía\"))\n          .or(value.toLowercase().contains(\"filología\")).or(value.toLowercase().contains(\"philology\")).or(value.toLowercase().contains(\"literatura\")).or(value.toLowercase().contains(\"estudios clásicos\"))\n          .or(value.toLowercase().contains(\"franceses\")).or(value.toLowercase().contains(\"ingleses\")).or(value.toLowercase().contains(\"arte\")).or(value.toLowercase() == \"arts and humanities\").or(value.toLowercase() == \"ayh\").or(value.toLowercase().contains(\"fine arts\")).or(value.toLowercase().contains(\"philosophy\")).or(value.toLowercase() == \"arts and science\"),\n        \"Artes y Humanidades\",\n        if(\n          value.toLowercase().contains(\"sociología\")\n            .or(value.toLowercase().contains(\"educación\"))\n            .or(value.toLowercase().contains(\"política\"))\n            .or(value.toLowercase().contains(\"criminología\")).or(value.toLowercase().contains(\"antropología\")).or(value.toLowercase().contains(\"derecho\")).or(value.toLowercase().contains(\"relaciones\")).or(value.toLowercase().contains(\"economía\")).or(value.toLowercase().contains(\"administración\")).or(value.toLowercase().contains(\"contabilidad\")).or(value.toLowercase() == \"law and economics\").or(value.toLowercase() == \"social sciences\").or(value.toLowercase() == \"syj\").or(value.toLowercase().contains(\"periodismo\")).or(value.toLowercase().contains(\"trabajo social\")).or(value.toLowercase().contains(\"turismo\")).or(value.toLowercase().contains(\"marketing\")).or(value.toLowercase().contains(\"geografía\")).or(value.toLowercase().contains(\"economics\")).or(value.toLowercase().contains(\"law\")).or(value.toLowercase().contains(\"información y documentación\")),\n          \"Ciencias Sociales y Jurídicas\",\n          \"Otros\"\n        )\n      )\n    )\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "Ambit-clean",
+    "columnInsertIndex": 7,
+    "description": "Create column Ambit-clean at index 7 based on column Ambit using expression grel:if(\nvalue.toLowercase().contains(\"física\").or(value.toLowercase().contains(\"química\")).or(value.toLowercase().contains(\"biología\")).or(value.toLowercase().contains(\"matemáticas\")).or(value.toLowercase().contains(\"geología\")).or(value.toLowercase().contains(\"ambientales\")).or(value.toLowercase() == \"science\").or(value.toLowercase() == \"sciences\").or(value.toLowercase() == \"c\").or(value.toLowercase().contains(\"chemistry\")).or(value.toLowercase().contains(\"biotecnología\")).or(value.toLowercase().contains(\"physics\")).or(value.toLowercase().contains(\"geológicas\")).or(value.toLowercase().contains(\"de los alimentos\")),\n  \"Ciencias\",\n  if(\n    value.toLowercase().contains(\"ingeniería\")\n  .or(value.toLowercase().contains(\"informática\"))\n.or(value.toLowercase().contains(\"arquitectura\")).or(value.toLowercase() == \"engineering\").or(value.toLowercase() == \"iya\").or(value.toLowercase().contains(\"engineering\")),\n    \"Ingeniería y Arquitectura\",\n    if(\n      value.toLowercase().contains(\"medicina\")\n        .or(value.toLowercase().contains(\"enfermería\"))\n        .or(value.toLowercase().contains(\"nutrición\")).or(value.toLowercase().contains(\"farmacia\"))\n        .or(value.toLowercase().contains(\"terapia\")).or(value.toLowercase().contains(\"psicología\")).or(value.toLowercase() == \"health sciences\").or(value.toLowercase() == \"sd\").or(value.toLowercase().contains(\"nursing\")).or(value.toLowercase().contains(\"veterinaria\")).or(value.toLowercase().contains(\"medicine\")).or(value.toLowercase().contains(\"óptica\")),\n      \"Ciencias de la Salud\",\n      if(\n        value.toLowercase().contains(\"historia\")\n          .or(value.toLowercase().contains(\"filosofía\"))\n          .or(value.toLowercase().contains(\"filología\")).or(value.toLowercase().contains(\"philology\")).or(value.toLowercase().contains(\"literatura\")).or(value.toLowercase().contains(\"estudios clásicos\"))\n          .or(value.toLowercase().contains(\"franceses\")).or(value.toLowercase().contains(\"ingleses\")).or(value.toLowercase().contains(\"arte\")).or(value.toLowercase() == \"arts and humanities\").or(value.toLowercase() == \"ayh\").or(value.toLowercase().contains(\"fine arts\")).or(value.toLowercase().contains(\"philosophy\")).or(value.toLowercase() == \"arts and science\"),\n        \"Artes y Humanidades\",\n        if(\n          value.toLowercase().contains(\"sociología\")\n            .or(value.toLowercase().contains(\"educación\"))\n            .or(value.toLowercase().contains(\"política\"))\n            .or(value.toLowercase().contains(\"criminología\")).or(value.toLowercase().contains(\"antropología\")).or(value.toLowercase().contains(\"derecho\")).or(value.toLowercase().contains(\"relaciones\")).or(value.toLowercase().contains(\"economía\")).or(value.toLowercase().contains(\"administración\")).or(value.toLowercase().contains(\"contabilidad\")).or(value.toLowercase() == \"law and economics\").or(value.toLowercase() == \"social sciences\").or(value.toLowercase() == \"syj\").or(value.toLowercase().contains(\"periodismo\")).or(value.toLowercase().contains(\"trabajo social\")).or(value.toLowercase().contains(\"turismo\")).or(value.toLowercase().contains(\"marketing\")).or(value.toLowercase().contains(\"geografía\")).or(value.toLowercase().contains(\"economics\")).or(value.toLowercase().contains(\"law\")).or(value.toLowercase().contains(\"información y documentación\")),\n          \"Ciencias Sociales y Jurídicas\",\n          \"Otros\"\n        )\n      )\n    )\n  )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ambit",
+    "description": "Remove column Ambit"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ambit-clean",
+    "newColumnName": "Ambit",
+    "description": "Rename column Ambit-clean to Ambit"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Ambit",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "Ambit-id",
+    "columnInsertIndex": 7,
+    "description": "Create column Ambit-id at index 7 based on column Ambit using expression grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "University Wikidata",
+    "description": "Remove column University Wikidata"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "GRADO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "d6d85d89b4612501521435bd3f620a9a"
+      }
+    ],
+    "description": "Mass edit cells in column Academic Level"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MAESTRO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "eb0a191797624dd3a48fa681d3061212"
+      }
+    ],
+    "description": "Mass edit cells in column Academic Level"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Academic Level",
+    "newColumnName": "AcademicLevelId",
+    "description": "Rename column Academic Level to AcademicLevelId"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Academic Year",
+          "expression": "value",
+          "columnName": "Academic Year",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "2024-25",
+                "l": "2024-25"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "Id",
+    "columnInsertIndex": 2,
+    "description": "Create column Id at index 2 based on column University using expression grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Academic Year",
+          "expression": "value",
+          "columnName": "Academic Year",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "2024-25",
+                "l": "2024-25"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "universityId",
+    "columnInsertIndex": 2,
+    "description": "Create column universityId at index 2 based on column University using expression grel:value"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Academic Year",
+          "expression": "value",
+          "columnName": "Academic Year",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "2024-25",
+                "l": "2024-25"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "universityId",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Universidad de Castilla-La Mancha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "a62a164f781be26dd225dfda47b78c12"
+      }
+    ],
+    "description": "Mass edit cells in column universityId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Id",
+    "newColumnName": "DegreeID",
+    "description": "Rename column Id to DegreeID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "universityId",
+    "newColumnName": "UniversityID",
+    "description": "Rename column universityId to UniversityID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ambit",
+    "description": "Remove column Ambit"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Centre",
+    "newColumnName": "Faculty",
+    "description": "Rename column Centre to Faculty"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Faculty",
+    "expression": "grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Faculty\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "FacultyID",
+    "columnInsertIndex": 6,
+    "description": "Create column FacultyID at index 6 based on column Faculty using expression grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Faculty\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Academic Year",
+          "expression": "value",
+          "columnName": "Academic Year",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "2023-24",
+                "l": "2023-24"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Academic Year",
+          "expression": "value",
+          "columnName": "Academic Year",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "2022-23",
+                "l": "2022-23"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-duplicate-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Academic Year",
+          "expression": "value",
+          "columnName": "Academic Year",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "2024-25",
+                "l": "2024-25"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "criteria": [
+      "Academic Year",
+      "University",
+      "UniversityID",
+      "DegreeID",
+      "Municipality",
+      "Faculty",
+      "FacultyID",
+      "Degree",
+      "Ambit-id",
+      "AcademicLevelId",
+      "Credits",
+      "Offered Credits"
+    ],
+    "description": "Remove duplicate rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "University",
+    "description": "Remove column University"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Municipality",
+    "description": "Remove column Municipality"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Academic Year",
+    "description": "Remove column Academic Year"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DegreeID",
+    "description": "Remove column DegreeID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Degree",
+    "description": "Remove column Degree"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ambit-id",
+    "description": "Remove column Ambit-id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "AcademicLevelId",
+    "description": "Remove column AcademicLevelId"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Credits",
+    "description": "Remove column Credits"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Offered Credits",
+    "description": "Remove column Offered Credits"
+  },
+  {
+    "op": "core/row-duplicate-removal",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "criteria": [
+      "UniversityID",
+      "Faculty",
+      "FacultyID"
+    ],
+    "description": "Remove duplicate rows"
+  },
+  {
+    "op": "core/row-duplicate-removal",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "criteria": [
+      "UniversityID",
+      "Faculty",
+      "FacultyID"
+    ],
+    "description": "Remove duplicate rows"
+  }
+]

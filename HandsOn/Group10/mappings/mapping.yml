@@ -1,0 +1,138 @@
+prefixes:
+  rr: "http://www.w3.org/ns/r2rml#"
+  rml: "http://semweb.mmlab.be/ns/rml#"
+  ql: "http://semweb.mmlab.be/ns/ql#"
+  ns: "http://www.barnabikes.org/ODKG/handsOn/group10/"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+
+mappings:
+  # =================================================================
+  # === MAPEOS DESDE MusicaCopas-updated.csv (BARES) ===
+  # =================================================================
+
+  DistrictTriplesMap_Bars:
+    sources:
+      - [MusicaCopas-updated.csv~csv]
+    s: http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/$(districtId)
+    po:
+      - [a, ns:District]
+      - [ns:districtId, $(districtId)~xsd:integer]
+      - [ns:districtName, $(districtName)~xsd:string]
+
+  NeighborhoodTriplesMap_Bars:
+    sources:
+      - [MusicaCopas-updated.csv~csv]
+    s: http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/$(neighborhoodId)
+    po:
+      - [a, ns:Neighborhood]
+      - [ns:neighborhoodId, $(neighborhoodId)~xsd:integer]
+      - [ns:neighborhoodName, $(neighborhoodName)~xsd:string]
+      - p: ns:hasDistrict
+        o:
+          mapping: DistrictTriplesMap_Bars
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(districtId)]
+              - [str2, $(districtId)]
+
+  AddressTriplesMap_Bars:
+    sources:
+      - [MusicaCopas-updated.csv~csv]
+    s: http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/$(latitude)_$(longitude)
+    po:
+      - [a, ns:StreetAddress]
+      - [ns:addressName, $(addressName)~xsd:string]
+      # --- CORREGIDO ---
+      - [ns:addressNumber, $(addressNumber)~xsd:string]
+      - [ns:addressType, $(addressType)~xsd:string]
+      # --- CORREGIDO ---
+      - [ns:postCode, $(postCode)~xsd:string]
+      - [ns:latitude, $(latitude)~xsd:float]
+      - [ns:longitude, $(longitude)~xsd:float]
+      - p: ns:hasNeighborhood
+        o:
+          mapping: NeighborhoodTriplesMap_Bars
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(neighborhoodId)]
+              - [str2, $(neighborhoodId)]
+
+  BarTriplesMap:
+    sources:
+      - [MusicaCopas-updated.csv~csv]
+    s: http://www.barnabikes.org/ODKG/handsOn/group10/resource/Bar/$(barId)
+    po:
+      - [a, ns:Bar]
+      - [ns:barId, $(barId)~xsd:string]
+      - [ns:barName, $(barName)~xsd:string]
+      - [ns:barType, $(barType)~xsd:string]
+      # --- CORREGIDO (Enlace simple y directo) ---
+      - [ns:hasAddress, http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/$(latitude)_$(longitude)]
+
+  # =================================================================
+  # === MAPEOS DESDE BikeStations-updated.csv (ESTACIONES) ===
+  # =================================================================
+
+  DistrictTriplesMap_Stations:
+    sources:
+      - [BikeStations-updated.csv~csv]
+    # --- CORREGIDO (usando districtId) ---
+    s: http://www.barnabikes.org/ODKG/handsOn/group10/resource/District/$(districtId)
+    po:
+      - [a, ns:District]
+      - [ns:districtId, $(districtId)~xsd:integer]
+      - [ns:districtName, $(districtName)~xsd:string]
+
+  NeighborhoodTriplesMap_Stations:
+    sources:
+      - [BikeStations-updated.csv~csv]
+    # --- CORREGIDO (usando neighborhoodId) ---
+    s: http://www.barnabikes.org/ODKG/handsOn/group10/resource/Neighborhood/$(neighborhoodId)
+    po:
+      - [a, ns:Neighborhood]
+      - [ns:neighborhoodId, $(neighborhoodId)~xsd:integer]
+      - [ns:neighborhoodName, $(neighborhoodName)~xsd:string]
+      - p: ns:hasDistrict
+        o:
+          mapping: DistrictTriplesMap_Stations
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(districtId)]
+              - [str2, $(districtId)]
+
+  AddressTriplesMap_Stations:
+    sources:
+      - [BikeStations-updated.csv~csv]
+    s: http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/$(latitude)_$(longitude)
+    po:
+      - [a, ns:StreetAddress]
+      - [ns:addressName, $(addressName)~xsd:string]
+      # --- CORREGIDO ---
+      - [ns:addressNumber, $(addressNumber)~xsd:string]
+      - [ns:addressType, $(addressType)~xsd:string]
+      # --- CORREGIDO ---
+      - [ns:postCode, $(postCode)~xsd:string]
+      - [ns:latitude, $(latitude)~xsd:float]
+      - [ns:longitude, $(longitude)~xsd:float]
+      - p: ns:hasNeighborhood
+        o:
+          mapping: NeighborhoodTriplesMap_Stations
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(neighborhoodId)]
+              - [str2, $(neighborhoodId)]
+
+  StationTriplesMap:
+    sources:
+      - [BikeStations-updated.csv~csv]
+    s: http://www.barnabikes.org/ODKG/handsOn/group10/resource/BikingStation/$(stationId)
+    po:
+      - [a, ns:BikingStation]
+      - [ns:stationId, $(stationId)~xsd:string]
+      - [ns:capacity, $(capacity)~xsd:integer]
+      # --- CORREGIDO (Enlace simple y directo) ---
+      - [ns:hasAddress, http://www.barnabikes.org/ODKG/handsOn/group10/resource/StreetAddress/$(latitude)_$(longitude)]
