@@ -1,0 +1,54 @@
+#The SPARQL query seeks to obtain information about bus routes (BusRoutes) that pass through a specific stop and operate on Sundays, listing the destination, departure time, and link to Wikidata (if #available) for that stop.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ont: <http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#>
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?ruta ?destino ?horaSalida ?trip ?stop ?sameAs
+WHERE {
+  
+  ?stop ont:stopId "par_8_09573" ; 
+        rdf:type ont:Stop .
+  
+  OPTIONAL { ?stop owl:sameAs ?sameAs . }
+  
+  ?stopTime ont:refersToStop ?stop ;
+            ont:departureTime ?horaSalida .
+            
+  ?stopTime ont:belongsToTrip ?trip .
+  ?trip ont:tripHeadsign ?destino .
+  
+  ?trip ont:hasCalendar ?calendar .
+  ?calendar ont:operatesOnSunday 1 .
+  
+  ?trip ont:belongsToRoute ?routeNode .
+  ?routeNode ont:routeShortName ?ruta .
+}
+ORDER BY ?horaSalida
+LIMIT 10
+
+#This query finds and identifies all unique bus stops that belong to Route 341
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ont: <http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#>
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+
+SELECT DISTINCT ?stopName ?streetName ?wikidataLink
+WHERE {
+  
+  ?route rdf:type ont:BusRoute ;
+         ont:routeShortName "341" .
+  
+  ?route ont:hasTrip ?trip .
+  
+  ?trip ont:hasStopTime ?stopTime .
+  
+  ?stopTime ont:refersToStop ?stop .
+  
+  ?stop schema:name ?stopName ;        
+        ont:stopDescName ?streetName . 
+        
+  ?stop owl:sameAs ?wikidataLink . 
+}

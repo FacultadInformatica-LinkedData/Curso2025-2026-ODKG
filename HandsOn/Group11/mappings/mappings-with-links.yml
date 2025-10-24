@@ -1,0 +1,216 @@
+prefixes:
+  rr: "http://www.w3.org/ns/r2rml#"
+  rml: "http://semweb.mmlab.be/ns/rml#"
+  rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  ql: "http://semweb.mmlab.be/ns/ql#"
+  map: "http://mapping.example.com/"
+  ma: "http://www.w3.org/ns/ma-ont#"
+  owl: "http://www.w3.org/2002/07/owl#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  sd: "http://www.w3.org/ns/sparql-service-description#"
+  dcterms: "http://purl.org/dc/terms/"
+  schema: "http://schema.org/"
+  time: "http://www.w3.org/2006/time#"
+  base: "http://crtm-urban-buses.org/opendata/handsOn/group11/"
+  ont: "http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#"
+  geo: "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  mod: "http://w3id.org/mod#"
+  vann: "http://purl.org/vocab/vann/"
+
+sources:
+  agency_source:
+    access: "csv/agency-updated.csv"
+    referenceFormulation: "csv"
+  routes_source:
+    access: "csv/routes-updated.csv"
+    referenceFormulation: "csv"
+  trips_source:
+    access: "csv/trips-updated.csv"
+    referenceFormulation: "csv"
+  stops_source:
+    access: "csv/stops-updated-with-links.csv"
+    referenceFormulation: "csv"
+  stop_times_source:
+    access: "csv/stop-times-updated.csv"
+    referenceFormulation: "csv"
+  calendar_source:
+    access: "csv/calendar-updated.csv"
+    referenceFormulation: "csv"
+
+mappings:
+  agency:
+    source: "agency_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/{agency_id}"
+      class: "ont:Agency"
+    predicateobjects:
+      - predicate: "ont:agencyId"
+        object: { reference: "agency_id", datatype: "xsd:string" }
+      - predicate: "schema:name"
+        object: { reference: "agency_name", datatype: "xsd:string" }
+      - predicate: "schema:url"
+        object: { reference: "agency_url", datatype: "xsd:anyURI" }
+      - predicate: "ont:timezone"
+        object: { reference: "agency_timezone", datatype: "xsd:string" }
+      - predicate: "schema:inLanguage"
+        object: { reference: "agency_lang", datatype: "xsd:string" }
+
+  agency_operates_route:
+    source: "routes_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/{agency_id}"
+    predicateobjects:
+      - predicate: "ont:operatesRoute"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}", type: "iri" }
+
+  bus_route_has_trip:
+    source: "trips_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}"
+    predicateobjects:
+      - predicate: "ont:hasTrip"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}", type: "iri" }
+
+  busroute:
+    source: "routes_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}"
+      class: "ont:BusRoute"
+    predicateobjects:
+      - predicate: "ont:routeId"
+        object: { reference: "route_id", datatype: "xsd:string" }
+      - predicate: "ont:routeShortName"
+        object: { reference: "route_short_name", datatype: "xsd:string" }
+      - predicate: "ont:routeLongName"
+        object: { reference: "route_long_name", datatype: "xsd:string" }
+      - predicate: "schema:url"
+        object: { reference: "route_url", datatype: "xsd:anyURI" }
+      - predicate: "ont:operatedBy"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/{agency_id}", type: "iri" }
+
+  calendar:
+    source: "calendar_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/{service_id}"
+      class: "ont:CalendarService"
+    predicateobjects:
+      - predicate: "ont:serviceId"
+        object: { reference: "service_id" }
+      - predicate: "ont:operatesOnMonday"
+        object: { reference: "monday", datatype: "xsd:integer" }
+      - predicate: "ont:operatesOnTuesday"
+        object: { reference: "tuesday", datatype: "xsd:integer" }
+      - predicate: "ont:operatesOnWednesday"
+        object: { reference: "wednesday", datatype: "xsd:integer" }
+      - predicate: "ont:operatesOnThursday"
+        object: { reference: "thursday", datatype: "xsd:integer" }
+      - predicate: "ont:operatesOnFriday"
+        object: { reference: "friday", datatype: "xsd:integer" }
+      - predicate: "ont:operatesOnSaturday"
+        object: { reference: "saturday", datatype: "xsd:integer" }
+      - predicate: "ont:operatesOnSunday"
+        object: { reference: "sunday", datatype: "xsd:integer" }
+      - predicate: "ont:startDate"
+        object: { reference: "start_date", datatype: "xsd:string" }
+      - predicate: "ont:endDate"
+        object: { reference: "end_date", datatype: "xsd:string" }
+
+  calendar_is_calendar_of:
+    source: "trips_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/{service_id}"
+    predicateobjects:
+      - predicate: "ont:isCalendarOf"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}", type: "iri" }
+
+  stop:
+    source: "stops_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{stop_id}"
+      class: "ont:Stop"
+    predicateobjects:
+      - predicate: "ont:stopId"
+        object: { reference: "stop_id", datatype: "xsd:string" }
+      - predicate: "ont:stopCode"
+        object: { reference: "stop_code", datatype: "xsd:string" }
+      - predicate: "schema:name"
+        object: { reference: "stop_name", datatype: "xsd:string" }
+      - predicate: "schema:description"
+        object: { reference: "stop_desc", datatype: "xsd:string" }
+      - predicate: "ont:stopDescNumber"
+        object: { reference: "stop_desc_number", datatype: "xsd:string" }
+      - predicate: "ont:stopDescName"
+        object: { reference: "stop_desc_name", datatype: "xsd:string" }
+      - predicate: "geo:lat"
+        object: { reference: "stop_lat", datatype: "xsd:decimal" }
+      - predicate: "geo:long"
+        object: { reference: "stop_lon", datatype: "xsd:decimal" }
+      - predicate: "ont:zoneId"
+        object: { reference: "zone_id", datatype: "xsd:string" }
+      - predicate: "schema:url"
+        object: { reference: "stop_url", datatype: "xsd:anyURI" }
+      - predicate: "ont:locationType"
+        object: { reference: "location_type", datatype: "xsd:integer" }
+      - predicate: "ont:stopTimeZone"
+        object: { reference: "stop_timezone", datatype: "xsd:string" }
+      - predicate: "ont:wheelChairBoarding"
+        object: { reference: "wheelchair_boarding", datatype: "xsd:integer" }
+      - predicate: "ont:parentStation"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{parent_station}", type: "iri" }
+      - predicate: "ont:hasChildStop"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{stop_id}", type: "iri" }
+      - predicate: "owl:sameAs"
+        object: { reference: "same_as_wikidata_stop_desc_name", type: "iri" }
+
+  stoptime:
+    source: "stop_times_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stoptime/{trip_id}_{stop_sequence}"
+      class: "ont:StopTime"
+    predicateobjects:
+      - predicate: "ont:arrivalTime"
+        object: { reference: "arrival_time", datatype: "xsd:string" }
+      - predicate: "ont:departureTime"
+        object: { reference: "departure_time", datatype: "xsd:string" }
+      - predicate: "ont:stopSequence"
+        object: { reference: "stop_sequence", datatype: "xsd:integer" }
+      - predicate: "ont:belongsToTrip"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}", type: "iri" }
+      - predicate: "ont:refersToStop"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{stop_id}", type: "iri" }
+
+  trip:
+    source: "trips_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}"
+      class: "ont:Trip"
+    predicateobjects:
+      - predicate: "ont:tripId"
+        object: { reference: "trip_id", datatype: "xsd:string" }
+      - predicate: "ont:tripHeadsignComplete"
+        object: { reference: "trip_headsign_complete", datatype: "xsd:string" }
+      - predicate: "ont:tripHeadsign"
+        object: { reference: "trip_headsign", datatype: "xsd:string" }
+      - predicate: "ont:tripShortName"
+        object: { reference: "trip_short_name", datatype: "xsd:string" }
+      - predicate: "ont:busNumber"
+        object: { reference: "bus_number", datatype: "xsd:string" }
+      - predicate: "ont:directionId"
+        object: { reference: "direction_id", datatype: "xsd:string" }
+      - predicate: "ont:blockId"
+        object: { reference: "block_id", datatype: "xsd:string" }
+      - predicate: "ont:wheelChairAccessible"
+        object: { reference: "wheelchair_accessible", datatype: "xsd:integer" }
+      - predicate: "ont:belongsToRoute"
+        object: { template: "http://crtm-urban-babuses.org/opendata/handsOn/group11/resource/route/{route_id}", type: "iri" }
+      - predicate: "ont:hasCalendar"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/{service_id}", type: "iri" }
+
+  trip_has_stop_time:
+    source: "stop_times_source"
+    subject:
+      template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}"
+    predicateobjects:
+      - predicate: "ont:hasStopTime"
+        object: { template: "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stoptime/{trip_id}_{stop_sequence}", type: "iri" }
