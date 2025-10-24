@@ -1,0 +1,2737 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "centro_nombre",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "N S DE LA ASUNCION",
+          "N. S. DE LA ASUNCION"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N S DE LA ASUNCION"
+      },
+      {
+        "from": [
+          "EL TREBOL (PROGRAMA DE CASA DE NIÑOS)",
+          "EL TRÉBOL (PROGRAMA CASA DE NIÑOS)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL TREBOL (PROGRAMA DE CASA DE NIÑOS)"
+      },
+      {
+        "from": [
+          "SALVADOR DALI",
+          "SALVADOR DALÍ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SALVADOR DALI"
+      },
+      {
+        "from": [
+          "N. S. DEL PILAR",
+          "N S DEL PILAR"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N. S. DEL PILAR"
+      },
+      {
+        "from": [
+          "GLORIA FUERTES",
+          "GLORIA  FUERTES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GLORIA FUERTES"
+      },
+      {
+        "from": [
+          "ALDEAS INFANTILES S.O.S. DE ESPAÑA",
+          "ALDEAS INFANTILES SOS DE ESPAÑA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ALDEAS INFANTILES S.O.S. DE ESPAÑA"
+      },
+      {
+        "from": [
+          "EL PRINCIPITO",
+          "PRINCIPITO, EL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL PRINCIPITO"
+      },
+      {
+        "from": [
+          "MIGUEL HERNANDEZ",
+          "MIGUEL HERNÁNDEZ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MIGUEL HERNANDEZ"
+      },
+      {
+        "from": [
+          "ACADEF FORMACIÓN PROFESIONAL DEPORTIVA",
+          "ACADEF FORMACION PROFESIONAL DEPORTIVA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ACADEF FORMACIÓN PROFESIONAL DEPORTIVA"
+      },
+      {
+        "from": [
+          "B.R.A.-INSTITUCION",
+          "BRA-INSTITUCION"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "B.R.A.-INSTITUCION"
+      },
+      {
+        "from": [
+          "JOAQUIN RODRIGO",
+          "JOAQUÍN RODRIGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JOAQUIN RODRIGO"
+      },
+      {
+        "from": [
+          "JUAN RAMON JIMENEZ",
+          "JUAN RAMON JIMÉNEZ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JUAN RAMON JIMENEZ"
+      },
+      {
+        "from": [
+          "CRIO'S",
+          "CRIOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CRIO'S"
+      },
+      {
+        "from": [
+          "LA CIGÜEÑA",
+          "LA CIGÚEÑA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LA CIGÜEÑA"
+      },
+      {
+        "from": [
+          "LAS CIGÜEÑAS",
+          "LAS CIGUEÑAS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LAS CIGÜEÑAS"
+      },
+      {
+        "from": [
+          "JOYFE",
+          "JOYFE "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JOYFE"
+      },
+      {
+        "from": [
+          "MARIS STELLA",
+          "STELLA MARIS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MARIS STELLA"
+      },
+      {
+        "from": [
+          "EL PILAR",
+          "PILAR, EL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL PILAR"
+      },
+      {
+        "from": [
+          "ARLEQUIN",
+          "ARLEQUÍN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ARLEQUIN"
+      },
+      {
+        "from": [
+          "LA LOCOMOTORA",
+          "LOCOMOTORA, LA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LA LOCOMOTORA"
+      },
+      {
+        "from": [
+          "ESCUELA MUNICIPAL DE EDUCACION DE ADULTOS",
+          "ESCUELA MUNICIPAL DE EDUCACIÓN  DE ADULTOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESCUELA MUNICIPAL DE EDUCACION DE ADULTOS"
+      },
+      {
+        "from": [
+          "ESCUELA, LA",
+          "LA ESCUELA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESCUELA, LA"
+      },
+      {
+        "from": [
+          "VIRGEN DE AFRICA",
+          "VIRGEN DE ÁFRICA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VIRGEN DE AFRICA"
+      },
+      {
+        "from": [
+          "EL BOSQUE",
+          "BOSQUE EL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL BOSQUE"
+      },
+      {
+        "from": [
+          "JOAQUIN TURINA",
+          "JOAQUÍN TURINA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JOAQUIN TURINA"
+      },
+      {
+        "from": [
+          "EL PALOMAR",
+          "PALOMAR, EL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL PALOMAR"
+      },
+      {
+        "from": [
+          "CUCU-TRAS",
+          "CUCUTRAS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CUCU-TRAS"
+      },
+      {
+        "from": [
+          "SANTIAGO APOSTOL",
+          "APOSTOL SANTIAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SANTIAGO APOSTOL"
+      },
+      {
+        "from": [
+          "RAMON Y CAJAL",
+          "RAMÓN Y CAJAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAMON Y CAJAL"
+      },
+      {
+        "from": [
+          "LOS ROSALES",
+          "ROSALES, LOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LOS ROSALES"
+      },
+      {
+        "from": [
+          "JOSE LUIS LOPEZ ARANGUREN",
+          "JOSÉ LUIS LÓPEZ ARANGUREN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JOSE LUIS LOPEZ ARANGUREN"
+      },
+      {
+        "from": [
+          "VILLAREJO DE SALVANES",
+          "VILLAREJO DE SALVANÉS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VILLAREJO DE SALVANES"
+      },
+      {
+        "from": [
+          "EL JARDIN DE LOS SUEÑOS",
+          "EL JARDÍN DE LOS SUEÑOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL JARDIN DE LOS SUEÑOS"
+      },
+      {
+        "from": [
+          "EL NIDO",
+          "NIDO, EL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL NIDO"
+      },
+      {
+        "from": [
+          "JESUS MARIA",
+          "JESÚS MARIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JESUS MARIA"
+      },
+      {
+        "from": [
+          "NIÑO JESUS",
+          "JESUS NIÑO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NIÑO JESUS"
+      },
+      {
+        "from": [
+          "BASE I",
+          "BASE. I"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BASE I"
+      },
+      {
+        "from": [
+          "INSTEDE F.P.",
+          "INSTEDE FP"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INSTEDE F.P."
+      },
+      {
+        "from": [
+          "EL ESPINILLO",
+          "EL ESPINILLO "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL ESPINILLO"
+      },
+      {
+        "from": [
+          "LA ANUNCIACION",
+          "ANUNCIACION, LA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LA ANUNCIACION"
+      },
+      {
+        "from": [
+          "JOSE HIERRO",
+          "JOSÉ HIERRO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JOSE HIERRO"
+      },
+      {
+        "from": [
+          "SAN FRANCISCO Y SANTA TERESA",
+          "SANTA TERESA Y SAN FRANCISCO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SAN FRANCISCO Y SANTA TERESA"
+      },
+      {
+        "from": [
+          "N S DEL ROSARIO",
+          "N. S. DEL ROSARIO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N S DEL ROSARIO"
+      },
+      {
+        "from": [
+          "LOS SAUCES",
+          "SAUCES, LOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LOS SAUCES"
+      },
+      {
+        "from": [
+          "ALBA",
+          "ALBA "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ALBA"
+      },
+      {
+        "from": [
+          "ISIDRA DE GUZMAN",
+          "ISIDRA DE GUZMÁN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ISIDRA DE GUZMAN"
+      },
+      {
+        "from": [
+          "N S DE SONSOLES",
+          "N. S. DE SONSOLES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "N S DE SONSOLES"
+      },
+      {
+        "from": [
+          "LA PALOMA",
+          "PALOMA, LA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LA PALOMA"
+      },
+      {
+        "from": [
+          "SAN RAMON",
+          "SAN RAMÓN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SAN RAMON"
+      },
+      {
+        "from": [
+          "EL PARVULITO",
+          "PARVULITO, EL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL PARVULITO"
+      },
+      {
+        "from": [
+          "LA MILAGROSA",
+          "MILAGROSA, LA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LA MILAGROSA"
+      },
+      {
+        "from": [
+          "CIUDAD DE LOS ANGELES",
+          "CIUDAD DE LOS ÁNGELES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CIUDAD DE LOS ANGELES"
+      },
+      {
+        "from": [
+          "MADRID MONTESSORI SCHOOL (EE.UU)",
+          "MADRID MONTESSORI SCHOOL (EE.UU.)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MADRID MONTESSORI SCHOOL (EE.UU)"
+      },
+      {
+        "from": [
+          "LAS NACIONES",
+          "NACIONES, LAS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LAS NACIONES"
+      }
+    ],
+    "description": "Mass edit cells in column centro_nombre"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "centro_titular",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "INSTEDE FORMACION, S.L.",
+          "INSTEDE FORMACIÓN, S.L.",
+          "INSTEDE FORMACIÓN S.L.",
+          "Instede Formación, S.L"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INSTEDE FORMACION, S.L."
+      },
+      {
+        "from": [
+          "HIJAS DE LA CARIDAD DE SAN VICENTE DE PAUL",
+          "HIJAS DE LA CARIDAD DE SAN VICENTE PAUL",
+          "HIJAS DE LA CARIDAD SAN VICENTE DE PAUL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HIJAS DE LA CARIDAD DE SAN VICENTE DE PAUL"
+      },
+      {
+        "from": [
+          "PROMOCION DE JARDINES DE INFANCIA, S.A. (PROJARDIN, S.A.)",
+          "PROMOCION DE JARDINES DE INFANCIA, S.A.  (PROJARDIN, S.A.)",
+          "PROMOCION DE JARDINES DE INFANCIA, S.A. PROJARDIN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PROMOCION DE JARDINES DE INFANCIA, S.A. (PROJARDIN, S.A.)"
+      },
+      {
+        "from": [
+          "KING'S COLLEGE S.A.",
+          "KING'S COLLEGE, S.A.",
+          "KINGS COLLEGE SA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KING'S COLLEGE S.A."
+      },
+      {
+        "from": [
+          "CENTRO SUPERIOR DE FORMACION EUROPA SUR, S.A.",
+          "CENTRO SUPERIOR DE FORMACIÓN EUROPA SUR S.A",
+          "Centro Superior de Formación Europa Sur S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CENTRO SUPERIOR DE FORMACION EUROPA SUR, S.A."
+      },
+      {
+        "from": [
+          "EMPRENDE Y GESTIONA 2015, S.L",
+          "EMPRENDE Y GESTIONA 2015, S.L.",
+          "Emprende y Gestiona 2015, S.L"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EMPRENDE Y GESTIONA 2015, S.L"
+      },
+      {
+        "from": [
+          "FOMENTO DE CENTROS DE ENSEÑANZA, S.A.",
+          "FOMENTO CENTROS DE ENSEÑANZA, S.A.",
+          "FOMENTO DE CENTROS DE ENSEÑANZA S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FOMENTO DE CENTROS DE ENSEÑANZA, S.A."
+      },
+      {
+        "from": [
+          "METRODORA FORMACIÓN PROFESIONAL S.A",
+          "METRODORA FORMACIÓN PROFESIONAL, S.A",
+          "METRODORA FORMACIÓN PROFESIONAL, S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "METRODORA FORMACIÓN PROFESIONAL S.A"
+      },
+      {
+        "from": [
+          "NEMOMARLIN FRANCHISE, S.L.",
+          "NEMOMARLIN FRANCHISE S.L",
+          "NEMOMARLIN FRANCHISE, S.L"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NEMOMARLIN FRANCHISE, S.L."
+      },
+      {
+        "from": [
+          "ESCUELAS CHIQUITIN  S.L. UNIPERSONAL",
+          "ESCUELAS CHIQUITIN, S.L. UNIPERSONAL",
+          "ESCUELAS CHIQUITÍN, S.L UNIPERSONAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESCUELAS CHIQUITIN  S.L. UNIPERSONAL"
+      },
+      {
+        "from": [
+          "PATAS LARGAS , S.L.",
+          "PATAS LARGAS, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PATAS LARGAS , S.L."
+      },
+      {
+        "from": [
+          "ESCUELA DE MUSICA CREATIVA S.L.",
+          "ESCUELA DE MUSICA CREATIVA, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESCUELA DE MUSICA CREATIVA S.L."
+      },
+      {
+        "from": [
+          "XIOTRAN INVESTMENT CORPORATE, S.L",
+          "XIOTRAN INVESTMENT CORPORATE, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "XIOTRAN INVESTMENT CORPORATE, S.L"
+      },
+      {
+        "from": [
+          "CENP NUEVAS PROFESIONES, S.R.L.",
+          "CENP NUEVAS PROFESIONES, SRL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CENP NUEVAS PROFESIONES, S.R.L."
+      },
+      {
+        "from": [
+          "FUNDACION PIA AUTONOMA COLEGIO DIOCESANO CRISTO DE LA GUIA",
+          "FUNDACIÓN PÍA AUTÓNOMA COLEGIO DIOCESANO CRISTO DE LA GUÍA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION PIA AUTONOMA COLEGIO DIOCESANO CRISTO DE LA GUIA"
+      },
+      {
+        "from": [
+          "JACAR EDUCA S.L..",
+          "JACAR EDUCA, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JACAR EDUCA S.L.."
+      },
+      {
+        "from": [
+          "FUNDACION CVE EDUCAR PARA EL FUTURO",
+          "FUNDACIÓN CVE EDUCAR PARA EL FUTURO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION CVE EDUCAR PARA EL FUTURO"
+      },
+      {
+        "from": [
+          "ASOCIACION DE FORMACION DE ENTRENADORES NACIONALES (AFEN)",
+          "ASOCIACIÓN DE FORMACIÓN DE ENTRENADORES NACIONALES AFEN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ASOCIACION DE FORMACION DE ENTRENADORES NACIONALES (AFEN)"
+      },
+      {
+        "from": [
+          "FUNDACION MATER AMABILIS",
+          "FUNDACIÓN MATER AMABILIS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION MATER AMABILIS"
+      },
+      {
+        "from": [
+          "SONIA CABALLERO AGREDANO Y ENCARNACION CABALLERO AGREDANO",
+          "ENCARNACION CABALLERO AGREDANO Y SONIA CABALLERO AGREDANO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SONIA CABALLERO AGREDANO Y ENCARNACION CABALLERO AGREDANO"
+      },
+      {
+        "from": [
+          "FUNDACION FEDERICO FLIEDNER",
+          "FUNDACIÓN FEDERICO FLIEDNER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION FEDERICO FLIEDNER"
+      },
+      {
+        "from": [
+          "INSTITUTO REALOJAMIENTO E INTEGRACIÓN SOCIAL",
+          "INSTITUTO REALOJAMIENTO E INTEGRACION SOCIAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INSTITUTO REALOJAMIENTO E INTEGRACIÓN SOCIAL"
+      },
+      {
+        "from": [
+          "COLEGIO GUZMAN EL BUENO, S.L.",
+          "COLEGIO GUZMÁN EL BUENO S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLEGIO GUZMAN EL BUENO, S.L."
+      },
+      {
+        "from": [
+          "FORMATIK CENTER, S.A.",
+          "FORMATIK CENTER S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FORMATIK CENTER, S.A."
+      },
+      {
+        "from": [
+          "COLEGIO CAMINO REAL S. L.",
+          "COLEGIO CAMINO REAL, S. L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLEGIO CAMINO REAL S. L."
+      },
+      {
+        "from": [
+          "FUNDACION EDUCATIVA SAN JOSE DE CLUNY",
+          "FUNDACIÓN EDUCATIVA SAN JOSE DE CLUNY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION EDUCATIVA SAN JOSE DE CLUNY"
+      },
+      {
+        "from": [
+          "FUNDACION LABORAL DE LA CONSTRUCCION",
+          "FUNDACIÓN LABORAL DE LA CONSTRUCCIÓN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION LABORAL DE LA CONSTRUCCION"
+      },
+      {
+        "from": [
+          "RELIGIOSAS DE MARIA INMACULADA",
+          "RELIGIOSAS DE MARÍA INMACULADA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RELIGIOSAS DE MARIA INMACULADA"
+      },
+      {
+        "from": [
+          "M.EC.",
+          "MEC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "M.EC."
+      },
+      {
+        "from": [
+          "EL GLOBO CELESTE S.L.",
+          "EL GLOBO CELESTE, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL GLOBO CELESTE S.L."
+      },
+      {
+        "from": [
+          " OCIO MORAL, S.L. UNIPERSONAL",
+          "OCIO MORAL, S.L. UNIPERSONAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": " OCIO MORAL, S.L. UNIPERSONAL"
+      },
+      {
+        "from": [
+          "AITABELA S.L",
+          "AITABELA, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AITABELA S.L"
+      },
+      {
+        "from": [
+          "HNAS. SALESIANAS DEL SAGRADO CORAZON DE JESUS",
+          "HNAS. SALESIANAS DEL SAGRADO. CORAZON DE JESUS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HNAS. SALESIANAS DEL SAGRADO CORAZON DE JESUS"
+      },
+      {
+        "from": [
+          "RELIGIOSAS TEATINAS DE LA INMACULADA CONCEPCION",
+          "RELIGIOSAS TEATINAS DE LA INMACULADA CONCEPCIÓN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RELIGIOSAS TEATINAS DE LA INMACULADA CONCEPCION"
+      },
+      {
+        "from": [
+          "CENTRO DE ESTUDIOS AVANZADOS  ALTA DIRECCION, S.L.",
+          "CENTRO DE ESTUDIOS AVANZADOS ALTA DIRECCION, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CENTRO DE ESTUDIOS AVANZADOS  ALTA DIRECCION, S.L."
+      },
+      {
+        "from": [
+          "SEK SAN ILDEFONSO, S.L.",
+          "SEK. SAN ILDEFONSO, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SEK SAN ILDEFONSO, S.L."
+      },
+      {
+        "from": [
+          "LABORDOC, S.L. UNIPERSONAL",
+          "LABORDOC, S.L. Unipersonal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LABORDOC, S.L. UNIPERSONAL"
+      },
+      {
+        "from": [
+          "AYUNTAMIENTO",
+          "AYUNTAMIENTO "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AYUNTAMIENTO"
+      },
+      {
+        "from": [
+          "CES JUAN PABLO II, S.L.",
+          "CES, JUAN PABLO II, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CES JUAN PABLO II, S.L."
+      },
+      {
+        "from": [
+          "MOPE CONSULTORIA Y FORMACION, S.L.",
+          "MOPE CONSULTORÍA Y FORMACIÓN, S.L"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MOPE CONSULTORIA Y FORMACION, S.L."
+      },
+      {
+        "from": [
+          "PARQUE CONDE DE ORGAZ S.L.",
+          "PARQUE CONDE DE ORGAZ, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PARQUE CONDE DE ORGAZ S.L."
+      },
+      {
+        "from": [
+          "FUNDACION SOCIAL HIJAS DE LA CARIDAD",
+          "FUNDACIÓN SOCIAL HIJAS DE LA CARIDAD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION SOCIAL HIJAS DE LA CARIDAD"
+      },
+      {
+        "from": [
+          "CAMPUS INNOVACION Y GESTION, S.L.L.",
+          "CAMPUS INNOVACIÓN Y GESTIÓN, S.L.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CAMPUS INNOVACION Y GESTION, S.L.L."
+      },
+      {
+        "from": [
+          "GREDOS SAN DIEGO, SOCIEDAD COOPERATIVA MADRILEÑA",
+          "GREDOS SAN DIEGO SOCIEDAD COOPERATIVA MADRILEÑA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GREDOS SAN DIEGO, SOCIEDAD COOPERATIVA MADRILEÑA"
+      },
+      {
+        "from": [
+          "C.E.P. DIOCESANO",
+          "CEP DIOCESANO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "C.E.P. DIOCESANO"
+      },
+      {
+        "from": [
+          "CONGREGACION SALESIANA",
+          "CONGREGACIÓN SALESIANA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CONGREGACION SALESIANA"
+      },
+      {
+        "from": [
+          "INSTITUTO SECULAR CRUZADA EVANGELICA",
+          "INSTITUTO SECULAR CRUZADA EVANGÉLICA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INSTITUTO SECULAR CRUZADA EVANGELICA"
+      },
+      {
+        "from": [
+          "SARA CANO HERVAS",
+          "SARA CANO HERVÁS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SARA CANO HERVAS"
+      },
+      {
+        "from": [
+          "MONTFORT INTERNATIONAL SCHOOL, S.L.",
+          " MONTFORT INTERNATIONAL SCHOOL, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MONTFORT INTERNATIONAL SCHOOL, S.L."
+      },
+      {
+        "from": [
+          "ASOCIACION ESCUELA NACIONAL DE EQUITACION",
+          "ASOCIACIÓN ESCUELA NACIONAL DE EQUITACIÓN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ASOCIACION ESCUELA NACIONAL DE EQUITACION"
+      },
+      {
+        "from": [
+          "BEATRIZ TRUJILLO FERNANDEZ",
+          "BEATRIZ TRUJILLO FERNÁNDEZ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BEATRIZ TRUJILLO FERNANDEZ"
+      },
+      {
+        "from": [
+          "ARETEIA S.A.",
+          "ARETEIA, S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ARETEIA S.A."
+      },
+      {
+        "from": [
+          "ORDEN HOSPITALARIA DE SAN JUAN DE DIOS",
+          "ORDEN HOSPITALARIA SAN JUAN DE DIOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ORDEN HOSPITALARIA DE SAN JUAN DE DIOS"
+      },
+      {
+        "from": [
+          "CONGREGACIONES MARIANAS A.C.I.",
+          "CONGREGACIONES MARIANAS ACI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CONGREGACIONES MARIANAS A.C.I."
+      },
+      {
+        "from": [
+          "UNIVERSIDAD PRIVADA DE MADRID, S.A.",
+          "UNIVERSIDAD PRIVADA DE MADRID, SA."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "UNIVERSIDAD PRIVADA DE MADRID, S.A."
+      },
+      {
+        "from": [
+          "CONGREGACION DE LOS LEGIONARIOS DE CRISTO",
+          "CONGREGACIÓN DE LOS LEGIONARIOS DE CRISTO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CONGREGACION DE LOS LEGIONARIOS DE CRISTO"
+      },
+      {
+        "from": [
+          "COLEGIO NOVA HISPALIS, SOCIEDAD COOPERATIVA MADRILEÑA",
+          "COLEGIO NOVA HÍSPALIS, SOCIEDAD COOPERATIVA MADRILEÑA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLEGIO NOVA HISPALIS, SOCIEDAD COOPERATIVA MADRILEÑA"
+      },
+      {
+        "from": [
+          "FUNDACION IBEROAMERICANA  DE CIENCIAS SOCIALES Y DE LA SALUD",
+          "FUNDACION IBEROAMERICANA DE CIENCIAS SOCIALES Y DE LA SALUD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION IBEROAMERICANA  DE CIENCIAS SOCIALES Y DE LA SALUD"
+      },
+      {
+        "from": [
+          "EDUCACION Y PROGRESO, S.A.",
+          "EDUCACIÓN Y PROGRESO, S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EDUCACION Y PROGRESO, S.A."
+      },
+      {
+        "from": [
+          "TRAZOS INFOGRAFIA, S.L.",
+          "TRAZOS INFOGRAFÍA, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TRAZOS INFOGRAFIA, S.L."
+      },
+      {
+        "from": [
+          "LICEO ROSALES S.A. 28691",
+          "LICEO ROSALES, S.A. 28691"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LICEO ROSALES S.A. 28691"
+      },
+      {
+        "from": [
+          "INVESTIGACION Y SERVICIOS EDUCATIVOS LOGOS S.A.",
+          "INVESTIGACION Y SERVICIOS EDUCATIVOS LOGOS, S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INVESTIGACION Y SERVICIOS EDUCATIVOS LOGOS S.A."
+      },
+      {
+        "from": [
+          "THE ENGLISH MONTESSORI SCHOOL S.A.",
+          "THE ENGLISH MONTESSORI SCHOOL, S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "THE ENGLISH MONTESSORI SCHOOL S.A."
+      },
+      {
+        "from": [
+          "AYUNTAMIENTO DE MADRID",
+          "AYUNTAMIENTO DE  MADRID"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AYUNTAMIENTO DE MADRID"
+      },
+      {
+        "from": [
+          "INSTITUTOS NEBRIJA S.A.",
+          "INSTITUTOS NEBRIJA, S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INSTITUTOS NEBRIJA S.A."
+      },
+      {
+        "from": [
+          "SANTA CLAUS S.L.",
+          "SANTA CLAUS, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SANTA CLAUS S.L."
+      },
+      {
+        "from": [
+          "INIZIA GUARDERIAS SL",
+          "INIZIA GUARDERIAS, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INIZIA GUARDERIAS SL"
+      },
+      {
+        "from": [
+          "FUNDACION EDUCATIVA SANTO DOMINGO",
+          "FUNDACIÓN EDUCATIVA SANTO DOMINGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION EDUCATIVA SANTO DOMINGO"
+      },
+      {
+        "from": [
+          "ACADEF FÚTBOL, S.L.",
+          "ACADEF FUTBOL, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ACADEF FÚTBOL, S.L."
+      },
+      {
+        "from": [
+          "ESCUELA PARA EL FUTURO S.A.",
+          "ESCUELA PARA EL FUTURO, S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESCUELA PARA EL FUTURO S.A."
+      },
+      {
+        "from": [
+          "COLEGIO ALCALA S.L.",
+          "COLEGIO ALCALA, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLEGIO ALCALA S.L."
+      },
+      {
+        "from": [
+          "FIDES BABY S.L.",
+          "FIDES BABY, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FIDES BABY S.L."
+      },
+      {
+        "from": [
+          "CENTRO DE INVESTIGACION E INNOVACION PEDAGOGICA REGGIO S.L.",
+          "CENTRO DE INVESTIGACION E INNOVACION PEDAGOGICA REGGIO, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CENTRO DE INVESTIGACION E INNOVACION PEDAGOGICA REGGIO S.L."
+      },
+      {
+        "from": [
+          "MUSICAL MARTÍ VAM, S.L.",
+          "MUSICAL MARTI VAM, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MUSICAL MARTÍ VAM, S.L."
+      },
+      {
+        "from": [
+          "CENTRO DE F.P. EN EL DEPORTE Y LA SALUD MALAGA 2015, S.L.",
+          "CENTRO DE F.P. EN EL DEPORTE Y LA SALUD MÁLAGA 2015, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CENTRO DE F.P. EN EL DEPORTE Y LA SALUD MALAGA 2015, S.L."
+      },
+      {
+        "from": [
+          "ARCADIA CENTROS DE EDUCACION INFANTIL, S.L.",
+          "ARCADIA CENTROS DE EDUCACIÓN INFANTIL,  S.L.,"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ARCADIA CENTROS DE EDUCACION INFANTIL, S.L."
+      },
+      {
+        "from": [
+          "FUNDACION EDUCATIVA FRANCISCANAS ANA MOGAS",
+          "FUNDACIÓN EDUCATIVA FRANCISCANAS ANA MOGAS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION EDUCATIVA FRANCISCANAS ANA MOGAS"
+      },
+      {
+        "from": [
+          "JOSE ARROYO BENITO Y ROCIO PATIÑO PRIETO",
+          "ROCÍO PATIÑO PRIETO Y JOSÉ ARROYO BENITO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JOSE ARROYO BENITO Y ROCIO PATIÑO PRIETO"
+      },
+      {
+        "from": [
+          "CHIQUITIN CENTROS PROPIOS SL",
+          "CHIQUITIN CENTROS PROPIOS, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHIQUITIN CENTROS PROPIOS SL"
+      },
+      {
+        "from": [
+          "LICEO ROSALES S.L.",
+          "LICEO ROSALES, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LICEO ROSALES S.L."
+      },
+      {
+        "from": [
+          "FUNDACION UNIVERSITARIA SAN PABLO CEU",
+          "FUNDACION UNIVERSITARIA SAN PABLO (CEU)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION UNIVERSITARIA SAN PABLO CEU"
+      },
+      {
+        "from": [
+          "ST.ANNE'S SCHOOL S.A.",
+          "ST.ANNE'S SCHOOL, S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ST.ANNE'S SCHOOL S.A."
+      },
+      {
+        "from": [
+          "HH. CARIDAD DE SAN VICENTE DE PAUL",
+          "HH. CARIDAD SAN VICENTE DE PAUL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HH. CARIDAD DE SAN VICENTE DE PAUL"
+      },
+      {
+        "from": [
+          "ANDARINES ESCUELA INFANTIL S.L.",
+          "ANDARINES ESCUELA INFANTIL, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANDARINES ESCUELA INFANTIL S.L."
+      },
+      {
+        "from": [
+          "CENAFE ESCUELAS S.L. UNIPERSONAL",
+          "CENAFE ESCUELAS, S.L. UNIPERSONAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CENAFE ESCUELAS S.L. UNIPERSONAL"
+      },
+      {
+        "from": [
+          "PARROQUIA DE SAN IGNACIO DE LOYOLA",
+          "PARROQUIA SAN IGNACIO DE LOYOLA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PARROQUIA DE SAN IGNACIO DE LOYOLA"
+      },
+      {
+        "from": [
+          "VIRGINIA ROYO ESQUIDEZ",
+          "VIRGINIA ROYO ESQUÍDEZ"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VIRGINIA ROYO ESQUIDEZ"
+      },
+      {
+        "from": [
+          "MONTESSORI SCHOOL EL ENEBRAL S.L.",
+          "MONTESSORI SCHOOL EL ENEBRAL, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MONTESSORI SCHOOL EL ENEBRAL S.L."
+      },
+      {
+        "from": [
+          "EL MARAVILLOSO MUNDO DE LOS  NIÑOS, S.L.",
+          "EL MARAVILLOSO MUNDO DE LOS NIÑOS, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EL MARAVILLOSO MUNDO DE LOS  NIÑOS, S.L."
+      },
+      {
+        "from": [
+          "COLEGIO J.A.B.Y., S.L.",
+          "COLEGIO JABY, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLEGIO J.A.B.Y., S.L."
+      },
+      {
+        "from": [
+          "INSTITUTO CATOLICO DE ESTUDIOS, S.A.",
+          "INSTITUTO CATOLICO DE ESTUDIOS S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "INSTITUTO CATOLICO DE ESTUDIOS, S.A."
+      },
+      {
+        "from": [
+          "ESTRELLA ANDAL S.L.",
+          "ESTRELLA ANDAL, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESTRELLA ANDAL S.L."
+      },
+      {
+        "from": [
+          "HH CARMELITAS DE LA CARIDAD",
+          "HH. CARMELITAS DE LA CARIDAD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HH CARMELITAS DE LA CARIDAD"
+      },
+      {
+        "from": [
+          "ESCUELA INFANTIL OLAVIDE, S.A.",
+          "ESCUELA INFANTIL OLAVIDE S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESCUELA INFANTIL OLAVIDE, S.A."
+      },
+      {
+        "from": [
+          "ANTONIO ALONSO ROMANO",
+          "ANTONIO ALONSO ROMANO."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANTONIO ALONSO ROMANO"
+      },
+      {
+        "from": [
+          "FUNDACION ESCOLAPIAS MONTAL",
+          "FUNDACIÓN ESCOLAPIAS MONTAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION ESCOLAPIAS MONTAL"
+      },
+      {
+        "from": [
+          "CENTRO DE EDUCACION INFANTIL PATUCO, S.L.",
+          "CENTRO DE EDUCACIÓN INFANTIL PATUCO S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CENTRO DE EDUCACION INFANTIL PATUCO, S.L."
+      },
+      {
+        "from": [
+          "HNAS. DE LA CARIDAD DEL SGDO.CORAZON DE JESUS",
+          "HNAS. DE LA CARIDAD DEL SGDO.CORAZON JESUS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HNAS. DE LA CARIDAD DEL SGDO.CORAZON DE JESUS"
+      },
+      {
+        "from": [
+          "FUNDACION ESTUDIO",
+          "Fundación Estudio"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION ESTUDIO"
+      },
+      {
+        "from": [
+          "FUNDACION ARENALES",
+          "FUNDACIÓN ARENALES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION ARENALES"
+      },
+      {
+        "from": [
+          "Mª CONSUELO JIMENEZ HIDALGO Y Mª CRISTINA JIMENEZ HIDALGO",
+          "Mª. CONSUELO JIMENEZ HIDALGO Y Mª. CRISTINA JIMENEZ HIDALGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mª CONSUELO JIMENEZ HIDALGO Y Mª CRISTINA JIMENEZ HIDALGO"
+      },
+      {
+        "from": [
+          "FUNDACION EDUCACION Y EVANGELIO",
+          "FUNDACIÓN EDUCACIÓN Y EVANGELIO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FUNDACION EDUCACION Y EVANGELIO"
+      },
+      {
+        "from": [
+          "KIDSCO BALANCE, S.L.",
+          "KIDSCO BALANCE S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KIDSCO BALANCE, S.L."
+      }
+    ],
+    "description": "Mass edit cells in column centro_titular"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "centro_titular",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "COLEGIO ALEGRA, S.L."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLEGIO ALEGRA S.L."
+      }
+    ],
+    "description": "Mass edit cells in column centro_titular"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "centro_titular",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "COLEGIO BRISTOL, S.A."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COLEGIO BRISTOL S.A."
+      }
+    ],
+    "description": "Mass edit cells in column centro_titular"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "nif_titular",
+    "description": "Remove column nif_titular"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "nif_centro",
+    "description": "Remove column nif_centro"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "direccion_via_nombre",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "de la  ESCUELA PÚBLICA",
+          "de la ESCUELA PÚBLICA",
+          "de la ESCUELA PÜBLICA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de la  ESCUELA PÚBLICA"
+      },
+      {
+        "from": [
+          "Rosalía de Castro",
+          "Rosalia de Castro",
+          "de Rosalía de Castro"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rosalía de Castro"
+      },
+      {
+        "from": [
+          "las Dalias",
+          "las Dálias"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "las Dalias"
+      },
+      {
+        "from": [
+          "Asturias",
+          "ASTURIAS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Asturias"
+      },
+      {
+        "from": [
+          "Romeral",
+          "romeral"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Romeral"
+      },
+      {
+        "from": [
+          "del Doctor Castelo",
+          "del Doctor Casteló"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "del Doctor Castelo"
+      },
+      {
+        "from": [
+          "CLARISAS 25-BO.OPAÑEL",
+          "CLARISAS 25.BO.OPAÑEL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CLARISAS 25-BO.OPAÑEL"
+      },
+      {
+        "from": [
+          "de la Estación",
+          "de la estación"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de la Estación"
+      },
+      {
+        "from": [
+          "de la Coruña",
+          "DE LA CORUÑA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de la Coruña"
+      },
+      {
+        "from": [
+          "de Arroyomolinos",
+          "DE ARROYOMOLINOS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Arroyomolinos"
+      },
+      {
+        "from": [
+          " Transversal Cuatro",
+          "Transversal Cuatro"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": " Transversal Cuatro"
+      },
+      {
+        "from": [
+          "Constitución",
+          "CONSTITUCION"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Constitución"
+      },
+      {
+        "from": [
+          "Cuba",
+          "CUBA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cuba"
+      },
+      {
+        "from": [
+          "GUILLERMO DE OSMA",
+          "de Guillermo de Osma"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Guillermo de Osma"
+      },
+      {
+        "from": [
+          "de los Ángeles",
+          "de los Angeles"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de los Ángeles"
+      },
+      {
+        "from": [
+          "CTRA.DE LA CORUÑA KM 9,800",
+          "CTRA.DE LA CORUÑA KM 9800"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CTRA.DE LA CORUÑA KM 9,800"
+      },
+      {
+        "from": [
+          "ALBERTO AGUILERA, 23",
+          "ALBERTO AGUILERA 23"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ALBERTO AGUILERA, 23"
+      },
+      {
+        "from": [
+          "Giner de los Ríos",
+          "de Giner de los Ríos"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Giner de los Ríos"
+      },
+      {
+        "from": [
+          "San Francisco de Sales",
+          "de San Francisco de Sales"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "San Francisco de Sales"
+      },
+      {
+        "from": [
+          "de Las Marismas",
+          "de las Las Marismas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Las Marismas"
+      },
+      {
+        "from": [
+          "Benito Perez Galdos",
+          "Benito Pérez Galdós"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Benito Perez Galdos"
+      },
+      {
+        "from": [
+          "Juan de Austria",
+          "de Juan de Austria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Juan de Austria"
+      },
+      {
+        "from": [
+          "de San Enrique de Osso",
+          "de San Enrique de Ossó"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de San Enrique de Osso"
+      },
+      {
+        "from": [
+          "Europa",
+          "EUROPA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Europa"
+      },
+      {
+        "from": [
+          "FORMENTERA",
+          "Formentera"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Formentera"
+      },
+      {
+        "from": [
+          "VALENCIA",
+          "Valencia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Valencia"
+      },
+      {
+        "from": [
+          "PABLO NERUDA",
+          "Pablo Neruda"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pablo Neruda"
+      },
+      {
+        "from": [
+          "de Núñez de Balboa",
+          "Núñez de Balboa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Núñez de Balboa"
+      },
+      {
+        "from": [
+          "Colmenar Viejo",
+          "COLMENAR VIEJO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Colmenar Viejo"
+      },
+      {
+        "from": [
+          "de los Yébenes",
+          "de Los Yébenes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de los Yébenes"
+      },
+      {
+        "from": [
+          "ANGEL MUNOZ 31",
+          "ANGEL MUÑOZ 31"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANGEL MUNOZ 31"
+      },
+      {
+        "from": [
+          "MORATALAZ",
+          "Moratalaz"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Moratalaz"
+      },
+      {
+        "from": [
+          "SAN SEBASTIAN",
+          "San Sebastián"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "San Sebastián"
+      },
+      {
+        "from": [
+          "de Agustin Garcia Malla",
+          "de Agustín García Malla"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Agustin Garcia Malla"
+      },
+      {
+        "from": [
+          "COMUNIDAD DE MADRID",
+          "Comunidad de Madrid"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Comunidad de Madrid"
+      },
+      {
+        "from": [
+          "de Muñico",
+          "de Múñico"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Muñico"
+      },
+      {
+        "from": [
+          "Rio Ebro",
+          "Río Ebro"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rio Ebro"
+      },
+      {
+        "from": [
+          "del Duque de Tamames",
+          "del Duque de Tamámes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "del Duque de Tamames"
+      },
+      {
+        "from": [
+          "de la Tía Javiera",
+          "de la Tia Javiera"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de la Tía Javiera"
+      },
+      {
+        "from": [
+          "VILLAVICIOSA DE ODON",
+          "Villaviciosa de Odón"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VILLAVICIOSA DE ODON"
+      },
+      {
+        "from": [
+          "MAR ADRIÁTICO",
+          "Mar Adriático"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mar Adriático"
+      },
+      {
+        "from": [
+          "Fuenlabrada",
+          "FUENLABRADA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fuenlabrada"
+      },
+      {
+        "from": [
+          "Canal de Isabel II",
+          "de Canal Isabel II"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canal de Isabel II"
+      },
+      {
+        "from": [
+          "del Goloso KM 3,780",
+          "del Goloso km 3,780"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "del Goloso KM 3,780"
+      },
+      {
+        "from": [
+          "San Juan de la Cruz",
+          "de San Juan de la Cruz"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "San Juan de la Cruz"
+      },
+      {
+        "from": [
+          "Madrid",
+          "MADRID"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Madrid"
+      },
+      {
+        "from": [
+          "ESCUELAS",
+          "Escuelas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ESCUELAS"
+      },
+      {
+        "from": [
+          "del Padre Amigó",
+          "del Padre Amigo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "del Padre Amigó"
+      },
+      {
+        "from": [
+          "Francisco de Goya",
+          "de Francisco de Goya"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Francisco de Goya"
+      },
+      {
+        "from": [
+          "San Antonio",
+          "SAN ANTONIO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "San Antonio"
+      },
+      {
+        "from": [
+          "Félix Rodríguez de la Fuente",
+          "de Félix Rodríguez de la Fuente"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Félix Rodríguez de la Fuente"
+      },
+      {
+        "from": [
+          "de Ajalvir A Vicálvaro",
+          "de Ajalvir a Vicálvaro"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Ajalvir A Vicálvaro"
+      },
+      {
+        "from": [
+          "Norias",
+          "NORIAS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Norias"
+      },
+      {
+        "from": [
+          "IMPERIAL",
+          "Imperial"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "IMPERIAL"
+      },
+      {
+        "from": [
+          "de Diego de León",
+          "DIEGO DE LEON"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Diego de León"
+      },
+      {
+        "from": [
+          "de la Perdiz",
+          "de la Pérdiz"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de la Perdiz"
+      },
+      {
+        "from": [
+          "FRANCISCO JAVIER SAUQUILLO",
+          "Francisco Javier Sauquillo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Francisco Javier Sauquillo"
+      },
+      {
+        "from": [
+          "Libertad",
+          "LIBERTAD"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Libertad"
+      },
+      {
+        "from": [
+          "CARLOS RUIZ",
+          "Carlos Ruiz"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CARLOS RUIZ"
+      },
+      {
+        "from": [
+          "PARQUE MUNICIPAL S/N",
+          "PARQUE MUNICIPAL, S/N"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PARQUE MUNICIPAL S/N"
+      },
+      {
+        "from": [
+          "OLIMPICO FERNANDEZ OCHOA",
+          "Olimpico Fernandez Ochoa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Olimpico Fernandez Ochoa"
+      },
+      {
+        "from": [
+          "OLIMPICA CONCHITA PUIG,S/N",
+          "OLIMPICA CONCHITA PUIG,S/N("
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OLIMPICA CONCHITA PUIG,S/N"
+      },
+      {
+        "from": [
+          "Alcalá",
+          "ALCALA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Alcalá"
+      },
+      {
+        "from": [
+          "ARCOS DE JALON S/N",
+          "ARCOS DE JALON, S/N (ARCOS)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ARCOS DE JALON S/N"
+      },
+      {
+        "from": [
+          "Alfonso de Alcalá",
+          "de Alfonso de Alcalá"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Alfonso de Alcalá"
+      },
+      {
+        "from": [
+          "AZULINAS 8",
+          "AZULINAS, 8"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AZULINAS 8"
+      },
+      {
+        "from": [
+          "del Niño Jesus",
+          "del Niño Jesús"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "del Niño Jesus"
+      },
+      {
+        "from": [
+          "PICOS DE EUROPA",
+          "de Picos de Europa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PICOS DE EUROPA"
+      },
+      {
+        "from": [
+          "ALICANTE",
+          "Alicante"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ALICANTE"
+      },
+      {
+        "from": [
+          "Lope de Figueroa",
+          "de Lope de Figueroa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lope de Figueroa"
+      },
+      {
+        "from": [
+          "Río Bidasoa",
+          " Rio Bidasoa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Río Bidasoa"
+      },
+      {
+        "from": [
+          "de Meléndez Valdés",
+          "de Melendez Valdés"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Meléndez Valdés"
+      },
+      {
+        "from": [
+          "RODETAS",
+          "Rodetas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rodetas"
+      },
+      {
+        "from": [
+          "CADIZ",
+          "Cádiz"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cádiz"
+      },
+      {
+        "from": [
+          "de Los Rosales",
+          "de los Rosales"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Los Rosales"
+      },
+      {
+        "from": [
+          "Gran Vía",
+          "GRAN VIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gran Vía"
+      },
+      {
+        "from": [
+          "DE HUMERA",
+          "de Humera"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Humera"
+      },
+      {
+        "from": [
+          "de la Constitución",
+          "DE LA CONSTITUCION"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de la Constitución"
+      },
+      {
+        "from": [
+          "OLIVOS",
+          "Olivos"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Olivos"
+      },
+      {
+        "from": [
+          "RIO",
+          "Río"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Río"
+      },
+      {
+        "from": [
+          "Río Tormes",
+          "Río Tormés"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Río Tormes"
+      },
+      {
+        "from": [
+          "Juan de Juanes",
+          "de Juan de Juanes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Juan de Juanes"
+      },
+      {
+        "from": [
+          "Cristo",
+          "CRISTO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cristo"
+      },
+      {
+        "from": [
+          "Real",
+          "REAL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Real"
+      },
+      {
+        "from": [
+          "Miguel de Cervantes",
+          "de Miguel de Cervantes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Miguel de Cervantes"
+      },
+      {
+        "from": [
+          "de La Salle",
+          "de la Salle"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de La Salle"
+      },
+      {
+        "from": [
+          "VÍA OLÍMPICA",
+          "Vía Olímpica"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vía Olímpica"
+      },
+      {
+        "from": [
+          "LOS VASCOS",
+          "los Vascos"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "los Vascos"
+      },
+      {
+        "from": [
+          "Del Corregidor Sancho de Córdoba",
+          "del Corregidor Sancho de Córdoba"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Del Corregidor Sancho de Córdoba"
+      },
+      {
+        "from": [
+          "de Monasterio de El Paular",
+          "Monasterio de El Paular"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de Monasterio de El Paular"
+      },
+      {
+        "from": [
+          "España",
+          "ESPAÑA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "España"
+      },
+      {
+        "from": [
+          "Castillo de Alarcón",
+          "Castillo de Alarcon"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Castillo de Alarcón"
+      },
+      {
+        "from": [
+          "MATALPINO",
+          "Matalpino"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Matalpino"
+      },
+      {
+        "from": [
+          "Sur",
+          "SUR"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sur"
+      },
+      {
+        "from": [
+          "San José",
+          "SAN JOSE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "San José"
+      },
+      {
+        "from": [
+          "de la Fuente",
+          "DE LA FUENTE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "de la Fuente"
+      },
+      {
+        "from": [
+          "Los Almendros",
+          "los Almendros"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Los Almendros"
+      },
+      {
+        "from": [
+          "CANILLEJAS A VICALVARO",
+          "Canillejas a Vicálvaro"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CANILLEJAS A VICALVARO"
+      }
+    ],
+    "description": "Mass edit cells in column direccion_via_nombre"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "direccion_numero",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "s/n",
+          "S/N",
+          "s/N"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "s/n"
+      },
+      {
+        "from": [
+          "4",
+          "    4"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "4"
+      },
+      {
+        "from": [
+          "7",
+          " 7"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "7"
+      },
+      {
+        "from": [
+          "K3,78",
+          "k3,78"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "K3,78"
+      },
+      {
+        "from": [
+          "k 4",
+          "k. 4"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "k 4"
+      },
+      {
+        "from": [
+          "k12,8",
+          "k12.8"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "k12,8"
+      }
+    ],
+    "description": "Mass edit cells in column direccion_numero"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "direccion_numero",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1-bis",
+          "1bis"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1-bis"
+      }
+    ],
+    "description": "Mass edit cells in column direccion_numero"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "contacto_email2",
+    "description": "Remove column contacto_email2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "contacto_telefono2",
+    "description": "Remove column contacto_telefono2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "contacto_telefono3",
+    "description": "Remove column contacto_telefono3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "contacto_telefono4",
+    "description": "Remove column contacto_telefono4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "contacto_fax",
+    "description": "Remove column contacto_fax"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "direccion_coor_x",
+          "expression": "value",
+          "columnName": "direccion_coor_x",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "direccion_coor_y",
+          "expression": "value",
+          "columnName": "direccion_coor_y",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "distrito_codigo",
+          "expression": "value",
+          "columnName": "distrito_codigo",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "fecha_constitución",
+    "description": "Remove column fecha_constitución"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "situación",
+    "description": "Remove column situación"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "direccion_numero",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "s/n"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": ""
+      }
+    ],
+    "description": "Mass edit cells in column direccion_numero"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "centro_tipo_codigo",
+    "expression": "grel:value.replace(/^0+/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column centro_tipo_codigo using expression grel:value.replace(/^0+/, \"\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "municipio_codigo",
+    "description": "Remove column municipio_codigo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "municipio_nombre",
+    "description": "Remove column municipio_nombre"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "distrito_codigo",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column distrito_codigo using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "direccion_coor_x",
+    "newColumnName": "coordenada_x_utm",
+    "description": "Rename column direccion_coor_x to coordenada_x_utm"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "direccion_coor_y",
+    "newColumnName": "coordenada_y_utm",
+    "description": "Rename column direccion_coor_y to coordenada_y_utm"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "dat_nombre",
+    "description": "Remove column dat_nombre"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "dat_codigo",
+    "description": "Remove column dat_codigo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "centro_titular",
+    "description": "Remove column centro_titular"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "centro_tipo_desc_abreviada",
+    "description": "Remove column centro_tipo_desc_abreviada"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "direccion_via_tipo",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column direccion_via_tipo using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "direccion_via_tipo",
+    "expression": "grel:cells['direccion_via_tipo'].value + \" \" + cells['direccion_via_nombre'].value + \", \" + cells['direccion_numero'].value",
+    "onError": "set-to-blank",
+    "newColumnName": "direccion",
+    "columnInsertIndex": 6,
+    "description": "Create column direccion at index 6 based on column direccion_via_tipo using expression grel:cells['direccion_via_tipo'].value + \" \" + cells['direccion_via_nombre'].value + \", \" + cells['direccion_numero'].value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "direccion_via_tipo",
+    "description": "Remove column direccion_via_tipo"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "direccion_via_nombre",
+    "description": "Remove column direccion_via_nombre"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "direccion_numero",
+    "description": "Remove column direccion_numero"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "coordenada_x_utm",
+    "expression": "jython:# Import the Java classes we need\nfrom org.locationtech.proj4j import CRSFactory, CoordinateReferenceSystem\nfrom org.locationtech.proj4j import CoordinateTransformFactory, ProjCoordinate\n\n# --- Setup the transformation (this runs once) ---\nif \"transformer\" not in globals():\n    global ctFactory, crsFactory, transformer\n    global srcCRS, targetCRS\n\n    ctFactory = CoordinateTransformFactory()\n    crsFactory = CRSFactory()\n\n    # Source: Your UTM Zone (e.g., EPSG:32630 for Zone 30N)\n    # Verify this is the correct EPSG code for your specific UTM zone!\n    srcCRS = crsFactory.createFromName(\"EPSG:32630\")\n    # Target: Standard Lat/Lon (WGS84)\n    targetCRS = crsFactory.createFromName(\"EPSG:4326\")\n\n    # Create the transformer object\n    transformer = ctFactory.createTransform(srcCRS, targetCRS)\n\n# --- Run the transformation for each row ---\ntry:\n    # Get x and y strings from your columns\n    # !!! CHANGE THESE column names if yours are different !!!\n    x_utm_string = cells['coordenada_x_utm'].value\n    y_utm_string = cells['coordenada_y_utm'].value\n\n    # Convert the strings to numbers (float)\n    x_utm = float(x_utm_string)\n    y_utm = float(y_utm_string)\n\n    # Create coordinate objects\n    srcCoord = ProjCoordinate(x_utm, y_utm)\n    targetCoord = ProjCoordinate()\n\n    # Perform the transformation\n    transformer.transform(srcCoord, targetCoord)\n\n    # Return as a WKT string (Lon Lat)\n    return \"POINT(\" + str(targetCoord.x) + \" \" + str(targetCoord.y) + \")\"\n\nexcept Exception as e:\n    # Handle blank cells or non-numeric errors\n    return None",
+    "onError": "set-to-blank",
+    "newColumnName": "wktGeometry",
+    "columnInsertIndex": 13,
+    "description": "Create column wktGeometry at index 13 based on column coordenada_x_utm using expression jython:# Import the Java classes we need\nfrom org.locationtech.proj4j import CRSFactory, CoordinateReferenceSystem\nfrom org.locationtech.proj4j import CoordinateTransformFactory, ProjCoordinate\n\n# --- Setup the transformation (this runs once) ---\nif \"transformer\" not in globals():\n    global ctFactory, crsFactory, transformer\n    global srcCRS, targetCRS\n\n    ctFactory = CoordinateTransformFactory()\n    crsFactory = CRSFactory()\n\n    # Source: Your UTM Zone (e.g., EPSG:32630 for Zone 30N)\n    # Verify this is the correct EPSG code for your specific UTM zone!\n    srcCRS = crsFactory.createFromName(\"EPSG:32630\")\n    # Target: Standard Lat/Lon (WGS84)\n    targetCRS = crsFactory.createFromName(\"EPSG:4326\")\n\n    # Create the transformer object\n    transformer = ctFactory.createTransform(srcCRS, targetCRS)\n\n# --- Run the transformation for each row ---\ntry:\n    # Get x and y strings from your columns\n    # !!! CHANGE THESE column names if yours are different !!!\n    x_utm_string = cells['coordenada_x_utm'].value\n    y_utm_string = cells['coordenada_y_utm'].value\n\n    # Convert the strings to numbers (float)\n    x_utm = float(x_utm_string)\n    y_utm = float(y_utm_string)\n\n    # Create coordinate objects\n    srcCoord = ProjCoordinate(x_utm, y_utm)\n    targetCoord = ProjCoordinate()\n\n    # Perform the transformation\n    transformer.transform(srcCoord, targetCoord)\n\n    # Return as a WKT string (Lon Lat)\n    return \"POINT(\" + str(targetCoord.x) + \" \" + str(targetCoord.y) + \")\"\n\nexcept Exception as e:\n    # Handle blank cells or non-numeric errors\n    return None"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "coordenada_x_utm",
+    "description": "Remove column coordenada_x_utm"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "coordenada_y_utm",
+    "description": "Remove column coordenada_y_utm"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "contacto_email1",
+    "newColumnName": "contacto_email",
+    "description": "Rename column contacto_email1 to contacto_email"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "contacto_telefono1",
+    "newColumnName": "contacto_telefono",
+    "description": "Rename column contacto_telefono1 to contacto_telefono"
+  }
+]

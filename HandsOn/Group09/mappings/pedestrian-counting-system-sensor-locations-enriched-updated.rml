@@ -1,0 +1,127 @@
+@prefix us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <http://schema.org/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@base <https://smartcity.linkeddata.es/lcc/resource/> .
+
+#################################################################
+# Pedestrian Location Mapping
+#################################################################
+
+<#PedestrianLocation> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "pedestrian-counting-system-sensor-locations-enriched-updated.csv" ;
+    rml:referenceFormulation ql:CSV 
+  ];
+
+  rr:subjectMap [
+    rr:template "https://smartcity.linkeddata.es/lcc/resource/location/{Location_ID}";
+    rr:termType rr:IRI ;
+    rr:class us:Location
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment ;
+    rr:objectMap [ rml:reference "Location_Type"; rr:termType rr:Literal  ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate wgs84_pos:lat ;
+    rr:objectMap [ rml:reference "Latitude" ; rr:datatype xsd:float; rr:termType rr:Literal ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate wgs84_pos:long ;
+    rr:objectMap [ rml:reference "Longitude" ; rr:datatype xsd:float ; rr:termType rr:Literal ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate schema:postalCode ;
+    rr:objectMap [ rml:reference "Postcode"; rr:termType rr:Literal ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate schema:addressLocality ;
+    rr:objectMap [ rml:reference "City" ; rr:termType rr:Literal ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate schema:addressCountry;
+    rr:objectMap [ rml:reference "Country" ; rr:termType rr:Literal ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate schema:streetAddress ;
+    rr:objectMap [
+      rr:template "{Street} {House_Number}" ;
+      rr:termType rr:Literal
+    ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate us:hasAddress ;
+    rr:objectMap [ rml:reference "Address" ; rr:termType rr:Literal ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate us:MicroclimateSensor ;
+    rr:objectMap [ rml:reference "Closest_Microclimate_Sensor_Name" ; rr:termType rr:Literal ]
+  ] .
+
+#################################################################
+# Pedestrian Sensor Mapping
+#################################################################
+
+<#PedestrianSensor> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "pedestrian-counting-system-sensor-locations-enriched-updated.csv" ;
+    rml:referenceFormulation ql:CSV 
+  ];
+
+  rr:subjectMap [
+    rml:template "https://smartcity.linkeddata.es/lcc/resource/sensor/{Sensor_Name}";
+    rr:termType rr:IRI ;
+    rr:class us:PedestrianSensor
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate schema:description ;
+    rr:objectMap [ rml:reference "Sensor_Description" ; rr:termType rr:Literal ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate schema:dateInstalled ;
+    rr:objectMap [ rml:reference "Installation_Date" ; rr:datatype xsd:date ; rr:termType rr:Literal]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:comment ;
+    rr:objectMap [ rml:reference "Note" ; rr:termType rr:Literal]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate schema:status ;
+    rr:objectMap [ rml:reference "Status" ; rr:termType rr:Literal]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate us:direction1 ;
+    rr:objectMap [ rml:reference "Direction_1" ; rr:termType rr:Literal]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate us:direction2 ;
+    rr:objectMap [ rml:reference "Direction_2" ; rr:termType rr:Literal]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate us:locatedAt ;
+    rr:objectMap [
+      rr:parentTriplesMap <#PedestrianLocation> ;
+      ] ;
+  ] .

@@ -1,0 +1,51 @@
+University,UniversityID,Acronym,Type,CIF,Modality,AddressID,URL,Email,Phone,Year of Publication
+Universidad Autónoma de Barcelona,91aa5268851f200c64bd1a238ed37fcf,UAB,Pública,Q0818002H,Presencial,3c3f54089c11b4a77e3e93ec6a278c08,www.uab.es,informacio@uab.es,935811000,1968
+Universidad Autónoma de Madrid,f9d30a624b678c838a4bb422a0bc148b,UAM,Pública,Q2818013A,Presencial,ae76c8afd8527d630183d011e750f230,www.uam.es,informacion.general@uam.es,914975000,1968
+Universidad Carlos III de Madrid,c50901012309aca2785eb50ea4c8f87b,UCAR,Pública,Q2818029G,Presencial,c14a93d1790d92a112a42eeff4b2f30e,www.uc3m.es,futurosestudiantes@uc3m.es,916249500,1989
+Universidad Complutense de Madrid,e2aed65db4fa77f98f5f2990371c7a23,UCM,Pública,Q2818014I,Presencial,5eb630aadf76d3d225acc8f19f2b5fe0,www.ucm.es,infocom@ucm.es,914520400,1836
+Universidad de A Coruña,e97892b0ccf3c19ce40f9ef9d8ac91ef,UDC,Pública,Q6550005J,Presencial,c198b7d07de0ff2cf72f123288f8816d,www.udc.es,reitor@udc.es,981167000,1989
+Universidad de Alcalá,330a9bcca27a6c6e467081bfdc1e65cd,UAH,Pública,Q2818018J,Presencial,2cb56938242f84595853b892169a6f15,www.uah.es,ciu@uah.es,918854000,1977
+Universidad de Alicante,e00161d1619c9c29b683d70c49b1341c,UA,Pública,Q0332001G,Presencial,5e474da7ce008ddae0c4fe59335198e0,www.ua.es/,informacio@ua.es,965903400,1979
+Universidad de Almería,c6abab9cddd0b921adc603debfcca50e,UAL,Pública,Q5450008G,Presencial,36457e0372702d3ea78afcd33bb30f49,www.ual.es,gprensa@ual.es,950015570,1993
+Universidad de Barcelona,7ce4c67f7247673210d9b6d8aa5e7570,UBA,Pública,Q0818001J,Presencial,6d8909ba9c86e580d20cf254291d7888,www.ub.es,comunicacio@ub.edu,934035417,1450
+Universidad de Burgos,f9f0a05fbac13ce20a2af52247c2b93f,UBU,Pública,Q0968272E,Presencial,80bf0a84d7eab9f28e46593d41ce8221,www.ubu.es,ubuestudiantes@ubu.es,947258700,1994
+Universidad de Cádiz,9d791fc58c21adf30d157657e55c4355,UCA,Pública,Q1132001G,Presencial,e105c18c9e4a5a8424d24faaea1ed4fb,www.uca.es,relaciones.institucionales@uca.es,956015033,1979
+Universidad de Cantabria,3105c9fd85b6cfd224f8d1b92970ab2f,UCN,Pública,Q3918001C,Presencial,db9caf43d64b1c96ddea24a16d87697c,www.unican.es,acceso@unican.es,942200984,1972
+Universidad de Castilla-La Mancha,a62a164f781be26dd225dfda47b78c12,UCLM,Pública,Q1368009E,Presencial,bcb39484b4ad9171f9fc6723ef2db988,www.uclm.es,webmaster@uclm.es,902204100,1982
+Universidad de Córdoba,d4092e4beec5ade3eb17379b7450f0b9,UCO,Pública,Q1418001B,Presencial,6d3aa9ea9a6cc6286ef18273287c8e87,www.uco.es,informacion@uco.es,957218000,1972
+Universidad de Extremadura,16249b9d3890e9951fa8dcc315733ea8,UEX,Pública,Q0618001B,Presencial,f519563e4b72629040d10eb10869d330,www.unex.es,virtual@unex.es,924289300,1973
+Universidad de Granada,dbca02858a647c576208370194649766,UGR,Pública,Q1818002F,Presencial,e8b6b0ad4308e87cfadef3bf3e0ac0f9,www.ugr.es,csirc@ugr.es,958243000,1531
+Universidad de Huelva,f6ce2593f6cfc9e08dc9effe2e0077e9,UHU,Pública,Q7150008F,Presencial,d82fd4a8f42aad9929e1e82039bdba88,www.uhu.es,www@uhu.es,959218000,1993
+Universidad de Jaén,a0b65722ec5194abfd7f9ba621a7dd1d,UJA,Pública,Q7350006H,Presencial,2b571cc48daa38ca5a8fdc1ce6e0602e,www.ujaen.es,,953212121,1993
+Universidad de La Laguna,64597f645a8194bb9beed6a3aa675d5b,ULL,Pública,Q3818001D,Presencial,b9db6fc801e75d08e8cc8e77f783be34,www.ull.es,prensa1@ull.es,922319000,1792
+Universidad de La Rioja,dcbcd7e79ed9bec816e6a427d84bbf64,UR,Pública,Q2618002F,Presencial,a8de3933ae1d800288b7d16696db6025,www.unirioja.es,sec.general@unirioja.es,941299104,1992
+Universidad de Las Palmas de Gran Canaria,17a1b9e0f1c1e0719761a30d50700965,UPGC,Pública,Q3518001G,Presencial,d3ab24f3ec9b7ed58d4014fc99a92c2e,www.ulpgc.es,universidad@ulpgc.es,928451000,1989
+Universidad de León,c8b4be930789e86c8d8b17d773af6d7e,ULE,Pública,Q2432001B,Presencial,be5d0e33953eb715fe928e0726966de6,www.unileon.es,webmaster@unileon.es,987291000,1979
+Universidad de Lleida,bf0d31e1fd4ee242c0fe00c2ee08b759,UDL,Pública,Q7550001G,Presencial,5c824e607e7d4e015aaca1c38fa4c7cc,www.udl.es/ca/es/,info@udl.cat,973702000,1992
+Universidad de Málaga,30962703623f1f1d21c737a0c0673761,UMA,Pública,Q2918001E,Presencial,0808957d16691b9b3c52bcc760327b8e,www.uma.es,informacion@uma.es,952131000,1972
+Universidad de Murcia,f5636bc297db763f969bab88b5492ba3,UMU,Pública,Q3018001B,Presencial,9432035fcf71d0c7904c99b7340ac337,www.um.es,rector@um.es,968363000,1272
+Universidad de Oviedo,094757ed9d7e9bb8929a087e18874962,UOV,Pública,Q3318001I,Presencial,72a1aa323272ea5a67df1e6d77c1f850,www.uniovi.es,rectorado@uniovi.es,985104058,1608
+Universidad de Salamanca,51dcd00716a08519e65a732cb87c3b71,USAL,Pública,Q3718001E,Presencial,7ff92ce25e10f5bbdbf536255db2cde3,www.usal.es,infogral@usal.es,923294400,1218
+Universidad de Santiago de Compostela,703d90006d377d97e3212ab3312a4e0d,USC,Pública,Q1518001A,Presencial,ac30a2c309ad882f6b0ce6cadf6d3b3f,www.usc.es,reitor@usc.es,981563100,1504
+Universidad de Sevilla,f8c4e120daa6420626c03e582958ebd3,USE,Pública,Q4118001I,Presencial,a4dbfb7e4703e422d2e89903dc982ecf,www.us.es,gabiprensa@us.es,954551000,1505
+Universidad de Valladolid,92c081b3e4299316155ea45962241086,UVA,Pública,Q4718001C,Presencial,2fc64a0e9d9a78677d65d0b9a90102fb,,valladolid@uva.es,983423000,1241
+Universidad de Vigo,15d26bf729b84e22210b99d94c66cd90,UVI,Pública,Q8650002B,Presencial,2172351eb1543e16ed37e3f35f7bc60a,www.uvigo.es,informacion@uvigo.es,986812000,1989
+Universidad de Zaragoza,24e63f7c3d8596b44655e9ad9bfdf5f5,UZA,Pública,Q5018001G,Presencial,fd13743a4417484f87b2433c9553ab40,,ciu@unizar.es,976761001,1542
+Universidad del País Vasco/Euskal Herriko Unibertsitatea,d30bbd19fa77d8470334a259e060006e,EHU,Pública,Q4818001B,Presencial,911f1ad48d2ec11cbd33b11dd1f59500,www.ehu.es,rgzadmin@lg.ehu.es,946012000,1968
+Universidad Internacional de Andalucía,2ddd97caa885c032af0e206d1a7b5c85,UNIA,Pública,Q7350007F,Especial,45a07db0bcf8bb2f3f5c81e127f8b25d,,postgrado@unia.es,954462299,2013
+Universidad Internacional Menéndez Pelayo,871a4d42a733c080da0f1935663a2f05,UIMP,Pública,Q2818022B,Especial,737457c5421008b818dfda65c3e87a06,www.uimp.es,,915920600,1945
+Universidad Jaume I de Castellón,92c852850da0a33857691151f42ac19a,UJI,Pública,Q6250003H,Presencial,ff6c8a854c99dbb52104860a0b660886,www.uji.es,info@uji.es,964728000,1991
+Universidad Miguel Hernández de Elche,bd5d3da0c4dfc8205ca85ea0c1699a62,UMH,Pública,Q5350015C,Presencial,f2d3ae026c39eefddf20fb3a59d69686,www.umh.es,info@umh.es,966658500,1996
+Universidad Nacional de Educación a Distancia,080475033eeb8f14c9bd1119f9fa6871,UNED,Pública,Q2818016D,No Presencial,fe1f80056d814c268f5b1f594e2fa6d0,www.uned.es,infouned@adm.uned.es,91398600,1972
+Universidad Pablo de Olavide,79c02c40f6f40e7dbda1c9193c995152,UPO,Pública,Q9150016E,Presencial,8594d2269a6b4cba3f5f018e0e82d252,www.upo.es,,954349200,1997
+Universidad Politécnica de Cartagena,e4aee90dd75f5fd5dc35bc4653bd9065,UPCT,Pública,Q8050013E,Presencial,f2ff819a4e5b5fe4f6711298f3207814,www.upct.es,gestion.academica@upct.es,968325400,1998
+Universidad Politécnica de Catalunya,186d47028db001c7a7d88906c21f5fee,UPC,Pública,Q0818003F,Presencial,56139dcd5dc01afe7f2ee5ee8ee22f56,www.upc.es,info@upc.edu,934016200,1971
+Universidad Politécnica de Madrid,4bf5231621b187a3ed12c5741fc3f19d,UPM,Pública,Q2818015F,Presencial,f5b64eaf989ded9f25f77095e229c55e,www.upm.es,gabinete.rector@upm.es,913366200,1971
+Universidad Pompeu Fabra,3bd27a309cbe4e2d7f35ec99b74525c0,UPF,Pública,Q5850017D,Presencial,9e15f95280fd62f6ee2c3f09f4808352,www.upf.edu,,935422000,1990
+Universidad Pública de Navarra,aeaa439db599d073395f84fb7fa10a54,UPNA,Pública,Q3150012G,Presencial,3bb63e8e0ff43079eb78ad08a106caa5,www.unavarra.es,infoweb@unavarra.es,948169000,1987
+Universidad Rey Juan Carlos,7a90ec99428048f3a58539d18c749ea7,URJC,Pública,Q2803011B,Presencial,deeaaf037b78576632f93c3f87257f30,www.urjc.es,info@urjc.es,916655060,1996
+Universidad Rovira i Virgili,8841d88268e139663a8723e418715e78,URV,Pública,Q9350003A,Presencial,6f62b489722e5c0fe9380df5ef254ca8,www.urv.cat/ca,info@urv.cat,977558000,1992
+Universitat de Girona,26e6f2790707f868f9d05141e6f2f906,UDG,Pública,Q6750002E,Presencial,8bdbd17a4cd083fc94a915e7efe6e10b,,informacio@udg.edu,972418046,1992
+Universitat de les Illes Balears,2f0fa6cb7c08610911b3258fd5f2738a,UIB,Pública,Q0718001A,Presencial,9d7ce0a67db57838b36b93815424bfc9,www.uib.es/,informacio@uib.es,971173000,1978
+Universitat de València,c73f658b0a9e2a5097a9ae889dd56474,UV,Pública,Q4618001D,Presencial,88d35543b375fe925b0ebeae4dda13e4,www.uv.es,servei.estudiants@uv.es,963864100,1502
+Universitat Politècnica de València,4d9d7d9cad3c91e4f4fff77c396ee9ee,UPV,Pública,Q4618002B,Presencial,9a8f45dbf4f974f2e95da97e38056b7d,www.upv.es,informacion@upv.es,963877000,1971
