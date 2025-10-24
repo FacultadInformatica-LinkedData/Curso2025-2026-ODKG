@@ -1,0 +1,8 @@
+SELECT DISTINCT ?p COUNT(DISTINCT ?o)
+WHERE {
+?s a <http://dbpedia.org/ontology/Politician>.
+?s ?p ?o .
+FILTER (?p != rdf:type)
+}
+GROUP BY ?p
+LIMIT 100
