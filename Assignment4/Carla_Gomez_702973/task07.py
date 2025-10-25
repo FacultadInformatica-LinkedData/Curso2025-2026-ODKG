@@ -88,14 +88,14 @@ report.validate_07_02a(individuals)
 
 """**TASK 7.2b: Repeat the same exercise in SPARQL, returning the individual URIs in a variable ?ind**"""
 
-query =  """ SELECT ?s
+query =  """ SELECT ?ind
 WHERE {
-  ?s rdf:type ?c .
+  ?ind rdf:type ?c .
   ?c rdfs:subClassOf* ontology:Person .
 }"""
 
 for r in g.query(query):
-  print(r.s)
+  print(r.ind)
 # Visualize the results
 
 ## Validation: Do not remove
