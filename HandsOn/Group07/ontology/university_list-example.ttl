@@ -1,0 +1,128 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lude: <https://linkeduniversities.es/vocab/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+rdfs:label a owl:DatatypeProperty ;
+    rdfs:label "label" .
+
+lude:11034 a owl:DatatypeProperty ;
+    rdfs:label "11034" ;
+    rdfs:domain lude:160 .
+
+lude:2023 a owl:DatatypeProperty ;
+    rdfs:label "2023" ;
+    rdfs:domain lude:160 .
+
+lude:2023-2024 a owl:DatatypeProperty ;
+    rdfs:label "2023-2024" ;
+    rdfs:domain lude:Biologia .
+
+lude:244 a owl:DatatypeProperty ;
+    rdfs:label "244" ;
+    rdfs:domain lude:Graduate ;
+    rdfs:range <https://linkeduniversities.es/xsd:decimal> .
+
+lude:Non a owl:DatatypeProperty ;
+    rdfs:label "non" ;
+    rdfs:domain lude:Biologia .
+
+lude:Sciences a owl:DatatypeProperty ;
+    rdfs:label "sciences" ;
+    rdfs:domain lude:Graduate ;
+    rdfs:range xsd:string .
+
+lude:aboutDegree a owl:ObjectProperty ;
+    rdfs:label "about degree" ;
+    rdfs:domain lude:Biologia ;
+    rdfs:range lude:Graduate .
+
+lude:adjudicationRound a owl:DatatypeProperty ;
+    rdfs:label "adjudication round" ;
+    rdfs:domain lude:160 .
+
+lude:deliveredAt a owl:ObjectProperty ;
+    rdfs:label "delivered at" ;
+    rdfs:domain lude:Biologia ;
+    rdfs:range lude:SabateJorba .
+
+lude:hasCutoff a owl:ObjectProperty ;
+    rdfs:label "has cutoff" ;
+    rdfs:domain lude:Biologia ;
+    rdfs:range lude:160 .
+
+lude:hasFaculty a owl:ObjectProperty ;
+    rdfs:label "has faculty" ;
+    rdfs:domain lude:UniversityofBarcelona ;
+    rdfs:range lude:SabateJorba .
+
+lude:locatedIn a owl:ObjectProperty ;
+    rdfs:label "located in" ;
+    rdfs:domain lude:Biologia ;
+    rdfs:range lude:Barcelona .
+
+lude:offeredBy a owl:ObjectProperty ;
+    rdfs:label "offered by" ;
+    rdfs:domain lude:Biologia ;
+    rdfs:range lude:UniversityofBarcelona .
+
+lude:online a owl:DatatypeProperty ;
+    rdfs:label "online" ;
+    rdfs:domain lude:160 .
+
+lude:sameAsWikidata a owl:ObjectProperty ;
+    rdfs:label "same as wikidata" ;
+    rdfs:domain lude:Barcelona,
+        lude:Graduate,
+        lude:UniversityofBarcelona ;
+    rdfs:range rdfs:Resource .
+
+lude:seatsAvailable a owl:DatatypeProperty ;
+    rdfs:label "seats available" ;
+    rdfs:domain lude:Biologia .
+
+rdfs:Resource a owl:Class ;
+    rdfs:label "Resource" .
+
+lude: a owl:Ontology ;
+    dcterms:created "2025-10-06"^^xsd:date ;
+    dcterms:description "Vocabulary for universities, faculties, degrees, program offerings and cut-offs across Spanish regions."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "Linked Universities Data Explorer Ontology"@en ;
+    vann:preferredNamespacePrefix "lude" ;
+    vann:preferredNamespaceUri lude: ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+lude:Barcelona a owl:Class ;
+    rdfs:label "Barcelona" .
+
+lude:SabateJorba a owl:Class ;
+    rdfs:label "Sabate Jorba" .
+
+lude:UniversityofBarcelona a owl:Class ;
+    rdfs:label "Universityof Barcelona" .
+
+lude:Graduate a owl:Class ;
+    rdfs:label "Graduate" .
+
+lude:160 a owl:Class ;
+    rdfs:label "160" .
+
+lude:Biologia a owl:Class ;
+    rdfs:label "Biologia" .
+

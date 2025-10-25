@@ -1,0 +1,188 @@
+prefixes:
+  rr: "http://www.w3.org/ns/r2rml#"
+  rml: "http://semweb.mmlab.be/ns/rml#"
+  rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  ql: "http://semweb.mmlab.be/ns/ql#"
+  map: "http://mapping.example.com/"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  lude: "https://spanishuniversities.data/ontology/lude#"
+  id: "https://spanishuniversities.data/id/lude/"
+
+mappings:
+
+  #################################################################
+  # DEGREE (Grado)
+  #################################################################
+  murciaDegree:
+    sources:
+      - access: "Murcia2-listaestudios-updated.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/Degree/{Degree ID}"
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year)]
+      - [lude:cutOff, $(nota_corte), xsd:string]
+      - [lude:numberOfStudents, $(matriculados), xsd:integer]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: murciaLevel
+          condition:
+            child: "Academic Level ID"
+            parent: "Academic Level ID"
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: murciaKnowledgeArea
+          condition:
+            child: "Knowledge Area ID"
+            parent: "Knowledge Area ID"
+      - p: lude:offeredBy
+        o:
+          mapping: murciaUniversity
+          condition:
+            child: "University ID"
+            parent: "University ID"
+      - p: lude:hasFaculty
+        o:
+          mapping: murciaFaculty
+          condition:
+            child: "Faculty ID"
+            parent: "Faculty ID"
+
+  #################################################################
+  # DEGREE (Doble Grado)
+  #################################################################
+  murciaDobleGrado:
+    sources:
+      - access: "Murcia-nota-admision-rango-grado-2024-2025-updated.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/Degree/{Degree ID}"
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year)]
+      - [lude:numberOfStudents, $(matriculados), xsd:integer]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: murciaLevel
+          condition:
+            child: "Academic Level ID"
+            parent: "Academic Level ID"
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: murciaKnowledgeArea
+          condition:
+            child: "Knowledge Area ID"
+            parent: "Knowledge Area ID"
+      - p: lude:offeredBy
+        o:
+          mapping: murciaUniversity
+          condition:
+            child: "University ID"
+            parent: "University ID"
+      - p: lude:hasFaculty
+        o:
+          mapping: murciaFaculty
+          condition:
+            child: "Faculty ID"
+            parent: "Faculty ID"
+
+  #################################################################
+  # DEGREE (Máster)
+  #################################################################
+  murciaMaster:
+    sources:
+      - access: "Murcia-nota-corte-master-2024-2025-updated.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/Degree/{Degree ID}"
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year)]
+      - [lude:cutOff, $(nota_corte), xsd:string]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: murciaLevel
+          condition:
+            child: "Academic Level ID"
+            parent: "Academic Level ID"
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: murciaKnowledgeArea
+          condition:
+            child: "Knowledge Area ID"
+            parent: "Knowledge Area ID"
+      - p: lude:offeredBy
+        o:
+          mapping: murciaUniversity
+          condition:
+            child: "University ID"
+            parent: "University ID"
+      - p: lude:hasFaculty
+        o:
+          mapping: murciaFaculty
+          condition:
+            child: "Faculty ID"
+            parent: "Faculty ID"
+
+  #################################################################
+  # ACADEMIC LEVEL
+  #################################################################
+  murciaLevel:
+    sources:
+      - access: "Murcia-Grado.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/AcademicLevel/{Academic Level ID}"
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+
+  #################################################################
+  # KNOWLEDGE AREA
+  #################################################################
+  murciaKnowledgeArea:
+    sources:
+      - access: "Murcia-Grado.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/KnowledgeArea/{Knowledge Area ID}"
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(Knowledge Area)]
+
+  #################################################################
+  # FACULTY
+  #################################################################
+  murciaFaculty:
+    sources:
+      - access: "Murcia-Grado.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/Faculty/{Faculty ID}"
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty)]
+
+  #################################################################
+  # UNIVERSITY
+  #################################################################
+  murciaUniversity:
+    sources:
+      - access: "Murcia-Grado.csv"
+        referenceFormulation: ql:CSV
+    s: "https://spanishuniversities.data/id/lude/University/{University ID}"
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:type, $(Type)]
+      - p: lude:hasFaculty
+        o:
+          mapping: murciaFaculty
+          condition:
+            child: "Faculty ID"
+            parent: "Faculty ID"
+      - p: lude:offers
+        o:
+          mapping: murciaDegree
+          condition:
+            child: "University ID"
+            parent: "University ID"

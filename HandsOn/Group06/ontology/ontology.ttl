@@ -1,97 +1,75 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix gtfs: <https://vocab.gtfs.org/terms#> .
-@prefix ex: <http://group06.linkeddata.es/ontology/> .
+@prefix gtfs: <http://vocab.gtfs.org/terms#> .
+@prefix geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbo:  <http://dbpedia.org/ontology/> .
+@prefix schema: <http://schema.org/> .
+@prefix ex:   <http://group06.linkeddata.es/ontology/madridbus/> .
 
 #################################################################
 # Ontology Metadata
 #################################################################
 
-<http://group06.linkeddata.es/ontology/guessing>
+<http://group06.linkeddata.es/ontology/madridbus>
     a owl:Ontology ;
+    dcterms:title "Madrid Bus Network Ontology"@en ;
     dcterms:creator "Group 06" ;
-    rdfs:comment "Extension of GTFS for user-submitted guesses of vehicle arrival times."@en ;
-    owl:imports
-        <https://vocab.gtfs.org/terms>,
-        <http://xmlns.com/foaf/0.1/> .
+    dcterms:created "2025-10"^^xsd:gYearMonth ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "Lightweight ontology for Madrid's CRTM bus network data (mdb-2820), extending GTFS vocabulary. Bus stops are linked to geographic areas (neighborhoods, districts) which are explicitly linked to DBpedia entities via owl:sameAs, enabling quiz content retrieval about local history and culture."@en ;
+    owl:versionInfo "1.0" ;
+    owl:imports <http://vocab.gtfs.org/terms> ;
+    dcterms:source <https://mobilitydatabase.org/feeds/gtfs/mdb-2820> ;
+    rdfs:seeAlso <https://www.crtm.es> .
 
 #################################################################
 # Classes
 #################################################################
 
-# User (reusing FOAF)
-foaf:Person a owl:Class ;
-    rdfs:label "User"@en ;
-    rdfs:comment "Represents a registered user who makes arrival time guesses."@en .
+ex:BusRoute a owl:Class ;
+    rdfs:label "Bus Route"@en ;
+    rdfs:subClassOf gtfs:Route ;
+    rdfs:comment "A bus route in the Madrid CRTM network. Specialization of gtfs:Route with route_type = 3 (Bus service)."@en ;
+    owl:disjointWith ex:BusStop , ex:LocalArea .
 
-# Guess (new)
-ex:Guess a owl:Class ;
-    rdfs:label "Guess"@en ;
-    rdfs:comment "A user’s prediction of the actual arrival time of a specific route at a specific stop."@en .
+ex:BusStop a owl:Class ;
+    rdfs:label "Bus Stop"@en ;
+    rdfs:subClassOf gtfs:Stop ;
+    rdfs:comment "A physical bus stop location in Madrid's CRTM network with WGS84 coordinates. Each stop is associated with a geographic area (ex:LocalArea) for contextualized information retrieval."@en ;
+    owl:disjointWith ex:BusRoute , ex:LocalArea .
 
-#################################################################
-# Object Properties
-#################################################################
-
-# A guess is made by a user
-ex:madeBy a owl:ObjectProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range foaf:Person ;
-    rdfs:comment "Connects a guess to the user who made it."@en .
-
-# A guess relates to a specific route
-ex:forRoute a owl:ObjectProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range gtfs:Route ;
-    rdfs:comment "The route for which the user made a guess."@en .
-
-# A guess relates to a specific stop
-ex:atStop a owl:ObjectProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range gtfs:Stop ;
-    rdfs:comment "The stop where the guessed arrival occurs."@en .
-
-# A guess may refer to a specific scheduled stop-time (GTFS)
-ex:basedOnStopTime a owl:ObjectProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range gtfs:StopTime ;
-    rdfs:comment "Connects the guess to the corresponding scheduled stop-time entry."@en .
+ex:LocalArea a owl:Class ;
+    rdfs:label "Local Area"@en ;
+    rdfs:subClassOf schema:Place , dbo:Place ;
+    rdfs:comment "A named geographic area in Madrid (neighborhood, district, landmark zone) that contains one or more bus stops. Instances are linked to corresponding DBpedia resources via owl:sameAs to enable retrieval of cultural, historical, and touristic information."@en ;
+    owl:disjointWith ex:BusRoute , ex:BusStop .
 
 #################################################################
 # Datatype Properties
 #################################################################
 
-# User attributes
-foaf:nick a owl:DatatypeProperty ;
-    rdfs:domain foaf:Person ;
-    rdfs:range xsd:string .
+ex:areaCode a owl:DatatypeProperty ;
+    rdfs:label "area code"@en ;
+    rdfs:domain ex:LocalArea ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A short alphanumeric code identifying the local area (e.g., 'ARJ' for Aranjuez, 'CHB' for Chamberí). Used for compact area identification in the application."@en .
 
-ex:ranking a owl:DatatypeProperty ;
-    rdfs:domain foaf:Person ;
-    rdfs:range xsd:integer ;
-    rdfs:comment "The rank of the user based on performance."@en .
+#################################################################
+# Object Properties
+#################################################################
 
-ex:score a owl:DatatypeProperty ;
-    rdfs:domain foaf:Person ;
-    rdfs:range xsd:decimal ;
-    rdfs:comment "The accumulated score of the user based on guess accuracy."@en .
+ex:locatedInArea a owl:ObjectProperty ;
+    rdfs:label "located in area"@en ;
+    rdfs:domain ex:BusStop ;
+    rdfs:range ex:LocalArea ;
+    rdfs:comment "Links a bus stop to the local geographic area (neighborhood, district) where it is located. This enables the application to retrieve area-specific quiz content from DBpedia."@en ;
+    owl:inverseOf ex:containsStop .
 
-# Guess attributes
-ex:guessedArrivalTime a owl:DatatypeProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range xsd:dateTime ;
-    rdfs:comment "The time predicted by the user for the arrival."@en .
-
-ex:expectedArrivalTime a owl:DatatypeProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range xsd:time ;
-    rdfs:comment "The scheduled arrival time from GTFS data."@en .
-
-dcterms:created a owl:DatatypeProperty ;
-    rdfs:domain ex:Guess ;
-    rdfs:range xsd:dateTime ;
-    rdfs:comment "The timestamp when the guess was submitted."@en .
+ex:containsStop a owl:ObjectProperty ;
+    rdfs:label "contains stop"@en ;
+    rdfs:domain ex:LocalArea ;
+    rdfs:range ex:BusStop ;
+    rdfs:comment "Indicates that a geographic area contains one or more bus stops. Inverse of ex:locatedInArea."@en ;
+    owl:inverseOf ex:locatedInArea .

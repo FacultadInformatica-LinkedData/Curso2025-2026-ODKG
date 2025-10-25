@@ -240,5 +240,18 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column latitud using expression grel:value.split(\".\")[0] + \".\" + value.split(\".\")[1].substring(0, 6)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha_inst",
+    "expression": "grel:value.toDate('dd/MM/yyyy').toString('yyyy-MM-dd')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha_inst using expression grel:value.toDate('dd/MM/yyyy').toString('yyyy-MM-dd')"
   }
 ]
