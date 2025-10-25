@@ -1,0 +1,363 @@
+[
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Auditorio al aire libre. Parque del Calero",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118347646",
+      "name": "Auditorio del parque El Calero",
+      "types": [
+        "Q811979"
+      ],
+      "score": 58.57142857142858
+    },
+    "shareNewTopics": false,
+    "description": "Match item Auditorio del parque El Calero (Q118347646) for cells containing \"Auditorio al aire libre. Parque del Calero\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro Cultural Auditorio Parque El Paraíso (San Blas - Canillejas)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q117839132",
+      "name": "Auditorio del Parque del Paraíso, Madrid",
+      "types": [
+        "Q230752"
+      ],
+      "score": 57.85714285714286
+    },
+    "shareNewTopics": false,
+    "description": "Match item Auditorio del Parque del Paraíso, Madrid (Q117839132) for cells containing \"Centro Cultural Auditorio Parque El Paraíso (San Blas - Canillejas)\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro Cultural Buenavista (Salamanca)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q47012449",
+      "name": "Centro Cultural Buenavista, Madrid",
+      "types": [
+        "Q1329623",
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 60.00000000000001
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro Cultural Buenavista, Madrid (Q47012449) for cells containing \"Centro Cultural Buenavista (Salamanca)\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro Cultural Casa de Vacas (Retiro)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q108328073",
+      "name": "Centro Cultural Casa de Vacas",
+      "types": [
+        "Q1329623",
+        "Q327333"
+      ],
+      "score": 63.57142857142858
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro Cultural Casa de Vacas (Q108328073) for cells containing \"Centro Cultural Casa de Vacas (Retiro)\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro Cultural Casa del Reloj (Arganzuela)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56426877",
+      "name": "Centro Cultural Casa del Reloj",
+      "types": [
+        "Q1329623"
+      ],
+      "score": 60.714285714285715
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro Cultural Casa del Reloj (Q56426877) for cells containing \"Centro Cultural Casa del Reloj (Arganzuela)\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro Cultural Fernando de los Ríos (Latina)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26805201",
+      "name": "Centro Cultural Fernando de los Ríos",
+      "types": [
+        "Q41176"
+      ],
+      "score": 65
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro Cultural Fernando de los Ríos (Q26805201) for cells containing \"Centro Cultural Fernando de los Ríos (Latina)\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro Cultural Lavapiés (Centro)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56427704",
+      "name": "La Tabacalera de Lavapiés",
+      "types": [
+        "Q77115",
+        "Q8536775",
+        "Q1329623"
+      ],
+      "score": 32.85714285714286
+    },
+    "shareNewTopics": false,
+    "description": "Match item La Tabacalera de Lavapiés (Q56427704) for cells containing \"Centro Cultural Lavapiés (Centro)\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro Cultural Puerta de Toledo (Centro)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2657591",
+      "name": "Gate of Toledo",
+      "types": [
+        "Q82117",
+        "Q143912"
+      ],
+      "score": 41.42857142857143
+    },
+    "shareNewTopics": false,
+    "description": "Match item Gate of Toledo (Q2657591) for cells containing \"Centro Cultural Puerta de Toledo (Centro)\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro Sefarad - Israel",
+    "judgment": "matched",
+    "match": {
+      "id": "Q111651292",
+      "name": "Centro Sefarad-Israel",
+      "types": [
+        "Q327333",
+        "Q194166"
+      ],
+      "score": 71.42857142857143
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro Sefarad-Israel (Q111651292) for cells containing \"Centro Sefarad - Israel\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro de Cultura Contemporánea Conde Duque",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56426480",
+      "name": "Centro de Cultura Contemporánea Conde Duque",
+      "types": [
+        "Q1329623"
+      ],
+      "score": 71.42857142857143
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro de Cultura Contemporánea Conde Duque (Q56426480) for cells containing \"Centro de Cultura Contemporánea Conde Duque\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "CentroCentro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56426764",
+      "name": "CentroCentro",
+      "types": [
+        "Q1329623"
+      ],
+      "score": 71.42857142857143
+    },
+    "shareNewTopics": false,
+    "description": "Match item CentroCentro (Q56426764) for cells containing \"CentroCentro\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Fernán Gómez Centro Cultural de la Villa",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56426930",
+      "name": "Fernán Gómez Centro Cultural de la Villa",
+      "types": [
+        "Q1329623"
+      ],
+      "score": 71.42857142857143
+    },
+    "shareNewTopics": false,
+    "description": "Match item Fernán Gómez Centro Cultural de la Villa (Q56426930) for cells containing \"Fernán Gómez Centro Cultural de la Villa\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Matadero Madrid",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4043800",
+      "name": "Matadero Madrid",
+      "types": [
+        "Q385557",
+        "Q2190251",
+        "Q1497375",
+        "Q117531692"
+      ],
+      "score": 71.42857142857143
+    },
+    "shareNewTopics": false,
+    "description": "Match item Matadero Madrid (Q4043800) for cells containing \"Matadero Madrid\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Matadero Medialab",
+    "judgment": "matched",
+    "match": {
+      "id": "Q110610911",
+      "name": "Medialab-Matadero",
+      "types": [
+        "Q1329623",
+        "Q43229"
+      ],
+      "score": 71.42857142857143
+    },
+    "shareNewTopics": false,
+    "description": "Match item Medialab-Matadero (Q110610911) for cells containing \"Matadero Medialab\" in column NOMBRE"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE",
+    "expression": "grel:if(cell.recon != null, \"https://www.wikidata.org/wiki/\" + cell.recon.match.id, null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Matched_URL",
+    "columnInsertIndex": 1,
+    "description": "Create column Matched_URL at index 1 based on column NOMBRE using expression grel:if(cell.recon != null, \"https://www.wikidata.org/wiki/\" + cell.recon.match.id, null)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Matched_URL",
+    "description": "Remove column Matched_URL"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE",
+    "expression": "grel:if(cell.recon != null, \"https://www.wikidata.org/wiki/\" + cell.recon.match.id, null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Matched_URL",
+    "columnInsertIndex": 1,
+    "description": "Create column Matched_URL at index 1 based on column NOMBRE using expression grel:if(cell.recon != null, \"https://www.wikidata.org/wiki/\" + cell.recon.match.id, null)"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type null"
+  }
+]
