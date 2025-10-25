@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "prop": "http://fernando.org/properties/",
+    "ex": "http://fernando.org/resource/",
+    "p": "http://fernando.org/classes/",
+    "full_name": "prop:fullName",
+    "hometown": "prop:hometown",
+    "age": "prop:age",
+    "alma_mater": "prop:almaMater",
+    "parents": "prop:parent",
+    "current_subjects": "prop:currentSubjects",
+    "name": "prop:name",
+    "teacher": "prop:teacher",
+    "description": "prop:description",
+    "subjects": "prop:subjects"
+  },
+  "@type": "p:Person",
+  "@id": "ex:FernandoGonzalezCavazos",
+  "full_name": "Fernando González Cavazos",
+  "hometown": "Monterrey",
+  "age": 22,
+  "alma_mater": "Instituto Tecnológico y de Estudios Superiores de Monterrey",
+  "parents": [
+    {
+      "@type": "p:Person",
+      "@id": "ex:FernandoGonzalezGonzalez",
+      "name": "Fernando González González"
+    },
+    {
+      "@type": "p:Person",
+      "@id": "ex:GloriaAliciaCavazosSuarez",
+      "name": "Gloria Alicia Cavazos Suárez"
+    }
+  ],
+  "current_subjects": [
+    {
+      "@type": "p:Subject",
+      "@id": "ex:OpenData",
+      "name": "Open Data",
+      "teacher": {
+        "@type": "p:Person",
+        "@id": "ex:OscarCorcho",
+        "name": "Oscar Corcho"
+      },
+      "description": "Desarrollo y Entendimiento de Ontologías"
+    },
+    {
+      "@type": "p:Subject",
+      "@id": "ex:DataProcess",
+      "name": "Data Process",
+      "teacher": {
+        "@type": "p:Person",
+        "@id": "ex:ErnestinaMenasalvas",
+        "name": "Ernestina Menasalvas"
+      },
+      "description": "Project Management"
+    },
+    {
+      "@type": "p:Subject",
+      "@id": "ex:DataVisualization",
+      "name": "Data Visualization",
+      "teacher": {
+        "@type": "p:Person",
+        "@id": "ex:PabloToharia",
+        "name": "Pablo Toharia"
+      },
+      "description": "Selección y Entendimiento de recursos visuales"
+    }
+  ]
+}

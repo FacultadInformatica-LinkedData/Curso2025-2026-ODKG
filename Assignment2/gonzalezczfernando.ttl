@@ -1,0 +1,83 @@
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################
+#    Classes
+#################################
+
+ex:Class rdf:type owl:Class ;
+    rdfs:label "Class" .
+
+ex:Sensor rdf:type owl:Class ;
+    rdfs:label "Sensor" .
+
+ex:Table rdf:type owl:Class ;
+    rdfs:label "Table" .
+
+ex:Measurement rdf:type owl:Class ;
+    rdfs:label "Measurement" .
+
+ex:Organization rdf:type owl:Class ;
+    rdfs:label "Organization" .
+
+#################################
+#    Object Properties
+#################################
+
+ex:contains rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Class ;
+    rdfs:range [ owl:unionOf (ex:Sensor ex:Table) ] ;
+    rdfs:label "contains" .
+
+ex:hasMeasurement rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Sensor ;
+    rdfs:range ex:Measurement ;
+    rdfs:label "has measurement" .
+
+ex:hasOwner rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Table ;
+    rdfs:range ex:Organization ;
+    rdfs:label "has owner" .
+
+#################################
+#    Data Properties
+#################################
+
+ex:hasTemperature rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Measurement ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has temperature" .
+
+ex:atTime rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Measurement ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "at time" .
+
+ex:hasName rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Organization ;
+    rdfs:range xsd:string ;
+    rdfs:label "has name" .
+
+#################################
+#    Instances
+#################################
+
+ex:Class03 rdf:type ex:Class ;
+    ex:contains ex:Sensor347, ex:Table322 .
+
+ex:Sensor347 rdf:type ex:Sensor ;
+    ex:hasMeasurement ex:Measurement8432 .
+
+ex:Table322 rdf:type ex:Table ;
+    ex:hasOwner ex:ETSInformaticos .
+
+ex:Measurement8432 rdf:type ex:Measurement ;
+    ex:hasTemperature 29 ;
+    ex:atTime "2022-09-12T12:01:12"^^xsd:dateTime .
+
+
+ex:ETSIInformaticos rdf:type ex:Organization ;
+    ex:hasName "ETSIInformaticos" .
