@@ -9,6 +9,7 @@ Original file is located at
 **Task 06: Modifying RDF(s)**
 """
 
+#
 #!pip install rdflib
 import urllib.request
 url = 'https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2025-2026/refs/heads/master/Assignment4/course_materials/python/validation.py'
@@ -29,6 +30,7 @@ r = Report()
 ns = Namespace("http://mydomain.org#")
 g.add((ns.Researcher, RDF.type, RDFS.Class))
 for s, p, o in g:
+
   print(s,p,o)
 
 """**Task 6.0: Create new prefixes for "ontology" and "person" as shown in slide 14 of the Slidedeck 01a.RDF(s)-SPARQL shown in class.**"""
