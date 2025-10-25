@@ -1,0 +1,46 @@
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Classes
+ex:ClassRoom a owl:Class ; rdfs:label "ClassRoom" .
+ex:Sensor a owl:Class ; rdfs:label "Sensor" .
+ex:Table a owl:Class ; rdfs:label "Table" .
+ex:Measurement a owl:Class ; rdfs:label "Measurement" .
+ex:Organization a owl:Class ; rdfs:label "Organization" .
+
+#Properties
+ex:contains a owl:ObjectProperty ; rdfs:label "contains" .
+ex:hasMeasurement a owl:ObjectProperty ; rdfs:label "has measurement" .
+ex:hasOwner a owl:ObjectProperty ; rdfs:label "has owner" .
+ex:hasTemperature a owl:DatatypeProperty ;
+    rdfs:domain ex:Measurement ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has temperature" .
+ex:atTime a owl:DatatypeProperty ;
+    rdfs:domain ex:Measurement ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "at time" .
+ex:hasName a owl:DatatypeProperty ;
+    rdfs:domain ex:Organization ;
+    rdfs:range xsd:string ;
+    rdfs:label "has name" .
+
+# Instances
+ex:ClassRoom03 a ex:ClassRoom ;
+    ex:contains ex:Sensor347, ex:Table322 .
+
+ex:Sensor347 a ex:Sensor ;
+    ex:hasMeasurement ex:Measurement8432 .
+
+ex:Table322 a ex:Table ;
+    ex:hasOwner ex:ETSIInformaticos .
+
+ex:Measurement8432 a ex:Measurement ;
+    ex:hasTemperature "29"^^xsd:integer ;
+    ex:atTime "2022-09-12T12:01:12"^^xsd:dateTime .
+
+ex:ETSIInformaticos a ex:Organization ;
+    ex:hasName "ETSI Informáticos" .
