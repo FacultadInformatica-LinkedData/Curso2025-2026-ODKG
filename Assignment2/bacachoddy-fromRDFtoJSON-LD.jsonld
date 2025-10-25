@@ -1,0 +1,113 @@
+{
+  "@context": {
+    "ex": "http://example.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "includes": {"@id": "ex:includes", "@type": "@id"},
+    "hasMeasurement": {"@id": "ex:hasMeasurement", "@type": "@id"},
+    "hasOwner": {"@id": "ex:hasOwner", "@type": "@id"},
+    "hasTemperature": {"@id": "ex:hasTemperature", "@type": "xsd:integer"},
+    "atTime": {"@id": "ex:atTime", "@type": "xsd:dateTime"},
+    "hasName": {"@id": "ex:hasName", "@type": "xsd:string"},
+    "label": "rdfs:label",
+    "type": "@type"
+  },
+
+  "@graph": [
+
+    {
+      "@id": "ex:Class",
+      "type": "owl:Class",
+      "label": "Class"
+    },
+    {
+      "@id": "ex:Sensor",
+      "type": "owl:Class",
+      "label": "Sensor"
+    },
+    {
+      "@id": "ex:Computer",
+      "type": "owl:Class",
+      "label": "Computer"
+    },
+    {
+      "@id": "ex:Measurement",
+      "type": "owl:Class",
+      "label": "Measurement"
+    },
+    {
+      "@id": "ex:User",
+      "type": "owl:Class",
+      "label": "User"
+    },
+
+    {
+      "@id": "ex:includes",
+      "type": "owl:ObjectProperty",
+      "label": "includes"
+    },
+    {
+      "@id": "ex:hasMeasurement",
+      "type": "owl:ObjectProperty",
+      "label": "has measurement"
+    },
+    {
+      "@id": "ex:hasOwner",
+      "type": "owl:ObjectProperty",
+      "label": "has owner"
+    },
+    {
+      "@id": "ex:hasTemperature",
+      "type": "owl:DatatypeProperty",
+      "label": "has temperature",
+      "rdfs:domain": {"@id": "ex:Measurement"},
+      "rdfs:range": {"@id": "xsd:integer"}
+    },
+    {
+      "@id": "ex:atTime",
+      "type": "owl:DatatypeProperty",
+      "label": "at time",
+      "rdfs:domain": {"@id": "ex:Measurement"},
+      "rdfs:range": {"@id": "xsd:dateTime"}
+    },
+    {
+      "@id": "ex:hasName",
+      "type": "owl:DatatypeProperty",
+      "label": "has name",
+      "rdfs:domain": {"@id": "ex:Organization"},
+      "rdfs:range": {"@id": "xsd:string"}
+    },
+
+    {
+      "@id": "ex:Class01",
+      "type": "ex:Class",
+      "ex:includes": [
+        {"@id": "ex:Sensor029"},
+        {"@id": "ex:Computer101"}
+      ]
+    },
+    {
+      "@id": "ex:Sensor029",
+      "type": "ex:Sensor",
+      "ex:hasMeasurement": {"@id": "ex:Measurement8401"}
+    },
+    {
+      "@id": "ex:Computer101",
+      "type": "ex:Computer",
+      "ex:hasOwner": {"@id": "ex:User10A"}
+    },
+    {
+      "@id": "ex:Measurement8401",
+      "type": "ex:Measurement",
+      "ex:hasTemperature": 29,
+      "ex:atTime": "2022-06-12T12:01:12"
+    },
+    {
+      "@id": "ex:User10A",
+      "type": "ex:User",
+      "ex:hasName": "Pedro"
+    }
+  ]
+}
