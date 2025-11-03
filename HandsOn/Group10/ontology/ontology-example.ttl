@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <https://www.wikidata.org/entity/> .
 
 # --- Importamos la ontología que define las clases y propiedades ---
 # Asume que el fichero de la ontología se llama 'ontologia.ttl'
@@ -22,6 +23,15 @@ ns:Neighborhood_3 a owl:NamedIndividual,
     ns:neighborhoodId 3 ;
     ns:neighborhoodName "La Barceloneta" ;
     ns:hasDistrict ns:District_1 . # Conectamos el barrio a su distrito
+
+# --- Instancia de la Ciudad de Barcelona ---
+ns:City_1 a owl:NamedIndividual,
+        ns:City ;
+    ns:cityName "Barcelona" ;
+    owl:sameAs wd:Q1492 .
+
+# --- Vincular el distrito con la ciudad ---
+ns:District_1 ns:hasCity ns:City_1 .
 
 # --- Instancias de Bares y sus Direcciones ---
 

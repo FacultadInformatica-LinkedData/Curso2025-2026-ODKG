@@ -15,6 +15,9 @@ ns:Bar a owl:Class ;
 ns:BikingStation a owl:Class ;
     rdfs:label "Biking Station" .
 
+ns:City a owl:Class ;
+    rdfs:label "City" .
+
 ns:District a owl:Class ;
     rdfs:label "District" .
 
@@ -33,6 +36,12 @@ ns:hasAddress a owl:ObjectProperty ;
     ] .
     # Rango: NO (porque la flecha es discontinua según la leyenda)
     # No se define rdfs:range.
+
+ns:hasCity a owl:ObjectProperty ;
+    rdfs:label "has city" ;
+    # Dominio: SÍ, Rango: SÍ (flecha sólida)
+    rdfs:domain ns:District ;
+    rdfs:range ns:City .
 
 ns:hasDistrict a owl:ObjectProperty ;
     rdfs:label "has district" ;
@@ -126,4 +135,10 @@ ns:districtId a owl:DatatypeProperty ;
 ns:districtName a owl:DatatypeProperty ;
     rdfs:label "districtName" ;
     rdfs:domain ns:District ;
+    rdfs:range xsd:string .
+
+# --- Atributos de City ---
+ns:cityName a owl:DatatypeProperty ;
+    rdfs:label "cityName" ;
+    rdfs:domain ns:City ;
     rdfs:range xsd:string .

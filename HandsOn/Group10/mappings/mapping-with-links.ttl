@@ -6,14 +6,40 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 # =================================================================
-# === MAPEOS DESDE MusicaCopas-updated.csv (BARES) ===
+# === MAPEOS DESDE MusicaCopas-with-links.csv (BARES) ===
 # =================================================================
+
+# --- 1. TriplesMap para Barcelona ---
+
+<#CityTriplesMap> a rr:TriplesMap ;
+    rml:logicalSource [
+        # Cualquier CSV (no importa, porque la ciudad es fija)
+        rml:source "BikeStations-with-links.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:constant <http://www.barnabikes.org/ODKG/handsOn/group10/resource/City/Barcelona> ;
+        rr:class ns:City
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate ns:cityName ;
+        rr:objectMap [ rr:constant "Barcelona" ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [ rr:constant "https://www.wikidata.org/wiki/Q1492" ;
+                       rr:termType rr:IRI ]
+    ] .
+
 
 # --- 1. TriplesMap para District (desde Bares) ---
 # Genera entidades de Distrito a partir de las columnas de distrito en el CSV de bares
 <#DistrictTriplesMap_Bars> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "MusicaCopas-updated.csv";
+        rml:source "MusicaCopas-with-links.csv";
         rml:referenceFormulation ql:CSV
     ];
 
@@ -30,13 +56,28 @@
     rr:predicateObjectMap [
         rr:predicate ns:districtName;
         rr:objectMap [ rml:reference "districtName"; rr:datatype xsd:string ]
-    ].
+    ];
+      rr:predicateObjectMap [
+        rr:predicate ns:hasCity ;
+        rr:objectMap [
+            rr:parentTriplesMap <#CityTriplesMap>
+        ]
+    ];
+    rr:predicateObjectMap [
+    rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ];
+    rr:objectMap [
+        rml:reference "districtWikidata2"; # Use the column value directly
+        rr:termType rr:IRI ]
+] .
+    
+   
+
 
 # --- 2. TriplesMap para Neighborhood (desde Bares) ---
 # Genera Barrios y los enlaza a sus Distritos
 <#NeighborhoodTriplesMap_Bars> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "MusicaCopas-updated.csv";
+        rml:source "MusicaCopas-with-links.csv";
         rml:referenceFormulation ql:CSV
     ];
 
@@ -64,13 +105,19 @@
                 rr:parent "districtId";
             ]
         ]
-    ].
+    ];
+     rr:predicateObjectMap [
+        rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ];
+        rr:objectMap [
+            rml:reference "neighborhoodWikidata2"; # Se usa la referencia a la columna
+            rr:termType rr:IRI ]
+    ] .
 
 # --- 3. TriplesMap para StreetAddress (desde Bares) ---
 # Genera Direcciones y las enlaza a sus Barrios
 <#AddressTriplesMap_Bars> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "MusicaCopas-updated.csv";
+        rml:source "MusicaCopas-with-links.csv";
         rml:referenceFormulation ql:CSV
     ];
 
@@ -103,7 +150,7 @@
 # Genera Bares y los enlaza a sus Direcciones
 <#BarTriplesMap> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "MusicaCopas-updated.csv";
+        rml:source "MusicaCopas-with-links.csv";
         rml:referenceFormulation ql:CSV
     ];
 
@@ -129,13 +176,13 @@
     ].
 
 # =================================================================
-# === MAPEOS DESDE BikeStations-updated.csv (ESTACIONES) ===
+# === MAPEOS DESDE BikeStations-with-links.csv (ESTACIONES) ===
 # =================================================================
 
 # --- 1. TriplesMap para District (desde Estaciones) ---
 <#DistrictTriplesMap_Stations> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "BikeStations-updated.csv";
+        rml:source "BikeStations-with-links.csv";
         rml:referenceFormulation ql:CSV
     ];
 
@@ -151,12 +198,24 @@
     rr:predicateObjectMap [
         rr:predicate ns:districtName;
         rr:objectMap [ rml:reference "districtName"; rr:datatype xsd:string ]
-    ].
+    ];
+     rr:predicateObjectMap [
+        rr:predicate ns:hasCity ;
+        rr:objectMap [
+            rr:parentTriplesMap <#CityTriplesMap>
+        ]
+    ];
+   rr:predicateObjectMap [
+    rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ];
+    rr:objectMap [
+        rml:reference "districtWikidata2"; # Use the column value directly
+        rr:termType rr:IRI ]
+] .
 
 # --- 2. TriplesMap para Neighborhood (desde Estaciones) ---
 <#NeighborhoodTriplesMap_Stations> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "BikeStations-updated.csv";
+        rml:source "BikeStations-with-links.csv";
         rml:referenceFormulation ql:CSV
     ];
 
@@ -184,12 +243,18 @@
                 rr:parent "districtId";
             ]
         ]
-    ].
+    ];
+    rr:predicateObjectMap [
+        rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ];
+        rr:objectMap [
+            rml:reference "neighborhoodWikidata2"; # Se usa la referencia a la columna
+            rr:termType rr:IRI ]
+    ] .
 
 # --- 3. TriplesMap para StreetAddress (desde Estaciones) ---
 <#AddressTriplesMap_Stations> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "BikeStations-updated.csv";
+        rml:source "BikeStations-with-links.csv";
         rml:referenceFormulation ql:CSV
     ];
 
@@ -221,7 +286,7 @@
 # --- 4. TriplesMap para BikingStation ---
 <#StationTriplesMap> a rr:TriplesMap;
     rml:logicalSource [
-        rml:source "BikeStations-updated.csv";
+        rml:source "BikeStations-with-links.csv";
         rml:referenceFormulation ql:CSV
     ];
 
