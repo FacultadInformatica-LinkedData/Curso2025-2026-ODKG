@@ -3,6 +3,6 @@
 ## Group Members  
 - **Adrián García-Pozuelo Fornieles** – SirioElBelugoncio
 - **Wenwen Yang** – WW1027
-- **Jingjing Ye** – jingye1d
+- **Jingjing Ye** – JINGYE1D
 - **Khulan Bayarkhuu** – bayarkhuukhulan
 - **Roopha Sharon** – RoophaSharon 

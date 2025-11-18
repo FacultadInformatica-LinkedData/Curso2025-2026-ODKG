@@ -1,0 +1,220 @@
+prefixes:
+  rr:  http://www.w3.org/ns/r2rml#
+  foaf: http://xmlns.com/foaf/0.1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rev:  http://purl.org/stuff/rev#
+  schema: http://schema.org/
+  dct:  http://purl.org/dc/terms/
+  rml:  http://semweb.mmlab.be/ns/rml#
+  ql:   http://semweb.mmlab.be/ns/ql#
+  rdf:  http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  vocab: http://example.org#
+  lude: http://spanishuniversities.data.es/lude/ontology#
+  id:   http://spanishuniversities.data.es/lude/resource/
+  owl:  http://www.w3.org/2002/07/owl#
+
+mappings:
+
+
+  murcia1DegreeUD:
+    sources:
+      - [Murcia2-listaestudios-updated-with-links.csv~csv]
+    s: id:Degree/$(Degree ID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+     
+      - [owl:sameAs, $(Same _as _Wikidata _degree)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: murcia1LevelDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level ID)]
+              - [str2, $(Academic Level ID)]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: murcia1KnowledgeDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Knowledge Area ID)]
+              - [str2, $(Knowledge Area ID)]
+
+  murcia1LevelDK:
+    sources:
+      - [Murcia2-listaestudios-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(Academic Level ID)
+    po:
+      - [rdf:type, lude:academicLevel]
+      - [rdfs:label, $(Academic Level), xsd:string]
+
+  murcia1KnowledgeDK:
+    sources:
+      - [Murcia2-listaestudios-updated-with-links.csv~csv]
+    s: id:KnowledgeArea/$(Knowledge Area ID)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(Knowledge Area), xsd:string]
+
+  murcia1UniversityUD:
+    sources:
+      - [Murcia2-listaestudios-updated-with-links.csv~csv]
+    s: id:University/$(University ID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University), xsd:string]
+      - [lude:type, $(Type), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_University)~iri]
+      - p: lude:offers
+        o:
+          mapping: murcia1DegreeUD
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(University ID)]
+              - [str2, $(University ID)]
+
+
+  murcia2DegreeDF:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:Degree/$(Degree ID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+   
+      - [owl:sameAs, $(Same_as_Wikidata_Degree)~iri]
+      - p: lude:deliveredAt
+        o:
+          mapping: murcia2FacultyDF
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Faculty ID)]
+              - [str2, $(Faculty ID)]
+     
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: murcia2LevelDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level ID)]
+              - [str2, $(Academic Level ID)]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: murcia2KnowledgeDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Knowledge Area ID)]
+              - [str2, $(Knowledge Area ID)]
+
+  murcia2FacultyDF:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:Faculty/$(Faculty ID)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_faculty)~iri]
+
+  murcia2LevelDK:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(Academic Level ID)
+    po:
+      - [rdf:type, lude:academicLevel]
+      - [rdfs:label, $(Academic Level), xsd:string]
+
+  murcia2KnowledgeDK:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:KnowledgeArea/$(Knowledge Area ID)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(Knowledge Area), xsd:string]
+
+
+  murcia2UniversityUD:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:University/$(University ID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_University)~iri]
+
+
+  murcia3DegreeUD:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:Degree/$(Degree ID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_Degree)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: murcia3LevelDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level ID)]
+              - [str2, $(Academic Level ID)]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: murcia3KnowledgeDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Knowledge Area ID)]
+              - [str2, $(Knowledge Area ID)]
+      - p: lude:deliveredAt
+        o:
+          mapping: murcia3FacultyDF
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Faculty ID)]
+              - [str2, $(Faculty ID)]
+
+  murcia3FacultyDF:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:Faculty/$(Faculty ID)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_faculty)~iri]
+
+  murcia3LevelDK:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(Academic Level ID)
+    po:
+      - [rdf:type, lude:academicLevel]
+      - [rdfs:label, $(Academic Level), xsd:string]
+
+  murcia3KnowledgeDK:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:KnowledgeArea/$(Knowledge Area ID)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(Knowledge Area), xsd:string]
+
+  murcia3UniversityUD:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:University/$(University ID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_University)~iri]

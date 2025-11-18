@@ -1,0 +1,222 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix rml:   <http://w3id.org/rml/> .
+@prefix ql:    <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix lude:  <http://spanishuniversities.data.es/lude/ontology#> .
+@prefix id:    <http://spanishuniversities.data.es/lude/resource/> .
+@prefix map:   <http://mapping.example.com/> .
+
+
+
+map:murcia1DegreeUD a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia2-listaestudios-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/Degree/{Degree ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ;  rr:object lude:Degree ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Degree" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate lude:academicYear ; rr:objectMap [ rml:reference "Academic Year" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate owl:sameAs ;   rr:objectMap [ rml:reference "Same _as _Wikidata _degree" ; rr:termType rr:IRI ] ] ,
+    [ rr:predicate lude:hasAcademicLevel ;
+      rr:objectMap [
+        rr:parentTriplesMap map:murcia1LevelDK ;
+        rr:joinCondition [ rr:child "Academic Level ID" ; rr:parent "Academic Level ID" ]
+      ]
+    ] ,
+    [ rr:predicate lude:hasKnowledgeArea ;
+      rr:objectMap [
+        rr:parentTriplesMap map:murcia1KnowledgeDK ;
+        rr:joinCondition [ rr:child "Knowledge Area ID" ; rr:parent "Knowledge Area ID" ]
+      ]
+    ] .
+
+map:murcia1LevelDK a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia2-listaestudios-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/AcademicLevel/{Academic Level ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:academicLevel ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Academic Level" ; rr:datatype xsd:string ] ] .
+
+map:murcia1KnowledgeDK a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia2-listaestudios-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/KnowledgeArea/{Knowledge Area ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:KnowledgeArea ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Knowledge Area" ; rr:datatype xsd:string ] ] .
+
+map:murcia1UniversityUD a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia2-listaestudios-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/University/{University ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:University ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "University" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate lude:type ;  rr:objectMap [ rml:reference "Type" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate owl:sameAs ; rr:objectMap [ rml:reference "Same_as_Wikidata_University" ; rr:termType rr:IRI ] ] ,
+    [ rr:predicate lude:offers ;
+      rr:objectMap [
+        rr:parentTriplesMap map:murcia1DegreeUD ;
+        rr:joinCondition [ rr:child "University ID" ; rr:parent "University ID" ]
+      ]
+    ] .
+
+
+
+map:murcia2DegreeDF a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/Degree/{Degree ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:Degree ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Degree" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate lude:academicYear ; rr:objectMap [ rml:reference "Academic Year" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate owl:sameAs ; rr:objectMap [ rml:reference "Same_as_Wikidata_Degree" ; rr:termType rr:IRI ] ] ,
+    [ rr:predicate lude:deliveredAt ;
+      rr:objectMap [
+        rr:parentTriplesMap map:murcia2FacultyDF ;
+        rr:joinCondition [ rr:child "Faculty ID" ; rr:parent "Faculty ID" ]
+      ]
+    ] ,
+    [ rr:predicate lude:hasAcademicLevel ;
+      rr:objectMap [
+        rr:parentTriplesMap map:murcia2LevelDK ;
+        rr:joinCondition [ rr:child "Academic Level ID" ; rr:parent "Academic Level ID" ]
+      ]
+    ] ,
+    [ rr:predicate lude:hasKnowledgeArea ;
+      rr:objectMap [
+        rr:parentTriplesMap map:murcia2KnowledgeDK ;
+        rr:joinCondition [ rr:child "Knowledge Area ID" ; rr:parent "Knowledge Area ID" ]
+      ]
+    ] .
+
+map:murcia2FacultyDF a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/Faculty/{Faculty ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:Faculty ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Faculty" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate owl:sameAs ; rr:objectMap [ rml:reference "Same_as_Wikidata_faculty" ; rr:termType rr:IRI ] ] .
+
+map:murcia2LevelDK a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/AcademicLevel/{Academic Level ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:academicLevel ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Academic Level" ; rr:datatype xsd:string ] ] .
+
+map:murcia2KnowledgeDK a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/KnowledgeArea/{Knowledge Area ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:KnowledgeArea ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Knowledge Area" ; rr:datatype xsd:string ] ] .
+
+map:murcia2UniversityUD a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/University/{University ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:University ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "University" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate owl:sameAs ; rr:objectMap [ rml:reference "Same_as_Wikidata_University" ; rr:termType rr:IRI ] ] .
+
+
+
+map:murcia3DegreeUD a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-corte-master-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/Degree/{Degree ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:Degree ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Degree" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate lude:academicYear ; rr:objectMap [ rml:reference "Academic Year" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate owl:sameAs ; rr:objectMap [ rml:reference "Same_as_Wikidata_Degree" ; rr:termType rr:IRI ] ] ,
+    [ rr:predicate lude:hasAcademicLevel ;
+      rr:objectMap [
+        rr:parentTriplesMap map:murcia3LevelDK ;
+        rr:joinCondition [ rr:child "Academic Level ID" ; rr:parent "Academic Level ID" ]
+      ]
+    ] ,
+    [ rr:predicate lude:hasKnowledgeArea ;
+      rr:objectMap [
+        rr:parentTriplesMap map:murcia3KnowledgeDK ;
+        rr:joinCondition [ rr:child "Knowledge Area ID" ; rr:parent "Knowledge Area ID" ]
+      ]
+    ] ,
+    [ rr:predicate lude:deliveredAt ;
+      rr:objectMap [
+        rr:parentTriplesMap map:murcia3FacultyDF ;
+        rr:joinCondition [ rr:child "Faculty ID" ; rr:parent "Faculty ID" ]
+      ]
+    ] .
+
+map:murcia3FacultyDF a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-corte-master-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/Faculty/{Faculty ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:Faculty ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Faculty" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate owl:sameAs ; rr:objectMap [ rml:reference "Same_as_Wikidata_faculty" ; rr:termType rr:IRI ] ] .
+
+map:murcia3LevelDK a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-corte-master-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/AcademicLevel/{Academic Level ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:academicLevel ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Academic Level" ; rr:datatype xsd:string ] ] .
+
+map:murcia3KnowledgeDK a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-corte-master-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/KnowledgeArea/{Knowledge Area ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:KnowledgeArea ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Knowledge Area" ; rr:datatype xsd:string ] ] .
+
+map:murcia3UniversityUD a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Murcia-nota-corte-master-2024-2025-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [ rr:template "http://spanishuniversities.data.es/lude/resource/University/{University ID}" ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:University ] ,
+    [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "University" ; rr:datatype xsd:string ] ] ,
+    [ rr:predicate owl:sameAs ; rr:objectMap [ rml:reference "Same_as_Wikidata_University" ; rr:termType rr:IRI ] ] .

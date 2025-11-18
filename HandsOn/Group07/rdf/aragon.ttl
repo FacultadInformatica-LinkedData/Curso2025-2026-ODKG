@@ -1,0 +1,828 @@
+@prefix comp: <http://semweb.mmlab.be/ns/rml-compression#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix id: <http://spanishuniversities.data.es/lude/resource/> .
+@prefix lude: <http://spanishuniversities.data.es/lude/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix schema: <http://schema.org/> .
+@prefix vocab: <http://example.org#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://spanishuniversities.data.es/lude/resource/AcademicLevel/d6d85d89b4612501521435bd3f620a9a>
+  a lude:AcademicLevel;
+  rdfs:label "Grado" .
+
+<http://spanishuniversities.data.es/lude/resource/AcademicLevel/eb0a191797624dd3a48fa681d3061212>
+  a lude:AcademicLevel;
+  rdfs:label "Máster" .
+
+<http://spanishuniversities.data.es/lude/resource/AcademicLevel/fba30e9ec1935ca7d36277ba76dddbba>
+  a lude:AcademicLevel;
+  rdfs:label "Doble Grado" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/02cf4df178ca1b504ce14692a6b8e40c>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Investigación y Estudios Avanzados en Historia" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/172c445581b4dbe928e1709c0705ead8>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Deportistas de alto nivel", "Discapacidad", "General (EvAU-PAU/ CFGS/ Acred. UNED/ Bach. ext. hom.)",
+    "Mayores de 25 años", "Mayores de 40 años", "Mayores de 45 años", "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Ingleses" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/51facf892da4bb8293669bf98712d398>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Deportistas de alto nivel", "Discapacidad", "General (EvAU-PAU/ CFGS/ Acred. UNED/ Bach. ext. hom.)",
+    "Mayores de 25 años", "Mayores de 40 años", "Mayores de 45 años", "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Clásicos" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/5475843b57df42303e375cb1bdae5710>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Deportistas de alto nivel", "Discapacidad", "General (EvAU-PAU/ CFGS/ Acred. UNED/ Bach. ext. hom.)",
+    "Mayores de 25 años", "Mayores de 40 años", "Mayores de 45 años", "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float, "7.620"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Filosofía" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/7f94015d2cdfaf063df4977805df4cdc>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Gestión del Patrimonio Cultural" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/8475426166aee334f5358ed67d0156c1>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Avanzados en Historia del Arte" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/85541e76aa07c90e254b925b2797ef4e>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Deportistas de alto nivel", "Discapacidad", "General (EvAU-PAU/ CFGS/ Acred. UNED/ Bach. ext. hom.)",
+    "Mayores de 25 años", "Mayores de 40 años", "Mayores de 45 años", "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float, "6.390"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia del Arte" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/94b459b9264d1b80181016e1166bdda3>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Mundo Antiguo y Patrimonio Arqueológico" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/9f3df13897db29b4c4616e96685ee38c>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia Contemporánea" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/9f44b2e8274d7aa32092d07741297b07>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Deportistas de alto nivel", "Discapacidad", "General (EvAU-PAU/ CFGS/ Acred. UNED/ Bach. ext. hom.)",
+    "Mayores de 25 años", "Mayores de 40 años", "Mayores de 45 años", "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/a5da8eb28defc982d63b29d8bf63a7f9>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Deportistas de alto nivel", "Discapacidad", "General (EvAU-PAU/ CFGS/ Acred. UNED/ Bach. ext. hom.)",
+    "Mayores de 25 años", "Mayores de 40 años", "Mayores de 45 años", "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Filología Hispánica" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/bedb88ffbc98a8af0d6d8a8e5628c07c>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Enseñanza del Español como Lengua Extranjera" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/c7120e0df965ce92812ce6c0dec150fa>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Investigación en Filosofía" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/d0178ef605b368a8221b083d48457016>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Deportistas de alto nivel", "Discapacidad", "General (EvAU-PAU/ CFGS/ Acred. UNED/ Bach. ext. hom.)",
+    "Mayores de 25 años", "Mayores de 40 años", "Mayores de 45 años", "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/f10222880e3cae5489f1aba4e7798854>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Bellas Artes" .
+
+<http://spanishuniversities.data.es/lude/resource/Degree/f567d2d3963970cd23804dff560f4f24>
+  a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:adjudicationRound "Deportistas de alto nivel", "Discapacidad", "General (EvAU-PAU/ CFGS/ Acred. UNED/ Bach. ext. hom.)",
+    "Mayores de 25 años", "Mayores de 40 años", "Mayores de 45 años", "Titulados Universitarios o equivalentes (incluidos los estudios extranjeros homologados)";
+  lude:cuffoffGrade "5.000"^^xsd:float;
+  lude:deliveredAt <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>;
+  lude:hasAcademicLevel <http://spanishuniversities.data.es/lude/resource/AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Lenguas Modernas" .
+
+<http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>
+  a lude:Faculty;
+  rdfs:label "Facultad de Filosofía y Letras" .
+
+<http://spanishuniversities.data.es/lude/resource/Faculty/f10222880e3cae5489f1aba4e7798854>
+  a lude:Faculty;
+  rdfs:label "Facultad de Ciencias Sociales y Humanas de Teruel" .
+
+<http://spanishuniversities.data.es/lude/resource/KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>
+  a lude:KnowledgeArea;
+  rdfs:label "Ciencias Sociales y Jurídicas" .
+
+<http://spanishuniversities.data.es/lude/resource/KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>
+  a lude:KnowledgeArea;
+  rdfs:label "Ingeniería y Arquitectura" .
+
+<http://spanishuniversities.data.es/lude/resource/KnowledgeArea/3a55b686cea34a8923b6ea395549772e>
+  a lude:KnowledgeArea;
+  rdfs:label "Otros" .
+
+<http://spanishuniversities.data.es/lude/resource/KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>
+  a lude:KnowledgeArea;
+  rdfs:label "Artes y Humanidades" .
+
+<http://spanishuniversities.data.es/lude/resource/KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>
+  a lude:KnowledgeArea;
+  rdfs:label "Ciencias de la Salud" .
+
+<http://spanishuniversities.data.es/lude/resource/KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>
+  a lude:KnowledgeArea;
+  rdfs:label "Ciencias" .
+
+<http://spanishuniversities.data.es/lude/resource/University/080475033eeb8f14c9bd1119f9fa6871>
+  a lude:University;
+  lude:acronym "UNED";
+  lude:cif "Q2818016D";
+  lude:email "infouned@adm.uned.es";
+  lude:modality "No Presencial";
+  lude:publicationYear "1972"^^xsd:gYear;
+  lude:telephone "91398600";
+  lude:type "Pública";
+  lude:url "www.uned.es"^^xsd:anyURI;
+  rdfs:label "Universidad Nacional de Educación a Distancia" .
+
+<http://spanishuniversities.data.es/lude/resource/University/094757ed9d7e9bb8929a087e18874962>
+  a lude:University;
+  lude:acronym "UOV";
+  lude:cif "Q3318001I";
+  lude:email "rectorado@uniovi.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1608"^^xsd:gYear;
+  lude:telephone "985104058";
+  lude:type "Pública";
+  lude:url "www.uniovi.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Oviedo" .
+
+<http://spanishuniversities.data.es/lude/resource/University/15d26bf729b84e22210b99d94c66cd90>
+  a lude:University;
+  lude:acronym "UVI";
+  lude:cif "Q8650002B";
+  lude:email "informacion@uvigo.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1989"^^xsd:gYear;
+  lude:telephone "986812000";
+  lude:type "Pública";
+  lude:url "www.uvigo.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Vigo" .
+
+<http://spanishuniversities.data.es/lude/resource/University/16249b9d3890e9951fa8dcc315733ea8>
+  a lude:University;
+  lude:acronym "UEX";
+  lude:cif "Q0618001B";
+  lude:email "virtual@unex.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1973"^^xsd:gYear;
+  lude:telephone "924289300";
+  lude:type "Pública";
+  lude:url "www.unex.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Extremadura" .
+
+<http://spanishuniversities.data.es/lude/resource/University/17a1b9e0f1c1e0719761a30d50700965>
+  a lude:University;
+  lude:acronym "UPGC";
+  lude:cif "Q3518001G";
+  lude:email "universidad@ulpgc.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1989"^^xsd:gYear;
+  lude:telephone "928451000";
+  lude:type "Pública";
+  lude:url "www.ulpgc.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Las Palmas de Gran Canaria" .
+
+<http://spanishuniversities.data.es/lude/resource/University/186d47028db001c7a7d88906c21f5fee>
+  a lude:University;
+  lude:acronym "UPC";
+  lude:cif "Q0818003F";
+  lude:email "info@upc.edu";
+  lude:modality "Presencial";
+  lude:publicationYear "1971"^^xsd:gYear;
+  lude:telephone "934016200";
+  lude:type "Pública";
+  lude:url "www.upc.es"^^xsd:anyURI;
+  rdfs:label "Universidad Politécnica de Catalunya" .
+
+<http://spanishuniversities.data.es/lude/resource/University/24e63f7c3d8596b44655e9ad9bfdf5f5>
+  a lude:University;
+  lude:acronym "UZA";
+  lude:cif "Q5018001G";
+  lude:email "ciu@unizar.es";
+  lude:hasFaculty <http://spanishuniversities.data.es/lude/resource/Faculty/4171bb82be88bd263d52a440d72c5fc5>,
+    <http://spanishuniversities.data.es/lude/resource/Faculty/f10222880e3cae5489f1aba4e7798854>;
+  lude:modality "Presencial";
+  lude:offers <http://spanishuniversities.data.es/lude/resource/Degree/02cf4df178ca1b504ce14692a6b8e40c>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/172c445581b4dbe928e1709c0705ead8>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/51facf892da4bb8293669bf98712d398>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/5475843b57df42303e375cb1bdae5710>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/7f94015d2cdfaf063df4977805df4cdc>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/8475426166aee334f5358ed67d0156c1>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/85541e76aa07c90e254b925b2797ef4e>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/94b459b9264d1b80181016e1166bdda3>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/9f3df13897db29b4c4616e96685ee38c>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/9f44b2e8274d7aa32092d07741297b07>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/a5da8eb28defc982d63b29d8bf63a7f9>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/bedb88ffbc98a8af0d6d8a8e5628c07c>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/c7120e0df965ce92812ce6c0dec150fa>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/d0178ef605b368a8221b083d48457016>,
+    <http://spanishuniversities.data.es/lude/resource/Degree/f567d2d3963970cd23804dff560f4f24>;
+  lude:publicationYear "1542"^^xsd:gYear;
+  lude:telephone "976761001";
+  lude:type "Pública";
+  rdfs:label "Universidad de Zaragoza" .
+
+<http://spanishuniversities.data.es/lude/resource/University/26e6f2790707f868f9d05141e6f2f906>
+  a lude:University;
+  lude:acronym "UDG";
+  lude:cif "Q6750002E";
+  lude:email "informacio@udg.edu";
+  lude:modality "Presencial";
+  lude:publicationYear "1992"^^xsd:gYear;
+  lude:telephone "972418046";
+  lude:type "Pública";
+  rdfs:label "Universitat de Girona" .
+
+<http://spanishuniversities.data.es/lude/resource/University/2ddd97caa885c032af0e206d1a7b5c85>
+  a lude:University;
+  lude:acronym "UNIA";
+  lude:cif "Q7350007F";
+  lude:email "postgrado@unia.es";
+  lude:modality "Especial";
+  lude:publicationYear "2013"^^xsd:gYear;
+  lude:telephone "954462299";
+  lude:type "Pública";
+  rdfs:label "Universidad Internacional de Andalucía" .
+
+<http://spanishuniversities.data.es/lude/resource/University/2f0fa6cb7c08610911b3258fd5f2738a>
+  a lude:University;
+  lude:acronym "UIB";
+  lude:cif "Q0718001A";
+  lude:email "informacio@uib.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1978"^^xsd:gYear;
+  lude:telephone "971173000";
+  lude:type "Pública";
+  lude:url "www.uib.es/"^^xsd:anyURI;
+  rdfs:label "Universitat de les Illes Balears" .
+
+<http://spanishuniversities.data.es/lude/resource/University/30962703623f1f1d21c737a0c0673761>
+  a lude:University;
+  lude:acronym "UMA";
+  lude:cif "Q2918001E";
+  lude:email "informacion@uma.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1972"^^xsd:gYear;
+  lude:telephone "952131000";
+  lude:type "Pública";
+  lude:url "www.uma.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Málaga" .
+
+<http://spanishuniversities.data.es/lude/resource/University/3105c9fd85b6cfd224f8d1b92970ab2f>
+  a lude:University;
+  lude:acronym "UCN";
+  lude:cif "Q3918001C";
+  lude:email "acceso@unican.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1972"^^xsd:gYear;
+  lude:telephone "942200984";
+  lude:type "Pública";
+  lude:url "www.unican.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Cantabria" .
+
+<http://spanishuniversities.data.es/lude/resource/University/330a9bcca27a6c6e467081bfdc1e65cd>
+  a lude:University;
+  lude:acronym "UAH";
+  lude:cif "Q2818018J";
+  lude:email "ciu@uah.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1977"^^xsd:gYear;
+  lude:telephone "918854000";
+  lude:type "Pública";
+  lude:url "www.uah.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Alcalá" .
+
+<http://spanishuniversities.data.es/lude/resource/University/3bd27a309cbe4e2d7f35ec99b74525c0>
+  a lude:University;
+  lude:acronym "UPF";
+  lude:cif "Q5850017D";
+  lude:modality "Presencial";
+  lude:publicationYear "1990"^^xsd:gYear;
+  lude:telephone "935422000";
+  lude:type "Pública";
+  lude:url "www.upf.edu"^^xsd:anyURI;
+  rdfs:label "Universidad Pompeu Fabra" .
+
+<http://spanishuniversities.data.es/lude/resource/University/4bf5231621b187a3ed12c5741fc3f19d>
+  a lude:University;
+  lude:acronym "UPM";
+  lude:cif "Q2818015F";
+  lude:email "gabinete.rector@upm.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1971"^^xsd:gYear;
+  lude:telephone "913366200";
+  lude:type "Pública";
+  lude:url "www.upm.es"^^xsd:anyURI;
+  rdfs:label "Universidad Politécnica de Madrid" .
+
+<http://spanishuniversities.data.es/lude/resource/University/4d9d7d9cad3c91e4f4fff77c396ee9ee>
+  a lude:University;
+  lude:acronym "UPV";
+  lude:cif "Q4618002B";
+  lude:email "informacion@upv.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1971"^^xsd:gYear;
+  lude:telephone "963877000";
+  lude:type "Pública";
+  lude:url "www.upv.es"^^xsd:anyURI;
+  rdfs:label "Universitat Politècnica de València" .
+
+<http://spanishuniversities.data.es/lude/resource/University/51dcd00716a08519e65a732cb87c3b71>
+  a lude:University;
+  lude:acronym "USAL";
+  lude:cif "Q3718001E";
+  lude:email "infogral@usal.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1218"^^xsd:gYear;
+  lude:telephone "923294400";
+  lude:type "Pública";
+  lude:url "www.usal.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Salamanca" .
+
+<http://spanishuniversities.data.es/lude/resource/University/64597f645a8194bb9beed6a3aa675d5b>
+  a lude:University;
+  lude:acronym "ULL";
+  lude:cif "Q3818001D";
+  lude:email "prensa1@ull.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1792"^^xsd:gYear;
+  lude:telephone "922319000";
+  lude:type "Pública";
+  lude:url "www.ull.es"^^xsd:anyURI;
+  rdfs:label "Universidad de La Laguna" .
+
+<http://spanishuniversities.data.es/lude/resource/University/703d90006d377d97e3212ab3312a4e0d>
+  a lude:University;
+  lude:acronym "USC";
+  lude:cif "Q1518001A";
+  lude:email "reitor@usc.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1504"^^xsd:gYear;
+  lude:telephone "981563100";
+  lude:type "Pública";
+  lude:url "www.usc.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Santiago de Compostela" .
+
+<http://spanishuniversities.data.es/lude/resource/University/79c02c40f6f40e7dbda1c9193c995152>
+  a lude:University;
+  lude:acronym "UPO";
+  lude:cif "Q9150016E";
+  lude:modality "Presencial";
+  lude:publicationYear "1997"^^xsd:gYear;
+  lude:telephone "954349200";
+  lude:type "Pública";
+  lude:url "www.upo.es"^^xsd:anyURI;
+  rdfs:label "Universidad Pablo de Olavide" .
+
+<http://spanishuniversities.data.es/lude/resource/University/7a90ec99428048f3a58539d18c749ea7>
+  a lude:University;
+  lude:acronym "URJC";
+  lude:cif "Q2803011B";
+  lude:email "info@urjc.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1996"^^xsd:gYear;
+  lude:telephone "916655060";
+  lude:type "Pública";
+  lude:url "www.urjc.es"^^xsd:anyURI;
+  rdfs:label "Universidad Rey Juan Carlos" .
+
+<http://spanishuniversities.data.es/lude/resource/University/7ce4c67f7247673210d9b6d8aa5e7570>
+  a lude:University;
+  lude:acronym "UBA";
+  lude:cif "Q0818001J";
+  lude:email "comunicacio@ub.edu";
+  lude:modality "Presencial";
+  lude:publicationYear "1450"^^xsd:gYear;
+  lude:telephone "934035417";
+  lude:type "Pública";
+  lude:url "www.ub.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Barcelona" .
+
+<http://spanishuniversities.data.es/lude/resource/University/871a4d42a733c080da0f1935663a2f05>
+  a lude:University;
+  lude:acronym "UIMP";
+  lude:cif "Q2818022B";
+  lude:modality "Especial";
+  lude:publicationYear "1945"^^xsd:gYear;
+  lude:telephone "915920600";
+  lude:type "Pública";
+  lude:url "www.uimp.es"^^xsd:anyURI;
+  rdfs:label "Universidad Internacional Menéndez Pelayo" .
+
+<http://spanishuniversities.data.es/lude/resource/University/8841d88268e139663a8723e418715e78>
+  a lude:University;
+  lude:acronym "URV";
+  lude:cif "Q9350003A";
+  lude:email "info@urv.cat";
+  lude:modality "Presencial";
+  lude:publicationYear "1992"^^xsd:gYear;
+  lude:telephone "977558000";
+  lude:type "Pública";
+  lude:url "www.urv.cat/ca"^^xsd:anyURI;
+  rdfs:label "Universidad Rovira i Virgili" .
+
+<http://spanishuniversities.data.es/lude/resource/University/91aa5268851f200c64bd1a238ed37fcf>
+  a lude:University;
+  lude:acronym "UAB";
+  lude:cif "Q0818002H";
+  lude:email "informacio@uab.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1968"^^xsd:gYear;
+  lude:telephone "935811000";
+  lude:type "Pública";
+  lude:url "www.uab.es"^^xsd:anyURI;
+  rdfs:label "Universidad Autónoma de Barcelona" .
+
+<http://spanishuniversities.data.es/lude/resource/University/92c081b3e4299316155ea45962241086>
+  a lude:University;
+  lude:acronym "UVA";
+  lude:cif "Q4718001C";
+  lude:email "valladolid@uva.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1241"^^xsd:gYear;
+  lude:telephone "983423000";
+  lude:type "Pública";
+  rdfs:label "Universidad de Valladolid" .
+
+<http://spanishuniversities.data.es/lude/resource/University/92c852850da0a33857691151f42ac19a>
+  a lude:University;
+  lude:acronym "UJI";
+  lude:cif "Q6250003H";
+  lude:email "info@uji.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1991"^^xsd:gYear;
+  lude:telephone "964728000";
+  lude:type "Pública";
+  lude:url "www.uji.es"^^xsd:anyURI;
+  rdfs:label "Universidad Jaume I de Castellón" .
+
+<http://spanishuniversities.data.es/lude/resource/University/9d791fc58c21adf30d157657e55c4355>
+  a lude:University;
+  lude:acronym "UCA";
+  lude:cif "Q1132001G";
+  lude:email "relaciones.institucionales@uca.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1979"^^xsd:gYear;
+  lude:telephone "956015033";
+  lude:type "Pública";
+  lude:url "www.uca.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Cádiz" .
+
+<http://spanishuniversities.data.es/lude/resource/University/a0b65722ec5194abfd7f9ba621a7dd1d>
+  a lude:University;
+  lude:acronym "UJA";
+  lude:cif "Q7350006H";
+  lude:modality "Presencial";
+  lude:publicationYear "1993"^^xsd:gYear;
+  lude:telephone "953212121";
+  lude:type "Pública";
+  lude:url "www.ujaen.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Jaén" .
+
+<http://spanishuniversities.data.es/lude/resource/University/a62a164f781be26dd225dfda47b78c12>
+  a lude:University;
+  lude:acronym "UCLM";
+  lude:cif "Q1368009E";
+  lude:email "webmaster@uclm.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1982"^^xsd:gYear;
+  lude:telephone "902204100";
+  lude:type "Pública";
+  lude:url "www.uclm.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Castilla-La Mancha" .
+
+<http://spanishuniversities.data.es/lude/resource/University/aeaa439db599d073395f84fb7fa10a54>
+  a lude:University;
+  lude:acronym "UPNA";
+  lude:cif "Q3150012G";
+  lude:email "infoweb@unavarra.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1987"^^xsd:gYear;
+  lude:telephone "948169000";
+  lude:type "Pública";
+  lude:url "www.unavarra.es"^^xsd:anyURI;
+  rdfs:label "Universidad Pública de Navarra" .
+
+<http://spanishuniversities.data.es/lude/resource/University/bd5d3da0c4dfc8205ca85ea0c1699a62>
+  a lude:University;
+  lude:acronym "UMH";
+  lude:cif "Q5350015C";
+  lude:email "info@umh.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1996"^^xsd:gYear;
+  lude:telephone "966658500";
+  lude:type "Pública";
+  lude:url "www.umh.es"^^xsd:anyURI;
+  rdfs:label "Universidad Miguel Hernández de Elche" .
+
+<http://spanishuniversities.data.es/lude/resource/University/bf0d31e1fd4ee242c0fe00c2ee08b759>
+  a lude:University;
+  lude:acronym "UDL";
+  lude:cif "Q7550001G";
+  lude:email "info@udl.cat";
+  lude:modality "Presencial";
+  lude:publicationYear "1992"^^xsd:gYear;
+  lude:telephone "973702000";
+  lude:type "Pública";
+  lude:url "www.udl.es/ca/es/"^^xsd:anyURI;
+  rdfs:label "Universidad de Lleida" .
+
+<http://spanishuniversities.data.es/lude/resource/University/c50901012309aca2785eb50ea4c8f87b>
+  a lude:University;
+  lude:acronym "UCAR";
+  lude:cif "Q2818029G";
+  lude:email "futurosestudiantes@uc3m.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1989"^^xsd:gYear;
+  lude:telephone "916249500";
+  lude:type "Pública";
+  lude:url "www.uc3m.es"^^xsd:anyURI;
+  rdfs:label "Universidad Carlos III de Madrid" .
+
+<http://spanishuniversities.data.es/lude/resource/University/c6abab9cddd0b921adc603debfcca50e>
+  a lude:University;
+  lude:acronym "UAL";
+  lude:cif "Q5450008G";
+  lude:email "gprensa@ual.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1993"^^xsd:gYear;
+  lude:telephone "950015570";
+  lude:type "Pública";
+  lude:url "www.ual.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Almería" .
+
+<http://spanishuniversities.data.es/lude/resource/University/c73f658b0a9e2a5097a9ae889dd56474>
+  a lude:University;
+  lude:acronym "UV";
+  lude:cif "Q4618001D";
+  lude:email "servei.estudiants@uv.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1502"^^xsd:gYear;
+  lude:telephone "963864100";
+  lude:type "Pública";
+  lude:url "www.uv.es"^^xsd:anyURI;
+  rdfs:label "Universitat de València" .
+
+<http://spanishuniversities.data.es/lude/resource/University/c8b4be930789e86c8d8b17d773af6d7e>
+  a lude:University;
+  lude:acronym "ULE";
+  lude:cif "Q2432001B";
+  lude:email "webmaster@unileon.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1979"^^xsd:gYear;
+  lude:telephone "987291000";
+  lude:type "Pública";
+  lude:url "www.unileon.es"^^xsd:anyURI;
+  rdfs:label "Universidad de León" .
+
+<http://spanishuniversities.data.es/lude/resource/University/d30bbd19fa77d8470334a259e060006e>
+  a lude:University;
+  lude:acronym "EHU";
+  lude:cif "Q4818001B";
+  lude:email "rgzadmin@lg.ehu.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1968"^^xsd:gYear;
+  lude:telephone "946012000";
+  lude:type "Pública";
+  lude:url "www.ehu.es"^^xsd:anyURI;
+  rdfs:label "Universidad del País Vasco/Euskal Herriko Unibertsitatea" .
+
+<http://spanishuniversities.data.es/lude/resource/University/d4092e4beec5ade3eb17379b7450f0b9>
+  a lude:University;
+  lude:acronym "UCO";
+  lude:cif "Q1418001B";
+  lude:email "informacion@uco.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1972"^^xsd:gYear;
+  lude:telephone "957218000";
+  lude:type "Pública";
+  lude:url "www.uco.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Córdoba" .
+
+<http://spanishuniversities.data.es/lude/resource/University/dbca02858a647c576208370194649766>
+  a lude:University;
+  lude:acronym "UGR";
+  lude:cif "Q1818002F";
+  lude:email "csirc@ugr.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1531"^^xsd:gYear;
+  lude:telephone "958243000";
+  lude:type "Pública";
+  lude:url "www.ugr.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Granada" .
+
+<http://spanishuniversities.data.es/lude/resource/University/dcbcd7e79ed9bec816e6a427d84bbf64>
+  a lude:University;
+  lude:acronym "UR";
+  lude:cif "Q2618002F";
+  lude:email "sec.general@unirioja.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1992"^^xsd:gYear;
+  lude:telephone "941299104";
+  lude:type "Pública";
+  lude:url "www.unirioja.es"^^xsd:anyURI;
+  rdfs:label "Universidad de La Rioja" .
+
+<http://spanishuniversities.data.es/lude/resource/University/e00161d1619c9c29b683d70c49b1341c>
+  a lude:University;
+  lude:acronym "UA";
+  lude:cif "Q0332001G";
+  lude:email "informacio@ua.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1979"^^xsd:gYear;
+  lude:telephone "965903400";
+  lude:type "Pública";
+  lude:url "www.ua.es/"^^xsd:anyURI;
+  rdfs:label "Universidad de Alicante" .
+
+<http://spanishuniversities.data.es/lude/resource/University/e2aed65db4fa77f98f5f2990371c7a23>
+  a lude:University;
+  lude:acronym "UCM";
+  lude:cif "Q2818014I";
+  lude:email "infocom@ucm.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1836"^^xsd:gYear;
+  lude:telephone "914520400";
+  lude:type "Pública";
+  lude:url "www.ucm.es"^^xsd:anyURI;
+  rdfs:label "Universidad Complutense de Madrid" .
+
+<http://spanishuniversities.data.es/lude/resource/University/e4aee90dd75f5fd5dc35bc4653bd9065>
+  a lude:University;
+  lude:acronym "UPCT";
+  lude:cif "Q8050013E";
+  lude:email "gestion.academica@upct.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1998"^^xsd:gYear;
+  lude:telephone "968325400";
+  lude:type "Pública";
+  lude:url "www.upct.es"^^xsd:anyURI;
+  rdfs:label "Universidad Politécnica de Cartagena" .
+
+<http://spanishuniversities.data.es/lude/resource/University/e97892b0ccf3c19ce40f9ef9d8ac91ef>
+  a lude:University;
+  lude:acronym "UDC";
+  lude:cif "Q6550005J";
+  lude:email "reitor@udc.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1989"^^xsd:gYear;
+  lude:telephone "981167000";
+  lude:type "Pública";
+  lude:url "www.udc.es"^^xsd:anyURI;
+  rdfs:label "Universidad de A Coruña" .
+
+<http://spanishuniversities.data.es/lude/resource/University/f5636bc297db763f969bab88b5492ba3>
+  a lude:University;
+  lude:acronym "UMU";
+  lude:cif "Q3018001B";
+  lude:email "rector@um.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1272"^^xsd:gYear;
+  lude:telephone "968363000";
+  lude:type "Pública";
+  lude:url "www.um.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Murcia" .
+
+<http://spanishuniversities.data.es/lude/resource/University/f6ce2593f6cfc9e08dc9effe2e0077e9>
+  a lude:University;
+  lude:acronym "UHU";
+  lude:cif "Q7150008F";
+  lude:email "www@uhu.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1993"^^xsd:gYear;
+  lude:telephone "959218000";
+  lude:type "Pública";
+  lude:url "www.uhu.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Huelva" .
+
+<http://spanishuniversities.data.es/lude/resource/University/f8c4e120daa6420626c03e582958ebd3>
+  a lude:University;
+  lude:acronym "USE";
+  lude:cif "Q4118001I";
+  lude:email "gabiprensa@us.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1505"^^xsd:gYear;
+  lude:telephone "954551000";
+  lude:type "Pública";
+  lude:url "www.us.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Sevilla" .
+
+<http://spanishuniversities.data.es/lude/resource/University/f9d30a624b678c838a4bb422a0bc148b>
+  a lude:University;
+  lude:acronym "UAM";
+  lude:cif "Q2818013A";
+  lude:email "informacion.general@uam.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1968"^^xsd:gYear;
+  lude:telephone "914975000";
+  lude:type "Pública";
+  lude:url "www.uam.es"^^xsd:anyURI;
+  rdfs:label "Universidad Autónoma de Madrid" .
+
+<http://spanishuniversities.data.es/lude/resource/University/f9f0a05fbac13ce20a2af52247c2b93f>
+  a lude:University;
+  lude:acronym "UBU";
+  lude:cif "Q0968272E";
+  lude:email "ubuestudiantes@ubu.es";
+  lude:modality "Presencial";
+  lude:publicationYear "1994"^^xsd:gYear;
+  lude:telephone "947258700";
+  lude:type "Pública";
+  lude:url "www.ubu.es"^^xsd:anyURI;
+  rdfs:label "Universidad de Burgos" .

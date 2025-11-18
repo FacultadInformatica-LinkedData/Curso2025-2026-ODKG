@@ -1,0 +1,165 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q11862829",
+        "name": "academic discipline"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Degree to type Q11862829"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Eléctrica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q43035",
+      "name": "electrical engineering",
+      "types": [
+        "Q12015335",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item electrical engineering (Q43035) for cells containing \"Ingeniería Eléctrica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Mecánica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q101333",
+      "name": "mechanical engineering",
+      "types": [
+        "Q12015335",
+        "Q11862829",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item mechanical engineering (Q101333) for cells containing \"Ingeniería Mecánica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Lengua y Literatura Hispánica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3381164",
+      "name": "Spanish philology",
+      "types": [
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 77
+    },
+    "shareNewTopics": false,
+    "description": "Match item Spanish philology (Q3381164) for cells containing \"Lengua y Literatura Hispánica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Gestión de Empresas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q18564125",
+      "name": "business management",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q96247293"
+      ],
+      "score": 72
+    },
+    "shareNewTopics": false,
+    "description": "Match item business management (Q18564125) for cells containing \"Gestión de Empresas\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Estudios Ingleses",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27968",
+      "name": "English studies",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item English studies (Q27968) for cells containing \"Estudios Ingleses\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Educación Primaria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q64688824",
+      "name": "Bachelor of Teaching",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Bachelor of Teaching (Q64688824) for cells containing \"Educación Primaria\" in column Degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 3,
+    "description": "Create column same_as_wikidata_degree at index 3 based on column Degree using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  }
+]

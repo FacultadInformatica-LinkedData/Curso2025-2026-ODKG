@@ -1,0 +1,2796 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q11862829",
+        "name": "academic discipline"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Degree to type Q11862829"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Biomedical Engineering",
+    "judgment": "matched",
+    "match": {
+      "id": "Q327092",
+      "name": "biomedical engineering",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item biomedical engineering (Q327092) for cells containing \"Biomedical Engineering\" in column Degree"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Degree to type null"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Administración y Dirección de Empresas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8188423",
+      "name": "business administration and management",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item business administration and management (Q8188423) for cells containing \"Administración y Dirección de Empresas\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Antropología Social",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29051",
+      "name": "social anthropology",
+      "types": [
+        "Q106720965",
+        "Q11862829",
+        "Q2267705",
+        "Q627436"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item social anthropology (Q29051) for cells containing \"Antropología Social\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Arquitectura Técnica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2860371",
+      "name": "technical architecture",
+      "types": [
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item technical architecture (Q2860371) for cells containing \"Arquitectura Técnica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Biología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q420",
+      "name": "biology",
+      "types": [
+        "Q2465832",
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item biology (Q420) for cells containing \"Biología\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Arte",
+    "judgment": "matched",
+    "match": {
+      "id": "Q735",
+      "name": "art",
+      "types": [
+        "Q4671286",
+        "Q576639",
+        "Q11862829",
+        "Q627436",
+        "Q3958441",
+        "Q26256810"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item art (Q735) for cells containing \"Arte\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Biomedical Engineering",
+    "judgment": "matched",
+    "match": {
+      "id": "Q327092",
+      "name": "biomedical engineering",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item biomedical engineering (Q327092) for cells containing \"Biomedical Engineering\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Biotecnología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7108",
+      "name": "biotechnology",
+      "types": [
+        "Q1665984",
+        "Q28797",
+        "Q11862829",
+        "Q112057532",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item biotechnology (Q7108) for cells containing \"Biotecnología\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencias Ambientales",
+    "judgment": "matched",
+    "match": {
+      "id": "Q188847",
+      "name": "environmental science",
+      "types": [
+        "Q2465832",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item environmental science (Q188847) for cells containing \"Ciencias Ambientales\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencia y Tecnología de los Alimentos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1039642",
+      "name": "food technology",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q112057532"
+      ],
+      "score": 89
+    },
+    "shareNewTopics": false,
+    "description": "Match item food technology (Q1039642) for cells containing \"Ciencia y Tecnología de los Alimentos\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencias de la Actividad Física y del Deporte",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1298380",
+      "name": "sports science",
+      "types": [
+        "Q1665984",
+        "Q1047113",
+        "Q2465832",
+        "Q11862829",
+        "Q4671286",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item sports science (Q1298380) for cells containing \"Ciencias de la Actividad Física y del Deporte\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Comunicación Audiovisual",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3755147",
+      "name": "audiovisual communication",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item audiovisual communication (Q3755147) for cells containing \"Comunicación Audiovisual\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Creación y Diseño",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1519454",
+      "name": "design",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item design (Q1519454) for cells containing \"Creación y Diseño\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Criminología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q161733",
+      "name": "criminology",
+      "types": [
+        "Q1047113",
+        "Q11862829",
+        "Q2267705",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item criminology (Q161733) for cells containing \"Criminología\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Derecho",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4115013",
+      "name": "law degree",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item law degree (Q4115013) for cells containing \"Derecho\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Comunicación Social",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6701907",
+      "name": "social communication",
+      "types": [
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item social communication (Q6701907) for cells containing \"Comunicación Social\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Educación Social",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1572493",
+      "name": "social pedagogy",
+      "types": [
+        "Q11862829",
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item social pedagogy (Q1572493) for cells containing \"Educación Social\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Finanzas y Seguros",
+    "judgment": "matched",
+    "match": {
+      "id": "Q43015",
+      "name": "finance",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item finance (Q43015) for cells containing \"Finanzas y Seguros\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Filología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q40634",
+      "name": "philology",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q185698"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item philology (Q40634) for cells containing \"Filología\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Enfermería",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4838827",
+      "name": "Bachelor of Science in Nursing",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Bachelor of Science in Nursing (Q4838827) for cells containing \"Enfermería\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Farmacia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q614304",
+      "name": "pharmacy",
+      "types": [
+        "Q1665984",
+        "Q4671286",
+        "Q2465832",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item pharmacy (Q614304) for cells containing \"Farmacia\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Filosofía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5891",
+      "name": "philosophy",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q2465832",
+        "Q627436",
+        "Q483394"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item philosophy (Q5891) for cells containing \"Filosofía\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Gestión de Negocios",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1143635",
+      "name": "business school",
+      "types": [
+        ""
+      ],
+      "score": 81
+    },
+    "shareNewTopics": false,
+    "description": "Match item business school (Q1143635) for cells containing \"Gestión de Negocios\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Eléctrica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q43035",
+      "name": "electrical engineering",
+      "types": [
+        "Q12015335",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item electrical engineering (Q43035) for cells containing \"Ingeniería Eléctrica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Geología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1069",
+      "name": "geology",
+      "types": [
+        "Q2465832",
+        "Q11862829",
+        "Q2267705",
+        "Q1047113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item geology (Q1069) for cells containing \"Geología\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Física",
+    "judgment": "matched",
+    "match": {
+      "id": "Q413",
+      "name": "physics",
+      "types": [
+        "Q2465832",
+        "Q11862829",
+        "Q475023"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item physics (Q413) for cells containing \"Física\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Ambiental",
+    "judgment": "matched",
+    "match": {
+      "id": "Q146326",
+      "name": "environmental engineering",
+      "types": [
+        "Q12015335",
+        "Q4671286",
+        "Q11862829",
+        "Q1047113",
+        "Q2267705",
+        "Q627436"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item environmental engineering (Q146326) for cells containing \"Ingeniería Ambiental\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Química",
+    "judgment": "matched",
+    "match": {
+      "id": "Q83588",
+      "name": "chemical engineering",
+      "types": [
+        "Q28797",
+        "Q11790203",
+        "Q4671286",
+        "Q12015335",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item chemical engineering (Q83588) for cells containing \"Ingeniería Química\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería de Telecomunicación",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1061219",
+      "name": "telecommunications engineering",
+      "types": [
+        "Q12015335",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item telecommunications engineering (Q1061219) for cells containing \"Ingeniería de Telecomunicación\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería de la Construcción",
+    "judgment": "matched",
+    "match": {
+      "id": "Q150737",
+      "name": "architectural engineering",
+      "types": [
+        "Q12015335",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item architectural engineering (Q150737) for cells containing \"Ingeniería de la Construcción\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería en Organización Industrial",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6314146",
+      "name": "industrial engineering and management",
+      "types": [
+        "Q96247293",
+        "Q12015335",
+        "Q268592",
+        "Q11862829"
+      ],
+      "score": 96
+    },
+    "shareNewTopics": false,
+    "description": "Match item industrial engineering and management (Q6314146) for cells containing \"Ingeniería en Organización Industrial\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Física",
+    "judgment": "matched",
+    "match": {
+      "id": "Q770766",
+      "name": "engineering physics",
+      "types": [
+        "Q12015335"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item engineering physics (Q770766) for cells containing \"Ingeniería Física\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Industrial",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4489420",
+      "name": "industrial engineering",
+      "types": [
+        "Q12015335",
+        "Q268592",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item industrial engineering (Q4489420) for cells containing \"Ingeniería Industrial\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Mecánica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q101333",
+      "name": "mechanical engineering",
+      "types": [
+        "Q12015335",
+        "Q11862829",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item mechanical engineering (Q101333) for cells containing \"Ingeniería Mecánica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Informática",
+    "judgment": "matched",
+    "match": {
+      "id": "Q428691",
+      "name": "computer engineering",
+      "types": [
+        "Q12015335",
+        "Q1047113",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item computer engineering (Q428691) for cells containing \"Ingeniería Informática\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Formación del Profesorado de Educación Secundaria Obligatoria y Bachillerato, Formación Profesional y Enseñanzas de Idiomas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q97825796",
+      "name": "Master's Degree in Teacher Training",
+      "types": [
+        "Q189533",
+        "Q183816"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Match item Master's Degree in Teacher Training (Q97825796) for cells containing \"Formación del Profesorado de Educación Secundaria Obligatoria y Bachillerato, Formación Profesional y Enseñanzas de Idiomas\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Economía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8134",
+      "name": "economics",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item economics (Q8134) for cells containing \"Economía\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Estudios Ingleses",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27968",
+      "name": "English studies",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item English studies (Q27968) for cells containing \"Estudios Ingleses\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Educación Primaria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q64688824",
+      "name": "Bachelor of Teaching",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Bachelor of Teaching (Q64688824) for cells containing \"Educación Primaria\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Fisioterapia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q186005",
+      "name": "physiotherapy",
+      "types": [
+        "Q2678675",
+        "Q11862829",
+        "Q130705900"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item physiotherapy (Q186005) for cells containing \"Fisioterapia\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Fundamentos de Arquitectura",
+    "judgment": "matched",
+    "match": {
+      "id": "Q12271",
+      "name": "architecture",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item architecture (Q12271) for cells containing \"Fundamentos de Arquitectura\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Inteligencia Artificial",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11660",
+      "name": "artificial intelligence",
+      "types": [
+        "Q268592",
+        "Q112057532",
+        "Q123370638",
+        "Q125161275"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item artificial intelligence (Q11660) for cells containing \"Inteligencia Artificial\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Lingüística",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8162",
+      "name": "linguistics",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q1047113",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item linguistics (Q8162) for cells containing \"Lingüística\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Estudios Internacionales",
+    "judgment": "matched",
+    "match": {
+      "id": "Q166542",
+      "name": "international relations",
+      "types": [
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item international relations (Q166542) for cells containing \"Estudios Internacionales\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Historia del Arte",
+    "judgment": "matched",
+    "match": {
+      "id": "Q50641",
+      "name": "history of art",
+      "types": [
+        "Q17524420",
+        "Q4671286",
+        "Q81517619"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item history of art (Q50641) for cells containing \"Historia del Arte\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Medicina",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11190",
+      "name": "medicine",
+      "types": [
+        "Q2267705",
+        "Q11862829",
+        "Q627436",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item medicine (Q11190) for cells containing \"Medicina\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Civil",
+    "judgment": "matched",
+    "match": {
+      "id": "Q77590",
+      "name": "civil engineering",
+      "types": [
+        "Q12015335",
+        "Q627436",
+        "Q11862829",
+        "Q4671286",
+        "Q1047113",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item civil engineering (Q77590) for cells containing \"Ingeniería Civil\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Electrónica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q126095",
+      "name": "electronic engineering",
+      "types": [
+        "Q12015335",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item electronic engineering (Q126095) for cells containing \"Ingeniería Electrónica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería en Tecnología Industrial",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4489420",
+      "name": "industrial engineering",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item industrial engineering (Q4489420) for cells containing \"Ingeniería en Tecnología Industrial\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Logopedia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q33226",
+      "name": "speech-language pathology",
+      "types": [
+        "Q11862829",
+        "Q1047113",
+        "Q930752"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item speech-language pathology (Q33226) for cells containing \"Logopedia\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Marketing",
+    "judgment": "matched",
+    "match": {
+      "id": "Q39809",
+      "name": "marketing",
+      "types": [
+        "Q131512",
+        "Q11862829",
+        "Q1474521"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item marketing (Q39809) for cells containing \"Marketing\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Matemáticas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q395",
+      "name": "mathematics",
+      "types": [
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item mathematics (Q395) for cells containing \"Matemáticas\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Odontología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q12128",
+      "name": "dentistry",
+      "types": [
+        "Q930752",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item dentistry (Q12128) for cells containing \"Odontología\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Pedagogía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7922",
+      "name": "pedagogy",
+      "types": [
+        "Q2465832",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item pedagogy (Q7922) for cells containing \"Pedagogía\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Psicología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q9418",
+      "name": "psychology",
+      "types": [
+        "Q11862829",
+        "Q336",
+        "Q44597158"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item psychology (Q9418) for cells containing \"Psicología\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Periodismo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11030",
+      "name": "journalism",
+      "types": [
+        "Q268592",
+        "Q483394",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item journalism (Q11030) for cells containing \"Periodismo\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Trabajo Social",
+    "judgment": "matched",
+    "match": {
+      "id": "Q205398",
+      "name": "social work",
+      "types": [
+        "Q30109942"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item social work (Q205398) for cells containing \"Trabajo Social\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Traducción e Interpretación",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11704681",
+      "name": "translation and interpretation",
+      "types": [
+        "Q11862829",
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item translation and interpretation (Q11704681) for cells containing \"Traducción e Interpretación\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Química",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2329",
+      "name": "chemistry",
+      "types": [
+        "Q2465832",
+        "Q11862829",
+        "Q4671286",
+        "Q2267705",
+        "Q1047113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item chemistry (Q2329) for cells containing \"Química\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Economía Pública",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2248246",
+      "name": "public economics",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item public economics (Q2248246) for cells containing \"Economía Pública\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Arquitectura",
+    "judgment": "matched",
+    "match": {
+      "id": "Q12271",
+      "name": "architecture",
+      "types": [
+        "Q11862829",
+        "Q268592",
+        "Q56055944",
+        "Q1047113",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item architecture (Q12271) for cells containing \"Arquitectura\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencia y Tecnología Espacial",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1870019",
+      "name": "spatial science",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item spatial science (Q1870019) for cells containing \"Ciencia y Tecnología Espacial\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería de Control, Automatización y Robótica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q170978",
+      "name": "robotics",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item robotics (Q170978) for cells containing \"Ingeniería de Control, Automatización y Robótica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Minería",
+    "judgment": "matched",
+    "match": {
+      "id": "Q44497",
+      "name": "mining",
+      "types": [
+        "Q8187769",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item mining (Q44497) for cells containing \"Minería\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Periodismo Multimedia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q30671941",
+      "name": "multimedia journalism",
+      "types": [
+        "Q4894405",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item multimedia journalism (Q30671941) for cells containing \"Periodismo Multimedia\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Neurociencias",
+    "judgment": "matched",
+    "match": {
+      "id": "Q207011",
+      "name": "neuroscience",
+      "types": [
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item neuroscience (Q207011) for cells containing \"Neurociencias\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Tecnología, Aprendizaje y Educación",
+    "judgment": "matched",
+    "match": {
+      "id": "Q750986",
+      "name": "technology education",
+      "types": [
+        ""
+      ],
+      "score": 77
+    },
+    "shareNewTopics": false,
+    "description": "Match item technology education (Q750986) for cells containing \"Tecnología, Aprendizaje y Educación\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Microbiología y Salud",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7193",
+      "name": "microbiology",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item microbiology (Q7193) for cells containing \"Microbiología y Salud\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Publicidad y Relaciones Públicas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q39809",
+      "name": "marketing",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item marketing (Q39809) for cells containing \"Publicidad y Relaciones Públicas\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Análisis Forense",
+    "judgment": "matched",
+    "match": {
+      "id": "Q495304",
+      "name": "forensic science",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item forensic science (Q495304) for cells containing \"Análisis Forense\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Finanzas y Dirección Financiera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q43015",
+      "name": "finance",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item finance (Q43015) for cells containing \"Finanzas y Dirección Financiera\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Relaciones Laborales y Recursos Humanos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1056396",
+      "name": "human resource management",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item human resource management (Q1056396) for cells containing \"Relaciones Laborales y Recursos Humanos\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Computacional y Sistemas Inteligentes",
+    "judgment": "matched",
+    "match": {
+      "id": "Q362601",
+      "name": "computational engineering",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item computational engineering (Q362601) for cells containing \"Ingeniería Computacional y Sistemas Inteligentes\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Psicología General Sanitaria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1403186",
+      "name": "health psychology",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item health psychology (Q1403186) for cells containing \"Psicología General Sanitaria\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Seguridad y Salud en el Trabajo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q629029",
+      "name": "occupational health and safety",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 93
+    },
+    "shareNewTopics": false,
+    "description": "Match item occupational health and safety (Q629029) for cells containing \"Seguridad y Salud en el Trabajo\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Salud Pública",
+    "judgment": "matched",
+    "match": {
+      "id": "Q189603",
+      "name": "public health",
+      "types": [
+        "Q11862829",
+        "Q268378"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item public health (Q189603) for cells containing \"Salud Pública\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Química y Polímeros",
+    "judgment": "matched",
+    "match": {
+      "id": "Q750446",
+      "name": "polymer chemistry",
+      "types": [
+        "Q11790203",
+        "Q4671286"
+      ],
+      "score": 87
+    },
+    "shareNewTopics": false,
+    "description": "Match item polymer chemistry (Q750446) for cells containing \"Química y Polímeros\" in column Degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 3,
+    "description": "Create column same_as_wikidata_degree at index 3 based on column Degree using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  }
+]

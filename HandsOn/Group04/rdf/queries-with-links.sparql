@@ -1,0 +1,94 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# ============================================================
+# QUERY 1 — LIST ALL CITIES
+# Ensure that cities are present in the generated TTL.
+# ============================================================
+SELECT ?city ?name
+WHERE {
+  ?city schema:name ?name .
+}
+LIMIT 50
+
+
+# ============================================================
+# QUERY 2 — DISPLAY WIKIDATA LINKS
+# Verify that every city has a linked Wikidata entity.
+# ============================================================
+SELECT ?city ?wikidataURI
+WHERE {
+  ?city owl:sameAs ?wikidataURI .
+}
+
+
+# ======================================================================
+# QUERY 3 — CITIES MISSING WIKIDATA LINKS (EXPECTED TO RETURN NOTHING)
+# We've removed the ~50 municipalities not found in Wikidata.
+# This query must return an empty result set if the cleaning was successful (it's the case). 
+# ======================================================================
+SELECT ?city ?name
+WHERE {
+  ?city schema:name ?name .
+  FILTER NOT EXISTS {
+    ?city owl:sameAs ?wikidataURI .
+  }
+}
+
+
+# ======================================================================
+# QUERY 4 — GET THE IMAGE FROM WIKIDATA
+# Check if the service can join wikidata (if this don't work, the problem is the configuration of the service or a proxy or firewall problem)
+# ======================================================================
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?city ?cityLabel ?image
+WHERE {
+    SERVICE <https://query.wikidata.org/sparql> {
+        ?city wdt:P31 wd:Q515 ;
+              wdt:P17 wd:Q29 . 
+
+        ?city rdfs:label ?cityLabel .
+
+        OPTIONAL { ?city wdt:P18 ?image }
+    }
+}
+LIMIT 10
+
+# =====================================================================================
+# QUERY 5 — LOCATION + IMAGE FROM WIKIDATA
+# Demonstrate real-world data enrichment using Wikidata.
+#
+# What this query retrieves:
+#   - Coordinates of the city (wdt:P625)
+#   - image of the city (wdt:P18)
+# =====================================================================================
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX schema: <http://schema.org/>
+
+SELECT ?name ?population ?wikidata ?image ?malePopulation ?femalePopulation ?coord
+WHERE {
+  {
+    SELECT ?city ?name ?population ?wikidata
+    WHERE {
+      ?city schema:name ?name .
+      ?city schema:population ?population .
+      ?city owl:sameAs ?wikidata .
+    }
+    LIMIT 20
+  }
+
+  SERVICE <https://query.wikidata.org/sparql> {
+    OPTIONAL { ?wikidata wdt:P18 ?image . }
+    OPTIONAL { ?wikidata wdt:P625 ?coord . }
+  }
+}
+LIMIT 20
+

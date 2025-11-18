@@ -1,0 +1,135 @@
+@prefix :            <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa:        <http://www.w3.org/ns/sosa/> .
+@prefix schema:      <http://schema.org/> .
+@prefix dcterms:     <http://purl.org/dc/terms/> .
+@prefix wgs84_pos:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix qudt:        <http://qudt.org/schema/qudt/> .
+@prefix unit:        <http://qudt.org/vocab/unit/> .
+
+@base <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors> .
+
+<https://smartcity.linkeddata.es/lcc/ontology/urban-sensors>
+    a                  owl:Ontology ;
+    owl:versionIRI     <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors/2025-10> ;
+    dcterms:creator    "Group 09 — Andosilla Herráiz, Gil Planes, Beamonte Gonzalez, Herrero Míguez, Hunziker Cadabal"@en ;
+    dcterms:description "Lightweight ontology to describe pedestrian and microclimate sensors, their locations (as Features of Interest), and observations in Melbourne, enriched with addresses. Reuses schema.org for administrative areas and addresses, and SOSA for sensing."@en ;
+    dcterms:license    <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title      "Urban Sensors Ontology"@en ;
+    owl:versionInfo    "2025-10-17" .
+
+#################################################################
+# Annotation properties
+#################################################################
+
+dcterms:creator        a owl:AnnotationProperty .
+dcterms:description    a owl:AnnotationProperty .
+dcterms:license        a owl:AnnotationProperty .
+dcterms:title          a owl:AnnotationProperty .
+
+#################################################################
+# Classes
+#################################################################
+
+# SOSA core
+sosa:Observation        a owl:Class .
+sosa:Sensor             a owl:Class .
+sosa:FeatureOfInterest  a owl:Class .
+
+# Sensor specializations
+:PedestrianSensor
+    rdfs:subClassOf     sosa:Sensor ;
+    rdfs:label          "Pedestrian sensor"@en .
+
+:MicroclimateSensor
+    rdfs:subClassOf     sosa:Sensor ;
+    rdfs:label          "Microclimate sensor"@en .
+
+:Street
+    rdfs:subClassOf     schema:Place ;
+    rdfs:label          "Street name"@en .
+
+#################################################################
+# Object and Datatype Properties
+#################################################################
+
+# Sensor → FoI link (where the sensor is physically located)
+:locatedAt
+    a                   owl:ObjectProperty ;
+    rdfs:domain         sosa:Sensor ;
+    rdfs:range          schema:Place ;
+    rdfs:label          "located at"@en ;
+    rdfs:comment        "Links a sensor to the Feature of Interest (place/air) where it is physically located."@en .
+    
+:closestPedestrianSensor
+    a                   owl:ObjectProperty ;
+    rdfs:domain         :MicroclimateSensor ;
+    rdfs:range          :PedestrianSensor ;
+    rdfs:label          "closest pedestrian sensor"@en ;
+    rdfs:comment        "Links a microclimate sensor to the closest pedestrian sensor."@en .
+
+:closestMicroclimateSensor
+    a                   owl:ObjectProperty ;
+    rdfs:domain         :PedestrianSensor ;
+    rdfs:range          :MicroclimateSensor ;
+    rdfs:label          "closest microclimate sensor"@en ;
+    rdfs:comment        "Links a pedestrian sensor to the closest microclimate sensor."@en .
+
+#######################################################################
+# Observable properties (as SOSA observable properties / individuals)
+#######################################################################
+
+:dateInstalled
+    a owl:DatatypeProperty ;
+    rdfs:domain sosa:Sensor ;
+    rdfs:range xsd:date .
+
+:pedestrianCount
+    a                   sosa:ObservableProperty ;
+    rdfs:label          "pedestrian count"@en ;
+    rdfs:comment        "Pedestrian count observable property."@en .
+
+:airTemperature
+    a                   sosa:ObservableProperty ;
+    rdfs:label          "air temperature"@en ;
+    rdfs:comment        "Air temperature observable property."@en .
+
+:relativeHumidity
+    a                   sosa:ObservableProperty ;
+    rdfs:label          "relative humidity"@en ;
+    rdfs:comment        "Relative humidity observable property."@en .
+
+:averageWindSpeed
+    a                   sosa:ObservableProperty ;
+    rdfs:label          "average wind speed"@en ;
+    rdfs:comment        "Average wind speed observable property."@en .
+
+:averageWindDirection
+    a                   sosa:ObservableProperty ;
+    rdfs:label          "average wind direction"@en ;
+    rdfs:comment        "Average wind direction observable property."@en .
+
+:atmosphericPressure
+    a                   sosa:ObservableProperty ;
+    rdfs:label          "atmospheric pressure"@en ;
+    rdfs:comment        "Atmospheric pressure observable property."@en .
+
+:pm10
+    a                   sosa:ObservableProperty ;
+    rdfs:label          "pm10"@en ;
+    rdfs:comment        "Particulate matter PM10 observable property."@en .
+
+:noise
+    a                   sosa:ObservableProperty ;
+    rdfs:label          "noise level"@en ;
+    rdfs:comment        "Acoustic noise level observable property."@en .
+
+
+#################################################################
+# Help
+#################################################################
+
+# Observation --sosa:madeBySensor--> Sensor --:locatedAt--> FoI

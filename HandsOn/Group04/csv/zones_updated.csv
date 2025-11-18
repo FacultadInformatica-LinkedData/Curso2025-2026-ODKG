@@ -1,0 +1,2619 @@
+id,name,population
+01001,Alegría-Dulantzi,2925
+01002,Amurrio,10307
+01004_AM,Artziniega agregacion de municipios,3005
+01009_AM,Asparrena agregacion de municipios,4599
+01010,Ayala/Aiara,2951
+01017_AM,Campezo/Kanpezu agregacion de municipios,4314
+01028_AM,Labastida/Bastida agregacion de municipios,7515
+01036,Laudio/Llodio,18009
+01043,Oyón-Oion,3418
+01047_AM,Erriberabeitia agregacion de municipios,3771
+01051,Agurain/Salvatierra,5029
+01054_AM,Urkabustaiz agregacion de municipios,2636
+01058_AM,Legutio agregacion de municipios,4466
+01059,Vitoria-Gasteiz,253093
+01063_AM,Zuia agregacion de municipios,4120
+01901,Iruña Oka/Iruña de Oca,3468
+02003,Albacete,172722
+02008_AM,Alcaraz agregacion de municipios,4946
+02009,Almansa,24388
+02010_AM,Alpera agregacion de municipios,5058
+02012_AM,Balazote agregacion de municipios,5804
+02019_AM,"Bonillo, El agregacion de municipios",4959
+02021_AM,Casas de Juan Núñez agregacion de municipios,5457
+02024_AM,Casas-Ibáñez agregacion de municipios,5318
+02025,Caudete,10077
+02029,Chinchilla de Monte-Aragón,4344
+02030,Elche de la Sierra,3557
+02033_AM,Fuente-Álamo agregacion de municipios,8111
+02034_AM,Fuentealbilla agregacion de municipios,4405
+02035_AM,"Gineta, La agregacion de municipios",4403
+02037,Hellín,30427
+02045,Madrigueras,4654
+02053,Munera,3433
+02063_AM,Pozohondo agregacion de municipios,5239
+02067_AM,Riópar agregacion de municipios,4884
+02069,"Roda, La",15401
+02072_AM,Socovos agregacion de municipios,3501
+02073_AM,Tarazona de la Mancha agregacion de municipios,7265
+02074,Tobarra,7691
+02075_AM,Valdeganga agregacion de municipios,3932
+02079,Villamalea,4040
+02081,Villarrobledo,24978
+02086_AM,Yeste agregacion de municipios,4673
+02901,Pozo Cañada,2797
+03002_AM,Agost agregacion de municipios,6597
+03005_AM,Albatera agregacion de municipios,14860
+03006_AM,Alcalalí agregacion de municipios,2824
+03009,Alcoy/Alcoi,59128
+03011,"Alfàs del Pi, l'",20495
+03012,Algorfa,3396
+03013_AM,Algueña agregacion de municipios,2633
+03014,Alicante/Alacant,337304
+03015,Almoradí,24343
+03018,Altea,22657
+03019,Aspe,21088
+03021,Banyeres de Mariola,7113
+03023_AM,Beneixama agregacion de municipios,3327
+03024,Benejúzar,5453
+03026_AM,Beniarbeig agregacion de municipios,5934
+03028_AM,Beniarrés agregacion de municipios,5524
+03031,Benidorm,69118
+03034_AM,Benijófar agregacion de municipios,5787
+03035_AM,Benilloba agregacion de municipios,5262
+03041,Benissa,11462
+03042,"Benitachell/Poble Nou de Benitatxell, el",4447
+03043,Biar,3628
+03044_AM,Bigastro agregacion de municipios,9024
+03046,Busot,3207
+03047,Calp,23530
+03048,Callosa d'en SarriÍ,7589
+03049,Callosa de Segura,19273
+03050,"Campello, el",29013
+03053,Castalla,10752
+03055,Catral,8880
+03056,Cocentaina,11451
+03058,Cox,7427
+03059,Crevillent,29717
+03063,Dénia,42953
+03064,Dolores,7620
+03065,Elche/Elx,234205
+03066,Elda,52551
+03069,Finestrat,7402
+03070,Formentera del Segura,4337
+03071,Gata de Gorgos,6223
+03074_AM,Granja de Rocamora agregacion de municipios,4567
+03076,Guardamar del Segura,15983
+03077,"Fondó de les Neus, el/Hondón de las Nieves",2634
+03079,Ibi,23652
+03081,Xaló,2892
+03082,Jávea/Xàbia,27983
+03083,Jijona/Xixona,6861
+03088,Monforte del Cid,8500
+03089,Monóvar/Monòver,12188
+03090,Mutxamel,25679
+03092_AM,Muro de Alcoy agregacion de municipios,10812
+03093,Novelda,25611
+03094,"Nucia, la",18108
+03095,Ondara,7080
+03096,Onil,7569
+03097_AM,Orba agregacion de municipios,6159
+03099,Orihuela,78940
+03101,Pedreguer,8006
+03102,Pego,10240
+03104,Petrer,34009
+03105,"Pinós, el/Pinoso",8142
+03107,Polop,5069
+03109,Rafal,4597
+03111,Redován,8058
+03112_AM,Relleu agregacion de municipios,3009
+03113,Rojales,15978
+03114,"Romana, la",2542
+03118,San Fulgencio,8447
+03119,Sant Joan d'Alacant,24363
+03120,San Miguel de Salinas,6553
+03121,Santa Pola,34148
+03122,San Vicente del Raspeig/Sant Vicent del Raspeig,58912
+03123_AM,Sax agregacion de municipios,11577
+03128,Teulada,11466
+03133,Torrevieja,82842
+03138,"Verger, el",4841
+03139,"Villajoyosa/Vila Joiosa, la",34684
+03140,Villena,34025
+03901,"Poblets, els",2721
+03902,Pilar de la Horadada,22597
+03903,"Montesinos, Los",2184
+04003,Adra,25501
+04006,Albox,12070
+04011_AM,Alhama de Almería agregacion de municipios,5309
+04013,Almería,200753
+04016,Antas,3355
+04017_AM,Arboleas agregacion de municipios,8576
+04024,Benahadux,4526
+04029,Berja,12708
+04031,Cantoria,3547
+04032,Carboneras,8183
+04035,Cuevas del Almanzora,14623
+04038,Dalías,4102
+04044_AM,Fines agregacion de municipios,4519
+04045_AM,Fiñana agregacion de municipios,5568
+04047_AM,Gádor agregacion de municipios,4973
+04048_AM,"Gallardos, Los agregacion de municipios",5466
+04049,Garrucha,9875
+04050_AM,Gérgal agregacion de municipios,5350
+04052,Huércal de Almería,17974
+04053,Huércal-Overa,19744
+04057_AM,Láujar de Andarax agregacion de municipios,6119
+04062_AM,Macael agregacion de municipios,6223
+04064,Mojácar,7257
+04066,Níjar,31458
+04069,Olula del Río,6258
+04070_AM,Oria agregacion de municipios,5749
+04074,Pechina,4143
+04075,Pulpí,10342
+04079,Roquetas de Mar,98725
+04083_AM,Serón agregacion de municipios,3049
+04086_AM,Sorbas agregacion de municipios,3871
+04088_AM,Tabernas agregacion de municipios,6066
+04092,Tíjola,3528
+04093,Turre,3892
+04098_AM,Vélez-Blanco agregacion de municipios,4682
+04099,Vélez-Rubio,6521
+04100,Vera,17700
+04101,Viator,6039
+04102,Vícar,27398
+04902,"Ejido, El",84005
+04903,"Mojonera, La",9086
+04904,Balanegra,2959
+05002_AM,"Adrada, La agregacion de municipios",4893
+05013_AM,"Arenal, El agregacion de municipios",4665
+05014_AM,Arenas de San Pedro agregacion de municipios,6862
+05016,Arévalo,7881
+05019,Ávila,57949
+05021_AM,"Barco de Ávila, El agregacion de municipios",4814
+05047,Candeleda,5049
+05054_AM,Casavieja agregacion de municipios,5123
+05057,Cebreros,3246
+05102_AM,"Hoyo de Pinares, El agregacion de municipios",4476
+05114_AM,Madrigal de las Altas Torres agregacion de municipios,5055
+05163_AM,Navaluenga agregacion de municipios,6986
+05168_AM,"Navas del Marqués, Las agregacion de municipios",5504
+05186_AM,Piedrahíta agregacion de municipios,4405
+05204_AM,Sanchidrián agregacion de municipios,5016
+05220_AM,San Pedro del Arroyo agregacion de municipios,5246
+05238_AM,Solosancho agregacion de municipios,5593
+05240_AM,Sotillo de la Adrada agregacion de municipios,6227
+05241_AM,"Tiemblo, El agregacion de municipios",4772
+05242_AM,Tiñosillos agregacion de municipios,4659
+06002,Aceuchal,5467
+06005_AM,"Albuera, La agregacion de municipios",6889
+06006,Alburquerque,5245
+06011,Almendralejo,33741
+06012_AM,Arroyo de San Serván agregacion de municipios,6330
+06014,Azuaga,7702
+06015,Badajoz,150610
+06016_AM,Barcarrota agregacion de municipios,5190
+06019_AM,Berlanga agregacion de municipios,7780
+06020_AM,Bienvenida agregacion de municipios,3848
+06022,Burguillos del Cerro,3076
+06023,Cabeza del Buey,4732
+06025,Calamonte,6152
+06028,Campanario,4823
+06033_AM,Casas de Don Pedro agregacion de municipios,3718
+06036_AM,Castuera agregacion de municipios,8133
+06039_AM,"Coronada, La agregacion de municipios",3892
+06044_AM,Don Benito agregacion de municipios,39214
+06050,Fregenal de la Sierra,4811
+06051_AM,Fuenlabrada de los Montes agregacion de municipios,3726
+06052_AM,Fuente de Cantos agregacion de municipios,5405
+06054,Fuente del Maestre,6704
+06055_AM,Fuentes de León agregacion de municipios,6322
+06058_AM,"Garrovilla, La agregacion de municipios",4793
+06059_AM,Granja de Torrehermosa agregacion de municipios,2806
+06060_AM,Guareña agregacion de municipios,9251
+06063,Herrera del Duque,3465
+06066_AM,Higuera de Vargas agregacion de municipios,5430
+06067_AM,Higuera la Real agregacion de municipios,3219
+06069_AM,Hornachos agregacion de municipios,5240
+06070_AM,Jerez de los Caballeros agregacion de municipios,10658
+06072,Lobón,2760
+06074_AM,Llerena agregacion de municipios,7348
+06080_AM,Medellín agregacion de municipios,3906
+06083,Mérida,59424
+06085_AM,Monesterio agregacion de municipios,6297
+06087_AM,Monterrubio de la Serena agregacion de municipios,3120
+06088,Montijo,15483
+06091,Navalvillar de Pela,4392
+06093_AM,Oliva de la Frontera agregacion de municipios,5798
+06094_AM,Oliva de Mérida agregacion de municipios,5653
+06095,Olivenza,11871
+06097_AM,Orellana la Vieja agregacion de municipios,3702
+06103,Puebla de la Calzada,5861
+06108,Puebla de Sancho Pérez,2665
+06109,Quintana de la Serena,4576
+06113_AM,Ribera del Fresno agregacion de municipios,5587
+06117_AM,Salvatierra de los Barros agregacion de municipios,4721
+06120,Santa Amalia,3957
+06121,Santa Marta,4094
+06122,"Santos de Maimona, Los",8064
+06123_AM,San Vicente de Alcántara agregacion de municipios,7389
+06125_AM,Siruela agregacion de municipios,5009
+06126_AM,Solana de los Barros agregacion de municipios,4047
+06127,Talarrubias,3355
+06128,Talavera la Real,5311
+06135_AM,Trujillanos agregacion de municipios,3209
+06141_AM,Valencia del Ventoso agregacion de municipios,4681
+06143,Valverde de Leganés,4157
+06149,Villafranca de los Barros,12534
+06153,Villanueva de la Serena,25837
+06154,Villanueva del Fresno,3335
+06155_AM,Villar del Rey agregacion de municipios,7727
+06158,Zafra,16786
+06159,Zahínos,2780
+06160_AM,Zalamea de la Serena agregacion de municipios,5570
+06162,"Zarza, La",3380
+06901,Valdelacalzada,2731
+06903_AM,Guadiana agregacion de municipios,4454
+07001,Alaró,5741
+07002,Alaior,9477
+07003,Alcúdia,20651
+07004,Algaida,5963
+07005,Andratx,11571
+07006,ArtÍ,7984
+07008,Binissalem,8895
+07010,Bunyola,7037
+07011,CalviÍ,51567
+07012_AM,Campanet agregacion de municipios,3768
+07013,Campos,11425
+07014,Capdepera,12003
+07015,Ciutadella de Menorca,30638
+07016,Consell,4243
+07020,Esporles,5134
+07022,Felanitx,18164
+07023_AM,Ferreries agregacion de municipios,6392
+07024,Formentera,11708
+07026,Eivissa,50643
+07027,Inca,33726
+07028_AM,Lloret de Vistalegre agregacion de municipios,2844
+07029,Lloseta,6250
+07030_AM,Llubí agregacion de municipios,4627
+07031,Llucmajor,38224
+07032,Maó-Mahón,29578
+07033,Manacor,44809
+07036,Marratxí,38357
+07037,"Mercadal, Es",5444
+07038_AM,Montuïri agregacion de municipios,5272
+07039,Muro,7515
+07040,Palma,419366
+07041_AM,Petra agregacion de municipios,3925
+07042,Pollença,16969
+07043,Porreres,5624
+07044,"Pobla, Sa",13873
+07045_AM,Puigpunyent agregacion de municipios,5641
+07046,Sant Antoni de Portmany,27205
+07047_AM,Sencelles agregacion de municipios,5266
+07048,Sant Josep de sa Talaia,28299
+07050,Sant Joan de Labritja,6635
+07051,Sant Llorenç des Cardassar,8920
+07052,Sant Lluís,6877
+07054,Santa Eulària des Riu,40038
+07055,Santa Margalida,12767
+07056,Santa María del Camí,7507
+07057,Santanyí,12342
+07058_AM,Selva agregacion de municipios,6558
+07059,"Salines, Ses",5010
+07060,Sineu,4122
+07061,Sóller,13491
+07062,Son Servera,11835
+07064,"Castell, Es",7530
+07065,Vilafranca de Bonany,3558
+08001,Abrera,12620
+08003,Alella,9954
+08005,"Ametlla del Vallès, L'",8787
+08006,Arenys de Mar,15942
+08007,Arenys de Munt,9191
+08009,Argentona,12629
+08010_AM,Artés agregacion de municipios,8068
+08011_AM,Aviàagregacion de municipios,4146
+08014,Aiguafreda,2556
+08015,Badalona,223006
+08016_AM,Bagàagregacion de municipios,4673
+08017,BalenyÍ,3900
+08018_AM,Balsareny agregacion de municipios,4698
+08019,Barcelona,1636732
+08020,Begues,7356
+08022,Berga,16682
+08023,Bigues i Riells,9542
+08029,Cabrera de Mar,4787
+08030,Cabrils,7567
+08031,Calaf,3597
+08032,Caldes d'Estrac,3097
+08033,Caldes de Montbui,17797
+08034_AM,Calders agregacion de municipios,3913
+08035,Calella,19236
+08037_AM,Calldetenes agregacion de municipios,4773
+08038_AM,Callús agregacion de municipios,3593
+08040,Canet de Mar,14810
+08041,Canovelles,16872
+08042,Cànoves i Samalús,3219
+08043,Canyelles,4886
+08044_AM,Capellades agregacion de municipios,6689
+08046,Cardedeu,18609
+08047_AM,Cardona agregacion de municipios,5207
+08051,Castellar del Vallès,24659
+08053,Castellbell i el Vilar,3853
+08054,Castellbisbal,12610
+08056,Castelldefels,67226
+08064,Castellterçol,2632
+08067,Centelles,7595
+08068,Cervelló,9233
+08069,Collbató,4655
+08072,Corbera de Llobregat,15017
+08073,Cornellà de Llobregat,89300
+08074,Cubelles,16051
+08075,Dosrius,5685
+08076,Esparreguera,22358
+08077,Esplugues de Llobregat,46777
+08085_AM,Font-rubí agregacion de municipios,5039
+08086,"Franqueses del Vallès, Les",20351
+08088,"Garriga, La",16733
+08089,GavÍ,46931
+08091_AM,Gelida agregacion de municipios,9719
+08092,Gironella,4916
+08094_AM,"Granada, La agregacion de municipios",5290
+08096,Granollers,62475
+08097_AM,Gualba agregacion de municipios,3229
+08098_AM,Sant Salvador de Guardiola agregacion de municipios,5422
+08100,Gurb,2705
+08101,"Hospitalet de Llobregat, L'",264657
+08102,Igualada,40875
+08105,"Llagosta, La",13259
+08106,Llinars del Vallès,10116
+08107,Lliçà d'Amunt,15673
+08108,Lliçà de Vall,6580
+08110,Malgrat de Mar,18950
+08112,Manlleu,20804
+08113,Manresa,78192
+08114,Martorell,28667
+08115_AM,Martorelles agregacion de municipios,5705
+08117,"Masies de Voltregà, Les",3178
+08118,"Masnou, El",23848
+08119,Masquefa,9623
+08120,Matadepera,9672
+08121,Mataró,129120
+08122_AM,Mediona agregacion de municipios,6307
+08123,Molins de Rei,26104
+08124,Mollet del Vallès,51151
+08125,Montcada i Reixac,36794
+08126,Montgat,12260
+08127_AM,Monistrol de Montserrat agregacion de municipios,3449
+08135,Montmeló,8798
+08136,Montornès del Vallès,16804
+08138,MoiÍ,6474
+08140,Navarcles,6068
+08141,Navàs,5973
+08143,Òdena,3681
+08145_AM,Olèrdola agregacion de municipios,6299
+08147,Olesa de Montserrat,24132
+08148,Olivella,4127
+08149_AM,Olost agregacion de municipios,3125
+08155,Palafolls,9646
+08156,Palau-solità i Plegamans,14917
+08157,PallejÍ,11636
+08158,"Papiol, El",4232
+08159,Parets del Vallès,18907
+08161,Piera,16411
+08162_AM,"Hostalets de Pierola, Els agregacion de municipios",5241
+08163,Pineda de Mar,27974
+08167,PolinyÍ,8494
+08169,"Prat de Llobregat, El",65532
+08170_AM,"Prats de Rei, Els agregacion de municipios",4015
+08171,Prats de Lluçanès,2634
+08172,Premià de Mar,28523
+08175_AM,Puig-reig agregacion de municipios,5822
+08180,Ripollet,39139
+08181,"Roca del Vallès, La",10676
+08182,"Pont de Vilomara i Rocafort, El",4016
+08183,Roda de Ter,6449
+08184,Rubí,78549
+08187,Sabadell,216204
+08191,Sallent,6717
+08192,Santpedor,7566
+08194,Sant Adrià de Besòs,37283
+08196,Sant Andreu de la Barca,27175
+08197,Sant Andreu de Llavaneres,11150
+08198,Sant Antoni de Vilamajor,6383
+08200,Sant Boi de Llobregat,83755
+08202,Sant Celoni,18176
+08203,Sant Cebrià de Vallalta,3570
+08204,Sant Climent de Llobregat,4193
+08205,Sant Cugat del Vallès,94012
+08207,Sant Esteve de Palautordera,2997
+08208_AM,Sant Esteve Sesrovires agregacion de municipios,10230
+08209,Sant Fost de Campsentelles,8997
+08210,Sant Feliu de Codines,6406
+08211,Sant Feliu de Llobregat,45463
+08213,Sant Fruitós de Bages,8936
+08214,Vilassar de Dalt,9074
+08215,Sant Hipòlit de VoltregÍ,3547
+08217,Sant Joan Despí,34130
+08218,Sant Joan de Vilatorrada,10871
+08219,Vilassar de Mar,20936
+08220_AM,Sant Julià de Vilatorta agregacion de municipios,5411
+08221,Sant Just Desvern,19379
+08223,Sant Llorenç Savall,2514
+08224_AM,Sant Martí de Centelles agregacion de municipios,2638
+08226_AM,Sant Martí de Tous agregacion de municipios,2916
+08227_AM,Sant Martí Sarroca agregacion de municipios,4883
+08230,Premià de Dalt,10419
+08231,Sant Pere de Ribes,31525
+08232_AM,Sant Pere de Riudebitlles agregacion de municipios,5146
+08233_AM,Sant Pere de Torelló agregacion de municipios,6518
+08234,Sant Pere de Vilamajor,4671
+08235,Sant Pol de Mar,5538
+08237_AM,Sant Quirze de Besora agregacion de municipios,5770
+08238,Sant Quirze del Vallès,20156
+08240,Sant Sadurní d'Anoia,12840
+08244,Santa Coloma de Cervelló,8273
+08245,Santa Coloma de Gramenet,119289
+08247_AM,Santa Eulàlia de Riuprimer agregacion de municipios,2579
+08248,Santa Eulàlia de Ronçana,7538
+08250,Santa Margarida de Montbui,10192
+08251,Santa Margarida i els Monjos,7664
+08252,Barberà del Vallès,33016
+08258_AM,Santa Maria d'Oló agregacion de municipios,2515
+08259,Santa Maria de Palautordera,9666
+08260,Santa Perpètua de Mogoda,26033
+08261,Santa Susanna,3650
+08262_AM,Sant Vicenç de Castellet agregacion de municipios,10736
+08263,Sant Vicenç dels Horts,28115
+08264,Sant Vicenç de Montalt,6523
+08266,Cerdanyola del Vallès,57217
+08267,Sentmenat,9347
+08268_AM,Cercs agregacion de municipios,4886
+08269,Seva,3696
+08270,Sitges,30217
+08273_AM,Subirats agregacion de municipios,5072
+08274,Súria,5923
+08278_AM,Taradell agregacion de municipios,6963
+08279,Terrassa,223011
+08281,TeiÍ,6532
+08282,Tiana,9009
+08283,Tona,8368
+08284_AM,Tordera agregacion de municipios,19328
+08285,Torelló,14553
+08286_AM,"Torre de Claramunt, La agregacion de municipios",6059
+08288_AM,Torrelles de Foix agregacion de municipios,4841
+08289,Torrelles de Llobregat,6126
+08291,Vacarisses,7082
+08294_AM,Vallgorguina agregacion de municipios,5248
+08295,Vallirana,15438
+08296_AM,Vallromanes agregacion de municipios,3373
+08298,Vic,47319
+08300_AM,Viladecavalls agregacion de municipios,9717
+08301,Viladecans,66707
+08302,Vilanova del Camí,12736
+08305,Vilafranca del Penedès,39969
+08307,Vilanova i la Geltrú,67458
+08902,Vilanova del Vallès,5535
+08904,Badia del Vallès,13228
+08905,"Palma de Cervelló, La",3015
+09018,Aranda de Duero,33084
+09048_AM,Belorado agregacion de municipios,5319
+09056,Briviesca,6465
+09059,Burgos,174051
+09073_AM,Cardeñadijo agregacion de municipios,4711
+09109_AM,Condado de Treviño agregacion de municipios,1929
+09124_AM,Espinosa de los Monteros agregacion de municipios,2527
+09141_AM,Fuentespina agregacion de municipios,6044
+09174_AM,Huerta de Rey agregacion de municipios,5125
+09177_AM,Ibeas de Juarros agregacion de municipios,3974
+09194,Lerma,2609
+09209_AM,Medina de Pomar agregacion de municipios,6747
+09211_AM,Melgar de Fernamental agregacion de municipios,5401
+09219,Miranda de Ebro,35528
+09238_AM,Oña agregacion de municipios,5369
+09289_AM,Quintanar de la Sierra agregacion de municipios,4762
+09321_AM,Roa agregacion de municipios,5393
+09330_AM,Salas de los Infantes agregacion de municipios,4897
+09350_AM,Santa María del Campo agregacion de municipios,4874
+09363_AM,Sasamón agregacion de municipios,4976
+09390_AM,Torresandino agregacion de municipios,2804
+09410,Valle de Mena,3987
+09413_AM,Valle de Valdebezana agregacion de municipios,4589
+09434_AM,Villagonzalo Pedernales agregacion de municipios,5550
+09439_AM,Villalbilla de Burgos agregacion de municipios,4769
+09903,Villarcayo de Merindad de Castilla la Vieja,4029
+09907_AM,Alfoz de Quintanadueñas agregacion de municipios,6542
+10004_AM,Acehúche agregacion de municipios,2712
+10006_AM,Ahigal agregacion de municipios,5047
+10010_AM,Alcuéscar agregacion de municipios,5663
+10014_AM,Aldeanueva de la Vera agregacion de municipios,4744
+10019_AM,Almaraz agregacion de municipios,5074
+10020_AM,Almoharín agregacion de municipios,5056
+10021,Arroyo de la Luz,5663
+10032_AM,Brozas agregacion de municipios,6491
+10035_AM,Cabezuela del Valle agregacion de municipios,5019
+10037,Cáceres,95418
+10049_AM,Casar de Cáceres agregacion de municipios,6471
+10050_AM,Casar de Palomero agregacion de municipios,5009
+10061_AM,Ceclavín agregacion de municipios,6061
+10064_AM,Cilleros agregacion de municipios,6088
+10067,Coria,12330
+10087_AM,Guadalupe agregacion de municipios,4910
+10089_AM,Guijo de Galisteo agregacion de municipios,5113
+10096_AM,Hervás agregacion de municipios,5059
+10104,Jaraíz de la Vera,6499
+10105_AM,Jarandilla de la Vera agregacion de municipios,5093
+10109_AM,Logrosán agregacion de municipios,6065
+10110,Losar de la Vera,2658
+10113_AM,Madroñera agregacion de municipios,4757
+10115,Malpartida de Cáceres,4060
+10116_AM,Malpartida de Plasencia agregacion de municipios,5178
+10121,Miajadas,9503
+10127,Montehermoso,5680
+10128,Moraleja,6685
+10131,Navalmoral de la Mata,17010
+10140_AM,Peraleda de la Mata agregacion de municipios,6270
+10146_AM,Pinofranqueado agregacion de municipios,4932
+10147_AM,Piornal agregacion de municipios,5226
+10148,Plasencia,39558
+10175_AM,Serradilla agregacion de municipios,7010
+10177_AM,Sierra de Fuentes agregacion de municipios,8209
+10180_AM,Talayuela agregacion de municipios,9589
+10184_AM,"Torno, El agregacion de municipios",4850
+10186_AM,Torrecillas de la Tiesa agregacion de municipios,5133
+10189,Torrejoncillo,2894
+10195_AM,Trujillo agregacion de municipios,10258
+10203,Valencia de Alcántara,5325
+10205_AM,Valverde del Fresno agregacion de municipios,4806
+10212_AM,Villanueva de la Vera agregacion de municipios,5414
+10216_AM,Zarza de Granadilla agregacion de municipios,4968
+11001,Alcalá de los Gazules,5245
+11002,Alcalá del Valle,5031
+11004,Algeciras,122982
+11005_AM,Algodonales agregacion de municipios,7235
+11006,Arcos de la Frontera,30902
+11007,Barbate,22761
+11008,"Barrios, Los",23983
+11010,Bornos,7655
+11011_AM,"Bosque, El agregacion de municipios",5412
+11012,Cádiz,114244
+11013,Castellar de la Frontera,3070
+11014,Conil de la Frontera,23182
+11015,Chiclana de la Frontera,86306
+11016,Chipiona,19368
+11017,Espera,3845
+11020,Jerez de la Frontera,212801
+11021,Jimena de la Frontera,6665
+11022,"Línea de la Concepción, La",63365
+11023,Medina Sidonia,11813
+11024_AM,Olvera agregacion de municipios,8816
+11025,Paterna de Rivera,5470
+11026_AM,Prado del Rey agregacion de municipios,7046
+11027,"Puerto de Santa María, El",89060
+11028,Puerto Real,41771
+11029,Puerto Serrano,6954
+11030,Rota,29326
+11031,San Fernando,94867
+11032,Sanlúcar de Barrameda,69507
+11033,San Roque,32178
+11034,Setenil de las Bodegas,2698
+11035,Tarifa,18466
+11037,Trebujena,7042
+11038,Ubrique,16482
+11039,Vejer de la Frontera,12572
+11041,Villamartín,12125
+11901,Benalup-Casas Viejas,7020
+11902_AM,San José del Valle agregacion de municipios,5874
+11903,San Martín del Tesorillo,2821
+12004,Alcalà de Xivert,6691
+12005,"Alcora, l'",10428
+12009,Almassora,26878
+12011_AM,Almenara agregacion de municipios,7237
+12012_AM,Altura agregacion de municipios,6058
+12016_AM,Artana agregacion de municipios,5324
+12021,Betxí,5605
+12027,Benicarló,27658
+12028,Benicasim/Benicàssim,18991
+12031,Borriol,5552
+12032,Borriana/Burriana,34903
+12033_AM,Cabanes agregacion de municipios,5094
+12034_AM,Càlig agregacion de municipios,5966
+12040,Castelló de la Plana,172589
+12050_AM,"Coves de Vinromà, les agregacion de municipios",4974
+12053,Chilches/Xilxes,2795
+12072_AM,Llucena/Lucena del Cid agregacion de municipios,5736
+12077,Moncofa,6958
+12080_AM,Morella agregacion de municipios,5497
+12082,Nules,13256
+12084,Onda,24939
+12085,Oropesa del Mar/Orpesa,9755
+12089,Peníscola/Peñíscola,7882
+12104,Segorbe,9139
+12106_AM,Soneja agregacion de municipios,5194
+12117,Torreblanca,5606
+12121_AM,Traiguera agregacion de municipios,5166
+12124,Vall d'Alba,2943
+12126,"Vall d'Uixó, la",31549
+12128_AM,Vilafamés agregacion de municipios,3339
+12129_AM,Vilafranca/Villafranca del Cid agregacion de municipios,5881
+12135,Vila-real,51130
+12136,"Vilavella, la",3111
+12138,Vinaròs,28862
+12140_AM,Viver agregacion de municipios,5293
+12901,"Alqueries, les/Alquerías del Niño Perdido",4539
+12902_AM,Sant Joan de Moró agregacion de municipios,4546
+13001_AM,Abenójar agregacion de municipios,4871
+13005,Alcázar de San Juan,30548
+13009_AM,Aldea del Rey agregacion de municipios,3255
+13011,Almadén,5105
+13013,Almagro,8896
+13015,Almodóvar del Campo,5947
+13019,Argamasilla de Alba,6844
+13020_AM,Argamasilla de Calatrava agregacion de municipios,6279
+13023,Bolaños de Calatrava,11992
+13027,Calzada de Calatrava,3615
+13028_AM,Campo de Criptana agregacion de municipios,13801
+13031,Carrión de Calatrava,3086
+13033_AM,Castellar de Santiago agregacion de municipios,4860
+13034,Ciudad Real,75104
+13038_AM,Chillón agregacion de municipios,4774
+13039,Daimiel,17771
+13042_AM,Fuencaliente agregacion de municipios,4183
+13044_AM,Fuente el Fresno agregacion de municipios,4017
+13047,Herencia,8510
+13052,Malagón,7842
+13053_AM,Manzanares agregacion de municipios,18545
+13054,Membrilla,5927
+13056,Miguelturra,15658
+13058,Moral de Calatrava,5211
+13061,Pedro Muñoz,7325
+13063_AM,Piedrabuena agregacion de municipios,6779
+13064,Poblete,2759
+13065_AM,Porzuna agregacion de municipios,4553
+13066,Pozuelo de Calatrava,3623
+13068_AM,Puebla de Don Rodrigo agregacion de municipios,4862
+13071,Puertollano,46036
+13077,Santa Cruz de Mudela,4017
+13078,Socuéllamos,12067
+13079,"Solana, La",15357
+13082,Tomelloso,35984
+13083_AM,Torralba de Calatrava agregacion de municipios,3969
+13085,Torrenueva,2708
+13087,Valdepeñas,30218
+13089_AM,Villahermosa agregacion de municipios,5798
+13092_AM,Villanueva de la Fuente agregacion de municipios,6672
+13093_AM,Villanueva de los Infantes agregacion de municipios,5318
+13096,Villarrubia de los Ojos,9722
+13097_AM,Villarta de San Juan agregacion de municipios,5209
+13098_AM,Viso del Marqués agregacion de municipios,2974
+14001,Adamuz,4141
+14002,Aguilar de la Frontera,13398
+14004_AM,Almedinilla agregacion de municipios,3028
+14005_AM,Almodóvar del Río agregacion de municipios,9598
+14007_AM,Baena agregacion de municipios,19983
+14008,Belalcázar,3207
+14009,Belmez,2905
+14010,Benamejí,4982
+14012,Bujalance,7316
+14013,Cabra,20245
+14014,Cañete de las Torres,2888
+14017,"Carlota, La",14228
+14018,"Carpio, El",4382
+14019,Castro del Río,7740
+14021,Córdoba,322071
+14022_AM,Doña Mencía agregacion de municipios,5237
+14023_AM,Dos Torres agregacion de municipios,5755
+14024_AM,Encinas Reales agregacion de municipios,3719
+14025,Espejo,3272
+14026_AM,Espiel agregacion de municipios,6086
+14027,Fernán-Núñez,9667
+14029_AM,Fuente Obejuna agregacion de municipios,5942
+14030_AM,Fuente Palmera agregacion de municipios,10936
+14035,Hinojosa del Duque,6684
+14036,Hornachuelos,4517
+14037,Iznájar,4106
+14038,Lucena,42712
+14039_AM,Luque agregacion de municipios,5319
+14040,Montalbán de Córdoba,4517
+14041,Montemayor,3851
+14042,Montilla,22633
+14043_AM,Montoro agregacion de municipios,10704
+14045_AM,Moriles agregacion de municipios,5669
+14046,Nueva Carteya,5341
+14049,Palma del Río,20910
+14050,Pedro Abad,2808
+14051_AM,Pedroche agregacion de municipios,2883
+14052,Peñarroya-Pueblonuevo,10508
+14053,Posadas,7296
+14054,Pozoblanco,17156
+14055,Priego de Córdoba,22251
+14056,Puente Genil,29767
+14057,"Rambla, La",7515
+14058,Rute,9835
+14060_AM,Santaella agregacion de municipios,5976
+14065_AM,"Victoria, La agregacion de municipios",3165
+14066,Villa del Río,7016
+14067,Villafranca de Córdoba,4897
+14069,Villanueva de Córdoba,8662
+14070_AM,Villanueva del Duque agregacion de municipios,2890
+14073,Villaviciosa de Córdoba,3191
+14074_AM,"Viso, El agregacion de municipios",3284
+15001,Abegondo,5494
+15002,Ames,31993
+15004,Ares,5997
+15005,Arteixo,32894
+15006_AM,Arzúa agregacion de municipios,7493
+15007,"Baña, A",3389
+15008,Bergondo,6817
+15009,Betanzos,13030
+15010_AM,Boimorto agregacion de municipios,6041
+15011,Boiro,18955
+15012,Boqueixón,4186
+15013,Brión,7957
+15014,Cabana de Bergantiños,4185
+15015,Cabanas,3359
+15016,Camariñas,5224
+15017,Cambre,24616
+15019,Carballo,31414
+15020,Carnota,3854
+15021,Carral,6574
+15022_AM,Cedeira agregacion de municipios,8925
+15023_AM,Cee agregacion de municipios,9174
+15024,Cerceda,4996
+15029,Coristanco,5878
+15030,"Coruña, A",245468
+15031,Culleredo,30758
+15032_AM,Curtis agregacion de municipios,5914
+15033,Dodro,2710
+15034,Dumbría,2927
+15035,Fene,12832
+15036,Ferrol,64785
+15037,Fisterra,4714
+15040,Laxe,3004
+15041,"Laracha, A",11521
+15042,Lousame,3235
+15043,Malpica de Bergantiños,5332
+15045,Mazaricos,3806
+15046,Melide,7427
+15047_AM,Mesía agregacion de municipios,4785
+15048,Miño,6423
+15050_AM,Monfero agregacion de municipios,4369
+15051,Mugardos,5226
+15052,Muxía,4564
+15053,Muros,8399
+15054,Narón,38913
+15055,Neda,5032
+15056,Negreira,6775
+15057,Noia,14240
+15058,Oleiros,36922
+15059,Ordes,12605
+15060,Oroso,7530
+15061,Ortigueira,5485
+15062,Outes,6150
+15064_AM,Paderne agregacion de municipios,5606
+15065,Padrón,8317
+15066,"Pino, O",4639
+15067,"Pobra do Caramiñal, A",9291
+15068,Ponteceso,5457
+15069,Pontedeume,7687
+15070_AM,"Pontes de García Rodríguez, As agregacion de municipios",11108
+15071,Porto do Son,9155
+15072,Rianxo,11004
+15073,Ribeira,26839
+15074,Rois,4493
+15075,Sada,16382
+15076,San Sadurniño,2812
+15077,Santa Comba,9359
+15078,Santiago de Compostela,97858
+15082,Teo,18778
+15084,Tordoia,3228
+15085,Touro,3495
+15086,Trazo,3059
+15087,Valdoviño,6872
+15088,Val do Dubra,3816
+15089,Vedra,5032
+15092,Vimianzo,6925
+15093,Zas,4384
+15901_AM,Cariño agregacion de municipios,5072
+15902,Oza-Cesuras,5170
+16023_AM,Chillarón de Cuenca agregacion de municipios,4845
+16027_AM,Barajas de Melo agregacion de municipios,5123
+16042_AM,Campillo de Altobuey agregacion de municipios,4523
+16066,Casasimarro,3089
+16078,Cuenca,53988
+16102_AM,Honrubia agregacion de municipios,5271
+16106_AM,Horcajo de Santiago agregacion de municipios,4981
+16112_AM,Huete agregacion de municipios,4740
+16113_AM,Iniesta agregacion de municipios,5045
+16117_AM,Landete agregacion de municipios,4830
+16124_AM,"Mesas, Las agregacion de municipios",4940
+16125_AM,Minglanilla agregacion de municipios,4706
+16133,Mota del Cuervo,6035
+16134,Motilla del Palancar,5964
+16154,"Pedroñeras, Las",6638
+16170_AM,Priego agregacion de municipios,5144
+16171_AM,"Provencio, El agregacion de municipios",4832
+16175,Quintanar del Rey,7616
+16190,San Clemente,6953
+16191_AM,San Lorenzo de la Parrilla agregacion de municipios,4969
+16198_AM,Sisante agregacion de municipios,2878
+16203,Tarancón,15645
+16249_AM,Villamayor de Santiago agregacion de municipios,5583
+16251_AM,Villanueva de la Jara agregacion de municipios,6091
+16903_AM,"Valeras, Las agregacion de municipios",5384
+16905_AM,Arcas agregacion de municipios,5703
+17006_AM,Alp agregacion de municipios,5279
+17007_AM,Amer agregacion de municipios,9715
+17008,Anglès,5709
+17009,Arbúcies,6507
+17012_AM,Avinyonet de Puigventós agregacion de municipios,5980
+17013,Begur,4039
+17015,Banyoles,20168
+17016_AM,Bàscara agregacion de municipios,4914
+17019,Besalú,2502
+17020,Bescanó,5094
+17022,"Bisbal d'Empordà, La",11190
+17023,Blanes,40274
+17027,Breda,3836
+17032,Cadaqués,2820
+17033,Caldes de Malavella,8051
+17034,Calonge i Sant Antoni,11484
+17036_AM,Campdevànol agregacion de municipios,5566
+17039_AM,Camprodon agregacion de municipios,5773
+17044,Cassà de la Selva,10505
+17047,Castelló d'Empúries,11154
+17048,Castell-Platja d'Aro,11455
+17049_AM,Celràagregacion de municipios,7402
+17056_AM,Cornellà del Terri agregacion de municipios,5882
+17062,"Escala, L'",10497
+17066,Figueres,47043
+17067_AM,Flaçàagregacion de municipios,5196
+17073,Fornells de la Selva,2700
+17079,Girona,101932
+17083,Hostalric,4332
+17086_AM,"Jonquera, La agregacion de municipios",5471
+17089,Llagostera,8851
+17092_AM,Llançàagregacion de municipios,6399
+17094,Llívia,1504
+17095,Lloret de Mar,38402
+17103,Maçanet de la Selva,7349
+17111_AM,Navata agregacion de municipios,6001
+17114,Olot,36299
+17117,Palafrugell,23046
+17118,Palamós,18196
+17120_AM,Palau-saverdera agregacion de municipios,2712
+17124_AM,Pals agregacion de municipios,2798
+17132_AM,Peralada agregacion de municipios,6073
+17137_AM,Porqueres agregacion de municipios,6042
+17139_AM,"Preses, Les agregacion de municipios",2572
+17141,PuigcerdÍ,9518
+17142,Quart,3856
+17146,Riells i Viabrea,4268
+17147,Ripoll,10721
+17148_AM,Riudarenes agregacion de municipios,3894
+17152,Roses,19921
+17155,Salt,32230
+17160,Sant Feliu de Guíxols,22210
+17163,Sant Gregori,4012
+17164_AM,Sant Hilari Sacalm agregacion de municipios,7099
+17167_AM,Sant Joan de les Abadesses agregacion de municipios,4975
+17169_AM,Sant Julià de Ramis agregacion de municipios,4275
+17178_AM,Sant Pere Pescador agregacion de municipios,5563
+17180_AM,Santa Coloma de Farners agregacion de municipios,13849
+17181,Santa Cristina d'Aro,5408
+17184_AM,Santa Pau agregacion de municipios,3376
+17185,Sant Joan les Fonts,3050
+17186,Sarrià de Ter,5231
+17190_AM,Serinyàagregacion de municipios,2787
+17193,Sils,6349
+17199,Torroella de Montgrí,12023
+17202,Tossa de Mar,5930
+17207,"Vall d'en Bas, La",3115
+17211_AM,Verges agregacion de municipios,5608
+17213,Vidreres,8073
+17215_AM,Vilablareix agregacion de municipios,4014
+17221,Vilafant,5480
+17223_AM,Vilajuïga agregacion de municipios,5129
+17233_AM,Vilobí d'Onyar agregacion de municipios,5386
+17901_AM,"Cruïlles, Monells i Sant Sadurní de l'Heura agregacion de municipios",5336
+17902_AM,Forallac agregacion de municipios,5196
+18003,Albolote,19128
+18006,Albuñol,7473
+18011,Alfacar,5497
+18013,Alhama de Granada,5667
+18014_AM,Alhendín agregacion de municipios,11462
+18017,Almuñécar,25890
+18021,Armilla,24388
+18022,Atarfe,19198
+18023,Baza,20281
+18027_AM,Benalúa agregacion de municipios,5609
+18029_AM,Benamaurel agregacion de municipios,6172
+18035_AM,Cádiar agregacion de municipios,2906
+18036,Cájar,5262
+18039,Caniles,4038
+18047,Cenes de la Vega,8181
+18048,Cijuela,3472
+18050_AM,Cogollos de la Vega agregacion de municipios,2659
+18056,Cúllar,4079
+18057,Cúllar Vega,7719
+18059,Chauchina,5624
+18061_AM,Chimeneas agregacion de municipios,6338
+18062,Churriana de la Vega,15741
+18063_AM,Darro agregacion de municipios,5309
+18066,Deifontes,2625
+18071_AM,Dúrcal agregacion de municipios,8366
+18079,Fuente Vaqueros,4415
+18084,Gójar,5993
+18087,Granada,231775
+18088_AM,Guadahortuna agregacion de municipios,4809
+18089,Guadix,18462
+18093,Gualchos,5287
+18094,Güéjar Sierra,2906
+18095,Güevéjar,2658
+18098,Huéscar,7236
+18099_AM,Huétor de Santillán agregacion de municipios,4971
+18100,Huétor Tájar,10514
+18101,Huétor Vega,12120
+18102_AM,Íllora agregacion de municipios,12139
+18105,Iznalloz,5094
+18108_AM,Jérez del Marquesado agregacion de municipios,4978
+18111,Jun,3928
+18115,Láchar,3550
+18116_AM,Lanjarón agregacion de municipios,5811
+18119_AM,Lecrín agregacion de municipios,4863
+18122_AM,Loja agregacion de municipios,21379
+18127,Maracena,22358
+18132,Moclín,3613
+18133,Molvízar,2748
+18134,Monachil,8137
+18135_AM,Montefrío agregacion de municipios,7776
+18136_AM,Montejícar agregacion de municipios,4847
+18137_AM,Montillana agregacion de municipios,3489
+18138,Moraleda de Zafayona,3106
+18140,Motril,58545
+18145,Ogíjares,14559
+18147,Órgiva,5866
+18148_AM,Otívar agregacion de municipios,3308
+18149_AM,Villa de Otura agregacion de municipios,9310
+18150,Padul,8934
+18152_AM,Pedro Martínez agregacion de municipios,4530
+18153,Peligros,11544
+18157_AM,Pinos Genil agregacion de municipios,2867
+18158,Pinos Puente,9853
+18162_AM,Polopos agregacion de municipios,4854
+18164_AM,Puebla de Don Fadrique agregacion de municipios,5814
+18165,Pulianas,5480
+18171_AM,Salar agregacion de municipios,4676
+18173,Salobreña,12472
+18175,Santa Fe,15175
+18182,Ugíjar,2550
+18184_AM,Vélez de Benaudalla agregacion de municipios,4883
+18192_AM,Zafarraya agregacion de municipios,2639
+18193,"Zubia, La",19473
+18194,Zújar,2516
+18903_AM,Nevada agregacion de municipios,5176
+18905,"Gabias, Las",22051
+18907_AM,Valle del Zalabí agregacion de municipios,4969
+18911,Vegas del Genil,11678
+18912_AM,Cuevas del Campo agregacion de municipios,2678
+18916,Torrenueva Costa,2892
+19021_AM,Almoguera agregacion de municipios,3193
+19024,Alovera,13051
+19046,Azuqueca de Henares,35236
+19053_AM,Brihuega agregacion de municipios,5150
+19058_AM,Cabanillas del Campo agregacion de municipios,12909
+19071,"Casar, El",12710
+19086_AM,Cifuentes agregacion de municipios,4950
+19103_AM,Checa agregacion de municipios,2511
+19105,Chiloeches,3797
+19117,Fontanar,2523
+19126,Galápagos,2579
+19130,Guadalajara,87064
+19143,Horche,2702
+19151_AM,Humanes agregacion de municipios,5463
+19156_AM,Jadraque agregacion de municipios,4856
+19160_AM,Loranca de Tajuña agregacion de municipios,6579
+19171,Marchamalo,7889
+19190,Molina de Aragón,3217
+19192,Mondéjar,2745
+19220_AM,Pioz agregacion de municipios,6079
+19245_AM,Sacedón agregacion de municipios,5124
+19257_AM,Sigüenza agregacion de municipios,5156
+19274_AM,Torija agregacion de municipios,5689
+19280,Torrejón del Rey,5892
+19293,Uceda,2933
+19319,Villanueva de la Torre,6591
+19326,Yebes,4636
+19331,Yunquera de Henares,4364
+20005_AM,Alegia agregacion de municipios,5541
+20009,Andoain,14631
+20010_AM,Anoeta agregacion de municipios,4646
+20013,Aretxabaleta,7108
+20016_AM,Aia agregacion de municipios,3864
+20017,Azkoitia,11657
+20018,Azpeitia,15191
+20019,Beasain,13949
+20022_AM,Berastegi agregacion de municipios,3936
+20025_AM,Zegama agregacion de municipios,5913
+20027_AM,Zestoa agregacion de municipios,4564
+20028_AM,Zizurkil agregacion de municipios,3483
+20029,Deba,5441
+20030,Eibar,27467
+20032,Elgoibar,11464
+20034_AM,Eskoriatza agregacion de municipios,4342
+20036,Hondarribia,16852
+20039,Getaria,2794
+20040,Hernani,20362
+20042,Ibarra,4220
+20043_AM,Idiazabal agregacion de municipios,4916
+20045,Irun,62933
+20049,Lazkao,6007
+20051,Legazpi,8367
+20052_AM,Legorreta agregacion de municipios,4155
+20053,Lezo,6062
+20055,Arrasate/Mondragón,21867
+20056_AM,Mutriku agregacion de municipios,7267
+20059,Oñati,11428
+20061,Orio,6096
+20063,Oiartzun,10291
+20064,Pasaia,15867
+20065_AM,Soraluze-Placencia de las Armas agregacion de municipios,5044
+20067,Errenteria,39219
+20069,Donostia/San Sebastián,188102
+20071,Tolosa,19795
+20072,Urnieta,6197
+20073,Usurbil,6132
+20074,Bergara,14584
+20075,Villabona,5864
+20076,Ordizia,10420
+20077_AM,Urretxu agregacion de municipios,8854
+20079,Zarautz,23271
+20080,Zumarraga,9668
+20081,Zumaia,10124
+20902,Lasarte-Oria,18893
+20903,Astigarraga,7185
+21002,Aljaraque,21706
+21005,Almonte,24577
+21006,Alosno,3929
+21007_AM,Aracena agregacion de municipios,9541
+21008_AM,Aroche agregacion de municipios,4728
+21010,Ayamonte,21510
+21011,Beas,4464
+21013,Bollullos Par del Condado,14392
+21014,Bonares,6075
+21017_AM,Calañas agregacion de municipios,4015
+21018_AM,"Campillo, El agregacion de municipios",2727
+21021,Cartaya,20314
+21023_AM,"Cerro de Andévalo, El agregacion de municipios",5207
+21025,Cortegana,4635
+21029_AM,Cumbres Mayores agregacion de municipios,5958
+21032_AM,Escacena del Campo agregacion de municipios,2606
+21035,Gibraleón,12810
+21040_AM,Hinojos agregacion de municipios,6145
+21041,Huelva,142538
+21042,Isla Cristina,21516
+21043_AM,Jabugo agregacion de municipios,5209
+21044,Lepe,28293
+21046,Lucena del Puerto,3187
+21049,Minas de Riotinto,3778
+21050,Moguer,22061
+21052_AM,Nerva agregacion de municipios,5369
+21053_AM,Niebla agregacion de municipios,6361
+21054,"Palma del Condado, La",10787
+21055,Palos de la Frontera,12001
+21056,Paterna del Campo,3478
+21058_AM,Puebla de Guzmán agregacion de municipios,5358
+21060,Punta Umbría,15891
+21061,Rociana del Condado,7834
+21063,San Bartolomé de la Torre,3846
+21064,San Juan del Puerto,9503
+21069_AM,Santa Olalla del Cala agregacion de municipios,6180
+21070,Trigueros,7906
+21072,Valverde del Camino,12714
+21073,Villablanca,2911
+21074_AM,Villalba del Alcor agregacion de municipios,5486
+21076_AM,Villanueva de los Castillejos agregacion de municipios,5234
+21078,Zalamea la Real,3055
+22017_AM,Alcolea de Cinca agregacion de municipios,4303
+22021_AM,Almudévar agregacion de municipios,4828
+22025_AM,Altorricón agregacion de municipios,3324
+22039_AM,Ayerbe agregacion de municipios,6143
+22048,Barbastro,17146
+22053_AM,Benabarre agregacion de municipios,4749
+22054_AM,Benasque agregacion de municipios,6134
+22059_AM,Biescas agregacion de municipios,5061
+22060_AM,Binaced agregacion de municipios,5536
+22061,Binéfar,9888
+22084_AM,Castejón de Sos agregacion de municipios,4544
+22112_AM,Fraga agregacion de municipios,16529
+22116_AM,Grañén agregacion de municipios,4811
+22117_AM,Graus agregacion de municipios,5432
+22125,Huesca,53429
+22130,Jaca,13344
+22137_AM,Lanaja agregacion de municipios,4811
+22158,Monzón,17362
+22199,Sabiñánigo,9352
+22213_AM,Sariñena agregacion de municipios,4858
+22225,Tamarite de Litera,3449
+22228_AM,Tierz agregacion de municipios,5218
+22254_AM,Zaidín agregacion de municipios,4283
+22901_AM,Valle de Hecho agregacion de municipios,4527
+22907_AM,Aínsa-Sobrarbe agregacion de municipios,5203
+23002,Alcalá la Real,21623
+23003,Alcaudete,10434
+23005,Andújar,36212
+23006,Arjona,5450
+23007_AM,Arjonilla agregacion de municipios,5441
+23009,Baeza,15762
+23010,Bailén,17498
+23011_AM,Baños de la Encina agregacion de municipios,3204
+23012_AM,Beas de Segura agregacion de municipios,6886
+23014,Begíjar,2998
+23015_AM,Bélmez de la Moraleda agregacion de municipios,2534
+23018,Cambil,2662
+23019_AM,Campillo de Arenas agregacion de municipios,3063
+23024,"Carolina, La",15048
+23025,Castellar,3267
+23026,Castillo de Locubín,4019
+23028,Cazorla,7248
+23034,Fuensanta de Martos,3011
+23038,"Guardia de Jaén, La",5082
+23039,Guarromán,2714
+23040_AM,Lahiguera agregacion de municipios,3036
+23044_AM,Huelma agregacion de municipios,7468
+23045_AM,Huesa agregacion de municipios,2831
+23046_AM,Ibros agregacion de municipios,3638
+23050,Jaén,111932
+23051,Jamilena,3302
+23053,Jódar,11583
+23055,Linares,56525
+23056,Lopera,3640
+23058,Mancha Real,11315
+23059,Marmolejo,6726
+23060,Martos,24271
+23061_AM,Mengíbar agregacion de municipios,11986
+23062_AM,Montizón agregacion de municipios,2552
+23063_AM,Navas de San Juan agregacion de municipios,6181
+23066,Peal de Becerro,5325
+23067,Pegalajar,2859
+23069_AM,Porcuna agregacion de municipios,7386
+23070,Pozo Alcón,4706
+23072_AM,"Puerta de Segura, La agregacion de municipios",6659
+23073_AM,Quesada agregacion de municipios,5628
+23074_AM,Rus agregacion de municipios,5338
+23075,Sabiote,3867
+23079_AM,Santisteban del Puerto agregacion de municipios,4959
+23080_AM,Santo Tomé agregacion de municipios,6003
+23082_AM,Siles agregacion de municipios,6158
+23086_AM,Torredelcampo agregacion de municipios,15372
+23087,Torredonjimeno,13545
+23088,Torreperogil,7194
+23090_AM,Torres agregacion de municipios,2599
+23092,Úbeda,34208
+23093_AM,Valdepeñas de Jaén agregacion de municipios,7132
+23094_AM,Vilches agregacion de municipios,5263
+23095,Villacarrillo,10545
+23096,Villanueva de la Reina,3026
+23097_AM,Villanueva del Arzobispo agregacion de municipios,9949
+23099,"Villares, Los",6106
+23902,Bedmar y Garcíez,2656
+23903_AM,Villatorres agregacion de municipios,6733
+23904,Santiago-Pontones,2832
+24008,Astorga,10553
+24010,"Bañeza, La",10068
+24014,Bembibre,8455
+24015_AM,Benavides agregacion de municipios,4993
+24021_AM,Boñar agregacion de municipios,6322
+24030,Cacabelos,4888
+24034,Camponaraya,4105
+24038_AM,Carracedelo agregacion de municipios,5212
+24039_AM,Carrizo agregacion de municipios,6065
+24056_AM,Cistierna agregacion de municipios,5022
+24059_AM,Corullón agregacion de municipios,2795
+24061_AM,Cuadros agregacion de municipios,3646
+24064_AM,Cubillos del Sil agregacion de municipios,3127
+24065,Chozas de Abajo,2596
+24070_AM,Fabero agregacion de municipios,5590
+24083_AM,Igüeña agregacion de municipios,4783
+24088_AM,Laguna de Negrillos agregacion de municipios,5430
+24089,León,122051
+24092_AM,Llamas de la Ribera agregacion de municipios,5212
+24094_AM,Mansilla de las Mulas agregacion de municipios,5676
+24114,"Pola de Gordón, La",3060
+24115,Ponferrada,63747
+24122_AM,Puente de Domingo Flórez agregacion de municipios,5750
+24134,"Robla, La",3714
+24139_AM,Sahagún agregacion de municipios,4990
+24142,San Andrés del Rabanedo,30160
+24148_AM,San Justo de la Vega agregacion de municipios,5317
+24154_AM,Santa Elena de Jamuz agregacion de municipios,4877
+24157_AM,Santa María del Páramo agregacion de municipios,5338
+24160_AM,Santas Martas agregacion de municipios,4886
+24162_AM,Santovenia de la Valdoncina agregacion de municipios,3936
+24163,Sariegos,5170
+24166_AM,Soto de la Vega agregacion de municipios,2644
+24169_AM,Toreno agregacion de municipios,5073
+24170_AM,Torre del Bierzo agregacion de municipios,6035
+24175_AM,Valdefresno agregacion de municipios,6046
+24181_AM,Valderas agregacion de municipios,5088
+24183_AM,Valderrueda agregacion de municipios,4900
+24188,Valencia de Don Juan,5159
+24189,Valverde de la Virgen,7442
+24196_AM,Vega de Espinareda agregacion de municipios,4200
+24202,Villablino,8226
+24209,Villafranca del Bierzo,2806
+24212_AM,Villamañán agregacion de municipios,5011
+24222,Villaquilambre,18597
+24223,Villarejo de Órbigo,2945
+25003,Agramunt,5464
+25007_AM,Albatàrrec agregacion de municipios,7330
+25008_AM,Albesa agregacion de municipios,4575
+25011,Alcarràs,9678
+25012,Alcoletge,3492
+25013,Alfarràs,2759
+25016_AM,Alguaire agregacion de municipios,4065
+25019,Almacelles,6875
+25021,Almenar,3365
+25023,Alpicat,6274
+25025_AM,Naut Aran agregacion de municipios,5430
+25029_AM,Arbeca agregacion de municipios,5185
+25033_AM,Artesa de Lleida agregacion de municipios,3809
+25034,Artesa de Segre,3441
+25038_AM,Aitona agregacion de municipios,4631
+25040,Balaguer,17409
+25047_AM,Bellcaire d'Urgell agregacion de municipios,2826
+25048_AM,Bell-lloc d'Urgell agregacion de municipios,6487
+25050,Bellpuig,5151
+25051_AM,Bellver de Cerdanya agregacion de municipios,5165
+25053_AM,Benavent de Segriàagregacion de municipios,3415
+25058,"Borges Blanques, Les",6195
+25059_AM,Bossòst agregacion de municipios,2757
+25062_AM,Camarasa agregacion de municipios,3883
+25072,Cervera,9328
+25099_AM,Golmés agregacion de municipios,5091
+25110,Guissona,7291
+25113_AM,Ivars d'Urgell agregacion de municipios,6512
+25119_AM,Juneda agregacion de municipios,5991
+25120,Lleida,140080
+25122,Linyola,2724
+25137,Mollerussa,14545
+25149_AM,Oliana agregacion de municipios,4562
+25158_AM,"Palau d'Anglesola, El agregacion de municipios",5169
+25171_AM,"Pobla de Segur, La agregacion de municipios",5116
+25172,Ponts,2629
+25173_AM,"Pont de Suert, El agregacion de municipios",4980
+25189,Rosselló,3186
+25192_AM,Sant Guim de Freixenet agregacion de municipios,5199
+25193_AM,Sant Llorenç de Morunys agregacion de municipios,4582
+25203,"Seu d'Urgell, La",12252
+25204_AM,Seròs agregacion de municipios,6376
+25207,Solsona,9175
+25209_AM,Sort agregacion de municipios,4957
+25217,Tàrrega,17649
+25223_AM,Toràagregacion de municipios,5046
+25228,Torrefarrera,4702
+25232_AM,Torres de Segre agregacion de municipios,3499
+25234,Tremp,5893
+25240_AM,Vallfogona de Balaguer agregacion de municipios,5216
+25243,Vielha e Mijaran,5674
+25907_AM,Torrefeta i Florejacs agregacion de municipios,2642
+26002_AM,Agoncillo agregacion de municipios,6632
+26005,Albelda de Iregua,3484
+26006,Alberite,2518
+26008,Aldeanueva de Ebro,2794
+26011,Alfaro,9562
+26018,Arnedo,14954
+26021_AM,Autol agregacion de municipios,6776
+26026_AM,Baños de Río Tobía agregacion de municipios,5151
+26036,Calahorra,24579
+26042_AM,Casalarreina agregacion de municipios,5407
+26047_AM,Cervera del Río Alhama agregacion de municipios,4938
+26059_AM,Entrena agregacion de municipios,5501
+26061_AM,Ezcaray agregacion de municipios,5094
+26064,Fuenmayor,3191
+26071_AM,Haro agregacion de municipios,11820
+26084,Lardero,11042
+26089,Logroño,150808
+26099_AM,Murillo de Río Leza agregacion de municipios,2744
+26102,Nájera,8060
+26105_AM,Navarrete agregacion de municipios,5102
+26117_AM,Pradejón agregacion de municipios,5365
+26125,Rincón de Soto,3900
+26129_AM,San Asensio agregacion de municipios,5544
+26138,Santo Domingo de la Calzada,6222
+26168,Villamediana de Iregua,8608
+27005,Barreiros,3001
+27006,Becerreá,2826
+27007_AM,Begonte agregacion de municipios,4500
+27010,Castro de Rei,5110
+27011,Castroverde,2609
+27012_AM,Cervantes agregacion de municipios,4238
+27013,Cervo,4192
+27014_AM,"Corgo, O agregacion de municipios",5885
+27015,Cospeito,4374
+27016,Chantada,8134
+27018_AM,"Fonsagrada, A agregacion de municipios",5105
+27019,Foz,10078
+27020,Friol,3682
+27021_AM,Xermade agregacion de municipios,5020
+27022,Guitiriz,5455
+27023,Guntín,2638
+27024_AM,"Incio, O agregacion de municipios",3370
+27025,Xove,3360
+27026,Láncara,2551
+27027_AM,Lourenzá agregacion de municipios,3243
+27028,Lugo,97613
+27030,Mondoñedo,3480
+27031,Monforte de Lemos,18242
+27032,Monterroso,3562
+27039,Outeiro de Rei,5216
+27040_AM,Palas de Rei agregacion de municipios,5251
+27041_AM,Pantón agregacion de municipios,6795
+27042_AM,Paradela agregacion de municipios,4452
+27044_AM,"Pastoriza, A agregacion de municipios",5215
+27046_AM,Pol agregacion de municipios,2824
+27047_AM,"Pobra do Brollón, A agregacion de municipios",2561
+27048_AM,"Pontenova, A agregacion de municipios",5151
+27050,Quiroga,3151
+27051,Ribadeo,9871
+27057,Sarria,13257
+27058_AM,"Saviñao, O agregacion de municipios",4996
+27060,Taboada,2689
+27063_AM,"Valadouro, O agregacion de municipios",3570
+27065,Vilalba,14006
+27066,Viveiro,15312
+27902,Burela,9428
+28002,Ajalvir,4676
+28004,"Álamo, El",9908
+28005,Alcalá de Henares,195982
+28006,Alcobendas,116589
+28007,Alcorcón,170817
+28008,Aldea del Fresno,3085
+28009,Algete,20749
+28010,Alpedrete,14959
+28012_AM,Anchuelo agregacion de municipios,6781
+28013,Aranjuez,59833
+28014,Arganda del Rey,56386
+28015,Arroyomolinos,33687
+28018,Becerril de la Sierra,6108
+28019_AM,Belmonte de Tajo agregacion de municipios,2777
+28022,Boadilla del Monte,59052
+28023,"Boalo, El",8009
+28026,Brunete,10726
+28027_AM,Buitrago del Lozoya agregacion de municipios,8119
+28028,Bustarviejo,2701
+28030,"Cabrera, La",2782
+28031,Cadalso de los Vidrios,3203
+28032_AM,Camarma de Esteruelas agregacion de municipios,9225
+28033,Campo Real,6416
+28036,Casarrubuelos,3939
+28037_AM,Cenicientos agregacion de municipios,2673
+28038,Cercedilla,7359
+28040,Ciempozuelos,25083
+28041,Cobeña,7444
+28042_AM,Colmenar del Arroyo agregacion de municipios,3617
+28043,Colmenar de Oreja,8303
+28044,Colmenarejo,9376
+28045,Colmenar Viejo,52480
+28046,Collado Mediano,7348
+28047,Collado Villalba,63825
+28049,Coslada,81273
+28050,Cubas de la Sagra,6642
+28052,Chinchón,5506
+28053,Daganzo de Arriba,10520
+28054,"Escorial, El",16594
+28057_AM,Fresno de Torote agregacion de municipios,3279
+28058,Fuenlabrada,192233
+28059,Fuente el Saz de Jarama,6883
+28060_AM,Fuentidueña de Tajo agregacion de municipios,5506
+28061,Galapagar,34712
+28065,Getafe,183095
+28066,Griñón,10467
+28067_AM,Guadalix de la Sierra agregacion de municipios,8167
+28068,Guadarrama,16747
+28072,Hoyo de Manzanares,8680
+28073,Humanes de Madrid,19736
+28074,Leganés,187762
+28075,Loeches,8860
+28079,Madrid,3305408
+28080,Majadahonda,72034
+28082,Manzanares el Real,9202
+28083,Meco,14903
+28084,Mejorada del Campo,23737
+28085,Miraflores de la Sierra,6585
+28086,"Molar, El",9291
+28087,"Molinos, Los",4563
+28089,Moraleja de Enmedio,5294
+28090,Moralzarzal,13573
+28091,Morata de Tajuña,7924
+28092,Móstoles,209639
+28093,Navacerrada,3220
+28095,Navalagamella,2720
+28096,Navalcarnero,30695
+28099_AM,Navas del Rey agregacion de municipios,5556
+28100,Nuevo Baztán,6630
+28104,Paracuellos de Jarama,26235
+28106,Parla,131689
+28108,Pedrezuela,6226
+28109,Pelayos de la Presa,2827
+28110,Perales de Tajuña,3059
+28113,Pinto,53537
+28115,Pozuelo de Alarcón,87134
+28119,Quijorna,3593
+28123,Rivas-Vaciamadrid,92925
+28125,Robledo de Chavela,4479
+28127,"Rozas de Madrid, Las",94862
+28129,San Agustín del Guadalix,13538
+28130,San Fernando de Henares,39313
+28131,San Lorenzo de El Escorial,18454
+28132,San Martín de la Vega,19853
+28133,San Martín de Valdeiglesias,8760
+28134,San Sebastián de los Reyes,90962
+28137,"Santos de la Humosa, Los",2729
+28140_AM,Serranillos del Valle agregacion de municipios,6249
+28141,Sevilla la Nueva,9345
+28144,Soto del Real,9091
+28145,Talamanca de Jarama,4123
+28146,Tielmes,2781
+28148,Torrejón de Ardoz,132771
+28149,Torrejón de la Calzada,9549
+28150,Torrejón de Velasco,4594
+28151_AM,Torrelaguna agregacion de municipios,5191
+28152,Torrelodones,24122
+28154,Torres de la Alameda,7729
+28160,Valdemorillo,13245
+28161,Valdemoro,77587
+28162,Valdeolmos-Alalpardo,4309
+28164,Valdetorres de Jarama,4696
+28165,Valdilecha,3079
+28167,Velilla de San Antonio,12543
+28168_AM,"Vellón, El agregacion de municipios",2695
+28169_AM,Venturada agregacion de municipios,3224
+28170_AM,Villaconejos agregacion de municipios,4824
+28171,Villa del Prado,6837
+28172,Villalbilla,15049
+28174,Villamanta,2643
+28176,Villanueva de la Cañada,22580
+28177,Villanueva del Pardillo,17310
+28178_AM,Villanueva de Perales agregacion de municipios,3113
+28179_AM,Villar del Olmo agregacion de municipios,5543
+28180,Villarejo de Salvanés,7552
+28181,Villaviciosa de Odón,28030
+28183_AM,Zarzalejo agregacion de municipios,4011
+28901_AM,Lozoyuela-Navas-Sieteiglesias agregacion de municipios,6257
+28903,Tres Cantos,48751
+29001,Alameda,5453
+29002_AM,Alcaucín agregacion de municipios,6115
+29005,Algarrobo,6551
+29007,Alhaurín de la Torre,41868
+29008,Alhaurín el Grande,26095
+29009_AM,Almáchar agregacion de municipios,6235
+29011,Almogía,3859
+29012,Álora,13336
+29015_AM,Antequera agregacion de municipios,43831
+29017,Archidona,8114
+29018_AM,Ardales agregacion de municipios,3237
+29020_AM,Arriate agregacion de municipios,4684
+29023,Benahavís,7829
+29025,Benalmádena,70204
+29027_AM,Benamocarra agregacion de municipios,4466
+29028_AM,Benaoján agregacion de municipios,5505
+29031_AM,"Burgo, El agregacion de municipios",5512
+29032,Campillos,8301
+29038,Cártama,27436
+29039,Casabermeja,3712
+29040,Casarabonela,2532
+29041,Casares,7342
+29042,Coín,23375
+29043,Colmenar,3450
+29045,Cómpeta,3866
+29046,Cortes de la Frontera,3034
+29049_AM,Cuevas de San Marcos agregacion de municipios,4969
+29051,Estepona,71925
+29053,Frigiliana,3198
+29054,Fuengirola,82585
+29055,Fuente de Piedra,2770
+29056_AM,Gaucín agregacion de municipios,4238
+29059,Humilladero,3293
+29067,Málaga,577405
+29068,Manilva,16849
+29069,Marbella,147958
+29070,Mijas,86744
+29072,Mollina,5341
+29073_AM,Monda agregacion de municipios,5088
+29075,Nerja,21018
+29076_AM,Ojén agregacion de municipios,5543
+29079,Periana,3159
+29080,Pizarra,9572
+29082_AM,Rincón de la Victoria agregacion de municipios,51759
+29083_AM,Riogordo agregacion de municipios,4149
+29084,Ronda,33624
+29086_AM,Sayalonga agregacion de municipios,4769
+29088,Sierra de Yeguas,3386
+29089_AM,Teba agregacion de municipios,5671
+29090_AM,Tolox agregacion de municipios,4293
+29091,Torrox,18937
+29094,Vélez-Málaga,82967
+29095_AM,Villanueva de Algaidas agregacion de municipios,5566
+29096,Villanueva del Rosario,3374
+29097,Villanueva del Trabuco,5360
+29100,Yunquera,2866
+29901,Torremolinos,68056
+29902,Villanueva de la Concepción,3277
+30001,Abanilla,6116
+30002,Abarán,13066
+30003,Águilas,35956
+30005,Alcantarilla,42559
+30007,Alguazas,9842
+30008,Alhama de Murcia,22240
+30009,Archena,19500
+30010,Beniel,11508
+30011,Blanca,6608
+30012,Bullas,11619
+30013,Calasparra,10133
+30014_AM,Campos del Río agregacion de municipios,4714
+30015,Caravaca de la Cruz,25611
+30016,Cartagena,216365
+30017,Cehegín,14798
+30018,Ceutí,12199
+30019,Cieza,35301
+30020,Fortuna,10512
+30021,Fuente Álamo de Murcia,17225
+30022,Jumilla,26234
+30023,Librilla,5351
+30024,Lorca,96238
+30025,Lorquí,7320
+30026,Mazarrón,32988
+30027,Molina de Segura,73498
+30028,Moratalla,7797
+30029,Mula,17074
+30030,Murcia,460349
+30032,Pliego,3868
+30033,Puerto Lumbreras,16060
+30035,San Javier,33645
+30036,San Pedro del Pinatar,26320
+30037,Torre-Pacheco,37299
+30038,"Torres de Cotillas, Las",21837
+30039_AM,Totana agregacion de municipios,33399
+30041,"Unión, La",20536
+30042_AM,Villanueva del Río Segura agregacion de municipios,4629
+30043,Yecla,35083
+30901,Santomera,16154
+30902,"Alcázares, Los",16935
+31010_AM,Altsasu/Alsasua agregacion de municipios,9278
+31015,Andosilla,2752
+31016,Ansoáin/Antsoain,10732
+31019_AM,Aoiz/Agoitz agregacion de municipios,4937
+31023,Aranguren,11726
+31029_AM,"Arcos, Los agregacion de municipios",4005
+31036_AM,Arróniz agregacion de municipios,4310
+31038_AM,Artajona agregacion de municipios,4793
+31041_AM,Ayegui/Aiegi agregacion de municipios,5648
+31042_AM,Azagra agregacion de municipios,6236
+31050_AM,Baztan agregacion de municipios,8422
+31060,Burlada/Burlata,19723
+31065,Caparroso,2784
+31067_AM,Carcastillo agregacion de municipios,5423
+31068_AM,Cascante agregacion de municipios,5439
+31070,Castejón,4306
+31072_AM,Cintruénigo agregacion de municipios,10132
+31076_AM,Cizur agregacion de municipios,6164
+31077,Corella,8220
+31078_AM,Cortes agregacion de municipios,5402
+31084_AM,Etxarri Aranatz agregacion de municipios,5416
+31086,Valle de Egüés/Eguesibar,21556
+31088,Noáin (Valle de Elorz)/Noain (Elortzibar),8354
+31092_AM,Erro agregacion de municipios,4911
+31097,Estella-Lizarra,13911
+31098,Esteribar,2790
+31101_AM,Ezcabarte agregacion de municipios,3005
+31104_AM,Falces agregacion de municipios,3845
+31108_AM,Fustiñana agregacion de municipios,4824
+31122,Huarte/Uharte,7286
+31138_AM,Lakuntza agregacion de municipios,3861
+31142_AM,Larraga agregacion de municipios,5958
+31149_AM,Leitza agregacion de municipios,4418
+31152_AM,Lerín agregacion de municipios,2895
+31153_AM,Lesaka agregacion de municipios,4159
+31157_AM,Lodosa agregacion de municipios,6131
+31159_AM,Lumbier agregacion de municipios,2834
+31163,Marcilla,2866
+31165_AM,Mendavia agregacion de municipios,4654
+31169,Milagro,3470
+31176,Murchante,4135
+31191_AM,Olite/Erriberri agregacion de municipios,6060
+31201,Pamplona/Iruña,203081
+31202,Peralta/Azkoien,5965
+31206_AM,Puente la Reina/Gares agregacion de municipios,4180
+31208_AM,Ribaforada agregacion de municipios,6198
+31215,San Adrián,6369
+31216,Sangüesa/Zangoza,4872
+31221_AM,Doneztebe/Santesteban agregacion de municipios,5494
+31227,Tafalla,10582
+31232,Tudela,37008
+31249_AM,Valtierra agregacion de municipios,6794
+31250,Bera,3759
+31251_AM,Viana agregacion de municipios,4494
+31254,Villafranca,2907
+31258,Villava/Atarrabia,10131
+31260_AM,Valle de Yerri/Deierri agregacion de municipios,5463
+31901,Barañáin/Barañain,19853
+31902,Berrioplano/Berriobeiti,7468
+31903,Berriozar,10723
+31904_AM,Irurtzun agregacion de municipios,6577
+31905_AM,Beriáin agregacion de municipios,5645
+31906_AM,Orkoien agregacion de municipios,6028
+31907,Zizur Mayor/Zizur Nagusia,15198
+31908_AM,Lekunberri agregacion de municipios,4977
+32001_AM,Allariz agregacion de municipios,7766
+32004_AM,Avión agregacion de municipios,6011
+32007_AM,Baños de Molgas agregacion de municipios,6594
+32008,Barbadás,11022
+32009,"Barco de Valdeorras, O",13384
+32013_AM,Boborás agregacion de municipios,5740
+32017_AM,Carballeda de Valdeorras agregacion de municipios,4564
+32019,"Carballiño, O",13911
+32020_AM,Cartelle agregacion de municipios,5029
+32024,Celanova,5652
+32025_AM,Cenlle agregacion de municipios,2846
+32026_AM,Coles agregacion de municipios,5458
+32031_AM,Esgos agregacion de municipios,3096
+32032,Xinzo de Limia,9621
+32034_AM,"Gudiña, A agregacion de municipios",2751
+32042_AM,Lobios agregacion de municipios,5059
+32043,Maceda,2849
+32045,Maside,2718
+32050,Monterrei,2501
+32051_AM,Muíños agregacion de municipios,4655
+32053_AM,Oímbra agregacion de municipios,4613
+32054,Ourense,104596
+32056_AM,Padrenda agregacion de municipios,4512
+32058_AM,"Pereiro de Aguiar, O agregacion de municipios",8537
+32063_AM,"Pobra de Trives, A agregacion de municipios",5366
+32067_AM,Rairiz de Veiga agregacion de municipios,5184
+32069,Ribadavia,5005
+32072,"Rúa, A",4245
+32075_AM,San Cibrao das Viñas agregacion de municipios,7448
+32076_AM,San Cristovo de Cea agregacion de municipios,5780
+32081_AM,Toén agregacion de municipios,3695
+32085,Verín,13644
+32086,Viana do Bolo,2787
+32088_AM,Vilamartín de Valdeorras agregacion de municipios,3143
+32091_AM,Vilardevós agregacion de municipios,5441
+33001_AM,Allande agregacion de municipios,4446
+33002,Aller,10346
+33004,Avilés,76874
+33006_AM,Bimenes agregacion de municipios,4099
+33007_AM,Boal agregacion de municipios,3417
+33008_AM,Cabrales agregacion de municipios,6151
+33011,Cangas del Narcea,11966
+33012,Cangas de Onís,6195
+33014,Carreño,10288
+33015_AM,Caso agregacion de municipios,3460
+33016,Castrillón,22299
+33017,Castropol,3335
+33018,Coaña,3312
+33019_AM,Colunga agregacion de municipios,3743
+33020_AM,Corvera de Asturias agregacion de municipios,16615
+33021,Cudillero,4968
+33023,El Franco,3780
+33024,Gijón,268896
+33025,Gozón,10412
+33026_AM,Grado agregacion de municipios,11521
+33031,Langreo,38683
+33032,Laviana,12754
+33033,Lena,10596
+33034,Valdés,11281
+33035,Llanera,13790
+33036,Llanes,13611
+33037,Mieres,37026
+33038,Morcín,2543
+33040,Nava,5264
+33041,Navia,8302
+33042,Noreña,5113
+33044,Oviedo,217552
+33045,Parres,5292
+33049,Piloña,6921
+33051_AM,Pravia agregacion de municipios,9903
+33056,Ribadesella,5686
+33057_AM,Ribera de Arriba agregacion de municipios,3964
+33059,Salas,4878
+33060,San Martín del Rey Aurelio,15665
+33066,Siero,51608
+33069_AM,Soto del Barco agregacion de municipios,5771
+33070,Tapia de Casariego,3683
+33072_AM,Teverga agregacion de municipios,6184
+33073,Tineo,9096
+33074_AM,Vegadeo agregacion de municipios,5634
+33076,Villaviciosa,14869
+34004_AM,Aguilar de Campoo agregacion de municipios,7225
+34017_AM,Astudillo agregacion de municipios,5003
+34022_AM,Baltanás agregacion de municipios,4815
+34023,Venta de Baños,6399
+34047_AM,Carrión de los Condes agregacion de municipios,4885
+34056_AM,Cervera de Pisuerga agregacion de municipios,5270
+34069_AM,Dueñas agregacion de municipios,4882
+34079_AM,Grijota agregacion de municipios,6143
+34080,Guardo,5786
+34083_AM,Herrera de Pisuerga agregacion de municipios,4829
+34120,Palencia,77090
+34123_AM,Paredes de Nava agregacion de municipios,4566
+34157,Saldaña,2950
+34171_AM,Santibáñez de la Peña agregacion de municipios,4695
+34218_AM,Villaluenga de la Vega agregacion de municipios,2701
+34225,Villamuriel de Cerrato,6470
+34232_AM,Villarramiel agregacion de municipios,5414
+35001,Agaete,5695
+35002,Agüimes,32105
+35003_AM,Antigua agregacion de municipios,13545
+35004,Arrecife,64497
+35006,Arucas,38535
+35008,Firgas,7513
+35009,Gáldar,24455
+35010,Haría,5365
+35011,Ingenio,31887
+35012,Mogán,20572
+35013,Moya,7833
+35014,"Oliva, La",27768
+35015,Pájara,21014
+35016,"Palmas de Gran Canaria, Las",378675
+35017,Puerto del Rosario,41786
+35018,San Bartolomé,19058
+35019,San Bartolomé de Tirajana,53066
+35020,"Aldea de San Nicolás, La",7516
+35021,Santa Brígida,18297
+35022,Santa Lucía de Tirajana,73573
+35023,Santa María de Guía de Gran Canaria,13871
+35024,Teguise,23044
+35025_AM,Tejeda agregacion de municipios,2911
+35026,Telde,102769
+35027,Teror,12634
+35028,Tías,20801
+35029,Tinajo,6447
+35030,Tuineje,15549
+35031,Valsequillo de Gran Canaria,9382
+35032,Valleseco,3754
+35033,Vega de San Mateo,7645
+35034,Yaiza,16977
+36001,Arbo,2599
+36002,Barro,3622
+36003,Baiona,12286
+36004,Bueu,11987
+36005,Caldas de Reis,9788
+36006,Cambados,13673
+36008,Cangas,26708
+36009_AM,"Cañiza, A agregacion de municipios",7076
+36010,Catoira,3316
+36013_AM,Covelo agregacion de municipios,4049
+36015,Cuntis,4643
+36017,"Estrada, A",20261
+36018_AM,Forcarei agregacion de municipios,5678
+36021,Gondomar,14920
+36022,"Grove, O",10699
+36023,"Guarda, A",9991
+36024,Lalín,20199
+36026,Marín,24248
+36027,Meaño,5314
+36028,Meis,4796
+36029,Moaña,19496
+36030_AM,Mondariz agregacion de municipios,5069
+36032,Moraña,4121
+36033,Mos,15190
+36034,"Neves, As",3770
+36035,Nigrán,18005
+36036,Oia,3104
+36037,Pazos de Borbén,2975
+36038,Pontevedra,83114
+36039,"Porriño, O",20212
+36040,Portas,2860
+36041,Poio,17230
+36042,Ponteareas,22942
+36043,Ponte Caldelas,5548
+36044,Pontecesures,3081
+36045,Redondela,29192
+36046,Ribadumia,5157
+36047_AM,Rodeiro agregacion de municipios,5646
+36048,"Rosal, O",6376
+36049,Salceda de Caselas,9249
+36050,Salvaterra de Miño,10048
+36051,Sanxenxo,17635
+36052,Silleda,8845
+36053,Soutomaior,7482
+36054,Tomiño,13730
+36055,Tui,17398
+36056,Valga,5768
+36057,Vigo,293837
+36058,Vilaboa,5955
+36059,Vila de Cruces,5097
+36060,Vilagarcía de Arousa,37545
+36061,Vilanova de Arousa,10306
+36901,"Illa de Arousa, A",4951
+36902_AM,Cerdedo-Cotobade agregacion de municipios,7488
+37008,Alba de Tormes,5159
+37010_AM,"Alberca, La agregacion de municipios",5092
+37014_AM,Aldeadávila de la Ribera agregacion de municipios,4824
+37023_AM,Aldeatejada agregacion de municipios,3425
+37046_AM,Béjar agregacion de municipios,13143
+37067_AM,Cabrerizos agregacion de municipios,6701
+37069_AM,Calvarrasa de Abajo agregacion de municipios,6329
+37073_AM,Calzada de Valdunciel agregacion de municipios,5417
+37085,Carbajosa de la Sagrada,7368
+37092,Castellanos de Moriscos,2809
+37103_AM,Cespedosa de Tormes agregacion de municipios,5496
+37107,Ciudad Rodrigo,12065
+37117_AM,Doñinos de Salamanca agregacion de municipios,3764
+37135_AM,"Fuente de San Esteban, La agregacion de municipios",5008
+37136_AM,Fuenteguinaldo agregacion de municipios,4610
+37140_AM,Fuentes de Oñoro agregacion de municipios,4963
+37142_AM,Galindo y Perahuy agregacion de municipios,5532
+37156,Guijuelo,5550
+37170_AM,Ledesma agregacion de municipios,5255
+37172_AM,Linares de Riofrío agregacion de municipios,5162
+37173_AM,Lumbrales agregacion de municipios,4730
+37174_AM,Macotera agregacion de municipios,4760
+37202_AM,Monterrubio de Armuña agregacion de municipios,3001
+37246,Peñaranda de Bracamonte,6123
+37274,Salamanca,143269
+37294,Santa Marta de Tormes,14646
+37313_AM,Sotoserrano agregacion de municipios,5423
+37322,Terradillos,3096
+37354,Villamayor,7371
+37362,Villares de la Reina,6491
+37374_AM,Villoria agregacion de municipios,5946
+37376_AM,Vitigudino agregacion de municipios,4810
+38001,Adeje,48733
+38004,Arafo,5604
+38005,Arico,8234
+38006,Arona,82563
+38008,Breña Alta,7196
+38009,Breña Baja,5866
+38010,Buenavista del Norte,4766
+38011,Candelaria,28463
+38012,Fasnia,2807
+38013_AM,Frontera agregacion de municipios,6214
+38015,Garachico,4895
+38017,Granadilla de Abona,51850
+38018,"Guancha, La",5553
+38019,Guía de Isora,21827
+38020,Güímar,21000
+38021_AM,Hermigua agregacion de municipios,2866
+38022,Icod de los Vinos,23310
+38023,San Cristóbal de La Laguna,158010
+38024,"Llanos de Aridane, Los",20648
+38025,"Matanza de Acentejo, La",9114
+38026,"Orotava, La",42219
+38027,"Paso, El",7745
+38028,Puerto de la Cruz,30179
+38029_AM,Puntagorda agregacion de municipios,5968
+38030,Puntallana,2549
+38031,"Realejos, Los",36824
+38032,"Rosario, El",17590
+38033,San Andrés y Sauces,4213
+38034,San Juan de la Rambla,4854
+38035_AM,San Miguel de Abona agregacion de municipios,23661
+38036_AM,San Sebastián de la Gomera agregacion de municipios,11308
+38037,Santa Cruz de la Palma,15446
+38038,Santa Cruz de Tenerife,208563
+38039,Santa Úrsula,14987
+38040,Santiago del Teide,11115
+38041,"Sauzal, El",8918
+38042,"Silos, Los",4692
+38043,Tacoronte,24346
+38044,"Tanque, El",2829
+38045,Tazacorte,4558
+38046,Tegueste,11326
+38047,Tijarafe,2560
+38048,Valverde,5084
+38049,Valle Gran Rey,4643
+38050,Vallehermoso,2917
+38051,"Victoria de Acentejo, La",9161
+38053_AM,Villa de Mazo agregacion de municipios,6631
+39001_AM,Alfoz de Lloredo agregacion de municipios,6225
+39002,Ampuero,4368
+39006_AM,Arnuero agregacion de municipios,3978
+39008,"Astillero, El",18116
+39009_AM,Bárcena de Cicero agregacion de municipios,5161
+39012,Cabezón de la Sal,8273
+39016,Camargo,30497
+39018,Cartes,5750
+39019_AM,Castañeda agregacion de municipios,5197
+39020,Castro-Urdiales,32975
+39023,Colindres,8504
+39025,"Corrales de Buelna, Los",10703
+39026_AM,Corvera de Toranzo agregacion de municipios,5582
+39027_AM,Campoo de Enmedio agregacion de municipios,5296
+39028,Entrambasaguas,5357
+39030_AM,Guriezo agregacion de municipios,2686
+39035,Laredo,10996
+39037_AM,Liérganes agregacion de municipios,4434
+39038_AM,Limpias agregacion de municipios,3177
+39040,Marina de Cudeyo,5186
+39041_AM,Mazcuerras agregacion de municipios,5762
+39042,Medio Cudeyo,7606
+39043_AM,Meruelo agregacion de municipios,4866
+39044,Miengo,5059
+39047,Noja,2650
+39052,Piélagos,26035
+39054,Polanco,5978
+39055_AM,Potes agregacion de municipios,5228
+39056_AM,Puente Viesgo agregacion de municipios,5257
+39057_AM,Ramales de la Victoria agregacion de municipios,3873
+39059,Reinosa,8810
+39060,Reocín,8382
+39061,Ribamontán al Mar,4629
+39062_AM,Ribamontán al Monte agregacion de municipios,4511
+39073,Santa Cruz de Bezana,13292
+39074,Santa María de Cayón,9205
+39075,Santander,172221
+39076,Santillana del Mar,4231
+39078_AM,Santiurde de Toranzo agregacion de municipios,4851
+39079,Santoña,11011
+39080,San Vicente de la Barquera,4073
+39082_AM,Selaya agregacion de municipios,5862
+39085,Suances,9026
+39087,Torrelavega,51237
+39091_AM,Valdáliga agregacion de municipios,5722
+39094_AM,Valderredible agregacion de municipios,3136
+39095,Val de San Vicente,2786
+39099,Villaescusa,3958
+39102,Voto,2789
+40032_AM,Boceguillas agregacion de municipios,4575
+40040_AM,Cantalejo agregacion de municipios,5413
+40041_AM,Cantimpalos agregacion de municipios,4901
+40043,Carbonero el Mayor,2502
+40057_AM,Coca agregacion de municipios,4241
+40063,Cuéllar,9620
+40076,"Espinar, El",9476
+40094_AM,Garcillán agregacion de municipios,2657
+40101_AM,Hontanares de Eresma agregacion de municipios,5178
+40112_AM,"Lastrilla, La agregacion de municipios",6426
+40138_AM,Nava de la Asunción agregacion de municipios,5034
+40141_AM,Navalmanzano agregacion de municipios,4990
+40145_AM,Navas de Oro agregacion de municipios,6116
+40149_AM,Olombrada agregacion de municipios,4503
+40155,Palazuelos de Eresma,5597
+40170_AM,Riaza agregacion de municipios,4802
+40181,Real Sitio de San Ildefonso,5237
+40194,Segovia,51258
+40225_AM,Villacastín agregacion de municipios,5574
+40906_AM,San Cristóbal de Segovia agregacion de municipios,5563
+41003,Albaida del Aljarafe,3221
+41004,Alcalá de Guadaíra,75546
+41005,Alcalá del Río,12264
+41006,Alcolea del Río,3348
+41007,"Algaba, La",16484
+41010,Almensilla,6287
+41011,Arahal,19497
+41012,Aznalcázar,4614
+41013,Aznalcóllar,6060
+41014,Badolatosa,3099
+41015,Benacazón,7322
+41016,Bollullos de la Mitación,11099
+41017,Bormujos,22390
+41018,Brenes,12581
+41019,Burguillos,6902
+41020,"Cabezas de San Juan, Las",16335
+41021,Camas,27490
+41022,"Campana, La",5228
+41023,Cantillana,10755
+41024,Carmona,29123
+41025_AM,Carrión de los Céspedes agregacion de municipios,3220
+41026,Casariche,5384
+41027,Castilblanco de los Arroyos,5059
+41028,Castilleja de Guzmán,2860
+41029,Castilleja de la Cuesta,17366
+41032_AM,Cazalla de la Sierra agregacion de municipios,6790
+41033_AM,Constantina agregacion de municipios,7402
+41034,Coria del Río,30774
+41036,"Coronil, El",4699
+41037,"Corrales, Los",3985
+41038,Dos Hermanas,136250
+41039,Écija,39838
+41040,Espartinas,16048
+41041_AM,Estepa agregacion de municipios,13334
+41042,Fuentes de Andalucía,7160
+41044,Gelves,10295
+41045,Gerena,7740
+41046_AM,Gilena agregacion de municipios,5731
+41047,Gines,13529
+41048_AM,Guadalcanal agregacion de municipios,4912
+41049,Guillena,13054
+41050,Herrera,6504
+41051,Huévar del Aljarafe,3129
+41052,Lantejuela,3856
+41053,Lebrija,27616
+41055,Lora del Río,18578
+41056,"Luisiana, La",4587
+41058,Mairena del Alcor,23893
+41059,Mairena del Aljarafe,46895
+41060,Marchena,19317
+41061,Marinaleda,2618
+41062,Martín de la Jara,2663
+41063,"Molares, Los",3563
+41064,Montellano,7014
+41065_AM,Morón de la Frontera agregacion de municipios,28823
+41067,Olivares,9452
+41068,Osuna,17594
+41069,"Palacios y Villafranca, Los",38678
+41070,Palomares del Río,9020
+41071,Paradas,6850
+41072,Pedrera,5147
+41074,Peñaflor,3648
+41075,Pilas,13856
+41076_AM,Pruna agregacion de municipios,4933
+41077,"Puebla de Cazalla, La",10896
+41078,"Puebla de los Infantes, La",2999
+41079,"Puebla del Río, La",11873
+41080_AM,"Real de la Jara, El agregacion de municipios",6899
+41081,"Rinconada, La",39204
+41082,"Roda de Andalucía, La",4223
+41084,"Rubio, El",3376
+41085,Salteras,5646
+41086,San Juan de Aznalfarache,22088
+41087,Sanlúcar la Mayor,14026
+41089,Santiponce,8491
+41090,"Saucejo, El",4247
+41091,Sevilla,684234
+41092,Tocina,9508
+41093,Tomares,25370
+41094,Umbrete,9086
+41095,Utrera,51145
+41096,Valencina de la Concepción,7894
+41097,Villamanrique de la Condesa,4531
+41098,Villanueva del Ariscal,6673
+41099,Villanueva del Río y Minas,4892
+41101,Villaverde del Río,7811
+41102,"Viso del Alcor, El",19251
+41901,Cañada Rosal,3347
+41902,Isla Mayor,5826
+41903,"Cuervo de Sevilla, El",8667
+41904,"Palmar de Troya, El",2340
+42004_AM,Ágreda agregacion de municipios,3148
+42020,Almazán,5411
+42025_AM,Arcos de Jalón agregacion de municipios,4888
+42035_AM,Berlanga de Duero agregacion de municipios,4919
+42043_AM,Burgo de Osma-Ciudad de Osma agregacion de municipios,5395
+42069_AM,Covaleda agregacion de municipios,4766
+42094_AM,Garray agregacion de municipios,4717
+42095,Golmayo,2844
+42129_AM,Navaleno agregacion de municipios,2510
+42134,Ólvega,3668
+42162,San Esteban de Gormaz,2948
+42164_AM,San Leonardo de Yagüe agregacion de municipios,3838
+42173,Soria,39695
+43002,Albinyana,2504
+43004,Alcanar,9579
+43005,Alcover,5185
+43007_AM,"Aleixar, L' agregacion de municipios",5825
+43009_AM,Alforja agregacion de municipios,5185
+43012,Altafulla,5512
+43013,"Ametlla de Mar, L'",7131
+43014,Amposta,21317
+43016,"Arboç, L'",5625
+43019_AM,Ascó agregacion de municipios,5597
+43020_AM,Banyeres del Penedès agregacion de municipios,5583
+43026_AM,Benissanet agregacion de municipios,6086
+43028,"Bisbal del Penedès, La",3830
+43037,Calafell,28463
+43038_AM,Cambrils agregacion de municipios,37257
+43042_AM,Castellvell del Camp agregacion de municipios,4195
+43043_AM,"Catllar, El agregacion de municipios",6468
+43044,"Sénia, La",5530
+43047,Constantí,6724
+43050,Creixell,3912
+43051,Cunit,14081
+43052_AM,Xerta agregacion de municipios,5566
+43054_AM,"Espluga de Francolí, L' agregacion de municipios",5295
+43055_AM,Falset agregacion de municipios,5113
+43060_AM,Flix agregacion de municipios,5457
+43064_AM,Gandesa agregacion de municipios,4977
+43078_AM,Masdenverge agregacion de municipios,3409
+43086,Montblanc,7433
+43088_AM,Montbrió del Camp agregacion de municipios,5089
+43090_AM,"Montmell, El agregacion de municipios",5040
+43092,Mont-roig del Camp,12689
+43093,Móra d'Ebre,5585
+43094_AM,Móra la Nova agregacion de municipios,5429
+43095_AM,"Morell, El agregacion de municipios",5007
+43100,"Pallaresos, Els",4872
+43104,"Perelló, El",2846
+43108_AM,"Pla de Santa Maria, El agregacion de municipios",4871
+43109,"Pobla de Mafumet, La",4025
+43111,"Pobla de Montornès, La",2999
+43123,Reus,106084
+43126_AM,"Riera de Gaià, La agregacion de municipios",8732
+43128_AM,Riudecols agregacion de municipios,5430
+43129,Riudoms,6617
+43131,Roda de BerÍ,7127
+43133,Roquetes,8159
+43136,Sant Carles de la Ràpita,14931
+43137_AM,Sant Jaume dels Domenys agregacion de municipios,5047
+43138,Santa Bàrbara,3762
+43139,Santa Coloma de Queralt,2702
+43140,Santa Oliva,3450
+43142_AM,Sarral agregacion de municipios,2678
+43145,"Selva del Camp, La",5694
+43148,Tarragona,135436
+43153,Torredembarra,17057
+43155,Tortosa,33572
+43156,Ulldecona,6317
+43161,Valls,24553
+43162,Vandellòs i l'Hospitalet de l'Infant,6645
+43163,"Vendrell, El",38891
+43166_AM,Vilallonga del Camp agregacion de municipios,5252
+43171,Vila-seca,22522
+43901,Deltebre,11539
+43902,Sant Jaume d'Enveja,3552
+43903,Camarles,3220
+43904,"Aldea, L'",4160
+43905,Salou,28512
+43906,"Ampolla, L'",3444
+43907,"Canonja, La",5933
+44008_AM,Albalate del Arzobispo agregacion de municipios,6303
+44009_AM,Albarracín agregacion de municipios,4342
+44013,Alcañiz,16029
+44014_AM,Alcorisa agregacion de municipios,5648
+44025,Andorra,7327
+44050_AM,Calamocha agregacion de municipios,5664
+44051_AM,Calanda agregacion de municipios,4828
+44056_AM,Caminreal agregacion de municipios,3210
+44059_AM,Cantavieja agregacion de municipios,4551
+44068_AM,Castelserás agregacion de municipios,5041
+44076,Cella,2578
+44153,Monreal del Campo,2522
+44155_AM,Montalbán agregacion de municipios,5570
+44158_AM,Mora de Rubielos agregacion de municipios,4741
+44209_AM,Santa Eulalia agregacion de municipios,4774
+44210_AM,Sarrión agregacion de municipios,4619
+44216,Teruel,35994
+44238_AM,Utrillas agregacion de municipios,4955
+44246_AM,Valderrobres agregacion de municipios,5849
+45002,Alameda de la Sagra,3757
+45012_AM,Almonacid de Toledo agregacion de municipios,2661
+45013_AM,Almorox agregacion de municipios,2607
+45014,Añover de Tajo,5202
+45016,Argés,6621
+45019,Bargas,10611
+45020_AM,Belvís de la Jara agregacion de municipios,5076
+45021,Borox,3981
+45023_AM,Burguillos de Toledo agregacion de municipios,5626
+45028,Calera y Chozas,4641
+45031,Camarena,4243
+45034_AM,Camuñas agregacion de municipios,2703
+45037_AM,"Carpio de Tajo, El agregacion de municipios",5335
+45038,Carranque,5022
+45040_AM,"Casar de Escalona, El agregacion de municipios",5551
+45041,Casarrubios del Monte,6177
+45045_AM,Cazalegas agregacion de municipios,7292
+45046_AM,Cebolla agregacion de municipios,4833
+45047_AM,Cedillo del Condado agregacion de municipios,5106
+45051_AM,Cobeja agregacion de municipios,4270
+45052_AM,Cobisa agregacion de municipios,5187
+45053,Consuegra,9942
+45054,Corral de Almaguer,5068
+45056,Chozas de Canales,4335
+45059_AM,Dosbarrios agregacion de municipios,5183
+45061,Escalona,3441
+45064,Esquivias,5747
+45066,Fuensalida,11785
+45067_AM,Gálvez agregacion de municipios,4821
+45069_AM,Gerindote agregacion de municipios,5816
+45078_AM,Huerta de Valdecarábanos agregacion de municipios,2597
+45081,Illescas,30229
+45082_AM,Lagartera agregacion de municipios,6335
+45084,Lillo,2574
+45085_AM,Lominchar agregacion de municipios,3316
+45087,Madridejos,10230
+45088,Magán,3894
+45098,Menasalbas,2544
+45099,Méntrida,5662
+45101_AM,Miguel Esteban agregacion de municipios,6508
+45102,Mocejón,5009
+45106,Mora,9781
+45107,Nambroca,4954
+45109_AM,Navahermosa agregacion de municipios,4535
+45110_AM,Navalcán agregacion de municipios,4889
+45112_AM,"Navalmorales, Los agregacion de municipios",4473
+45115,Noblejas,3721
+45118_AM,Novés agregacion de municipios,5402
+45119,Numancia de la Sagra,5170
+45121_AM,Ocaña agregacion de municipios,13639
+45122,Olías del Rey,8225
+45123,Ontígola,4743
+45124,Orgaz,2625
+45125,Oropesa,2626
+45128,Pantoja,3408
+45132_AM,Pepino agregacion de municipios,5029
+45133,Polán,3908
+45135,"Puebla de Almoradiel, La",5041
+45136,"Puebla de Montalbán, La",7841
+45137_AM,"Pueblanueva, La agregacion de municipios",6682
+45140_AM,Pulgar agregacion de municipios,5426
+45142,Quintanar de la Orden,11129
+45145,Recas,4536
+45153_AM,San Pablo de los Montes agregacion de municipios,2807
+45156,Santa Cruz de la Zarza,4085
+45157,Santa Cruz del Retamar,3554
+45158_AM,Santa Olalla agregacion de municipios,5614
+45161,Seseña,27466
+45163,Sonseca,11070
+45165,Talavera de la Reina,83477
+45166_AM,Tembleque agregacion de municipios,3271
+45168,Toledo,85449
+45171_AM,"Torre de Esteban Hambrán, La agregacion de municipios",3326
+45173,Torrijos,13583
+45176,Ugena,5626
+45180,Valmojado,4430
+45181,Velada,2905
+45183,"Ventas de Retamosa, Las",3684
+45185,Villacañas,9434
+45186,"Villa de Don Fadrique, La",3576
+45187,Villafranca de los Caballeros,4866
+45188_AM,Villaluenga de la Sagra agregacion de municipios,5989
+45189_AM,Villamiel de Toledo agregacion de municipios,5030
+45192_AM,Villanueva de Alcardete agregacion de municipios,3460
+45195,Villarrubia de Santiago,2508
+45197,Villasequilla,2593
+45198,Villatobas,2570
+45199,"Viso de San Juan, El",5255
+45200_AM,"Yébenes, Los agregacion de municipios",8216
+45201,Yeles,5779
+45202,Yepes,5302
+45203,Yuncler,4344
+45205,Yuncos,10813
+46001_AM,Ademuz agregacion de municipios,2221
+46004_AM,Agullent agregacion de municipios,2810
+46005,Alaquàs,29649
+46006,Albaida,5975
+46007_AM,Albal agregacion de municipios,18670
+46008,Albalat de la Ribera,3368
+46009,Albalat dels Sorells,4110
+46011_AM,Alberic agregacion de municipios,12856
+46013,Alboraia/Alboraya,24904
+46014,Albuixech,4189
+46015,Alcàsser,10266
+46016_AM,Alcàntera de Xúquer agregacion de municipios,5275
+46017,Alzira,44865
+46019,Alcúdia,12193
+46020,"Alcúdia de Crespins, l'",5144
+46021,Aldaia,32313
+46022_AM,Alfafar agregacion de municipios,21539
+46025,Alfara del Patriarca,3301
+46029,Algemesí,27305
+46031,Alginet,13942
+46032,Almàssera,7433
+46034,Almoines,2528
+46035,Almussafes,8984
+46037_AM,"Alqueria de la Comtessa, l' agregacion de municipios",2846
+46039,Anna,2627
+46042,Aielo de Malferit,4592
+46044,Ayora,5215
+46045_AM,Barxeta agregacion de municipios,2516
+46048,Bellreguard,4632
+46051,Benaguasil,11369
+46054,Benetússer,15430
+46055_AM,Beniarjó agregacion de municipios,4987
+46058_AM,Benifairó de les Valls agregacion de municipios,5611
+46060,Benifaió,11967
+46062,Benigànim,5742
+46063_AM,Benimodo agregacion de municipios,3537
+46067_AM,Benissanó agregacion de municipios,3004
+46070,Bétera,25423
+46072,Bocairent,4101
+46073_AM,Bolbaite agregacion de municipios,2532
+46074,Bonrepòs i Mirambell,3780
+46077,Buñol,9438
+46078,Burjassot,38712
+46080_AM,Camporrobles agregacion de municipios,4378
+46081,Canals,13257
+46082,Canet d'En Berenguer,6812
+46083,Carcaixent,20494
+46084_AM,Càrcer agregacion de municipios,2639
+46085,Carlet,15851
+46089_AM,Casinos agregacion de municipios,3412
+46093,Catadau,2846
+46094,Catarroja,28509
+46097_AM,Cofrentes agregacion de municipios,4770
+46098,Corbera,3088
+46102,Quart de Poblet,25035
+46105,Cullera,22708
+46106_AM,Chelva agregacion de municipios,7590
+46109,Cheste,8871
+46110,Xirivella,30208
+46111,Chiva,15769
+46113,Daimús,3277
+46116,"Eliana, l'",18302
+46118_AM,Enguera agregacion de municipios,7216
+46120_AM,Estivella agregacion de municipios,6844
+46122,Faura,3563
+46123,Favara,2563
+46126,Foios,7502
+46127_AM,"Font d'En Carròs, la agregacion de municipios",5321
+46128_AM,"Font de la Figuera, la agregacion de municipios",2984
+46131,Gandia,75970
+46132,"Genovés, el",2785
+46134,Gilet,3501
+46135,Godella,13027
+46136,Godelleta,3714
+46139,Guadassuar,5938
+46143_AM,Xeraco agregacion de municipios,8027
+46145,Xàtiva,29459
+46147,Llíria,23648
+46150_AM,Llutxent agregacion de municipios,5976
+46155_AM,Llaurí agregacion de municipios,3275
+46156,Llombai,2651
+46157,"Llosa de Ranes, la",3687
+46159,Manises,31287
+46160_AM,Manuel agregacion de municipios,5722
+46163,Massalfassar,2574
+46164,Massamagrell,16132
+46165,Massanassa,9845
+46166,Meliana,10926
+46168_AM,Miramar agregacion de municipios,3287
+46169,Mislata,44320
+46170,Mogente/Moixent,4326
+46171,Moncada,21875
+46172,Montserrat,8655
+46173_AM,Montaverner agregacion de municipios,6435
+46176,Montroi/Montroy,3069
+46177_AM,Museros agregacion de municipios,7316
+46178,Nàquera/Náquera,7301
+46179,Navarrés,3004
+46181,Oliva,25119
+46182_AM,Olocau agregacion de municipios,4341
+46183,"Olleria, l'",8404
+46184,Ontinyent,35946
+46186,Paiporta,26401
+46190,Paterna,71361
+46191,Pedralba,2852
+46193,Picanya,11692
+46194,Picassent,21487
+46195_AM,Piles agregacion de municipios,3766
+46197_AM,Polinyà de Xúquer agregacion de municipios,4275
+46199,"Pobla de Farnals, la",8205
+46200_AM,"Pobla del Duc, la agregacion de municipios",6297
+46202,"Pobla de Vallbona, la",25275
+46203_AM,"Pobla Llarga, la agregacion de municipios",6091
+46204,"Puig de Santa Maria, el",8737
+46205,Puçol,19975
+46207,Rafelbunyol,9351
+46211,"Real de Gandia, el",2551
+46212_AM,Real agregacion de municipios,3814
+46213,Requena,20235
+46214_AM,Riba-roja de Túria agregacion de municipios,24826
+46216,Rocafort,7445
+46217_AM,Rotglà i Corberàagregacion de municipios,3968
+46218_AM,Ròtova agregacion de municipios,4489
+46220,Sagunto/Sagunt,67043
+46223,Sedaví,10344
+46228,Serra,3326
+46229_AM,Siete Aguas agregacion de municipios,4029
+46230,Silla,19211
+46231_AM,Simat de la Valldigna agregacion de municipios,4828
+46233,Sollana,4911
+46235,Sueca,27617
+46237,Tavernes Blanques,9205
+46238,Tavernes de la Valldigna,17162
+46244,Torrent,84025
+46248,Turís,6910
+46249,Utiel,11478
+46250,València,789744
+46251_AM,Vallada agregacion de municipios,4241
+46255_AM,Vilallonga/Villalonga agregacion de municipios,6225
+46256,Vilamarxant,10097
+46257,Castelló,6996
+46258,Villar del Arzobispo,3578
+46260,Vinalesa,3451
+46261_AM,Yátova agregacion de municipios,5045
+46903,San Antonio de Benagéber,9501
+47004_AM,Alaejos agregacion de municipios,5675
+47007_AM,Aldeamayor de San Martín agregacion de municipios,8172
+47010,Arroyo de la Encomienda,20716
+47023_AM,Boecillo agregacion de municipios,6379
+47027,Cabezón de Pisuerga,3747
+47030_AM,Campaspero agregacion de municipios,4952
+47050,Cigales,5299
+47052,Cistérniga,9109
+47066_AM,Fuensaldaña agregacion de municipios,2638
+47071_AM,Geria agregacion de municipios,5758
+47075,Íscar,6298
+47076,Laguna de Duero,22633
+47085,Medina del Campo,20271
+47086_AM,Medina de Rioseco agregacion de municipios,5461
+47090,Mojados,3311
+47101_AM,Nava del Rey agregacion de municipios,5300
+47104_AM,Olmedo agregacion de municipios,5474
+47112_AM,Pedrajas de San Esteban agregacion de municipios,5106
+47114,Peñafiel,5068
+47129_AM,Quintanilla de Onésimo agregacion de municipios,4881
+47133,Renedo de Esgueva,3875
+47139_AM,Rueda agregacion de municipios,5054
+47155,Santovenia de Pisuerga,4604
+47161,Simancas,5315
+47165,Tordesillas,8762
+47173_AM,Traspinedo agregacion de municipios,5703
+47175,Tudela de Duero,8648
+47182_AM,Valdestillas agregacion de municipios,4223
+47186,Valladolid,297775
+47197_AM,Villabrágima agregacion de municipios,5097
+47214_AM,Villalón de Campos agregacion de municipios,4980
+47217,Villanubla,2828
+47231,Zaratán,6249
+48001_AM,Abadiño agregacion de municipios,8984
+48002,Abanto y Ciérvana-Abanto Zierbena,9436
+48003,Amorebieta-Etxano,19576
+48011,Arrigorriaga,12140
+48012_AM,Bakio agregacion de municipios,5064
+48013,Barakaldo,100907
+48015,Basauri,40535
+48016,Berango,7271
+48017,Bermeo,16784
+48018_AM,Berriatua agregacion de municipios,4260
+48019_AM,Berriz agregacion de municipios,4866
+48020,Bilbao,346405
+48022_AM,Karrantza Harana/Valle de Carranza agregacion de municipios,4248
+48026_AM,Dima agregacion de municipios,7414
+48027,Durango,29935
+48029,Etxebarri,11664
+48032,Elorrio,7383
+48034,Ermua,15791
+48036,Galdakao,29404
+48038_AM,Gamiz-Fika agregacion de municipios,4156
+48040_AM,Gatika agregacion de municipios,2911
+48043,Gorliz,6022
+48044,Getxo,77139
+48045,Güeñes,6699
+48046,Gernika-Lumo,17093
+48054,Leioa,32188
+48055_AM,Lemoa agregacion de municipios,4565
+48057,Lekeitio,7271
+48060_AM,Markina-Xemein agregacion de municipios,5862
+48065_AM,Ugao-Miraballes agregacion de municipios,5263
+48068_AM,Mundaka agregacion de municipios,6049
+48069,Mungia,17701
+48071_AM,Muskiz agregacion de municipios,8954
+48073,Ondarroa,8326
+48074,Urduña/Orduña,4199
+48075,Orozko,2658
+48077_AM,Plentzia agregacion de municipios,5968
+48078,Portugalete,45285
+48080,Valle de Trápaga-Trapagaran,11911
+48081_AM,Lezama agregacion de municipios,4535
+48082,Santurtzi,46085
+48083,Ortuella,8379
+48084,Sestao,27342
+48085,Sopela,14276
+48086_AM,Sopuerta agregacion de municipios,3480
+48089,Urduliz,5034
+48090,Balmaseda,7651
+48094,Igorre,4314
+48095_AM,Zaldibar agregacion de municipios,4621
+48096,Zalla,8416
+48097_AM,Zaratamo agregacion de municipios,2735
+48901,Derio,6780
+48902,Erandio,24489
+48904_AM,Sondika agregacion de municipios,6918
+48905,Zamudio,3277
+48906_AM,Forua agregacion de municipios,3877
+48910_AM,Iurreta agregacion de municipios,5171
+48912_AM,Alonsotegi agregacion de municipios,4667
+49003_AM,Alcañices agregacion de municipios,4945
+49021,Benavente,17523
+49054_AM,Corrales del Vino agregacion de municipios,5885
+49065_AM,Fermoselle agregacion de municipios,4819
+49081_AM,Fuentesaúco agregacion de municipios,4976
+49122_AM,Monfarracinos agregacion de municipios,5980
+49127,Morales del Vino,3030
+49151_AM,"Perdigón, El agregacion de municipios",5882
+49166_AM,Puebla de Sanabria agregacion de municipios,5119
+49178_AM,Roales agregacion de municipios,6186
+49187_AM,San Cristóbal de Entreviñas agregacion de municipios,4868
+49193_AM,San Pedro de Ceque agregacion de municipios,4857
+49200_AM,Santa Cristina de la Polvorosa agregacion de municipios,4871
+49206_AM,Santibáñez de Vidriales agregacion de municipios,5009
+49214_AM,Tábara agregacion de municipios,4758
+49219_AM,Toro agregacion de municipios,8863
+49250_AM,Villalpando agregacion de municipios,4757
+49261_AM,Villaralbo agregacion de municipios,6100
+49275,Zamora,60297
+50008_AM,Alagón agregacion de municipios,8581
+50017_AM,Alfajarín agregacion de municipios,2752
+50018_AM,Alfamén agregacion de municipios,5085
+50025,"Almunia de Doña Godina, La",7983
+50034_AM,Ariza agregacion de municipios,4873
+50038_AM,Ateca agregacion de municipios,4897
+50055_AM,Borja agregacion de municipios,5366
+50057_AM,Brea de Aragón agregacion de municipios,2921
+50062_AM,"Burgo de Ebro, El agregacion de municipios",4712
+50066,Cadrete,4334
+50067,Calatayud,19870
+50068_AM,Calatorao agregacion de municipios,3486
+50073_AM,Cariñena agregacion de municipios,5276
+50074,Caspe,10183
+50089,Cuarte de Huerva,13773
+50094_AM,Daroca agregacion de municipios,5457
+50095_AM,Ejea de los Caballeros agregacion de municipios,17948
+50099,Épila,4368
+50115,Fuentes de Ebro,4600
+50118,Gallur,2555
+50126,Illueca,2778
+50130_AM,Jarque de Moncayo agregacion de municipios,3613
+50150_AM,Lumpiaque agregacion de municipios,4125
+50153_AM,Magallón agregacion de municipios,3547
+50159_AM,Maluenda agregacion de municipios,4616
+50160,Mallén,2977
+50163_AM,María de Huerva agregacion de municipios,6244
+50165_AM,Mequinenza agregacion de municipios,6830
+50181_AM,Muel agregacion de municipios,5245
+50182,"Muela, La",6125
+50204_AM,Pedrola agregacion de municipios,5543
+50208_AM,Pina de Ebro agregacion de municipios,5552
+50209_AM,Pinseque agregacion de municipios,6466
+50219,"Puebla de Alfindén, La",6446
+50222_AM,Quinto agregacion de municipios,5391
+50223_AM,Remolinos agregacion de municipios,3351
+50225_AM,Ricla agregacion de municipios,4262
+50230_AM,Sádaba agregacion de municipios,6753
+50235_AM,San Mateo de Gállego agregacion de municipios,5114
+50240_AM,Sástago agregacion de municipios,4655
+50251_AM,Tarazona agregacion de municipios,11781
+50252,Tauste,6777
+50272,Utebo,18856
+50288,Villanueva de Gállego,4725
+50297,Zaragoza,675301
+50298,Zuera,8591
+50903,Villamayor de Gállego,2768
+51001,Ceuta,83517
+52001,Melilla,86261
+34172653056,"Mancomunidad de Nalda, Sorzano y Viguera",
+34153153078,Bardenas Reales,
+34022253049,Comunero de Ansó y Hecho,
+34024453076,Comunidad de la Pardina del Mercadal,
+34024453077,El Franco,
+34063953072,Comunidad de Campoo y Cabuérniga,
+34070953004,Comunidad de Arauzo de Miel y Huerta del Rey,
+34070953005,Comunidad de Los Ausines y Revilla del Campo,
+34070953006,Comunidad de Barbadillo de Herreros y Vallejimeno (E.L.M.),
+34070953007,"Comunidad de 09076, 09290, 09578, 09606 y 09822",
+34070953008,"Comunidad de 09076, 09290, 09578 y 09822",
+34070953009,Cabeza Alta,
+34070953010,"Comunidad de 09076, 09150 y 09578",
+34070953011,"Comunidad de 09076, 09498 y 09578",
+34070953012,"Comunidad de 09076, 09578, 09606 y 09822",
+34070953013,Comunidad de Barbadillo del Pez y Jaramillo de la Fuente,
+34070953014,Comunidad de Barbadillo del Pez y Riocavado de la Sierra,
+34070953015,Comunidad de Bascuñana y Viloria de Rioja,
+34070953016,Monte Revenga,
+34070953018,Comunidad de Canicosa de la Sierra y Casarejos,
+34070953020,Comunidad de Fuente Carazo,
+34070953021,"Ledanía de 09162, 09290, 09412 y 09606",
+34070953022,Dehesa de San Felices,
+34070953023,Comunidad de Cilleruelo de Arriba y Pineda Trasmonte,
+34070953024,"Comunidad de Covarrubias, Quintanilla del Coco y Retuerta",
+34070953026,Comunidad de Gete y Hacinas,
+34070953027,Ledanía de Hacinas y Salas de los Infantes,
+34070953028,"Ledanía de Hacinas, Salas de los Infantes y Villanueva de Carazo",
+34070953029,"Comunidad de 09314, 09374, 09356 y 09126",
+34070953031,Valle de las Venadas,
+34070953032,"Comunidad de Palacios de la Sierra, Vilviestre del Pinar y San Leonardo de Yagüe",
+34070953033,Comunidad de Quintanaortuño y Merindad de Río Ubierna,
+34070953034,Comunidad de Quintanar de la Sierra y Vilviestre del Pinar,
+34070953035,Comunidad de Revilla del Campo y Torrelara,
+34070953036,"Ledanía de Castrillo de la Reina, Hacinas y Salas de los Infantes",
+34070953039,Comunidad de Tardajos y Las Quintanillas,
+34070953040,Comunidad de Tardajos y Rabé de las Calzadas,
+34070953041,Comunidad de Tinieblas de la Sierra y San Millán de Lara,
+34070953042,Comunidad de Vilviestre del Pinar y Palacios de la Sierra,
+34070953043,Comunidad de Villoruebo y Torrelara,
+34070953044,Comunidad de Vizcaínos y Jaramillo de la Fuente,
+34070953045,Comunidad de Quintanilla del Agua y Tordueles y Puentedura,
+34070953046,"Comunidad de Merindad de Río Ubierna, Quintanilla Vivar y Sotragero",
+34070953073,Monte de la Mata,
+34072453051,Comunidad de Castrotierra de la Valduerna,
+34072453052,Foncabada,
+34074053074,Comunidad de Sepúlveda y Riaza,
+34074253075,San Bartolomé,
+34081953047,Aldovera,

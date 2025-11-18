@@ -1,0 +1,1470 @@
+@prefix comp: <http://semweb.mmlab.be/ns/rml-compression#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix id: <http://spanishuniversities.data.es/lude/resource/> .
+@prefix lude: <http://spanishuniversities.data.es/lude/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a> a lude:AcademicLevel;
+  lude:code "d6d85d89b4612501521435bd3f620a9a";
+  rdfs:label "bachelor's degree";
+  owl:sameAs <https://wikidata.org/entity/Q163727> .
+
+<ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212> a lude:AcademicLevel;
+  lude:code "eb0a191797624dd3a48fa681d3061212";
+  rdfs:label "master's degree";
+  owl:sameAs <https://wikidata.org/entity/Q183816> .
+
+<ex:AcademicLevel/fba30e9ec1935ca7d36277ba76dddbba> a lude:AcademicLevel;
+  lude:code "fba30e9ec1935ca7d36277ba76dddbba";
+  rdfs:label "double degree";
+  owl:sameAs <https://wikidata.org/entity/Q716855> .
+
+<ex:Degree/01e30647dc35fbf17df24925bdfbab6a> a lude:Degree;
+  lude:code "3500062";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Trabajo Social en el Ámbito Sanitario" .
+
+<ex:Degree/08d90d94be46180cc860af3c4ee3cc93> a lude:Degree;
+  lude:code "3500129";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Protección Radiológica Ambiental" .
+
+<ex:Degree/101843ff9eb4fc7f568e3130f7376967> a lude:Degree;
+  lude:code "2503521";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Odontología";
+  owl:sameAs <http://example.com/ns#dentistry> .
+
+<ex:Degree/11adcd0111a53477db21e5926b648385> a lude:Degree;
+  lude:code "4310717";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Salud Laboral (Prevención de Riesgos Laborales)" .
+
+<ex:Degree/2027e9513201f7a7234183047e19a97a> a lude:Degree;
+  lude:code "4318247";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Ingeniería Industrial" .
+
+<ex:Degree/2332b75ab57c271183cf7f520102b576> a lude:Degree;
+  lude:code "4311600";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Gestión de Recursos Humanos. Intervención Psicológica y Pedagógica" .
+
+<ex:Degree/23844606aa377c02bd8d743e19337171> a lude:Degree;
+  lude:code "4310137";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Patrimonio Cultural: Investigación y Gestión" .
+
+<ex:Degree/23cfa9910eb7285e5780f814f3b71bab> a lude:Degree;
+  lude:code "3500667";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/30962703623f1f1d21c737a0c0673761>;
+  rdfs:label "Salud Global" .
+
+<ex:Degree/2546b786570e337b28e0dc25591d0d4c> a lude:Degree;
+  lude:code "4310523";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Lenguas y Literaturas Modernas" .
+
+<ex:Degree/25c6d7a1a19b75ee14f17ccfeb0d7a14> a lude:Degree;
+  lude:code "2500511";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Historia";
+  owl:sameAs <http://example.com/ns#history> .
+
+<ex:Degree/290cf33303fac29f7abdfd03707e63d8> a lude:Degree;
+  lude:code "4317180";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Estudios Lingüísticos y Literarios: Investigación y Enseñanza" .
+
+<ex:Degree/292fc7e73a31960a09493c8f50d69b0c> a lude:Degree;
+  lude:code "2500701", "4314199";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>, <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Filosofía";
+  owl:sameAs <http://example.com/ns#philosophy> .
+
+<ex:Degree/2c0afcff85c59d37061a1a887b248378> a lude:Degree;
+  lude:code "4313436";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Tecnología Educativa: E-learning y Gestión del Conocimiento" .
+
+<ex:Degree/2c6f42f1bcd6f84befc5e276e7fe69ca> a lude:Degree;
+  lude:code "3500129";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "Protección Radiológica Ambiental" .
+
+<ex:Degree/2c9a65342e2f3d585897a84ac45d558f> a lude:Degree;
+  lude:code "2501048";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Turismo";
+  owl:sameAs <http://example.com/ns#Turismo> .
+
+<ex:Degree/2f3150502c507977812bb702226fba36> a lude:Degree;
+  lude:code "3500129";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/c73f658b0a9e2a5097a9ae889dd56474>;
+  rdfs:label "Protección Radiológica Ambiental" .
+
+<ex:Degree/3495e816fe345368edf5b68db8111a32> a lude:Degree;
+  lude:code "3500062";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/c73f658b0a9e2a5097a9ae889dd56474>;
+  rdfs:label "Trabajo Social en el Ámbito Sanitario" .
+
+<ex:Degree/34a4941c145ac0179aca14cead0fd3ec> a lude:Degree;
+  lude:code "2500843";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Derecho";
+  owl:sameAs <http://example.com/ns#law> .
+
+<ex:Degree/375908768e34b833ee6576b588e02283> a lude:Degree;
+  lude:code "2502133";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Relaciones Laborales" .
+
+<ex:Degree/37b7ad6c27ea701dd8a78bc90e84183b> a lude:Degree;
+  lude:code "2500703";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Biología";
+  owl:sameAs <http://example.com/ns#biology> .
+
+<ex:Degree/3e3d158d1d7e1a1140151ef674331199> a lude:Degree;
+  lude:code "3500129";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/f6ce2593f6cfc9e08dc9effe2e0077e9>;
+  rdfs:label "Protección Radiológica Ambiental" .
+
+<ex:Degree/417921d946390210523291d20d4eecd4> a lude:Degree;
+  lude:code "2501150";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Trabajo Social" .
+
+<ex:Degree/43a939a470c94af7402ddc79a81d0176> a lude:Degree;
+  lude:code "2500338";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Pedagogía" .
+
+<ex:Degree/45be0b07a29b624c5c4449345aa7909f> a lude:Degree;
+  lude:code "2500702";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Geografía";
+  owl:sameAs <http://example.com/ns#geography> .
+
+<ex:Degree/4a698d87cb1262292c0f2657917e5d42> a lude:Degree;
+  lude:code "4317705";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Investigación e Intervención Psicoeducativa" .
+
+<ex:Degree/4df9e38e14c9de20faa1c4c7cf30b521> a lude:Degree;
+  lude:code "4315060";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Ingeniería Agronómica" .
+
+<ex:Degree/547623a05e8eaa5f3dfb230e3086b8d1> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/92c081b3e4299316155ea45962241086>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/56fadfbd55b804efde16410525390465> a lude:Degree;
+  lude:code "2500932";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Economía";
+  owl:sameAs <http://example.com/ns#economics> .
+
+<ex:Degree/59c5bcd8ad8b9de8160f03614c408b1c> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/92c852850da0a33857691151f42ac19a>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/5a61fd1ef9d86a64afd797a07f8bf238> a lude:Degree;
+  lude:code "2503367";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Medicina";
+  owl:sameAs <http://example.com/ns#medicine> .
+
+<ex:Degree/5c413124c8e3a04fca0fd60d3f39afd9> a lude:Degree;
+  lude:code "4317924";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Investigación en Ciencias de la Actividad Física y el Deporte" .
+
+<ex:Degree/5cfa92d7a713a9f2eabb772df9e1acf4> a lude:Degree;
+  lude:code "4316728";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Sistemas Inteligentes" .
+
+<ex:Degree/62a7318cc6e2645bd60659ef94baee01> a lude:Degree;
+  lude:code "2500332";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Lengua y Literatura Catalanas" .
+
+<ex:Degree/665a0555a3e4d6a5a18a24ffc941cc81> a lude:Degree;
+  lude:code "2500986";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Educación Primaria" .
+
+<ex:Degree/66c05ab961ff9a45a4cb0a1b22be695d> a lude:Degree;
+  lude:code "3500156";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Prevención de Riesgos Laborales" .
+
+<ex:Degree/6874fc4c51f89f787fbef86a522b0524> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/c73f658b0a9e2a5097a9ae889dd56474>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/69624fbeb9991ec6df0b9515a3423049> a lude:Degree;
+  lude:code "4310138";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Políticas de Igualdad y Prevención de la Violencia de Género" .
+
+<ex:Degree/6b4f30d24c6924371671d1349d465894> a lude:Degree;
+  lude:code "4314206";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Física Avanzada y Matemática Aplicada" .
+
+<ex:Degree/6b6977ff9dcac52a5925f8c3b3c043bb> a lude:Degree;
+  lude:code "2500930";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Enfermería";
+  owl:sameAs <http://example.com/ns#nursing> .
+
+<ex:Degree/6d2e0cd07950abfd291faa75e0d1a70b> a lude:Degree;
+  lude:code "4314277";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Nutrigenómica y Nutrición Personalizada" .
+
+<ex:Degree/73565c9d99bd05c08830314566d961ae> a lude:Degree;
+  lude:code "3500062";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/7ce4c67f7247673210d9b6d8aa5e7570>;
+  rdfs:label "Trabajo Social en el Ámbito Sanitario" .
+
+<ex:Degree/756e0efc858880216509b6242d3831a3> a lude:Degree;
+  lude:code "4313691";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Abogacía y Procura" .
+
+<ex:Degree/7665e5724da8d65f1bf522f63cf65bf2> a lude:Degree;
+  lude:code "2500931";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Fisioterapia";
+  owl:sameAs <http://example.com/ns#physiotherapy> .
+
+<ex:Degree/7669be948e0d8804611fff2f31269abe> a lude:Degree;
+  lude:code "3500062";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/e00161d1619c9c29b683d70c49b1341c>;
+  rdfs:label "Trabajo Social en el Ámbito Sanitario" .
+
+<ex:Degree/76815f6acaa5a3c10648ae0984a9f896> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/7ce4c67f7247673210d9b6d8aa5e7570>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/76d60696e0212ecacb2c73c4cd89b82a> a lude:Degree;
+  lude:code "4314201";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Ciencia y Tecnología Química" .
+
+<ex:Degree/7cd65af82120308024b03517266d512a> a lude:Degree;
+  lude:code "3500667";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Salud Global" .
+
+<ex:Degree/81c93ba7e566d160030a98252efbb799> a lude:Degree;
+  lude:code "4313187";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Física de Sistemas Complejos por la Universidad de las Illes Balears" .
+
+<ex:Degree/8541686e9e68e6c832666d44c3be7c7a> a lude:Degree;
+  lude:code "4315836";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Investigación Biomédica";
+  owl:sameAs <http://example.com/ns#biomedicine> .
+
+<ex:Degree/8548432be234ac39752b7dd23bed5f4e> a lude:Degree;
+  lude:code "2502136";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Ingeniería Telemática" .
+
+<ex:Degree/8882e23ef596a904cc8e64fcd7cebffc> a lude:Degree;
+  lude:code "2500333";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Lengua y Literatura Españolas" .
+
+<ex:Degree/88ae819a2f516d4fbd82de9094889080> a lude:Degree;
+  lude:code "3500062";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/8841d88268e139663a8723e418715e78>;
+  rdfs:label "Trabajo Social en el Ámbito Sanitario" .
+
+<ex:Degree/890d7fa76ee0dfe369373b479985f064> a lude:Degree;
+  lude:code "2500335";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Psicología";
+  owl:sameAs <http://example.com/ns#psychology> .
+
+<ex:Degree/8b2c675630d10420b6b91d7b8cd5e2d2> a lude:Degree;
+  lude:code "2500704";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Bioquímica";
+  owl:sameAs <http://example.com/ns#biochemistry> .
+
+<ex:Degree/8e079d52c327b2d4073749a16b53e600> a lude:Degree;
+  lude:code "3500667";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/c6abab9cddd0b921adc603debfcca50e>;
+  rdfs:label "Salud Global" .
+
+<ex:Degree/8eab2877381542855d38db21eeddd8b4> a lude:Degree;
+  lude:code "2504526";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Ciencias de la Actividad Física y del Deporte" .
+
+<ex:Degree/8eb9587e206e534971bd0dad5b0a179c> a lude:Degree;
+  lude:code "4312526";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Intervención Socioeducativa con Infancia, Adolescencia y Familia" .
+
+<ex:Degree/923875391299515b29d082082a41794e> a lude:Degree;
+  lude:code "4313603";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Contabilidad y Auditoría" .
+
+<ex:Degree/980c79201cebe45f449e9f4e22cefeb7> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/9a6b5d3169a82a3fd216b0efb48e1c1e> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/094757ed9d7e9bb8929a087e18874962>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/9a9c014b356d4d1dcef435590777c307> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/f9d30a624b678c838a4bb422a0bc148b>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/9ee0f9e3caed9f5abffb510127db3059> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/51dcd00716a08519e65a732cb87c3b71>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/9fb25b91b20c7e5904bb786c9679af4d> a lude:Degree;
+  lude:code "2500790";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Química";
+  owl:sameAs <http://example.com/ns#chemistry> .
+
+<ex:Degree/a4eee238b2022c90f996fe455f435e2e> a lude:Degree;
+  lude:code "3500129";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/16249b9d3890e9951fa8dcc315733ea8>;
+  rdfs:label "Protección Radiológica Ambiental" .
+
+<ex:Degree/a6e7da9f453fe49bc340bd6faee284ec> a lude:Degree;
+  lude:code "2504404";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Bellas Artes / Bachelor in Fine Arts" .
+
+<ex:Degree/aafd02adb4921c87edb5ac63ff71fbb5> a lude:Degree;
+  lude:code "4314265";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Biotecnología en Salud" .
+
+<ex:Degree/ab60bc2f0692a0d13857eb0cddd9391d> a lude:Degree;
+  lude:code "3500129";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/17a1b9e0f1c1e0719761a30d50700965>;
+  rdfs:label "Protección Radiológica Ambiental" .
+
+<ex:Degree/abbe708702c64d6f1cf73a2e2a20152d> a lude:Degree;
+  lude:code "2504674";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Farmacia";
+  owl:sameAs <http://example.com/ns#pharmacy> .
+
+<ex:Degree/ad0e4f3bad02d7efb8625fd510436df4> a lude:Degree;
+  lude:code "2503837";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Dirección Hotelera" .
+
+<ex:Degree/ad4ed9cd663f8687690fa0c7e4c817c2> a lude:Degree;
+  lude:code "4315287";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Ecología Marina" .
+
+<ex:Degree/af2ea30ae49606879e393fe3e1a756c3> a lude:Degree;
+  lude:code "4314959";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Economía del Turismo: Monitorización y Evaluación" .
+
+<ex:Degree/b0db4834b790adc1f9890c02ed549acd> a lude:Degree;
+  lude:code "4314855";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Nutrición y Alimentación Humana" .
+
+<ex:Degree/b3babebea4da280f918ce6b96eb574a1> a lude:Degree;
+  lude:code "4314958";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Psicología General Sanitaria" .
+
+<ex:Degree/b5da54835ed8bfd39443dd15f78aac92> a lude:Degree;
+  lude:code "2500331";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Estudios Ingleses" .
+
+<ex:Degree/b932ab2e0f76ed0d906c4c518b57b092> a lude:Degree;
+  lude:code "4317971";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Edificación y Rehabilitación Arquitectónica" .
+
+<ex:Degree/b94fe41539c5982d14de0c69bde55f58> a lude:Degree;
+  lude:code "3500795";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Estudio y Gestión de Ecosistemas Terrestres frente al Cambio Global" .
+
+<ex:Degree/b989335ee0626a7a629a5dcad6d92334> a lude:Degree;
+  lude:code "4313436";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/8841d88268e139663a8723e418715e78>;
+  rdfs:label "Tecnología Educativa: E-learning y Gestión del Conocimiento" .
+
+<ex:Degree/ba0d1dda9d93bed59a0a371fbd85955c> a lude:Degree;
+  lude:code "2500935";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Edificación" .
+
+<ex:Degree/baed44beb3e40f202f98cce4475480d1> a lude:Degree;
+  lude:code "2500336";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Educación Social" .
+
+<ex:Degree/bfb9625335d3ef3318d6459a1ea5c064> a lude:Degree;
+  lude:code "3500367";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Estudios Mediterráneos. Patrimonio Cultural, Historia y Arte: Perspectivas Integradas" .
+
+<ex:Degree/c0d9471cff5bb0a795d85514d97cb922> a lude:Degree;
+  lude:code "2500933";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Educación Infantil" .
+
+<ex:Degree/c31e69f5b5e5d46933e25e5be1b9b52a> a lude:Degree;
+  lude:code "4314200";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Neurociencias";
+  owl:sameAs <http://example.com/ns#neuroscience> .
+
+<ex:Degree/c327e4483f30269fe5144ca7cf54c108> a lude:Degree;
+  lude:code "2502134";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Ingeniería Electrónica Industrial y Automática" .
+
+<ex:Degree/cc175826e81c38fa71e07a0d59e10e8c> a lude:Degree;
+  lude:code "2502341";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Ingeniería Agroalimentaria y del Medio Rural" .
+
+<ex:Degree/cdc2c1b0dcccdbd944ea659827f72fe6> a lude:Degree;
+  lude:code "2500784";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Historia del Arte" .
+
+<ex:Degree/ce9ca307ea3c03087b7e1c267ee2e37c> a lude:Degree;
+  lude:code "3500062";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/26e6f2790707f868f9d05141e6f2f906>;
+  rdfs:label "Trabajo Social en el Ámbito Sanitario" .
+
+<ex:Degree/d0af7fe2549a1ef63adb669fbac9fcea> a lude:Degree;
+  lude:code "4315495";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Analítica de Datos e Inteligencia de Negocios" .
+
+<ex:Degree/d68c2f4450216f9249467b22fb54ab88> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/f5636bc297db763f969bab88b5492ba3>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/d6ed5bde0eaa36cfea16a6d13b280b2e> a lude:Degree;
+  lude:code "2500334";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Física";
+  owl:sameAs <http://example.com/ns#physics> .
+
+<ex:Degree/d7031ec4ae67b04a4896271d7aae9a93> a lude:Degree;
+  lude:code "4313607";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Microbiología Avanzada";
+  owl:sameAs <http://example.com/ns#microbiology> .
+
+<ex:Degree/d7c4d13fd1160f3858f58937f7241846> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/d30bbd19fa77d8470334a259e060006e>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/d7d5e40d3756c9d0339ad214c0a29961> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/16249b9d3890e9951fa8dcc315733ea8>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/d83229efe87db841bc8f634297c5428b> a lude:Degree;
+  lude:code "2500813";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Administración de Empresas" .
+
+<ex:Degree/d87ed38be5406eaf60a4011f80b92bbd> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/703d90006d377d97e3212ab3312a4e0d>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/dba29558b9d96a7f101bedd9da1155f6> a lude:Degree;
+  lude:code "4318535";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Odontología Digital / Master's Degree in Digital Dentistry" .
+
+<ex:Degree/dc25140a2cfc9909044ee4ae7ee71960> a lude:Degree;
+  lude:code "4317736";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Investigación e Innovación en Salud" .
+
+<ex:Degree/dd6580ed954fee4923b85a01206de11a> a lude:Degree;
+  lude:code "3500062";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/bf0d31e1fd4ee242c0fe00c2ee08b759>;
+  rdfs:label "Trabajo Social en el Ámbito Sanitario" .
+
+<ex:Degree/df2e74f07f46ab36b99801975db9d4fc> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/e4ea9ea20e1d15a2e511488507015742> a lude:Degree;
+  lude:code "2500777";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Matemáticas";
+  owl:sameAs <http://example.com/ns#mathematics> .
+
+<ex:Degree/e60403162413167845796aa67f572501> a lude:Degree;
+  lude:code "2504028";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Nutrición Humana y Dietética" .
+
+<ex:Degree/eab402c72de8c4c6f0f4d26e57f0828e> a lude:Degree;
+  lude:code "2502135";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Ingeniería Informática" .
+
+<ex:Degree/eaf96646554e5b9e9f929ffca8566ba4> a lude:Degree;
+  lude:code "4314264";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Cognición y Sociedad" .
+
+<ex:Degree/ec7b7db12121272196e7399eaa3c0453> a lude:Degree;
+  lude:code "4314273";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/15d26bf729b84e22210b99d94c66cd90>;
+  rdfs:label "Química Teórica y Modelización Computacional" .
+
+<ex:Degree/eddd0608342eff9b13aef65715edd346> a lude:Degree;
+  lude:code "3500062";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/f5636bc297db763f969bab88b5492ba3>;
+  rdfs:label "Trabajo Social en el Ámbito Sanitario" .
+
+<ex:Degree/f43c141416bf6c5f186a4c18965fdfc5> a lude:Degree;
+  lude:code "4311001";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Formación del Profesorado" .
+
+<ex:Degree/f5f89a8de76d93218ac22ff36b0000ff> a lude:Degree;
+  lude:code "4311312";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:offers <ex:University/2f0fa6cb7c08610911b3258fd5f2738a>;
+  rdfs:label "Gestión, Organización y Economía de la Empresa / Management, Organization and Business Economics" .
+
+<ex:Degree/fb3665e4dbaef4631b0366c3fbb400d3> a lude:Degree;
+  lude:code "3500129";
+  lude:hasAcademicLevel <ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:offers <ex:University/7ce4c67f7247673210d9b6d8aa5e7570>;
+  rdfs:label "Protección Radiológica Ambiental" .
+
+<ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> a lude:KnowledgeArea;
+  lude:code "03b7c4d6f22bd8efa1659d8e6a06d97e";
+  rdfs:label "social science";
+  owl:sameAs <https://wikidata.org/entity/Q34749> .
+
+<ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> a lude:KnowledgeArea;
+  lude:code "0957ac6a7296b4e6ef4d4e8d25691025";
+  rdfs:label "engineering";
+  owl:sameAs <https://wikidata.org/entity/Q11023> .
+
+<ex:KnowledgeArea/3a55b686cea34a8923b6ea395549772e> a lude:KnowledgeArea;
+  lude:code "3a55b686cea34a8923b6ea395549772e";
+  rdfs:label "Otros" .
+
+<ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> a lude:KnowledgeArea;
+  lude:code "72ceb55b13672d5fdbac7ce07f1e85a8";
+  rdfs:label "humanities";
+  owl:sameAs <https://wikidata.org/entity/Q80083> .
+
+<ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe> a lude:KnowledgeArea;
+  lude:code "afc4b5d3b7e78e8fb66cf859c95aaefe";
+  rdfs:label "health sciences";
+  owl:sameAs <https://wikidata.org/entity/Q843601> .
+
+<ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> a lude:KnowledgeArea;
+  lude:code "cca488c1d5d31aa9a4c4356b47f75ebd";
+  rdfs:label "science";
+  owl:sameAs <https://wikidata.org/entity/Q336> .
+
+<ex:University/080475033eeb8f14c9bd1119f9fa6871> a lude:University;
+  lude:acronym "UNED";
+  lude:cif "Q2818016D";
+  lude:email "infouned@adm.uned.es";
+  lude:id "080475033eeb8f14c9bd1119f9fa6871";
+  lude:modality "No Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "91398600";
+  lude:type "Pública";
+  lude:url "www.uned.es";
+  rdfs:label "National University of Distance Education";
+  owl:sameAs <https://wikidata.org/entity/Q421739> .
+
+<ex:University/094757ed9d7e9bb8929a087e18874962> a lude:University;
+  lude:acronym "UOV";
+  lude:cif "Q3318001I";
+  lude:email "rectorado@uniovi.es";
+  lude:id "094757ed9d7e9bb8929a087e18874962";
+  lude:modality "Presencial";
+  lude:publicationYear "1608";
+  lude:telephone "985104058";
+  lude:type "Pública";
+  lude:url "www.uniovi.es";
+  rdfs:label "University of Oviedo";
+  owl:sameAs <https://wikidata.org/entity/Q2303432> .
+
+<ex:University/15d26bf729b84e22210b99d94c66cd90> a lude:University;
+  lude:acronym "UVI";
+  lude:cif "Q8650002B";
+  lude:email "informacion@uvigo.es";
+  lude:id "15d26bf729b84e22210b99d94c66cd90";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "986812000";
+  lude:type "Pública";
+  lude:url "www.uvigo.es";
+  rdfs:label "Vigo University";
+  owl:sameAs <https://wikidata.org/entity/Q666916> .
+
+<ex:University/16249b9d3890e9951fa8dcc315733ea8> a lude:University;
+  lude:acronym "UEX";
+  lude:cif "Q0618001B";
+  lude:email "virtual@unex.es";
+  lude:id "16249b9d3890e9951fa8dcc315733ea8";
+  lude:modality "Presencial";
+  lude:publicationYear "1973";
+  lude:telephone "924289300";
+  lude:type "Pública";
+  lude:url "www.unex.es";
+  rdfs:label "University of Extremadura";
+  owl:sameAs <https://wikidata.org/entity/Q729391> .
+
+<ex:University/17a1b9e0f1c1e0719761a30d50700965> a lude:University;
+  lude:acronym "UPGC";
+  lude:cif "Q3518001G";
+  lude:email "universidad@ulpgc.es";
+  lude:id "17a1b9e0f1c1e0719761a30d50700965";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "928451000";
+  lude:type "Pública";
+  lude:url "www.ulpgc.es";
+  rdfs:label "University of Las Palmas de Gran Canaria";
+  owl:sameAs <https://wikidata.org/entity/Q940302> .
+
+<ex:University/186d47028db001c7a7d88906c21f5fee> a lude:University;
+  lude:acronym "UPC";
+  lude:cif "Q0818003F";
+  lude:email "info@upc.edu";
+  lude:id "186d47028db001c7a7d88906c21f5fee";
+  lude:modality "Presencial";
+  lude:publicationYear "1971";
+  lude:telephone "934016200";
+  lude:type "Pública";
+  lude:url "www.upc.es";
+  rdfs:label "Polytechnic University of Catalonia";
+  owl:sameAs <https://wikidata.org/entity/Q1640731> .
+
+<ex:University/24e63f7c3d8596b44655e9ad9bfdf5f5> a lude:University;
+  lude:acronym "UZA";
+  lude:cif "Q5018001G";
+  lude:email "ciu@unizar.es";
+  lude:id "24e63f7c3d8596b44655e9ad9bfdf5f5";
+  lude:modality "Presencial";
+  lude:publicationYear "1542";
+  lude:telephone "976761001";
+  lude:type "Pública";
+  rdfs:label "University of Zaragoza";
+  owl:sameAs <https://wikidata.org/entity/Q633561> .
+
+<ex:University/26e6f2790707f868f9d05141e6f2f906> a lude:University;
+  lude:acronym "UDG";
+  lude:cif "Q6750002E";
+  lude:email "informacio@udg.edu";
+  lude:id "26e6f2790707f868f9d05141e6f2f906";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "972418046";
+  lude:type "Pública";
+  rdfs:label "University of Girona";
+  owl:sameAs <https://wikidata.org/entity/Q1814503> .
+
+<ex:University/2ddd97caa885c032af0e206d1a7b5c85> a lude:University;
+  lude:acronym "UNIA";
+  lude:cif "Q7350007F";
+  lude:email "postgrado@unia.es";
+  lude:id "2ddd97caa885c032af0e206d1a7b5c85";
+  lude:modality "Especial";
+  lude:publicationYear "2013";
+  lude:telephone "954462299";
+  lude:type "Pública";
+  rdfs:label "Universidad Internacional de Andalucía";
+  owl:sameAs <https://wikidata.org/entity/Q4894042> .
+
+<ex:University/2f0fa6cb7c08610911b3258fd5f2738a> a lude:University;
+  lude:acronym "UIB";
+  lude:cif "Q0718001A";
+  lude:email "informacio@uib.es";
+  lude:id "2f0fa6cb7c08610911b3258fd5f2738a";
+  lude:modality "Presencial";
+  lude:publicationYear "1978";
+  lude:telephone "971173000";
+  lude:type "Pública";
+  lude:url "www.uib.es/";
+  rdfs:label "University of the Balearic Islands";
+  owl:sameAs <https://wikidata.org/entity/Q1811146> .
+
+<ex:University/30962703623f1f1d21c737a0c0673761> a lude:University;
+  lude:acronym "UMA";
+  lude:cif "Q2918001E";
+  lude:email "informacion@uma.es";
+  lude:id "30962703623f1f1d21c737a0c0673761";
+  lude:modality "Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "952131000";
+  lude:type "Pública";
+  lude:url "www.uma.es";
+  rdfs:label "Universidad de Málaga";
+  owl:sameAs <https://wikidata.org/entity/Q958650> .
+
+<ex:University/3105c9fd85b6cfd224f8d1b92970ab2f> a lude:University;
+  lude:acronym "UCN";
+  lude:cif "Q3918001C";
+  lude:email "acceso@unican.es";
+  lude:id "3105c9fd85b6cfd224f8d1b92970ab2f";
+  lude:modality "Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "942200984";
+  lude:type "Pública";
+  lude:url "www.unican.es";
+  rdfs:label "University of Cantabria";
+  owl:sameAs <https://wikidata.org/entity/Q766962> .
+
+<ex:University/330a9bcca27a6c6e467081bfdc1e65cd> a lude:University;
+  lude:acronym "UAH";
+  lude:cif "Q2818018J";
+  lude:email "ciu@uah.es";
+  lude:id "330a9bcca27a6c6e467081bfdc1e65cd";
+  lude:modality "Presencial";
+  lude:publicationYear "1977";
+  lude:telephone "918854000";
+  lude:type "Pública";
+  lude:url "www.uah.es";
+  rdfs:label "University of Alcalá";
+  owl:sameAs <https://wikidata.org/entity/Q1243904> .
+
+<ex:University/3bd27a309cbe4e2d7f35ec99b74525c0> a lude:University;
+  lude:acronym "UPF";
+  lude:cif "Q5850017D";
+  lude:id "3bd27a309cbe4e2d7f35ec99b74525c0";
+  lude:modality "Presencial";
+  lude:publicationYear "1990";
+  lude:telephone "935422000";
+  lude:type "Pública";
+  lude:url "www.upf.edu";
+  rdfs:label "Pompeu Fabra University";
+  owl:sameAs <https://wikidata.org/entity/Q24543> .
+
+<ex:University/4bf5231621b187a3ed12c5741fc3f19d> a lude:University;
+  lude:acronym "UPM";
+  lude:cif "Q2818015F";
+  lude:email "gabinete.rector@upm.es";
+  lude:id "4bf5231621b187a3ed12c5741fc3f19d";
+  lude:modality "Presencial";
+  lude:publicationYear "1971";
+  lude:telephone "913366200";
+  lude:type "Pública";
+  lude:url "www.upm.es";
+  rdfs:label "Technical University of Madrid";
+  owl:sameAs <https://wikidata.org/entity/Q25864> .
+
+<ex:University/4d9d7d9cad3c91e4f4fff77c396ee9ee> a lude:University;
+  lude:acronym "UPV";
+  lude:cif "Q4618002B";
+  lude:email "informacion@upv.es";
+  lude:id "4d9d7d9cad3c91e4f4fff77c396ee9ee";
+  lude:modality "Presencial";
+  lude:publicationYear "1971";
+  lude:telephone "963877000";
+  lude:type "Pública";
+  lude:url "www.upv.es";
+  rdfs:label "Technical University of Valencia";
+  owl:sameAs <https://wikidata.org/entity/Q2003976> .
+
+<ex:University/51dcd00716a08519e65a732cb87c3b71> a lude:University;
+  lude:acronym "USAL";
+  lude:cif "Q3718001E";
+  lude:email "infogral@usal.es";
+  lude:id "51dcd00716a08519e65a732cb87c3b71";
+  lude:modality "Presencial";
+  lude:publicationYear "1218";
+  lude:telephone "923294400";
+  lude:type "Pública";
+  lude:url "www.usal.es";
+  rdfs:label "University of Salamanca";
+  owl:sameAs <https://wikidata.org/entity/Q308963> .
+
+<ex:University/64597f645a8194bb9beed6a3aa675d5b> a lude:University;
+  lude:acronym "ULL";
+  lude:cif "Q3818001D";
+  lude:email "prensa1@ull.es";
+  lude:id "64597f645a8194bb9beed6a3aa675d5b";
+  lude:modality "Presencial";
+  lude:publicationYear "1792";
+  lude:telephone "922319000";
+  lude:type "Pública";
+  lude:url "www.ull.es";
+  rdfs:label "University of La Laguna";
+  owl:sameAs <https://wikidata.org/entity/Q539881> .
+
+<ex:University/703d90006d377d97e3212ab3312a4e0d> a lude:University;
+  lude:acronym "USC";
+  lude:cif "Q1518001A";
+  lude:email "reitor@usc.es";
+  lude:id "703d90006d377d97e3212ab3312a4e0d";
+  lude:modality "Presencial";
+  lude:publicationYear "1504";
+  lude:telephone "981563100";
+  lude:type "Pública";
+  lude:url "www.usc.es";
+  rdfs:label "University of Santiago de Compostela";
+  owl:sameAs <https://wikidata.org/entity/Q1473677> .
+
+<ex:University/79c02c40f6f40e7dbda1c9193c995152> a lude:University;
+  lude:acronym "UPO";
+  lude:cif "Q9150016E";
+  lude:id "79c02c40f6f40e7dbda1c9193c995152";
+  lude:modality "Presencial";
+  lude:publicationYear "1997";
+  lude:telephone "954349200";
+  lude:type "Pública";
+  lude:url "www.upo.es";
+  rdfs:label "Pablo de Olavide University";
+  owl:sameAs <https://wikidata.org/entity/Q477988> .
+
+<ex:University/7a90ec99428048f3a58539d18c749ea7> a lude:University;
+  lude:acronym "URJC";
+  lude:cif "Q2803011B";
+  lude:email "info@urjc.es";
+  lude:id "7a90ec99428048f3a58539d18c749ea7";
+  lude:modality "Presencial";
+  lude:publicationYear "1996";
+  lude:telephone "916655060";
+  lude:type "Pública";
+  lude:url "www.urjc.es";
+  rdfs:label "King Juan Carlos University";
+  owl:sameAs <https://wikidata.org/entity/Q2000629> .
+
+<ex:University/7ce4c67f7247673210d9b6d8aa5e7570> a lude:University;
+  lude:acronym "UBA";
+  lude:cif "Q0818001J";
+  lude:email "comunicacio@ub.edu";
+  lude:id "7ce4c67f7247673210d9b6d8aa5e7570";
+  lude:modality "Presencial";
+  lude:publicationYear "1450";
+  lude:telephone "934035417";
+  lude:type "Pública";
+  lude:url "www.ub.es";
+  rdfs:label "University of Barcelona";
+  owl:sameAs <https://wikidata.org/entity/Q219615> .
+
+<ex:University/871a4d42a733c080da0f1935663a2f05> a lude:University;
+  lude:acronym "UIMP";
+  lude:cif "Q2818022B";
+  lude:id "871a4d42a733c080da0f1935663a2f05";
+  lude:modality "Especial";
+  lude:publicationYear "1945";
+  lude:telephone "915920600";
+  lude:type "Pública";
+  lude:url "www.uimp.es";
+  rdfs:label "Universidad Internacional Menéndez Pelayo";
+  owl:sameAs <https://wikidata.org/entity/Q1442385> .
+
+<ex:University/8841d88268e139663a8723e418715e78> a lude:University;
+  lude:acronym "URV";
+  lude:cif "Q9350003A";
+  lude:email "info@urv.cat";
+  lude:id "8841d88268e139663a8723e418715e78";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "977558000";
+  lude:type "Pública";
+  lude:url "www.urv.cat/ca";
+  rdfs:label "Rovira i Virgili University";
+  owl:sameAs <https://wikidata.org/entity/Q3133193> .
+
+<ex:University/91aa5268851f200c64bd1a238ed37fcf> a lude:University;
+  lude:acronym "UAB";
+  lude:cif "Q0818002H";
+  lude:email "informacio@uab.es";
+  lude:id "91aa5268851f200c64bd1a238ed37fcf";
+  lude:modality "Presencial";
+  lude:publicationYear "1968";
+  lude:telephone "935811000";
+  lude:type "Pública";
+  lude:url "www.uab.es";
+  rdfs:label "Autonomous University of Barcelona";
+  owl:sameAs <https://wikidata.org/entity/Q43452> .
+
+<ex:University/92c081b3e4299316155ea45962241086> lude:acronym "UVA";
+  lude:cif "Q4718001C";
+  lude:email "valladolid@uva.es";
+  lude:id "92c081b3e4299316155ea45962241086";
+  lude:modality "Presencial";
+  lude:publicationYear "1241";
+  lude:telephone "983423000";
+  a lude:University;
+  lude:type "Pública";
+  rdfs:label "University of Valladolid";
+  owl:sameAs <https://wikidata.org/entity/Q768224> .
+
+<ex:University/92c852850da0a33857691151f42ac19a> a lude:University;
+  lude:acronym "UJI";
+  lude:cif "Q6250003H";
+  lude:email "info@uji.es";
+  lude:id "92c852850da0a33857691151f42ac19a";
+  lude:modality "Presencial";
+  lude:publicationYear "1991";
+  lude:telephone "964728000";
+  lude:type "Pública";
+  lude:url "www.uji.es";
+  rdfs:label "Jaume I University";
+  owl:sameAs <https://wikidata.org/entity/Q29718> .
+
+<ex:University/9d791fc58c21adf30d157657e55c4355> a lude:University;
+  lude:acronym "UCA";
+  lude:cif "Q1132001G";
+  lude:email "relaciones.institucionales@uca.es";
+  lude:id "9d791fc58c21adf30d157657e55c4355";
+  lude:modality "Presencial";
+  lude:publicationYear "1979";
+  lude:telephone "956015033";
+  lude:type "Pública";
+  lude:url "www.uca.es";
+  rdfs:label "University of Cádiz";
+  owl:sameAs <https://wikidata.org/entity/Q2000065> .
+
+<ex:University/a0b65722ec5194abfd7f9ba621a7dd1d> a lude:University;
+  lude:acronym "UJA";
+  lude:cif "Q7350006H";
+  lude:id "a0b65722ec5194abfd7f9ba621a7dd1d";
+  lude:modality "Presencial";
+  lude:publicationYear "1993";
+  lude:telephone "953212121";
+  lude:type "Pública";
+  lude:url "www.ujaen.es";
+  rdfs:label "University of Jaén";
+  owl:sameAs <https://wikidata.org/entity/Q573144> .
+
+<ex:University/a62a164f781be26dd225dfda47b78c12> a lude:University;
+  lude:acronym "UCLM";
+  lude:cif "Q1368009E";
+  lude:email "webmaster@uclm.es";
+  lude:id "a62a164f781be26dd225dfda47b78c12";
+  lude:modality "Presencial";
+  lude:publicationYear "1982";
+  lude:telephone "902204100";
+  lude:type "Pública";
+  lude:url "www.uclm.es";
+  rdfs:label "Universidad de Castilla-La Mancha";
+  owl:sameAs <https://wikidata.org/entity/Q941806> .
+
+<ex:University/aeaa439db599d073395f84fb7fa10a54> a lude:University;
+  lude:acronym "UPNA";
+  lude:cif "Q3150012G";
+  lude:email "infoweb@unavarra.es";
+  lude:id "aeaa439db599d073395f84fb7fa10a54";
+  lude:modality "Presencial";
+  lude:publicationYear "1987";
+  lude:telephone "948169000";
+  lude:type "Pública";
+  lude:url "www.unavarra.es";
+  rdfs:label "Public University of Navarre";
+  owl:sameAs <https://wikidata.org/entity/Q3179598> .
+
+<ex:University/bd5d3da0c4dfc8205ca85ea0c1699a62> a lude:University;
+  lude:acronym "UMH";
+  lude:cif "Q5350015C";
+  lude:email "info@umh.es";
+  lude:id "bd5d3da0c4dfc8205ca85ea0c1699a62";
+  lude:modality "Presencial";
+  lude:publicationYear "1996";
+  lude:telephone "966658500";
+  lude:type "Pública";
+  lude:url "www.umh.es";
+  rdfs:label "Miguel Hernández University of Elche";
+  owl:sameAs <https://wikidata.org/entity/Q24676> .
+
+<ex:University/bf0d31e1fd4ee242c0fe00c2ee08b759> a lude:University;
+  lude:acronym "UDL";
+  lude:cif "Q7550001G";
+  lude:email "info@udl.cat";
+  lude:id "bf0d31e1fd4ee242c0fe00c2ee08b759";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "973702000";
+  lude:type "Pública";
+  lude:url "www.udl.es/ca/es/";
+  rdfs:label "University of Lleida";
+  owl:sameAs <https://wikidata.org/entity/Q1235594> .
+
+<ex:University/c50901012309aca2785eb50ea4c8f87b> a lude:University;
+  lude:acronym "UCAR";
+  lude:cif "Q2818029G";
+  lude:email "futurosestudiantes@uc3m.es";
+  lude:id "c50901012309aca2785eb50ea4c8f87b";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "916249500";
+  lude:type "Pública";
+  lude:url "www.uc3m.es";
+  rdfs:label "Universidad Carlos III de Madrid";
+  owl:sameAs <https://wikidata.org/entity/Q1247135> .
+
+<ex:University/c6abab9cddd0b921adc603debfcca50e> a lude:University;
+  lude:acronym "UAL";
+  lude:cif "Q5450008G";
+  lude:email "gprensa@ual.es";
+  lude:id "c6abab9cddd0b921adc603debfcca50e";
+  lude:modality "Presencial";
+  lude:publicationYear "1993";
+  lude:telephone "950015570";
+  lude:type "Pública";
+  lude:url "www.ual.es";
+  rdfs:label "University of Almería";
+  owl:sameAs <https://wikidata.org/entity/Q1218488> .
+
+<ex:University/c73f658b0a9e2a5097a9ae889dd56474> a lude:University;
+  lude:acronym "UV";
+  lude:cif "Q4618001D";
+  lude:email "servei.estudiants@uv.es";
+  lude:id "c73f658b0a9e2a5097a9ae889dd56474";
+  lude:modality "Presencial";
+  lude:publicationYear "1502";
+  lude:telephone "963864100";
+  lude:type "Pública";
+  lude:url "www.uv.es";
+  rdfs:label "University of Valencia";
+  owl:sameAs <https://wikidata.org/entity/Q383568> .
+
+<ex:University/c8b4be930789e86c8d8b17d773af6d7e> a lude:University;
+  lude:acronym "ULE";
+  lude:cif "Q2432001B";
+  lude:email "webmaster@unileon.es";
+  lude:id "c8b4be930789e86c8d8b17d773af6d7e";
+  lude:modality "Presencial";
+  lude:publicationYear "1979";
+  lude:telephone "987291000";
+  lude:type "Pública";
+  lude:url "www.unileon.es";
+  rdfs:label "University of León";
+  owl:sameAs <https://wikidata.org/entity/Q781108> .
+
+<ex:University/d30bbd19fa77d8470334a259e060006e> a lude:University;
+  lude:acronym "EHU";
+  lude:cif "Q4818001B";
+  lude:email "rgzadmin@lg.ehu.es";
+  lude:id "d30bbd19fa77d8470334a259e060006e";
+  lude:modality "Presencial";
+  lude:publicationYear "1968";
+  lude:telephone "946012000";
+  lude:type "Pública";
+  lude:url "www.ehu.es";
+  rdfs:label "University of the Basque Country";
+  owl:sameAs <https://wikidata.org/entity/Q1232428> .
+
+<ex:University/d4092e4beec5ade3eb17379b7450f0b9> a lude:University;
+  lude:acronym "UCO";
+  lude:cif "Q1418001B";
+  lude:email "informacion@uco.es";
+  lude:id "d4092e4beec5ade3eb17379b7450f0b9";
+  lude:modality "Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "957218000";
+  lude:type "Pública";
+  lude:url "www.uco.es";
+  rdfs:label "University of Córdoba";
+  owl:sameAs <https://wikidata.org/entity/Q734010> .
+
+<ex:University/dbca02858a647c576208370194649766> a lude:University;
+  lude:acronym "UGR";
+  lude:cif "Q1818002F";
+  lude:email "csirc@ugr.es";
+  lude:id "dbca02858a647c576208370194649766";
+  lude:modality "Presencial";
+  lude:publicationYear "1531";
+  lude:telephone "958243000";
+  lude:type "Pública";
+  lude:url "www.ugr.es";
+  rdfs:label "University of Granada";
+  owl:sameAs <https://wikidata.org/entity/Q1232180> .
+
+<ex:University/dcbcd7e79ed9bec816e6a427d84bbf64> a lude:University;
+  lude:acronym "UR";
+  lude:cif "Q2618002F";
+  lude:email "sec.general@unirioja.es";
+  lude:id "dcbcd7e79ed9bec816e6a427d84bbf64";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "941299104";
+  lude:type "Pública";
+  lude:url "www.unirioja.es";
+  rdfs:label "University of La Rioja";
+  owl:sameAs <https://wikidata.org/entity/Q120795> .
+
+<ex:University/e00161d1619c9c29b683d70c49b1341c> a lude:University;
+  lude:acronym "UA";
+  lude:cif "Q0332001G";
+  lude:email "informacio@ua.es";
+  lude:id "e00161d1619c9c29b683d70c49b1341c";
+  lude:modality "Presencial";
+  lude:publicationYear "1979";
+  lude:telephone "965903400";
+  lude:type "Pública";
+  lude:url "www.ua.es/";
+  rdfs:label "University of Alicante";
+  owl:sameAs <https://wikidata.org/entity/Q2037040> .
+
+<ex:University/e2aed65db4fa77f98f5f2990371c7a23> a lude:University;
+  lude:acronym "UCM";
+  lude:cif "Q2818014I";
+  lude:email "infocom@ucm.es";
+  lude:id "e2aed65db4fa77f98f5f2990371c7a23";
+  lude:modality "Presencial";
+  lude:publicationYear "1836";
+  lude:telephone "914520400";
+  lude:type "Pública";
+  lude:url "www.ucm.es";
+  rdfs:label "Complutense University of Madrid";
+  owl:sameAs <https://wikidata.org/entity/Q219694> .
+
+<ex:University/e4aee90dd75f5fd5dc35bc4653bd9065> a lude:University;
+  lude:acronym "UPCT";
+  lude:cif "Q8050013E";
+  lude:email "gestion.academica@upct.es";
+  lude:id "e4aee90dd75f5fd5dc35bc4653bd9065";
+  lude:modality "Presencial";
+  lude:publicationYear "1998";
+  lude:telephone "968325400";
+  lude:type "Pública";
+  lude:url "www.upct.es";
+  rdfs:label "Universidad Politécnica de Cartagena";
+  owl:sameAs <https://wikidata.org/entity/Q6156635> .
+
+<ex:University/e97892b0ccf3c19ce40f9ef9d8ac91ef> a lude:University;
+  lude:acronym "UDC";
+  lude:cif "Q6550005J";
+  lude:email "reitor@udc.es";
+  lude:id "e97892b0ccf3c19ce40f9ef9d8ac91ef";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "981167000";
+  lude:type "Pública";
+  lude:url "www.udc.es";
+  rdfs:label "University of A Coruña";
+  owl:sameAs <https://wikidata.org/entity/Q280305> .
+
+<ex:University/f5636bc297db763f969bab88b5492ba3> a lude:University;
+  lude:acronym "UMU";
+  lude:cif "Q3018001B";
+  lude:email "rector@um.es";
+  lude:id "f5636bc297db763f969bab88b5492ba3";
+  lude:modality "Presencial";
+  lude:publicationYear "1272";
+  lude:telephone "968363000";
+  lude:type "Pública";
+  lude:url "www.um.es";
+  rdfs:label "University of Murcia";
+  owl:sameAs <https://wikidata.org/entity/Q1236345> .
+
+<ex:University/f6ce2593f6cfc9e08dc9effe2e0077e9> a lude:University;
+  lude:acronym "UHU";
+  lude:cif "Q7150008F";
+  lude:email "www@uhu.es";
+  lude:id "f6ce2593f6cfc9e08dc9effe2e0077e9";
+  lude:modality "Presencial";
+  lude:publicationYear "1993";
+  lude:telephone "959218000";
+  lude:type "Pública";
+  lude:url "www.uhu.es";
+  rdfs:label "University of Huelva";
+  owl:sameAs <https://wikidata.org/entity/Q478464> .
+
+<ex:University/f8c4e120daa6420626c03e582958ebd3> a lude:University;
+  lude:acronym "USE";
+  lude:cif "Q4118001I";
+  lude:email "gabiprensa@us.es";
+  lude:id "f8c4e120daa6420626c03e582958ebd3";
+  lude:modality "Presencial";
+  lude:publicationYear "1505";
+  lude:telephone "954551000";
+  lude:type "Pública";
+  lude:url "www.us.es";
+  rdfs:label "University of Seville";
+  owl:sameAs <https://wikidata.org/entity/Q1229996> .
+
+<ex:University/f9d30a624b678c838a4bb422a0bc148b> a lude:University;
+  lude:acronym "UAM";
+  lude:cif "Q2818013A";
+  lude:email "informacion.general@uam.es";
+  lude:id "f9d30a624b678c838a4bb422a0bc148b";
+  lude:modality "Presencial";
+  lude:publicationYear "1968";
+  lude:telephone "914975000";
+  lude:type "Pública";
+  lude:url "www.uam.es";
+  rdfs:label "Autonomous University of Madrid";
+  owl:sameAs <https://wikidata.org/entity/Q788091> .
+
+<ex:University/f9f0a05fbac13ce20a2af52247c2b93f> a lude:University;
+  lude:acronym "UBU";
+  lude:cif "Q0968272E";
+  lude:email "ubuestudiantes@ubu.es";
+  lude:id "f9f0a05fbac13ce20a2af52247c2b93f";
+  lude:modality "Presencial";
+  lude:publicationYear "1994";
+  lude:telephone "947258700";
+  lude:type "Pública";
+  lude:url "www.ubu.es";
+  rdfs:label "University of Burgos";
+  owl:sameAs <https://wikidata.org/entity/Q1510657> .

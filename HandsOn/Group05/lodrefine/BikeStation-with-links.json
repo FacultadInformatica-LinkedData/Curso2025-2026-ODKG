@@ -1,0 +1,5220 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "Address",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "reconciled_columns",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna reconciled_columns en el índice 1 basada en la columna Address usando la expresión grel:value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q2221906",
+        "name": "geographic location"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column reconciled_columns to type Q2221906"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle miguel moya",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle miguel moya\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza conde surchill",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27244013",
+      "name": "Plaza del Conde del Valle de Súchil, Madrid",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza del Conde del Valle de Súchil, Madrid (Q27244013) para las celdas que contienen \"plaza conde surchill\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle hortaleza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740911",
+      "name": "calle de Hortaleza",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Hortaleza (Q5740911) para las celdas que contienen \"calle hortaleza\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de alonso martínez",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6079873",
+      "name": "plaza de Alonso Martínez",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento plaza de Alonso Martínez (Q6079873) para las celdas que contienen \"plaza de alonso martínez\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de san miguel",
+    "judgment": "matched",
+    "match": {
+      "id": "Q52051752",
+      "name": "Plaza de San Miguel, Madrid",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza de San Miguel, Madrid (Q52051752) para las celdas que contienen \"plaza de san miguel\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle marqués de la ensenada",
+    "judgment": "matched",
+    "match": {
+      "id": "Q55227717",
+      "name": "Calle del Marqués de la Ensenada, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Marqués de la Ensenada, Madrid (Q55227717) para las celdas que contienen \"calle marqués de la ensenada\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle san andrés",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27166315",
+      "name": "calle de San Andrés",
+      "types": [
+        "Q79007"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de San Andrés (Q27166315) para las celdas que contienen \"calle san andrés\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle san bernardo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740864",
+      "name": "San Bernardo street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento San Bernardo street (Q5740864) para las celdas que contienen \"calle san bernardo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle conde duque",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27031730",
+      "name": "calle del Conde Duque",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle del Conde Duque (Q27031730) para las celdas que contienen \"calle conde duque\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "ventura rodríguez",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28016771",
+      "name": "calle de Ventura Rodríguez",
+      "types": [
+        "Q79007"
+      ],
+      "score": 89
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Ventura Rodríguez (Q28016771) para las celdas que contienen \"ventura rodríguez\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle norte",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29840509",
+      "name": "Calle del Norte, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Norte, Madrid (Q29840509) para las celdas que contienen \"calle norte\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de carlos cambronero",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"plaza de carlos cambronero\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de pedro zerolo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6080146",
+      "name": "plaza de Pedro Zerolo",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento plaza de Pedro Zerolo (Q6080146) para las celdas que contienen \"plaza de pedro zerolo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle prim",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28916366",
+      "name": "Calle de Prim, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Prim, Madrid (Q28916366) para las celdas que contienen \"calle prim\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle alcalá",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2424746",
+      "name": "Alcalá Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Alcalá Street (Q2424746) para las celdas que contienen \"calle alcalá\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de santo domingo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6080106",
+      "name": "Plaza de Santo Domingo",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza de Santo Domingo (Q6080106) para las celdas que contienen \"plaza de santo domingo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle carlos iii",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29004341",
+      "name": "Calle de Carlos III, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Carlos III, Madrid (Q29004341) para las celdas que contienen \"calle carlos iii\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de celenque",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6079939",
+      "name": "Plaza de Celenque, Madrid",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza de Celenque, Madrid (Q6079939) para las celdas que contienen \"plaza de celenque\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de las salesas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28916480",
+      "name": "Plaza de las Salesas, Madrid",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza de las Salesas, Madrid (Q28916480) para las celdas que contienen \"plaza de las salesas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle jesús",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27051182",
+      "name": "Calle de Jesús, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 88
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Jesús, Madrid (Q27051182) para las celdas que contienen \"calle jesús\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle del marqués de cubas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q19304646",
+      "name": "calle del Marqués de Cubas",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle del Marqués de Cubas (Q19304646) para las celdas que contienen \"calle del marqués de cubas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle pavía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q30816733",
+      "name": "Calle de Pavía, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Pavía, Madrid (Q30816733) para las celdas que contienen \"calle pavía\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle mayor",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1149052",
+      "name": "Calle Mayor",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle Mayor (Q1149052) para las celdas que contienen \"calle mayor\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de la provincia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q12344133",
+      "name": "plaza de la Provincia",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento plaza de la Provincia (Q12344133) para las celdas que contienen \"plaza de la provincia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle carretas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740952",
+      "name": "calle de Carretas",
+      "types": [
+        "Q79007"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Carretas (Q5740952) para las celdas que contienen \"calle carretas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de jacinto benavente",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6080004",
+      "name": "Plaza de Jacinto Benavente",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza de Jacinto Benavente (Q6080004) para las celdas que contienen \"plaza de jacinto benavente\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de ramales",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2839150",
+      "name": "Plaza de Ramales, Madrid",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza de Ramales, Madrid (Q2839150) para las celdas que contienen \"plaza de ramales\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de san francisco",
+    "judgment": "matched",
+    "match": {
+      "id": "Q24493632",
+      "name": "San Francisco Square",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento San Francisco Square (Q24493632) para las celdas que contienen \"plaza de san francisco\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "carrera de san francisco",
+    "judgment": "matched",
+    "match": {
+      "id": "Q24526469",
+      "name": "carrera de San Francisco",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento carrera de San Francisco (Q24526469) para las celdas que contienen \"carrera de san francisco\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de la cebada",
+    "judgment": "matched",
+    "match": {
+      "id": "Q9060972",
+      "name": "plaza de la Cebada",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento plaza de la Cebada (Q9060972) para las celdas que contienen \"plaza de la cebada\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza del conde de romanones",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"plaza del conde de romanones\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle atocha",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5492657",
+      "name": "calle de Atocha",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Atocha (Q5492657) para las celdas que contienen \"calle atocha\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle santa isabel",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2882669",
+      "name": "calle de Santa Isabel",
+      "types": [
+        "Q79007"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Santa Isabel (Q2882669) para las celdas que contienen \"calle santa isabel\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle jesús y maría",
+    "judgment": "matched",
+    "match": {
+      "id": "Q52153441",
+      "name": "Calle de Jesús y María, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Jesús y María, Madrid (Q52153441) para las celdas que contienen \"calle jesús y maría\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza nelson mandela",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28662636",
+      "name": "Nelson Mandela plaza",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Nelson Mandela plaza (Q28662636) para las celdas que contienen \"plaza nelson mandela\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "puerta de toledo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2657591",
+      "name": "Gate of Toledo",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Gate of Toledo (Q2657591) para las celdas que contienen \"puerta de toledo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle ribera de curtidores",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740938",
+      "name": "Calle de la Ribera de Curtidores",
+      "types": [
+        "Q79007"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de la Ribera de Curtidores (Q5740938) para las celdas que contienen \"calle ribera de curtidores\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "glorieta de embajadores",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16571874",
+      "name": "Glorieta de Embajadores, Madrid",
+      "types": [
+        "Q174782",
+        "Q1529"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Glorieta de Embajadores, Madrid (Q16571874) para las celdas que contienen \"glorieta de embajadores\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "ronda de atocha",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26831149",
+      "name": "Ronda de Atocha",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Ronda de Atocha (Q26831149) para las celdas que contienen \"ronda de atocha\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de santa isabel",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2882669",
+      "name": "calle de Santa Isabel",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Santa Isabel (Q2882669) para las celdas que contienen \"calle de santa isabel\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de santa ana",
+    "judgment": "matched",
+    "match": {
+      "id": "Q740210",
+      "name": "Plaza de Santa Ana",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza de Santa Ana (Q740210) para las celdas que contienen \"plaza de santa ana\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plazuela de ana diosdado",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"plazuela de ana diosdado\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle barceló",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27051120",
+      "name": "calle de Barceló",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Barceló (Q27051120) para las celdas que contienen \"calle barceló\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de san ildefonso",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6080070",
+      "name": "plaza de San Ildefonso",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento plaza de San Ildefonso (Q6080070) para las celdas que contienen \"plaza de san ildefonso\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza del carmen",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6080406",
+      "name": "Plaza del Carmen",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza del Carmen (Q6080406) para las celdas que contienen \"plaza del carmen\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle santa cruz del marcenado",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"calle santa cruz del marcenado\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle santa cruz del marcenado",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle santa cruz del marcenado\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle augusto figueroa",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29564346",
+      "name": "Calle de Augusto Figueroa, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Augusto Figueroa, Madrid (Q29564346) para las celdas que contienen \"calle augusto figueroa\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle espíritu santo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740833",
+      "name": "Calle del Espíritu Santo, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Espíritu Santo, Madrid (Q5740833) para las celdas que contienen \"calle espíritu santo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de la independencia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4967671",
+      "name": "Plaza de la Independencia",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza de la Independencia (Q4967671) para las celdas que contienen \"plaza de la independencia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle o donnell",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740859",
+      "name": "calle de O'Donnell",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de O'Donnell (Q5740859) para las celdas que contienen \"calle o donnell\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle ibiza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q63247838",
+      "name": "Calle de Ibiza, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 88
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Ibiza, Madrid (Q63247838) para las celdas que contienen \"calle ibiza\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle antonio maura",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29566726",
+      "name": "Calle de Antonio Maura, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Antonio Maura, Madrid (Q29566726) para las celdas que contienen \"calle antonio maura\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle almadé",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle almadé\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle espalter",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle espalter\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de alfonso xii",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29397736",
+      "name": "Avenida de Alfonso XIII, Madrid",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 98
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Alfonso XIII, Madrid (Q29397736) para las celdas que contienen \"avenida de alfonso xii\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de menéndez pelayo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28936960",
+      "name": "Avenida de Menéndez Pelayo, Madrid",
+      "types": [
+        "Q79007",
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Menéndez Pelayo, Madrid (Q28936960) para las celdas que contienen \"avenida de menéndez pelayo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle doce de octubre",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118724987",
+      "name": "calle del Doce de Octubre",
+      "types": [
+        "Q79007"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle del Doce de Octubre (Q118724987) para las celdas que contienen \"calle doce de octubre\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle doctor esquerdo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5741005",
+      "name": "calle del Doctor Esquerdo",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle del Doctor Esquerdo (Q5741005) para las celdas que contienen \"calle doctor esquerdo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de los astros",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle de los astros\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida menéndez pelayo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28936960",
+      "name": "Avenida de Menéndez Pelayo, Madrid",
+      "types": [
+        "Q79007",
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Menéndez Pelayo, Madrid (Q28936960) para las celdas que contienen \"avenida menéndez pelayo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida del mediterráneo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q57739480",
+      "name": "avenida del Mediterráneo",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida del Mediterráneo (Q57739480) para las celdas que contienen \"avenida del mediterráneo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza del conde de casal",
+    "judgment": "matched",
+    "match": {
+      "id": "Q30342082",
+      "name": "Plaza del Conde de Casal, Madrid",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza del Conde de Casal, Madrid (Q30342082) para las celdas que contienen \"plaza del conde de casal\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle cerro de la plata",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle cerro de la plata\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle claudio moyano",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5794001",
+      "name": "Cuesta de Moyano, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 93
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Cuesta de Moyano, Madrid (Q5794001) para las celdas que contienen \"calle claudio moyano\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle claudio moyano",
+    "judgment": "matched",
+    "match": {
+      "id": "Q36474055",
+      "name": "Calle de Claudio Moyano, Valladolid",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Claudio Moyano, Valladolid (Q36474055) para las celdas que contienen \"calle claudio moyano\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle claudio moyano",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5794001",
+      "name": "Cuesta de Moyano, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 93
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Cuesta de Moyano, Madrid (Q5794001) para las celdas que contienen \"calle claudio moyano\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle lira",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56167668",
+      "name": "Calle de Lira, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Lira, Madrid (Q56167668) para las celdas que contienen \"calle lira\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle pío baroja",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118724995",
+      "name": "calle de Pío Baroja",
+      "types": [
+        "Q79007"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Pío Baroja (Q118724995) para las celdas que contienen \"calle pío baroja\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo del prado",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2079615",
+      "name": "Paseo del Prado",
+      "types": [
+        "Q787113",
+        "Q54114",
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo del Prado (Q2079615) para las celdas que contienen \"paseo del prado\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle ayala",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28052812",
+      "name": "Calle de Ayala",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Ayala (Q28052812) para las celdas que contienen \"calle ayala\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle velázquez",
+    "judgment": "matched",
+    "match": {
+      "id": "Q20031523",
+      "name": "Calle de Velázquez",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Velázquez (Q20031523) para las celdas que contienen \"calle velázquez\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle goya",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28015873",
+      "name": "Calle de Goya",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Goya (Q28015873) para las celdas que contienen \"calle goya\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle hermosilla",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28052826",
+      "name": "Calle de Hermosilla",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Hermosilla (Q28052826) para las celdas que contienen \"calle hermosilla\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle claudio coello",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28059043",
+      "name": "Claudio Coello Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Claudio Coello Street (Q28059043) para las celdas que contienen \"calle claudio coello\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de recoletos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2550870",
+      "name": "Paseo de Recoletos",
+      "types": [
+        "Q787113",
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de Recoletos (Q2550870) para las celdas que contienen \"paseo de recoletos\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle narváez",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28936837",
+      "name": "Calle de Narváez, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Narváez, Madrid (Q28936837) para las celdas que contienen \"calle narváez\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle alcántara",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28070781",
+      "name": "Calle de Alcántara, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Alcántara, Madrid (Q28070781) para las celdas que contienen \"calle alcántara\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle jorge juán",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28070822",
+      "name": "Calle de Jorge Juan",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Jorge Juan (Q28070822) para las celdas que contienen \"calle jorge juán\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle josé ortega y gasset",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16540548",
+      "name": "Calle de José Ortega y Gasset, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de José Ortega y Gasset, Madrid (Q16540548) para las celdas que contienen \"calle josé ortega y gasset\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de la castellana",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1473674",
+      "name": "Paseo de la Castellana",
+      "types": [
+        "Q83620",
+        "Q79007",
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de la Castellana (Q1473674) para las celdas que contienen \"paseo de la castellana\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle serrano",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740879",
+      "name": "Serrano Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Serrano Street (Q5740879) para las celdas que contienen \"calle serrano\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle mártires concepcionistas",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle mártires concepcionistas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de moret",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26821443",
+      "name": "paseo de Moret",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento paseo de Moret (Q26821443) para las celdas que contienen \"paseo de moret\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle arcipreste de hita",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27243768",
+      "name": "Calle del Arcipreste de Hita, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Arcipreste de Hita, Madrid (Q27243768) para las celdas que contienen \"calle arcipreste de hita\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo moret",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26821443",
+      "name": "paseo de Moret",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento paseo de Moret (Q26821443) para las celdas que contienen \"paseo moret\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo del pintor rosales",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6065691",
+      "name": "Paseo del Pintor Rosales",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo del Pintor Rosales (Q6065691) para las celdas que contienen \"paseo del pintor rosales\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle quintana",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28016208",
+      "name": "calle de Quintana",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Quintana (Q28016208) para las celdas que contienen \"calle quintana\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de pintor rosales",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6065691",
+      "name": "Paseo del Pintor Rosales",
+      "types": [
+        "Q79007"
+      ],
+      "score": 98
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo del Pintor Rosales (Q6065691) para las celdas que contienen \"paseo de pintor rosales\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de españa",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1326261",
+      "name": "plaza de España",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento plaza de España (Q1326261) para las celdas que contienen \"plaza de españa\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de los reyes",
+    "judgment": "matched",
+    "match": {
+      "id": "Q20908841",
+      "name": "calle de los Reyes",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de los Reyes (Q20908841) para las celdas que contienen \"calle de los reyes\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle altamirano",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28015954",
+      "name": "Calle de Altamirano, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Altamirano, Madrid (Q28015954) para las celdas que contienen \"calle altamirano\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle juan martínez el empeciado",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle juan martínez el empeciado\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle méndez álvaro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5553104",
+      "name": "Calle de Méndez Álvaro, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Méndez Álvaro, Madrid (Q5553104) para las celdas que contienen \"calle méndez álvaro\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle palos de la frontera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118669853",
+      "name": "calle de Palos de la Frontera",
+      "types": [
+        "Q79007"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Palos de la Frontera (Q118669853) para las celdas que contienen \"calle palos de la frontera\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de santa maría de la cabeza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6065630",
+      "name": "Paseo de Santa María de la Cabeza",
+      "types": [
+        "Q79007",
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de Santa María de la Cabeza (Q6065630) para las celdas que contienen \"paseo de santa maría de la cabeza\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle santa engracia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26728109",
+      "name": "calle de Santa Engracia",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Santa Engracia (Q26728109) para las celdas que contienen \"calle santa engracia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle guzmán el bueno",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27031398",
+      "name": "calle de Guzmán el Bueno",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Guzmán el Bueno (Q27031398) para las celdas que contienen \"calle guzmán el bueno\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle manuel silvela",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28032364",
+      "name": "Calle de Manuel Silvela, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Manuel Silvela, Madrid (Q28032364) para las celdas que contienen \"calle manuel silvela\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle fernández de la hoz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27314868",
+      "name": "Fernández de la Hoz street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Fernández de la Hoz street (Q27314868) para las celdas que contienen \"calle fernández de la hoz\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle del general álvarez de castro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28024232",
+      "name": "Calle del General Álvarez de Castro, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del General Álvarez de Castro, Madrid (Q28024232) para las celdas que contienen \"calle del general álvarez de castro\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle fernando el católico",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27243299",
+      "name": "Calle de Fernando el Católico, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Fernando el Católico, Madrid (Q27243299) para las celdas que contienen \"calle fernando el católico\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle cea bermúdez",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26791743",
+      "name": "calle de Cea Bermúdez",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Cea Bermúdez (Q26791743) para las celdas que contienen \"calle cea bermúdez\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de josé abascal",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27310549",
+      "name": "Calle de José Abascal, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de José Abascal, Madrid (Q27310549) para las celdas que contienen \"calle de josé abascal\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de santa engracia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26728109",
+      "name": "calle de Santa Engracia",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Santa Engracia (Q26728109) para las celdas que contienen \"calle de santa engracia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle bravo murillo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740815",
+      "name": "calle de Bravo Murillo",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Bravo Murillo (Q5740815) para las celdas que contienen \"calle bravo murillo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle dulcinea",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118639334",
+      "name": "calle de Dulcinea",
+      "types": [
+        "Q79007"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Dulcinea (Q118639334) para las celdas que contienen \"calle dulcinea\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle maría de guzmán",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27310035",
+      "name": "Calle de María de Guzmán, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de María de Guzmán, Madrid (Q27310035) para las celdas que contienen \"calle maría de guzmán\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de san juan de la cruz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27345106",
+      "name": "Square of San Juan de la Cruz",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Square of San Juan de la Cruz (Q27345106) para las celdas que contienen \"plaza de san juan de la cruz\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de la republica argentina",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29200152",
+      "name": "Plaza de la República Argentina, Madrid",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Plaza de la República Argentina, Madrid (Q29200152) para las celdas que contienen \"plaza de la republica argentina\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle pedro de valdivia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28059081",
+      "name": "Calle de Pedro de Valdivia, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Pedro de Valdivia, Madrid (Q28059081) para las celdas que contienen \"calle pedro de valdivia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle general pardiñas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28065178",
+      "name": "General Pardiñas Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento General Pardiñas Street (Q28065178) para las celdas que contienen \"calle general pardiñas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de juan bravo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28054647",
+      "name": "Calle de Juan Bravo, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Juan Bravo, Madrid (Q28054647) para las celdas que contienen \"calle de juan bravo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle ortega y gasset",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16540548",
+      "name": "Calle de José Ortega y Gasset, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de José Ortega y Gasset, Madrid (Q16540548) para las celdas que contienen \"calle ortega y gasset\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de maría francisca",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle de maría francisca\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida del doctor arce",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29199638",
+      "name": "Avenida del Doctor Arce, Madrid",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida del Doctor Arce, Madrid (Q29199638) para las celdas que contienen \"avenida del doctor arce\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de la habana",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28059068",
+      "name": "Paseo de La Habana, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de La Habana, Madrid (Q28059068) para las celdas que contienen \"paseo de la habana\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle orense",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26761687",
+      "name": "Calle de Orense, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Orense, Madrid (Q26761687) para las celdas que contienen \"calle orense\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida del general perón",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26761632",
+      "name": "Avenida del General Perón",
+      "types": [
+        "Q79007",
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida del General Perón (Q26761632) para las celdas que contienen \"avenida del general perón\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle san germán",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26750807",
+      "name": "Calle de San Germán, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de San Germán, Madrid (Q26750807) para las celdas que contienen \"calle san germán\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle sor ángela de la cruz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q21011321",
+      "name": "Calle de Sor Ángela de la Cruz, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Sor Ángela de la Cruz, Madrid (Q21011321) para las celdas que contienen \"calle sor ángela de la cruz\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de alberto alcocer",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26833742",
+      "name": "avenida de Alberto Alcocer",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida de Alberto Alcocer (Q26833742) para las celdas que contienen \"avenida de alberto alcocer\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle colombia",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle colombia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de la florida",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5576961",
+      "name": "Paseo de la Florida, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de la Florida, Madrid (Q5576961) para las celdas que contienen \"paseo de la florida\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de los olmos",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"paseo de los olmos\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de la esperanza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q55947011",
+      "name": "Paseo de la Esperanza, Madrid",
+      "types": [
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de la Esperanza, Madrid (Q55947011) para las celdas que contienen \"paseo de la esperanza\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de las delicias",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6065662",
+      "name": "Paseo de las Delicias, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de las Delicias, Madrid (Q6065662) para las celdas que contienen \"paseo de las delicias\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de la chopera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27044458",
+      "name": "Paseo de la Chopera, Madrid",
+      "types": [
+        "Q79007",
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de la Chopera, Madrid (Q27044458) para las celdas que contienen \"paseo de la chopera\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle segovia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8255505",
+      "name": "calle de Segovia",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Segovia (Q8255505) para las celdas que contienen \"calle segovia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo santa maría de la cabeza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6065630",
+      "name": "Paseo de Santa María de la Cabeza",
+      "types": [
+        "Q79007",
+        "Q787113"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de Santa María de la Cabeza (Q6065630) para las celdas que contienen \"paseo santa maría de la cabeza\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle toledo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740883",
+      "name": "calle de Toledo",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Toledo (Q5740883) para las celdas que contienen \"calle toledo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle embajadores",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740826",
+      "name": "calle de Embajadores",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Embajadores (Q5740826) para las celdas que contienen \"calle embajadores\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle bustamante",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27430098",
+      "name": "Calle de Bustamante, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Bustamante, Madrid (Q27430098) para las celdas que contienen \"calle bustamante\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de yeserías",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16616818",
+      "name": "Paseo de las Yeserías, Madrid",
+      "types": [
+        "Q79007",
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de las Yeserías, Madrid (Q16616818) para las celdas que contienen \"paseo de yeserías\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle jaime el conquistador",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle jaime el conquistador\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle bolívar",
+    "judgment": "matched",
+    "match": {
+      "id": "Q105775876",
+      "name": "Calle de Bolívar",
+      "types": [
+        "Q79007"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Bolívar (Q105775876) para las celdas que contienen \"calle bolívar\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle león gil de palacio",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle león gil de palacio\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de la albufera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5714221",
+      "name": "Avenida de la Albufera",
+      "types": [
+        "Q79007",
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de la Albufera (Q5714221) para las celdas que contienen \"avenida de la albufera\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle retama",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28983516",
+      "name": "Retama Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Retama Street (Q28983516) para las celdas que contienen \"calle retama\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "alcalde sainz de baranda",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28070977",
+      "name": "Calle del Alcalde Sáinz de Baranda, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Alcalde Sáinz de Baranda, Madrid (Q28070977) para las celdas que contienen \"alcalde sainz de baranda\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo del marqués zafra",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"paseo del marqués zafra\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle sancho dávila",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle sancho dávila\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de diego de león",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28059485",
+      "name": "Calle de Diego de León, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Diego de León, Madrid (Q28059485) para las celdas que contienen \"calle de diego de león\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "alcala-ventas",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"alcala-ventas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de daroca",
+    "judgment": "matched",
+    "match": {
+      "id": "Q62107216",
+      "name": "Avenida de Daroca, Madrid",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Daroca, Madrid (Q62107216) para las celdas que contienen \"avenida de daroca\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida donostiarra",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118670072",
+      "name": "avenida Donostiarra",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida Donostiarra (Q118670072) para las celdas que contienen \"avenida donostiarra\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de alfonso heredia",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle de alfonso heredia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de los toreros",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29918658",
+      "name": "Avenida de los Toreros, Madrid",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de los Toreros, Madrid (Q29918658) para las celdas que contienen \"avenida de los toreros\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle francisco silvela",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26833642",
+      "name": "Francisco Silvela Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Francisco Silvela Street (Q26833642) para las celdas que contienen \"calle francisco silvela\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle mataelpino",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle mataelpino\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle suero de quiñones",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29202471",
+      "name": "Calle de Suero de Quiñones, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Suero de Quiñones, Madrid (Q29202471) para las celdas que contienen \"calle suero de quiñones\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de concha espina",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27137943",
+      "name": "avenida de Concha Espina",
+      "types": [
+        "Q79007",
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida de Concha Espina (Q27137943) para las celdas que contienen \"avenida de concha espina\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de las castellana",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1473674",
+      "name": "Paseo de la Castellana",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de la Castellana (Q1473674) para las celdas que contienen \"paseo de las castellana\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de las castellana",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1473674",
+      "name": "Paseo de la Castellana",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de la Castellana (Q1473674) para las celdas que contienen \"paseo de las castellana\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "glorieta de quevedo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q12175532",
+      "name": "Glorieta de Quevedo",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Glorieta de Quevedo (Q12175532) para las celdas que contienen \"glorieta de quevedo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle josé abascal",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27310549",
+      "name": "Calle de José Abascal, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de José Abascal, Madrid (Q27310549) para las celdas que contienen \"calle josé abascal\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de santander",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29648920",
+      "name": "Calle de Santander, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Santander, Madrid (Q29648920) para las celdas que contienen \"calle de santander\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle general de ampudia",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle general de ampudia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle navarra",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle navarra\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle marqués de viana",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28944893",
+      "name": "Calle del Marqués de Viana, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Marqués de Viana, Madrid (Q28944893) para las celdas que contienen \"calle marqués de viana\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle azucenas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27150352",
+      "name": "calle de las Azucenas",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de las Azucenas (Q27150352) para las celdas que contienen \"calle azucenas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza de castilla",
+    "judgment": "matched",
+    "match": {
+      "id": "Q786291",
+      "name": "plaza de Castilla",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento plaza de Castilla (Q786291) para las celdas que contienen \"plaza de castilla\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de las tres cruces",
+    "judgment": "matched",
+    "match": {
+      "id": "Q24537177",
+      "name": "calle de las Tres Cruces",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de las Tres Cruces (Q24537177) para las celdas que contienen \"calle de las tres cruces\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de el desengaño",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5741000",
+      "name": "Calle del Desengaño, Madrid",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Desengaño, Madrid (Q5741000) para las celdas que contienen \"calle de el desengaño\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "glorieta marqués de vadillo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q21084067",
+      "name": "Glorieta del Marqués de Vadillo, Madrid",
+      "types": [
+        "Q174782",
+        "Q1525"
+      ],
+      "score": 93
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Glorieta del Marqués de Vadillo, Madrid (Q21084067) para las celdas que contienen \"glorieta marqués de vadillo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de antonio lópez",
+    "judgment": "matched",
+    "match": {
+      "id": "Q42238475",
+      "name": "calle de Antonio López",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Antonio López (Q42238475) para las celdas que contienen \"calle de antonio lópez\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle condesa de venadito",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle condesa de venadito\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle gutierre de cetina",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle gutierre de cetina\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "plaza puerta del ángel",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"plaza puerta del ángel\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle pedro rico",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56427389",
+      "name": "Calle de Pedro Rico, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Pedro Rico, Madrid (Q56427389) para las celdas que contienen \"calle pedro rico\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "camino de vinateros",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28935892",
+      "name": "Calle Camino de los Vinateros",
+      "types": [
+        "Q79007"
+      ],
+      "score": 86
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle Camino de los Vinateros (Q28935892) para las celdas que contienen \"camino de vinateros\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "camino de los vinateros",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28935892",
+      "name": "Calle Camino de los Vinateros",
+      "types": [
+        "Q79007"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle Camino de los Vinateros (Q28935892) para las celdas que contienen \"camino de los vinateros\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle arrollo de las pilillas",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle arrollo de las pilillas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle hacienda de pavones",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28936083",
+      "name": "Calle de la Hacienda de Pavones, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de la Hacienda de Pavones, Madrid (Q28936083) para las celdas que contienen \"calle hacienda de pavones\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle eugenio caxes",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle eugenio caxes\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de la ermita del santo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28137105",
+      "name": "Paseo de la Ermita del Santo",
+      "types": [
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de la Ermita del Santo (Q28137105) para las celdas que contienen \"paseo de la ermita del santo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle caramuel",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle caramuel\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle sierra toledana",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle sierra toledana\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "camino valderribas",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"camino valderribas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle josé del hierro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29910699",
+      "name": "Calle de José del Hierro, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de José del Hierro, Madrid (Q29910699) para las celdas que contienen \"calle josé del hierro\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle carlota o neill",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29909274",
+      "name": "calle de Carlota O'Neill",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Carlota O'Neill (Q29909274) para las celdas que contienen \"calle carlota o neill\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle marqués de corbera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29168364",
+      "name": "Avenida del Marqués de Corbera, Madrid",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 85
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida del Marqués de Corbera, Madrid (Q29168364) para las celdas que contienen \"calle marqués de corbera\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida marques de corbera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29168364",
+      "name": "Avenida del Marqués de Corbera, Madrid",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida del Marqués de Corbera, Madrid (Q29168364) para las celdas que contienen \"avenida marques de corbera\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo imperial",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118634190",
+      "name": "paseo Imperial",
+      "types": [
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento paseo Imperial (Q118634190) para las celdas que contienen \"paseo imperial\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de francos rodríguez",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26810988",
+      "name": "Calle de Francos Rodríguez, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Francos Rodríguez, Madrid (Q26810988) para las celdas que contienen \"calle de francos rodríguez\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de brasilia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118670004",
+      "name": "avenida de Brasilia",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida de Brasilia (Q118670004) para las celdas que contienen \"avenida de brasilia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle camilo josé cela",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118611967",
+      "name": "avenida de Camilo José Cela",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida de Camilo José Cela (Q118611967) para las celdas que contienen \"calle camilo josé cela\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de bruselas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118710890",
+      "name": "avenida de Bruselas",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida de Bruselas (Q118710890) para las celdas que contienen \"avenida de bruselas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle cartagena",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27038851",
+      "name": "Calle de Cartagena, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Cartagena, Madrid (Q27038851) para las celdas que contienen \"calle cartagena\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle isaac peral",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26791245",
+      "name": "calle de Isaac Peral",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Isaac Peral (Q26791245) para las celdas que contienen \"calle isaac peral\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle galileo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27031392",
+      "name": "calle de Galileo",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Galileo (Q27031392) para las celdas que contienen \"calle galileo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de zurbano",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27043742",
+      "name": "calle de Zurbano",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Zurbano (Q27043742) para las celdas que contienen \"calle de zurbano\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de sinesio delgado",
+    "judgment": "matched",
+    "match": {
+      "id": "Q52245452",
+      "name": "Sinesio Delgado Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sinesio Delgado Street (Q52245452) para las celdas que contienen \"calle de sinesio delgado\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle santa hortensia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28943619",
+      "name": "Calle de Santa Hortensia, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Santa Hortensia, Madrid (Q28943619) para las celdas que contienen \"calle santa hortensia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle agustín de foxá",
+    "judgment": "matched",
+    "match": {
+      "id": "Q54526348",
+      "name": "Calle de Agustín de Foxá, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Agustín de Foxá, Madrid (Q54526348) para las celdas que contienen \"calle agustín de foxá\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle del doctor fleming",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28740159",
+      "name": "Calle del Doctor Fleming, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Doctor Fleming, Madrid (Q28740159) para las celdas que contienen \"calle del doctor fleming\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de pio xii",
+    "judgment": "matched",
+    "match": {
+      "id": "Q54369706",
+      "name": "Avenida de Pío XII",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Pío XII (Q54369706) para las celdas que contienen \"avenida de pio xii\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle general lópez pozas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29055446",
+      "name": "Calle del General López Pozas, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del General López Pozas, Madrid (Q29055446) para las celdas que contienen \"calle general lópez pozas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle beatriz de bobadilla",
+    "judgment": "matched",
+    "match": {
+      "id": "Q62935606",
+      "name": "Calle de Beatriz de Bobadilla, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Beatriz de Bobadilla, Madrid (Q62935606) para las celdas que contienen \"calle beatriz de bobadilla\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida juan herrera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118644577",
+      "name": "avenida de Juan de Herrera",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 87
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida de Juan de Herrera (Q118644577) para las celdas que contienen \"avenida juan herrera\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "ciudad universitaria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q63954356",
+      "name": "Avenida Complutense, Madrid",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida Complutense, Madrid (Q63954356) para las celdas que contienen \"ciudad universitaria\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida complutense",
+    "judgment": "matched",
+    "match": {
+      "id": "Q63954356",
+      "name": "Avenida Complutense, Madrid",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida Complutense, Madrid (Q63954356) para las celdas que contienen \"avenida complutense\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "facultad de biología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5854610",
+      "name": "Facultad de Ciencias Biológicas (Universidad Complutense de Madrid)",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias Biológicas (Universidad Complutense de Madrid) (Q5854610) para las celdas que contienen \"facultad de biología\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de los poblados",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26795575",
+      "name": "avenida de los Poblados",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida de los Poblados (Q26795575) para las celdas que contienen \"avenida de los poblados\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida ramon y cajal",
+    "judgment": "matched",
+    "match": {
+      "id": "Q30467128",
+      "name": "Avenida de Ramón y Cajal, Madrid",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Ramón y Cajal, Madrid (Q30467128) para las celdas que contienen \"avenida ramon y cajal\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "angel muñoz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2481371",
+      "name": "Arturo Soria",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Arturo Soria (Q2481371) para las celdas que contienen \"angel muñoz\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "ciudad universitaria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2482378",
+      "name": "Ciudad Universitaria",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Ciudad Universitaria (Q2482378) para las celdas que contienen \"ciudad universitaria\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avda. de burgos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29902431",
+      "name": "avenida de Burgos",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida de Burgos (Q29902431) para las celdas que contienen \"avda. de burgos\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "campuzano",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"campuzano\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle carretera de canillas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28973490",
+      "name": "Carretera de Canillas, Madrid",
+      "types": [
+        "Q34442",
+        "Q79007"
+      ],
+      "score": 88
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Carretera de Canillas, Madrid (Q28973490) para las celdas que contienen \"calle carretera de canillas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle santa maría magdalena",
+    "judgment": "matched",
+    "match": {
+      "id": "Q62991157",
+      "name": "calle de Santa María Magdalena",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Santa María Magdalena (Q62991157) para las celdas que contienen \"calle santa maría magdalena\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle caídos de la división azul",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29793566",
+      "name": "Calle de los Caídos de la División Azul",
+      "types": [
+        "Q79007"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de los Caídos de la División Azul (Q29793566) para las celdas que contienen \"calle caídos de la división azul\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "fuente carrantona",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28936137",
+      "name": "Calle de la Fuente Carrantona, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 89
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de la Fuente Carrantona, Madrid (Q28936137) para las celdas que contienen \"fuente carrantona\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle puerto de arlabán",
+    "judgment": "matched",
+    "match": {
+      "id": "Q123434593",
+      "name": "calle del Puerto de Arlabán",
+      "types": [
+        "Q79007"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle del Puerto de Arlabán (Q123434593) para las celdas que contienen \"calle puerto de arlabán\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle hermanos garcía noblejas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5740959",
+      "name": "Calle de los Hermanos García Noblejas, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de los Hermanos García Noblejas, Madrid (Q5740959) para las celdas que contienen \"calle hermanos garcía noblejas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle alcala",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2424746",
+      "name": "Alcalá Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Alcalá Street (Q2424746) para las celdas que contienen \"calle alcala\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle hernani",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26833571",
+      "name": "Calle de Hernani, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Hernani, Madrid (Q26833571) para las celdas que contienen \"calle hernani\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "hacienda de pavones",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28936083",
+      "name": "Calle de la Hacienda de Pavones, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de la Hacienda de Pavones, Madrid (Q28936083) para las celdas que contienen \"hacienda de pavones\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida córdoba",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"avenida córdoba\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle candilejas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29551148",
+      "name": "Calle de Candilejas, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Candilejas, Madrid (Q29551148) para las celdas que contienen \"calle candilejas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida monforte de lemos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q52683954",
+      "name": "Avenida de Monforte de Lemos, Madrid",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 94
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Monforte de Lemos, Madrid (Q52683954) para las celdas que contienen \"avenida monforte de lemos\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida del santo ángel de la guarda",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56086839",
+      "name": "Avenida del Santo Ángel de la Guarda, Madrid",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida del Santo Ángel de la Guarda, Madrid (Q56086839) para las celdas que contienen \"avenida del santo ángel de la guarda\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle serrano galvache",
+    "judgment": "matched",
+    "match": {
+      "id": "Q54370755",
+      "name": "calle de Serrano Galvache",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Serrano Galvache (Q54370755) para las celdas que contienen \"calle serrano galvache\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle gallegos",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle gallegos\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle arroyo del olivar",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29561517",
+      "name": "Calle del Arroyo del Olivar, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Arroyo del Olivar, Madrid (Q29561517) para las celdas que contienen \"calle arroyo del olivar\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida la albufera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5714221",
+      "name": "Avenida de la Albufera",
+      "types": [
+        "Q79007",
+        "Q7543083"
+      ],
+      "score": 93
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de la Albufera (Q5714221) para las celdas que contienen \"avenida la albufera\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "serrano galvache",
+    "judgment": "matched",
+    "match": {
+      "id": "Q54370755",
+      "name": "calle de Serrano Galvache",
+      "types": [
+        "Q79007"
+      ],
+      "score": 89
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Serrano Galvache (Q54370755) para las celdas que contienen \"serrano galvache\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle arroyo bueno",
+    "judgment": "matched",
+    "match": {
+      "id": "Q131353824",
+      "name": "Calle del Arroyo Bueno, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Arroyo Bueno, Madrid (Q131353824) para las celdas que contienen \"calle arroyo bueno\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida moratalaz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104778384",
+      "name": "Avenida de Moratalaz",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Moratalaz (Q104778384) para las celdas que contienen \"avenida moratalaz\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "ginzo de limia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q105624986",
+      "name": "Calle de Ginzo de Limia",
+      "types": [
+        "Q79007"
+      ],
+      "score": 82
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Ginzo de Limia (Q105624986) para las celdas que contienen \"ginzo de limia\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de federico garcía lorca",
+    "judgment": "matched",
+    "match": {
+      "id": "Q131349608",
+      "name": "Paseo de Federico García Lorca, Madrid",
+      "types": [
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de Federico García Lorca, Madrid (Q131349608) para las celdas que contienen \"paseo de federico garcía lorca\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle rosario pino",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29055028",
+      "name": "Calle de Rosario Pino, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Rosario Pino, Madrid (Q29055028) para las celdas que contienen \"calle rosario pino\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle capitan blanco argibay",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27038685",
+      "name": "Capitán Blanco Argibay Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Capitán Blanco Argibay Street (Q27038685) para las celdas que contienen \"calle capitan blanco argibay\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle muller",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle muller\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle torremolinos",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle torremolinos\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle arturo soria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8255504",
+      "name": "calle de Arturo Soria",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Arturo Soria (Q8255504) para las celdas que contienen \"calle arturo soria\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de la dirección",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27043701",
+      "name": "paseo de la Dirección",
+      "types": [
+        "Q787113",
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento paseo de la Dirección (Q27043701) para las celdas que contienen \"paseo de la dirección\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle san restituto",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28938015",
+      "name": "Calle de San Restituto, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de San Restituto, Madrid (Q28938015) para las celdas que contienen \"calle san restituto\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle ofelia nieto",
+    "judgment": "matched",
+    "match": {
+      "id": "Q26832655",
+      "name": "Calle de Ofelia Nieto, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Ofelia Nieto, Madrid (Q26832655) para las celdas que contienen \"calle ofelia nieto\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle maría auxiliadora",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle maría auxiliadora\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de guadalajara",
+    "judgment": "matched",
+    "match": {
+      "id": "Q52063521",
+      "name": "Avenida de Guadalajara",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Guadalajara (Q52063521) para las celdas que contienen \"avenida de guadalajara\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de niza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28972102",
+      "name": "Avenida de Niza, Madrid",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Niza, Madrid (Q28972102) para las celdas que contienen \"avenida de niza\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle maria sevilla diago",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28972080",
+      "name": "Calle de María Sevilla Diago, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de María Sevilla Diago, Madrid (Q28972080) para las celdas que contienen \"calle maria sevilla diago\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle lópez de hoyos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27043844",
+      "name": "calle de López de Hoyos",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de López de Hoyos (Q27043844) para las celdas que contienen \"calle lópez de hoyos\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de san luis",
+    "judgment": "matched",
+    "match": {
+      "id": "Q54370814",
+      "name": "avenida de San Luis",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento avenida de San Luis (Q54370814) para las celdas que contienen \"avenida de san luis\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle de las delicias",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6065662",
+      "name": "Paseo de las Delicias, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 74
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de las Delicias, Madrid (Q6065662) para las celdas que contienen \"calle de las delicias\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de machupichu",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28971955",
+      "name": "Avenida de Machupichu, Madrid",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Machupichu, Madrid (Q28971955) para las celdas que contienen \"avenida de machupichu\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de marcelino camacho",
+    "judgment": "matched",
+    "match": {
+      "id": "Q53414018",
+      "name": "paseo de Marcelino Camacho",
+      "types": [
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento paseo de Marcelino Camacho (Q53414018) para las celdas que contienen \"paseo de marcelino camacho\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida alfonso xiii",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29397736",
+      "name": "Avenida de Alfonso XIII, Madrid",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Alfonso XIII, Madrid (Q29397736) para las celdas que contienen \"avenida alfonso xiii\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle pradillo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q55868790",
+      "name": "calle de Pradillo",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Pradillo (Q55868790) para las celdas que contienen \"calle pradillo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "arturo soria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8255504",
+      "name": "calle de Arturo Soria",
+      "types": [
+        "Q79007"
+      ],
+      "score": 86
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Arturo Soria (Q8255504) para las celdas que contienen \"arturo soria\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle eugenia de montijo",
+    "judgment": "matched",
+    "match": {
+      "id": "Q52833570",
+      "name": "Calle de Eugenia de Montijo, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 94
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Eugenia de Montijo, Madrid (Q52833570) para las celdas que contienen \"calle eugenia de montijo\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle joaquin turina",
+    "judgment": "matched",
+    "match": {
+      "id": "Q20439963",
+      "name": "Calle Joaquín Turina",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle Joaquín Turina (Q20439963) para las celdas que contienen \"calle joaquin turina\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle salvador allende",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118959182",
+      "name": "Avenida Salvador Allende",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 83
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida Salvador Allende (Q118959182) para las celdas que contienen \"calle salvador allende\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle caleruega",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29353439",
+      "name": "Calle de Caleruega, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Caleruega, Madrid (Q29353439) para las celdas que contienen \"calle caleruega\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle dulce chacón",
+    "judgment": "matched",
+    "match": {
+      "id": "Q30183488",
+      "name": "Calle de Dulce Chacón, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Dulce Chacón, Madrid (Q30183488) para las celdas que contienen \"calle dulce chacón\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida de las aguilas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29405114",
+      "name": "Avenida de Las Águilas, Madrid",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Las Águilas, Madrid (Q29405114) para las celdas que contienen \"avenida de las aguilas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de juan xxiii",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28367318",
+      "name": "Paseo de Juan XXIII, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de Juan XXIII, Madrid (Q28367318) para las celdas que contienen \"paseo de juan xxiii\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida valladolid",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29903461",
+      "name": "Avenida de Valladolid, Madrid",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Valladolid, Madrid (Q29903461) para las celdas que contienen \"avenida valladolid\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle antonio machado",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28793893",
+      "name": "Calle de Antonio Machado, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Antonio Machado, Madrid (Q28793893) para las celdas que contienen \"calle antonio machado\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle clara del rey",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28055037",
+      "name": "Clara del Rey Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Clara del Rey Street (Q28055037) para las celdas que contienen \"calle clara del rey\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle rafaela ybarra",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"calle rafaela ybarra\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle guetaria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118630230",
+      "name": "calle de Guetaria",
+      "types": [
+        "Q79007"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento calle de Guetaria (Q118630230) para las celdas que contienen \"calle guetaria\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de los melancólicos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q118847890",
+      "name": "paseo de los Melancólicos",
+      "types": [
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento paseo de los Melancólicos (Q118847890) para las celdas que contienen \"paseo de los melancólicos\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo juan antonio vallejo-nájera botas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q33093309",
+      "name": "Paseo de Juan Antonio Vallejo-Nájera Botas, Madrid",
+      "types": [
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de Juan Antonio Vallejo-Nájera Botas, Madrid (Q33093309) para las celdas que contienen \"paseo juan antonio vallejo-nájera botas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida arcentales",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56155322",
+      "name": "Avenida de Arcentales, Madrid",
+      "types": [
+        "Q7543083"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Arcentales, Madrid (Q56155322) para las celdas que contienen \"avenida arcentales\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida ciudad de barcelona",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5714227",
+      "name": "Avenida de la Ciudad de Barcelona",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de la Ciudad de Barcelona (Q5714227) para las celdas que contienen \"avenida ciudad de barcelona\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de reina cristina",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29051319",
+      "name": "Paseo de la Reina Cristina, Madrid",
+      "types": [
+        "Q787113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de la Reina Cristina, Madrid (Q29051319) para las celdas que contienen \"paseo de reina cristina\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida fuerzas armadas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q29353164",
+      "name": "Avenida de las Fuerzas Armadas, Madrid",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 87
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de las Fuerzas Armadas, Madrid (Q29353164) para las celdas que contienen \"avenida fuerzas armadas\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle luis de salazar",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28940906",
+      "name": "Calle de Luis de Salazar, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle de Luis de Salazar, Madrid (Q28940906) para las celdas que contienen \"calle luis de salazar\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo virgen del puerto",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6065659",
+      "name": "Paseo de la Virgen del Puerto, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 88
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de la Virgen del Puerto, Madrid (Q6065659) para las celdas que contienen \"paseo virgen del puerto\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida gran vía de san francisco",
+    "judgment": "matched",
+    "match": {
+      "id": "Q32035437",
+      "name": "Gran Vía de San Francisco",
+      "types": [
+        "Q7543083",
+        "Q79007"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Gran Vía de San Francisco (Q32035437) para las celdas que contienen \"avenida gran vía de san francisco\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "calle felipe iv",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28004581",
+      "name": "Felipe IV Road",
+      "types": [
+        "Q79007"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Felipe IV Road (Q28004581) para las celdas que contienen \"calle felipe iv\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "avenida francisco pi y margall",
+    "judgment": "matched",
+    "match": {
+      "id": "Q27268566",
+      "name": "Avenida de Francisco Pi y Margall",
+      "types": [
+        "Q79007",
+        "Q7543083"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Avenida de Francisco Pi y Margall (Q27268566) para las celdas que contienen \"avenida francisco pi y margall\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "reconciled_columns",
+    "similarValue": "paseo de las yeserías",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16616818",
+      "name": "Paseo de las Yeserías, Madrid",
+      "types": [
+        "Q79007",
+        "Q787113"
+      ],
+      "score": 89
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Paseo de las Yeserías, Madrid (Q16616818) para las celdas que contienen \"paseo de las yeserías\" en la columna reconciled_columns"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "reconciled_columns",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Address-ID",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna Address-ID en el índice 2 basada en la columna reconciled_columns usando la expresión cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "baseColumnName": "reconciled_columns",
+    "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Address-URI",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna Address-URI en el índice 2 basada en la columna reconciled_columns usando la expresión if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "Address-URI",
+    "index": 3,
+    "description": "Mueve la columna Address-URI a la posición 3"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "reconciled_columns",
+    "newColumnName": "reconciled_Address",
+    "description": "Renombra la columna reconciled_columns a reconciled_Address"
+  }
+]

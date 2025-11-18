@@ -1,0 +1,173 @@
+prefixes:
+  rr: "http://www.w3.org/ns/r2rml#"
+  rml: "http://semweb.mmlab.be/ns/rml#"
+  ql: "http://semweb.mmlab.be/ns/ql#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+  sosa: "http://www.w3.org/ns/sosa/"
+  schema: "http://schema.org/"
+  us: "https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#"
+  dcterms: "http://purl.org/dc/terms/"
+  wgs84_pos: "http://www.w3.org/2003/01/geo/wgs84_pos#"
+  owl: "http://www.w3.org/2002/07/owl#"
+  us: "https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#"
+
+mappings:
+
+  MicroclimateLocation:
+    sources:
+    - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/location/$(Location_ID)"
+    po:
+      - [rdf:type, us:Location]
+      - [wgs84_pos:lat, $(Latitude), xsd:float]
+      - [wgs84_pos:long, $(Longitude), xsd:float]
+      - [schema:streetAddress, "$(House_Number) $(Street)", xsd:string]
+      - [schema:postalCode, $(Postcode), xsd:integer]
+      - [us:closestPedestrianSensor, $(Closest_PedestrianCount_Sensor), xsd:string]
+      - [us:inAdministrativeArea, $(City)~iri]
+      - [us:inAdministrativeArea, $(Country)~iri]
+      - [us:hasStreet, $(Street)~iri]
+
+  MicroclimateSensor:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/microclimate/sensor/$(Sensor_Name)"
+    po:
+      - [a, us:MicroclimateSensor]
+      - p: us:locatedAt
+        o:
+          - mapping: MicroclimateLocation
+
+  MicroclimateObservation:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/microclimate/observation/$(Sensor_Name)-$(Time)"
+    po:
+      - [a, us:MicroclimateObservation]
+      - [sosa:resultTime, $(Time), xsd:dateTime]
+      - p: sosa:madeBySensor
+        o:
+          - mapping: MicroclimateLocation
+      - p: us:observedAtLocation
+        o:
+          - mapping: MicroclimateLocation
+      - p: sosa:hasResult
+        o:
+          - mapping: AirTemperatureResult
+      - p: sosa:hasResult
+        o:
+          - mapping: RelativeHumidityResult
+      - p: sosa:hasResult
+        o:
+          - mapping: AverageWindSpeedResult
+      - p: sosa:hasResult
+        o:
+          - mapping: AverageWindDirectionResult
+      - p: sosa:hasResult
+        o:
+          - mapping: AtmosphericPressureResult
+      - p: sosa:hasResult
+        o:
+          - mapping: PM10Result
+      - p: sosa:hasResult
+        o:
+          - mapping: NoiseResult
+
+  AirTemperatureResult:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/airTemperature/$(Sensor_Name)-$(Time)"
+    po:
+      - [a, sosa:Result]
+      - [sosa:observedProperty, us:airTemperature]
+      - [sosa:hasSimpleResult, $(AirTemperature), xsd:float]
+
+  RelativeHumidityResult:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/relativeHumidity/$(Sensor_Name)-$(Time)"
+    po:
+      - [a, sosa:Result]
+      - [sosa:observedProperty, us:relativeHumidity]
+      - [sosa:hasSimpleResult, $(RelativeHumidity), xsd:float]
+
+  AverageWindSpeedResult:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/averageWindSpeed/$(Sensor_Name)-$(Time)"
+    po:
+      - [a, sosa:Result]
+      - [sosa:observedProperty, us:averageWindSpeed]
+      - [sosa:hasSimpleResult, $(AverageWindSpeed), xsd:float]
+
+  AverageWindDirectionResult:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/averageWindDirection/$(Sensor_Name)-$(Time)"
+    po:
+      - [a, sosa:Result]
+      - [sosa:observedProperty, us:averageWindDirection]
+      - [sosa:hasSimpleResult, $(AverageWindDirection), xsd:float]
+
+  AtmosphericPressureResult:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/atmosphericPressure/$(Sensor_Name)-$(Time)"
+    po:
+      - [a, sosa:Result]
+      - [sosa:observedProperty, us:atmosphericPressure]
+      - [sosa:hasSimpleResult, $(AtmosphericPressure), xsd:float]
+
+  PM10Result:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/pm10/$(Sensor_Name)-$(Time)"
+    po:
+      - [a, sosa:Result]
+      - [sosa:observedProperty, us:pm10]
+      - [sosa:hasSimpleResult, $(PM10), xsd:float]
+
+  NoiseResult:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/noise/$(Sensor_Name)-$(Time)"
+    po:
+      - [a, sosa:Result]
+      - [sosa:observedProperty, us:noise]
+      - [sosa:hasSimpleResult, $(Noise), xsd:float]
+
+  CityMapping:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/city/$(City)"
+    po:
+      - [a, schema:City]
+      - [rdfs:label, $(City)]
+      - [owl:sameAs, $(Same_As_Wikidata_City)~iri]
+
+  CountryMapping:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/country/$(Country)"
+    po:
+      - [a, schema:Country]
+      - [rdfs:label, $(Country)]
+      - [owl:sameAs, $(Same_As_Wikidata_Country)~iri]
+
+  StreetMapping:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/street/$(Street)"
+    po:
+      - [a, schema:PostalAddress]
+      - [schema:streetAddress, $(Street)]
+      - [owl:sameAs, $(Same_As_Wikidata_Street)~iri]
+
+  SensorDescriptionMapping:
+    sources:
+      - [microclimate-sensors-updated-with-links.csv~csv]
+    s: "https://smartcity.linkeddata.es/lcc/resource/sensor-description/$(Sensor_Name)"
+    po:
+      - [a, schema:Text]
+      - [schema:description, $(Sensor_Description)]
+      - [owl:sameAs, $(Same_As_Wikidata_Sensor_Description)~iri]

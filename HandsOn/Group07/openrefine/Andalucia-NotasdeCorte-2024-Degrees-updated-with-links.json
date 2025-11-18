@@ -1,0 +1,2477 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna same_as_wikidata_degree en el índice 3 basada en la columna Degree usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "same_as_wikidata_degree",
+    "newColumnName": "temporal_same_as_wikidata_degree",
+    "description": "Renombra la columna same_as_wikidata_degree a temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "description": "Vaciar las celdas en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q11862829",
+        "name": "academic discipline"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column temporal_same_as_wikidata_degree to type Q11862829"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ADMINISTRACIÓN Y DIRECCIÓN DE EMPRESAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8188423",
+      "name": "business administration and management",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento business administration and management (Q8188423) para las celdas que contienen \"ADMINISTRACIÓN Y DIRECCIÓN DE EMPRESAS\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "BIOTECNOLOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7108",
+      "name": "biotechnology",
+      "types": [
+        "Q1665984",
+        "Q28797",
+        "Q11862829",
+        "Q112057532",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento biotechnology (Q7108) para las celdas que contienen \"BIOTECNOLOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "CIENCIAS AMBIENTALES",
+    "judgment": "matched",
+    "match": {
+      "id": "Q188847",
+      "name": "environmental science",
+      "types": [
+        "Q2465832",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento environmental science (Q188847) para las celdas que contienen \"CIENCIAS AMBIENTALES\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "CIENCIAS DE LA ACTIVIDAD FÍSICA Y DEL DEPORTE",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1298380",
+      "name": "sports science",
+      "types": [
+        "Q1665984",
+        "Q1047113",
+        "Q2465832",
+        "Q11862829",
+        "Q4671286",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento sports science (Q1298380) para las celdas que contienen \"CIENCIAS DE LA ACTIVIDAD FÍSICA Y DEL DEPORTE\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "DERECHO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7748",
+      "name": "law",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento law (Q7748) para las celdas que contienen \"DERECHO\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ECONOMÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8134",
+      "name": "economics",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento economics (Q8134) para las celdas que contienen \"ECONOMÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ECONOMÍA + MATEMÁTICAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q747534",
+      "name": "mathematical economics",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 97
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento mathematical economics (Q747534) para las celdas que contienen \"ECONOMÍA + MATEMÁTICAS\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ENFERMERÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q121176",
+      "name": "nursing",
+      "types": [
+        "Q30109942",
+        "Q627436",
+        "Q4671286",
+        "Q11862829",
+        "Q2267705",
+        "Q282049"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento nursing (Q121176) para las celdas que contienen \"ENFERMERÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "FISIOTERAPIA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q186005",
+      "name": "physiotherapy",
+      "types": [
+        "Q2678675",
+        "Q11862829",
+        "Q130705900"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento physiotherapy (Q186005) para las celdas que contienen \"FISIOTERAPIA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "FILOLOGÍA HISPÁNICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3381164",
+      "name": "Spanish philology",
+      "types": [
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Spanish philology (Q3381164) para las celdas que contienen \"FILOLOGÍA HISPÁNICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "GESTIÓN Y ADMINISTRACIÓN PÚBLICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1137608",
+      "name": "health administration",
+      "types": [
+        "Q96247293",
+        "Q11862829"
+      ],
+      "score": 74
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento health administration (Q1137608) para las celdas que contienen \"GESTIÓN Y ADMINISTRACIÓN PÚBLICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "MATEMÁTICAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q395",
+      "name": "mathematics",
+      "types": [
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento mathematics (Q395) para las celdas que contienen \"MATEMÁTICAS\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "HUMANIDADES",
+    "judgment": "matched",
+    "match": {
+      "id": "Q80083",
+      "name": "humanities",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q16889133",
+        "Q1047113",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento humanities (Q80083) para las celdas que contienen \"HUMANIDADES\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA ELÉCTRICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q43035",
+      "name": "electrical engineering",
+      "types": [
+        "Q12015335",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento electrical engineering (Q43035) para las celdas que contienen \"INGENIERÍA ELÉCTRICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA AGRÍCOLA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q12159342",
+      "name": "agricultural engineering",
+      "types": [
+        "Q12015335",
+        "Q11862829",
+        "Q1047113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento agricultural engineering (Q12159342) para las celdas que contienen \"INGENIERÍA AGRÍCOLA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA MECÁNICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q101333",
+      "name": "mechanical engineering",
+      "types": [
+        "Q12015335",
+        "Q11862829",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento mechanical engineering (Q101333) para las celdas que contienen \"INGENIERÍA MECÁNICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA INFORMÁTICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q428691",
+      "name": "computer engineering",
+      "types": [
+        "Q12015335",
+        "Q1047113",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento computer engineering (Q428691) para las celdas que contienen \"INGENIERÍA INFORMÁTICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "MEDICINA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11190",
+      "name": "medicine",
+      "types": [
+        "Q2267705",
+        "Q11862829",
+        "Q627436",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento medicine (Q11190) para las celdas que contienen \"MEDICINA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "PSICOLOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q9418",
+      "name": "psychology",
+      "types": [
+        "Q11862829",
+        "Q336",
+        "Q44597158"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento psychology (Q9418) para las celdas que contienen \"PSICOLOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "QUÍMICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2329",
+      "name": "chemistry",
+      "types": [
+        "Q2465832",
+        "Q11862829",
+        "Q4671286",
+        "Q2267705",
+        "Q1047113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento chemistry (Q2329) para las celdas que contienen \"QUÍMICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "FILOLOGÍA CLÁSICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q495527",
+      "name": "classical philology",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento classical philology (Q495527) para las celdas que contienen \"FILOLOGÍA CLÁSICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ENOLOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q297672",
+      "name": "oenology",
+      "types": [
+        "Q2465832",
+        "Q5687161",
+        "Q11862829",
+        "Q1047113",
+        "Q2267705",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento oenology (Q297672) para las celdas que contienen \"ENOLOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA AEROESPACIAL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3798668",
+      "name": "aerospace engineering",
+      "types": [
+        "Q12015335",
+        "Q268592",
+        "Q11862829",
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento aerospace engineering (Q3798668) para las celdas que contienen \"INGENIERÍA AEROESPACIAL\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ESTUDIOS FRANCESES",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1450761",
+      "name": "French studies",
+      "types": [
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento French studies (Q1450761) para las celdas que contienen \"ESTUDIOS FRANCESES\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA CIVIL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q77590",
+      "name": "civil engineering",
+      "types": [
+        "Q12015335",
+        "Q627436",
+        "Q11862829",
+        "Q4671286",
+        "Q1047113",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento civil engineering (Q77590) para las celdas que contienen \"INGENIERÍA CIVIL\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA MECÁNICA + INGENIERÍA ELÉCTRICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q533188",
+      "name": "electromechanics",
+      "types": [
+        ""
+      ],
+      "score": 25.5
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento electromechanics (Q533188) para las celdas que contienen \"INGENIERÍA MECÁNICA + INGENIERÍA ELÉCTRICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA QUÍMICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q83588",
+      "name": "chemical engineering",
+      "types": [
+        "Q28797",
+        "Q11790203",
+        "Q4671286",
+        "Q12015335",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento chemical engineering (Q83588) para las celdas que contienen \"INGENIERÍA QUÍMICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "LINGÜÍSTICA Y LENGUAS APLICADAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q938318",
+      "name": "forensic linguistics",
+      "types": [
+        "Q135892289",
+        "Q1047113"
+      ],
+      "score": 67
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento forensic linguistics (Q938318) para las celdas que contienen \"LINGÜÍSTICA Y LENGUAS APLICADAS\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "BIOQUÍMICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7094",
+      "name": "biochemistry",
+      "types": [
+        "Q1665984",
+        "Q11790203",
+        "Q28598684",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento biochemistry (Q7094) para las celdas que contienen \"BIOQUÍMICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "BIOLOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q420",
+      "name": "biology",
+      "types": [
+        "Q2465832",
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento biology (Q420) para las celdas que contienen \"BIOLOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "CRIMINOLOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q161733",
+      "name": "criminology",
+      "types": [
+        "Q1047113",
+        "Q11862829",
+        "Q2267705",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento criminology (Q161733) para las celdas que contienen \"CRIMINOLOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "VETERINARIA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q170201",
+      "name": "veterinary medicine",
+      "types": [
+        "Q930752",
+        "Q11862829",
+        "Q4671286",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento veterinary medicine (Q170201) para las celdas que contienen \"VETERINARIA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "TURISMO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q15851294",
+      "name": "tourism management",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento tourism management (Q15851294) para las celdas que contienen \"TURISMO\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "FILOSOFÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5891",
+      "name": "philosophy",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q2465832",
+        "Q627436",
+        "Q483394"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento philosophy (Q5891) para las celdas que contienen \"FILOSOFÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "FÍSICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q413",
+      "name": "physics",
+      "types": [
+        "Q2465832",
+        "Q11862829",
+        "Q475023"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento physics (Q413) para las celdas que contienen \"FÍSICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "HISTORIA DEL ARTE",
+    "judgment": "matched",
+    "match": {
+      "id": "Q50641",
+      "name": "history of art",
+      "types": [
+        "Q17524420",
+        "Q4671286",
+        "Q81517619"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento history of art (Q50641) para las celdas que contienen \"HISTORIA DEL ARTE\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "GEOLOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1069",
+      "name": "geology",
+      "types": [
+        "Q2465832",
+        "Q11862829",
+        "Q2267705",
+        "Q1047113"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento geology (Q1069) para las celdas que contienen \"GEOLOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "BELLAS ARTES",
+    "judgment": "matched",
+    "match": {
+      "id": "Q207241",
+      "name": "applied arts",
+      "types": [
+        "Q56055944",
+        "Q11862829"
+      ],
+      "score": 71
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento applied arts (Q207241) para las celdas que contienen \"BELLAS ARTES\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "SOCIOLOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q21201",
+      "name": "sociology",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q483394"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento sociology (Q21201) para las celdas que contienen \"SOCIOLOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "PERIODISMO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11030",
+      "name": "journalism",
+      "types": [
+        "Q268592",
+        "Q483394",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento journalism (Q11030) para las celdas que contienen \"PERIODISMO\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ANTROPOLOGIA SOCIAL Y CULTURAL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28598",
+      "name": "cultural anthropology",
+      "types": [
+        "Q11862829",
+        "Q106720965",
+        "Q1047113",
+        "Q2267705",
+        "Q627436"
+      ],
+      "score": 82
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento cultural anthropology (Q28598) para las celdas que contienen \"ANTROPOLOGIA SOCIAL Y CULTURAL\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA DE LA ENERGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1803786",
+      "name": "power engineering",
+      "types": [
+        "Q11023",
+        "Q11862829"
+      ],
+      "score": 93
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento power engineering (Q1803786) para las celdas que contienen \"INGENIERÍA DE LA ENERGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA DE ORGANIZACIÓN INDUSTRIAL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6027873",
+      "name": "industrial engineering and operations research",
+      "types": [
+        "Q12015335",
+        "Q11862829",
+        "Q1047113",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento industrial engineering and operations research (Q6027873) para las celdas que contienen \"INGENIERÍA DE ORGANIZACIÓN INDUSTRIAL\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "COMUNICACIÓN AUDIOVISUAL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3755147",
+      "name": "audiovisual communication",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento audiovisual communication (Q3755147) para las celdas que contienen \"COMUNICACIÓN AUDIOVISUAL\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "EDUCACIÓN SOCIAL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1572493",
+      "name": "social pedagogy",
+      "types": [
+        "Q11862829",
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento social pedagogy (Q1572493) para las celdas que contienen \"EDUCACIÓN SOCIAL\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "TRABAJO SOCIAL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5468734",
+      "name": "forensic social work",
+      "types": [
+        ""
+      ],
+      "score": 39
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento forensic social work (Q5468734) para las celdas que contienen \"TRABAJO SOCIAL\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "LITERATURAS COMPARADAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q834903",
+      "name": "comparative literature",
+      "types": [
+        "Q4671286",
+        "Q109551317"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento comparative literature (Q834903) para las celdas que contienen \"LITERATURAS COMPARADAS\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ARQUEOLOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q23498",
+      "name": "archaeology",
+      "types": [
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento archaeology (Q23498) para las celdas que contienen \"ARQUEOLOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA ELECTRÓNICA, ROBÓTICA Y MECATRÓNICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q180165",
+      "name": "mechatronics",
+      "types": [
+        "Q4671286",
+        "Q2465832"
+      ],
+      "score": 66
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento mechatronics (Q180165) para las celdas que contienen \"INGENIERÍA ELECTRÓNICA, ROBÓTICA Y MECATRÓNICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "PEDAGOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7922",
+      "name": "pedagogy",
+      "types": [
+        "Q2465832",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento pedagogy (Q7922) para las celdas que contienen \"PEDAGOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ESTADÍSTICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q12483",
+      "name": "statistics",
+      "types": [
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento statistics (Q12483) para las celdas que contienen \"ESTADÍSTICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "LOGOPEDIA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q33226",
+      "name": "speech-language pathology",
+      "types": [
+        "Q11862829",
+        "Q1047113",
+        "Q930752"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento speech-language pathology (Q33226) para las celdas que contienen \"LOGOPEDIA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "MATEMÁTICAS + FÍSICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q156495",
+      "name": "mathematical physics",
+      "types": [
+        "Q1936384",
+        "Q4162444"
+      ],
+      "score": 97
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento mathematical physics (Q156495) para las celdas que contienen \"MATEMÁTICAS + FÍSICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA ELÉCTRICA + INGENIERÍA MECÁNICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5916077",
+      "name": "Ingeniería mecánica eléctrica",
+      "types": [
+        ""
+      ],
+      "score": 42
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Ingeniería mecánica eléctrica (Q5916077) para las celdas que contienen \"INGENIERÍA ELÉCTRICA + INGENIERÍA MECÁNICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ESTUDIOS DE ASIA ORIENTAL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q162817",
+      "name": "East Asian studies",
+      "types": [
+        "Q11862829",
+        "Q928786",
+        "Q4671286",
+        "Q1047113",
+        "Q2267705",
+        "Q627436"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento East Asian studies (Q162817) para las celdas que contienen \"ESTUDIOS DE ASIA ORIENTAL\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA DE SOFTWARE",
+    "judgment": "matched",
+    "match": {
+      "id": "Q80993",
+      "name": "software engineering",
+      "types": [
+        "Q12015335",
+        "Q4671286",
+        "Q11862829",
+        "Q1047113",
+        "Q2267705",
+        "Q3958441"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento software engineering (Q80993) para las celdas que contienen \"INGENIERÍA DE SOFTWARE\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "FARMACIA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q614304",
+      "name": "pharmacy",
+      "types": [
+        "Q1665984",
+        "Q4671286",
+        "Q2465832",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento pharmacy (Q614304) para las celdas que contienen \"FARMACIA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "MATEMÁTICAS + ESTADÍSTICA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q745328",
+      "name": "mathematical statistics",
+      "types": [
+        "Q1936384",
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 98
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento mathematical statistics (Q745328) para las celdas que contienen \"MATEMÁTICAS + ESTADÍSTICA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA DE MATERIALES",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1710723",
+      "name": "materials engineering",
+      "types": [
+        "Q12015335",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento materials engineering (Q1710723) para las celdas que contienen \"INGENIERÍA DE MATERIALES\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "FÍSICA + MATEMÁTICAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q156495",
+      "name": "mathematical physics",
+      "types": [
+        "Q1936384",
+        "Q4162444"
+      ],
+      "score": 97
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento mathematical physics (Q156495) para las celdas que contienen \"FÍSICA + MATEMÁTICAS\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "CIENCIAS POLÍTICAS Y DE LA ADMINISTRACIÓN",
+    "judgment": "matched",
+    "match": {
+      "id": "Q36442",
+      "name": "political science",
+      "types": [
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento political science (Q36442) para las celdas que contienen \"CIENCIAS POLÍTICAS Y DE LA ADMINISTRACIÓN\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "COMUNICACIÓN DIGITAL",
+    "judgment": "matched",
+    "match": {
+      "id": "Q10481248",
+      "name": "digital communication",
+      "types": [
+        "Q11862829",
+        "Q38786485"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento digital communication (Q10481248) para las celdas que contienen \"COMUNICACIÓN DIGITAL\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "DERECHO + ECONOMÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q295354",
+      "name": "law and economics",
+      "types": [
+        "Q11862829",
+        "Q2267705"
+      ],
+      "score": 76
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento law and economics (Q295354) para las celdas que contienen \"DERECHO + ECONOMÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "ODONTOLOGÍA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q12128",
+      "name": "dentistry",
+      "types": [
+        "Q930752",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento dentistry (Q12128) para las celdas que contienen \"ODONTOLOGÍA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA INFORMÁTICA. INGENIERÍA DE COMPUTADORES",
+    "judgment": "matched",
+    "match": {
+      "id": "Q428691",
+      "name": "computer engineering",
+      "types": [
+        "Q12015335",
+        "Q1047113",
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 64
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento computer engineering (Q428691) para las celdas que contienen \"INGENIERÍA INFORMÁTICA. INGENIERÍA DE COMPUTADORES\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "GEOGRAFÍA E HISTORIA",
+    "judgment": "matched",
+    "match": {
+      "id": "Q47452440",
+      "name": "geography and history",
+      "types": [
+        "Q11862829",
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento geography and history (Q47452440) para las celdas que contienen \"GEOGRAFÍA E HISTORIA\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "RELACIONES INTERNACIONALES",
+    "judgment": "matched",
+    "match": {
+      "id": "Q166542",
+      "name": "international relations",
+      "types": [
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento international relations (Q166542) para las celdas que contienen \"RELACIONES INTERNACIONALES\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_same_as_wikidata_degree",
+    "similarValue": "INGENIERÍA INFORMÁTICA EN SISTEMAS DE INFORMACIÓN",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4027615",
+      "name": "informatics",
+      "types": [
+        "Q4671286"
+      ],
+      "score": 54
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento informatics (Q4027615) para las celdas que contienen \"INGENIERÍA INFORMÁTICA EN SISTEMAS DE INFORMACIÓN\" en la columna temporal_same_as_wikidata_degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "temporal_same_as_wikidata_degree",
+          "expression": "value",
+          "columnName": "temporal_same_as_wikidata_degree",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "temporal_same_as_wikidata_degree",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna same_as_wikidata_degree en el índice 4 basada en la columna temporal_same_as_wikidata_degree usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "temporal_same_as_wikidata_degree",
+    "description": "Eliminar columna temporal_same_as_wikidata_degree"
+  }
+]

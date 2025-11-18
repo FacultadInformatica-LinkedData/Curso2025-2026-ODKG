@@ -1,0 +1,141 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q875538",
+        "name": "public university"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column University to type Q875538"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "similarValue": "Universidad Autónoma de Barcelona",
+    "judgment": "matched",
+    "match": {
+      "id": "Q43452",
+      "name": "Autonomous University of Barcelona",
+      "types": [
+        "Q875538",
+        "Q45400320",
+        "Q43229"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Autonomous University of Barcelona (Q43452) for cells containing \"Universidad Autónoma de Barcelona\" in column University"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "similarValue": "Universidad de Córdoba",
+    "judgment": "matched",
+    "match": {
+      "id": "Q734010",
+      "name": "University of Córdoba",
+      "types": [
+        "Q875538",
+        "Q45400320"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item University of Córdoba (Q734010) for cells containing \"Universidad de Córdoba\" in column University"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "similarValue": "Universidad del País Vasco/Euskal Herriko Unibertsitatea",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1232428",
+      "name": "University of the Basque Country",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item University of the Basque Country (Q1232428) for cells containing \"Universidad del País Vasco/Euskal Herriko Unibertsitatea\" in column University"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "similarValue": "Universidad de Valladolid",
+    "judgment": "matched",
+    "match": {
+      "id": "Q768224",
+      "name": "University of Valladolid",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item University of Valladolid (Q768224) for cells containing \"Universidad de Valladolid\" in column University"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "University",
+    "similarValue": "Universidad Politécnica de Catalunya",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1640731",
+      "name": "Polytechnic University of Catalonia",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Polytechnic University of Catalonia (Q1640731) for cells containing \"Universidad Politécnica de Catalunya\" in column University"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_university",
+    "columnInsertIndex": 1,
+    "description": "Create column same_as_wikidata_university at index 1 based on column University using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  }
+]

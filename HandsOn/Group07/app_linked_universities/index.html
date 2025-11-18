@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUDE - Spanish Universities Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            background: #f5f5f5;
+            border: none;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: #bcbcbc;
+        }
+
+        .tab:hover {
+            background: #5e74d4;
+            color: white;
+        }
+
+        .tab.active {
+            background: white;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .search-section {
+            margin-bottom: 30px;
+        }
+
+        .section-divider {
+            border-top: 2px solid #e0e0e0;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .section-divider::after {
+            content: 'OR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 15px;
+            color: #999;
+            font-weight: 600;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], select {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button.secondary {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+
+        button.tertiary {
+            background: linear-gradient(135deg, #fd7e14 0%, #e83e8c 100%);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .results {
+            margin-top: 20px;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .result-count {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-info {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .card-info strong {
+            color: #333;
+        }
+
+        #map {
+            height: 600px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .error {
+            background: #fee;
+            border: 2px solid #fcc;
+            color: #c33;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #667eea;
+            color: white;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin: 3px;
+        }
+
+        .map-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .map-controls select {
+            flex: 0 0 300px;
+        }
+
+        .legend {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .legend-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid #333;
+        }
+
+        #sparqlResults table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+#sparqlResults th,
+#sparqlResults td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e5e7eb; /* light gray */
+}
+
+#sparqlResults th {
+    background: #f3f4f6; /* light gray header */
+    color: #111827;
+    font-weight: 600;
+    text-align: left;
+}
+
+#sparqlResults tr:nth-child(even) {
+    background: #f9fafb; /* alternating row colors */
+}
+
+#sparqlResults tr:hover {
+    background: #e0f2fe; /* light blue on hover */
+}
+
+#sparqlResults .total-results {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 LUDE Explorer</h1>
+            <p class="subtitle">Linked Universities Data Explorer - Spanish Public Universities Knowledge Graph</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('degrees')">🎓 Degrees</button>
+            <button class="tab" onclick="switchTab('universities')">🏛️ Universities</button>
+            <button class="tab" onclick="switchTab('map')">🗺️ Map</button>
+            <button class="tab" onclick="switchTab('sparql')">🔍 SPARQL</button>
+        </div>
+
+        <!-- Combined Degrees Tab (Search + Filter) -->
+        <div id="degrees" class="tab-content active">
+            <div class="search-section">
+                <h2>Search Degrees</h2>
+                <div class="search-box">
+                    <input type="text" id="searchDegreeInput" placeholder="Search for degrees (e.g., Matemáticas, Ingeniería...)">
+                    <button onclick="searchDegrees()">Search</button>
+                </div>
+                <div class="button-group">
+                    <button class="secondary" onclick="showAllDegrees()">📚 Show All Degrees</button>
+                    <!-- Use a link styled like a button -->
+                    <!-- <a href="http://127.0.0.1:5000/export" class="tertiary" target="_blank">Complete RDF Dataset</a>
+                     <button type="button" class="tertiary" onclick="viewRDF()">Complete RDF Dataset</button> -->
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="search-section">
+                <h2>Advanced Filter</h2>
+                <div class="filter-grid">
+                    <select id="filterAC">
+                        <option value="">All Autonomous Communities</option>
+                    </select>
+                    <select id="filterProvince">
+                        <option value="">All Provinces</option>
+                    </select>
+                    <select id="filterMunicipality">
+                        <option value="">All Municipalities</option>
+                    </select>
+                    <select id="filterUniversity">
+                        <option value="">All Universities</option>
+                    </select>
+                    <select id="filterArea">
+                        <option value="">All Knowledge Areas</option>
+                    </select>
+                    <select id="filterLevel">
+                        <option value="">All Academic Levels</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button onclick="filterDegrees()">Apply Filters</button>
+                    <button class="secondary" onclick="clearFilters()">🔄 Clear Filters</button>
+                </div>
+            </div>
+
+            <div id="degreeResults" class="results"></div>
+        </div>
+
+        <!-- Universities Tab -->
+        <div id="universities" class="tab-content">
+            <div class="search-section">
+                <h2>Search Universities</h2>
+                <div class="search-box">
+                    <input type="text" id="searchUniversityInput" placeholder="Search for universities (e.g., Zaragoza, UNED...)">
+                    <button onclick="searchUniversities()">Search</button>
+                </div>
+                <div class="button-group">
+                    <button class="secondary" onclick="showAllUniversities()">🏛️ Show All Universities</button>
+                </div>
+            </div>
+            <div id="universityResults" class="results"></div>
+        </div>
+
+        <!-- Map Tab -->
+        <div id="map-tab" class="tab-content">
+            <div class="search-section">
+                <h2>Universities Map</h2>
+                <p style="margin-bottom: 15px; color: #666;">Explore Spanish universities on the map</p>
+                <div class="map-controls">
+                    <select id="mapFilterAC" onchange="filterMapByAC()">
+                        <option value="">Filter by Autonomous Community</option>
+                    </select>
+                    <button onclick="loadMap()">🗺️ Load All Universities</button>
+                </div>
+                <div class="legend" id="mapLegend" style="display: none;">
+                    <div class="legend-title">Map Legend</div>
+                    <div id="legendContent"></div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+
+      
+        <!-- SPARQL Tab -->
+        <div id="sparql-tab" class="tab-content">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">SPARQL Query Interface</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                
+            <!-- Query Input Section -->
+            <div>
+                <textarea
+                    id="sparqlQuery"
+                    rows="10"
+                    class="w-full border border-gray-300 rounded-lg px-3 py-2 font-mono text-sm focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                    placeholder="Enter your SPARQL query here..."
+                ></textarea>
+                <button
+                    id="executeQuery"
+                    onclick="executeSPARQLQuery()"
+                    class="mt-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold px-4 py-2 rounded-lg shadow hover:shadow-lg transition"
+                >
+                    Execute Query
+                </button>
+            </div>
+
+
+            <!-- Examples + Results Section -->
+            <div>
+                <h3 class="text-sm font-semibold text-gray-700 mb-2">Example Queries</h3>
+                <div class="space-y-2 mb-4">
+                <button class="secondary example-query w-full text-left p-3 border border-gray-200 rounded hover:bg-gray-50" data-query="PREFIX lude: <http://spanishuniversities.data.es/lude/ontology#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?degree ?label WHERE { ?degree a lude:Degree ; rdfs:label ?label . } LIMIT 10">List 10 Degrees</button>
+                <button class="secondary example-query w-full text-left p-3 border border-gray-200 rounded hover:bg-gray-50" data-query="PREFIX lude: <http://spanishuniversities.data.es/lude/ontology#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT ?university (COUNT(?degree) AS ?degreeCount) WHERE { ?university lude:offer ?degree . ?university rdfs:label ?uniLabel . } GROUP BY ?university ORDER BY DESC(?degreeCount)">Universities by Degree Count</button>
+                <button class="secondary example-query w-full text-left p-3 border border-gray-200 rounded hover:bg-gray-50" data-query="PREFIX lude: <http://spanishuniversities.data.es/lude/ontology#>
+                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+
+                    SELECT ?university (SAMPLE(?label) AS ?label) ?lat ?long
+                    WHERE {
+                    ?university a lude:University ;
+                                rdfs:label ?label ;
+                                geo:lat ?lat ;
+                                geo:long ?long .
+                    }
+                    GROUP BY ?university ?lat ?long
+                    ">Universities with Coordinates</button>
+                </div>
+
+                <h3 class="text-sm font-semibold text-gray-700 mb-2">Query Results</h3>
+                <div id="sparqlResults" class="bg-white border border-gray-200 rounded-lg p-4 max-h-96 overflow-auto shadow-sm text-sm font-mono">
+                Execute a query to see results...
+                </div>
+               <div id="loadingIndicator" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden flex items-center justify-center">
+                    <div class="bg-white rounded-lg p-6 flex items-center space-x-3">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script>
+        const API_BASE = 'http://127.0.0.1:5000';
+        let map = null;
+        let currentResults = [];
+        let allUniversitiesData = [];
+        let mapMarkers = [];
+
+        const AC_COLORS = {
+            'Andalusia': '#e74c3c',
+            'Aragon': '#3498db',
+            'Asturias': '#2ecc71',
+            'Balearic Islands': '#f39c12',
+            'Canary Islands': '#9b59b6',
+            'Cantabria': '#1abc9c',
+            'Castile and León': '#34495e',
+            'Castilla-La Mancha': '#e67e22',
+            'Catalonia': '#c0392b',
+            'Valencian Community': '#16a085',
+            'Extremadura': '#27ae60',
+            'Galicia': '#2980b9',
+            'Community of Madrid': '#8e44ad',
+            'Region of Murcia': '#d35400',
+            'Navarre': '#c0392b',
+            'Basque Autonomous Community': '#7f8c8d',
+            'La Rioja': '#95a5a6',
+            'Ceuta': '#bdc3c7',
+            'Melilla': '#ecf0f1'
+        };
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            event.target.classList.add('active');
+
+            const contentId = tabName === 'map' ? 'map-tab' : (tabName === 'sparql' ? 'sparql-tab' : tabName);
+            document.getElementById(contentId).classList.add('active');
+        }
+
+
+        async function initializeFilters() {
+            try {
+                const acRes = await fetch(`${API_BASE}/instances?class=AutonomousCommunity`);
+                const acData = await acRes.json();
+                populateSelect('filterAC', acData.results, 'label');
+                populateSelect('mapFilterAC', acData.results, 'label');
+
+                const provRes = await fetch(`${API_BASE}/instances?class=Province`);
+                const provData = await provRes.json();
+                populateSelect('filterProvince', provData.results, 'label');
+
+                const munRes = await fetch(`${API_BASE}/instances?class=Municipality`);
+                const munData = await munRes.json();
+                populateSelect('filterMunicipality', munData.results, 'label');
+
+                const uniRes = await fetch(`${API_BASE}/instances?class=University`);
+                const uniData = await uniRes.json();
+                populateSelect('filterUniversity', uniData.results, 'label');
+
+                const areaRes = await fetch(`${API_BASE}/instances?class=KnowledgeArea`);
+                const areaData = await areaRes.json();
+                populateSelect('filterArea', areaData.results, 'label');
+
+                const levelRes = await fetch(`${API_BASE}/instances?class=AcademicLevel`);
+                const levelData = await levelRes.json();
+                populateSelect('filterLevel', levelData.results, 'label');
+            } catch (error) {
+                console.error('Error loading filters:', error);
+            }
+        }
+
+        function populateSelect(selectId, data, labelField) {
+            const select = document.getElementById(selectId);
+            const firstOption = select.options[0].text;
+            select.innerHTML = `<option value="">${firstOption}</option>`;
+            
+            const uniqueLabels = [...new Set(data.map(item => item[labelField]))].sort();
+            uniqueLabels.forEach(label => {
+                if (label) {
+                    const option = document.createElement('option');
+                    option.value = label;
+                    option.textContent = label;
+                    select.appendChild(option);
+                }
+            });
+        }
+
+        function clearFilters() {
+            document.getElementById('filterAC').value = '';
+            document.getElementById('filterProvince').value = '';
+            document.getElementById('filterMunicipality').value = '';
+            document.getElementById('filterUniversity').value = '';
+            document.getElementById('filterArea').value = '';
+            document.getElementById('filterLevel').value = '';
+            document.getElementById('degreeResults').innerHTML = '';
+        }
+
+        async function showAllDegrees() {
+            const resultsDiv = document.getElementById('degreeResults');
+            resultsDiv.innerHTML = '<div class="loading">Loading all degrees...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/instances?class=Degree`);
+                const data = await response.json();
+                currentResults = data.results || [];
+                displayDegreeResults(data.results, resultsDiv);
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+            }
+        }
+
+        async function showAllUniversities() {
+            const resultsDiv = document.getElementById('universityResults');
+            resultsDiv.innerHTML = '<div class="loading">Loading all universities...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/instances?class=University`);
+                const data = await response.json();
+                currentResults = data.results || [];
+                displayUniversityResults(data.results, resultsDiv);
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+            }
+        }
+
+        async function downloadRDF() {
+            try {
+                const response = await fetch(`${API_BASE}/export`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `lude_complete_dataset_${new Date().toISOString().split('T')[0]}.ttl`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                alert(`Error downloading RDF: ${error.message}`);
+            }
+        }
+
+
+        async function searchDegrees() {
+            const query = document.getElementById('searchDegreeInput').value.trim();
+            if (!query) {
+                alert('Please enter a search term');
+                return;
+            }
+
+            const resultsDiv = document.getElementById('degreeResults');
+            resultsDiv.innerHTML = '<div class="loading">Searching...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/search/degrees?q=${encodeURIComponent(query)}`);
+                const data = await response.json();
+                currentResults = data.results || [];
+                displayDegreeResults(data.results, resultsDiv);
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+            }
+        }
+
+        async function filterDegrees() {
+            const ac = document.getElementById('filterAC').value;
+            const province = document.getElementById('filterProvince').value;
+            const municipality = document.getElementById('filterMunicipality').value;
+            const university = document.getElementById('filterUniversity').value;
+            const area = document.getElementById('filterArea').value;
+            const level = document.getElementById('filterLevel').value;
+
+            const params = new URLSearchParams();
+            if (ac) params.append('ac', ac);
+            if (province) params.append('province', province);
+            if (municipality) params.append('municipality', municipality);
+            if (university) params.append('university', university);
+            if (area) params.append('area', area);
+            if (level) params.append('level', level);
+
+            const resultsDiv = document.getElementById('degreeResults');
+            resultsDiv.innerHTML = '<div class="loading">Filtering...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/filter/degrees?${params}`);
+                const data = await response.json();
+                currentResults = data.results || [];
+                console.log(currentResults);
+                displayDegreeResults(data.results, resultsDiv);
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+            }
+        }
+
+        function displayDegreeResults(results, container) {
+            if (!results || results.length === 0) {
+                container.innerHTML = '<div class="error">No results found</div>';
+                return;
+            }
+
+            let html = `
+                <div class="result-header">
+                    <div class="result-count">${results.length} degrees found</div>
+                    <button onclick="exportToCSV('degrees')">📥 Export to CSV</button>
+                </div>
+                <div class="cards-grid">
+            `;
+
+            results.forEach(degree => {
+                html += `
+                    <div class="card">
+                        <div class="card-title">${degree.label || degree.degreeName || 'N/A'}</div>
+                        <div class="card-info">
+                            ${degree.universityLabel ? `<strong>University:</strong> ${degree.universityLabel}<br>` : ''}
+                            ${degree.academicLevelLabel || degree.levelLabel ? `<strong>Level:</strong> ${degree.academicLevelLabel || degree.levelLabel}<br>` : ''}
+                            ${degree.knowledgeAreaLabel || degree.areaLabel ? `<strong>Area:</strong> ${degree.knowledgeAreaLabel || degree.areaLabel}<br>` : ''}
+                            ${degree.academicYear ? `<strong>Year:</strong> ${degree.academicYear}<br>` : ''}
+                            ${degree.ects ? `<strong>ECTS:</strong> ${degree.ects}<br>` : ''}
+                            ${degree.campus ? `<strong>Campus:</strong> ${degree.campus}<br>` : ''}
+                            ${degree.teachingModality ? `<strong>Modality:</strong> ${degree.teachingModality}<br>` : ''}
+                            ${degree.facultyName ? `<strong>Faculty:</strong> ${degree.facultyName}<br>` : ''}
+                            ${degree.sameAs ? `<strong>Same as Wikidata:</strong> <a href="${degree.sameAs}" target="_blank">Visit</a><br>` : ''}
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        async function searchUniversities() {
+            const query = document.getElementById('searchUniversityInput').value.trim();
+            if (!query) {
+                alert('Please enter a search term');
+                return;
+            }
+
+            const resultsDiv = document.getElementById('universityResults');
+            resultsDiv.innerHTML = '<div class="loading">Searching...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/search/universities?q=${encodeURIComponent(query)}`);
+                const data = await response.json();
+                currentResults = data.results || [];
+                displayUniversityResults(data.results, resultsDiv);
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+            }
+        }
+
+        function displayUniversityResults(results, container) {
+            if (!results || results.length === 0) {
+                container.innerHTML = '<div class="error">No results found</div>';
+                return;
+            }
+
+            let html = `
+                <div class="result-header">
+                    <div class="result-count">${results.length} universities found</div>
+                    <button onclick="exportToCSV('universities')">📥 Export to CSV</button>
+                </div>
+                <div class="cards-grid">
+            `;
+
+            function normalizeURL(url) {
+                if (!url) return "";
+                return url.startsWith("http://") || url.startsWith("https://")
+                    ? url
+                    : "https://" + url;
+            }
+
+            results.forEach(uni => {
+                html += `
+                    <div class="card">
+                        <div class="card-title">${uni.label || 'N/A'}</div>
+                        <div class="card-info">
+                            ${uni.acronym ? `<a href="${normalizeURL(uni.url)}" target="_blank"><span class="badge">${uni.acronym}</span></a><br><br>` : ''}
+                            ${uni.type ? `<strong>Type:</strong> ${uni.type}<br>` : ''}
+                            ${uni.modality ? `<strong>Modality:</strong> ${uni.modality}<br>` : ''}
+                            ${uni.publicationYear ? `<strong>Founded:</strong> ${uni.publicationYear}<br>` : ''}
+                            ${uni.telephone ? `<strong>Phone:</strong> ${uni.telephone}<br>` : ''}
+                            ${uni.email ? `<strong>Email:</strong> ${uni.email}<br>` : ''}
+                            ${uni.sameAs ? `<strong>Same as Wikidata:</strong> <a href="${uni.sameAs}" target="_blank">Visit</a><br>` : ''}
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        async function loadMap() {
+            if (map) {
+                map.remove();
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/map/universities`);
+                const data = await response.json();
+
+                if (!data.results || data.results.length === 0) {
+                    document.getElementById('map').innerHTML = '<div class="error">No university locations found</div>';
+                    return;
+                }
+
+                allUniversitiesData = data.results;
+
+                map = L.map('map').setView([40.4168, -3.7038], 6);
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+
+                addMarkersToMap(allUniversitiesData);
+
+                document.getElementById('mapLegend').style.display = 'block';
+                updateLegend([]);
+
+            } catch (error) {
+                document.getElementById('map').innerHTML = `<div class="error">Error loading map: ${error.message}</div>`;
+            }
+        }
+
+        function addMarkersToMap(universities, filterAC = null) {
+            mapMarkers.forEach(marker => map.removeLayer(marker));
+            mapMarkers = [];
+
+            const usedColors = new Set();
+
+            universities.forEach(uni => {
+                if (!uni.lat || !uni.long) return;
+
+                let acName = uni.autonomousCommunityLabel;
+                let color = '#667eea';
+
+                if (filterAC !== null && acName) {
+                    color = AC_COLORS[acName] || '#667eea';
+                    usedColors.add(acName);
+                }
+
+                const iconHtml = `
+                    <div style="
+                        background-color: ${color};
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        border: 3px solid white;
+                        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+                    "></div>
+                `;
+
+                const customIcon = L.divIcon({
+                    html: iconHtml,
+                    className: '',
+                    iconSize: [25, 25],
+                    iconAnchor: [12, 12]
+                });
+
+                const marker = L.marker(
+                    [parseFloat(uni.lat), parseFloat(uni.long)],
+                    { icon: customIcon }
+                ).addTo(map);
+
+                marker.bindPopup(`
+                    <strong>${uni.name}</strong><br>
+                    <em>${acName || 'No AC info'}</em>
+                `);
+
+                mapMarkers.push(marker);
+            });
+
+            updateLegend(filterAC ? Array.from(usedColors) : []);
+        }
+
+        async function filterMapByAC() {
+            const selectedAC = document.getElementById('mapFilterAC').value;
+            
+            if (!map || !allUniversitiesData.length) {
+                alert('Please load the map first');
+                return;
+            }
+
+            if (!selectedAC) {
+                addMarkersToMap(allUniversitiesData);
+                return;
+            }
+
+            const filteredUniversities = allUniversitiesData.filter(u =>
+                u.autonomousCommunityLabel === selectedAC
+            );
+
+            if (filteredUniversities.length === 0) {
+                alert(`No universities found for ${selectedAC}`);
+                return;
+            }
+
+            addMarkersToMap(filteredUniversities, selectedAC);
+
+            if (filteredUniversities.length > 0) {
+                const bounds = L.latLngBounds(
+                    filteredUniversities.map(u => [parseFloat(u.lat), parseFloat(u.long)])
+                );
+                map.fitBounds(bounds, { padding: [50, 50] });
+            }
+        }
+
+        function resetMapFilter() {
+            document.getElementById('mapFilterAC').value = '';
+            if (map && allUniversitiesData.length) {
+                addMarkersToMap(allUniversitiesData);
+                map.setView([40.4168, -3.7038], 6);
+            }
+        }
+
+        function updateLegend(activeACs) {
+            const legendContent = document.getElementById('legendContent');
+            
+            if (activeACs.length === 0) {
+                legendContent.innerHTML = '<div class="legend-item"><div class="legend-color" style="background: #667eea;"></div><span>All Universities</span></div>';
+                return;
+            }
+
+            let html = '';
+            activeACs.sort().forEach(ac => {
+                const color = AC_COLORS[ac] || '#667eea';
+                html += `
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: ${color};"></div>
+                        <span>${ac}</span>
+                    </div>
+                `;
+            });
+            legendContent.innerHTML = html;
+        }
+
+        async function executeSPARQLQuery() {
+            const query = document.getElementById("sparqlQuery").value;
+            const resultsDiv = document.getElementById("sparqlResults");
+            const loadingIndicator = document.getElementById("loadingIndicator");
+
+            if (!query.trim()) {
+                resultsDiv.innerHTML = '<div class="text-red-600">Please enter a SPARQL query</div>';
+                return;
+            }
+
+            loadingIndicator.classList.remove("hidden");
+            resultsDiv.innerHTML = '';
+
+            try {
+                const response = await fetch(`${API_BASE}/sparql`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ query })
+                });
+                const data = await response.json();
+
+                if (data.error) {
+                    resultsDiv.innerHTML = `<div class="text-red-600">Error: ${data.error}</div>`;
+                } else if (data.results) {
+                    resultsDiv.innerHTML = formatSPARQLResults(data.results);
+                } else {
+                    resultsDiv.innerHTML = '<div class="text-gray-600">No results returned</div>';
+                }
+            } catch (err) {
+                resultsDiv.innerHTML = `<div class="text-red-600">Error: ${err.message}</div>`;
+            } finally {
+                loadingIndicator.classList.add("hidden");
+            }
+        }
+
+        function formatSPARQLResults(results) {
+            if (!results || results.length === 0) return '<div class="text-gray-600">No results found.</div>';
+
+            let html = '<table class="min-w-full text-xs border-collapse"><thead><tr>';
+            Object.keys(results[0]).forEach(key => {
+                html += `<th class="border-b p-2 font-semibold text-left">${key}</th>`;
+            });
+            html += '</tr></thead><tbody>';
+            
+            results.forEach((row, idx) => {
+                html += `<tr class="${idx % 2 === 0 ? 'bg-gray-50' : ''}">`;
+                Object.values(row).forEach(value => {
+                    html += `<td class="border-b p-2">${value || 'N/A'}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            html += `<div class="mt-2 text-xs text-gray-500">Total results: ${results.length}</div>`;
+            return html;
+        }
+
+        async function downloadTTL() {
+            try {
+                const response = await fetch(`${API_BASE}/export`); // Your backend endpoint serving RDF TTL
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `lude_dataset_${new Date().toISOString().split('T')[0]}.ttl`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                alert(`Error downloading RDF: ${error.message}`);
+            }
+        }
+
+        // Example query buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.example-query').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.getElementById('sparqlQuery').value = btn.dataset.query;
+                });
+            });
+        });
+
+
+        function exportToCSV(type) {
+            if (currentResults.length === 0) {
+                alert('No data to export');
+                return;
+            }
+
+            const headers = Object.keys(currentResults[0]);
+            let csv = headers.join(',') + '\n';
+
+            currentResults.forEach(row => {
+                const values = headers.map(header => {
+                    const value = row[header] || '';
+                    return `"${String(value).replace(/"/g, '""')}"`;
+                });
+                csv += values.join(',') + '\n';
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `${type}_export_${new Date().toISOString().split('T')[0]}.csv`;
+            link.click();
+        }
+
+        // Enter key support for search inputs
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeFilters();
+            // List all degrees/universities initially
+            showAllDegrees(false); // show all, button disabled
+            showAllUniversities(false);
+            
+            document.getElementById('searchDegreeInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') searchDegrees();
+            });
+
+            document.getElementById('searchUniversityInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') searchUniversities();
+            });
+
+            loadMap();
+        });
+    </script>
+</body>
+</html>

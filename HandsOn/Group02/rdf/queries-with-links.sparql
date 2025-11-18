@@ -1,0 +1,55 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX safeschool: <http://safeschool.linkeddata.es/ontology#>
+PREFIX schema: <https://schema.org/>
+
+# =========================================================================
+
+#Query 1: Verify owl:sameAs links for Districts
+#This query retrieves the first 20 districts that have an owl:sameAs link to a Wikidata entity. 
+#This confirms that the reconciliation column is being mapped correctly for districts.
+
+SELECT ?district ?label ?same_as_wikidata_distrito
+WHERE {
+  ?district a safeschool:District ;
+            owl:sameAs ?same_as_wikidata_distrito ;
+            rdfs:label ?label .
+}
+LIMIT 20
+
+---
+
+#Query 2: Find Centers in Districts that have a Wikidata link
+#This query retrieves educational centers and confirms they are linked to a district 
+#that has a corresponding owl:sameAs link. It verifies both the inDistrict and sameAs 
+#properties are working together.
+
+SELECT ?centerLabel ?districtName ?same_as_wikidata_distrito
+WHERE {
+  ?district a safeschool:District ;
+            owl:sameAs ?same_as_wikidata_distrito ;
+            schema:name ?districtName .
+
+  ?center a safeschool:EducationalCenter ;
+          safeschool:inDistrict ?district ;
+          rdfs:label ?centerLabel .
+}
+LIMIT 20
+
+---
+
+#Query 3: Verify safeschool:inDistrict links for Accidents
+#This query retrieves the first 20 accidents and the name of the district they are located in. 
+#It works by traversing the safeschool:inDistrict object property, confirming that the join 
+#condition between the accident data and district data is working correctly.
+
+SELECT ?accidentLabel ?districtName ?same_as_wikidata_distrito
+WHERE {
+  ?accident a safeschool:Accident ;
+            rdfs:label ?accidentLabel ;
+            safeschool:inDistrict ?district .
+
+  ?district schema:name ?districtName ;
+  owl:sameAs ?same_as_wikidata_distrito .
+}
+LIMIT 20

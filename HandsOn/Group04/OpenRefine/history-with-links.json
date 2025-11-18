@@ -1,0 +1,146 @@
+[
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "name",
+      "expression": "grel:value.replace(\" agregacion de municipios\", \"\")",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Transformer le texte sur les cellules de la colonne name à laide de lexpression grel:value.replace(\" agregacion de municipios\", \"\")"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q2074737",
+          "name": "municipality of Spain"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column name to type Q2074737"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "name",
+      "expression": "grel:cell.recon.candidates[0].id",
+      "onError": "set-to-blank",
+      "newColumnName": "wikidata_id",
+      "columnInsertIndex": 2,
+      "description": "Créer la colonne wikidata_id à lindex {1} sur la base de la colonne {2} à laide de lexpression {3}"
+    },
+    {
+      "op": "core/row-removal",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "wikidata_id",
+            "expression": "grel:value == null",
+            "columnName": "wikidata_id",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": true,
+                  "l": "true"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "description": "Supprimer les lignes"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "wikidata_id",
+            "expression": "grel:value == null",
+            "columnName": "wikidata_id",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": false,
+                  "l": "false"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "wikidata_id",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q2074737",
+          "name": "municipality of Spain"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column wikidata_id to type Q2074737"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "wikidata_id",
+      "newColumnName": "wikidata_id_",
+      "description": "Renommer la colonne wikidata_id} en wikidata_id_"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "name",
+      "expression": "grel:cell.recon.candidates[0].id",
+      "onError": "set-to-blank",
+      "newColumnName": "wikidata_id",
+      "columnInsertIndex": 2,
+      "description": "Créer la colonne wikidata_id à lindex {1} sur la base de la colonne {2} à laide de lexpression {3}"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "wikidata_id_",
+      "description": "Supprimer la colonne wikidata_id_"
+    }
+  ]

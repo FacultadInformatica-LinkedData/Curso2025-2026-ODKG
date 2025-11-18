@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0" version="28.2.8">
+  <diagram name="Página-1" id="lTwfshloFcRKbEEEsP5o">
+    <mxGraphModel dx="1416" dy="804" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-14" value="ns:District" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="730" y="500" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-15" value="ns:ChargingStation" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="410" y="450" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-16" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;" edge="1" source="rDOUjqbjAL8Yk4mDzeQb-15" target="rDOUjqbjAL8Yk4mDzeQb-14" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="618.3299999999999" as="sourcePoint" />
+            <mxPoint x="682.0000000000002" y="618.3299999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-17" value="&lt;div&gt;ns:isInDistrict&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="rDOUjqbjAL8Yk4mDzeQb-16">
+          <mxGeometry x="-0.1269" relative="1" as="geometry">
+            <mxPoint x="4.17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-18" value="ns:City" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="749.9950508174301" y="590" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-20" value="" style="endArrow=classic;html=1;exitX=0.6;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;" edge="1" parent="1" source="rDOUjqbjAL8Yk4mDzeQb-14" target="rDOUjqbjAL8Yk4mDzeQb-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="880.36" y="515" as="sourcePoint" />
+            <mxPoint x="1054.36" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-21" value="&lt;div&gt;ns:districtCity&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="rDOUjqbjAL8Yk4mDzeQb-20">
+          <mxGeometry x="-0.1269" relative="1" as="geometry">
+            <mxPoint x="4.17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-22" value="ns:Operator" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="230" y="620" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-23" value="" style="endArrow=classic;html=1;exitX=0.1;exitY=1;exitDx=0;exitDy=0;entryX=0.9;entryY=0;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;" edge="1" parent="1" source="rDOUjqbjAL8Yk4mDzeQb-15" target="rDOUjqbjAL8Yk4mDzeQb-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="590" as="sourcePoint" />
+            <mxPoint x="534" y="615" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-24" value="&lt;div&gt;ns:isOperatedBy&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="rDOUjqbjAL8Yk4mDzeQb-23">
+          <mxGeometry x="-0.1269" relative="1" as="geometry">
+            <mxPoint x="4.17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-25" value="ns:Country" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="740" y="690" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-26" value="" style="endArrow=classic;html=1;exitX=0.4;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endSize=8;arcSize=0;rounded=0;" edge="1" parent="1" source="rDOUjqbjAL8Yk4mDzeQb-18" target="rDOUjqbjAL8Yk4mDzeQb-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="840" y="732.5" as="sourcePoint" />
+            <mxPoint x="890" y="807.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-27" value="&lt;div&gt;ns:isCityOf&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="rDOUjqbjAL8Yk4mDzeQb-26">
+          <mxGeometry x="-0.1269" relative="1" as="geometry">
+            <mxPoint x="4.17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-28" value="ns:countryCode: xsd:integer" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="740" y="720" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-31" value="ns:directPayment: xsd:integer" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="410" y="590" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-32" value="ns:hasID: xsd:string" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="410" y="620" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-33" value="ns:hasAddress: xsd:string" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="410" y="680" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-34" value="ns:hasEuId: xsd:string" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="410" y="650" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-35" value="ns:geoLoc: xsd:string" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="410" y="560" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-46" value="ns:hasID: xsd:string" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="410" y="530" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rDOUjqbjAL8Yk4mDzeQb-52" value="https://iamabsa.github.io/chargingstation/&lt;br&gt;ns: https://iamabsa.github.io/chargingstation#&lt;br&gt;hasID xsd: http://www.owl-ontologies.com/hasID xsd#&lt;br&gt;hasAddress xsd: http://www.owl-ontologies.com/hasAddress xsd#&lt;br&gt;directPayment xsd: http://www.owl-ontologies.com/directPayment xsd#&lt;br&gt;hasEuId xsd: http://www.owl-ontologies.com/hasEuId xsd#&lt;br&gt;geoLoc xsd: http://www.owl-ontologies.com/geoLoc xsd#&lt;br&gt;countryCode xsd: http://www.owl-ontologies.com/countryCode xsd#&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="80" y="230" width="390" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

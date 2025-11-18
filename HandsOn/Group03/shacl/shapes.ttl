@@ -1,0 +1,581 @@
+@prefix schema: <http://schema.org/> .
+@prefix :      <http://madrid-transport-safety.org/ontology#> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#5d8d7b2654e10107de09e7646407caa5>
+        a               sh:NodeShape ;
+        sh:property     <https://astrea.linkeddata.es/shapes#2c35f8d505d24c1a37a16c64d92bf22f> ;
+        sh:targetClass  owl:Thing .
+
+<https://astrea.linkeddata.es/shapes#e8debc916cab43266786cc82d7e4a0b0>
+        a               sh:PropertyShape ;
+        rdfs:label      "Unique identifier for pedestrian observation point."@en , "identificador de peatón"@es , "pedestrian identifier"@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "Unique identifier for pedestrian observation point."@en ;
+        sh:name         "pedestrian identifier"@en , "identificador de peatón"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :pedestrianIdentifier ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#a980404078acdf77f0f8cb948e80042f>
+        a               sh:PropertyShape ;
+        rdfs:label      "injury description"@en , "A description of the injury."@en , "descripción de lesión"@es ;
+        sh:datatype     xsd:string ;
+        sh:description  "A description of the injury."@en ;
+        sh:name         "injury description"@en , "descripción de lesión"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :injuryDescription ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#550fa8665af744020dc1c91683b2231b>
+        a               sh:PropertyShape ;
+        rdfs:label      "fecha de observación de peatones"@es , "pedestrian observation date"@en , "The date when pedestrian data was observed."@en ;
+        sh:datatype     xsd:date ;
+        sh:description  "The date when pedestrian data was observed."@en ;
+        sh:name         "fecha de observación de peatones"@es , "pedestrian observation date"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :pedestrianDate ;
+        sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#c853bf40bc434ad66f2eef5d95fe2f91>
+        a               sh:PropertyShape ;
+        rdfs:label      "fecha de observación de bicicletas"@es , "bicycle observation date"@en , "The date when bicycle data was observed."@en ;
+        sh:datatype     xsd:date ;
+        sh:description  "The date when bicycle data was observed."@en ;
+        sh:name         "fecha de observación de bicicletas"@es , "bicycle observation date"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :bicycleDate ;
+        sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#d2c1e5d38f2748f6ae340a4ffff2c1df>
+        a               sh:PropertyShape ;
+        rdfs:label      "nombre de calle de bicicleta"@es , "bicycle street name"@en , "The name of the street where bicycles were observed."@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The name of the street where bicycles were observed."@en ;
+        sh:name         "nombre de calle de bicicleta"@es , "bicycle street name"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :bicycleStreetName ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#bf13f111c46918fe0d56eaa5e30c3217>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :locatedInDistrict .
+
+<https://astrea.linkeddata.es/shapes#e78a8c688b179ec33dac431cefed432a>
+        a               sh:PropertyShape ;
+        rdfs:label      "hora del accidente"@es , "The time when an accident occurred."@en , "accident time"@en ;
+        sh:datatype     xsd:time ;
+        sh:description  "The time when an accident occurred."@en ;
+        sh:name         "accident time"@en , "hora del accidente"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :accidentTime ;
+        sh:pattern      "(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#160c0046c51f579b41f69ecb63a41de8>
+        a               sh:PropertyShape ;
+        rdfs:label      "drug positive"@en , "positivo en drogas"@es , "Indicates whether the person tested positive for drugs."@en ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "Indicates whether the person tested positive for drugs."@en ;
+        sh:name         "drug positive"@en , "positivo en drogas"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :drugPositive ;
+        sh:pattern      "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#a186025b9d945389e13f826255d4f1d9>
+        a               sh:PropertyShape ;
+        rdfs:label      "pedestrian observation direction"@en , "The direction in which pedestrians were observed."@en , "dirección de observación del peatón"@es ;
+        sh:datatype     xsd:string ;
+        sh:description  "The direction in which pedestrians were observed."@en ;
+        sh:name         "dirección de observación del peatón"@es , "pedestrian observation direction"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :pedestrianObservationDirection ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#2fe89447cace9000da16d91890c8d88c>
+        a               sh:PropertyShape ;
+        rdfs:label      "Indicates whether the person tested positive for alcohol."@en , "positivo en alcohol"@es , "alcohol positive"@en ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "Indicates whether the person tested positive for alcohol."@en ;
+        sh:name         "alcohol positive"@en , "positivo en alcohol"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :alcoholPositive ;
+        sh:pattern      "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#fea710aa4728c854d75ab8dcbfec380d>
+        a               sh:PropertyShape ;
+        rdfs:label      "bicycle observation direction"@en , "dirección de observación de bicicleta"@es , "The direction in which bicycles were observed."@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The direction in which bicycles were observed."@en ;
+        sh:name         "dirección de observación de bicicleta"@es , "bicycle observation direction"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :bicycleObservationDirection ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#a976f7cce50b0f2b899ca0fb3f0f1d2c>
+        a               sh:PropertyShape ;
+        rdfs:label      "The count of bicycles observed."@en , "contador de bicicletas"@es , "bicycle counter"@en ;
+        sh:datatype     xsd:integer ;
+        sh:description  "The count of bicycles observed."@en ;
+        sh:name         "contador de bicicletas"@es , "bicycle counter"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :bicycleCounter ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#8d33dbb6a81741660fccc9e11c04df3e>
+        a               sh:PropertyShape ;
+        rdfs:label      "Relates a person to an accident they were involved in."@en , "involucrado en accidente"@es , "involved in accident"@en ;
+        sh:class        :Accident ;
+        sh:description  "Relates a person to an accident they were involved in."@en ;
+        sh:name         "involved in accident"@en , "involucrado en accidente"@es ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :involvedInAccident .
+
+<https://astrea.linkeddata.es/shapes#4a1b43ecf50e835b0371d41f41fd705c>
+        a               sh:NodeShape ;
+        rdfs:label      "Bicycle Data"@en , "Datos de Bicicletas"@es ;
+        sh:description  "Represents bicycle counting data in Madrid."@en ;
+        sh:name         "Datos de Bicicletas"@es , "Bicycle Data"@en ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#a976f7cce50b0f2b899ca0fb3f0f1d2c> , <https://astrea.linkeddata.es/shapes#c853bf40bc434ad66f2eef5d95fe2f91> , <https://astrea.linkeddata.es/shapes#54bc4f35607ad7d7b99eb574711ccbb7> , <https://astrea.linkeddata.es/shapes#85f7946d7a58e28e88cc1a1f7dd3317e> , <https://astrea.linkeddata.es/shapes#fea710aa4728c854d75ab8dcbfec380d> , <https://astrea.linkeddata.es/shapes#d2c1e5d38f2748f6ae340a4ffff2c1df> , <https://astrea.linkeddata.es/shapes#27cd42147494d9e4caca1868f1485f99> , <https://astrea.linkeddata.es/shapes#4ddff4e8379764797915b2ce8397594a> , <https://astrea.linkeddata.es/shapes#316fe9a00c1219b01cd5e838c0686af3> ;
+        sh:targetClass  :BicycleData .
+
+<https://astrea.linkeddata.es/shapes#acfc74398958bf1bf7382412067f945c>
+        a               sh:PropertyShape ;
+        rdfs:label      "coordenada X UTM"@es , "The X coordinate in UTM projection."@en , "X UTM coordinate"@en ;
+        sh:datatype     xsd:decimal ;
+        sh:description  "The X coordinate in UTM projection."@en ;
+        sh:name         "X UTM coordinate"@en , "coordenada X UTM"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :x_utm ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#d8490004d61f246354bb282958dbf4fc>
+        a               sh:PropertyShape ;
+        rdfs:label      "The identifier of the intersection where the traffic light is located."@en , "ID de intersección"@es , "intersection ID"@en ;
+        sh:datatype     xsd:integer ;
+        sh:description  "The identifier of the intersection where the traffic light is located."@en ;
+        sh:name         "ID de intersección"@es , "intersection ID"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :intersectionId ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#93840792dea8155eba9541c4239b5be0>
+        a               sh:PropertyShape ;
+        rdfs:label      "The weather conditions at the time of the accident."@en , "condición meteorológica"@es , "weather condition"@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The weather conditions at the time of the accident."@en ;
+        sh:name         "weather condition"@en , "condición meteorológica"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :weatherCondition ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/report/0620946147>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#6b522be85e90dbb6f0f015779087eb91>
+        a               sh:PropertyShape ;
+        rdfs:label      "The name of the street where pedestrians were observed."@en , "nombre de calle del peatón"@es , "pedestrian street name"@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The name of the street where pedestrians were observed."@en ;
+        sh:name         "pedestrian street name"@en , "nombre de calle del peatón"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :pedestrianStreetName ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#ea559ec2571a2241318a196ec5743e17>
+        a               sh:PropertyShape ;
+        rdfs:label      "Unique identifier for the traffic light."@en , "identificador de semáforo"@es , "traffic light identifier"@en ;
+        sh:datatype     xsd:integer ;
+        sh:description  "Unique identifier for the traffic light."@en ;
+        sh:name         "identificador de semáforo"@es , "traffic light identifier"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :trafficLightIdentifier ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#6b0d457cb729d203b6d3daf992dabb93>
+        a               sh:PropertyShape ;
+        rdfs:label      "The Y coordinate in UTM projection."@en , "Y UTM coordinate"@en , "coordenada Y UTM"@es ;
+        sh:datatype     xsd:decimal ;
+        sh:description  "The Y coordinate in UTM projection."@en ;
+        sh:name         "Y UTM coordinate"@en , "coordenada Y UTM"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :y_utm ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#9cdbeea3e31de53ca728f9a572da0aa2>
+        a               sh:PropertyShape ;
+        rdfs:label      "age range"@en , "rango de edad"@es , "The age range of the person."@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The age range of the person."@en ;
+        sh:name         "age range"@en , "rango de edad"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :ageRange ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#524ac07147ef11e12d78c4a047cc311f>
+        a               sh:PropertyShape ;
+        rdfs:label      "vehicle type"@en , "tipo de vehículo"@es , "The type of vehicle involved in the accident."@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The type of vehicle involved in the accident."@en ;
+        sh:name         "tipo de vehículo"@es , "vehicle type"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :vehicleType ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#e8a580596be5f79e03ed4bc7771aac88>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :involvedInAccident .
+
+<https://astrea.linkeddata.es/shapes#068ed82b63749146cc27209491714139>
+        a               sh:NodeShape ;
+        rdfs:label      "Accident"@en , "Accidente"@es ;
+        sh:description  "Represents an accident event in Madrid."@en ;
+        sh:name         "Accidente"@es , "Accident"@en ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#e78a8c688b179ec33dac431cefed432a> , <https://astrea.linkeddata.es/shapes#150b24e4cc1a16d5686f70501fbc9589> , <https://astrea.linkeddata.es/shapes#6b0d457cb729d203b6d3daf992dabb93> , <https://astrea.linkeddata.es/shapes#802a31d845dec4a1dabb9760af5c7449> , <https://astrea.linkeddata.es/shapes#6cb35c52a73682b6a2144aa292031773> , <https://astrea.linkeddata.es/shapes#acfc74398958bf1bf7382412067f945c> , <https://astrea.linkeddata.es/shapes#24d3a15e98e8919b3d4bf4f5d5aceee9> , <https://astrea.linkeddata.es/shapes#524ac07147ef11e12d78c4a047cc311f> , <https://astrea.linkeddata.es/shapes#93840792dea8155eba9541c4239b5be0> , <https://astrea.linkeddata.es/shapes#ed6d8633a1df0a57c5c665fc8203534c> , <https://astrea.linkeddata.es/shapes#5fc6d61427e1168fa64802bab6f3d59a> ;
+        sh:targetClass  :Accident .
+
+<https://astrea.linkeddata.es/shapes#48ecb65bad68dbe82cec095d8f851193>
+        a               sh:PropertyShape ;
+        rdfs:label      "The name of a district."@en , "nombre del distrito"@es , "district name"@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The name of a district."@en ;
+        sh:name         "nombre del distrito"@es , "district name"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :districtName ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#150b24e4cc1a16d5686f70501fbc9589>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :locatedInDistrict .
+
+<https://astrea.linkeddata.es/shapes#8c16ff9a785ae0ca5ba351f46afaa2b4>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :hasInjury .
+
+<https://astrea.linkeddata.es/shapes#24d3a15e98e8919b3d4bf4f5d5aceee9>
+        a               sh:PropertyShape ;
+        rdfs:label      "case number"@en , "The unique case number assigned to an accident."@en , "número de expediente"@es ;
+        sh:datatype     xsd:string ;
+        sh:description  "The unique case number assigned to an accident."@en ;
+        sh:name         "número de expediente"@es , "case number"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :caseNumber ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#93db126c519787c0222d7264b44a54aa>
+        a               sh:NodeShape ;
+        rdfs:label      "Pedestrian Data"@en , "Datos de Peatones"@es ;
+        sh:description  "Represents pedestrian observation data in Madrid."@en ;
+        sh:name         "Pedestrian Data"@en , "Datos de Peatones"@es ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#3136a6ccea80dfabd5cefda23623bed8> , <https://astrea.linkeddata.es/shapes#70fbb8ea2aae7001dcd5088ff796ff72> , <https://astrea.linkeddata.es/shapes#550fa8665af744020dc1c91683b2231b> , <https://astrea.linkeddata.es/shapes#815de4428b9d335d108043e410995073> , <https://astrea.linkeddata.es/shapes#bf13f111c46918fe0d56eaa5e30c3217> , <https://astrea.linkeddata.es/shapes#326b6e1c6d37c36cfc1cd68c8cb3c0b2> , <https://astrea.linkeddata.es/shapes#a186025b9d945389e13f826255d4f1d9> , <https://astrea.linkeddata.es/shapes#e8debc916cab43266786cc82d7e4a0b0> , <https://astrea.linkeddata.es/shapes#6b522be85e90dbb6f0f015779087eb91> ;
+        sh:targetClass  :PedestrianData .
+
+<https://astrea.linkeddata.es/shapes#6e942d2f3ec65940c41ee1aa76da8647>
+        a               sh:PropertyShape ;
+        rdfs:label      "The official code of a district."@en , "district code"@en , "código del distrito"@es ;
+        sh:datatype     xsd:integer ;
+        sh:description  "The official code of a district."@en ;
+        sh:name         "código del distrito"@es , "district code"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :districtCode ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#9d0c114edd84f21f455ad1bb5c788226>
+        a               sh:NodeShape ;
+        rdfs:label      "Person"@en , "Persona"@es ;
+        sh:description  "Represents a person involved in an accident."@en ;
+        sh:name         "Persona"@es , "Person"@en ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#26c394953cf76624a1b45b10c642d4fa> , <https://astrea.linkeddata.es/shapes#1a5d7aa6f0fc336a09ab2935c472359c> , <https://astrea.linkeddata.es/shapes#9cdbeea3e31de53ca728f9a572da0aa2> , <https://astrea.linkeddata.es/shapes#2fe89447cace9000da16d91890c8d88c> , <https://astrea.linkeddata.es/shapes#8c16ff9a785ae0ca5ba351f46afaa2b4> , <https://astrea.linkeddata.es/shapes#da887f00f28c4e456964d590deca8642> , <https://astrea.linkeddata.es/shapes#e8a580596be5f79e03ed4bc7771aac88> , <https://astrea.linkeddata.es/shapes#8d33dbb6a81741660fccc9e11c04df3e> , <https://astrea.linkeddata.es/shapes#d0ee971740b67796d6df405c2c1cf257> , <https://astrea.linkeddata.es/shapes#160c0046c51f579b41f69ecb63a41de8> ;
+        sh:targetClass  :Person .
+
+<https://astrea.linkeddata.es/shapes#326b6e1c6d37c36cfc1cd68c8cb3c0b2>
+        a               sh:PropertyShape ;
+        rdfs:label      "pedestrian observation time"@en , "hora de observación de peatones"@es , "The time when pedestrian data was observed."@en ;
+        sh:datatype     xsd:time ;
+        sh:description  "The time when pedestrian data was observed."@en ;
+        sh:name         "hora de observación de peatones"@es , "pedestrian observation time"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :pedestrianTime ;
+        sh:pattern      "(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#b65a34f40bf0013119c242a370fda8ae>
+        a               sh:NodeShape ;
+        rdfs:label      "Injury"@en , "Lesión"@es ;
+        sh:description  "Represents an injury sustained in an accident."@en ;
+        sh:name         "Injury"@en , "Lesión"@es ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#a980404078acdf77f0f8cb948e80042f> , <https://astrea.linkeddata.es/shapes#91646bfa5674c190973d501a3e86c04c> ;
+        sh:targetClass  :Injury .
+
+<https://astrea.linkeddata.es/shapes#ed6d8633a1df0a57c5c665fc8203534c>
+        a               sh:PropertyShape ;
+        rdfs:label      "accident date"@en , "fecha del accidente"@es , "The date when an accident occurred."@en ;
+        sh:datatype     xsd:date ;
+        sh:description  "The date when an accident occurred."@en ;
+        sh:name         "accident date"@en , "fecha del accidente"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :accidentDate ;
+        sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#4ddff4e8379764797915b2ce8397594a>
+        a               sh:PropertyShape ;
+        rdfs:label      "bicycle longitude"@en , "longitud de bicicleta"@es , "The longitude coordinate of the bicycle observation point."@en ;
+        sh:datatype     xsd:decimal ;
+        sh:description  "The longitude coordinate of the bicycle observation point."@en ;
+        sh:name         "bicycle longitude"@en , "longitud de bicicleta"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :bicycleLongitude ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#6c0e8d87f821175bbb421fea08bc4d09>
+        a               sh:NodeShape ;
+        rdfs:label      "District"@en , "Distrito"@es ;
+        sh:description  "Represents an administrative district of Madrid."@en ;
+        sh:name         "District"@en , "Distrito"@es ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#48ecb65bad68dbe82cec095d8f851193> , <https://astrea.linkeddata.es/shapes#6e942d2f3ec65940c41ee1aa76da8647> ;
+        sh:targetClass  :District .
+
+<https://astrea.linkeddata.es/shapes#d0ee971740b67796d6df405c2c1cf257>
+        a               sh:PropertyShape ;
+        rdfs:label      "tipo de persona"@es , "The type or role of the person in the accident."@en , "person type"@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The type or role of the person in the accident."@en ;
+        sh:name         "person type"@en , "tipo de persona"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :personType ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#b2dd8f0fe0b3eed0b5042abd0d585d0c>
+        a               sh:PropertyShape ;
+        rdfs:label      "The type of lights used in the traffic light."@en , "tipo de luces"@es , "lights type"@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The type of lights used in the traffic light."@en ;
+        sh:name         "lights type"@en , "tipo de luces"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :lightsType ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#85f7946d7a58e28e88cc1a1f7dd3317e>
+        a               sh:PropertyShape ;
+        rdfs:label      "bicycle observation time"@en , "hora de observación de bicicletas"@es , "The time when bicycle data was observed."@en ;
+        sh:datatype     xsd:time ;
+        sh:description  "The time when bicycle data was observed."@en ;
+        sh:name         "hora de observación de bicicletas"@es , "bicycle observation time"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :bicycleTime ;
+        sh:pattern      "(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#6d27c90570e5ba6917b3ad475ad2d21b>
+        a               sh:NodeShape ;
+        rdfs:label      "Traffic Light"@en , "Semáforo"@es ;
+        sh:description  "Represents a traffic light in Madrid."@en ;
+        sh:name         "Semáforo"@es , "Traffic Light"@en ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#0fb72082f2a41f894e30f32ecfe67ea0> , <https://astrea.linkeddata.es/shapes#c90e3791538d2ceefe7a4f21eb23e4f1> , <https://astrea.linkeddata.es/shapes#b2dd8f0fe0b3eed0b5042abd0d585d0c> , <https://astrea.linkeddata.es/shapes#d8490004d61f246354bb282958dbf4fc> , <https://astrea.linkeddata.es/shapes#7f707dd51a91f740fcb9311c40c45058> , <https://astrea.linkeddata.es/shapes#ea850d82b040ce01b3d8ee5a6166104b> , <https://astrea.linkeddata.es/shapes#cca8407bf6192d881dad924a3a1b097a> , <https://astrea.linkeddata.es/shapes#ea559ec2571a2241318a196ec5743e17> ;
+        sh:targetClass  :TrafficLight .
+
+<https://astrea.linkeddata.es/shapes#54bc4f35607ad7d7b99eb574711ccbb7>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :locatedInDistrict .
+
+<https://astrea.linkeddata.es/shapes#ea850d82b040ce01b3d8ee5a6166104b>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      :locatedInDistrict .
+
+<https://astrea.linkeddata.es/shapes#0fb72082f2a41f894e30f32ecfe67ea0>
+        a               sh:PropertyShape ;
+        rdfs:label      "traffic light type"@en , "The type or category of the traffic light."@en , "tipo de semáforo"@es ;
+        sh:datatype     xsd:string ;
+        sh:description  "The type or category of the traffic light."@en ;
+        sh:name         "traffic light type"@en , "tipo de semáforo"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :trafficLightType ;
+        sh:pattern      ".*" .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#815de4428b9d335d108043e410995073> , <https://astrea.linkeddata.es/shapes#a186025b9d945389e13f826255d4f1d9> , <https://astrea.linkeddata.es/shapes#802a31d845dec4a1dabb9760af5c7449> , <https://astrea.linkeddata.es/shapes#85f7946d7a58e28e88cc1a1f7dd3317e> , <https://astrea.linkeddata.es/shapes#ed6d8633a1df0a57c5c665fc8203534c> , <https://astrea.linkeddata.es/shapes#d0ee971740b67796d6df405c2c1cf257> , <https://astrea.linkeddata.es/shapes#316fe9a00c1219b01cd5e838c0686af3> , <https://astrea.linkeddata.es/shapes#ea559ec2571a2241318a196ec5743e17> , <https://astrea.linkeddata.es/shapes#068ed82b63749146cc27209491714139> , <https://astrea.linkeddata.es/shapes#8c16ff9a785ae0ca5ba351f46afaa2b4> , <https://astrea.linkeddata.es/shapes#a980404078acdf77f0f8cb948e80042f> , <https://astrea.linkeddata.es/shapes#b2dd8f0fe0b3eed0b5042abd0d585d0c> , <https://astrea.linkeddata.es/shapes#6b522be85e90dbb6f0f015779087eb91> , <https://astrea.linkeddata.es/shapes#48ecb65bad68dbe82cec095d8f851193> , <https://astrea.linkeddata.es/shapes#3136a6ccea80dfabd5cefda23623bed8> , <https://astrea.linkeddata.es/shapes#93db126c519787c0222d7264b44a54aa> , <https://astrea.linkeddata.es/shapes#5fc6d61427e1168fa64802bab6f3d59a> , <https://astrea.linkeddata.es/shapes#d8490004d61f246354bb282958dbf4fc> , <https://astrea.linkeddata.es/shapes#550fa8665af744020dc1c91683b2231b> , <https://astrea.linkeddata.es/shapes#2c35f8d505d24c1a37a16c64d92bf22f> , <https://astrea.linkeddata.es/shapes#7f707dd51a91f740fcb9311c40c45058> , <https://astrea.linkeddata.es/shapes#da887f00f28c4e456964d590deca8642> , <https://astrea.linkeddata.es/shapes#4ddff4e8379764797915b2ce8397594a> , <https://astrea.linkeddata.es/shapes#54bc4f35607ad7d7b99eb574711ccbb7> , <https://astrea.linkeddata.es/shapes#150b24e4cc1a16d5686f70501fbc9589> , <https://astrea.linkeddata.es/shapes#b65a34f40bf0013119c242a370fda8ae> , <https://astrea.linkeddata.es/shapes#bf13f111c46918fe0d56eaa5e30c3217> , <https://astrea.linkeddata.es/shapes#c90e3791538d2ceefe7a4f21eb23e4f1> , <https://astrea.linkeddata.es/shapes#6c0e8d87f821175bbb421fea08bc4d09> , <https://astrea.linkeddata.es/shapes#160c0046c51f579b41f69ecb63a41de8> , <https://astrea.linkeddata.es/shapes#0fb72082f2a41f894e30f32ecfe67ea0> , <https://astrea.linkeddata.es/shapes#91646bfa5674c190973d501a3e86c04c> , <https://astrea.linkeddata.es/shapes#cca8407bf6192d881dad924a3a1b097a> , <https://astrea.linkeddata.es/shapes#a976f7cce50b0f2b899ca0fb3f0f1d2c> , <https://astrea.linkeddata.es/shapes#26c394953cf76624a1b45b10c642d4fa> , <https://astrea.linkeddata.es/shapes#326b6e1c6d37c36cfc1cd68c8cb3c0b2> , <https://astrea.linkeddata.es/shapes#70fbb8ea2aae7001dcd5088ff796ff72> , <https://astrea.linkeddata.es/shapes#2fe89447cace9000da16d91890c8d88c> , <https://astrea.linkeddata.es/shapes#9cdbeea3e31de53ca728f9a572da0aa2> , <https://astrea.linkeddata.es/shapes#6e942d2f3ec65940c41ee1aa76da8647> , <https://astrea.linkeddata.es/shapes#6d27c90570e5ba6917b3ad475ad2d21b> , <https://astrea.linkeddata.es/shapes#fea710aa4728c854d75ab8dcbfec380d> , <https://astrea.linkeddata.es/shapes#e8a580596be5f79e03ed4bc7771aac88> , <https://astrea.linkeddata.es/shapes#9d0c114edd84f21f455ad1bb5c788226> , <https://astrea.linkeddata.es/shapes#5d8d7b2654e10107de09e7646407caa5> , <https://astrea.linkeddata.es/shapes#c853bf40bc434ad66f2eef5d95fe2f91> , <https://astrea.linkeddata.es/shapes#4a1b43ecf50e835b0371d41f41fd705c> , <https://astrea.linkeddata.es/shapes#e8debc916cab43266786cc82d7e4a0b0> , <https://astrea.linkeddata.es/shapes#93840792dea8155eba9541c4239b5be0> , <https://astrea.linkeddata.es/shapes#6cb35c52a73682b6a2144aa292031773> , <https://astrea.linkeddata.es/shapes#1a5d7aa6f0fc336a09ab2935c472359c> , <https://astrea.linkeddata.es/shapes#ea850d82b040ce01b3d8ee5a6166104b> , <https://astrea.linkeddata.es/shapes#8d33dbb6a81741660fccc9e11c04df3e> , <https://astrea.linkeddata.es/shapes#6b0d457cb729d203b6d3daf992dabb93> , <https://astrea.linkeddata.es/shapes#524ac07147ef11e12d78c4a047cc311f> , <https://astrea.linkeddata.es/shapes#27cd42147494d9e4caca1868f1485f99> , <https://astrea.linkeddata.es/shapes#24d3a15e98e8919b3d4bf4f5d5aceee9> , <https://astrea.linkeddata.es/shapes#acfc74398958bf1bf7382412067f945c> , <https://astrea.linkeddata.es/shapes#e78a8c688b179ec33dac431cefed432a> , <https://astrea.linkeddata.es/shapes#d2c1e5d38f2748f6ae340a4ffff2c1df> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/0620946147> .
+
+<https://astrea.linkeddata.es/shapes#70fbb8ea2aae7001dcd5088ff796ff72>
+        a               sh:PropertyShape ;
+        rdfs:label      "latitud del peatón"@es , "The latitude coordinate of the pedestrian observation point."@en , "pedestrian latitude"@en ;
+        sh:datatype     xsd:decimal ;
+        sh:description  "The latitude coordinate of the pedestrian observation point."@en ;
+        sh:name         "latitud del peatón"@es , "pedestrian latitude"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :pedestrianLatitude ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#26c394953cf76624a1b45b10c642d4fa>
+        a               sh:PropertyShape ;
+        rdfs:label      "identificador de persona"@es , "person identifier"@en , "Unique identifier for a person."@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "Unique identifier for a person."@en ;
+        sh:name         "identificador de persona"@es , "person identifier"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :personIdentifier ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#802a31d845dec4a1dabb9760af5c7449>
+        a               sh:PropertyShape ;
+        rdfs:label      "número de casa"@es , "house number"@en , "The house number at or near where the accident occurred."@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "The house number at or near where the accident occurred."@en ;
+        sh:name         "house number"@en , "número de casa"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :houseNumber ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#316fe9a00c1219b01cd5e838c0686af3>
+        a               sh:PropertyShape ;
+        rdfs:label      "Unique identifier for bicycle observation point."@en , "bicycle identifier"@en , "identificador de bicicleta"@es ;
+        sh:datatype     xsd:string ;
+        sh:description  "Unique identifier for bicycle observation point."@en ;
+        sh:name         "identificador de bicicleta"@es , "bicycle identifier"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :bicycleIdentifier ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#3136a6ccea80dfabd5cefda23623bed8>
+        a               sh:PropertyShape ;
+        rdfs:label      "pedestrian longitude"@en , "longitud del peatón"@es , "The longitude coordinate of the pedestrian observation point."@en ;
+        sh:datatype     xsd:decimal ;
+        sh:description  "The longitude coordinate of the pedestrian observation point."@en ;
+        sh:name         "pedestrian longitude"@en , "longitud del peatón"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :pedestrianLongitude ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#2c35f8d505d24c1a37a16c64d92bf22f>
+        a               sh:PropertyShape ;
+        rdfs:label      "Relates an entity to the district where it is located."@en , "located in district"@en , "ubicado en distrito"@es ;
+        sh:class        :District ;
+        sh:description  "Relates an entity to the district where it is located."@en ;
+        sh:name         "located in district"@en , "ubicado en distrito"@es ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :locatedInDistrict .
+
+<https://astrea.linkeddata.es/shapes#815de4428b9d335d108043e410995073>
+        a               sh:PropertyShape ;
+        rdfs:label      "The count of pedestrians observed."@en , "pedestrian counter"@en , "contador de peatones"@es ;
+        sh:datatype     xsd:integer ;
+        sh:description  "The count of pedestrians observed."@en ;
+        sh:name         "contador de peatones"@es , "pedestrian counter"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :pedestrianCounter ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#5fc6d61427e1168fa64802bab6f3d59a>
+        a               sh:PropertyShape ;
+        rdfs:label      "The location description where the accident occurred."@en , "accident location"@en , "ubicación del accidente"@es ;
+        sh:datatype     xsd:string ;
+        sh:description  "The location description where the accident occurred."@en ;
+        sh:name         "ubicación del accidente"@es , "accident location"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :accidentLocation ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#1a5d7aa6f0fc336a09ab2935c472359c>
+        a               sh:PropertyShape ;
+        rdfs:label      "The gender of the person."@en , "gender"@en , "género"@es ;
+        sh:datatype     xsd:string ;
+        sh:description  "The gender of the person."@en ;
+        sh:name         "género"@es , "gender"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :gender ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#c90e3791538d2ceefe7a4f21eb23e4f1>
+        a               sh:PropertyShape ;
+        rdfs:label      "longitud del semáforo"@es , "traffic light longitude"@en , "The longitude coordinate of the traffic light."@en ;
+        sh:datatype     xsd:decimal ;
+        sh:description  "The longitude coordinate of the traffic light."@en ;
+        sh:name         "longitud del semáforo"@es , "traffic light longitude"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :trafficLightLongitude ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#da887f00f28c4e456964d590deca8642>
+        a               sh:PropertyShape ;
+        rdfs:label      "has injury"@en , "Relates a person to an injury they sustained."@en , "tiene lesión"@es ;
+        sh:class        :Injury ;
+        sh:description  "Relates a person to an injury they sustained."@en ;
+        sh:name         "tiene lesión"@es , "has injury"@en ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasInjury .
+
+<https://astrea.linkeddata.es/shapes#6cb35c52a73682b6a2144aa292031773>
+        a               sh:PropertyShape ;
+        rdfs:label      "accident type"@en , "tipo de accidente"@es , "Classification of the type of accident."@en ;
+        sh:datatype     xsd:string ;
+        sh:description  "Classification of the type of accident."@en ;
+        sh:name         "tipo de accidente"@es , "accident type"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :accidentType ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#27cd42147494d9e4caca1868f1485f99>
+        a               sh:PropertyShape ;
+        rdfs:label      "The latitude coordinate of the bicycle observation point."@en , "latitud de bicicleta"@es , "bicycle latitude"@en ;
+        sh:datatype     xsd:decimal ;
+        sh:description  "The latitude coordinate of the bicycle observation point."@en ;
+        sh:name         "bicycle latitude"@en , "latitud de bicicleta"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :bicycleLatitude ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#91646bfa5674c190973d501a3e86c04c>
+        a               sh:PropertyShape ;
+        rdfs:label      "injury code"@en , "código de lesión"@es , "The code identifying the type of injury."@en ;
+        sh:datatype     xsd:integer ;
+        sh:description  "The code identifying the type of injury."@en ;
+        sh:name         "código de lesión"@es , "injury code"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :injuryCode ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#7f707dd51a91f740fcb9311c40c45058>
+        a               sh:PropertyShape ;
+        rdfs:label      "installation date"@en , "The date when the traffic light was installed."@en , "fecha de instalación"@es ;
+        sh:datatype     xsd:date ;
+        sh:description  "The date when the traffic light was installed."@en ;
+        sh:name         "fecha de instalación"@es , "installation date"@en ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :installationDate ;
+        sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#cca8407bf6192d881dad924a3a1b097a>
+        a               sh:PropertyShape ;
+        rdfs:label      "traffic light latitude"@en , "The latitude coordinate of the traffic light."@en , "latitud del semáforo"@es ;
+        sh:datatype     xsd:decimal ;
+        sh:description  "The latitude coordinate of the traffic light."@en ;
+        sh:name         "traffic light latitude"@en , "latitud del semáforo"@es ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :trafficLightLatitude ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .

@@ -1,0 +1,65 @@
+------------1. Get all the properties that can be applied to instances of the Politician class (<http://dbpedia.org/ontology/Politician>)------------
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?property
+WHERE {
+  ?x a dbo:Politician ;
+     ?property ?o .
+}
+ORDER BY ?property
+
+------------2. Get all the properties, except rdf:type, that can be applied to instances of the Politician class------------
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?property
+WHERE {
+  ?x a dbo:Politician ;
+     ?property ?o .
+  FILTER (?property != rdf:type)
+}
+ORDER BY ?property
+
+------------3. Which different values exist for the properties, except for rdf:type, applicable to the instances of Politician?------------
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?value
+WHERE {
+  ?x a dbo:Politician ;
+     ?p ?value .
+  FILTER (?p != rdf:type)
+}
+ORDER BY ?value
+
+------------4. For each of these applicable properties, except for rdf:type, which different values do they take globally for all those instances?------------
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?property ?value
+WHERE {
+  ?x a dbo:Politician ;
+     ?property ?value .
+  FILTER (?property != rdf:type)
+}
+ORDER BY ?property ?value
+
+------------5. For each of these applicable properties, except for rdf:type, how many distinct values do they take globally for all those instances?------------
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?property (COUNT(DISTINCT ?value) AS ?nDistinctValues)
+WHERE {
+  ?x a dbo:Politician ;
+     ?property ?value .
+  FILTER (?property != rdf:type)
+}
+GROUP BY ?property
+ORDER BY DESC(?nDistinctValues)
+
+-------------------------------------------------------------

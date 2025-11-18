@@ -1,0 +1,34 @@
+#########################################################################
+List stations with operator and city URLs
+#########################################################################
+
+PREFIX ns1: <https://iamabsa.github.io/chargingstation#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?station ?label ?operator ?operatorURL ?city ?cityURL
+WHERE {
+  ?station a ns1:ChargingStation ;
+           rdfs:label ?label ;
+           ns1:isOperatedBy ?operator ;
+           ns1:operatorURL ?operatorURL ;
+           ns1:isInDistrict ?district .
+  ?district ns1:districtCity ?city ;
+            ns1:cityURL ?cityURL .
+}
+ORDER BY ?city ?operator
+
+#########################################################################
+Count charging stations per operator
+#########################################################################
+
+PREFIX ns1: <https://iamabsa.github.io/chargingstation#>
+
+SELECT ?operator (COUNT(?station) AS ?stationCount)
+WHERE {
+  ?station a ns1:ChargingStation ;
+           ns1:isOperatedBy ?operator .
+}
+GROUP BY ?operator
+ORDER BY DESC(?stationCount)
+
+

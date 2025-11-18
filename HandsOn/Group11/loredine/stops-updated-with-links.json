@@ -1,0 +1,67 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_desc_name",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q79007",
+        "name": "street"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column stop_desc_name to type Q79007"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_desc_name",
+    "similarValue": "Calle del Príncipe",
+    "judgment": "matched",
+    "match": {
+      "id": "Q15788175",
+      "name": "Calle del Príncipe, Madrid",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Calle del Príncipe, Madrid (Q15788175) para las celdas que contienen \"Calle del Príncipe\" en la columna stop_desc_name"
+  },
+  {
+    "op": "core/recon-match-best-candidates",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "stop_desc_name",
+    "description": "Emparejar cada celda con su mejor candidato de cotejo en la columna stop_desc_name"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "stop_desc_name",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_stop_desc_name",
+    "columnInsertIndex": 6,
+    "description": "Crear la columna same_as_wikidata_stop_desc_name en el índice 6 basada en la columna stop_desc_name usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  }
+]

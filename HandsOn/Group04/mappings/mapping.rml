@@ -1,0 +1,187 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix schema: <http://schema.org/>.
+@base <https://ropenspain.github.io/spanishoddata/articles/v2-2022-onwards-mitma-data-codebook/> .
+
+# --- Your invented ontology/vocabulary ---
+@prefix ex: <http://example.com/ontology/mobility/>.
+# --- Your generated data/instances ---
+@prefix data: <http://example.com/data/mobility/>.
+
+# --- 1. Data Source Definition ---
+<#LogicalSource_CSV>
+    rml:source "../csv/flux_daily_mov_updated.csv";
+    rml:referenceFormulation ql:CSV.
+
+# --- 2. Main Mapping: The Mobility Observation ---
+# Each CSV row will become one "Observation"
+# We use a Blank Node because the row itself doesn't have a unique ID.
+<#ObservationMap>
+    rml:logicalSource <#LogicalSource_CSV>;
+
+    rr:subjectMap [
+        rr:termType rr:BlankNode
+    ];
+
+    # Class: this is a MovilityObservation
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [ rr:constant ex:MovilityObservation ]
+    ];
+
+    # --- Literal Properties (Direct Data) ---
+    rr:predicateObjectMap [
+        rr:predicate dcterms:date;
+        rr:objectMap [ 
+            rml:reference "date";
+            rr:datatype xsd:date 
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:hour;
+        rr:objectMap [ 
+            rml:reference "hour";
+            rr:datatype xsd:integer 
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:numberOfTrips;
+        rr:objectMap [ 
+            rml:reference "n_trips";
+            rr:datatype xsd:double 
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:totalTripsLengthKm;
+        rr:objectMap [ 
+            rml:reference "trips_total_length_km";
+            rr:datatype xsd:double 
+        ]
+    ];
+
+    # --- Links to other "Things" (Relationships) ---
+    
+    # Link to the Demographic Group
+    rr:predicateObjectMap [
+        rr:predicate ex:concernsDemographicGroup;
+        rr:objectMap [ 
+            # Generates the group's ID based on its properties
+            rr:template "data:demo_{income}_{age}_{gender}"
+        ]
+    ];
+
+    # Link to the Origin Location
+    rr:predicateObjectMap [
+        rr:predicate ex:hasOrigin;
+        rr:objectMap [ 
+            rr:template "data:location_{origin_name}" 
+        ]
+    ];
+
+    # Link to the Destination Location
+    rr:predicateObjectMap [
+        rr:predicate ex:hasDestination;
+        rr:objectMap [ 
+            rr:template "data:location_{destination_name}" 
+        ]
+    ];
+
+    # Link to the Origin Activity
+    rr:predicateObjectMap [
+        rr:predicate ex:hasOriginActivity;
+        rr:objectMap [ 
+            rr:template "data:activity_{activity_origin}" 
+        ]
+    ];
+
+    # Link to the Destination Activity
+    rr:predicateObjectMap [
+        rr:predicate ex:hasDestinationActivity;
+        rr:objectMap [ 
+            rr:template "data:activity_{activity_destination}" 
+        ]
+    ].
+
+# --- 3. Demographic Group Mapping ---
+# Creates unique entities for each income/age/gender combination
+<#DemographicGroupMap>
+    rml:logicalSource <#LogicalSource_CSV>;
+
+    rr:subjectMap [
+        rr:template "data:demo_{income}_{age}_{gender}";
+        rr:class ex:DemographicGroup
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate ex:incomeRange;
+        rr:objectMap [ rml:reference "income" ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:ageRange;
+        rr:objectMap [ rml:reference "age" ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate schema:gender; # We're using a standard term!
+        rr:objectMap [ rml:reference "gender" ]
+    ].
+
+# --- 4. Location Mapping ---
+# These two rules will create the "Location" entities.
+# The RML processor is smart enough to "merge" (de-duplicate) 
+# locations if the same ID appears in both columns.
+
+<#LocationOriginMap>
+    rml:logicalSource <#LogicalSource_CSV>;
+    rr:subjectMap [
+        rr:template "data:location_{origin_name}";
+        rr:class schema:City
+    ];
+    rr:predicateObjectMap [
+        rr:predicate schema:name;
+        rr:objectMap [ 
+            rml:reference "origin_name" 
+        ]
+    ].
+
+<#LocationDestinationMap>
+    rml:logicalSource <#LogicalSource_CSV>;
+rr:subjectMap [
+        rr:template "data:location_{destination_name}";
+        rr:class schema:City
+    ];
+    rr:predicateObjectMap [
+        rr:predicate schema:name;
+        rr:objectMap [ 
+            rml:reference "destination_name" 
+        ]
+    ].
+
+# --- 5. Activity Mapping ---
+# Same as with locations, we create unique entities for the activities.
+
+<#ActivityOriginMap>
+    rml:logicalSource <#LogicalSource_CSV>;
+    rr:subjectMap [
+        rr:template "data:activity_{activity_origin}";
+        rr:class ex:Activity
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:activityType;
+        rr:objectMap [ rml:reference "activity_origin" ]
+    ].
+
+<#ActivityDestinationMap>
+    rml:logicalSource <#LogicalSource_CSV>;
+    rr:subjectMap [
+        rr:template "data:activity_{activity_destination}";
+        rr:class ex:Activity
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:activityType;
+        rr:objectMap [ rml:reference "activity_destination" ]
+    ].

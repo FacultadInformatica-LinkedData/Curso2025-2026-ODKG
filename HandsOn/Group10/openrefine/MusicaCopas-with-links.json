@@ -1,0 +1,2272 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "addresses_roadtype_id",
+    "description": "Eliminar columna addresses_roadtype_id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "estimated_dates",
+    "description": "Eliminar columna estimated_dates"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "start_date",
+    "description": "Eliminar columna start_date"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "end_date",
+    "description": "Eliminar columna end_date"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "timetable",
+    "description": "Eliminar columna timetable"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "secondary_filters_asia_id",
+    "description": "Eliminar columna secondary_filters_asia_id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "secondary_filters_tree",
+    "description": "Eliminar columna secondary_filters_tree"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "secondary_filters_fullpath",
+    "description": "Eliminar columna secondary_filters_fullpath"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "secondary_filters_id",
+    "description": "Eliminar columna secondary_filters_id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "values_description",
+    "description": "Eliminar columna values_description"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "values_outstanding",
+    "description": "Eliminar columna values_outstanding"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "values_value",
+    "description": "Eliminar columna values_value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "values_attribute_name",
+    "description": "Eliminar columna values_attribute_name"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "addresses_main_address",
+    "description": "Eliminar columna addresses_main_address"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "addresses_type",
+    "description": "Eliminar columna addresses_type"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "values_attribute_id",
+    "description": "Eliminar columna values_attribute_id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "values_id",
+    "description": "Eliminar columna values_id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "values_category",
+    "description": "Eliminar columna values_category"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "addresses_town",
+    "description": "Eliminar columna addresses_town"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "addresses_end_street_number",
+    "description": "Eliminar columna addresses_end_street_number"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "addresses_roadtype_name",
+    "description": "Eliminar columna addresses_roadtype_name"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "modified",
+    "description": "Eliminar columna modified"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "created",
+    "description": "Eliminar columna created"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "institution_name",
+    "description": "Eliminar columna institution_name"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "institution_id",
+    "description": "Eliminar columna institution_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "register_id",
+    "newColumnName": "ID",
+    "description": "Renombra la columna register_id a ID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "name",
+    "newColumnName": "NAME",
+    "description": "Renombra la columna name a NAME"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "addresses_road_id",
+    "newColumnName": "ADDRESS_ID",
+    "description": "Renombra la columna addresses_road_id a ADDRESS_ID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "addresses_road_name",
+    "newColumnName": "ROAD",
+    "description": "Renombra la columna addresses_road_name a ROAD"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "addresses_start_street_number",
+    "newColumnName": "ROAD_NUMBER",
+    "description": "Renombra la columna addresses_start_street_number a ROAD_NUMBER"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "addresses_neighborhood_id",
+    "newColumnName": "NEIGHBORHOOD_ID",
+    "description": "Renombra la columna addresses_neighborhood_id a NEIGHBORHOOD_ID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "addresses_neighborhood_name",
+    "newColumnName": "NEIGBORHOOD NAMES",
+    "description": "Renombra la columna addresses_neighborhood_name a NEIGBORHOOD NAMES"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "addresses_district_id",
+    "newColumnName": "DISTRICT_ID",
+    "description": "Renombra la columna addresses_district_id a DISTRICT_ID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NEIGBORHOOD NAMES",
+    "newColumnName": "NEIGBORHOOD_NAMES",
+    "description": "Renombra la columna NEIGBORHOOD NAMES a NEIGBORHOOD_NAMES"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "addresses_district_name",
+    "newColumnName": "DISTRICT_NAME",
+    "description": "Renombra la columna addresses_district_name a DISTRICT_NAME"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "addresses_zip_code",
+    "newColumnName": "ZIP_CODE",
+    "description": "Renombra la columna addresses_zip_code a ZIP_CODE"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "secondary_filters_name",
+    "newColumnName": "TYPE_BAR",
+    "description": "Renombra la columna secondary_filters_name a TYPE_BAR"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "geo_epgs_25831_x",
+    "newColumnName": "GEO_X",
+    "description": "Renombra la columna geo_epgs_25831_x a GEO_X"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "geo_epgs_25831_y",
+    "newColumnName": "GEO_Y",
+    "description": "Renombra la columna geo_epgs_25831_y a GEO_Y"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "geo_epgs_4326_lat",
+    "newColumnName": "GEO_LAT",
+    "description": "Renombra la columna geo_epgs_4326_lat a GEO_LAT"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "geo_epgs_4326_lon",
+    "newColumnName": "GEO_LONG",
+    "description": "Renombra la columna geo_epgs_4326_lon a GEO_LONG"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ROAD",
+    "expression": "grel:value + \" \" + cells[\"ROAD_NUMBER\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "ADDRESS",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna ADDRESS en el índice 4 basada en la columna ROAD usando la expresión grel:value + \" \" + cells[\"ROAD_NUMBER\"].value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "expression": "grel:value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ID usando la expresión grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ID usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NAME",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NAME usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ADDRESS_ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ADDRESS_ID usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ID usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ROAD",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ROAD usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ADDRESS",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ADDRESS usando la expresión value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ROAD_NUMBER",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ROAD_NUMBER usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NEIGHBORHOOD_ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NEIGHBORHOOD_ID usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRICT_ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DISTRICT_ID usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ZIP_CODE",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ZIP_CODE usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "GEO_X",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna GEO_X usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "GEO_Y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna GEO_Y usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "GEO_LAT",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna GEO_LAT usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "GEO_LONG",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna GEO_LONG usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ID usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NAME",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NAME usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ROAD",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ROAD usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ADDRESS",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ADDRESS usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NEIGBORHOOD_NAMES",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NEIGBORHOOD_NAMES usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRICT_NAME",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DISTRICT_NAME usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TYPE_BAR",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TYPE_BAR usando la expresión value.toTitlecase()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ADDRESS",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "STREET",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna STREET en el índice 5 basada en la columna ADDRESS usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ADDRESS",
+    "expression": "grel:value\n.replace(\"Carrer \", \"\")\n.replace(\"Av \", \"\")\n.replace(\"Ptge \", \"\")\n.replace(\"Pg \", \"\")\n.replace(\"C \", \"\")\n.replace(/\\s*\\d+\\s*$/, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "STREET2",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna STREET2 en el índice 5 basada en la columna ADDRESS usando la expresión grel:value\n.replace(\"Carrer \", \"\")\n.replace(\"Av \", \"\")\n.replace(\"Ptge \", \"\")\n.replace(\"Pg \", \"\")\n.replace(\"C \", \"\")\n.replace(/\\s*\\d+\\s*$/, \"\")"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "TYPE_BAR",
+    "keyColumnName": "ID",
+    "separator": ",",
+    "description": "Une celdas con múltiples valores en columna TYPE_BAR"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "NAME",
+    "keyColumnName": "ID",
+    "separator": ",",
+    "description": "Une celdas con múltiples valores en columna NAME"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "TYPE_BAR",
+    "keyColumnName": "ID",
+    "separator": ",",
+    "description": "Une celdas con múltiples valores en columna TYPE_BAR"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "TYPE_BAR",
+    "keyColumnName": "ID",
+    "separator": ":",
+    "description": "Une celdas con múltiples valores en columna TYPE_BAR"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "STREET2",
+    "expression": "grel:value.replace(\"Pl \",\"\")\n.replace(\"De \",\"\")\n.replace(\"Trav \",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET2 usando la expresión grel:value.replace(\"Pl \",\"\")\n.replace(\"De \",\"\")\n.replace(\"Trav \",\"\")"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "TYPE_BAR",
+    "keyColumnName": "ID",
+    "separator": "|",
+    "description": "Une celdas con múltiples valores en columna TYPE_BAR"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRICT_NAME",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DISTRICT_NAME usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TYPE_BAR",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TYPE_BAR usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TYPE_BAR",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TYPE_BAR usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TYPE_BAR",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TYPE_BAR usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRICT_NAME",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DISTRICT_NAME usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRICT_NAME",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna DISTRICT_NAME usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NEIGBORHOOD_NAMES",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NEIGBORHOOD_NAMES usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NEIGBORHOOD_NAMES",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NEIGBORHOOD_NAMES usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "STREET",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "STREET",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "STREET2",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET2 usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "STREET2",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna STREET2 usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ADDRESS",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ADDRESS usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ADDRESS",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ADDRESS usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NAME",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NAME usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NAME",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna NAME usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ID usando la expresión value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ID usando la expresión value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "TYPE_BAR",
+    "keyColumnName": "ID",
+    "separator": "|",
+    "description": "Une celdas con múltiples valores en columna TYPE_BAR"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "TYPE_BAR",
+    "keyColumnName": "ID",
+    "separator": "|",
+    "description": "Une celdas con múltiples valores en columna TYPE_BAR"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "ID",
+    "keyColumnName": "ID",
+    "separator": "|",
+    "description": "Une celdas con múltiples valores en columna ID"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TYPE_BAR",
+    "expression": "grel:coalesce(\n    forEach(\n        row.record.cells[\"TYPE_BAR\"].value, \n        v, \n        v\n    ).join(\" | \"), \n    value\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TYPE_BAR usando la expresión grel:coalesce(\n    forEach(\n        row.record.cells[\"TYPE_BAR\"].value, \n        v, \n        v\n    ).join(\" | \"), \n    value\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TYPE_BAR",
+    "expression": "grel:coalesce(\n    forEach(\n        row.record.cells[\"TYPE_BAR\"].value, \n        v, \n        v\n    ).join(\" | \"), \n    value\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna TYPE_BAR usando la expresión grel:coalesce(\n    forEach(\n        row.record.cells[\"TYPE_BAR\"].value, \n        v, \n        v\n    ).join(\" | \"), \n    value\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ROAD_NUMBER",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ROAD_NUMBER usando la expresión value.toString()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ID",
+          "expression": "isBlank(value)",
+          "columnName": "ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ID",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "ID2",
+    "columnInsertIndex": 1,
+    "description": "Crear la columna ID2 en el índice 1 basada en la columna ID usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ID2",
+    "description": "Eliminar columna ID2"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ID",
+          "expression": "isBlank(value)",
+          "columnName": "ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "ROAD_NUMBER",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ROAD_NUMBER usando la expresión value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ID",
+          "expression": "isBlank(value)",
+          "columnName": "ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ROAD",
+    "expression": "grel:value.replace(\"C Aribau\",\"Carrer d'Aribau\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ROAD usando la expresión grel:value.replace(\"C Aribau\",\"Carrer d'Aribau\")"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ID",
+          "expression": "isBlank(value)",
+          "columnName": "ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NAME",
+    "description": "Vaciar las celdas en la columna NAME"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ID",
+          "expression": "isBlank(value)",
+          "columnName": "ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "ID",
+    "description": "Vaciar las celdas en la columna ID"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "TYPE_BAR",
+    "keyColumnName": "ID",
+    "separator": "|",
+    "description": "Une celdas con múltiples valores en columna TYPE_BAR"
+  },
+  {
+    "op": "core/row-removal",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "ID",
+          "expression": "value",
+          "columnName": "ID",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "description": "Remove rows"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ROAD",
+    "expression": "grel:if(value == null, null,\n  if(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i).length() > 0,\n     trim(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i)[0]),\n     null)\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "TYPE_ROAD",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna TYPE_ROAD en el índice 4 basada en la columna ROAD usando la expresión grel:if(value == null, null,\n  if(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i).length() > 0,\n     trim(value.find(/^\\s*(?:GRAN\\s+VIA|PASSEIG|AVENIDA|AVDA|AV|CALLE|CARRER|PLAÇA|PLAZA|PL|RAMBLA|Rbla|PG|PASEO|Pº|C)(?:[\\/\\.])?(?=[\\s,]|$)/i)[0]),\n     null)\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "STREET",
+    "description": "Eliminar columna STREET"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "STREET2",
+    "description": "Eliminar columna STREET2"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ID",
+    "newColumnName": "barId",
+    "description": "Renombra la columna ID a barId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NAME",
+    "newColumnName": "barName",
+    "description": "Renombra la columna NAME a barName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TYPE_BAR",
+    "newColumnName": "barType",
+    "description": "Renombra la columna TYPE_BAR a barType"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "GEO_LAT",
+    "newColumnName": "latitude",
+    "description": "Renombra la columna GEO_LAT a latitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "GEO_LONG",
+    "newColumnName": "longitude",
+    "description": "Renombra la columna GEO_LONG a longitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ZIP_CODE",
+    "newColumnName": "postCode",
+    "description": "Renombra la columna ZIP_CODE a postCode"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DISTRICT_ID",
+    "newColumnName": "districtId",
+    "description": "Renombra la columna DISTRICT_ID a districtId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DISTRICT_NAME",
+    "newColumnName": "districtName",
+    "description": "Renombra la columna DISTRICT_NAME a districtName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NEIGBORHOOD_NAMES",
+    "newColumnName": "neighborhoodName",
+    "description": "Renombra la columna NEIGBORHOOD_NAMES a neighborhoodName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NEIGHBORHOOD_ID",
+    "newColumnName": "neighborhoodId",
+    "description": "Renombra la columna NEIGHBORHOOD_ID a neighborhoodId"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ROAD",
+    "description": "Eliminar columna ROAD"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ADDRESS_ID",
+    "newColumnName": "addressId",
+    "description": "Renombra la columna ADDRESS_ID a addressId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ROAD_NUMBER",
+    "newColumnName": "addressNumber",
+    "description": "Renombra la columna ROAD_NUMBER a addressNumber"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TYPE_ROAD",
+    "newColumnName": "addressType",
+    "description": "Renombra la columna TYPE_ROAD a addressType"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna addressType usando la expresión value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ADDRESS",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna ADDRESS usando la expresión value.toUppercase()"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "barType",
+    "index": 0,
+    "description": "Mueve la columna barType a la posición 0"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "barType",
+    "index": 1,
+    "description": "Mueve la columna barType a la posición 1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "barType",
+    "index": 2,
+    "description": "Mueve la columna barType a la posición 2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "addressId",
+    "description": "Eliminar columna addressId"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ADDRESS",
+    "expression": "grel:value\n.replace(/^[\\/\\s]*(CARRER|C\\/|C\\.|C|CALLE|AVENIDA|AVDA|AV\\.?|AV|PG\\.?|PASSEIG|PASEO|Pº|GRAN VIA|RAMBLA|Rbla|PL\\.?|PLAZA|PLAÇA|PS\\.?|PZ\\.?)\\s+/i, \"\")\n.replace(/\\s+\\d+.*$/, \"\")\n.trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "addressName",
+    "columnInsertIndex": 5,
+    "description": "Crear la columna addressName en el índice 5 basada en la columna ADDRESS usando la expresión grel:value\n.replace(/^[\\/\\s]*(CARRER|C\\/|C\\.|C|CALLE|AVENIDA|AVDA|AV\\.?|AV|PG\\.?|PASSEIG|PASEO|Pº|GRAN VIA|RAMBLA|Rbla|PL\\.?|PLAZA|PLAÇA|PS\\.?|PZ\\.?)\\s+/i, \"\")\n.replace(/\\s+\\d+.*$/, \"\")\n.trim()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ADDRESS",
+    "description": "Eliminar columna ADDRESS"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "AV"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AVINGUDA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna addressType"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PG"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PASSEIG"
+      }
+    ],
+    "description": "Editar celdas en masa en columna addressType"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "PL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PLAÇA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna addressType"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "C"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CARRER"
+      }
+    ],
+    "description": "Editar celdas en masa en columna addressType"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "addressType",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RBLA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RAMBLA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna addressType"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "addressType",
+          "expression": "value",
+          "columnName": "addressType",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CARRER",
+                "l": "CARRER"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "addressName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CONSELL DE CENT",
+          "DEL CONSELL DE CENT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CONSELL DE CENT"
+      },
+      {
+        "from": [
+          "DE JOAQUÍN COSTA",
+          "JOAQUÍN COSTA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "JOAQUÍN COSTA"
+      },
+      {
+        "from": [
+          "CASANOVA",
+          "DE CASANOVA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CASANOVA"
+      },
+      {
+        "from": [
+          "MUNTANER",
+          "DE MUNTANER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MUNTANER"
+      },
+      {
+        "from": [
+          "PROVENÇA",
+          "DE PROVENÇA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PROVENÇA"
+      }
+    ],
+    "description": "Editar celdas en masa en columna addressName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Horta-guinardó"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Horta-Guinardó"
+      }
+    ],
+    "description": "Editar celdas en masa en columna districtName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sants-montjuïc"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sants-Montjuïc"
+      }
+    ],
+    "description": "Editar celdas en masa en columna districtName"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "latitude",
+    "expression": "grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,5)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna latitude usando la expresión grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,5)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "longitude",
+    "expression": "grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,5)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna longitude usando la expresión grel:value.toString().split(\".\")[0] + \".\" + value.toString().split(\".\")[1].slice(0,5)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "GEO_Y",
+    "description": "Eliminar columna GEO_Y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "GEO_X",
+    "description": "Eliminar columna GEO_X"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "neighborhoodName",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "neighborhoodName2",
+    "columnInsertIndex": 8,
+    "description": "Crear la columna neighborhoodName2 en el índice 8 basada en la columna neighborhoodName usando la expresión grel:value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q123705",
+        "name": "neighborhood"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column neighborhoodName2 to type Q123705"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "El Raval",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1758503",
+      "name": "El Raval",
+      "types": [
+        "Q75135432",
+        "Q123705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento El Raval (Q1758503) para las celdas que contienen \"El Raval\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Sant Pere, Santa Caterina I La Ribera",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3826875",
+      "name": "Sant Pere",
+      "types": [
+        "Q123705"
+      ],
+      "score": 53
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sant Pere (Q3826875) para las celdas que contienen \"Sant Pere, Santa Caterina I La Ribera\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "El Barri Gòtic",
+    "judgment": "matched",
+    "match": {
+      "id": "Q17154",
+      "name": "Gothic Quarter",
+      "types": [
+        "Q75135432",
+        "Q123705",
+        "Q1200957"
+      ],
+      "score": 88
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Gothic Quarter (Q17154) para las celdas que contienen \"El Barri Gòtic\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "La Sagrada Família",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2470217",
+      "name": "Sagrada Família",
+      "types": [
+        "Q75135432",
+        "Q123705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sagrada Família (Q2470217) para las celdas que contienen \"La Sagrada Família\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Sarrià",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1765582",
+      "name": "Sarrià-Sant Gervasi",
+      "types": [
+        "Q790344",
+        "Q149621"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sarrià-Sant Gervasi (Q1765582) para las celdas que contienen \"Sarrià\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "El Poblenou",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1404773",
+      "name": "El Poblenou",
+      "types": [
+        "Q75135432",
+        "Q123705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento El Poblenou (Q1404773) para las celdas que contienen \"El Poblenou\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Sants",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3596096",
+      "name": "Sants-Badal",
+      "types": [
+        "Q75135432",
+        "Q123705"
+      ],
+      "score": 62
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sants-Badal (Q3596096) para las celdas que contienen \"Sants\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "El Poble-sec",
+    "judgment": "matched",
+    "match": {
+      "id": "Q980253",
+      "name": "El Poble-sec",
+      "types": [
+        "Q75135432",
+        "Q123705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento El Poble-sec (Q980253) para las celdas que contienen \"El Poble-sec\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Sant Antoni",
+    "judgment": "matched",
+    "match": {
+      "id": "Q720994",
+      "name": "Sant Antoni",
+      "types": [
+        "Q75135432",
+        "Q123705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sant Antoni (Q720994) para las celdas que contienen \"Sant Antoni\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Les Corts",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3296693",
+      "name": "Les Corts",
+      "types": [
+        "Q75135432",
+        "Q123705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Les Corts (Q3296693) para las celdas que contienen \"Les Corts\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "districtName",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q790344",
+        "name": "district of Barcelona"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column districtName to type Q790344"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "neighborhoodName2",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "neighborhodWikidata",
+    "columnInsertIndex": 9,
+    "description": "Crear la columna neighborhodWikidata en el índice 9 basada en la columna neighborhoodName2 usando la expresión grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "neighborhodWikidata",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "neigborhoodWikdata2",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna neigborhoodWikdata2 en el índice 10 basada en la columna neighborhodWikidata usando la expresión grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neigborhoodWikdata2",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\"+value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna neigborhoodWikdata2 usando la expresión grel:\"https://www.wikidata.org/wiki/\"+value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "districtName",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "districName2",
+    "columnInsertIndex": 13,
+    "description": "Crear la columna districName2 en el índice 13 basada en la columna districtName usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "districtName",
+    "newColumnName": "districtName22",
+    "description": "Renombra la columna districtName a districtName22"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "districName2",
+    "newColumnName": "districName",
+    "description": "Renombra la columna districName2 a districName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "districName",
+    "newColumnName": "districtName",
+    "description": "Renombra la columna districName a districtName"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "districtName22",
+    "newColumnName": "districtName2",
+    "description": "Renombra la columna districtName22 a districtName2"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "districtName2",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "districtWikidata",
+    "columnInsertIndex": 13,
+    "description": "Crear la columna districtWikidata en el índice 13 basada en la columna districtName2 usando la expresión grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "neigborhoodWikdata2",
+    "newColumnName": "neigborhoodWikidata2",
+    "description": "Renombra la columna neigborhoodWikdata2 a neigborhoodWikidata2"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "districtWikidata",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\"+value",
+    "onError": "set-to-blank",
+    "newColumnName": "districtWikidata2",
+    "columnInsertIndex": 14,
+    "description": "Crear la columna districtWikidata2 en el índice 14 basada en la columna districtWikidata usando la expresión grel:\"https://www.wikidata.org/wiki/\"+value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "longitude",
+    "expression": "grel:cells[\"latitude\"].value + \",\" + cells[\"longitude\"].value",
+    "onError": "set-to-blank",
+    "newColumnName": "location",
+    "columnInsertIndex": 19,
+    "description": "Crear la columna location en el índice 19 basada en la columna longitude usando la expresión grel:cells[\"latitude\"].value + \",\" + cells[\"longitude\"].value"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "location",
+    "expression": "grel:\"Barcelona\"",
+    "onError": "set-to-blank",
+    "newColumnName": "City",
+    "columnInsertIndex": 20,
+    "description": "Crear la columna City en el índice 20 basada en la columna location usando la expresión grel:\"Barcelona\""
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "City",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "CityWikidata",
+    "columnInsertIndex": 21,
+    "description": "Crear la columna CityWikidata en el índice 21 basada en la columna City usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CityWikidata",
+    "newColumnName": "cityName2",
+    "description": "Renombra la columna CityWikidata a cityName2"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "City",
+    "newColumnName": "cityName",
+    "description": "Renombra la columna City a cityName"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cityName2",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q515",
+        "name": "city"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column cityName2 to type Q515"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cityName2",
+    "similarValue": "Barcelona",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1492",
+      "name": "Barcelona",
+      "types": [
+        "Q33146843",
+        "Q515"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Barcelona (Q1492) para las celdas que contienen \"Barcelona\" en la columna cityName2"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "cityName2",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "cityWikidata",
+    "columnInsertIndex": 22,
+    "description": "Crear la columna cityWikidata en el índice 22 basada en la columna cityName2 usando la expresión grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "cityWikidata",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\"+value",
+    "onError": "set-to-blank",
+    "newColumnName": "cityWikidata2",
+    "columnInsertIndex": 23,
+    "description": "Crear la columna cityWikidata2 en el índice 23 basada en la columna cityWikidata usando la expresión grel:\"https://www.wikidata.org/wiki/\"+value"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "neigborhoodWikidata2",
+    "newColumnName": "neighborhoodWikidata2",
+    "description": "Renombra la columna neigborhoodWikidata2 a neighborhoodWikidata2"
+  },
+   {
+    "op": "core/column-rename",
+    "oldColumnName": "neighborhodWikidata",
+    "newColumnName": "neighborhoodWikidata",
+    "description": "Renombra la columna neighborhodWikidata a neighborhoodWikidata"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q75135432",
+        "name": "administrative quarter in Barcelona"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column neighborhoodName2 to type Q75135432"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Sarrià-Sant Gervasi",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3321657",
+      "name": "Sant Gervasi-la Bonanova",
+      "types": [
+        "Q75135432",
+        "Q123705"
+      ],
+      "score": 60
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sant Gervasi-la Bonanova (Q3321657) para las celdas que contienen \"Sarrià-Sant Gervasi\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Sant Pere",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3826875",
+      "name": "Sant Pere",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sant Pere (Q3826875) para las celdas que contienen \"Sant Pere\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "neighborhoodName2",
+          "expression": "value",
+          "columnName": "neighborhoodName2",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Sant Andreu",
+                "l": "Sant Andreu"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Sant Andreu",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1650230",
+      "name": "Sant Andreu",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sant Andreu (Q1650230) para las celdas que contienen \"Sant Andreu\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "neighborhoodWikidata",
+    "description": "Eliminar columna neighborhoodWikidata"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "neighborhoodWikidata2",
+    "description": "Eliminar columna neighborhoodWikidata2"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "neighborhoodName2",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "neighborhoodWikidata",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna neighborhoodWikidata en el índice 10 basada en la columna neighborhoodName2 usando la expresión grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "neighborhoodWikidata",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\"+value",
+    "onError": "set-to-blank",
+    "newColumnName": "neighborhoodWikidata2",
+    "columnInsertIndex": 11,
+    "description": "Crear la columna neighborhoodWikidata2 en el índice 11 basada en la columna neighborhoodWikidata usando la expresión grel:\"https://www.wikidata.org/wiki/\"+value"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "neighborhoodName2",
+          "expression": "value",
+          "columnName": "neighborhoodName2",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Sarrià-Sant Gervasi",
+                "l": "Sarrià-Sant Gervasi"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Sarrià-Sant Gervasi",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1765582",
+      "name": "Sarrià-Sant Gervasi",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sarrià-Sant Gervasi (Q1765582) para las celdas que contienen \"Sarrià-Sant Gervasi\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "neighborhoodName2",
+          "expression": "value",
+          "columnName": "neighborhoodName2",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Sarrià-Sant Gervasi",
+                "l": "Sarrià-Sant Gervasi"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "neighborhoodName2",
+    "similarValue": "Sarrià-Sant Gervasi",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1765582",
+      "name": "Sarrià-Sant Gervasi",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Sarrià-Sant Gervasi (Q1765582) para las celdas que contienen \"Sarrià-Sant Gervasi\" en la columna neighborhoodName2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "neighborhoodWikidata",
+    "description": "Eliminar columna neighborhoodWikidata"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "neighborhoodWikidata2",
+    "description": "Eliminar columna neighborhoodWikidata2"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "neighborhoodName2",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "neighborhoodWikidata",
+    "columnInsertIndex": 9,
+    "description": "Crear la columna neighborhoodWikidata en el índice 9 basada en la columna neighborhoodName2 usando la expresión grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "neighborhoodWikidata",
+    "expression": "grel:\"https://www.wikidata.org/wiki/\"+value",
+    "onError": "set-to-blank",
+    "newColumnName": "neighborhoodWikidata2",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna neighborhoodWikidata2 en el índice 10 basada en la columna neighborhoodWikidata usando la expresión grel:\"https://www.wikidata.org/wiki/\"+value"
+  }
+]

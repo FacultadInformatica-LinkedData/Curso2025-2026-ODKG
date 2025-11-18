@@ -1,0 +1,1178 @@
+@prefix comp: <http://semweb.mmlab.be/ns/rml-compression#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix id: <http://spanishuniversities.data.es/lude/resource/> .
+@prefix lude: <http://spanishuniversities.data.es/lude/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a> a lude:AcademicLevel;
+  lude:code "d6d85d89b4612501521435bd3f620a9a";
+  rdfs:label "Grado" .
+
+<ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212> a lude:AcademicLevel;
+  lude:code "eb0a191797624dd3a48fa681d3061212";
+  rdfs:label "Máster" .
+
+<ex:AcademicLevel/fba30e9ec1935ca7d36277ba76dddbba> a lude:AcademicLevel;
+  lude:code "fba30e9ec1935ca7d36277ba76dddbba";
+  rdfs:label "Doble Grado" .
+
+<ex:Degree/11ffe5f0a30616f43ceb57ec425e2714> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2009-05-06T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-FISICA";
+  lude:councilOfUniversitiesReportDate "2009-01-06T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/e9d23fca415ccfabbb651ad240857a58>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "48";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=67";
+  rdfs:label "Física" .
+
+<ex:Degree/132499e2ebbfdcfbfc4a5ae5baa2db39> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2016-03-05T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-HOTELERA";
+  lude:councilOfUniversitiesReportDate "2016-09-06T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/526c5956cee234c71cb88459e94dffa1>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "75";
+  lude:teachingModality "Presencial";
+  lude:url "http://euturismoaltamira.com/";
+  rdfs:label "Gestión Hotelera y Turística" .
+
+<ex:Degree/148497c4b88f96ad1d9251b7c1f70486> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2020-09-03T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "78";
+  lude:code "G-INGCIVIL";
+  lude:councilOfUniversitiesReportDate "2020-05-19T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/21a500bf27899bfac52c35541ee7d88c>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "60";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=212";
+  rdfs:label "Ingeniería Civil" .
+
+<ex:Degree/160dbb7be124485a8561f70d835ff426> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-04-06T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-ENERGETICO";
+  lude:councilOfUniversitiesReportDate "2010-06-30T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/500e5776c8175963bc4431d45b80afe7>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "50";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=101";
+  rdfs:label "Ingeniería de los Recursos Energéticos" .
+
+<ex:Degree/2056639b45edeb3c36fe2ea836ea005b> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2009-05-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-MEDICINA";
+  lude:councilOfUniversitiesReportDate "2009-01-06T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/0c7fbe3807acac8023e5f39694ee8d9d>;
+  lude:ectsCredits "360";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "124";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=66";
+  rdfs:label "Medicina" .
+
+<ex:Degree/27826c7a530bdb7ba061f7da5e6dcf64> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-07-16T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-NAUTICA";
+  lude:councilOfUniversitiesReportDate "2010-07-29T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/84cc13c337fb504bc292e8934c23be7f>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "60";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=125";
+  rdfs:label "Ingeniería Náutica y Transporte Marítimo" .
+
+<ex:Degree/2b03af1cc44b5e7adbd9b2d9448d04dd> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-04-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-ELECTRICA";
+  lude:councilOfUniversitiesReportDate "2010-03-05T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/5037feee91b0a3af120ac6eb24389562>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "45";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=103";
+  rdfs:label "Ingeniería Eléctrica" .
+
+<ex:Degree/3080249195dc88a973025d9633c7453f> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-06-21T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-MARITIMA";
+  lude:councilOfUniversitiesReportDate "2010-06-30T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/84cc13c337fb504bc292e8934c23be7f>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "40";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=112";
+  rdfs:label "Ingeniería Marítima y Arquitectura Naval" .
+
+<ex:Degree/4be50d2fee57044950cc32a84ee65778> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2009-09-07T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-GEOGRAFIA";
+  lude:councilOfUniversitiesReportDate "2009-01-06T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/f67d2f6cfd7a5673f475a829be212465>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "40";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=69";
+  rdfs:label "Geografía y Ordenación del Territorio" .
+
+<ex:Degree/4bf02ba6097c72f9e7cbfbff54d72bfb> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-06-30T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-LABORALES";
+  lude:councilOfUniversitiesReportDate "2010-06-30T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/2b4513adb31444eb0fc1dabe7bd56ef4>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "75";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=118";
+  rdfs:label "Relaciones Laborales" .
+
+<ex:Degree/53249678ad2277e09a9c16353cf0cba5> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2009-11-30T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-ADE";
+  lude:councilOfUniversitiesReportDate "2010-01-22T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/0387a6e2d6972bb06c2aab80bef9437c>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "175";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=116";
+  rdfs:label "Administración y Dirección de Empresas" .
+
+<ex:Degree/61a931c5941d8a3f1d7251a34f3f9310> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-04-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-MECANICA";
+  lude:councilOfUniversitiesReportDate "2010-03-05T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/5037feee91b0a3af120ac6eb24389562>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "60";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=109";
+  rdfs:label "Ingeniería Mecánica" .
+
+<ex:Degree/61f99c01045bd6035a2c88c9b1081d41> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2009-11-30T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-ECONOMIA";
+  lude:councilOfUniversitiesReportDate "2010-01-22T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/0387a6e2d6972bb06c2aab80bef9437c>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "105";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=117";
+  rdfs:label "Economía" .
+
+<ex:Degree/64d6e72af9e88bea2e3c4135f2830a61> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2009-10-06T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-HISTORIA";
+  lude:councilOfUniversitiesReportDate "2009-01-06T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/f67d2f6cfd7a5673f475a829be212465>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "65";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=70";
+  rdfs:label "Historia" .
+
+<ex:Degree/6717f3320d4eaa1741bcb7daffb7ecd5> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2009-05-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-FISIOTER";
+  lude:councilOfUniversitiesReportDate "2009-01-06T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/b7a8d9bbe3362beec20d0f3dff0c8a78>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "160";
+  lude:teachingModality "Presencial";
+  lude:url "https://www.eug.es/estudios/grado-en-fisioterapia-torrelavega";
+  rdfs:label "Fisioterapia" .
+
+<ex:Degree/6ee16e4cd1ad37b380298f765ec8b0e4> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-02-03T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-INFANTIL";
+  lude:councilOfUniversitiesReportDate "2010-10-03T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/9a841e640f492b5b066dcdc3b0dbc72c>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "110";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=110";
+  rdfs:label "Magisterio en Educación Infantil" .
+
+<ex:Degree/748a66deafd72c75fc516fba84e48931> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-07-19T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-DERECHO";
+  lude:councilOfUniversitiesReportDate "2010-07-29T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/2b4513adb31444eb0fc1dabe7bd56ef4>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "125";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=119";
+  rdfs:label "Derecho" .
+
+<ex:Degree/7769b34d0f5c5c10f8feaec2eabbb752> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2020-10-03T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-BIOMEDICAS";
+  lude:councilOfUniversitiesReportDate "2020-05-19T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/0c7fbe3807acac8023e5f39694ee8d9d>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "40";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=211";
+  rdfs:label "Ciencias Biomédicas" .
+
+<ex:Degree/79d8e72546ef13057aaf32427d83a70c> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-04-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-MINEROS";
+  lude:councilOfUniversitiesReportDate "2010-03-05T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/500e5776c8175963bc4431d45b80afe7>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "40";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=102";
+  rdfs:label "Ingeniería de los Recursos Mineros" .
+
+<ex:Degree/7bef39d05eae0a480b959e249fefa8fe> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2009-11-26T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "66";
+  lude:code "G-ENFERMERIA";
+  lude:councilOfUniversitiesReportDate "2009-11-30T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/9c62f0e6d936b0e0413eb0f438debaaf>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "83";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=120";
+  rdfs:label "Enfermería" .
+
+<ex:Degree/91673201c6b11833d9e5cda129d48ac9> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-07-16T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-MARINA";
+  lude:councilOfUniversitiesReportDate "2010-07-29T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/84cc13c337fb504bc292e8934c23be7f>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "60";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=124";
+  rdfs:label "Ingeniería Marina" .
+
+<ex:Degree/9b0de0b61649cd6e27756dbf16c8e4c9> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2011-05-26T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-HISPANICOS";
+  lude:councilOfUniversitiesReportDate "2011-08-06T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/7a24c9fa6b056c6f88549cab35a7fc07>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "50";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=136";
+  rdfs:label "Estudios Hispánicos" .
+
+<ex:Degree/ad890ff02c205a2d05d1570f9dc8a1f8> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-04-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-QUIMICA";
+  lude:councilOfUniversitiesReportDate "2010-03-05T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/5037feee91b0a3af120ac6eb24389562>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "60";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=113";
+  rdfs:label "Ingeniería Química" .
+
+<ex:Degree/af83466224c44f884ccad3db0176bad6> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-04-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-INFORMATIC";
+  lude:councilOfUniversitiesReportDate "2010-03-05T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/e9d23fca415ccfabbb651ad240857a58>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "60";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=98";
+  rdfs:label "Ingeniería Informática" .
+
+<ex:Degree/b7eaf5d44406c1c15f56a5726717ca78> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-04-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-TELECOM";
+  lude:councilOfUniversitiesReportDate "2010-03-05T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/5037feee91b0a3af120ac6eb24389562>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "70";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=99";
+  rdfs:label "Ingeniería de Tecnologías de Telecomunicación" .
+
+<ex:Degree/bd6ff0ba38ef577f62ccdbd127186948> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-02-03T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-PRIMARIA";
+  lude:councilOfUniversitiesReportDate "2010-10-03T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/9a841e640f492b5b066dcdc3b0dbc72c>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "175";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=111";
+  rdfs:label "Magisterio en Educación Primaria" .
+
+<ex:Degree/ccd8de9e96f2dc4b5e2b54162cffb261> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-04-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-INDUSTRIAL";
+  lude:councilOfUniversitiesReportDate "2010-03-05T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/5037feee91b0a3af120ac6eb24389562>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "60";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=108";
+  rdfs:label "Ingeniería en Tecnologías Industriales" .
+
+<ex:Degree/d680cdf3ade6e18227abf9fdcdb95e30> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2011-11-25T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-LOGOPEDIA";
+  lude:councilOfUniversitiesReportDate "2012-01-06T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/b7a8d9bbe3362beec20d0f3dff0c8a78>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "40";
+  lude:teachingModality "Presencial";
+  lude:url "https://www.eug.es/estudios/grado-en-logopedia";
+  rdfs:label "Logopedia" .
+
+<ex:Degree/ec41164461c40b94f58a69d8213c529f> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2009-05-25T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "60";
+  lude:code "G-MATEMATICA";
+  lude:councilOfUniversitiesReportDate "2009-01-06T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/e9d23fca415ccfabbb651ad240857a58>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "48";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=68";
+  rdfs:label "Matemáticas" .
+
+<ex:Degree/fefb28b3122d87c5ad7866721835f16e> a lude:Degree;
+  lude:AnecaAssessmentReportDate "2010-04-29T00:00:00Z";
+  lude:academicYear "2025-2026";
+  lude:basicTrainingCredits "72";
+  lude:code "G-AUTOMATICA";
+  lude:councilOfUniversitiesReportDate "2010-03-05T00:00:00Z";
+  lude:deliveredAt <ex:Faculty/5037feee91b0a3af120ac6eb24389562>;
+  lude:ectsCredits "240";
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  lude:language "ESPAÑOL";
+  lude:newStudentsPosts "45";
+  lude:teachingModality "Presencial";
+  lude:url "https://web.unican.es/estudios/detalle-estudio?p=107";
+  rdfs:label "Ingeniería en Electrónica Industrial y Automática" .
+
+<ex:Faculty/0387a6e2d6972bb06c2aab80bef9437c> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "FACULTAD DE CIENCIAS ECONOMICAS Y EMPRESARIALES" .
+
+<ex:Faculty/0c7fbe3807acac8023e5f39694ee8d9d> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "FACULTAD DE MEDICINA" .
+
+<ex:Faculty/21a500bf27899bfac52c35541ee7d88c> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "ESCUELA TECNICA SUPERIOR DE INGENIEROS DE CAMINOS, CANALES Y PUERTOS" .
+
+<ex:Faculty/2b4513adb31444eb0fc1dabe7bd56ef4> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "FACULTAD DE DERECHO" .
+
+<ex:Faculty/500e5776c8175963bc4431d45b80afe7> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "ESCUELA POLITECNICA DE INGENIERIA DE MINAS Y ENERGIA" .
+
+<ex:Faculty/5037feee91b0a3af120ac6eb24389562> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "ESCUELA TECNICA SUPERIOR DE INGENIEROS INDUSTRIALES Y DE TELECOMUNICACION" .
+
+<ex:Faculty/526c5956cee234c71cb88459e94dffa1> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "ESCUELA UNIVERSITARIA DE TURISMO ALTAMIRA" .
+
+<ex:Faculty/7a24c9fa6b056c6f88549cab35a7fc07> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "Centro Internacional de Estudios Superiores del Español (CIESE-Comillas)" .
+
+<ex:Faculty/84cc13c337fb504bc292e8934c23be7f> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "ESCUELA TECNICA SUPERIOR DE NAUTICA" .
+
+<ex:Faculty/9a841e640f492b5b066dcdc3b0dbc72c> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "FACULTAD DE EDUCACION" .
+
+<ex:Faculty/9c62f0e6d936b0e0413eb0f438debaaf> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "FACULTAD DE ENFERMERÍA" .
+
+<ex:Faculty/b7a8d9bbe3362beec20d0f3dff0c8a78> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "ESCUELA UNIVERSITARIA DE FISIOTERAPIA 'GIMBERNAT CANTABRIA'" .
+
+<ex:Faculty/e9d23fca415ccfabbb651ad240857a58> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "FACULTAD DE CIENCIAS" .
+
+<ex:Faculty/f67d2f6cfd7a5673f475a829be212465> a lude:Faculty;
+  lude:hasFaculty <ex:University/3105c9fd85b6cfd224f8d1b92970ab2f>;
+  rdfs:label "FACULTAD DE FILOSOFÍA Y LETRAS" .
+
+<ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> a lude:KnowledgeArea;
+  lude:code "03b7c4d6f22bd8efa1659d8e6a06d97e";
+  rdfs:label "Ciencias Sociales y Jurídicas" .
+
+<ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> a lude:KnowledgeArea;
+  lude:code "0957ac6a7296b4e6ef4d4e8d25691025";
+  rdfs:label "Ingeniería y Arquitectura" .
+
+<ex:KnowledgeArea/3a55b686cea34a8923b6ea395549772e> a lude:KnowledgeArea;
+  lude:code "3a55b686cea34a8923b6ea395549772e";
+  rdfs:label "Otros" .
+
+<ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> a lude:KnowledgeArea;
+  lude:code "72ceb55b13672d5fdbac7ce07f1e85a8";
+  rdfs:label "Artes y Humanidades" .
+
+<ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe> a lude:KnowledgeArea;
+  lude:code "afc4b5d3b7e78e8fb66cf859c95aaefe";
+  rdfs:label "Ciencias de la Salud" .
+
+<ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> a lude:KnowledgeArea;
+  lude:code "cca488c1d5d31aa9a4c4356b47f75ebd";
+  rdfs:label "Ciencias" .
+
+<ex:University/080475033eeb8f14c9bd1119f9fa6871> a lude:University;
+  lude:acronym "UNED";
+  lude:cif "Q2818016D";
+  lude:email "infouned@adm.uned.es";
+  lude:id "080475033eeb8f14c9bd1119f9fa6871";
+  lude:modality "No Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "91398600";
+  lude:type "Pública";
+  lude:url "www.uned.es";
+  rdfs:label "Universidad Nacional de Educación a Distancia" .
+
+<ex:University/094757ed9d7e9bb8929a087e18874962> a lude:University;
+  lude:acronym "UOV";
+  lude:cif "Q3318001I";
+  lude:email "rectorado@uniovi.es";
+  lude:id "094757ed9d7e9bb8929a087e18874962";
+  lude:modality "Presencial";
+  lude:publicationYear "1608";
+  lude:telephone "985104058";
+  lude:type "Pública";
+  lude:url "www.uniovi.es";
+  rdfs:label "Universidad de Oviedo" .
+
+<ex:University/15d26bf729b84e22210b99d94c66cd90> a lude:University;
+  lude:acronym "UVI";
+  lude:cif "Q8650002B";
+  lude:email "informacion@uvigo.es";
+  lude:id "15d26bf729b84e22210b99d94c66cd90";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "986812000";
+  lude:type "Pública";
+  lude:url "www.uvigo.es";
+  rdfs:label "Universidad de Vigo" .
+
+<ex:University/16249b9d3890e9951fa8dcc315733ea8> a lude:University;
+  lude:acronym "UEX";
+  lude:cif "Q0618001B";
+  lude:email "virtual@unex.es";
+  lude:id "16249b9d3890e9951fa8dcc315733ea8";
+  lude:modality "Presencial";
+  lude:publicationYear "1973";
+  lude:telephone "924289300";
+  lude:type "Pública";
+  lude:url "www.unex.es";
+  rdfs:label "Universidad de Extremadura" .
+
+<ex:University/17a1b9e0f1c1e0719761a30d50700965> a lude:University;
+  lude:acronym "UPGC";
+  lude:cif "Q3518001G";
+  lude:email "universidad@ulpgc.es";
+  lude:id "17a1b9e0f1c1e0719761a30d50700965";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "928451000";
+  lude:type "Pública";
+  lude:url "www.ulpgc.es";
+  rdfs:label "Universidad de Las Palmas de Gran Canaria" .
+
+<ex:University/186d47028db001c7a7d88906c21f5fee> a lude:University;
+  lude:acronym "UPC";
+  lude:cif "Q0818003F";
+  lude:email "info@upc.edu";
+  lude:id "186d47028db001c7a7d88906c21f5fee";
+  lude:modality "Presencial";
+  lude:publicationYear "1971";
+  lude:telephone "934016200";
+  lude:type "Pública";
+  lude:url "www.upc.es";
+  rdfs:label "Universidad Politécnica de Catalunya" .
+
+<ex:University/24e63f7c3d8596b44655e9ad9bfdf5f5> a lude:University;
+  lude:acronym "UZA";
+  lude:cif "Q5018001G";
+  lude:email "ciu@unizar.es";
+  lude:id "24e63f7c3d8596b44655e9ad9bfdf5f5";
+  lude:modality "Presencial";
+  lude:publicationYear "1542";
+  lude:telephone "976761001";
+  lude:type "Pública";
+  rdfs:label "Universidad de Zaragoza" .
+
+<ex:University/26e6f2790707f868f9d05141e6f2f906> a lude:University;
+  lude:acronym "UDG";
+  lude:cif "Q6750002E";
+  lude:email "informacio@udg.edu";
+  lude:id "26e6f2790707f868f9d05141e6f2f906";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "972418046";
+  lude:type "Pública";
+  rdfs:label "Universitat de Girona" .
+
+<ex:University/2ddd97caa885c032af0e206d1a7b5c85> a lude:University;
+  lude:acronym "UNIA";
+  lude:cif "Q7350007F";
+  lude:email "postgrado@unia.es";
+  lude:id "2ddd97caa885c032af0e206d1a7b5c85";
+  lude:modality "Especial";
+  lude:publicationYear "2013";
+  lude:telephone "954462299";
+  lude:type "Pública";
+  rdfs:label "Universidad Internacional de Andalucía" .
+
+<ex:University/2f0fa6cb7c08610911b3258fd5f2738a> a lude:University;
+  lude:acronym "UIB";
+  lude:cif "Q0718001A";
+  lude:email "informacio@uib.es";
+  lude:id "2f0fa6cb7c08610911b3258fd5f2738a";
+  lude:modality "Presencial";
+  lude:publicationYear "1978";
+  lude:telephone "971173000";
+  lude:type "Pública";
+  lude:url "www.uib.es/";
+  rdfs:label "Universitat de les Illes Balears" .
+
+<ex:University/30962703623f1f1d21c737a0c0673761> a lude:University;
+  lude:acronym "UMA";
+  lude:cif "Q2918001E";
+  lude:email "informacion@uma.es";
+  lude:id "30962703623f1f1d21c737a0c0673761";
+  lude:modality "Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "952131000";
+  lude:type "Pública";
+  lude:url "www.uma.es";
+  rdfs:label "Universidad de Málaga" .
+
+<ex:University/3105c9fd85b6cfd224f8d1b92970ab2f> a lude:University;
+  lude:acronym "UCN";
+  lude:cif "Q3918001C";
+  lude:email "acceso@unican.es";
+  lude:id "3105c9fd85b6cfd224f8d1b92970ab2f";
+  lude:modality "Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "942200984";
+  lude:type "Pública";
+  lude:url "www.unican.es";
+  rdfs:label "Universidad de Cantabria" .
+
+<ex:University/330a9bcca27a6c6e467081bfdc1e65cd> a lude:University;
+  lude:acronym "UAH";
+  lude:cif "Q2818018J";
+  lude:email "ciu@uah.es";
+  lude:id "330a9bcca27a6c6e467081bfdc1e65cd";
+  lude:modality "Presencial";
+  lude:publicationYear "1977";
+  lude:telephone "918854000";
+  lude:type "Pública";
+  lude:url "www.uah.es";
+  rdfs:label "Universidad de Alcalá" .
+
+<ex:University/3bd27a309cbe4e2d7f35ec99b74525c0> a lude:University;
+  lude:acronym "UPF";
+  lude:cif "Q5850017D";
+  lude:id "3bd27a309cbe4e2d7f35ec99b74525c0";
+  lude:modality "Presencial";
+  lude:publicationYear "1990";
+  lude:telephone "935422000";
+  lude:type "Pública";
+  lude:url "www.upf.edu";
+  rdfs:label "Universidad Pompeu Fabra" .
+
+<ex:University/4bf5231621b187a3ed12c5741fc3f19d> a lude:University;
+  lude:acronym "UPM";
+  lude:cif "Q2818015F";
+  lude:email "gabinete.rector@upm.es";
+  lude:id "4bf5231621b187a3ed12c5741fc3f19d";
+  lude:modality "Presencial";
+  lude:publicationYear "1971";
+  lude:telephone "913366200";
+  lude:type "Pública";
+  lude:url "www.upm.es";
+  rdfs:label "Universidad Politécnica de Madrid" .
+
+<ex:University/4d9d7d9cad3c91e4f4fff77c396ee9ee> a lude:University;
+  lude:acronym "UPV";
+  lude:cif "Q4618002B";
+  lude:email "informacion@upv.es";
+  lude:id "4d9d7d9cad3c91e4f4fff77c396ee9ee";
+  lude:modality "Presencial";
+  lude:publicationYear "1971";
+  lude:telephone "963877000";
+  lude:type "Pública";
+  lude:url "www.upv.es";
+  rdfs:label "Universitat Politècnica de València" .
+
+<ex:University/51dcd00716a08519e65a732cb87c3b71> a lude:University;
+  lude:acronym "USAL";
+  lude:cif "Q3718001E";
+  lude:email "infogral@usal.es";
+  lude:id "51dcd00716a08519e65a732cb87c3b71";
+  lude:modality "Presencial";
+  lude:publicationYear "1218";
+  lude:telephone "923294400";
+  lude:type "Pública";
+  lude:url "www.usal.es";
+  rdfs:label "Universidad de Salamanca" .
+
+<ex:University/64597f645a8194bb9beed6a3aa675d5b> a lude:University;
+  lude:acronym "ULL";
+  lude:cif "Q3818001D";
+  lude:email "prensa1@ull.es";
+  lude:id "64597f645a8194bb9beed6a3aa675d5b";
+  lude:modality "Presencial";
+  lude:publicationYear "1792";
+  lude:telephone "922319000";
+  lude:type "Pública";
+  lude:url "www.ull.es";
+  rdfs:label "Universidad de La Laguna" .
+
+<ex:University/703d90006d377d97e3212ab3312a4e0d> a lude:University;
+  lude:acronym "USC";
+  lude:cif "Q1518001A";
+  lude:email "reitor@usc.es";
+  lude:id "703d90006d377d97e3212ab3312a4e0d";
+  lude:modality "Presencial";
+  lude:publicationYear "1504";
+  lude:telephone "981563100";
+  lude:type "Pública";
+  lude:url "www.usc.es";
+  rdfs:label "Universidad de Santiago de Compostela" .
+
+<ex:University/79c02c40f6f40e7dbda1c9193c995152> a lude:University;
+  lude:acronym "UPO";
+  lude:cif "Q9150016E";
+  lude:id "79c02c40f6f40e7dbda1c9193c995152";
+  lude:modality "Presencial";
+  lude:publicationYear "1997";
+  lude:telephone "954349200";
+  lude:type "Pública";
+  lude:url "www.upo.es";
+  rdfs:label "Universidad Pablo de Olavide" .
+
+<ex:University/7a90ec99428048f3a58539d18c749ea7> a lude:University;
+  lude:acronym "URJC";
+  lude:cif "Q2803011B";
+  lude:email "info@urjc.es";
+  lude:id "7a90ec99428048f3a58539d18c749ea7";
+  lude:modality "Presencial";
+  lude:publicationYear "1996";
+  lude:telephone "916655060";
+  lude:type "Pública";
+  lude:url "www.urjc.es";
+  rdfs:label "Universidad Rey Juan Carlos" .
+
+<ex:University/7ce4c67f7247673210d9b6d8aa5e7570> a lude:University;
+  lude:acronym "UBA";
+  lude:cif "Q0818001J";
+  lude:email "comunicacio@ub.edu";
+  lude:id "7ce4c67f7247673210d9b6d8aa5e7570";
+  lude:modality "Presencial";
+  lude:publicationYear "1450";
+  lude:telephone "934035417";
+  lude:type "Pública";
+  lude:url "www.ub.es";
+  rdfs:label "Universidad de Barcelona" .
+
+<ex:University/871a4d42a733c080da0f1935663a2f05> a lude:University;
+  lude:acronym "UIMP";
+  lude:cif "Q2818022B";
+  lude:id "871a4d42a733c080da0f1935663a2f05";
+  lude:modality "Especial";
+  lude:publicationYear "1945";
+  lude:telephone "915920600";
+  lude:type "Pública";
+  lude:url "www.uimp.es";
+  rdfs:label "Universidad Internacional Menéndez Pelayo" .
+
+<ex:University/8841d88268e139663a8723e418715e78> a lude:University;
+  lude:acronym "URV";
+  lude:cif "Q9350003A";
+  lude:email "info@urv.cat";
+  lude:id "8841d88268e139663a8723e418715e78";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "977558000";
+  lude:type "Pública";
+  lude:url "www.urv.cat/ca";
+  rdfs:label "Universidad Rovira i Virgili" .
+
+<ex:University/91aa5268851f200c64bd1a238ed37fcf> a lude:University;
+  lude:acronym "UAB";
+  lude:cif "Q0818002H";
+  lude:email "informacio@uab.es";
+  lude:id "91aa5268851f200c64bd1a238ed37fcf";
+  lude:modality "Presencial";
+  lude:publicationYear "1968";
+  lude:telephone "935811000";
+  lude:type "Pública";
+  lude:url "www.uab.es";
+  rdfs:label "Universidad Autónoma de Barcelona" .
+
+<ex:University/92c081b3e4299316155ea45962241086> a lude:University;
+  lude:acronym "UVA";
+  lude:cif "Q4718001C";
+  lude:email "valladolid@uva.es";
+  lude:id "92c081b3e4299316155ea45962241086";
+  lude:modality "Presencial";
+  lude:publicationYear "1241";
+  lude:telephone "983423000";
+  lude:type "Pública";
+  rdfs:label "Universidad de Valladolid" .
+
+<ex:University/92c852850da0a33857691151f42ac19a> a lude:University;
+  lude:acronym "UJI";
+  lude:cif "Q6250003H";
+  lude:email "info@uji.es";
+  lude:id "92c852850da0a33857691151f42ac19a";
+  lude:modality "Presencial";
+  lude:publicationYear "1991";
+  lude:telephone "964728000";
+  lude:type "Pública";
+  lude:url "www.uji.es";
+  rdfs:label "Universidad Jaume I de Castellón" .
+
+<ex:University/9d791fc58c21adf30d157657e55c4355> a lude:University;
+  lude:acronym "UCA";
+  lude:cif "Q1132001G";
+  lude:email "relaciones.institucionales@uca.es";
+  lude:id "9d791fc58c21adf30d157657e55c4355";
+  lude:modality "Presencial";
+  lude:publicationYear "1979";
+  lude:telephone "956015033";
+  lude:type "Pública";
+  lude:url "www.uca.es";
+  rdfs:label "Universidad de Cádiz" .
+
+<ex:University/a0b65722ec5194abfd7f9ba621a7dd1d> a lude:University;
+  lude:acronym "UJA";
+  lude:cif "Q7350006H";
+  lude:id "a0b65722ec5194abfd7f9ba621a7dd1d";
+  lude:modality "Presencial";
+  lude:publicationYear "1993";
+  lude:telephone "953212121";
+  lude:type "Pública";
+  lude:url "www.ujaen.es";
+  rdfs:label "Universidad de Jaén" .
+
+<ex:University/a62a164f781be26dd225dfda47b78c12> a lude:University;
+  lude:acronym "UCLM";
+  lude:cif "Q1368009E";
+  lude:email "webmaster@uclm.es";
+  lude:id "a62a164f781be26dd225dfda47b78c12";
+  lude:modality "Presencial";
+  lude:publicationYear "1982";
+  lude:telephone "902204100";
+  lude:type "Pública";
+  lude:url "www.uclm.es";
+  rdfs:label "Universidad de Castilla-La Mancha" .
+
+<ex:University/aeaa439db599d073395f84fb7fa10a54> a lude:University;
+  lude:acronym "UPNA";
+  lude:cif "Q3150012G";
+  lude:email "infoweb@unavarra.es";
+  lude:id "aeaa439db599d073395f84fb7fa10a54";
+  lude:modality "Presencial";
+  lude:publicationYear "1987";
+  lude:telephone "948169000";
+  lude:type "Pública";
+  lude:url "www.unavarra.es";
+  rdfs:label "Universidad Pública de Navarra" .
+
+<ex:University/bd5d3da0c4dfc8205ca85ea0c1699a62> a lude:University;
+  lude:acronym "UMH";
+  lude:cif "Q5350015C";
+  lude:email "info@umh.es";
+  lude:id "bd5d3da0c4dfc8205ca85ea0c1699a62";
+  lude:modality "Presencial";
+  lude:publicationYear "1996";
+  lude:telephone "966658500";
+  lude:type "Pública";
+  lude:url "www.umh.es";
+  rdfs:label "Universidad Miguel Hernández de Elche" .
+
+<ex:University/bf0d31e1fd4ee242c0fe00c2ee08b759> a lude:University;
+  lude:acronym "UDL";
+  lude:cif "Q7550001G";
+  lude:email "info@udl.cat";
+  lude:id "bf0d31e1fd4ee242c0fe00c2ee08b759";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "973702000";
+  lude:type "Pública";
+  lude:url "www.udl.es/ca/es/";
+  rdfs:label "Universidad de Lleida" .
+
+<ex:University/c50901012309aca2785eb50ea4c8f87b> a lude:University;
+  lude:acronym "UCAR";
+  lude:cif "Q2818029G";
+  lude:email "futurosestudiantes@uc3m.es";
+  lude:id "c50901012309aca2785eb50ea4c8f87b";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "916249500";
+  lude:type "Pública";
+  lude:url "www.uc3m.es";
+  rdfs:label "Universidad Carlos III de Madrid" .
+
+<ex:University/c6abab9cddd0b921adc603debfcca50e> a lude:University;
+  lude:acronym "UAL";
+  lude:cif "Q5450008G";
+  lude:email "gprensa@ual.es";
+  lude:id "c6abab9cddd0b921adc603debfcca50e";
+  lude:modality "Presencial";
+  lude:publicationYear "1993";
+  lude:telephone "950015570";
+  lude:type "Pública";
+  lude:url "www.ual.es";
+  rdfs:label "Universidad de Almería" .
+
+<ex:University/c73f658b0a9e2a5097a9ae889dd56474> a lude:University;
+  lude:acronym "UV";
+  lude:cif "Q4618001D";
+  lude:email "servei.estudiants@uv.es";
+  lude:id "c73f658b0a9e2a5097a9ae889dd56474";
+  lude:modality "Presencial";
+  lude:publicationYear "1502";
+  lude:telephone "963864100";
+  lude:type "Pública";
+  lude:url "www.uv.es";
+  rdfs:label "Universitat de València" .
+
+<ex:University/c8b4be930789e86c8d8b17d773af6d7e> a lude:University;
+  lude:acronym "ULE";
+  lude:cif "Q2432001B";
+  lude:email "webmaster@unileon.es";
+  lude:id "c8b4be930789e86c8d8b17d773af6d7e";
+  lude:modality "Presencial";
+  lude:publicationYear "1979";
+  lude:telephone "987291000";
+  lude:type "Pública";
+  lude:url "www.unileon.es";
+  rdfs:label "Universidad de León" .
+
+<ex:University/d30bbd19fa77d8470334a259e060006e> a lude:University;
+  lude:acronym "EHU";
+  lude:cif "Q4818001B";
+  lude:email "rgzadmin@lg.ehu.es";
+  lude:id "d30bbd19fa77d8470334a259e060006e";
+  lude:modality "Presencial";
+  lude:publicationYear "1968";
+  lude:telephone "946012000";
+  lude:type "Pública";
+  lude:url "www.ehu.es";
+  rdfs:label "Universidad del País Vasco/Euskal Herriko Unibertsitatea" .
+
+<ex:University/d4092e4beec5ade3eb17379b7450f0b9> a lude:University;
+  lude:acronym "UCO";
+  lude:cif "Q1418001B";
+  lude:email "informacion@uco.es";
+  lude:id "d4092e4beec5ade3eb17379b7450f0b9";
+  lude:modality "Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "957218000";
+  lude:type "Pública";
+  lude:url "www.uco.es";
+  rdfs:label "Universidad de Córdoba" .
+
+<ex:University/dbca02858a647c576208370194649766> a lude:University;
+  lude:acronym "UGR";
+  lude:cif "Q1818002F";
+  lude:email "csirc@ugr.es";
+  lude:id "dbca02858a647c576208370194649766";
+  lude:modality "Presencial";
+  lude:publicationYear "1531";
+  lude:telephone "958243000";
+  lude:type "Pública";
+  lude:url "www.ugr.es";
+  rdfs:label "Universidad de Granada" .
+
+<ex:University/dcbcd7e79ed9bec816e6a427d84bbf64> a lude:University;
+  lude:acronym "UR";
+  lude:cif "Q2618002F";
+  lude:email "sec.general@unirioja.es";
+  lude:id "dcbcd7e79ed9bec816e6a427d84bbf64";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "941299104";
+  lude:type "Pública";
+  lude:url "www.unirioja.es";
+  rdfs:label "Universidad de La Rioja" .
+
+<ex:University/e00161d1619c9c29b683d70c49b1341c> a lude:University;
+  lude:acronym "UA";
+  lude:cif "Q0332001G";
+  lude:email "informacio@ua.es";
+  lude:id "e00161d1619c9c29b683d70c49b1341c";
+  lude:modality "Presencial";
+  lude:publicationYear "1979";
+  lude:telephone "965903400";
+  lude:type "Pública";
+  lude:url "www.ua.es/";
+  rdfs:label "Universidad de Alicante" .
+
+<ex:University/e2aed65db4fa77f98f5f2990371c7a23> a lude:University;
+  lude:acronym "UCM";
+  lude:cif "Q2818014I";
+  lude:email "infocom@ucm.es";
+  lude:id "e2aed65db4fa77f98f5f2990371c7a23";
+  lude:modality "Presencial";
+  lude:publicationYear "1836";
+  lude:telephone "914520400";
+  lude:type "Pública";
+  lude:url "www.ucm.es";
+  rdfs:label "Universidad Complutense de Madrid" .
+
+<ex:University/e4aee90dd75f5fd5dc35bc4653bd9065> a lude:University;
+  lude:acronym "UPCT";
+  lude:cif "Q8050013E";
+  lude:email "gestion.academica@upct.es";
+  lude:id "e4aee90dd75f5fd5dc35bc4653bd9065";
+  lude:modality "Presencial";
+  lude:publicationYear "1998";
+  lude:telephone "968325400";
+  lude:type "Pública";
+  lude:url "www.upct.es";
+  rdfs:label "Universidad Politécnica de Cartagena" .
+
+<ex:University/e97892b0ccf3c19ce40f9ef9d8ac91ef> lude:acronym "UDC";
+  lude:cif "Q6550005J";
+  lude:email "reitor@udc.es";
+  lude:id "e97892b0ccf3c19ce40f9ef9d8ac91ef";
+  lude:modality "Presencial";
+  a lude:University;
+  lude:publicationYear "1989";
+  lude:telephone "981167000";
+  lude:type "Pública";
+  lude:url "www.udc.es";
+  rdfs:label "Universidad de A Coruña" .
+
+<ex:University/f5636bc297db763f969bab88b5492ba3> a lude:University;
+  lude:acronym "UMU";
+  lude:cif "Q3018001B";
+  lude:email "rector@um.es";
+  lude:id "f5636bc297db763f969bab88b5492ba3";
+  lude:modality "Presencial";
+  lude:publicationYear "1272";
+  lude:telephone "968363000";
+  lude:type "Pública";
+  lude:url "www.um.es";
+  rdfs:label "Universidad de Murcia" .
+
+<ex:University/f6ce2593f6cfc9e08dc9effe2e0077e9> a lude:University;
+  lude:acronym "UHU";
+  lude:cif "Q7150008F";
+  lude:email "www@uhu.es";
+  lude:id "f6ce2593f6cfc9e08dc9effe2e0077e9";
+  lude:modality "Presencial";
+  lude:publicationYear "1993";
+  lude:telephone "959218000";
+  lude:type "Pública";
+  lude:url "www.uhu.es";
+  rdfs:label "Universidad de Huelva" .
+
+<ex:University/f8c4e120daa6420626c03e582958ebd3> a lude:University;
+  lude:acronym "USE";
+  lude:cif "Q4118001I";
+  lude:email "gabiprensa@us.es";
+  lude:id "f8c4e120daa6420626c03e582958ebd3";
+  lude:modality "Presencial";
+  lude:publicationYear "1505";
+  lude:telephone "954551000";
+  lude:type "Pública";
+  lude:url "www.us.es";
+  rdfs:label "Universidad de Sevilla" .
+
+<ex:University/f9d30a624b678c838a4bb422a0bc148b> a lude:University;
+  lude:acronym "UAM";
+  lude:cif "Q2818013A";
+  lude:email "informacion.general@uam.es";
+  lude:id "f9d30a624b678c838a4bb422a0bc148b";
+  lude:modality "Presencial";
+  lude:publicationYear "1968";
+  lude:telephone "914975000";
+  lude:type "Pública";
+  lude:url "www.uam.es";
+  rdfs:label "Universidad Autónoma de Madrid" .
+
+<ex:University/f9f0a05fbac13ce20a2af52247c2b93f> a lude:University;
+  lude:acronym "UBU";
+  lude:cif "Q0968272E";
+  lude:email "ubuestudiantes@ubu.es";
+  lude:id "f9f0a05fbac13ce20a2af52247c2b93f";
+  lude:modality "Presencial";
+  lude:publicationYear "1994";
+  lude:telephone "947258700";
+  lude:type "Pública";
+  lude:url "www.ubu.es";
+  rdfs:label "Universidad de Burgos" .

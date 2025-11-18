@@ -1,0 +1,295 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q10742",
+        "name": "autonomous community of Spain"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Autonomous Community to type Q10742"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de Cataluña",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5705",
+      "name": "Catalonia",
+      "types": [
+        "Q10742",
+        "Q2736168",
+        "Q104117291",
+        "Q6256"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Match item Catalonia (Q5705) for cells containing \"Comunidad Autónoma de Cataluña\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de Galicia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3908",
+      "name": "Galicia",
+      "types": [
+        "Q10742",
+        "Q2736168",
+        "Q3502482",
+        "Q6266",
+        "Q1250464",
+        "Q6256"
+      ],
+      "score": 50
+    },
+    "shareNewTopics": false,
+    "description": "Match item Galicia (Q3908) for cells containing \"Comunidad Autónoma de Galicia\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de Andalucía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5783",
+      "name": "Andalusia",
+      "types": [
+        "Q10742",
+        "Q3502482"
+      ],
+      "score": 60
+    },
+    "shareNewTopics": false,
+    "description": "Match item Andalusia (Q5783) for cells containing \"Comunidad Autónoma de Andalucía\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad de Castilla y León",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5739",
+      "name": "Castile and León",
+      "types": [
+        "Q10742"
+      ],
+      "score": 73
+    },
+    "shareNewTopics": false,
+    "description": "Match item Castile and León (Q5739) for cells containing \"Comunidad de Castilla y León\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de Cantabria",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3946",
+      "name": "Cantabria",
+      "types": [
+        "Q10742"
+      ],
+      "score": 47
+    },
+    "shareNewTopics": false,
+    "description": "Match item Cantabria (Q3946) for cells containing \"Comunidad Autónoma de Cantabria\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de Castilla-La Mancha",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5748",
+      "name": "Castilla–La Mancha",
+      "types": [
+        "Q10742"
+      ],
+      "score": 84
+    },
+    "shareNewTopics": false,
+    "description": "Match item Castilla–La Mancha (Q5748) for cells containing \"Comunidad Autónoma de Castilla-La Mancha\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de Extremadura",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5777",
+      "name": "Extremadura",
+      "types": [
+        "Q10742",
+        "Q104117291"
+      ],
+      "score": 86
+    },
+    "shareNewTopics": false,
+    "description": "Match item Extremadura (Q5777) for cells containing \"Comunidad Autónoma de Extremadura\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de Canarias",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5813",
+      "name": "Canary Islands",
+      "types": [
+        "Q10742",
+        "Q26934845",
+        "Q2736168",
+        "Q104117291",
+        "Q406957"
+      ],
+      "score": 51
+    },
+    "shareNewTopics": false,
+    "description": "Match item Canary Islands (Q5813) for cells containing \"Comunidad Autónoma de Canarias\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de la Rioja",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5727",
+      "name": "La Rioja",
+      "types": [
+        "Q10742",
+        "Q1200957"
+      ],
+      "score": 78
+    },
+    "shareNewTopics": false,
+    "description": "Match item La Rioja (Q5727) for cells containing \"Comunidad Autónoma de la Rioja\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de Aragón",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4040",
+      "name": "Aragon",
+      "types": [
+        "Q10742"
+      ],
+      "score": 59
+    },
+    "shareNewTopics": false,
+    "description": "Match item Aragon (Q4040) for cells containing \"Comunidad Autónoma de Aragón\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma del País Vasco",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3995",
+      "name": "Basque Autonomous Community",
+      "types": [
+        "Q10742",
+        "Q2736168",
+        "Q104117291"
+      ],
+      "score": 81
+    },
+    "shareNewTopics": false,
+    "description": "Match item Basque Autonomous Community (Q3995) for cells containing \"Comunidad Autónoma del País Vasco\" in column Autonomous Community"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Autonomous Community",
+    "similarValue": "Comunidad Autónoma de las Illes Balears",
+    "judgment": "matched",
+    "match": {
+      "id": "Q107356467",
+      "name": "Balearic Islands",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Balearic Islands (Q107356467) for cells containing \"Comunidad Autónoma de las Illes Balears\" in column Autonomous Community"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Autonomous Community",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_autonomouscommunity",
+    "columnInsertIndex": 1,
+    "description": "Create column same_as_wikidata_autonomouscommunity at index 1 based on column Autonomous Community using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  }
+]

@@ -1,0 +1,532 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "Archive",
+    "description": "Eliminar columna Archive"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "File",
+    "description": "Eliminar columna File"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "University",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "UniversityID",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna UniversityID en el índice 4 basada en la columna University usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Academic Level usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ambit",
+    "expression": "grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transforma el texto de las celdas en la columna Ambit usando la expresión grel:md5(\n  value.trim()\n       .toLowercase()\n       .replace(/[áàäâ]/,\"a\")\n       .replace(/[éèëê]/,\"e\")\n       .replace(/[íìïî]/,\"i\")\n       .replace(/[óòöô]/,\"o\")\n       .replace(/[úùüû]/,\"u\")\n       .replace(/[ÁÀÄÂ]/,\"a\")\n       .replace(/[ÉÈËÊ]/,\"e\")\n       .replace(/[ÍÌÏÎ]/,\"i\")\n       .replace(/[ÓÒÖÔ]/,\"o\")\n       .replace(/[ÚÙÜÛ]/,\"u\")\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "DegreeID",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna DegreeID en el índice 3 basada en la columna Degree usando la expresión grel:md5(\n  (coalesce(cells[\"University\"].value,\"\") + coalesce(cells[\"Degree\"].value,\"\"))\n    .trim()\n    .toLowercase()\n    .replaceChars(\n      \"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ\",\n      \"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC\"\n    )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "University",
+    "description": "Eliminar columna University"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Academic Level",
+    "newColumnName": "AcademicLevelId",
+    "description": "Renombra la columna Academic Level a AcademicLevelId"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Ambit",
+    "newColumnName": "AmbitId",
+    "description": "Renombra la columna Ambit a AmbitId"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q11862829",
+        "name": "academic discipline"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Degree to type Q11862829"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Administración y Dirección de Empresas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8188423",
+      "name": "business administration and management",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento business administration and management (Q8188423) para las celdas que contienen \"Administración y Dirección de Empresas\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencias de la Actividad Física y del Deporte",
+    "judgment": "matched",
+    "match": {
+      "id": "Q127506551",
+      "name": "Ciències de l'Activitat Física i l'Esport",
+      "types": [
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Ciències de l'Activitat Física i l'Esport (Q127506551) para las celdas que contienen \"Ciencias de la Actividad Física y del Deporte\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Comunicación Audiovisual",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3755147",
+      "name": "audiovisual communication",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento audiovisual communication (Q3755147) para las celdas que contienen \"Comunicación Audiovisual\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Educación Social",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1572493",
+      "name": "social pedagogy",
+      "types": [
+        "Q11862829",
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento social pedagogy (Q1572493) para las celdas que contienen \"Educación Social\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Dirección de Empresas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8188423",
+      "name": "business administration and management",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento business administration and management (Q8188423) para las celdas que contienen \"Dirección de Empresas\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree",
+          "expression": "value",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Traducción e Interpretación",
+                "l": "Traducción e Interpretación"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Traducción e Interpretación",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11704681",
+      "name": "translation and interpretation",
+      "types": [
+        "Q11862829",
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento translation and interpretation (Q11704681) para las celdas que contienen \"Traducción e Interpretación\" en la columna Degree"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree",
+          "expression": "value",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Farmacia",
+                "l": "Farmacia"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q4671286",
+        "name": "academic major"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Degree to type Q4671286"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q4671286",
+        "name": "academic major"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Degree to type Q4671286"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Administración y Dirección de Empresas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q55107865",
+      "name": "Bachelor's degree in Business Administration and Management",
+      "types": [
+        ""
+      ],
+      "score": 41.5
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor's degree in Business Administration and Management (Q55107865) para las celdas que contienen \"Administración y Dirección de Empresas\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencias de la Actividad Física y del Deporte",
+    "judgment": "matched",
+    "match": {
+      "id": "Q127506551",
+      "name": "Ciències de l'Activitat Física i l'Esport",
+      "types": [
+        "Q4671286"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Ciències de l'Activitat Física i l'Esport (Q127506551) para las celdas que contienen \"Ciencias de la Actividad Física y del Deporte\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencias Empresariales",
+    "judgment": "matched",
+    "match": {
+      "id": "Q13422969",
+      "name": "Bachelor of Business Science",
+      "types": [
+        ""
+      ],
+      "score": 41.5
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Business Science (Q13422969) para las celdas que contienen \"Ciencias Empresariales\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Degree",
+          "expression": "value",
+          "columnName": "Degree",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Ciencia Política y de la Administración",
+                "l": "Ciencia Política y de la Administración"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencia Política y de la Administración",
+    "judgment": "matched",
+    "match": {
+      "id": "Q36442",
+      "name": "political science",
+      "types": [
+        "Q4671286",
+        "Q11862829"
+      ],
+      "score": 88
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento political science (Q36442) para las celdas que contienen \"Ciencia Política y de la Administración\" en la columna Degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna same_as_wikidata_degree en el índice 3 basada en la columna Degree usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencia e Ingeniería de Datos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2374463",
+      "name": "data science",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento data science (Q2374463) para las celdas que contienen \"Ciencia e Ingeniería de Datos\" en la columna Degree"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "same_as_wikidata_degree",
+    "description": "Eliminar columna same_as_wikidata_degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna same_as_wikidata_degree en el índice 3 basada en la columna Degree usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencia de Datos",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2374463",
+      "name": "data science",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento data science (Q2374463) para las celdas que contienen \"Ciencia de Datos\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Inteligencia Artificial",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11660",
+      "name": "artificial intelligence",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento artificial intelligence (Q11660) para las celdas que contienen \"Inteligencia Artificial\" en la columna Degree"
+  },
+  {
+    "op": "core/recon-clear-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Visión por Computador",
+    "description": "Borrar los datos de cotejo de las celdas que contienen \"Visión por Computador\" en la columna Degree"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "same_as_wikidata_degree",
+    "description": "Eliminar columna same_as_wikidata_degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna same_as_wikidata_degree en el índice 3 basada en la columna Degree usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  }
+]

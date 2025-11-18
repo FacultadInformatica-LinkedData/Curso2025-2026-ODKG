@@ -1,0 +1,20 @@
+prefixes:
+  schema: "http://schema.org/"
+  xsd: "http://www.w3.org/2001/XMLSchema#"
+
+sources:
+  zones_csv:
+    access: "../csv/zones_updated.csv"
+    referenceFormulation: csv
+    delimiter: ","
+    quote: '"'
+
+mappings:
+  ZoneMapping:
+    sources: [zones_csv]
+    s: "http://example.com/zone/$(id)"
+    po:
+      - [a, schema:AdministrativeArea]
+      - [schema:name, $(name)]
+      - [schema:population, $(population)~xsd:integer]
+      - [schema:identifier, $(id)]

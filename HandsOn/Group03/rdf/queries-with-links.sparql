@@ -1,0 +1,255 @@
+# Group 03 - Hands-On Assignment 5
+
+PREFIX : <http://madrid-transport-safety.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+# LIGHTS DATA
+
+# QUERY 1: Verify that all traffic lights exist and are correctly typed
+SELECT ?trafficLight
+WHERE {
+  ?trafficLight rdf:type :TrafficLight .
+}
+ORDER BY ?trafficLight
+LIMIT 10
+
+# QUERY 2: Check that each traffic light has ID, type, and coordinates
+SELECT ?trafficLight ?id ?type ?lat ?long
+WHERE {
+  ?trafficLight rdf:type :TrafficLight ;
+                :trafficLightIdentifier ?id ;
+                :trafficLightType ?type ;
+                :trafficLightLatitude ?lat ;
+                :trafficLightLongitude ?long .
+}
+ORDER BY ?id
+LIMIT 10
+
+# QUERY 3: Verify that traffic lights are linked to districts
+SELECT ?trafficLight ?district
+WHERE {
+  ?trafficLight rdf:type :TrafficLight ;
+                :locatedInDistrict ?district .
+}
+ORDER BY ?trafficLight
+LIMIT 10
+
+# QUERY 4: Check district information (code, name, label)
+SELECT ?district ?code ?name ?label
+WHERE {
+  ?district rdf:type :District ;
+            :districtCode ?code ;
+            :districtName ?name ;
+            rdfs:label ?label .
+}
+ORDER BY ?code
+
+# QUERY 5: Verify external Wikidata links
+SELECT ?district ?wikidata
+WHERE {
+  ?district rdf:type :District ;
+            owl:sameAs ?wikidata .
+}
+ORDER BY ?district
+
+# QUERY 6: Count how many districts are linked externally
+SELECT (COUNT(?wikidata) AS ?linkedDistricts)
+WHERE {
+  ?district owl:sameAs ?wikidata .
+}
+
+# QUERY 7: Count traffic lights per district (consistency check)
+SELECT ?district (COUNT(?trafficLight) AS ?totalTrafficLights)
+WHERE {
+  ?trafficLight rdf:type :TrafficLight ;
+                :locatedInDistrict ?district .
+}
+GROUP BY ?district
+ORDER BY DESC(?totalTrafficLights)
+
+
+# PEDESTRIAN DATA
+
+#QUERY 1: Verify that pedestrian observations are correctly typed
+SELECT ?obs
+WHERE {
+  ?obs rdf:type :PedestrianData .
+}
+LIMIT 10
+
+#QUERY 2: Check that all pedestrian observations have date, time and count
+SELECT ?obs ?date ?time ?count
+WHERE {
+  ?obs rdf:type :PedestrianData ;
+       :pedestrianDate ?date ;
+       :pedestrianTime ?time ;
+       :pedestrianCounter ?count .
+}
+LIMIT 10
+
+#QUERY 3: Verify that every observation is linked to a district
+SELECT ?obs ?district
+WHERE {
+  ?obs rdf:type :PedestrianData ;
+       :locatedInDistrict ?district .
+}
+LIMIT 10
+
+#QUERY 4: Verify that each district has code, name and link to Wikidata
+SELECT ?district ?code ?name ?wikidata
+WHERE {
+  ?district rdf:type :District ;
+            :districtCode ?code ;
+            :districtName ?name ;
+            owl:sameAs ?wikidata .
+}
+LIMIT 10
+
+#QUERY 5: Check geographic coordinates for observations
+SELECT ?obs ?lat ?long
+WHERE {
+  ?obs rdf:type :PedestrianData ;
+       :pedestrianLatitude ?lat ;
+       :pedestrianLongitude ?long .
+}
+LIMIT 10
+
+#QUERY 6: Count how many observations per district
+SELECT ?district (COUNT(?obs) AS ?totalObservations)
+WHERE {
+  ?obs rdf:type :PedestrianData ;
+       :locatedInDistrict ?district .
+}
+GROUP BY ?district
+ORDER BY DESC(?totalObservations)
+
+
+#ACCIDENT DATA
+
+#QUERY 1: Verify that all accidents are correctly typed
+SELECT ?accident
+WHERE {
+  ?accident rdf:type :Accident .
+}
+LIMIT 10
+
+#QUERY 2: Check key accident attributes (date, time, type, vehicle)
+SELECT ?accident ?date ?time ?type ?vehicle
+WHERE {
+  ?accident rdf:type :Accident ;
+            :accidentDate ?date ;
+            :accidentTime ?time ;
+            :accidentType ?type ;
+            :vehicleType ?vehicle .
+}
+LIMIT 10
+
+#QUERY 3: Verify that accidents are linked to districts
+SELECT ?accident ?district
+WHERE {
+  ?accident rdf:type :Accident ;
+            :locatedInDistrict ?district .
+}
+LIMIT 10
+
+#QUERY 4:Verify that persons involved are linked and have alcohol/drug info
+SELECT ?person ?accident ?type ?age ?gender ?alcohol ?drug
+WHERE {
+  ?person rdf:type :Person ;
+          :involvedInAccident ?accident ;
+          :personType ?type ;
+          :ageRange ?age ;
+          :gender ?gender ;
+          :alcoholPositive ?alcohol ;
+          :drugPositive ?drug .
+}
+LIMIT 10
+
+#QUERY 5: Verify that injuries are correctly linked to persons
+SELECT ?person ?injury ?code ?desc
+WHERE {
+  ?person rdf:type :Person ;
+          :hasInjury ?injury .
+  ?injury :injuryCode ?code ;
+          :injuryDescription ?desc .
+}
+LIMIT 10
+
+#QUERY 6: Verify district consistency and Wikidata links
+SELECT ?district ?code ?name ?wikidata
+WHERE {
+  ?district rdf:type :District ;
+            :districtCode ?code ;
+            :districtName ?name ;
+            owl:sameAs ?wikidata .
+}
+LIMIT 10
+
+#QUERY 7: Count how many accidents per district
+SELECT ?district (COUNT(?accident) AS ?totalAccidents)
+WHERE {
+  ?accident rdf:type :Accident ;
+            :locatedInDistrict ?district .
+}
+GROUP BY ?district
+ORDER BY DESC(?totalAccidents)
+
+
+#BICYCLE DATA
+
+#QUERY 1: Verify that bicycle observations are correctly typed
+SELECT ?obs
+WHERE {
+  ?obs rdf:type :BicycleData .
+}
+LIMIT 10
+
+#QUERY 2: Check bicycle observation attributes (date, time, count)
+SELECT ?obs ?date ?time ?count
+WHERE {
+  ?obs rdf:type :BicycleData ;
+       :bicycleDate ?date ;
+       :bicycleTime ?time ;
+       :bicycleCounter ?count .
+}
+LIMIT 10
+
+#QUERY 3: Verify that each observation is linked to a district
+SELECT ?obs ?district
+WHERE {
+  ?obs rdf:type :BicycleData ;
+       :locatedInDistrict ?district .
+}
+LIMIT 10
+
+#QUERY 4: Verify that each district has a code, name and link to Wikidata
+SELECT ?district ?code ?name ?wikidata
+WHERE {
+  ?district rdf:type :District ;
+            :districtCode ?code ;
+            :districtName ?name ;
+            owl:sameAs ?wikidata .
+}
+LIMIT 10
+
+#QUERY 5: Check geographic coordinates for bicycle observations
+SELECT ?obs ?lat ?long
+WHERE {
+  ?obs rdf:type :BicycleData ;
+       :bicycleLatitude ?lat ;
+       :bicycleLongitude ?long .
+}
+LIMIT 10
+
+#QUERY 6: Count number of bicycle observations per district
+SELECT ?district (COUNT(?obs) AS ?totalObservations)
+WHERE {
+  ?obs rdf:type :BicycleData ;
+       :locatedInDistrict ?district .
+}
+GROUP BY ?district
+ORDER BY DESC(?totalObservations)

@@ -18,4 +18,4 @@
 - [x] Is related to a column in the CSV file
 
 ## Comments on the self-assessment
-We will understand in the next step (RDF Generation) how to map "2025_Accidentalidad.csv" to two different classes: Accident and InvolvedParty. Based on this we will possibly add a new column to the dataset to identify the different parties involved in each accident.
+_(If required)_

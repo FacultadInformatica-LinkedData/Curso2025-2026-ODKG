@@ -1,0 +1,78 @@
+# SPARQL Queries for Madrid Bus Network RDF Data Verification
+# Group 06 - Open Data and Knowledge Graphs
+# Simple queries optimized for LightRDF streaming validation
+
+PREFIX ex: <http://group06.linkeddata.es/ontology/madridbus/>
+PREFIX res: <http://group06.linkeddata.es/resource/>
+PREFIX gtfs: <http://vocab.gtfs.org/terms#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# ========================================================================
+# QUERY 1: Verify Bus Routes exist (should have 445)
+# ========================================================================
+SELECT ?route
+WHERE {
+    ?route rdf:type ex:BusRoute .
+}
+LIMIT 10
+
+# ========================================================================
+# QUERY 2: Verify Bus Stops exist (should have 7,852)
+# ========================================================================
+SELECT ?stop
+WHERE {
+    ?stop rdf:type ex:BusStop .
+}
+LIMIT 10
+
+# ========================================================================
+# QUERY 3: Verify Local Areas exist (should have 7,852)
+# ========================================================================
+SELECT ?area
+WHERE {
+    ?area rdf:type ex:LocalArea .
+}
+LIMIT 10
+
+# ========================================================================
+# QUERY 4: Verify Trips exist (should have 69,370)
+# ========================================================================
+SELECT ?trip
+WHERE {
+    ?trip rdf:type gtfs:Trip .
+}
+LIMIT 10
+
+# ========================================================================
+# QUERY 5: Verify Stop Times exist (should have 1,751,340)
+# ========================================================================
+SELECT ?stopTime
+WHERE {
+    ?stopTime rdf:type gtfs:StopTime .
+}
+LIMIT 10
+
+# ========================================================================
+# QUERY 6: Verify Wikidata Links exist (owl:sameAs for linking)
+# Assignment 5 validation - stops should link to Wikidata entities
+# ========================================================================
+SELECT ?localArea ?wikidataLink
+WHERE {
+    ?localArea owl:sameAs ?wikidataLink .
+}
+LIMIT 20
+
+# ========================================================================
+# QUERY 7: Verify stop-to-area relationships (locatedInArea property)
+# Key relationship from ontology - connects stops to geographic areas
+# ========================================================================
+SELECT ?stop ?area
+WHERE {
+    ?stop ex:locatedInArea ?area .
+}
+LIMIT 20

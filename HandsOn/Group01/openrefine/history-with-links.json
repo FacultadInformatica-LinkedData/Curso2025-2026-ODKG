@@ -1,0 +1,3491 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "PK",
+    "description": "Remove column PK"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CONTENT-URL",
+    "description": "Remove column CONTENT-URL"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ORIENTACION",
+    "description": "Remove column ORIENTACION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "ESCALERAS",
+    "description": "Remove column ESCALERAS"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PUERTA",
+    "description": "Remove column PUERTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PLANTA",
+    "description": "Remove column PLANTA"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CLASE-VIAL",
+    "description": "Remove column CLASE-VIAL"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "TIPO-NUM",
+    "description": "Remove column TIPO-NUM"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COD-BARRIO",
+    "description": "Remove column COD-BARRIO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COD-DISTRITO",
+    "description": "Remove column COD-DISTRITO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-X",
+    "description": "Remove column COORDENADA-X"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COORDENADA-Y",
+    "description": "Remove column COORDENADA-Y"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "FAX",
+    "description": "Remove column FAX"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "MADRID",
+          "MADRID 28042",
+          "Madrid"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MADRID"
+      }
+    ],
+    "description": "Mass edit cells in column LOCALIDAD"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TIPO",
+    "expression": "grel:if(value == null, \"/contenido/entidadesYorganismos/ParquesJardines\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIPO using expression grel:if(value == null, \"/contenido/entidadesYorganismos/ParquesJardines\", value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TIPO",
+    "expression": "grel:value.replace(\"/contenido/entidadesYorganismos/\", \"\").split(\"/\")[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "TipoInstalacion",
+    "columnInsertIndex": 19,
+    "description": "Create column TipoInstalacion at index 19 based on column TIPO using expression grel:value.replace(\"/contenido/entidadesYorganismos/\", \"\").split(\"/\")[0]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TELEFONO",
+          "expression": "value",
+          "columnName": "TELEFONO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "630 630 710 (actividades) \n917210079 (de lunes a viernes de 9 a 14 h)",
+                "l": "630 630 710 (actividades) \n917210079 (de lunes a viernes de 9 a 14 h)"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "630 630 710 (actividades) \n917210079 (de lunes a viernes de 9 a 14 h)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "630 630 710\n917 210 079"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "913 553 201 -  919 246 793"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "913 553 201 / 919 246 793"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "913 947 505 / 913 947 504 (incidencias matrícula)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "913 947 505 / 913 947 504"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "914 305 871 - Taquilla 915 288 879"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "914 305 871 / 915 288 879"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "914 507 344 - 914 505 530"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "914 507 344 / 914 505 530"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "914 800 476 - idmlavaguada@madrid.es"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "914 800 476"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "917 106 155 (De L a V de 9 a 22 horas)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "917 106 155"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "917 588 677 - 915 592 090 - 649 84 14 45"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "917 588 677 / 915 592 090 / 649 84 14 45"
+      }
+    ],
+    "description": "Mass edit cells in column TELEFONO"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "grel:value.replace(/\\s*\\/\\s*/,\"\\n\").replace(/\\s+-\\s+/,\"\\n\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/\\s*\\/\\s*/,\"\\n\").replace(/\\s+-\\s+/,\"\\n\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "grel:value.replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\").replace(/[^0-9\\n]+/, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TELEFONO",
+    "expression": "grel:value.replace(/(\\d{9})(?=\\d)/, \"$1\\n\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TELEFONO using expression grel:value.replace(/(\\d{9})(?=\\d)/, \"$1\\n\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ACCESIBILIDAD",
+    "expression": "grel:if(\n  isBlank(value),\n  \"\",\n  forEach(\n    value.split(/[,; ]+/),\n    v,\n    if(v==\"0\",\"No accesible\",\n      if(v==\"1\",\"Accesible\",\n        if(v==\"2\",\"Instalación parcialmente accesible para personas con movilidad reducida\",\n          if(v==\"3\",\"Sin información sobre accesibilidad para personas con movilidad reducida\",\n            if(v==\"4\",\"Lengua de signos\",\n              if(v==\"5\",\"Señalización podotáctil\",\n                if(v==\"6\",\"Bucle de inducción magnético\",\"\")\n              )\n            )\n          )\n        )\n      )\n    )\n  ).join(\"\\n\")\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ACCESIBILIDAD using expression grel:if(\n  isBlank(value),\n  \"\",\n  forEach(\n    value.split(/[,; ]+/),\n    v,\n    if(v==\"0\",\"No accesible\",\n      if(v==\"1\",\"Accesible\",\n        if(v==\"2\",\"Instalación parcialmente accesible para personas con movilidad reducida\",\n          if(v==\"3\",\"Sin información sobre accesibilidad para personas con movilidad reducida\",\n            if(v==\"4\",\"Lengua de signos\",\n              if(v==\"5\",\"Señalización podotáctil\",\n                if(v==\"6\",\"Bucle de inducción magnético\",\"\")\n              )\n            )\n          )\n        )\n      )\n    )\n  ).join(\"\\n\")\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TRANSPORTE",
+    "expression": "grel:if((value.match(/.*(autobuses|bus|autobús).*/i)!=null),value,null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Bus",
+    "columnInsertIndex": 5,
+    "description": "Create column Bus at index 5 based on column TRANSPORTE using expression grel:if((value.match(/.*(autobuses|bus|autobús).*/i)!=null),value,null)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Bus",
+    "expression": "grel:if(\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i) != null,\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Bus using expression grel:if(\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i) != null,\n\t\t  value.match(/.*((autobuses|bus|autobús).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TRANSPORTE",
+    "expression": "grel:if((value.match(/.*(metro).*/i)!=null),value,null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro",
+    "columnInsertIndex": 5,
+    "description": "Create column Metro at index 5 based on column TRANSPORTE using expression grel:if((value.match(/.*(metro).*/i)!=null),value,null)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Metro",
+    "expression": "grel:if(\n\t\t  value.match(/.*((metro).*)/i) != null,\n\t\t  value.match(/.*((metro).*)/i)[0].split(/[\\.\\n]|autobuses|bus|autobús|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Metro using expression grel:if(\n\t\t  value.match(/.*((metro).*)/i) != null,\n\t\t  value.match(/.*((metro).*)/i)[0].split(/[\\.\\n]|autobuses|bus|autobús|servicio|bicicleta|cercanías|renfe|tren|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "TRANSPORTE",
+    "expression": "grel:if((value.match(/.*(cercanías|renfe|tren).*/i)!=null),value,null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias",
+    "columnInsertIndex": 5,
+    "description": "Create column Cercanias at index 5 based on column TRANSPORTE using expression grel:if((value.match(/.*(cercanías|renfe|tren).*/i)!=null),value,null)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i) != null,\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|autobuses|bus|autobús|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cercanias using expression grel:if(\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i) != null,\n\t\t  value.match(/.*((cercanías|renfe|tren).*)/i)[0].split(/[\\.\\n]|metro|servicio|bicicleta|autobuses|bus|autobús|acceso|también/i)[0].trim(),\n\t\t  null\n\t\t)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores",
+                "l": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "EQUIPAMIENTO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tipo mixta."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tipo mixto."
+      }
+    ],
+    "description": "Mass edit cells in column EQUIPAMIENTO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores",
+                "l": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "EQUIPAMIENTO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tipo masculina."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tipo masculino."
+      }
+    ],
+    "description": "Mass edit cells in column EQUIPAMIENTO"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores",
+                "l": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "EQUIPAMIENTO",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tipo femenina."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tipo femenino."
+      }
+    ],
+    "description": "Mass edit cells in column EQUIPAMIENTO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TIPO",
+          "expression": "value",
+          "columnName": "TIPO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores",
+                "l": "/contenido/entidadesYorganismos/Universidades/ColegiosMayores"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "EQUIPAMIENTO",
+    "expression": "grel:cells[\"EQUIPAMIENTO\"].value.replace(/Tipo\\s+(masculino|femenino|mixto)\\..*/, \"$1\"), \n   \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "generoAlumnos",
+    "columnInsertIndex": 4,
+    "description": "Create column generoAlumnos at index 4 based on column EQUIPAMIENTO using expression grel:cells[\"EQUIPAMIENTO\"].value.replace(/Tipo\\s+(masculino|femenino|mixto)\\..*/, \"$1\"), \n   \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "BibliotecasPublicas",
+                "l": "BibliotecasPublicas"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "EQUIPAMIENTO",
+    "expression": "grel:if(isBlank(cells[\"EQUIPAMIENTO\"].value), \n   \"no especifica\", if(or(cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"wifi gratuito\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"zona wifi\")),\"sí\", \"no especifica\"))",
+    "onError": "set-to-blank",
+    "newColumnName": "tieneWifi",
+    "columnInsertIndex": 4,
+    "description": "Create column tieneWifi at index 4 based on column EQUIPAMIENTO using expression grel:if(isBlank(cells[\"EQUIPAMIENTO\"].value), \n   \"no especifica\", if(or(cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"wifi gratuito\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"zona wifi\")),\"sí\", \"no especifica\"))"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ParquesJardines",
+                "l": "ParquesJardines"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DESCRIPCION",
+    "expression": "grel:value.match(/.*Superficie[:\\.]\\s*(?:Área de\\s*)?([0-9.,]+\\s*(m2|m²|ha|m&amp;sup2|hectáreas)).*/i)[0]",
+    "onError": "set-to-blank",
+    "newColumnName": "Superficie",
+    "columnInsertIndex": 11,
+    "description": "Create column Superficie at index 11 based on column DESCRIPCION using expression grel:value.match(/.*Superficie[:\\.]\\s*(?:Área de\\s*)?([0-9.,]+\\s*(m2|m²|ha|m&amp;sup2|hectáreas)).*/i)[0]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ParquesJardines",
+                "l": "ParquesJardines"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Superficie",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "No especificado"
+      }
+    ],
+    "description": "Mass edit cells in column Superficie"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ParquesJardines",
+                "l": "ParquesJardines"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superficie",
+    "expression": "grel:if(value.match(\"No especificado\"), \"No especificado\", value.replace(/&amp;sup2/,\"²\").replace(\"hectáreas\",\"ha\").replace(\"m2\",\"m²\").replace(\".\",\"\").replace(/\\s+/,\" \").trim())",
+    "onError": "set-to-blank",
+    "newColumnName": "superficieLimpia",
+    "columnInsertIndex": 12,
+    "description": "Create column superficieLimpia at index 12 based on column Superficie using expression grel:if(value.match(\"No especificado\"), \"No especificado\", value.replace(/&amp;sup2/,\"²\").replace(\"hectáreas\",\"ha\").replace(\"m2\",\"m²\").replace(\".\",\"\").replace(/\\s+/,\" \").trim())"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superficie",
+    "description": "Remove column Superficie"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "TipoInstalacion",
+          "expression": "value",
+          "columnName": "TipoInstalacion",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ParquesJardines",
+                "l": "ParquesJardines"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "EQUIPAMIENTO",
+    "expression": "grel:if(isBlank(cells[\"EQUIPAMIENTO\"].value), \"no especifica\", if(or(cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalaciones deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"circuito deportivo\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"zonas deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"pista deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalación deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"polideportivos\")),\"sí\", \"no\"))",
+    "onError": "set-to-blank",
+    "newColumnName": "tieneInstalacionesDeportivas",
+    "columnInsertIndex": 4,
+    "description": "Create column tieneInstalacionesDeportivas at index 4 based on column EQUIPAMIENTO using expression grel:if(isBlank(cells[\"EQUIPAMIENTO\"].value), \"no especifica\", if(or(cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalaciones deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"circuito deportivo\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"zonas deportivas\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"pista deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"instalación deportiva\"),cells[\"EQUIPAMIENTO\"].value.toLowercase().contains(\"polideportivos\")),\"sí\", \"no\"))"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(find(/\\d+/, v), n, n).join(\"\\n\")\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "metro_lines",
+    "columnInsertIndex": 10,
+    "description": "Create column metro_lines at index 10 based on column Metro using expression grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(find(/\\d+/, v), n, n).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "metro_lines",
+    "description": "Remove column metro_lines"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      v.split(/[^0-9]+/),\n      n,\n      if(isBlank(n), null, n)\n    ).join(\"\\n\")\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "metro lines",
+    "columnInsertIndex": 10,
+    "description": "Create column metro lines at index 10 based on column Metro using expression grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      v.split(/[^0-9]+/),\n      n,\n      if(isBlank(n), null, n)\n    ).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "metro lines",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(\"\\n\"),\n        n,\n        if(isBlank(n), null, n.trim())\n      ).uniques(),\n      u,\n      u\n    ).join(\"\\n\")\n  )\n)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column metro lines using expression grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(\"\\n\"),\n        n,\n        if(isBlank(n), null, n.trim())\n      ).uniques(),\n      u,\n      u\n    ).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Bus",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(/[^0-9]+/),\n        n,\n        if(isBlank(n), null, n.trim())\n      ).uniques(),\n      u,\n      u\n    ).join(\"\\n\")\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "bus line",
+    "columnInsertIndex": 12,
+    "description": "Create column bus line at index 12 based on column Bus using expression grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(/[^0-9]+/),\n        n,\n        if(isBlank(n), null, n.trim())\n      ).uniques(),\n      u,\n      u\n    ).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias",
+    "expression": "grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(/[^0-9]+/),\n        n,\n        if(isBlank(n), null, \"C-\" + n)\n      ).uniques(),\n      u, u\n    ).join(\"\\n\")\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "cercanias line",
+    "columnInsertIndex": 9,
+    "description": "Create column cercanias line at index 9 based on column Cercanias using expression grel:with(value, v,\n  if(isBlank(v), \"\",\n    forEach(\n      forEach(\n        v.split(/[^0-9]+/),\n        n,\n        if(isBlank(n), null, \"C-\" + n)\n      ).uniques(),\n      u, u\n    ).join(\"\\n\")\n  )\n)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Cantoblanco Universidad\"), \"Cantoblanco Universidad C4\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cercanias using expression grel:if(value.contains(\"Cantoblanco Universidad\"), \"Cantoblanco Universidad C4\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Doce de Octubre\"), \"doce de octubre C5\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cercanias using expression grel:if(value.contains(\"Doce de Octubre\"), \"doce de octubre C5\", value)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: 12 de Octubre"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE:doce de Octubre"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Asamblea de Madrid - Entrevías",
+          "Renfe: Asamblea de Madrid - Entrevías",
+          "Renfe: Asamblea de Madrid, Entrevías",
+          "Renfe: Asamblea de Madrid- Entrevías"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Asamblea de Madrid - Entrevías C2, C7, C8"
+      },
+      {
+        "from": [
+          "Renfe: Aluche",
+          "RENFE: Aluche"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Aluche C5"
+      },
+      {
+        "from": [
+          "RENFE: Santa Eugenia",
+          "Renfe: Santa Eugenia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Santa Eugenia C2"
+      },
+      {
+        "from": [
+          "Renfe:  San Cristóbal",
+          "Renfe: San Cristóbal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe:  San Cristóbal C3"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Aluche C5",
+          "Renfe: Aluche (C5)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Aluche C5"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"octubre\"), \"doce de octubre C5\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cercanias using expression grel:if(value.contains(\"octubre\"), \"doce de octubre C5\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Octubre\"), \"doce de octubre C5\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cercanias using expression grel:if(value.contains(\"Octubre\"), \"doce de octubre C5\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Aravaca\"), \"Aravaca C7 C10\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cercanias using expression grel:if(value.contains(\"Aravaca\"), \"Aravaca C7 C10\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Vicálvaro\"), \"Vicálvaro C2\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cercanias using expression grel:if(value.contains(\"Vicálvaro\"), \"Vicálvaro C2\", value)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "grel:if(value.contains(\"Vallecas\"), \"Vallecas C1 C2 C7\", value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cercanias using expression grel:if(value.contains(\"Vallecas\"), \"Vallecas C1 C2 C7\", value)"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Ramón y Cajal"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Ramón y Cajal C10 C8 C3"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Ramón y Cajal (líneas C10, C8-A, C8-B)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Ramón y Cajal (líneas C10, C8-A, C8-B, C3)"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Puente Alcocer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Puente Alcocer (C5)"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Pirámides"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Pirámides (líneas C1 y C10)"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Príncipe Pío"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Príncipe Pío (Líneas C1, C7, C10)"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Príncipe Pío, Pirámides"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RENFE: Príncipe Pío C1 C7 C19, Pirámides"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Estación Atocha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Estación Atocha líneas C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: El Pozo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: El Pozo C2 C7 C8"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Las Águilas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Las Águilas C5"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cercanías: Príncipe Pío"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cercanías: Príncipe Pío C1, C7, C10"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Atocha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Atocha C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Méndez Alvaro, Atocha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Méndez Alvaro, Atocha C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Cercanías: Villaverde Bajo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Cercanías: Villaverde Bajo c3 c4"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Atocha-Alcalá de Henares (líneas C2 y C7)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Atocha-Alcalá de Henares (líneas C2 y C7) C1,C2,C3,C4,C5,C6,C7,C8 y C10"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Chamartín"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Chamartín C1, C2, C3, C4a, C4b, C7 y C8"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Delicias"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Delicias c1 c10"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Laguna"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Laguna c5"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Maestra Justa Freire-Polideportivo Aluche (antigua estación de Fanjul)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Maestra Justa Freire-Polideportivo Aluche (antigua estación de Fanjul) C5"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Méndez Álvaro"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Méndez Álvaro c1 c5 c10"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "RENFE: Nuevos Ministerios"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Nuevos Ministerios (líneas C-1, C-3, C-4, C-7, C-8, C-10)"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Orcasitas"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Orcasitas (línea C5)"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Recoletos"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Recoletos C1 C2 C7 C8 C10"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cercanias",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Renfe: Villaverde Bajo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Renfe: Villaverde Bajo C3 C4"
+      }
+    ],
+    "description": "Mass edit cells in column Cercanias"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "cercanias line",
+    "newColumnName": "cercanias_line",
+    "description": "Rename column cercanias line to cercanias_line"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "metro lines",
+    "newColumnName": "metro_line",
+    "description": "Rename column metro lines to metro_line"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "bus line",
+    "newColumnName": "bus_line",
+    "description": "Rename column bus line to bus_line"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE",
+    "expression": "grel:value.replace(/\\s+/,\"-\").replace(/[áÁ]/,\"a\").replace(/[éÉ]/,\"e\").replace(/[íÍ]/,\"i\").replace(/[óÓ]/,\"o\").replace(/[úÚ]/,\"u\").replace(/[ñÑ]/,\"n\")",
+    "onError": "set-to-blank",
+    "newColumnName": "IDNOMBRE",
+    "columnInsertIndex": 1,
+    "description": "Create column IDNOMBRE at index 1 based on column NOMBRE using expression grel:value.replace(/\\s+/,\"-\").replace(/[áÁ]/,\"a\").replace(/[éÉ]/,\"e\").replace(/[íÍ]/,\"i\").replace(/[óÓ]/,\"o\").replace(/[úÚ]/,\"u\").replace(/[ñÑ]/,\"n\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "superficieLimpia",
+    "expression": "grel:coalesce(value.toString().trim().replace(\",\", \".\"), value)",
+    "onError": "set-to-blank",
+    "newColumnName": "superficie_SinespaciosPuntos",
+    "columnInsertIndex": 17,
+    "description": "Create column superficie_SinespaciosPuntos at index 17 based on column superficieLimpia using expression grel:coalesce(value.toString().trim().replace(\",\", \".\"), value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "superficie_SinespaciosPuntos",
+    "expression": "grel:if(value.contains(\"ha\"), value.replace(\"ha\", \"\").trim().toNumber() * 10000, value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superficie_3",
+    "columnInsertIndex": 18,
+    "description": "Create column Superficie_3 at index 18 based on column superficie_SinespaciosPuntos using expression grel:if(value.contains(\"ha\"), value.replace(\"ha\", \"\").trim().toNumber() * 10000, value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superficie_3",
+    "expression": "grel:if(value.toString().trim().toLowercase().contains(\"no especificado\"), null, value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superficie 4",
+    "columnInsertIndex": 19,
+    "description": "Create column Superficie 4 at index 19 based on column Superficie_3 using expression grel:if(value.toString().trim().toLowercase().contains(\"no especificado\"), null, value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superficie 4",
+    "expression": "grel:if(value.toString().contains(\"m²\"), value.toString().replace(\"m²\", \"\").trim(), value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superfice 5",
+    "columnInsertIndex": 20,
+    "description": "Create column Superfice 5 at index 20 based on column Superficie 4 using expression grel:if(value.toString().contains(\"m²\"), value.toString().replace(\"m²\", \"\").trim(), value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superfice 5",
+    "expression": "grel:if(type(value) == \"string\", value.toNumber(), value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superficie 6",
+    "columnInsertIndex": 21,
+    "description": "Create column Superficie 6 at index 21 based on column Superfice 5 using expression grel:if(type(value) == \"string\", value.toNumber(), value)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Superficie 6",
+    "expression": "grel:if(type(value) == \"number\", value.round(), value)",
+    "onError": "set-to-blank",
+    "newColumnName": "Superfice_ColFinal",
+    "columnInsertIndex": 22,
+    "description": "Create column Superfice_ColFinal at index 22 based on column Superficie 6 using expression grel:if(type(value) == \"number\", value.round(), value)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superficie 6",
+    "description": "Remove column Superficie 6"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superfice 5",
+    "description": "Remove column Superfice 5"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superficie 4",
+    "description": "Remove column Superficie 4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Superficie_3",
+    "description": "Remove column Superficie_3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "superficie_SinespaciosPuntos",
+    "description": "Remove column superficie_SinespaciosPuntos"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "superficieLimpia",
+    "description": "Remove column superficieLimpia"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro",
+    "expression": "grel:value.replace(\"Metro: \", \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro Station 2",
+    "columnInsertIndex": 12,
+    "description": "Create column Metro Station 2 at index 12 based on column Metro using expression grel:value.replace(\"Metro: \", \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro Station 2",
+    "expression": "grel:value.replace(/\\(.*?\\)/, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro Station 3",
+    "columnInsertIndex": 13,
+    "description": "Create column Metro Station 3 at index 13 based on column Metro Station 2 using expression grel:value.replace(/\\(.*?\\)/, \"\")"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Superfice_ColFinal",
+    "newColumnName": "Superfice m²",
+    "description": "Rename column Superfice_ColFinal to Superfice m²"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "HORARIO",
+    "description": "Remove column HORARIO"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DESCRIPCION-ENTIDAD",
+    "description": "Remove column DESCRIPCION-ENTIDAD"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "EQUIPAMIENTO",
+    "description": "Remove column EQUIPAMIENTO"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro",
+    "expression": "grel:value.replace(/Arg&amp;uuml;elles/i, \"Arguelles\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro C",
+    "columnInsertIndex": 9,
+    "description": "Create column Metro C at index 9 based on column Metro using expression grel:value.replace(/Arg&amp;uuml;elles/i, \"Arguelles\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro C",
+    "expression": "grel:value.replace(\"Metro: \", \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro C2",
+    "columnInsertIndex": 10,
+    "description": "Create column Metro C2 at index 10 based on column Metro C using expression grel:value.replace(\"Metro: \", \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro C2",
+    "expression": "grel:value.replace(/\\(.*?\\)/, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro C3",
+    "columnInsertIndex": 11,
+    "description": "Create column Metro C3 at index 11 based on column Metro C2 using expression grel:value.replace(/\\(.*?\\)/, \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro C",
+    "expression": "grel:value.replace(/(\\s*B[uúUÚ]s.*)/, \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro C Limpia Buses",
+    "columnInsertIndex": 10,
+    "description": "Create column Metro C Limpia Buses at index 10 based on column Metro C using expression grel:value.replace(/(\\s*B[uúUÚ]s.*)/, \"\").trim()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro C2",
+    "description": "Remove column Metro C2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro C3",
+    "description": "Remove column Metro C3"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro C Limpia Buses",
+    "expression": "grel:value.replace(\"Metro: \", \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro Limpia 222",
+    "columnInsertIndex": 11,
+    "description": "Create column Metro Limpia 222 at index 11 based on column Metro C Limpia Buses using expression grel:value.replace(\"Metro: \", \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Metro Limpia 222",
+    "expression": "grel:value.replace(/\\(.*?\\)/, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Metro_Station",
+    "columnInsertIndex": 12,
+    "description": "Create column Metro_Station at index 12 based on column Metro Limpia 222 using expression grel:value.replace(/\\(.*?\\)/, \"\")"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro",
+    "description": "Remove column Metro"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro C",
+    "description": "Remove column Metro C"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Metro C Limpia Buses",
+    "newColumnName": "Metro",
+    "description": "Rename column Metro C Limpia Buses to Metro"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro Limpia 222",
+    "description": "Remove column Metro Limpia 222"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro Station 2",
+    "description": "Remove column Metro Station 2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Metro Station 3",
+    "description": "Remove column Metro Station 3"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias",
+    "expression": "grel:value.replace(\"Renfe: \", \"\").replace(\"RENFE\", \"\").replace(\"RENFE: \", \"\").replace(\"Cercanías\", \"\").replace(\"Renfe\", \"\").replace(\"líneas\", \"\").replace(\"Cercanías: \", \"\").replace(/(\\s*\\(.*?\\))|(\\s*[C,c]\\d.*)/, \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias Station",
+    "columnInsertIndex": 7,
+    "description": "Create column Cercanias Station at index 7 based on column Cercanias using expression grel:value.replace(\"Renfe: \", \"\").replace(\"RENFE\", \"\").replace(\"RENFE: \", \"\").replace(\"Cercanías\", \"\").replace(\"Renfe\", \"\").replace(\"líneas\", \"\").replace(\"Cercanías: \", \"\").replace(/(\\s*\\(.*?\\))|(\\s*[C,c]\\d.*)/, \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias sin -",
+    "columnInsertIndex": 7,
+    "description": "Create column Cercanias sin - at index 7 based on column Cercanias using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Cercanias sin -",
+    "description": "Remove column Cercanias sin -"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias",
+    "expression": "grel:value.replace(\"-\", \"\").trim()",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias sin -",
+    "columnInsertIndex": 7,
+    "description": "Create column Cercanias sin - at index 7 based on column Cercanias using expression grel:value.replace(\"-\", \"\").trim()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Cercanias sin -",
+    "expression": "grel:with(value, v, if(isBlank(v), \"\", forEach( forEach( v.split(/[^0-9]+/), n, if(isBlank(n), null, \"C-\" + n) ).uniques(), u, u ).join(\"\\n\") ) )",
+    "onError": "set-to-blank",
+    "newColumnName": "Cercanias Lines",
+    "columnInsertIndex": 8,
+    "description": "Create column Cercanias Lines at index 8 based on column Cercanias sin - using expression grel:with(value, v, if(isBlank(v), \"\", forEach( forEach( v.split(/[^0-9]+/), n, if(isBlank(n), null, \"C-\" + n) ).uniques(), u, u ).join(\"\\n\") ) )"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Cercanias",
+    "description": "Remove column Cercanias"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Cercanias sin -",
+    "newColumnName": "Cercanias",
+    "description": "Rename column Cercanias sin - to Cercanias"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "cercanias_line",
+    "description": "Remove column cercanias_line"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DESCRIPCION",
+    "description": "Remove column DESCRIPCION"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "expression": "grel:value.replace(/\\s*\\(.*?\\)\\s*$/, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NOMBRE using expression grel:value.replace(/\\s*\\(.*?\\)\\s*$/, \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE-VIA",
+    "expression": "grel:'calle '+value+' Madrid'",
+    "onError": "set-to-blank",
+    "newColumnName": "calle madrid",
+    "columnInsertIndex": 17,
+    "description": "Create column calle madrid at index 17 based on column NOMBRE-VIA using expression grel:'calle '+value+' Madrid'"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "calle madrid",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q79007",
+        "name": "street"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column calle madrid to type Q79007"
+  },
+  {
+    "op": "core/recon-match-best-candidates",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "calle madrid",
+    "description": "Match each cell to its best recon candidate in column calle madrid"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q10267336",
+        "name": "neighborhood of Madrid"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column BARRIO to type Q10267336"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "Casco Historico de Vallecas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544370",
+      "name": "Casco Histórico de Vallecas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vallecas (Q16544370) for cells containing \"Casco Historico de Vallecas\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "Casco Historico de Vallecas",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544370",
+      "name": "Casco Histórico de Vallecas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vallecas (Q16544370) for cells containing \"Casco Historico de Vallecas\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "Casco Historico de Vicalvaro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544374",
+      "name": "Casco Histórico de Vicálvaro",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vicálvaro (Q16544374) for cells containing \"Casco Historico de Vicalvaro\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "Villaverde Alto",
+    "judgment": "matched",
+    "match": {
+      "id": "Q390435",
+      "name": "Villaverde Alto, Casco Histórico de Villaverde",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Villaverde Alto, Casco Histórico de Villaverde (Q390435) for cells containing \"Villaverde Alto\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO Historico VALLECAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544370",
+      "name": "Casco Histórico de Vallecas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vallecas (Q16544370) for cells containing \"CASCO Historico VALLECAS\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "Casco historico de Vicalvaro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544374",
+      "name": "Casco Histórico de Vicálvaro",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vicálvaro (Q16544374) for cells containing \"Casco historico de Vicalvaro\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO Historico de VICALVARO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544374",
+      "name": "Casco Histórico de Vicálvaro",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vicálvaro (Q16544374) for cells containing \"CASCO Historico de VICALVARO\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO H.VICALVARO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544374",
+      "name": "Casco Histórico de Vicálvaro",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vicálvaro (Q16544374) for cells containing \"CASCO H.VICALVARO\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO Historico de VALLECAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544370",
+      "name": "Casco Histórico de Vallecas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vallecas (Q16544370) for cells containing \"CASCO Historico de VALLECAS\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO Historico de VALLECAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544370",
+      "name": "Casco Histórico de Vallecas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vallecas (Q16544370) for cells containing \"CASCO Historico de VALLECAS\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO Historico de BARAJAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q9701730",
+      "name": "Casco Histórico de Barajas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Barajas (Q9701730) for cells containing \"CASCO Historico de BARAJAS\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO HISTORICO DE VALLECAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544370",
+      "name": "Casco Histórico de Vallecas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vallecas (Q16544370) for cells containing \"CASCO HISTORICO DE VALLECAS\" in column BARRIO"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q3032114",
+        "name": "district of Madrid"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column DISTRITO to type Q3032114"
+  },
+  {
+    "op": "core/recon-match-best-candidates",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "description": "Match each cell to its best recon candidate in column DISTRITO"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q7075",
+        "name": "library"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q7075"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q22698",
+        "name": "park"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q22698"
+  },
+  {
+    "op": "core/recon-match-best-candidates",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "description": "Match each cell to its best recon candidate in column NOMBRE"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q1107656",
+        "name": "garden"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q1107656"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q22698",
+        "name": "park"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q22698"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q1076486",
+        "name": "sports venue"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q1076486"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q189004",
+        "name": "college"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q189004"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q3918",
+        "name": "university"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q3918"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q180958",
+        "name": "faculty"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE to type Q180958"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Biblioteca Pública Antonio Mingote",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697873",
+      "name": "Biblioteca Pública Latina - Antonio Mingote",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Latina - Antonio Mingote (Q85697873) for cells containing \"Biblioteca Pública Antonio Mingote\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Biblioteca Pública Elena Fortún",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697975",
+      "name": "Biblioteca Pública Retiro - Elena Fortún",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Retiro - Elena Fortún (Q85697975) for cells containing \"Biblioteca Pública Elena Fortún\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Biblioteca Pública Hortaleza",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697866",
+      "name": "Biblioteca Pública Hortaleza",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Hortaleza (Q85697866) for cells containing \"Biblioteca Pública Hortaleza\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DISTRITO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q3032114",
+        "name": "district of Madrid"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column DISTRITO to type Q3032114"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q10267336",
+        "name": "neighborhood of Madrid"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column BARRIO to type Q10267336"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO HISTORICO VALLECAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544370",
+      "name": "Casco Histórico de Vallecas",
+      "types": [
+        "Q10267336"
+      ],
+      "score": 94
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vallecas (Q16544370) for cells containing \"CASCO HISTORICO VALLECAS\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO HISTORICO VICALVARO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544374",
+      "name": "Casco Histórico de Vicálvaro",
+      "types": [
+        "Q10267336"
+      ],
+      "score": 94
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vicálvaro (Q16544374) for cells containing \"CASCO HISTORICO VICALVARO\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "VILLAVERDE ALTO C.H.",
+    "judgment": "matched",
+    "match": {
+      "id": "Q390435",
+      "name": "Villaverde Alto, Casco Histórico de Villaverde",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Villaverde Alto, Casco Histórico de Villaverde (Q390435) for cells containing \"VILLAVERDE ALTO C.H.\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO H.VALLECAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544370",
+      "name": "Casco Histórico de Vallecas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vallecas (Q16544370) for cells containing \"CASCO H.VALLECAS\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO H.VICALVARO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q16544374",
+      "name": "Casco Histórico de Vicálvaro",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Vicálvaro (Q16544374) for cells containing \"CASCO H.VICALVARO\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "AMBROZ",
+    "judgment": "matched",
+    "match": {
+      "id": "Q11905294",
+      "name": "Ambroz",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Ambroz (Q11905294) for cells containing \"AMBROZ\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "CASCO H.BARAJAS",
+    "judgment": "matched",
+    "match": {
+      "id": "Q9701730",
+      "name": "Casco Histórico de Barajas",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Casco Histórico de Barajas (Q9701730) for cells containing \"CASCO H.BARAJAS\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "PEÑA GRANDE",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3319582",
+      "name": "Peñagrande",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Peñagrande (Q3319582) for cells containing \"PEÑA GRANDE\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "EL SALVADOR",
+    "judgment": "matched",
+    "match": {
+      "id": "Q10367095",
+      "name": "Salvador",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Salvador (Q10367095) for cells containing \"EL SALVADOR\" in column BARRIO"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE",
+    "similarValue": "Centro Deportivo Municipal Barceló",
+    "judgment": "matched",
+    "match": {
+      "id": "Q35794611",
+      "name": "Centro Polivalente Barceló",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro Polivalente Barceló (Q35794611) for cells containing \"Centro Deportivo Municipal Barceló\" in column NOMBRE"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "BARRIO: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "BARRIO",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "BARRIO",
+    "similarValue": "JUSTICIA/ CENTRO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1992319",
+      "name": "Justicia",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Justicia (Q1992319) for cells containing \"JUSTICIA/ CENTRO\" in column BARRIO"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q2074737",
+        "name": "municipality of Spain"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column LOCALIDAD to type Q2074737"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LOCALIDAD",
+    "similarValue": "MADRID",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1753102",
+      "name": "Madrid",
+      "types": [
+        "Q2074737"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Madrid (Q1753102) for cells containing \"MADRID\" in column LOCALIDAD"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "IDNOMBRE",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "p",
+    "columnInsertIndex": 2,
+    "description": "Create column p at index 2 based on column IDNOMBRE using expression grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "p",
+    "description": "Remove column p"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE",
+    "expression": "grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "NOMBRE_WIKI",
+    "columnInsertIndex": 1,
+    "description": "Create column NOMBRE_WIKI at index 1 based on column NOMBRE using expression grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "calle madrid",
+    "expression": "grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "NOMBRE-VIA-WIKI",
+    "columnInsertIndex": 19,
+    "description": "Create column NOMBRE-VIA-WIKI at index 19 based on column calle madrid using expression grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOMBRE_WIKI",
+    "newColumnName": "NOMBRE-WIKI",
+    "description": "Rename column NOMBRE_WIKI to NOMBRE-WIKI"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "BARRIO",
+    "expression": "grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "BARRIO-WIKI",
+    "columnInsertIndex": 25,
+    "description": "Create column BARRIO-WIKI at index 25 based on column BARRIO using expression grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "DISTRITO",
+    "expression": "grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "DISTRITO-WIKI",
+    "columnInsertIndex": 27,
+    "description": "Create column DISTRITO-WIKI at index 27 based on column DISTRITO using expression grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "LOCALIDAD",
+    "expression": "grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "LOCALIDAD-WIKI",
+    "columnInsertIndex": 22,
+    "description": "Create column LOCALIDAD-WIKI at index 22 based on column LOCALIDAD using expression grel:if(isNonBlank(cell.recon.match.id),\n  \"http://www.wikidata.org/entity/\" + cell.recon.match.id,\n  \"\"\n)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Superfice m²",
+    "newColumnName": "Superficie m²",
+    "description": "Renombra la columna Superfice m² a Superficie m²"
+  }
+]

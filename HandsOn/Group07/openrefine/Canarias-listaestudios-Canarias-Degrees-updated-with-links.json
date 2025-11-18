@@ -1,0 +1,279 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:if(cells[\"Academic Level Id\"].value == \"d6d85d89b4612501521435bd3f620a9a\",\n  \"Grado en \" + value,\n  if(cells[\"Academic Level Id\"].value == \"eb0a191797624dd3a48fa681d3061212\",\n    \"Máster en \" + value,\n    value\n  )\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "asd",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna asd en el índice 2 basada en la columna Degree usando la expresión grel:if(cells[\"Academic Level Id\"].value == \"d6d85d89b4612501521435bd3f620a9a\",\n  \"Grado en \" + value,\n  if(cells[\"Academic Level Id\"].value == \"eb0a191797624dd3a48fa681d3061212\",\n    \"Máster en \" + value,\n    value\n  )\n)"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q189533",
+        "name": "academic degree"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column asd to type Q189533"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Derecho",
+    "judgment": "matched",
+    "match": {
+      "id": "Q69384136",
+      "name": "Bachelor's Degree in Law",
+      "types": [
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor's Degree in Law (Q69384136) para las celdas que contienen \"Grado en Derecho\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Economía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q10752757",
+      "name": "Bachelor of Economics",
+      "types": [
+        "Q163727",
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Economics (Q10752757) para las celdas que contienen \"Grado en Economía\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Educación Social",
+    "judgment": "matched",
+    "match": {
+      "id": "Q110316942",
+      "name": "Bachelor's Degree in Social Education",
+      "types": [
+        "Q163727",
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor's Degree in Social Education (Q110316942) para las celdas que contienen \"Grado en Educación Social\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Enfermería",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4838827",
+      "name": "Bachelor of Science in Nursing",
+      "types": [
+        ""
+      ],
+      "score": 50
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Science in Nursing (Q4838827) para las celdas que contienen \"Grado en Enfermería\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Filología Hispánica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q50357241",
+      "name": "degree in Hispanic philology",
+      "types": [
+        "Q189533"
+      ],
+      "score": 70
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento degree in Hispanic philology (Q50357241) para las celdas que contienen \"Grado en Filología Hispánica\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Historia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q72317748",
+      "name": "grado en historia",
+      "types": [
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento grado en historia (Q72317748) para las celdas que contienen \"Grado en Historia\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Ingeniería Biomédica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4838823",
+      "name": "Bachelor of Science in Biomedical Engineering",
+      "types": [
+        ""
+      ],
+      "score": 41.5
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Science in Biomedical Engineering (Q4838823) para las celdas que contienen \"Grado en Ingeniería Biomédica\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Ingeniería Civil",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56760985",
+      "name": "Bachelor of Science in Civil Engineering",
+      "types": [
+        "Q189533"
+      ],
+      "score": 81
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Science in Civil Engineering (Q56760985) para las celdas que contienen \"Grado en Ingeniería Civil\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Ingeniería Informática",
+    "judgment": "matched",
+    "match": {
+      "id": "Q111032178",
+      "name": "bachelor's degree in systems engineering and informatics",
+      "types": [
+        "Q163727"
+      ],
+      "score": 65
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento bachelor's degree in systems engineering and informatics (Q111032178) para las celdas que contienen \"Grado en Ingeniería Informática\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Medicina",
+    "judgment": "matched",
+    "match": {
+      "id": "Q64869217",
+      "name": "licentiate of Medicine",
+      "types": [
+        "Q189533",
+        "Q12737077"
+      ],
+      "score": 77
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento licentiate of Medicine (Q64869217) para las celdas que contienen \"Grado en Medicina\" en la columna asd"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "asd",
+    "similarValue": "Grado en Psicología",
+    "judgment": "matched",
+    "match": {
+      "id": "Q64019347",
+      "name": "Licentiate in Psychology",
+      "types": [
+        "Q189533"
+      ],
+      "score": 71
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Licentiate in Psychology (Q64019347) para las celdas que contienen \"Grado en Psicología\" en la columna asd"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "asd",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna same_as_wikidata_degree en el índice 3 basada en la columna asd usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "asd",
+    "description": "Eliminar columna asd"
+  }
+]

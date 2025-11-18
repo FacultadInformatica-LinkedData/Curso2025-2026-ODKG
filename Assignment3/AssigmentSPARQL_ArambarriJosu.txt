@@ -1,0 +1,122 @@
+ARAMBARRI CALVO, JOSU -OpenData&KnowledgeGraphs- 21/SEP/2025
+
+Create the SPARQL query and the result for the following queries expressed in natural language. The endpoint that you can use for this exercise is: http://es.dbpedia.org/sparql
+
+################################################################################################################################################
+
+1) Get all the properties that can be applied to instances of the Politician class (<http://dbpedia.org/ontology/Politician>)
+
+
+SELECT DISTINCT ?property
+WHERE {
+  ?resource a <http://dbpedia.org/ontology/Politician> .
+  ?resource ?property ?value .
+}
+
+https://es.dbpedia.org/sparql?default-graph-uri=&query=SELECT+DISTINCT+%3Fproperty%0D%0AWHERE+%7B%0D%0A++%3Fresource+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fresource+%3Fproperty+%3Fvalue+.%0D%0A%7D%0D%0A&should-sponge=&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+
+
+################################################################################################################################################
+
+2) Get all the properties, except rdf:type, that can be applied to instances of the Politician class
+
+SELECT DISTINCT ?property
+WHERE {
+  ?resource a <http://dbpedia.org/ontology/Politician> .
+  ?resource ?property ?value .
+  FILTER (?property!= rdf:type)
+}
+
+https://es.dbpedia.org/sparql?default-graph-uri=&query=SELECT+DISTINCT+%3Fproperty%0D%0AWHERE+%7B%0D%0A++%3Fresource+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fresource+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0A&should-sponge=&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+
+
+################################################################################################################################################
+
+3) Which different values exist for the properties, except for rdf:type, applicable to the instances of Politician?
+
+
+SELECT DISTINCT ?value
+WHERE {
+  ?resource a <http://dbpedia.org/ontology/Politician> .
+  ?resource ?property ?value .
+  FILTER (?property != rdf:type)
+}
+
+https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=%0D%0ASELECT+DISTINCT+%3Fvalue%0D%0AWHERE+%7B%0D%0A++%3Fresource+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fresource+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0A&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on
+################################################################################################################################################
+
+
+4) For each of these applicable properties, except for rdf:type, which different values do they take globally for all those instances?
+
+4a) show the value for each property
+
+SELECT DISTINCT ?property ?value
+WHERE {
+  ?resource a <http://dbpedia.org/ontology/Politician> .
+  ?resource ?property ?value .
+  FILTER (?property != rdf:type)
+}
+
+
+https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+DISTINCT+%3Fproperty+%3Fvalue%0D%0AWHERE+%7B%0D%0A++%3Fresource+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fresource+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0A%0D%0A&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on
+
+
+
+4b) IF WE WANT TO SHOW IN A MORE VISUAL WAY THE VALUES, WE CAN DO AS FOLLOWS:
+
+// Lo del GROUP_CONCAT es para ponerlo bonito, y que se vea bien.
+
+SELECT ?property (GROUP_CONCAT(DISTINCT STR(?value); separator=", ") AS ?values)
+WHERE {
+  ?resource rdf:type <http://dbpedia.org/ontology/Politician>.
+  ?resource ?property ?value .
+  FILTER (?property != rdf:type)
+}
+GROUP BY ?property
+ORDER BY ?property
+LIMIT 100
+
+https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+%3Fproperty+%28GROUP_CONCAT%28DISTINCT+STR%28%3Fvalue%29%3B+separator%3D%22%2C+%22%29+AS+%3Fvalues%29%0D%0AWHERE+%7B%0D%0A++%3Fresource+rdf%3Atype+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E.%0D%0A++%3Fresource+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0AGROUP+BY+%3Fproperty%0D%0AORDER+BY+%3Fproperty%0D%0ALIMIT+100%0D%0A&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on
+
+
+
+
+################################################################################################################################################
+
+5) For each of these applicable properties, except for rdf:type, how many distinct values do they take globally for all those instances?
+
+
+SELECT ?property (COUNT(DISTINCT ?value) AS ?numDistinctValues)
+WHERE {
+  ?resource rdf:type <http://dbpedia.org/ontology/Politician> .
+  ?resource ?property ?value .
+  FILTER (?property != rdf:type)
+}
+GROUP BY ?property
+ORDER BY DESC(?numDistinctValues)
+
+https://es.dbpedia.org/sparql?default-graph-uri=&query=%0D%0ASELECT+%3Fproperty+%28COUNT%28DISTINCT+%3Fvalue%29+AS+%3FnumDistinctValues%29%0D%0AWHERE+%7B%0D%0A++%3Fresource+rdf%3Atype+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fresource+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0AGROUP+BY+%3Fproperty%0D%0AORDER+BY+DESC%28%3FnumDistinctValues%29&should-sponge=&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+
+
+
+NOTE: 	If "properties" refer to the links of the type --------/property/-----, 
+	we want to eliminate the links of the type:  -------/ontology/------,
+	as I dont know if the latter links are considered as properties,
+	I have done it the two ways. I have also used "etiquetas" like dbp
+	in that last piece of code.
+
+
+5b) 
+
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT ?property (COUNT(DISTINCT ?value) AS ?numDistinctValues)
+WHERE {
+  ?resource rdf:type <http://dbpedia.org/ontology/Politician> .
+  ?resource ?property ?value .
+  FILTER (
+    STRSTARTS(STR(?property), "http://dbpedia.org/property/") &&
+    ?property != rdf:type
+  )
+}
+GROUP BY ?property
+ORDER BY DESC(?numDistinctValues)
+
+https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=%0D%0APREFIX+dbp%3A+%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0A%0D%0ASELECT+%3Fproperty+%28COUNT%28DISTINCT+%3Fvalue%29+AS+%3FnumDistinctValues%29%0D%0AWHERE+%7B%0D%0A++%3Fresource+rdf%3Atype+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fresource+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%0D%0A++++STRSTARTS%28STR%28%3Fproperty%29%2C+%22http%3A%2F%2Fdbpedia.org%2Fproperty%2F%22%29+%26%26%0D%0A++++%3Fproperty+%21%3D+rdf%3Atype%0D%0A++%29%0D%0A%7D%0D%0AGROUP+BY+%3Fproperty%0D%0AORDER+BY+DESC%28%3FnumDistinctValues%29&format=text%2Fhtml&timeout=30000&signal_void=on&signal_unconnected=on

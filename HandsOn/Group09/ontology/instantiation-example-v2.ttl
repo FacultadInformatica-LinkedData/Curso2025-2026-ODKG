@@ -1,0 +1,177 @@
+@prefix :            <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa:        <http://www.w3.org/ns/sosa/> .
+@prefix schema:      <http://schema.org/> .
+@prefix dcterms:     <http://purl.org/dc/terms/> .
+@prefix wgs84_pos:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix qudt:        <http://qudt.org/schema/qudt/> .
+@prefix unit:        <http://qudt.org/vocab/unit/> .
+
+#################################################################
+# Pedestrian Place and Feature of Interest
+#################################################################
+
+:location_45 
+   a                          sosa:FeatureOfInterest, schema:Place ;
+   schema:address             :address_45 ;
+   schema:containedInPlace    :street_45 ;
+   wgs84_pos:lat              "40.4195"^^xsd:decimal ;
+   wgs84_pos:long             "-3.6922"^^xsd:decimal .
+
+:address_45
+   a                          schema:PostalAddress ;
+   rdfs:comment               "Outdoor" ;
+   schema:postalCode          "3000"^^xsd:integer ;
+   schema:streetAddress       "Swanston Street 144" .
+
+:street_45 
+   a                          :Street ;
+   rdfs:label                 "Swanston Street" ;
+   schema:containedInPlace    :city_45 .
+
+:city_45
+   a                          schema:City ;
+   rdfs:label                 "Melbourne" ;
+   schema:containedInPlace    :country_45 .
+
+:country_45
+   a                          schema:Country ;
+   rdfs:label                 "Australia" .
+
+#################################################################
+# Pedestrian Sensor
+#################################################################
+
+:pedestrianSensor_swa148_t
+   a                             :PedestrianSensor ;
+   rdfs:comment                  "Pushbox Upgrade, 03/08/2023" ;
+   :dateInstalled                "2017-06-29"^^xsd:date ;
+   schema:description            "Little Collins St-Swanston St (East)" ;
+   schema:status                 "A" ;
+   :closestMicroclimateSensor    :microclimateSensor_ICTMicroclimate-03 ;
+   :locatedAt                    :location_45 ;
+   sosa:observes                 :pedestrianCount .
+
+#################################################################
+# Pedestrian Counting Observation
+#################################################################
+
+:pedestrianCountObservation_451420241225
+   a                          sosa:Observation ;
+   sosa:hasFeatureOfInterest  :location_45 ;
+   sosa:hasSimpleResult       "1145"^^xsd:integer ;
+   sosa:observedProperty      :pedestrianCount ;
+   sosa:madeBySensor          :pedestrianSensor_swa148_t ;
+   sosa:resultTime            "2024-12-09T01:00:00"^^xsd:dateTime .
+
+#################################################################
+# Microclimate Place and Feature of Interest
+#################################################################
+
+:location_M03
+   a                          sosa:FeatureOfInterest, schema:Place ;
+   schema:address             :address_M03 ;
+   schema:containedInPlace    :street_M03 ;
+   wgs84_pos:lat              "-37.8140348"^^xsd:decimal ;
+   wgs84_pos:long             "144.96728"^^xsd:decimal .
+
+:address_M03
+   a                          schema:PostalAddress ;
+   rdfs:comment               "Outdoor" ;
+   schema:postalCode          "3000"^^xsd:integer ;
+   schema:streetAddress       "Central Hall, Little Collins Street 210" .
+
+:street_M03
+   a                          :Street ;
+   rdfs:label                 "Central Hall, Little Collins Street" ;
+   schema:containedInPlace    :city_M03 .
+
+:city_M03
+   a                          schema:City ;
+   rdfs:label                 "Melbourne" ;
+   schema:containedInPlace    :country_M03 .
+
+:country_M03
+   a                          schema:Country ;
+   rdfs:label                 "Australia" .
+
+#################################################################
+# Microclimate Sensor
+#################################################################
+
+:microclimateSensor_ICTMicroclimate-03
+   a                             :MicroclimateSensor ;
+   rdfs:label                    "ICTMicroclimate-03" ;
+   schema:description            "CH1 rooftop" ;
+   :closestPedestrianSensor      :pedestrianSensor_swa148_t ;
+   :locatedAt                    :location_M03 ;
+   sosa:observes                 :airTemperatureObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00 ,
+                                 :relativeHumidityObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00 ,
+                                 :averageWindSpeedObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00 ,
+                                 :averageWindDirectionObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00 ,
+                                 :atmosphericPressureObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00 ,
+                                 :pm10Observation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00 ,
+                                 :noiseObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00 .
+
+#################################################################
+# Microclimate's variable observations
+#################################################################
+
+:airTemperatureObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00
+   a                          sosa:Observation ;
+   sosa:hasFeatureOfInterest  :location_M03 ;
+   sosa:hasSimpleResult       "22.4"^^xsd:float ;
+   sosa:observedProperty      :airTemperature ;
+   sosa:madeBySensor          :microclimateSensor_ICTMicroclimate-03 ;
+   sosa:resultTime            "2024-12-30T18:25:15+11:00"^^xsd:dateTime .
+
+:relativeHumidityObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00
+   a                          sosa:Observation ;
+   sosa:hasFeatureOfInterest  :location_M03 ;
+   sosa:hasSimpleResult       "71.1"^^xsd:float ;
+   sosa:observedProperty      :relativeHumidity ;
+   sosa:madeBySensor          :microclimateSensor_ICTMicroclimate-03 ;
+   sosa:resultTime            "2024-12-30T18:25:15+11:00"^^xsd:dateTime .
+
+:averageWindSpeedObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00
+   a                          sosa:Observation ;
+   sosa:hasFeatureOfInterest  :location_M03 ;
+   sosa:hasSimpleResult       "4.2"^^xsd:float ;
+   sosa:observedProperty      :averageWindSpeed ;
+   sosa:madeBySensor          :microclimateSensor_ICTMicroclimate-03 ;
+   sosa:resultTime            "2024-12-30T18:25:15+11:00"^^xsd:dateTime .
+
+:averageWindDirectionObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00
+   a                          sosa:Observation ;
+   sosa:hasFeatureOfInterest  :location_M03 ;
+   sosa:hasSimpleResult       "163"^^xsd:integer ;
+   sosa:observedProperty      :averageWindDirection ;
+   sosa:madeBySensor          :microclimateSensor_ICTMicroclimate-03 ;
+   sosa:resultTime            "2024-12-30T18:25:15+11:00"^^xsd:dateTime .
+
+:atmosphericPressureObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00
+   a                          sosa:Observation ;
+   sosa:hasFeatureOfInterest  :location_M03 ;
+   sosa:hasSimpleResult       "1008.0"^^xsd:float ;
+   sosa:observedProperty      :atmosphericPressure ;
+   sosa:madeBySensor          :microclimateSensor_ICTMicroclimate-03 ;
+   sosa:resultTime            "2024-12-30T18:25:15+11:00"^^xsd:dateTime .
+
+:pm10Observation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00
+   a                          sosa:Observation ;
+   sosa:hasFeatureOfInterest  :location_M03 ;
+   sosa:hasSimpleResult       "12.0"^^xsd:float ;
+   sosa:observedProperty      :pm10 ;
+   sosa:madeBySensor          :microclimateSensor_ICTMicroclimate-03 ;
+   sosa:resultTime            "2024-12-30T18:25:15+11:00"^^xsd:dateTime .
+
+:noiseObservation_ICTMicroclimate-03-2024-12-30T18:25:15+11:00
+   a                          sosa:Observation ;
+   sosa:hasFeatureOfInterest  :location_M03 ;
+   sosa:hasSimpleResult       "91.2"^^xsd:float ;
+   sosa:observedProperty      :noise ;
+   sosa:madeBySensor          :microclimateSensor_ICTMicroclimate-03 ;
+   sosa:resultTime            "2024-12-30T18:25:15+11:00"^^xsd:dateTime .

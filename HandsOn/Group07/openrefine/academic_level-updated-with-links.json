@@ -1,0 +1,123 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q18189",
+        "name": "educational stage"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Academic Level to type Q18189"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "similarValue": "Grado",
+    "judgment": "matched",
+    "match": {
+      "id": "Q163727",
+      "name": "bachelor's degree",
+      "types": [
+        "Q4218455",
+        "Q18189",
+        "Q11659512",
+        "Q189533"
+      ],
+      "score": 80
+    },
+    "shareNewTopics": false,
+    "description": "Match item bachelor's degree (Q163727) for cells containing \"Grado\" in column Academic Level"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "similarValue": "Máster",
+    "judgment": "matched",
+    "match": {
+      "id": "Q183816",
+      "name": "master's degree",
+      "types": [
+        "Q4218455",
+        "Q18189",
+        "Q11659512"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item master's degree (Q183816) for cells containing \"Máster\" in column Academic Level"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "similarValue": "Doble Grado",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1262636",
+      "name": "double degree",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item double degree (Q1262636) for cells containing \"Doble Grado\" in column Academic Level"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Academic Level",
+    "similarValue": "Doble Grado",
+    "judgment": "matched",
+    "match": {
+      "id": "Q716855",
+      "name": "double degree",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item double degree (Q716855) for cells containing \"Doble Grado\" in column Academic Level"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Academic Level",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_academiclevel",
+    "columnInsertIndex": 1,
+    "description": "Create column same_as_wikidata_academiclevel at index 1 based on column Academic Level using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  }
+]

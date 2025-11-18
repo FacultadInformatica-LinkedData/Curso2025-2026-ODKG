@@ -1,0 +1,48 @@
+Task 1;
+Natural language;Get all the properties that can be applied to instances of the Politician class (<http://dbpedia.org/ontology/Politician>)
+SPARQL query;"SELECT DISTINCT ?property
+WHERE {
+  ?politician rdf:type <http://dbpedia.org/ontology/Politician> .
+  ?politician ?property ?value .
+}"
+reply html;https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=SELECT+DISTINCT+%3Fproperty%0D%0AWHERE+%7B%0D%0A++%3Fpolitician+rdf%3Atype+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fpolitician+%3Fproperty+%3Fvalue+.%0D%0A%7D%0D%0A&should-sponge=&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+
+;
+Task 2;
+Natural language;Get all the properties, except rdf:type, that can be applied to instances of the Politician class
+SPARQL query;"SELECT DISTINCT ?property
+WHERE {
+  ?politician rdf:type <http://dbpedia.org/ontology/Politician> .
+  ?politician ?property ?value .
+  FILTER (?property != rdf:type)
+}"
+reply html;https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=SELECT+DISTINCT+%3Fproperty%0D%0AWHERE+%7B%0D%0A++%3Fpolitician+rdf%3Atype+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fpolitician+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0A&should-sponge=&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+
+;
+Task 3;
+Natural language;Which different values exist for the properties, except for rdf:type, applicable to the instances of Politician?
+SPARQL query;"SELECT DISTINCT ?value
+WHERE {
+  ?politician rdf:type <http://dbpedia.org/ontology/Politician> .
+  ?politician ?property ?value .
+  FILTER (?property != rdf:type)
+}"
+reply html;https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=SELECT+DISTINCT+%3Fvalue%0D%0AWHERE+%7B%0D%0A++%3Fpolitician+rdf%3Atype+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fpolitician+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0A&should-sponge=&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+
+;
+Task 4;
+Natural language;For each of these applicable properties, except for rdf:type, which different values do they take globally for all those instances?
+SPARQL query;"SELECT DISTINCT ?property ?value
+WHERE {
+  ?politician rdf:type <http://dbpedia.org/ontology/Politician> .
+  ?politician ?property ?value .
+  FILTER (?property != rdf:type)
+}"
+reply html;https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=SELECT+DISTINCT+%3Fproperty+%3Fvalue%0D%0AWHERE+%7B%0D%0A++%3Fpolitician+rdf%3Atype+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fpolitician+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0A&should-sponge=&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+
+;
+Task 5;
+Natural language;For each of these applicable properties, except for rdf:type, how many distinct values do they take globally for all those instances?
+SPARQL query;"SELECT ?property (COUNT(DISTINCT ?value))
+WHERE {
+  ?politician rdf:type <http://dbpedia.org/ontology/Politician> .
+  ?politician ?property ?value .
+  FILTER (?property != rdf:type)
+}"
+reply html;https://es.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fes.dbpedia.org&query=SELECT+%3Fproperty+%28COUNT%28DISTINCT+%3Fvalue%29%29%0D%0AWHERE+%7B%0D%0A++%3Fpolitician+rdf%3Atype+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FPolitician%3E+.%0D%0A++%3Fpolitician+%3Fproperty+%3Fvalue+.%0D%0A++FILTER+%28%3Fproperty+%21%3D+rdf%3Atype%29%0D%0A%7D%0D%0A%0D%0A%0D%0A&should-sponge=&format=text%2Fhtml&timeout=0&debug=on&run=+Run+Query+

@@ -1,0 +1,335 @@
+[
+  {
+    "op": "core/column-removal",
+    "description": "Remove column stop_headsign",
+    "columnName": "stop_headsign"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column shape_dist_traveled",
+    "columnName": "shape_dist_traveled"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column pickup_type",
+    "columnName": "pickup_type"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column drop_off_type",
+    "columnName": "drop_off_type"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column trip_headsign based on column trip_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "trip_headsign",
+    "columnInsertIndex": 6,
+    "baseColumnName": "trip_id",
+    "expression": "grel:cell.cross('trips','trip_id').cells['trip_headsign'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column direction_id based on column trip_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "direction_id",
+    "columnInsertIndex": 7,
+    "baseColumnName": "trip_id",
+    "expression": "grel:cell.cross('trips','trip_id').cells['direction_id'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column route_id based on column trip_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "route_id",
+    "columnInsertIndex": 8,
+    "baseColumnName": "trip_id",
+    "expression": "grel:cell.cross('trips','trip_id').cells['route_id'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column route_short_name based on column route_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "route_short_name",
+    "columnInsertIndex": 9,
+    "baseColumnName": "route_id",
+    "expression": "grel:cell.cross('routes','route_id').cells['route_short_name'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column route_long_name based on column route_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "route_long_name",
+    "columnInsertIndex": 10,
+    "baseColumnName": "route_id",
+    "expression": "grel:cell.cross('routes','route_id').cells['route_long_name'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column stop_name based on column stop_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "stop_name",
+    "columnInsertIndex": 11,
+    "baseColumnName": "stop_id",
+    "expression": "grel:cell.cross('stops','stop_id').cells['stop_name'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column route_type based on column route_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "route_type",
+    "columnInsertIndex": 12,
+    "baseColumnName": "route_id",
+    "expression": "grel:cell.cross('routes','route_id').cells['route_type'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column stop_lat based on column stop_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "stop_lat",
+    "columnInsertIndex": 13,
+    "baseColumnName": "stop_id",
+    "expression": "grel:cell.cross('GTFS_stops','stop_id').cells['stop_lat'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column stop_lon based on column stop_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "stop_lon",
+    "columnInsertIndex": 14,
+    "baseColumnName": "stop_id",
+    "expression": "grel:cell.cross('GTFS_stops','stop_id').cells['stop_lon'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column wheelchair_boarding based on column stop_id",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "wheelchair_boarding",
+    "columnInsertIndex": 15,
+    "baseColumnName": "stop_id",
+    "expression": "grel:cell.cross('GTFS_stops','stop_id').cells['wheelchair_boarding'].value[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Trim trip_headsign",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "trip_headsign",
+    "expression": "grel:value.trim()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Trim route_short_name",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "route_short_name",
+    "expression": "grel:value.trim()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Trim route_long_name",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "route_long_name",
+    "expression": "grel:value.trim()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Trim stop_name",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "stop_name",
+    "expression": "grel:value.trim()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Convert stop_lat to number",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "stop_lat",
+    "expression": "grel:value.toNumber()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Convert stop_lon to number",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "stop_lon",
+    "expression": "grel:value.toNumber()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Convert stop_sequence to number",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "stop_sequence",
+    "expression": "grel:value.toNumber()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Convert route_type to number",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "route_type",
+    "expression": "grel:value.toNumber()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Convert direction_id to number",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "direction_id",
+    "expression": "grel:value.toNumber()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Convert wheelchair_boarding to number",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "wheelchair_boarding",
+    "expression": "grel:value.toNumber()",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition-by-fetching-urls",
+    "description": "Fetch Wikidata search JSON (1st result by stop_name)",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "wd_raw",
+    "urlExpression": "grel:'https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=es&type=item&limit=1&search=' + cells['stop_name'].value.encodeUriComponent()",
+    "onError": "set-to-blank",
+    "delay": 500,
+    "cacheResponses": true
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Extract QID from wd_raw JSON",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "wikidata_qid",
+    "columnInsertIndex": -1,
+    "baseColumnName": "wd_raw",
+    "expression": "grel:forNonBlank(value.parseJson().get('search'), a, a[0].get('id'), null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Build Wikidata IRI",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "wikidata_link",
+    "columnInsertIndex": -1,
+    "baseColumnName": "wikidata_qid",
+    "expression": "grel:forNonBlank(value, v, 'http://www.wikidata.org/entity/' + v, null)",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove helper column wd_raw",
+    "columnName": "wd_raw"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove helper column wikidata_qid",
+    "columnName": "wikidata_qid"
+  },
+  {
+    "op": "core/column-reorder",
+    "description": "Keep only relevant columns in correct order",
+    "columnNames": [
+      "trip_id",
+      "route_id",
+      "service_id",
+      "trip_headsign",
+      "direction_id",
+      "shape_id",
+      "route_short_name",
+      "route_long_name",
+      "route_type",
+      "stop_id",
+      "stop_name",
+      "stop_lat",
+      "stop_lon",
+      "arrival_time",
+      "departure_time",
+      "stop_sequence",
+      "wheelchair_boarding",
+      "wikidata_link"
+    ]
+  }
+]

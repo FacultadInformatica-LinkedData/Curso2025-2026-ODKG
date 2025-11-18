@@ -1,0 +1,1528 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  foaf: http://xmlns.com/foaf/0.1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rev: http://purl.org/stuff/rev#
+  schema: http://schema.org/
+  dct: http://purl.org/dc/terms/
+  rml: http://semweb.mmlab.be/ns/rml#
+  ql: http://semweb.mmlab.be/ns/ql#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  vocab: http://example.org#
+  lude: http://spanishuniversities.data.es/lude/ontology#
+  id: http://spanishuniversities.data.es/lude/resource/
+  owl: http://www.w3.org/2002/07/owl#
+  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+  
+mappings:
+  andaluciaDegreeUDwL:
+    sources:
+      - [Andalucia_NotasdeCorte_2024-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: adaluciaLevelDKwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level Id)]
+              - [str2, $(AcademicLevelID)]
+
+              
+  adaluciaLevelDKwL:
+    sources:
+      - [academic_level-updated.csv~csv]
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label,$(Academic Level),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri] 
+
+  andaluciaDegreeDFwL:
+    sources:
+      - [Andalucia_NotasdeCorte_2024-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:deliveredAt
+        o:
+          mapping: andaluciaFacultyDFwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(DegreeId)]
+              - [str2, $(DegreeId)]
+              
+  andaluciaFacultyDFwL:
+    sources:
+      - [Andalucia_NotasdeCorte_2024-Faculties-updated-with-links.csv~csv]
+    s: id:Faculty/$(FacultyId)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label,$(Faculty),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_faculty)~iri] 
+
+  andaluciaDegreeDKwL:
+    sources:
+      - [Andalucia_NotasdeCorte_2024-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: andaluciaKnowledgeDKwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AmbitId)]
+              - [str2, $(id)]
+
+              
+  andaluciaKnowledgeDKwL:
+    sources:
+      - [ambit-otros-with-links.csv~csv]
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label,$(ambit),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri]
+      
+  anndaluciaUniversityUDwL:
+    sources:
+      - [universidades-updated-with-links.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type,lude:University]
+      - [rdfs:label,$(University),xsd:string]
+      - [lude:acronym,$(Acronym),xsd:string]
+      - [lude:type,$(Type),xsd:string]
+      - [lude:cif,$(CIF),xsd:string]
+      - [lude:modality,$(Modality),xsd:string]
+      - [lude:url,$(URL),xsd:anyURI]
+      - [lude:email,$(Email),xsd:string]
+      - [lude:telephone,$(Phone),xsd:string]
+      - [lude:publicationYear,$(Year of Publication),xsd:gYear]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o:
+          mapping: andaluciaDegreeUDwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityId)]
+
+  andaluciaDegreeUFwL:
+    sources:
+      - [Andalucia_NotasdeCorte_2024-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+
+  andaluciaUniversityUFwL:
+    sources:
+      - [universidades-updated.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type,lude:University]
+      - [rdfs:label,$(University),xsd:string]
+      - [lude:acronym,$(Acronym),xsd:string]
+      - [lude:type,$(Type),xsd:string]
+      - [lude:cif,$(CIF),xsd:string]
+      - [lude:modality,$(Modality),xsd:string]
+      - [lude:url,$(URL),xsd:anyURI]
+      - [lude:email,$(Email),xsd:string]
+      - [lude:telephone,$(Phone),xsd:string]
+      - [lude:publicationYear,$(Year of Publication),xsd:gYear]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:hasFaculty
+        o:
+          mapping: andaluciaFacultyUFwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityId)]
+
+  andaluciaFacultyUFwL:
+    sources:
+      - [Andalucia_NotasdeCorte_2024-Faculties-updated-with-links.csv~csv]
+    s: id:Faculty/$(FacultyId)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label,$(Faculty),xsd:string] 
+      - [owl:sameAs, $(same_as_wikidata_faculty)~iri]
+
+  aragonUniversityUFwL:
+    sources:
+      - [universidades-updated-with-links.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type,lude:University]
+      - [rdfs:label,$(University),xsd:string]
+      - [lude:acronym,$(Acronym),xsd:string]
+      - [lude:type,$(Type),xsd:string]
+      - [lude:cif,$(CIF),xsd:string]
+      - [lude:modality,$(Modality),xsd:string]
+      - [lude:url,$(URL),xsd:anyURI]
+      - [lude:email,$(Email),xsd:string]
+      - [lude:telephone,$(Phone),xsd:string]
+      - [lude:publicationYear,$(Year of Publication),xsd:gYear]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:hasFaculty
+        o:
+          mapping: aragonFacultyUFwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityId)]
+
+  aragonFacultyUFwL:
+    sources:
+      - [Aragon_NotasCorte_20232024-Faculty-updated-with-links.csv~csv]
+    s: id:Faculty/$(FacultyId)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label,$(Faculty),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_faculty)~iri]
+      
+  aragonUniversityUDwL:
+    sources:
+      - [universidades-updated-with-links.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type,lude:University]
+      - [rdfs:label,$(University),xsd:string]
+      - [lude:acronym,$(Acronym),xsd:string]
+      - [lude:type,$(Type),xsd:string]
+      - [lude:cif,$(CIF),xsd:string]
+      - [lude:modality,$(Modality),xsd:string]
+      - [lude:url,$(URL),xsd:anyURI]
+      - [lude:email,$(Email),xsd:string]
+      - [lude:telephone,$(Phone),xsd:string]
+      - [lude:publicationYear,$(Year of Publication),xsd:gYear]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o:
+          mapping: aragonDegreeUDwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityId)]
+
+  aragonDegreeUDwL:
+    sources:
+      - [Aragon_NotasCorte_20232024-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [lude:adjudicationRound,$(Adjudication Quota),xsd:string]
+      - [lude:cuffoffGrade,$(Cut Off Grade),xsd:float]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+
+  aragonDegreeDKwL:
+    sources:
+      - [Aragon_NotasCorte_20232024-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [lude:adjudicationRound,$(Adjudication Quota),xsd:string]
+      - [lude:cuffoffGrade,$(Cut Off Grade),xsd:float]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: aragonKnowledgeDKwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AmbitId)]
+              - [str2, $(id)]
+
+              
+  aragonKnowledgeDKwL:
+    sources:
+      - [ambit-otros-with-links.csv~csv]
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label,$(ambit),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri]
+      
+  aragonDegreeDFwL:
+    sources:
+      - [Aragon_NotasCorte_20232024-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [lude:adjudicationRound,$(Adjudication Quota),xsd:string]
+      - [lude:cuffoffGrade,$(Cut Off Grade),xsd:float]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:deliveredAt
+        o:
+          mapping: aragonFacultyDFwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(DegreeId)]
+              - [str2, $(DegreeId)]
+              
+  aragonFacultyDFwL:
+    sources:
+      - [Aragon_NotasCorte_20232024-Faculty-updated-with-links.csv~csv]
+    s: id:Faculty/$(FacultyId)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label,$(Faculty),xsd:string] 
+      - [owl:sameAs, $(same_as_wikidata_faculty)~iri]
+
+  aragonDegreeDLwL:
+    sources:
+      - [Aragon_NotasCorte_20232024-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [lude:adjudicationRound,$(Adjudication Quota),xsd:string]
+      - [lude:cuffoffGrade,$(Cut Off Grade),xsd:float]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: aragonLevelDLwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level Id)]
+              - [str2, $(AcademicLevelID)]
+
+              
+  aragonLevelDLwL:
+    sources:
+      - [academic_level-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label,$(Academic Level),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri] 
+
+  asturiasUniversityUDwl:
+    sources:
+      - [universidades-updated-with-links.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type,lude:University]
+      - [rdfs:label,$(University),xsd:string]
+      - [lude:acronym,$(Acronym),xsd:string]
+      - [lude:type,$(Type),xsd:string]
+      - [lude:cif,$(CIF),xsd:string]
+      - [lude:modality,$(Modality),xsd:string]
+      - [lude:url,$(URL),xsd:anyURI]
+      - [lude:email,$(Email),xsd:string]
+      - [lude:telephone,$(Phone),xsd:string]
+      - [lude:publicationYear,$(Year of Publication),xsd:gYear]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o:
+          mapping: asturiasDegreeUDwl
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityId)]
+
+  asturiasDegreeUDwl:
+    sources:
+      - [Asturias_listaestudios-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:code,$(Code),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+
+  asturiasDegreeDKwl:
+    sources:
+      - [Asturias_listaestudios-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:code,$(Code),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: asturiasKnowledgeDKwl
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AmbitId)]
+              - [str2, $(id)]
+
+              
+  asturiasKnowledgeDKwl:
+    sources:
+      - [ambit-otros-with-links.csv~csv]
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label,$(ambit),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri] 
+
+  asturiasDegreeDLwl:
+    sources:
+      - [Asturias_listaestudios-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:code,$(Code),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: asturiasLevelDLwl
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level Id)]
+              - [str2, $(AcademicLevelID)]
+
+              
+  asturiasLevelDLwl:
+    sources:
+      - [academic_level-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label,$(Academic Level),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri]
+
+  canaryDegreeDLwL:
+    sources:
+      - [Canarias_listaestudios-Canarias-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:code,$(Code),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: canaryLevelDLwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level Id)]
+              - [str2, $(AcademicLevelID)]
+
+              
+  canaryLevelDLwL:
+    sources:
+      - [academic_level-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label,$(Academic Level),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri] 
+
+  canaryDegreeDKwL:
+    sources:
+      - [Canarias_listaestudios-Canarias-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:code,$(Code),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: canariasKnowledgeDKwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AmbitId)]
+              - [str2, $(id)]
+
+              
+  canariasKnowledgeDKwL:
+    sources:
+      - [ambit-otros-with-links.csv~csv]
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label,$(ambit),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri] 
+
+
+  canaryUniversityUDwL:
+    sources:
+      - [universidades-updated-with-links.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type,lude:University]
+      - [rdfs:label,$(University),xsd:string]
+      - [lude:acronym,$(Acronym),xsd:string]
+      - [lude:type,$(Type),xsd:string]
+      - [lude:cif,$(CIF),xsd:string]
+      - [lude:modality,$(Modality),xsd:string]
+      - [lude:url,$(URL),xsd:anyURI]
+      - [lude:email,$(Email),xsd:string]
+      - [lude:telephone,$(Phone),xsd:string]
+      - [lude:publicationYear,$(Year of Publication),xsd:gYear]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o:
+          mapping: canaryDegreeUDwL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityId)]
+
+  canaryDegreeUDwL:
+    sources:
+      - [Canarias_listaestudios-Canarias-Degrees-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeId)
+    po:
+      - [rdf:type,lude:Degree]
+      - [rdfs:label,$(Degree),xsd:string]
+      - [lude:code,$(Code),xsd:string]
+      - [lude:academicYear,$(Academic Year),xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+
+  DegreeMappingMGV:
+    sources:
+      - [galicia-valencia-upm-uah-titulaciones-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+     
+      - p: lude:hasAcademicLevel
+        o: 
+          - mapping: AcademicLevelMappingMGV
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelID)]
+                - [str2, $(AcademicLevelID)]
+      - p: lude:hasKnowledgeArea
+        o: 
+          - mapping: KnowledgeAreaMappingMGV
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AmbitId)]
+                - [str2, $(id)]
+  MadridDegreeMappingMGV:
+    sources:
+      - [uc3m-urjc-ucm-uam-titulaciones-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [lude:ectsCredits, $(ectsCredits), xsd:decimal]
+      - [lude:teachingModality, $(teachingModality), xsd:string]
+      - [lude:language, $(Language), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      
+      - p: lude:hasAcademicLevel
+        o: 
+          - mapping: AcademicLevelMappingMGV
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelId)]
+                - [str2, $(AcademicLevelID)]
+      - p: lude:hasKnowledgeArea
+        o: 
+          - mapping: KnowledgeAreaMappingMGV
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AmbitId)]
+                - [str2, $(id)]
+      - p: lude:deliveredAt
+        o: 
+          - mapping: FacultyMappingMGV
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(FacultyId)]
+                - [str2, $(FacultyId)]
+  AcademicLevelMappingMGV:
+    sources:
+      - [academic_level-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri]
+  KnowledgeAreaMappingMGV:
+    sources:
+      - [ambit-otros-with-links.csv~csv]
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit)]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri]
+      
+  FacultyMappingMGV:
+    sources:
+      - [faculty-madrid.csv~csv] 
+    s: id:Faculty/$(FacultyId)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty)]
+      - [lude:campus, $(Campus)]
+  UniversityMappingMGV:
+    sources:
+      - [universidades-updated-with-links.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:updateDate, $(Year of Publication), xsd:gYear]
+      - [lude:teachingModality, $(Modality), xsd:string]
+      - [lude:url, $(URL), xsd:anyURI]
+      - [lude:email, $(Email), xsd:string]
+      - [lude:telephone, $(Phone), xsd:string]
+      - [lude:cif, $(CIF), xsd:string]
+      - [lude:acronym, $(Acronym), xsd:string]
+      - [lude:type, $(Type), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o: 
+          - mapping: MadridDegreeMappingMGV
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+          - mapping: DegreeMappingMGV
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+
+
+
+  UniversityMappingUNLP:
+    sources:
+      - [universidades-updated-with-links.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University), xsd:string]
+      - [lude:publicationYear, $(Year of Publication), xsd:gYear]
+      - [lude:modality, $(Modality), xsd:string]
+      - [lude:url, $(URL), xsd:anyURI]
+      - [lude:email, $(Email), xsd:string]
+      - [lude:telephone, $(Phone), xsd:string]
+      - [lude:cif, $(CIF), xsd:string]
+      - [lude:acronym, $(Acronym), xsd:string]
+      - [lude:type, $(Type), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:hasAddress
+        o: 
+          - mapping: AddressMappingUNLP
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AddressID)]
+                - [str2, $(AddressID)]
+      - p: lude:offers
+        o: 
+          - mapping: NavarraDegreeMappingUNLP
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+          - mapping: LaRiojaDegreeMappingUNLP
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+          - mapping: PaisVascoDegreeMappingUNLP
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+         
+  GeoMappingUNLP:
+    sources:
+      - [Coordenadas_Universidades_de_Espana-updated.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [geo:lat, $(Latitude), xsd:float]
+      - [geo:long, $(Longitude), xsd:float]
+
+  AddressMappingUNLP:
+    sources:
+      - [universidades_address-updated.csv~csv]
+    s: id:Address/$(AddressID)
+    po:
+      - [rdf:type, lude:Address]
+      - [rdfs:label, $(Address), xsd:string]
+      - [lude:postalCode, $(Postal Code), xsd:string]
+      - p: lude:locatedInMunicipality
+        o: 
+          - mapping: MunicipalityMappingUNLP
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(MunicipalityID)]
+                - [str2, $(MunicipalityID)]
+
+  MunicipalityMappingUNLP:
+    sources:
+      - [universidades_municipality-updated-with-links.csv~csv]
+    s: id:Municipality/$(MunicipalityID)
+    po:
+      - [rdf:type, lude:Municipality]
+      - [rdfs:label, $(Municipality), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_municipality)~iri]
+      - p: lude:partOfProvince
+        o: 
+          - mapping: ProvinceMappingUNLP
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(ProvinceID)]
+                - [str2, $(ProvinceID)]
+                
+  ProvinceMappingUNLP:
+    sources:
+      - [universidades_province-updated-with-links.csv~csv]
+    s: id:Province/$(ProvinceID)
+    po:
+      - [rdf:type, lude:Province]
+      - [rdfs:label, $(Province), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_province)~iri]
+      - p: lude:partOfAutonomousCommunity
+        o:
+          - mapping: AutonomousCommunityMappingUNLP
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AutonomousCommunityID)]
+                - [str2, $(AutonomousCommunityID)]
+
+  AutonomousCommunityMappingUNLP:
+    sources:
+      - [universidades_autonomousCommunity-updated-with-links.csv~csv]
+    s: id:AutonomousCommunity/$(AutonomousCommunityID)
+    po:
+      - [rdf:type, lude:AutonomousCommunity]
+      - [rdfs:label, $(Autonomous Community), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_autonomouscommunity)~iri]
+
+  KnowledgeAreaMappingUNLP:
+    sources:
+      - [ambit-otros-with-links.csv~csv]
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri]
+      
+  AcademicLevelMappingUNLP:
+    sources:
+      - [academic_level-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri]
+      
+  NavarraDegreeMappingUNLP:
+    sources:
+      - [Navarra_listaestudios-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasKnowledgeArea
+        o:
+          - mapping: KnowledgeAreaMappingUNLP
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AmbitID)]
+                - [str2, $(id)]
+      - p: lude:hasAcademicLevel
+        o:
+          - mapping: AcademicLevelMappingUNLP
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelID)]
+                - [str2, $(AcademicLevelID)]
+
+  LaRiojaDegreeMappingUNLP:
+    sources:
+      - [LaRioja_listaestudios-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasKnowledgeArea
+        o:
+          - mapping: KnowledgeAreaMappingUNLP
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AmbitID)]
+                - [str2, $(id)]
+      - p: lude:hasAcademicLevel
+        o:
+          - mapping: AcademicLevelMappingUNLP
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelID)]
+                - [str2, $(AcademicLevelID)]
+ 
+  PaisVascoDegreeMappingUNLP:
+    sources:
+      - [PaisVasco_listaestudios-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      - p: lude:hasKnowledgeArea
+        o:
+          - mapping: KnowledgeAreaMappingUNLP
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AmbitID)]
+                - [str2, $(id)]
+      - p: lude:hasAcademicLevel
+        o:
+          - mapping: AcademicLevelMappingUNLP
+            condition: 
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelID)]
+                - [str2, $(AcademicLevelID)]
+
+  catalunyaDegreeUD:
+    sources:
+      - [Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [owl:sameAs, $(Same _as _Wikidata _degree)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: catalunyaLevelDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level ID)]
+              - [str2, $(Academic Level ID)]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: catalunyaKnowledgeDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Knowledge Area ID)]
+              - [str2, $(Knowledge Area ID)]
+
+  catalunyaLevelDK:
+    sources:
+      - [Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(Academic Level ID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level), xsd:string]
+
+  catalunyaKnowledgeDK:
+    sources:
+      - [Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv~csv]
+    s: id:KnowledgeArea/$(Knowledge Area ID)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(Knowledge Area), xsd:string]
+
+
+  catalunyaDegreeDF:
+    sources:
+      - [Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - p: lude:deliveredAt
+        o:
+          mapping: catalunyaFacultyDF
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Faculty ID)]
+              - [str2, $(Faculty ID)]
+
+  catalunyaFacultyDF:
+    sources:
+      - [Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv~csv]
+    s: id:Faculty/$(Faculty ID)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty), xsd:string]
+
+ 
+  catalunyaUniversityUD:
+    sources:
+      - [Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University), xsd:string]
+      - [lude:acronym, $(Acronymn), xsd:string]
+      - [lude:type, $(Type), xsd:string]
+      - [lude:modality, $(Modality), xsd:string]
+      - [owl:sameAs, $(Same _as _Wikidata _University)~iri]
+      - p: lude:offers
+        o:
+          mapping: catalunyaDegreeUD
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityID)]
+
+
+  catalunyaDegreeQuota:
+    sources:
+      - [Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [lude:admissionPathway, $(Via dâ€™accÃ©s), xsd:string]
+      - [lude:cutoffGrade, $(Cut-Off), xsd:string]
+      - [lude:seatsAvailable, $(Number of Places), xsd:integer]
+
+  murcia1DegreeUD:
+    sources:
+      - [Murcia2-listaestudios-updated-with-links.csv~csv]
+    s: id:Degree/$(Degree ID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+     
+      - [owl:sameAs, $(Same _as _Wikidata _degree)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: murcia1LevelDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level ID)]
+              - [str2, $(Academic Level ID)]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: murcia1KnowledgeDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Knowledge Area ID)]
+              - [str2, $(Knowledge Area ID)]
+
+  murcia1LevelDK:
+    sources:
+      - [Murcia2-listaestudios-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(Academic Level ID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level), xsd:string]
+
+  murcia1KnowledgeDK:
+    sources:
+      - [Murcia2-listaestudios-updated-with-links.csv~csv]
+    s: id:KnowledgeArea/$(Knowledge Area ID)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(Knowledge Area), xsd:string]
+
+  murcia1UniversityUD:
+    sources:
+      - [Murcia2-listaestudios-updated-with-links.csv~csv]
+    s: id:University/$(University ID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University), xsd:string]
+      - [lude:type, $(Type), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_University)~iri]
+      - p: lude:offers
+        o:
+          mapping: murcia1DegreeUD
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(University ID)]
+              - [str2, $(University ID)]
+
+
+  murcia2DegreeDF:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:Degree/$(Degree ID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+   
+      - [owl:sameAs, $(Same_as_Wikidata_Degree)~iri]
+      - p: lude:deliveredAt
+        o:
+          mapping: murcia2FacultyDF
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Faculty ID)]
+              - [str2, $(Faculty ID)]
+     
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: murcia2LevelDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level ID)]
+              - [str2, $(Academic Level ID)]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: murcia2KnowledgeDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Knowledge Area ID)]
+              - [str2, $(Knowledge Area ID)]
+
+  murcia2FacultyDF:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:Faculty/$(Faculty ID)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_faculty)~iri]
+
+  murcia2LevelDK:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(Academic Level ID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level), xsd:string]
+
+  murcia2KnowledgeDK:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:KnowledgeArea/$(Knowledge Area ID)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(Knowledge Area), xsd:string]
+
+
+  murcia2UniversityUD:
+    sources:
+      - [Murcia-nota-admision-rango-grado-2024-2025-updated-with-links.csv~csv]
+    s: id:University/$(University ID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_University)~iri]
+
+
+  murcia3DegreeUD:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:Degree/$(Degree ID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree), xsd:string]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_Degree)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: murcia3LevelDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Academic Level ID)]
+              - [str2, $(Academic Level ID)]
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: murcia3KnowledgeDK
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Knowledge Area ID)]
+              - [str2, $(Knowledge Area ID)]
+      - p: lude:deliveredAt
+        o:
+          mapping: murcia3FacultyDF
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Faculty ID)]
+              - [str2, $(Faculty ID)]
+
+  murcia3FacultyDF:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:Faculty/$(Faculty ID)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_faculty)~iri]
+
+  murcia3LevelDK:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(Academic Level ID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level), xsd:string]
+
+  murcia3KnowledgeDK:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:KnowledgeArea/$(Knowledge Area ID)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(Knowledge Area), xsd:string]
+
+  murcia3UniversityUD:
+    sources:
+      - [Murcia-nota-corte-master-2024-2025-updated-with-links.csv~csv]
+    s: id:University/$(University ID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University), xsd:string]
+      - [owl:sameAs, $(Same_as_Wikidata_University)~iri]
+
+  DegreeCantabriaMappingCL:
+    sources:
+      - ['CANTABRIA-degree-with-links.csv~csv']
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:academicYear, $(Academic Year)]
+      - [lude:ectsCredits, $(ectsCredits), xsd:decimal]
+      - [lude:code, $(Code)]
+      - [lude:AnecaAssessmentReportDate, $(AnecaAssessmentReportDate)]
+      - [lude:url, $(url)]
+      - [lude:basicTrainingCredits, $(BasicTrainingCredits)]
+      - [lude:councilOfUniversitiesReportDate, $(CouncilOfUniversitiesReportDate)]
+      - [lude:teachingModality, $(TeachingModality)]
+      - [lude:language, $(Language)]
+      - [lude:newStudentsPosts, $(NewStudentsPosts)]
+      - [owl:sameAs, $(sameAs)~iri]
+
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: AcademicLevelMappingCL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AcademicLevelID)]   # aus Degree-CSV
+              - [str2, $(AcademicLevelID)]   # aus AcademicLevel-CSV (ggf. anpassen)
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: KnowledgeAreaMappingCL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AmbitID)]           # aus Degree-CSV
+              - [str2, $(id)]           # aus KnowledgeArea-CSV (ggf. anpassen)
+      
+      - p: lude:deliveredAt
+        o:
+          mapping: FacultyMappingCantabriaCL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(FacultyID)]         # aus Degree-CSV
+              - [str2, $(FacultyID)]         # aus Faculty-CSV (ggf. anpassen)
+      
+
+  AcademicLevelMappingCL:
+    sources:
+      - ['academic_level-updated-with-links.csv~csv']
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+      - [lude:code, $(AcademicLevelID)]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri]
+
+  KnowledgeAreaMappingCL:
+    sources:
+      - ['ambit-otros-with-links.csv~csv']
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit)]
+      - [lude:code, $(id)]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri]
+  
+  FacultyMappingCantabriaCL:
+    sources:
+      - ['CANTABRIA-faculty.csv~csv']
+    s: id:Faculty/$(FacultyID)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty)]
+      - p: lude:hasFaculty
+        o:
+          mapping: UniversityMappingCL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]         # aus Faculty-CSV
+              - [str2, $(UniversityID)]         # aus University-CSV (ggf. anpassen)
+
+  
+  UniversityMappingCL:
+    sources:
+      - ['universidades-updated-with-links.csv~csv']
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:id, $(UniversityID)]
+      - [lude:acronym, $(Acronym)] 
+      - [lude:cif, $(CIF)]
+      - [lude:type, $(Type)]
+      - [lude:modality, $(Modality)]
+      - [lude:url, $(URL)]
+      - [lude:email, $(Email)]
+      - [lude:telephone, $(Phone)]
+      - [lude:publicationYear, $(Year of Publication)]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o:
+          mapping: DegreeCantabriaMappingCL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]         # aus Degree-CSV
+              - [str2, $(UniversityID)]         # aus Faculty-CSV (ggf. anpassen)
+
+  DegreeCastillaLeonMappingLL:
+    sources:
+      - ['CASTILLALEON-degree-with-links.csv~csv']
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:academicYear, $(Academic Year)]
+      - [owl:sameAs, $(sameAs)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: AcademicLevelMappingLL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AcademicLevelID)]   # aus Degree-CSV
+              - [str2, $(AcademicLevelID)]   # aus AcademicLevel-CSV (ggf. anpassen)
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: KnowledgeAreaMappingLL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AmbitID)]           # aus Degree-CSV
+              - [str2, $(id)]           # aus KnowledgeArea-CSV (ggf. anpassen)
+      - p: lude:deliveredAt
+        o:
+          mapping: FacultyMappingCastillaLeonLL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(FacultyID)]         # aus Degree-CSV
+              - [str2, $(FacultyID)]         # aus Faculty-CSV (ggf. anpassen)
+
+  AcademicLevelMappingLL:
+    sources:
+      - ['academic_level-updated-with-links.csv~csv']
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+      - [lude:code, $(AcademicLevelID)]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri]
+
+  KnowledgeAreaMappingLL:
+    sources:
+      - ['ambit-otros-with-links.csv~csv']
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit)]
+      - [lude:code, $(id)]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri]
+  
+  FacultyMappingCastillaLeonLL:
+    sources:
+      - ['CASTILLALEON-faculty.csv~csv']
+    s: id:Faculty/$(FacultyID)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty)]
+      - [lude:campus, $(Campus)]
+  
+  UniversityMappingLL:
+    sources:
+      - ['universidades-updated-with-links.csv~csv']
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:id, $(UniversityID)]
+      - [lude:acronym, $(Acronym)] 
+      - [lude:cif, $(CIF)]
+      - [lude:type, $(Type)]
+      - [lude:modality, $(Modality)]
+      - [lude:url, $(URL)]
+      - [lude:email, $(Email)]
+      - [lude:telephone, $(Phone)]
+      - [lude:publicationYear, $(Year of Publication)]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o:
+          mapping: DegreeCastillaLeonMappingLL
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]         # aus Degree-CSV
+              - [str2, $(UniversityID)]         # aus Faculty-CSV (ggf. anpassen)
+
+  DegreeCastillaLaManchaMappingML:
+    sources:
+      - ['CASTILLALAMANCHA-degree-with-links.csv~csv']
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:academicYear, $(Academic Year)]
+      - [lude:ectsCredits, $(Credits), xsd:decimal]
+      - [lude:offeredCredits, $(Offered Credits)]
+      - [owl:sameAs, $(sameAs)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: AcademicLevelMappingML
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AcademicLevelID)]   # aus Degree-CSV
+              - [str2, $(AcademicLevelID)]   # aus AcademicLevel-CSV (ggf. anpassen)
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: KnowledgeAreaMappingML
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(Ambit-id)]           # aus Degree-CSV
+              - [str2, $(id)]           # aus KnowledgeArea-CSV (ggf. anpassen)
+      
+      - p: lude:deliveredAt
+        o:
+          mapping: FacultyMappingCastillaLaManchaML
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(FacultyID)]         # aus Degree-CSV
+              - [str2, $(FacultyID)]         # aus Faculty-CSV (ggf. anpassen)
+      
+
+  AcademicLevelMappingML:
+    sources:
+      - ['academic_level-updated-with-links.csv~csv']
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+      - [lude:code, $(AcademicLevelID)]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri]
+
+  KnowledgeAreaMappingML:
+    sources:
+      - ['ambit-otros-with-links.csv~csv']
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit)]
+      - [lude:code, $(id)]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri]
+  
+  FacultyMappingCastillaLaManchaML:
+    sources:
+      - ['CASTILLALAMANCHA-faculty.csv~csv']
+    s: id:Faculty/$(FacultyID)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty)]
+      - p: lude:hasFaculty
+        o:
+          mapping: UniversityMappingML
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]         # aus Faculty-CSV
+              - [str2, $(UniversityID)]         # aus University-CSV (ggf. anpassen)
+
+  
+  UniversityMappingML:
+    sources:
+      - ['universidades-updated-with-links.csv~csv']
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:id, $(UniversityID)]
+      - [lude:acronym, $(Acronym)] 
+      - [lude:cif, $(CIF)]
+      - [lude:type, $(Type)]
+      - [lude:modality, $(Modality)]
+      - [lude:url, $(URL)]
+      - [lude:email, $(Email)]
+      - [lude:telephone, $(Phone)]
+      - [lude:publicationYear, $(Year of Publication)]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o:
+          mapping: DegreeCastillaLaManchaMappingML
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityID)]
+
+
+  DegreeIslasBalearesMapping:
+    sources:
+      - ['ISLASBALEARES-degree-with-links.csv~csv']
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:code, $(Code)]
+      - [owl:sameAs, $(sameAs)~iri]
+      - p: lude:hasAcademicLevel
+        o:
+          mapping: AcademicLevelMapping
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AcademicLevelID)]   # aus Degree-CSV
+              - [str2, $(AcademicLevelID)]   # aus AcademicLevel-CSV (ggf. anpassen)
+      - p: lude:hasKnowledgeArea
+        o:
+          mapping: KnowledgeAreaMapping
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(AmbitID)]           # aus Degree-CSV
+              - [str2, $(id)]           # aus KnowledgeArea-CSV (ggf. anpassen)
+
+
+  AcademicLevelMapping:
+    sources:
+      - ['academic_level-updated-with-links.csv~csv']
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+      - [lude:code, $(AcademicLevelID)]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri]
+
+  KnowledgeAreaMapping:
+    sources:
+      - ['ambit-otros-with-links.csv~csv']
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit)]
+      - [lude:code, $(id)]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri]
+  
+  
+  UniversityMapping:
+    sources:
+      - ['universidades-updated-with-links.csv~csv']
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:id, $(UniversityID)]
+      - [lude:acronym, $(Acronym)] 
+      - [lude:cif, $(CIF)]
+      - [lude:type, $(Type)]
+      - [lude:modality, $(Modality)]
+      - [lude:url, $(URL)]
+      - [lude:email, $(Email)]
+      - [lude:telephone, $(Phone)]
+      - [lude:publicationYear, $(Year of Publication)]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o:
+          mapping: DegreeIslasBalearesMapping
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(UniversityID)]
+              - [str2, $(UniversityID)]

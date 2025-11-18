@@ -1,0 +1,1082 @@
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/161> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q3141> .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-04" .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Therry%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81652527"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81632783"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81726338"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <http://schema.org/streetAddress> "Flinders Street 469" .
+<https://smartcity.linkeddata.es/lcc/resource/location/161> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Birrarung%20Marr> .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94946228"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80740397"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Therry%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <http://schema.org/streetAddress> "Flinders Street 207-361" .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.8204637"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96704554"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Southgate%20Avenue> <http://schema.org/streetAddress> "Southgate Avenue" .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Franklin%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96444294"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95981454"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81688755"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81794046"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97090512"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Queensberry%20St%2FSwanston%20St%20%28Carlton%29> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q112825029> .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.8168479"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Errol%20St%2FVictoria%20St%20%28Melbourne%20City%29> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Macaulay%20Road> <http://schema.org/streetAddress> "Macaulay Road" .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95319102"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Southbank> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.8112185"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <http://schema.org/postalCode> "3004" .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Lygon%20Street> <http://schema.org/streetAddress> "Lygon Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/124> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Southbank> <http://www.w3.org/2000/01/rdf-schema#label> "Southbank" .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81380668"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96153311"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Errol%20St%2FVictoria%20St%20%28Melbourne%20City%29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/city/South%20Wharf> <http://www.w3.org/2000/01/rdf-schema#label> "South Wharf" .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <http://schema.org/streetAddress> "Lonsdale Street 197" .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <http://schema.org/postalCode> "3006" .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <http://schema.org/streetAddress> "Swanston Street 793" .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <http://schema.org/postalCode> "3052" .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Elizabeth%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Errol%20St%2FVictoria%20St%20%28Melbourne%20City%29> .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <http://schema.org/postalCode> "3031" .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <http://schema.org/streetAddress> "Elizabeth Street 489" .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96788288"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81909256"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80107122"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <http://schema.org/streetAddress> "Swanston Street 757" .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <http://schema.org/streetAddress> "Banana Alley 3" .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <http://schema.org/streetAddress> "Franklin Street 118" .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81267313"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Docklands> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Kensington> <http://www.w3.org/2000/01/rdf-schema#label> "Kensington" .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-04" .
+<https://smartcity.linkeddata.es/lcc/resource/country/Australia> <http://www.w3.org/2000/01/rdf-schema#label> "Australia" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Queensberry%20St%2FSwanston%20St%20%28Carlton%29> <http://schema.org/streetAddress> "Queensberry St/Swanston St (Carlton)" .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Southgate%20Avenue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Docklands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/City> .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Lane> .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.79808192"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Coverlid%20Place> .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Macaulay%20Road> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Batman%20Avenue> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q119148000> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Birrarung%20Marr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/136> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/King%20Street> <http://schema.org/streetAddress> "King Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/136> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.8184141"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Elizabeth%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/West%20Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81258467"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95452748"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Spencer%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Spencer%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Little%20Bourke%20Street> <http://schema.org/streetAddress> "Little Bourke Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80309992"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <http://schema.org/streetAddress> "Swanston Street 117" .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Therry%20Street> <http://schema.org/streetAddress> "Therry Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <http://schema.org/streetAddress> "Collins Street 620" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Lane> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q5459412> .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94292398"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.82018685"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81009465"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <http://schema.org/streetAddress> "Little Lonsdale Street 255" .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Pelham%20St%2FElizabeth%20St%20%28Melbourne%20City%29> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q112824982> .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96787656"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81349441"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Pelham%20St%2FElizabeth%20St%20%28Melbourne%20City%29> <http://schema.org/streetAddress> "Pelham St/Elizabeth St (Melbourne City)" .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/city/South%20Wharf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/City> .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/136> <http://schema.org/postalCode> "3004" .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <http://schema.org/postalCode> "3053" .
+<https://smartcity.linkeddata.es/lcc/resource/location/136> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-01" .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95621105"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Little%20Lonsdale%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q6650732> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Alfred%20Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Franklin%20Street> <http://schema.org/streetAddress> "Franklin Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81687226"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81515276"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <http://schema.org/streetAddress> "La Trobe Street 254" .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <http://schema.org/streetAddress> "Flinders Street 276" .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/124> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Batman%20Avenue> .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Docklands> .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.93970694"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Docklands> .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81471642"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Docklands> .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81982992"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81970749"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Parkville> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q960219> .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.8172861"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95358075"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.82129925"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <http://schema.org/streetAddress> "Spring Street 3" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Clarendon%20Street%20Junction> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q24887244> .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Franklin%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Clarendon%20Street%20Junction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Spencer%20Street> <http://schema.org/streetAddress> "Spencer Street" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Bourke%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q1087653> .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95386444"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/city/North%20Melbourne> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q7056074> .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/161> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <http://schema.org/postalCode> "3003" .
+<https://smartcity.linkeddata.es/lcc/resource/street/St%20Kilda%20Road> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2246383> .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <http://schema.org/streetAddress> "Swanston Street 414" .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <http://schema.org/streetAddress> "Queensberry St/Swanston St (Carlton) 547-553" .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <http://schema.org/streetAddress> "Little Bourke Street 248" .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/West%20Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95644692"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <http://schema.org/streetAddress> "Swanston Street 613" .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.8199817"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-04" .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <http://schema.org/streetAddress> "Swanston Street 437" .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Southbank> .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.82401776"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/King%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/street/William%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/La%20Trobe%20Street> <http://schema.org/streetAddress> "La Trobe Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-10" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Banana%20Alley> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q4853815> .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Harbour%20Esplanade> .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-02" .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/city/Docklands> <http://www.w3.org/2000/01/rdf-schema#label> "Docklands" .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <http://schema.org/streetAddress> "Banana Alley 3" .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <http://schema.org/streetAddress> "Lonsdale Street 353" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Balston%20Street> <http://schema.org/streetAddress> "Balston Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.93530329"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/161> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <http://schema.org/streetAddress> "Russell Street 155" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Spring%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q1853763> .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.79844526"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.9446508"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Carlton> <http://www.w3.org/2000/01/rdf-schema#label> "Carlton" .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81487988"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Southbank> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q1049218> .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Alfred%20Place> .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <http://schema.org/streetAddress> "Macaulay Road 475" .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Elizabeth%20Street> <http://schema.org/streetAddress> "Elizabeth Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81564191"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Little%20Bourke%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2686925> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Coverlid%20Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <http://schema.org/streetAddress> "Swanston Street 303" .
+<https://smartcity.linkeddata.es/lcc/resource/city/Kensington> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/City> .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/South%20Wharf> .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Banana%20Alley> .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/West%20Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/123> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/street/William%20Street> <http://schema.org/streetAddress> "William Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.93036194"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96562569"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.821728"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Errol%20St%2FVictoria%20St%20%28Melbourne%20City%29> <http://schema.org/streetAddress> "Errol St/Victoria St (Melbourne City)" .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Lygon%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Lonsdale%20Street> <http://schema.org/streetAddress> "Lonsdale Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95155955"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96879309"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97323591"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Russell%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2430258> .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94126826"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/city/West%20Melbourne> <http://www.w3.org/2000/01/rdf-schema#label> "West Melbourne" .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/city/Southbank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/City> .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <http://schema.org/streetAddress> "Flinders Street 114" .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <http://schema.org/streetAddress> "Bourke Street 770" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Navigation%20Drive> <http://schema.org/streetAddress> "Navigation Drive" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Little%20Lonsdale%20Street> <http://schema.org/streetAddress> "Little Lonsdale Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.9682466"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> <http://schema.org/streetAddress> "Swanston Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95102555"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> <http://schema.org/streetAddress> "Collins Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.9625775"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96872809"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81996544"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80456984"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81304149"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <http://schema.org/postalCode> "3031" .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.79432415"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96559144"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/NewQuay%20Prom%2FDocklands%20Dr%20%28Docklands%29> <http://schema.org/streetAddress> "NewQuay Prom/Docklands Dr (Docklands)" .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Queensberry%20St%2FSwanston%20St%20%28Carlton%29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Rebecca%20Walk> .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96309114"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96721013"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/street/St%20Kilda%20Road> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <http://schema.org/streetAddress> "Collins Street 18-22" .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.9615673"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <http://schema.org/streetAddress> "Victoria Street 75" .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <http://schema.org/streetAddress> "La Trobe Street 526" .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <http://schema.org/streetAddress> "Errol St/Victoria St (Melbourne City) 19" .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96441306"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Lane> .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96656806"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.9660878"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80730068"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <http://schema.org/postalCode> "3051" .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Macaulay%20Road> .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Macaulay%20Road> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.82011242"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Harbour%20Esplanade> <http://schema.org/streetAddress> "Harbour Esplanade" .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <http://schema.org/streetAddress> "Spring Street 207" .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Kensington> .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96508508"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <http://schema.org/postalCode> "3053" .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/161> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97131336"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81874249"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Lygon%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81798049"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Coverlid%20Place> <http://schema.org/streetAddress> "Coverlid Place" .
+<https://smartcity.linkeddata.es/lcc/resource/city/West%20Melbourne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/City> .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96616678"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/city/Parkville> <http://www.w3.org/2000/01/rdf-schema#label> "Parkville" .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81057846"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/123> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-01" .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80008566"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <http://schema.org/streetAddress> "Bourke Street 280" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80825648"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.79698741"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97090877"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <http://schema.org/postalCode> "3053" .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <http://schema.org/streetAddress> "Collins Street 623" .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94612292"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Elizabeth%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2250700> .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96304859"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/136> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97357915"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <http://schema.org/streetAddress> "Lonsdale Street 368" .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <http://schema.org/streetAddress> "La Trobe Street 433" .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96675571"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96558255"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Victoria%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Docklands> .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/city/Parkville> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/City> .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <http://schema.org/postalCode> "3053" .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81686075"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Little%20Lonsdale%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Exhibition%20Street> <http://schema.org/streetAddress> "Exhibition Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/124> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/St%20Kilda%20Road> .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <http://schema.org/streetAddress> "Flinders Street 207-361" .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Elizabeth%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Spencer%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81379749"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Harbour%20Esplanade> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q28943003> .
+<https://smartcity.linkeddata.es/lcc/resource/location/161> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-01" .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/country/Australia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Country> .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96185972"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <http://schema.org/streetAddress> "Spencer Street 165" .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <http://schema.org/streetAddress> "Collins Street 13-15" .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Docklands> .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Birrarung%20Marr> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2904546> .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <http://schema.org/streetAddress> "Lygon Street 169" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> <http://schema.org/streetAddress> "Flinders Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96516718"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <http://schema.org/postalCode> "3051" .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Little%20Bourke%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Alfred%20Place> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q120204519> .
+<https://smartcity.linkeddata.es/lcc/resource/location/124> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <http://schema.org/streetAddress> "Spencer Street 473" .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Spring%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <http://schema.org/streetAddress> "Flinders Street 120" .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <http://schema.org/streetAddress> "Spencer Street 227" .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81333081"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <http://schema.org/postalCode> "3003" .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Spring%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95160411"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81629332"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Rebecca%20Walk> <http://schema.org/streetAddress> "Rebecca Walk" .
+<https://smartcity.linkeddata.es/lcc/resource/location/123> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Clarendon%20Street%20Junction> .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81344862"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/city/Carlton> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q47002> .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/country/Australia> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q408> .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Bourke%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95604426"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Victoria%20Street> <http://schema.org/streetAddress> "Victoria Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.9632832"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/136> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81887963"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97305353"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/La%20Trobe%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <http://schema.org/postalCode> "3051" .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.82590962"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80999341"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94433026"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Exhibition%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q1855279> .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/La%20Trobe%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-04" .
+<https://smartcity.linkeddata.es/lcc/resource/location/123> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <http://schema.org/streetAddress> "La Trobe Street 530" .
+<https://smartcity.linkeddata.es/lcc/resource/street/NewQuay%20Prom%2FDocklands%20Dr%20%28Docklands%29> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q112824899> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Birrarung%20Marr> <http://schema.org/streetAddress> "Birrarung Marr" .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Lane> .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/William%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Bourke%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q1951720> .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Lonsdale%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/St%20Kilda%20Road> .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81237202"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97227587"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96503383"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Elizabeth%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96291897"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Power%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q10500804> .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Spencer%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q105205677> .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <http://schema.org/streetAddress> "Collins Street 250" .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <http://schema.org/postalCode> "3003" .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <http://schema.org/streetAddress> "Bourke Street 690" .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94710545"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Docklands> .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.92973378"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80606888"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> <http://www.w3.org/2000/01/rdf-schema#label> "Melbourne" .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80631581"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Lane> <http://schema.org/streetAddress> "Flinders Lane" .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Victoria%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q3938308> .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Bourke%20Street> <http://schema.org/streetAddress> "Bourke Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <http://schema.org/streetAddress> "Bourke Street 285" .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/NewQuay%20Prom%2FDocklands%20Dr%20%28Docklands%29> .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <http://schema.org/streetAddress> "Lygon Street 309" .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96872865"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80454949"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <http://schema.org/streetAddress> "Pelham St/Elizabeth St (Melbourne City) 147-155" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Alfred%20Place> <http://schema.org/streetAddress> "Alfred Place" .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Spring%20Street> <http://schema.org/streetAddress> "Spring Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/161> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81851276"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Lygon%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <http://schema.org/streetAddress> "Exhibition Street 136" .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96216521"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81564989"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97467661"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/City> .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.813005"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <http://schema.org/streetAddress> "NewQuay Prom/Docklands Dr (Docklands) 84" .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96143149"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Bourke%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/124> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97329934"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96411782"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/138> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Navigation%20Drive> .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80169681"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Docklands> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Errol%20St%2FVictoria%20St%20%28Melbourne%20City%29> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q112824311> .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/city/Carlton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/City> .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95956055"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <http://schema.org/streetAddress> "NewQuay Prom/Docklands Dr (Docklands) 24" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Harbour%20Esplanade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/123> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Batman%20Avenue> .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Queensberry%20St%2FSwanston%20St%20%28Carlton%29> .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Parkville> .
+<https://smartcity.linkeddata.es/lcc/resource/location/123> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81753741"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/street/St%20Kilda%20Road> <http://schema.org/streetAddress> "St Kilda Road" .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <http://schema.org/streetAddress> "Bourke Street 233" .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <http://schema.org/postalCode> "3031" .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Spencer%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80240719"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Banana%20Alley> <http://schema.org/streetAddress> "Banana Alley" .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Macaulay%20Road> .
+<https://smartcity.linkeddata.es/lcc/resource/location/136> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Birrarung%20Marr> .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Little%20Lonsdale%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Bourke%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-04" .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <http://schema.org/streetAddress> "Collins Street 394" .
+<https://smartcity.linkeddata.es/lcc/resource/location/124> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/La%20Trobe%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Bourke%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/161> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <http://schema.org/streetAddress> "William Street 288" .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96609379"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95227769"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/123> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Carlton> .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-02" .
+<https://smartcity.linkeddata.es/lcc/resource/location/123> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97329734"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81457988"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96658911"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/46> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Pelham%20St%2FElizabeth%20St%20%28Melbourne%20City%29> .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <http://schema.org/streetAddress> "Bourke Street 890" .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <http://schema.org/streetAddress> "Macaulay Road 334" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Power%20Street> <http://schema.org/streetAddress> "Power Street" .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96995745"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Lonsdale%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/40> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96429485"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Carlton> .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81362543"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/street/La%20Trobe%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2272770> .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Balston%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/161> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <http://schema.org/streetAddress> "Swanston Street 35" .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/124> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81757416"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Lonsdale%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2473914> .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <http://schema.org/streetAddress> "Rebecca Walk 88" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Russell%20Street> <http://schema.org/streetAddress> "Russell Street" .
+<https://smartcity.linkeddata.es/lcc/resource/city/North%20Melbourne> <http://www.w3.org/2000/01/rdf-schema#label> "North Melbourne" .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/La%20Trobe%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Victoria%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <http://schema.org/postalCode> "3006" .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <http://schema.org/streetAddress> "Flinders Street 502" .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/123> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <http://schema.org/streetAddress> "Swanston Street 823" .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94931703"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/NewQuay%20Prom%2FDocklands%20Dr%20%28Docklands%29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80841815"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.82392385"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Rebecca%20Walk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <http://schema.org/streetAddress> "Flinders Lane 265" .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/11> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/NewQuay%20Prom%2FDocklands%20Dr%20%28Docklands%29> .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81414075"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80767455"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96121062"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80996494"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95690188"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/city/South%20Wharf> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q12069696> .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95303935"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/67> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q3442521> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Kensington> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2608078> .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96559789"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/124> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-01" .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Exhibition%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <http://schema.org/streetAddress> "Flinders Street 169" .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81997273"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <http://schema.org/streetAddress> "Spencer Street 99" .
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81531435"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96515323"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81911705"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/49> <http://schema.org/streetAddress> "Therry Street 81" .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Spencer%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/107> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81246271"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96299677"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <http://schema.org/streetAddress> "Coverlid Place 27" .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81101524"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.97136962"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Southgate%20Avenue> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Clarendon%20Street%20Junction> <http://schema.org/streetAddress> "Clarendon Street Junction" .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/2> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95834911"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Macaulay%20Road> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q55115653> .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80896733"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.9471751"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <http://schema.org/streetAddress> "Collins Street 700" .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81668634"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/124> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81441438"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Exhibition%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <http://schema.org/streetAddress> "Clarendon Street Junction 10" .
+<https://smartcity.linkeddata.es/lcc/resource/location/39> <http://schema.org/streetAddress> "Alfred Place 23" .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <http://schema.org/streetAddress> "Macaulay Road 488" .
+<https://smartcity.linkeddata.es/lcc/resource/location/25> <http://schema.org/postalCode> "3006" .
+<https://smartcity.linkeddata.es/lcc/resource/location/37> <http://schema.org/streetAddress> "Lygon Street 260" .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81193681"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <http://schema.org/streetAddress> "Power Street 65" .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96308399"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Southbank> .
+<https://smartcity.linkeddata.es/lcc/resource/location/9> <http://schema.org/postalCode> "3008" .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <http://schema.org/streetAddress> "St Kilda Road 88" .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.9619401"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <http://schema.org/streetAddress> "Errol St/Victoria St (Melbourne City) 22" .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Lygon%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q56655> .
+<https://smartcity.linkeddata.es/lcc/resource/city/Docklands> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q5287226> .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <http://schema.org/streetAddress> "Harbour Esplanade 197" .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/23> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81252157"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Southbank> .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <http://schema.org/streetAddress> "La Trobe Street 1010" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Spring%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.804024"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <http://schema.org/streetAddress> "St Kilda Road 14" .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94908064"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Spencer%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81234775"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/6> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/143> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95557015"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95906316"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <http://schema.org/postalCode> "3006" .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <http://schema.org/streetAddress> "Flinders Street 207-361" .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/North%20Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <http://schema.org/streetAddress> "Flinders Lane 258" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Little%20Bourke%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <http://schema.org/streetAddress> "Navigation Drive 1-5" .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <http://schema.org/streetAddress> "Flinders Lane 258" .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81959923"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/133> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Docklands> .
+<https://smartcity.linkeddata.es/lcc/resource/location/79> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/36> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <http://schema.org/streetAddress> "King Street 333" .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <http://schema.org/postalCode> "3006" .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-02" .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/La%20Trobe%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/84> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Victoria%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <http://schema.org/streetAddress> "Spencer Street 486" .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81267639"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/48> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95866697"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/city/West%20Melbourne> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q530067> .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/street/William%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2287373> .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/132> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/King%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Power%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Collins%20Street> <http://www.w3.org/2002/07/owl#sameAs> <http://wikidata.org/entity/Q2796839> .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96386412"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <http://schema.org/streetAddress> "Elizabeth Street 370" .
+<https://smartcity.linkeddata.es/lcc/resource/location/181> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-09" .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96550671"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/3> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <http://schema.org/streetAddress> "Harbour Esplanade 95-117" .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Parkville> .
+<https://smartcity.linkeddata.es/lcc/resource/location/166> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/70> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/North%20Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Lane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <http://schema.org/streetAddress> "St Kilda Road 100" .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-11" .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-02" .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/162> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95987909"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/117> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/68> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/city/North%20Melbourne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/City> .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/167> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/50> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/35> <http://schema.org/streetAddress> "Southgate Avenue 2" .
+<https://smartcity.linkeddata.es/lcc/resource/location/28> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-08" .
+<https://smartcity.linkeddata.es/lcc/resource/location/137> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81894815"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/109> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/51> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/14> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Banana%20Alley> .
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/4> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/43> <http://schema.org/postalCode> "3052" .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Navigation%20Drive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/136> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.80953359"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Batman%20Avenue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <http://schema.org/streetAddress> "Swanston Street 144" .
+<https://smartcity.linkeddata.es/lcc/resource/location/139> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.82009057"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Russell%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <http://schema.org/streetAddress> "Victoria Street 155" .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/59> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/31> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Lygon%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/30> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/19> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Russell%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/179> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Power%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/24> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95449198"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/135> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/69> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/44> <http://schema.org/postalCode> "3052" .
+<https://smartcity.linkeddata.es/lcc/resource/street/Batman%20Avenue> <http://schema.org/streetAddress> "Batman Avenue" .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/76> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.79453803"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Lonsdale%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/42> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/58> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Bourke%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/St%20Kilda%20Road> .
+<https://smartcity.linkeddata.es/lcc/resource/location/56> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Lonsdale%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/87> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94921863"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/18> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-10" .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/52> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/54> <http://schema.org/postalCode> "3053" .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/131> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.95758725"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/136> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/72> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Flinders%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-05" .
+<https://smartcity.linkeddata.es/lcc/resource/location/45> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-03" .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.94939004"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/180> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.79497059"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/142> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96795734"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Southbank> .
+<https://smartcity.linkeddata.es/lcc/resource/location/62> <http://schema.org/postalCode> "3000" .
+<https://smartcity.linkeddata.es/lcc/resource/location/17> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "ICTMicroclimate-10" .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.96689733"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81694221"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <http://schema.org/streetAddress> "Balston Street 26" .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/1> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/53> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "144.965499"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/75> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Pelham%20St%2FElizabeth%20St%20%28Melbourne%20City%29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/27> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/66> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/130> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Bourke%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/164> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#Location> .
+<https://smartcity.linkeddata.es/lcc/resource/location/141> <http://schema.org/streetAddress> "Flinders Street 478" .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/118> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/86> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/street/Banana%20Alley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/street/La%20Trobe%20Street> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/PostalAddress> .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/29> <http://schema.org/postalCode> "3006" .
+<https://smartcity.linkeddata.es/lcc/resource/location/140> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Balston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/47> <http://schema.org/streetAddress> "Elizabeth Street 250" .
+<https://smartcity.linkeddata.es/lcc/resource/location/21> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
+<https://smartcity.linkeddata.es/lcc/resource/location/85> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#MicroclimateSensor> "aws5-0999" .
+<https://smartcity.linkeddata.es/lcc/resource/location/10> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81876474"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/165> <http://schema.org/postalCode> "3003" .
+<https://smartcity.linkeddata.es/lcc/resource/location/77> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Harbour%20Esplanade> .
+<https://smartcity.linkeddata.es/lcc/resource/location/78> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/41> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#hasStreet> <https://smartcity.linkeddata.es/lcc/resource/street/Swanston%20Street> .
+<https://smartcity.linkeddata.es/lcc/resource/location/8> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.82293543"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/5> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/city/Melbourne> .
+<https://smartcity.linkeddata.es/lcc/resource/location/20> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81172914"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/71> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "-37.81235775"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://smartcity.linkeddata.es/lcc/resource/location/134> <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#inAdministrativeArea> <https://smartcity.linkeddata.es/lcc/resource/country/Australia> .
+<https://smartcity.linkeddata.es/lcc/resource/location/61> <http://www.w3.org/2000/01/rdf-schema#comment> "Outdoor" .
