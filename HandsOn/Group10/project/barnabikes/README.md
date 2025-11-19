@@ -1,14 +1,21 @@
 # Barnabikes
 
-Proyecto web para visualizar estaciones de bicicletas y bares en Barcelona sobre un mapa interactivo.
+Web project to visualize bike stations and bars in Barcelona on an interactive map. 
 
-## Estructura
-- `frontend/` — Aplicación React (Vite)
-- `backend/` — API Node.js/Express (conexión a GraphDB)
+# Barnabikes (in cloud)
+You can see the code running in the cloud at:
+https://frontend-29lp.onrender.com
 
-## Instalación
+And the code is available at:
+https://github.com/sergioes55/projetoOpenData
 
-### 1. Instalar dependencias
+## Structure
+- `frontend/` — React application (Vite)
+- `backend/` — Node.js/Express API (connected to GraphDB)
+
+## Installation
+
+### 1. Install dependencies
 ```bash
 cd frontend
 npm install
@@ -16,20 +23,25 @@ cd ../backend
 npm install
 ```
 
-### 2. Ejecutar el backend
+### 2. Run the backend
 ```bash
 npm start
 ```
 
-### 3. Ejecutar el frontend
-En otra terminal:
+### 3. Run the frontend
+In other terminal:
 ```bash
 cd frontend
 npm run dev
 ```
 
-El frontend estará en http://localhost:5173 y el backend en http://localhost:4000
+The frontend will be available at:
+http://localhost:5173
 
-## Personalización
-- Modifica los endpoints y queries SPARQL en `backend/server.js` según tu ontología/datos.
-- El diseño y componentes se encuentran en `frontend/src/`.
+The backend will be available at:
+http://localhost:4000
+
+## Customization
+- Modify the endpoints and SPARQL queries in `backend/server.js` according to your ontology/data.
+- UI design and components are located in `frontend/src/`.
+
