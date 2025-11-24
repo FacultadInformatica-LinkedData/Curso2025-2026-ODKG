@@ -1,8 +1,5 @@
-Alexandra Albino; alexandraalbio18; European Flights Dataset; https://www.kaggle.com/datasets/umerhaddii/european-flights-dataset; The European 
-Flights Dataset from 2016 to 2022 provides an extensive record of air traffic activities across various European airports.
-
-
 Your name; Your GitHub user; Dataset name; Dataset URL; Dataset brief description
+Kada Iván Haála; bombaHKI; Budapest GTFS; https://go.bkk.hu/api/static/v1/public-gtfs/budapest_gtfs.zip; GTFS formatted information on the public transportation of Budapest
 Víctor González Bacelar; victox85; 2021-2027 Finances Detailed Planned vs Implemented (timeseries); https://data.europa.eu/data/datasets/3git-md5z?locale=en; Time series dataset on the 2021–2027 EU shared management programmes finances, showing detailed planned budgets versus implemented (decided and spent) amounts by fund, programme, objectives and regions.
 Soenke Kraft; SoenkeKraft; Spain: railway track construction works; https://ted.europa.eu/en/notice/-/detail/570611-2025; EU public tender for railway construction works in Spain
 Gabriele Puglisi; GabP404; OCDS appalti ordinari; https://dati.anticorruzione.it/opendata/ocds; This dataset from Italy’s National Anti-Corruption Authority (ANAC) provides data on all Italian public procurement contracts over €40,000
@@ -22,3 +19,5 @@ Juan Antonio Celaya Rodriguez; JCelayaRdz; Farmacias de guardia; https://datos.m
 Mohammed Ahajjam Ziggaf Kanjaa; Mohammed10-P; AEMET Open data. Catalogue. Risp Plan; https://www.aemet.es/en/datos_abiertos/catalogo; Official AEMET catalog that includes multiple reusable meteorological and climatological datasets such as extreme values, climate normals, forecasts, etc.
 Zakaria Smaty;zakariasmaty; Conjunto de Contratos gestionados por el Ayuntamiento de Zaragoza, las Sociedades y Patronatos Municipales. ; https://www.zaragoza.es/sede/portal/datos-abiertos/servicio/catalogo/147; This dataset from the the Zaragoza city council, contains an exhaustive list of more than 7 thousand public contracts and relavant information about each.
 Sergio Beamonte González; SergioBeamonte; Incendios forestales y superficie forestal afectada, por municipios, comarcas y provincias. Aragón; https://opendata.aragon.es/datos/catalogo/dataset/incendios-forestales-y-superficie-forestal-afectada-por-municipios-comarcas-y-provincias-aragon; Data on the number of fires and affected forest area.
+Lorena Prior Muñoz; lorenaprior; Czech public procurements; https://www.kaggle.com/datasets/ladislavburgr/czech-public-procurements-list?select=results+_english.csv; A dataset of 51,000 Czech public procurement contracts (2016–2024) with metadata on type, CPV codes, prices, and competition.
+Alexandra Albino; alexandraalbio18; European Flights Dataset; https://www.kaggle.com/datasets/umerhaddii/european-flights-dataset; The European Flights Dataset from 2016 to 2022 provides an extensive record of air traffic activities across various European airports.

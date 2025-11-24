@@ -1,0 +1,501 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <http://schema.org/> .
+@prefix us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@base <https://smartcity.linkeddata.es/lcc/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+# Logical Source
+#################################################################
+
+<#MicroclimateSource>
+    a rml:LogicalSource ;
+    rml:source "../csv/microclimate-sensors-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV .
+
+#################################################################
+# Microclimate Location (FeatureOfInterest / schema:Place)
+#################################################################
+
+<#MicroclimateLocation>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/location/{Location_ID}" ;
+        rr:termType rr:IRI ;
+        rr:class schema:Place ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate wgs84_pos:lat ;
+        rr:objectMap [ rml:reference "Latitude" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate wgs84_pos:long ;
+        rr:objectMap [ rml:reference "Longitude" ; rr:datatype xsd:float ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:streetAddress ;
+        rr:objectMap [
+            rr:template "{Street} {House_Number}" ;
+            rr:termType rr:Literal ;
+            rr:datatype xsd:string
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:postalCode ;
+        rr:objectMap [ rml:reference "Postcode" ; rr:datatype xsd:integer ] ;
+    ] ;
+
+    # Enlazamos con el TriplesMap de sensores
+    rr:predicateObjectMap [
+        rr:predicate us:closestPedestrianSensor ;
+        rr:objectMap [
+            rr:parentTriplesMap <#MicroclimateSensor> ;
+            rr:joinCondition [
+                rr:child "Closest_PedestrianCount_Sensor" ;
+                rr:parent "Sensor_Name" ;
+            ]
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+      rr:predicate schema:containedInPlace ;
+      rr:objectMap [
+        rr:parentTriplesMap <#CityMapping> ;
+        rr:joinCondition [
+            rr:child "City" ;
+            rr:parent "City" ;
+        ]
+      ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+      rr:predicate schema:containedInPlace ;
+      rr:objectMap [
+        rr:parentTriplesMap <#CountryMapping> ;
+        rr:joinCondition [
+            rr:child "Country" ;
+            rr:parent "Country" ;
+        ]
+      ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+      rr:predicate schema:containedInPlace ;
+      rr:objectMap [
+        rr:parentTriplesMap <#StreetMapping> ;
+        rr:joinCondition [
+            rr:child "Street" ;
+            rr:parent "Street" ;
+        ]
+      ] ;
+    ] .
+
+#################################################################
+# Microclimate Sensor Mapping
+#################################################################
+
+<#MicroclimateSensor>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/sensor/{Sensor_Name}" ;
+        rr:termType rr:IRI ;
+        rr:class us:MicroclimateSensor ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate us:locatedAt ;
+        # AHORA ES UN JOIN EXPLÍCITO
+        rr:objectMap [ 
+            rr:parentTriplesMap <#MicroclimateLocation> ;
+            rr:joinCondition [
+                rr:child "Location_ID" ;
+                rr:parent "Location_ID" ;
+            ]
+        ] ;
+    ] .
+
+#################################################################
+# Observation Mapping
+#################################################################
+
+<#MicroclimateObservation>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/observation/{Sensor_Name}-{Time}" ;
+        rr:termType rr:IRI ;
+        rr:class sosa:Observation ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:resultTime ;
+        rr:objectMap [ rml:reference "Time" ; rr:datatype xsd:dateTime ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:madeBySensor ;
+        # AHORA ES UN JOIN EXPLÍCITO
+        rr:objectMap [ 
+            rr:parentTriplesMap <#MicroclimateSensor> ;
+            rr:joinCondition [
+                rr:child "Sensor_Name" ;
+                rr:parent "Sensor_Name" ;
+            ]
+        ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate us:observedAtLocation ;
+        # AHORA ES UN JOIN EXPLÍCITO
+        rr:objectMap [ 
+            rr:parentTriplesMap <#MicroclimateLocation> ;
+            rr:joinCondition [
+                rr:child "Location_ID" ;
+                rr:parent "Location_ID" ;
+            ]
+        ] ;
+    ] ;
+
+    # Enlazado a resultados (AHORA CON JOINS EXPLÍCITOS MÚLTIPLES)
+    rr:predicateObjectMap [ 
+        rr:predicate sosa:hasResult ; 
+        rr:objectMap [ 
+            rr:parentTriplesMap <#AirTemperatureResult> ;
+            rr:joinCondition [
+                rr:child "Sensor_Name" ;
+                rr:parent "Sensor_Name" ;
+            ] ;
+            rr:joinCondition [
+                rr:child "Time" ;
+                rr:parent "Time" ;
+            ]
+        ] 
+    ] ;
+    
+    rr:predicateObjectMap [ 
+        rr:predicate sosa:hasResult ; 
+        rr:objectMap [ 
+            rr:parentTriplesMap <#RelativeHumidityResult> ;
+            rr:joinCondition [
+                rr:child "Sensor_Name" ;
+                rr:parent "Sensor_Name" ;
+            ] ;
+            rr:joinCondition [
+                rr:child "Time" ;
+                rr:parent "Time" ;
+            ]
+        ] 
+    ] ;
+    
+    rr:predicateObjectMap [ 
+        rr:predicate sosa:hasResult ; 
+        rr:objectMap [ 
+            rr:parentTriplesMap <#AverageWindSpeedResult> ;
+            rr:joinCondition [
+                rr:child "Sensor_Name" ;
+                rr:parent "Sensor_Name" ;
+            ] ;
+            rr:joinCondition [
+                rr:child "Time" ;
+                rr:parent "Time" ;
+            ]
+        ] 
+    ] ;
+    
+    rr:predicateObjectMap [ 
+        rr:predicate sosa:hasResult ; 
+        rr:objectMap [ 
+            rr:parentTriplesMap <#AverageWindDirectionResult> ;
+            rr:joinCondition [
+                rr:child "Sensor_Name" ;
+                rr:parent "Sensor_Name" ;
+            ] ;
+            rr:joinCondition [
+                rr:child "Time" ;
+                rr:parent "Time" ;
+            ]
+        ] 
+    ] ;
+    
+    rr:predicateObjectMap [ 
+        rr:predicate sosa:hasResult ; 
+        rr:objectMap [ 
+            rr:parentTriplesMap <#AtmosphericPressureResult> ;
+            rr:joinCondition [
+                rr:child "Sensor_Name" ;
+                rr:parent "Sensor_Name" ;
+            ] ;
+            rr:joinCondition [
+                rr:child "Time" ;
+                rr:parent "Time" ;
+            ]
+        ] 
+    ] ;
+    
+    rr:predicateObjectMap [ 
+        rr:predicate sosa:hasResult ; 
+        rr:objectMap [ 
+            rr:parentTriplesMap <#PM10Result> ;
+            rr:joinCondition [
+                rr:child "Sensor_Name" ;
+                rr:parent "Sensor_Name" ;
+            ] ;
+            rr:joinCondition [
+                rr:child "Time" ;
+                rr:parent "Time" ;
+            ]
+        ] 
+    ] ;
+    
+    rr:predicateObjectMap [ 
+        rr:predicate sosa:hasResult ; 
+        rr:objectMap [ 
+            rr:parentTriplesMap <#NoiseResult> ;
+            rr:joinCondition [
+                rr:child "Sensor_Name" ;
+                rr:parent "Sensor_Name" ;
+            ] ;
+            rr:joinCondition [
+                rr:child "Time" ;
+                rr:parent "Time" ;
+            ]
+        ] 
+    ] .
+
+#################################################################
+# Result Mappings (cada observable)
+#################################################################
+
+<#AirTemperatureResult>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/airTemperature/{Sensor_Name}-{Time}" ;
+        rr:class sosa:Result ;
+        rr:termType rr:IRI ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:objectMap [ rr:constant us:airTemperature ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "AirTemperature" ; rr:datatype xsd:float ] ;
+    ] .
+
+<#RelativeHumidityResult>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/relativeHumidity/{Sensor_Name}-{Time}" ;
+        rr:class sosa:Result ;
+        rr:termType rr:IRI ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:objectMap [ rr:constant us:relativeHumidity ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "RelativeHumidity" ; rr:datatype xsd:float ] ;
+    ] .
+
+<#AverageWindSpeedResult>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/averageWindSpeed/{Sensor_Name}-{Time}" ;
+        rr:class sosa:Result ;
+        rr:termType rr:IRI ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:objectMap [ rr:constant us:averageWindSpeed ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "AverageWindSpeed" ; rr:datatype xsd:float ] ;
+    ] .
+
+<#AverageWindDirectionResult>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/averageWindDirection/{Sensor_Name}-{Time}" ;
+        rr:class sosa:Result ;
+        rr:termType rr:IRI ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:objectMap [ rr:constant us:averageWindDirection ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "AverageWindDirection" ; rr:datatype xsd:float ] ;
+    ] .
+
+<#AtmosphericPressureResult>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/atmosphericPressure/{Sensor_Name}-{Time}" ;
+        rr:class sosa:Result ;
+        rr:termType rr:IRI ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:objectMap [ rr:constant us:atmosphericPressure ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "AtmosphericPressure" ; rr:datatype xsd:float ] ;
+    ] .
+
+<#PM10Result>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/pm10/{Sensor_Name}-{Time}" ;
+        rr:class sosa:Result ;
+        rr:termType rr:IRI ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:objectMap [ rr:constant us:pm10 ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "PM10" ; rr:datatype xsd:float ] ;
+    ] .
+
+<#NoiseResult>
+    a rr:TriplesMap ;
+    rml:logicalSource <#MicroclimateSource> ;
+
+    rr:subjectMap [
+        rr:template "https://smartcity.linkeddata.es/lcc/resource/microclimate/result/noise/{Sensor_Name}-{Time}" ;
+        rr:class sosa:Result ;
+        rr:termType rr:IRI ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:observedProperty ;
+        rr:objectMap [ rr:constant us:noise ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate sosa:hasSimpleResult ;
+        rr:objectMap [ rml:reference "Noise" ; rr:datatype xsd:float ] ;
+    ] .
+
+#################################################################
+# Subjects para reconciliación (City / Country / Street)
+#################################################################
+
+<#CityMapping>
+  a rr:TriplesMap ;
+  rml:logicalSource <#MicroclimateSource> ;
+
+  rr:subjectMap [
+    rr:template "https://smartcity.linkeddata.es/lcc/resource/city/{City}" ;
+    rr:class schema:City ;
+    rr:termType rr:IRI ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "City" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rml:reference "Same_As_Wikidata_City" ; rr:termType rr:IRI ] ;
+  ] .
+
+<#CountryMapping>
+  a rr:TriplesMap ;
+  rml:logicalSource <#MicroclimateSource> ;
+
+  rr:subjectMap [
+    rr:template "https://smartcity.linkeddata.es/lcc/resource/country/{Country}" ;
+    rr:class schema:Country ;
+    rr:termType rr:IRI ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "Country" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rml:reference "Same_As_Wikidata_Country" ; rr:termType rr:IRI ] ;
+  ] .
+
+<#StreetMapping>
+  a rr:TriplesMap ;
+  rml:logicalSource <#MicroclimateSource> ;
+
+  rr:subjectMap [
+    rr:template "https://smartcity.linkeddata.es/lcc/resource/street/{Street}" ;
+    rr:class us:Street ;
+    rr:termType rr:IRI ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "Street" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rml:reference "Same_As_Wikidata_Street" ; rr:termType rr:IRI ] ;
+  ] .
+
+<#SensorDescriptionMapping>
+  a rr:TriplesMap ;
+  rml:logicalSource <#MicroclimateSource> ;
+
+  rr:subjectMap [
+    rr:template "https://smartcity.linkeddata.es/lcc/resource/sensor-description/{Sensor_Name}" ;
+    rr:class schema:PostalAddress ;
+    rr:termType rr:IRI ;
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate schema:description ;
+    rr:objectMap [ rml:reference "Sensor_Description" ] ;
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate owl:sameAs ;
+    rr:objectMap [ rml:reference "Same_As_Wikidata_Sensor_Description" ; rr:termType rr:IRI ] ;
+  ] .

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,14 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
+
         h1 {
             color: #2c3e50;
             border-bottom: 3px solid #3498db;
             padding-bottom: 10px;
             margin-bottom: 30px;
         }
+
         h2 {
             color: #34495e;
             border-left: 4px solid #3498db;
@@ -28,17 +31,20 @@
             background-color: #ecf0f1;
             padding: 10px 15px;
         }
+
         h3 {
             color: #2980b9;
             margin-top: 25px;
         }
+
         .section {
             background-color: white;
             padding: 25px;
             margin-bottom: 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .narrative {
             background-color: #f8f9fa;
             border-left: 4px solid #28a745;
@@ -46,12 +52,14 @@
             margin: 20px 0;
             border-radius: 4px;
         }
+
         table {
             border-collapse: collapse;
             width: 100%;
             margin: 20px 0;
             background-color: white;
         }
+
         th {
             background-color: #3498db;
             color: white;
@@ -59,13 +67,16 @@
             text-align: left;
             font-weight: bold;
         }
+
         td {
             padding: 10px;
             border-bottom: 1px solid #ddd;
         }
+
         tr:hover {
             background-color: #f5f5f5;
         }
+
         .stat-box {
             display: inline-block;
             background-color: #ecf0f1;
@@ -74,27 +85,32 @@
             border-radius: 5px;
             border-left: 4px solid #3498db;
         }
+
         .stat-label {
             font-weight: bold;
             color: #7f8c8d;
             font-size: 0.9em;
         }
+
         .stat-value {
             font-size: 1.5em;
             color: #2c3e50;
             font-weight: bold;
         }
+
         .chart-container {
             margin: 30px 0;
             text-align: center;
         }
+
         .chart-container img {
             max-width: 100%;
             height: auto;
             border: 1px solid #ddd;
             border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .license-box {
             background-color: #fff3cd;
             border: 1px solid #ffc107;
@@ -102,6 +118,7 @@
             border-radius: 5px;
             margin: 20px 0;
         }
+
         .naming-strategy {
             background-color: #d1ecf1;
             border: 1px solid #17a2b8;
@@ -109,6 +126,7 @@
             border-radius: 5px;
             margin: 20px 0;
         }
+
         .code-block {
             background-color: #f8f9fa;
             border: 1px solid #dee2e6;
@@ -117,9 +135,11 @@
             font-family: 'Courier New', monospace;
             overflow-x: auto;
         }
+
         ul {
             line-height: 1.8;
         }
+
         .metadata {
             font-size: 0.9em;
             color: #7f8c8d;
@@ -127,6 +147,7 @@
             padding-top: 20px;
             border-top: 1px solid #ddd;
         }
+
         .key-insight {
             background-color: #e8f5e9;
             border-left: 4px solid #4caf50;
@@ -135,12 +156,14 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Madrid Transportation and Safety Data Analysis</h1>
 
     <div class="section">
         <h2>Executive Summary</h2>
-        <p>This document presents a comprehensive analysis of four datasets related to Madrid's transportation infrastructure and safety:</p>
+        <p>This document presents a comprehensive analysis of four datasets related to Madrid's transportation
+            infrastructure and safety:</p>
         <ul>
             <li><strong>AccidentesBicicletas_2024</strong>: Bicycle accidents recorded in Madrid during 2024</li>
             <li><strong>Cabezas_Semaforo_Bici</strong>: Locations and details of bicycle traffic lights</li>
@@ -151,8 +174,12 @@
 
         <div class="narrative">
             <h3>Overall Data Landscape</h3>
-            <p>The datasets collectively provide a rich view of Madrid's urban mobility ecosystem. With over 350,000 total records spanning bicycle accidents, traffic infrastructure, and pedestrian patterns, this data enables comprehensive safety analysis and infrastructure planning.</p>
-            <p>The data quality is generally high, with most datasets showing complete or near-complete records across key fields. Geographic coordinates (latitude/longitude) are present across multiple datasets, enabling spatial analysis and integration with GIS systems.</p>
+            <p>The datasets collectively provide a rich view of Madrid's urban mobility ecosystem. With over 350,000
+                total records spanning bicycle accidents, traffic infrastructure, and pedestrian patterns, this data
+                enables comprehensive safety analysis and infrastructure planning.</p>
+            <p>The data quality is generally high, with most datasets showing complete or near-complete records across
+                key fields. Geographic coordinates (latitude/longitude) are present across multiple datasets, enabling
+                spatial analysis and integration with GIS systems.</p>
         </div>
     </div>
 
@@ -160,7 +187,8 @@
         <h2>AccidentesBicicletas_2024</h2>
 
         <div class="narrative">
-            <p><strong>This dataset captures bicycle accident incidents in Madrid throughout 2024, providing crucial insights into cycling safety patterns.</strong></p>
+            <p><strong>This dataset captures bicycle accident incidents in Madrid throughout 2024, providing crucial
+                    insights into cycling safety patterns.</strong></p>
         </div>
 
         <h3>Dataset Overview</h3>
@@ -182,7 +210,8 @@
         </div>
 
         <div class="chart-container">
-            <img src="../images/AccidentesBicicletas_2024.png" alt="Chart showing monthly distribution of bicycle accidents in Madrid">
+            <img src="../images/AccidentesBicicletas_2024.png"
+                alt="Chart showing monthly distribution of bicycle accidents in Madrid">
         </div>
 
         <div class="key-insight">
@@ -311,7 +340,8 @@
         <h2>Cabezas_Semaforo_Bici</h2>
 
         <div class="narrative">
-            <p><strong>A comprehensive inventory of bicycle-specific traffic lights across Madrid, essential for understanding cycling infrastructure.</strong></p>
+            <p><strong>A comprehensive inventory of bicycle-specific traffic lights across Madrid, essential for
+                    understanding cycling infrastructure.</strong></p>
         </div>
 
         <h3>Dataset Overview</h3>
@@ -333,7 +363,8 @@
         </div>
 
         <div class="chart-container">
-            <img src="../images/Cabezas_Semaforo_Bici.png" alt="Chart showing distribution of bicycle traffic lights across Madrid">
+            <img src="../images/Cabezas_Semaforo_Bici.png"
+                alt="Chart showing distribution of bicycle traffic lights across Madrid">
         </div>
 
         <div class="key-insight">
@@ -427,7 +458,8 @@
         <h2>Peatones_2024</h2>
 
         <div class="narrative">
-            <p><strong>Pedestrian activity and safety data for 2024, capturing interactions between pedestrians and urban transport systems.</strong></p>
+            <p><strong>Pedestrian activity and safety data for 2024, capturing interactions between pedestrians and
+                    urban transport systems.</strong></p>
         </div>
 
         <h3>Dataset Overview</h3>
@@ -578,7 +610,8 @@
         <h2>Bicicletas_2024</h2>
 
         <div class="narrative">
-            <p><strong>Comprehensive bicycle infrastructure data including stations, bike-sharing systems, and cycling facilities throughout Madrid.</strong></p>
+            <p><strong>Comprehensive bicycle infrastructure data including stations, bike-sharing systems, and cycling
+                    facilities throughout Madrid.</strong></p>
         </div>
 
         <h3>Dataset Overview</h3>
@@ -741,9 +774,53 @@
             </ul>
             <p><strong>Attribution Example:</strong></p>
             <div class="code-block">
-                Data source: Ayuntamiento de Madrid. Portal de datos abiertos del Ayuntamiento de Madrid. 
+                Data source: Ayuntamiento de Madrid. Portal de datos abiertos del Ayuntamiento de Madrid.
                 Available at: https://datos.madrid.es/ (Accessed: October 2025)
             </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>License for Generated Linked Data</h2>
+
+        <div class="license-box">
+            <h3>Chosen License</h3>
+            <p><strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong></p>
+        </div>
+
+        <h3>Rationale</h3>
+        <div class="narrative">
+            <ul>
+                <li><strong>Compatibility:</strong> CC BY 4.0 is fully compatible with the source license. All four
+                    datasets from the Ayuntamiento de Madrid are published under CC BY 4.0, which explicitly requires
+                    attribution. By adopting the same license for our generated linked data, we maintain consistency and
+                    ensure full compliance with the source data requirements.</li>
+                <li><strong>Openness:</strong> Ensures the Madrid Transport Safety linked dataset remains open and
+                    reusable for research, public applications, and commercial purposes. This aligns with the open data
+                    principles of the Ayuntamiento de Madrid and promotes broader data utilization in urban mobility and
+                    safety research.</li>
+                <li><strong>Standard:</strong> CC BY 4.0 is widely adopted in the Linked Open Data community and aligns
+                    with FAIR data principles (Findable, Accessible, Interoperable, Reusable). It facilitates
+                    integration with other open datasets and promotes interoperability across different data platforms
+                    and research initiatives.</li>
+            </ul>
+            <p><strong>Attribution statement:</strong> All generated RDF data will include provenance metadata
+                (<code>dct:source</code>, <code>dct:license</code>, <code>prov:wasDerivedFrom</code>) linking back to
+                the original datasets.</p>
+        </div>
+
+        <h3>Attribution Statement</h3>
+        <p>The following attribution statement will be included in the metadata of the generated linked dataset:</p>
+        <div class="code-block">
+            <strong>This linked dataset is derived from:</strong><br><br>
+            - AccidentesBicicletas_2024 (Bicycle Accidents 2024) — Ayuntamiento de Madrid (datos.madrid.es)<br>
+            - Cabezas_Semaforo_Bici (Bicycle Traffic Lights) — Ayuntamiento de Madrid (datos.madrid.es)<br>
+            - PEATONES_2024 (Pedestrian Data 2024) — Ayuntamiento de Madrid (datos.madrid.es)<br>
+            - BICICLETAS_2024 (Bicycle Infrastructure 2024) — Ayuntamiento de Madrid (datos.madrid.es)<br><br>
+
+            All source datasets are licensed under <strong>CC BY 4.0</strong> by Ayuntamiento de Madrid.<br><br>
+
+            <strong>Generated linked data is licensed under CC BY 4.0 by Group03 — UPM 2025.</strong>
         </div>
     </div>
 
@@ -810,7 +887,8 @@
                 <li><strong>ont:hasStreet</strong> - Indicates which street a location is on.</li>
                 <li><strong>ont:involvesPedestrian</strong> - Indicates involvement of a pedestrian in an accident</li>
                 <li><strong>ont:locatedInDistrict</strong> - Specifies the district where something is located</li>
-                <li><strong>ont:nearTrafficLight</strong> - Spatial relationship indicating proximity to a traffic light.</li>
+                <li><strong>ont:nearTrafficLight</strong> - Spatial relationship indicating proximity to a traffic
+                    light.</li>
             </ul>
 
             <h4>Key Data Properties</h4>
@@ -861,7 +939,9 @@
 
         <div class="narrative">
             <h3>Overall Data Quality</h3>
-            <p>The datasets demonstrate strong data quality overall, with high completeness rates and consistent formatting across similar fields. The geographic data (latitude/longitude coordinates) are particularly well-maintained, enabling spatial analysis and visualization.</p>
+            <p>The datasets demonstrate strong data quality overall, with high completeness rates and consistent
+                formatting across similar fields. The geographic data (latitude/longitude coordinates) are particularly
+                well-maintained, enabling spatial analysis and visualization.</p>
         </div>
 
         <h3>Overall Findings</h3>
@@ -888,4 +968,5 @@
         <p>Document Version: 1.0</p>
     </div>
 </body>
+
 </html>

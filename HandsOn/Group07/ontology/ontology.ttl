@@ -1,6 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix lude: <https://spanishuniversities.data/ontology/lude#> .
+@prefix lude: <http://spanishuniversities.data.es/lude/ontology#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -24,18 +24,6 @@ schema1:url a owl:DatatypeProperty ;
     rdfs:label "url" ;
     rdfs:range xsd:anyURI .
 
-rdfs:label a owl:DatatypeProperty ;
-    rdfs:label "label" ;
-    rdfs:domain lude:AutonomousCommunity,
-        lude:Degree,
-        lude:Faculty,
-        lude:KnowledgeArea,
-        lude:Municipality,
-        lude:Province,
-        lude:University,
-        lude:academicLevel ;
-    rdfs:range xsd:string .
-
 geo1:lat a owl:DatatypeProperty ;
     rdfs:label "lat" ;
     rdfs:domain lude:University ;
@@ -48,6 +36,23 @@ geo1:long a owl:DatatypeProperty ;
 
 lude:academicYear a owl:DatatypeProperty ;
     rdfs:label "academic year" ;
+    rdfs:range xsd:string .
+
+rdfs:label a owl:DatatypeProperty ;
+    rdfs:label "label" ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf (
+            lude:AutonomousCommunity
+            lude:Degree
+            lude:Faculty
+            lude:KnowledgeArea
+            lude:Municipality
+            lude:Province
+            lude:University
+            lude:academicLevel 
+        )
+    ] ;
     rdfs:range xsd:string .
 
 lude:acronym a owl:DatatypeProperty ;
@@ -74,7 +79,7 @@ lude:anecaAssessmentReportDate a owl:DatatypeProperty ;
 
 lude:basicTrainingCredits a owl:DatatypeProperty ;
     rdfs:label "basic training credits" ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:decimal .
 
 lude:campus a owl:DatatypeProperty ;
     rdfs:label "campus" ;
@@ -92,11 +97,11 @@ lude:code a owl:DatatypeProperty ;
 
 lude:codeCif a owl:DatatypeProperty ;
     rdfs:label "code cif" ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:string .
 
 lude:codeSac a owl:DatatypeProperty ;
     rdfs:label "code sac" ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:string .
 
 lude:councilOfUniversitiesReportDate a owl:DatatypeProperty ;
     rdfs:label "council of universities report date" ;
@@ -113,17 +118,12 @@ lude:deliveredAt a owl:ObjectProperty ;
 
 lude:ectsCredits a owl:DatatypeProperty ;
     rdfs:label "ects credits" ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:decimal .
 
 lude:email a owl:DatatypeProperty ;
     rdfs:label "email" ;
     rdfs:domain lude:University ;
     rdfs:range xsd:string .
-
-lude:hasAcademicLevel a owl:ObjectProperty ;
-    rdfs:label "has academic level" ;
-    rdfs:domain lude:Degree ;
-    rdfs:range lude:academicLevel .
 
 lude:hasAddress a owl:ObjectProperty ;
     rdfs:label "has address" ;
@@ -140,17 +140,27 @@ lude:hasKnowledgeArea a owl:ObjectProperty ;
     rdfs:domain lude:Degree ;
     rdfs:range lude:KnowledgeArea .
 
+lude:hasAcademicLevel a owl:ObjectProperty ;
+    rdfs:label "has academic level" ;
+    rdfs:domain lude:Degree ;
+    rdfs:range lude:AcademicLevel .
+
 lude:id a owl:DatatypeProperty ;
     rdfs:label "id" ;
-    rdfs:domain lude:Address,
-        lude:AutonomousCommunity,
-        lude:Degree,
-        lude:Faculty,
-        lude:KnowledgeArea,
-        lude:Municipality,
-        lude:Province,
-        lude:University,
-        lude:academicLevel ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf (
+            lude:Address
+            lude:AutonomousCommunity
+            lude:Degree
+            lude:Faculty
+            lude:KnowledgeArea
+            lude:Municipality
+            lude:Province
+            lude:University
+            lude:AcademicLevel
+        )
+    ] ;
     rdfs:range xsd:string .
 
 lude:language a owl:DatatypeProperty ;
@@ -178,7 +188,7 @@ lude:newStudentsPosts a owl:DatatypeProperty ;
 
 lude:offeredCredits a owl:DatatypeProperty ;
     rdfs:label "offered credits" ;
-    rdfs:range xsd:integer .
+    rdfs:range xsd:decimal .
 
 lude:offers a owl:ObjectProperty ;
     rdfs:label "offers" ;
@@ -205,20 +215,26 @@ lude:publicationYear a owl:DatatypeProperty ;
     rdfs:domain lude:University ;
     rdfs:range xsd:gYear .
 
-lude:sameAsWikidata a owl:ObjectProperty ;
+owl:sameAs a owl:ObjectProperty ;
     rdfs:label "same as wikidata" ;
-    rdfs:domain lude:AutonomousCommunity,
-        lude:Municipality,
-        lude:Province,
-        lude:University ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf (
+        lude:AutonomousCommunity
+        lude:Municipality
+        lude:Province
+        lude:University
+        lude:Degree
+        )
+    ] ;
     rdfs:range rdfs:Resource .
 
 lude:seatsAvailable a owl:DatatypeProperty ;
     rdfs:label "seats available" ;
     rdfs:range xsd:integer .
 
-lude:teachingModaliy a owl:DatatypeProperty ;
-    rdfs:label "teaching modaliy" ;
+lude:teachingModality a owl:DatatypeProperty ;
+    rdfs:label "teaching modality" ;
     rdfs:range xsd:string .
 
 lude:telephone a owl:DatatypeProperty ;
@@ -243,22 +259,20 @@ lude:url a owl:DatatypeProperty ;
 rdfs:Resource a owl:Class ;
     rdfs:label "Resource" .
 
-<https://spainuniversities.data/ontology/lude#> a owl:Ontology ;
-    dcterms:created "2025-10-16"^^xsd:date ;
+<http://spanishuniversities.data.es/lude/ontology#> a owl:Ontology ;
+    dcterms:created "2025-11-15"^^xsd:date ;
     dcterms:description "Vocabulary for universities, faculties, degrees, program offerings and cut-offs across Spanish regions."@en ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:title "Linked Universities Data Explorer Ontology"@en ;
     vann:preferredNamespacePrefix "lude" ;
-    vann:preferredNamespaceUri <https://spainuniversities.data/ontology/lude#> ;
+    vann:preferredNamespaceUri <http://spanishuniversities.data.es/lude/ontology#> ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 lude:KnowledgeArea a owl:Class ;
     rdfs:label "Knowledge Area" .
 
-lude:academicLevel a owl:Class,
-        owl:DatatypeProperty ;
-    rdfs:label "academic Level",
-        "academic level" ;
+lude:AcademicLevel a owl:Class;
+    rdfs:label "academic Level";
     rdfs:range xsd:string .
 
 lude:AutonomousCommunity a owl:Class ;

@@ -1,0 +1,302 @@
+###########################################################
+# SPARQL Query Set for LUDE Ontology
+# Dataset: Spanish Universities Knowledge Graph
+# Prefixes for LUDE ontology
+###########################################################
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX lude: <http://spanishuniversities.data.es/lude/ontology#>
+PREFIX id: <http://spanishuniversities.data.es/lude/resource/>
+
+###########################################################
+# 1. List all classes defined in the LUDE ontology
+# Description: Shows all classes used in the dataset that belong to the LUDE ontology
+###########################################################
+SELECT DISTINCT ?class
+WHERE {
+  ?s rdf:type ?class .
+  FILTER(STRSTARTS(STR(?class), STR(lude:)))
+}
+ORDER BY ?class
+
+###########################################################
+# 2. Retrieve all Academic Levels (Bachelor, Master, etc.)
+# Description: Gets all academic levels with their labels
+###########################################################
+SELECT ?academicLevel ?label
+WHERE {
+  ?academicLevel a lude:AcademicLevel ;
+                 rdfs:label ?label .
+}
+ORDER BY ?label
+
+###########################################################
+# 3. Count total number of degrees in the dataset
+# Description: Returns the total count of degree programs
+###########################################################
+SELECT (COUNT(?degree) AS ?numberOfDegrees)
+WHERE {
+  ?degree a lude:Degree .
+}
+
+###########################################################
+# 4. List all universities with their basic information
+# Description: Retrieves all universities with name, type and acronym
+###########################################################
+SELECT ?university ?label ?type ?acronym
+WHERE {
+  ?university a lude:University ;
+              rdfs:label ?label ;
+              lude:type ?type ;
+              lude:acronym ?acronym .
+}
+ORDER BY ?label
+
+###########################################################
+# 5. List all knowledge areas
+# Description: Shows all available knowledge/study areas
+###########################################################
+SELECT ?knowledgeArea ?label
+WHERE {
+  ?knowledgeArea a lude:KnowledgeArea ;
+                 rdfs:label ?label .
+}
+ORDER BY ?label
+
+###########################################################
+# 6. List all faculties with their campuses
+# Description: Retrieves faculties and their associated campuses
+###########################################################
+SELECT ?faculty ?label ?campus
+WHERE {
+  ?faculty a lude:Faculty ;
+           rdfs:label ?label ;
+           lude:campus ?campus .
+}
+ORDER BY ?campus ?label
+
+###########################################################
+# 7. Degrees with ECTS credits and academic level
+# Description: Shows degrees with their credit load and academic level
+# LIMIT 20 for manageable results
+###########################################################
+SELECT ?degree ?degreeName ?ectsCredits ?academicLevel ?levelLabel
+WHERE {
+  ?degree a lude:Degree ;
+          rdfs:label ?degreeName ;
+          lude:ectsCredits ?ectsCredits ;
+          lude:hasAcademicLevel ?academicLevel .
+  
+  ?academicLevel rdfs:label ?levelLabel .
+}
+ORDER BY ?levelLabel ?degreeName
+LIMIT 20
+
+###########################################################
+# 8. Degrees grouped by teaching modality
+# Description: Counts degrees by their teaching method (in-person, online, etc.)
+###########################################################
+SELECT ?teachingModality (COUNT(?degree) AS ?numberOfDegrees)
+WHERE {
+  ?degree a lude:Degree ;
+          lude:teachingModality ?teachingModality .
+}
+GROUP BY ?teachingModality
+ORDER BY DESC(?numberOfDegrees)
+
+###########################################################
+# 9. Degrees grouped by language
+# Description: Shows distribution of degrees by teaching language
+###########################################################
+SELECT ?language (COUNT(?degree) AS ?numberOfDegrees)
+WHERE {
+  ?degree a lude:Degree ;
+          lude:language ?language .
+}
+GROUP BY ?language
+ORDER BY DESC(?numberOfDegrees)
+
+###########################################################
+# 10. Universities and their degree counts
+# Description: Shows how many degrees each university offers
+###########################################################
+SELECT ?university ?universityName (COUNT(?degree) AS ?numberOfDegrees)
+WHERE {
+  ?university a lude:University ;
+              rdfs:label ?universityName ;
+              lude:offers ?degree .
+}
+GROUP BY ?university ?universityName
+ORDER BY DESC(?numberOfDegrees)
+
+###########################################################
+# 11. Degrees in Science-related knowledge areas
+# Description: Finds degrees in science fields across all universities
+###########################################################
+SELECT ?universityName ?degreeName ?knowledgeArea ?ectsCredits
+WHERE {
+  ?university a lude:University ;
+              rdfs:label ?universityName ;
+              lude:offers ?degree .
+  
+  ?degree rdfs:label ?degreeName ;
+          lude:ectsCredits ?ectsCredits ;
+          lude:hasKnowledgeArea ?knowledgeAreaObj .
+  
+  ?knowledgeAreaObj rdfs:label ?knowledgeArea .
+  FILTER(CONTAINS(LCASE(?knowledgeArea), "ciencias"))
+}
+ORDER BY ?universityName ?degreeName
+LIMIT 15
+
+###########################################################
+# 12. Degrees by faculty and campus
+# Description: Shows which degrees are offered by which faculties on which campuses
+###########################################################
+SELECT ?facultyName ?campus ?degreeName ?universityName
+WHERE {
+  ?degree a lude:Degree ;
+          rdfs:label ?degreeName ;
+          lude:deliveredAt ?faculty ;
+          lude:hasAcademicLevel ?level .
+  
+  ?faculty rdfs:label ?facultyName ;
+           lude:campus ?campus .
+  
+  ?university lude:offers ?degree ;
+              rdfs:label ?universityName .
+  
+  ?level rdfs:label ?levelLabel .
+}
+ORDER BY ?campus ?facultyName ?degreeName
+LIMIT 15
+
+###########################################################
+# 13. Explore ontology properties and their usage
+# Description: Shows all properties from LUDE ontology and how frequently they're used
+###########################################################
+SELECT DISTINCT ?property (COUNT(?s) AS ?usageCount)
+WHERE {
+  ?s ?property ?o .
+  FILTER(STRSTARTS(STR(?property), STR(lude:)))
+}
+GROUP BY ?property
+ORDER BY DESC(?usageCount)
+
+###########################################################
+# 14. High ECTS degrees (over 240 credits)
+# Description: Finds degrees with more than 240 ECTS credits (typically double degrees)
+###########################################################
+SELECT ?degreeName ?ectsCredits ?universityName ?academicLevel
+WHERE {
+  ?degree a lude:Degree ;
+          rdfs:label ?degreeName ;
+          lude:ectsCredits ?ectsCredits ;
+          lude:hasAcademicLevel ?level ;
+          lude:deliveredAt ?faculty .
+  
+  ?university lude:offers ?degree ;
+              rdfs:label ?universityName .
+  
+  ?level rdfs:label ?academicLevel .
+  
+  FILTER(xsd:decimal(?ectsCredits) > 240)
+}
+ORDER BY DESC(xsd:decimal(?ectsCredits))
+
+###########################################################
+# 15. Degrees with specific codes or patterns
+# Description: Search for degrees by code pattern (adapt the FILTER as needed)
+###########################################################
+SELECT ?degreeName ?code ?universityName
+WHERE {
+  ?degree a lude:Degree ;
+          rdfs:label ?degreeName ;
+          lude:code ?code .
+  
+  ?university lude:offers ?degree ;
+              rdfs:label ?universityName .
+  
+  # Example: find codes starting with "10"
+  FILTER(STRSTARTS(?code, "10"))
+}
+ORDER BY ?code
+LIMIT 10
+
+###########################################################
+# 16. University contact information
+# Description: Retrieves contact details for all universities
+###########################################################
+SELECT ?universityName ?email ?telephone ?url
+WHERE {
+  ?university a lude:University ;
+              rdfs:label ?universityName ;
+              lude:email ?email ;
+              lude:telephone ?telephone ;
+              lude:url ?url .
+}
+ORDER BY ?universityName
+
+###########################################################
+# 17. Degrees by academic year
+# Description: Shows distribution of degrees across academic years
+###########################################################
+SELECT ?academicYear (COUNT(?degree) AS ?numberOfDegrees)
+WHERE {
+  ?degree a lude:Degree ;
+          lude:academicYear ?academicYear .
+}
+GROUP BY ?academicYear
+ORDER BY ?academicYear
+
+###########################################################
+# 18. University types distribution
+# Description: Shows count of universities by type (Public, Private, etc.)
+###########################################################
+SELECT ?type (COUNT(?university) AS ?numberOfUniversities)
+WHERE {
+  ?university a lude:University ;
+              lude:type ?type .
+}
+GROUP BY ?type
+ORDER BY DESC(?numberOfUniversities)
+
+###########################################################
+# 19. Campus distribution across universities
+# Description: Shows which campuses exist and how many faculties they host
+###########################################################
+SELECT ?campus (COUNT(DISTINCT ?faculty) AS ?numberOfFaculties)
+WHERE {
+  ?faculty a lude:Faculty ;
+           lude:campus ?campus .
+}
+GROUP BY ?campus
+ORDER BY DESC(?numberOfFaculties)
+
+###########################################################
+# 20. Comprehensive degree information
+# Description: Complete view of degrees with all related information
+###########################################################
+SELECT ?degreeName ?universityName ?academicLevel ?knowledgeArea ?teachingModality ?language ?ectsCredits ?facultyName ?campus
+WHERE {
+  ?degree a lude:Degree ;
+          rdfs:label ?degreeName ;
+          lude:ectsCredits ?ectsCredits ;
+          lude:teachingModality ?teachingModality ;
+          lude:language ?language ;
+          lude:hasAcademicLevel ?level ;
+          lude:hasKnowledgeArea ?knowledgeAreaObj ;
+          lude:deliveredAt ?faculty .
+  
+  ?level rdfs:label ?academicLevel .
+  ?knowledgeAreaObj rdfs:label ?knowledgeArea .
+  ?faculty rdfs:label ?facultyName ;
+           lude:campus ?campus .
+  
+  ?university lude:offers ?degree ;
+              rdfs:label ?universityName .
+}
+ORDER BY ?universityName ?degreeName
+LIMIT 25

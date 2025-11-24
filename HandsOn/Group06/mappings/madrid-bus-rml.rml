@@ -12,12 +12,12 @@
 
 #################################################################
 # TRIPLES MAP 1: BUS ROUTES
-# Source: gtfs_merged_for_rdf-updated.csv (routes data)
+# Source: df_final-updated.csv (routes data)
 #################################################################
 
 <#BusRouteMap>
     rml:logicalSource [
-        rml:source "../data-processed/df_final-updated.csv" ;
+        rml:source "../data/processed/df_final-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -61,12 +61,12 @@
 
 #################################################################
 # TRIPLES MAP 2: BUS STOPS
-# Source: gtfs_merged_for_rdf-updated.csv (stops data)
+# Source: df_final-updated.csv (stops data)
 #################################################################
 
 <#BusStopMap>
     rml:logicalSource [
-        rml:source "../data-processed/df_final-updated.csv" ;
+        rml:source "../data/processed/df_final-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -108,16 +108,29 @@
             rml:reference "wheelchair_boarding" ;
             rr:datatype xsd:integer
         ]
+    ] ;
+    
+    # Link to LocalArea (ex:locatedInArea)
+    # Join condition: match stop_id between df_final-updated.csv and local_areas-updated.csv
+    rr:predicateObjectMap [
+        rr:predicate ex:locatedInArea ;
+        rr:objectMap [
+            rr:parentTriplesMap <#LocalAreaMap> ;
+            rr:joinCondition [
+                rr:child "stop_id" ;
+                rr:parent "stop_id"
+            ]
+        ]
     ] .
 
 #################################################################
 # TRIPLES MAP 3: TRIPS
-# Source: gtfs_merged_for_rdf-updated.csv (trips data)
+# Source: df_final-updated.csv (trips data)
 #################################################################
 
 <#TripMap>
     rml:logicalSource [
-        rml:source "../data-processed/df_final-updated.csv" ;
+        rml:source "../data/processed/df_final-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -180,12 +193,12 @@
 
 #################################################################
 # TRIPLES MAP 4: STOP TIMES
-# Source: gtfs_merged_for_rdf-updated.csv (stop_times data)
+# Source: df_final-updated.csv (stop_times data)
 #################################################################
 
 <#StopTimeMap>
     rml:logicalSource [
-        rml:source "../data-processed/df_final-updated.csv" ;
+        rml:source "../data/processed/df_final-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -242,16 +255,18 @@
 #################################################################
 # TRIPLES MAP 5: LOCAL AREAS
 # Source: local_areas-updated.csv
+# Note: Uses stop_id as identifier (each stop has its own area instance)
+#       area_code contains Wikidata Q-identifier (e.g., "Q152867")
 #################################################################
 
 <#LocalAreaMap>
     rml:logicalSource [
-        rml:source "../data-processed/local_areas-updated.csv" ;
+        rml:source "../data/processed/local_areas-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
     rr:subjectMap [
-        rr:template "http://group06.linkeddata.es/resource/area/{area_id}" ;
+        rr:template "http://group06.linkeddata.es/resource/area/{stop_id}" ;
         rr:class ex:LocalArea
     ] ;
     
@@ -263,37 +278,11 @@
         ]
     ] ;
     
-    # area_code
+    # area_code (Wikidata Q-identifier)
     rr:predicateObjectMap [
         rr:predicate ex:areaCode ;
         rr:objectMap [
             rml:reference "area_code"
-        ]
-    ] ;
-    
-    # area_lat
-    rr:predicateObjectMap [
-        rr:predicate geo:lat ;
-        rr:objectMap [
-            rml:reference "area_lat" ;
-            rr:datatype xsd:float
-        ]
-    ] ;
-    
-    # area_lon
-    rr:predicateObjectMap [
-        rr:predicate geo:long ;
-        rr:objectMap [
-            rml:reference "area_lon" ;
-            rr:datatype xsd:float
-        ]
-    ] ;
-    
-    # description
-    rr:predicateObjectMap [
-        rr:predicate rdfs:comment ;
-        rr:objectMap [
-            rml:reference "description"
         ]
     ] .
 
@@ -304,7 +293,7 @@
 
 <#ServiceMap>
     rml:logicalSource [
-        rml:source "../data-processed/calendar-updated.csv" ;
+        rml:source "../data/processed/calendar-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -324,7 +313,7 @@
 
 <#CalendarRuleMap>
     rml:logicalSource [
-        rml:source "../data-processed/calendar-updated.csv" ;
+        rml:source "../data/processed/calendar-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -415,7 +404,7 @@
 
 <#CalendarDateMap>
     rml:logicalSource [
-        rml:source "../data-processed/calendar_dates-updated.csv" ;
+        rml:source "../data/processed/calendar_dates-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -458,7 +447,7 @@
 
 <#ShapeMap>
     rml:logicalSource [
-        rml:source "../data-processed/shapes-updated.csv" ;
+        rml:source "../data/processed/shapes-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     
@@ -469,7 +458,7 @@
 
 <#ShapePointMap>
     rml:logicalSource [
-        rml:source "../data-processed/shapes-updated.csv" ;
+        rml:source "../data/processed/shapes-updated.csv" ;
         rml:referenceFormulation ql:CSV
     ] ;
     

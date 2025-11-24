@@ -1,0 +1,838 @@
+[
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Faculty",
+    "description": "Vaciar las celdas en la columna Faculty"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Faculty",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "temporal_fac",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna temporal_fac en el índice 3 basada en la columna Faculty usando la expresión grel:value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_fac",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q180958",
+        "name": "faculty"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column temporal_fac to type Q180958"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_fac",
+    "similarValue": "FACULTAD CIENCIAS ECONÓMICAS Y EMPRESARIALES",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5854650",
+      "name": "Facultad de Ciencias Económicas y Empresariales",
+      "types": [
+        "Q180958",
+        "Q294422"
+      ],
+      "score": 97
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias Económicas y Empresariales (Q5854650) para las celdas que contienen \"FACULTAD CIENCIAS ECONÓMICAS Y EMPRESARIALES\" en la columna temporal_fac"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Faculty",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "dfedfg",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna dfedfg en el índice 3 basada en la columna Faculty usando la expresión grel:value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "dfedfg",
+    "description": "Eliminar columna dfedfg"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "temporal_fac",
+    "similarValue": "FACULTAD DE DERECHO",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5854831",
+      "name": "Facultad de Derecho (Universidad de Granada)",
+      "types": [
+        "Q180958"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Derecho (Universidad de Granada) (Q5854831) para las celdas que contienen \"FACULTAD DE DERECHO\" en la columna temporal_fac"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "temporal_fac",
+    "description": "Eliminar columna temporal_fac"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "UniversityId",
+          "expression": "value",
+          "columnName": "UniversityId",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "f8c4e120daa6420626c03e582958ebd3",
+                "l": "f8c4e120daa6420626c03e582958ebd3"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Faculty",
+    "expression": "grel:value + \" \" + (\n  if(cells[\"UniversityId\"].value == \"30962703623f1f1d21c737a0c0673761\", \"Universidad de Málaga\",\n  if(cells[\"UniversityId\"].value == \"79c02c40f6f40e7dbda1c9193c995152\", \"Universidad Pablo de Olavide\",\n  if(cells[\"UniversityId\"].value == \"9d791fc58c21adf30d157657e55c4355\", \"Universidad de Cádiz\",\n  if(cells[\"UniversityId\"].value == \"c6abab9cddd0b921adc603debfcca50e\", \"Universidad de Almería\",\n  if(cells[\"UniversityId\"].value == \"d4092e4beec5ade3eb17379b7450f0b9\", \"Universidad de Córdoba\",\n  if(cells[\"UniversityId\"].value == \"dbca02858a647c576208370194649766\", \"Universidad de Granada\",\n  if(cells[\"UniversityId\"].value == \"f6ce2593f6cfc9e08dc9effe2e0077e9\", \"Universidad de Huelva\",\n  if(cells[\"UniversityId\"].value == \"f8c4e120daa6420626c03e582958ebd3\", \"Universidad de Sevilla\",\n  \"\"))))))))\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "asda",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna asda en el índice 3 basada en la columna Faculty usando la expresión grel:value + \" \" + (\n  if(cells[\"UniversityId\"].value == \"30962703623f1f1d21c737a0c0673761\", \"Universidad de Málaga\",\n  if(cells[\"UniversityId\"].value == \"79c02c40f6f40e7dbda1c9193c995152\", \"Universidad Pablo de Olavide\",\n  if(cells[\"UniversityId\"].value == \"9d791fc58c21adf30d157657e55c4355\", \"Universidad de Cádiz\",\n  if(cells[\"UniversityId\"].value == \"c6abab9cddd0b921adc603debfcca50e\", \"Universidad de Almería\",\n  if(cells[\"UniversityId\"].value == \"d4092e4beec5ade3eb17379b7450f0b9\", \"Universidad de Córdoba\",\n  if(cells[\"UniversityId\"].value == \"dbca02858a647c576208370194649766\", \"Universidad de Granada\",\n  if(cells[\"UniversityId\"].value == \"f6ce2593f6cfc9e08dc9effe2e0077e9\", \"Universidad de Huelva\",\n  if(cells[\"UniversityId\"].value == \"f8c4e120daa6420626c03e582958ebd3\", \"Universidad de Sevilla\",\n  \"\"))))))))\n)"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "asda",
+    "description": "Eliminar columna asda"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Faculty",
+    "expression": "grel:value + \" \" + (\n  if(cells[\"UniversityId\"].value == \"30962703623f1f1d21c737a0c0673761\", \"Universidad de Málaga\",\n  if(cells[\"UniversityId\"].value == \"79c02c40f6f40e7dbda1c9193c995152\", \"Universidad Pablo de Olavide\",\n  if(cells[\"UniversityId\"].value == \"9d791fc58c21adf30d157657e55c4355\", \"Universidad de Cádiz\",\n  if(cells[\"UniversityId\"].value == \"c6abab9cddd0b921adc603debfcca50e\", \"Universidad de Almería\",\n  if(cells[\"UniversityId\"].value == \"d4092e4beec5ade3eb17379b7450f0b9\", \"Universidad de Córdoba\",\n  if(cells[\"UniversityId\"].value == \"dbca02858a647c576208370194649766\", \"Universidad de Granada\",\n  if(cells[\"UniversityId\"].value == \"f6ce2593f6cfc9e08dc9effe2e0077e9\", \"Universidad de Huelva\",\n  if(cells[\"UniversityId\"].value == \"f8c4e120daa6420626c03e582958ebd3\", \"Universidad de Sevilla\",\n  \"\"))))))))\n)",
+    "onError": "set-to-blank",
+    "newColumnName": "wer",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna wer en el índice 3 basada en la columna Faculty usando la expresión grel:value + \" \" + (\n  if(cells[\"UniversityId\"].value == \"30962703623f1f1d21c737a0c0673761\", \"Universidad de Málaga\",\n  if(cells[\"UniversityId\"].value == \"79c02c40f6f40e7dbda1c9193c995152\", \"Universidad Pablo de Olavide\",\n  if(cells[\"UniversityId\"].value == \"9d791fc58c21adf30d157657e55c4355\", \"Universidad de Cádiz\",\n  if(cells[\"UniversityId\"].value == \"c6abab9cddd0b921adc603debfcca50e\", \"Universidad de Almería\",\n  if(cells[\"UniversityId\"].value == \"d4092e4beec5ade3eb17379b7450f0b9\", \"Universidad de Córdoba\",\n  if(cells[\"UniversityId\"].value == \"dbca02858a647c576208370194649766\", \"Universidad de Granada\",\n  if(cells[\"UniversityId\"].value == \"f6ce2593f6cfc9e08dc9effe2e0077e9\", \"Universidad de Huelva\",\n  if(cells[\"UniversityId\"].value == \"f8c4e120daa6420626c03e582958ebd3\", \"Universidad de Sevilla\",\n  \"\"))))))))\n)"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q180958",
+        "name": "faculty"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column wer to type Q180958"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE CIENCIAS DE LA EDUCACIÓN Universidad de Almería",
+    "judgment": "matched",
+    "match": {
+      "id": "Q111225153",
+      "name": "Facultad de Ciencias de la Educacion Enfermeria y Fisioterapia",
+      "types": [
+        "Q180958"
+      ],
+      "score": 64
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias de la Educacion Enfermeria y Fisioterapia (Q111225153) para las celdas que contienen \"FACULTAD DE CIENCIAS DE LA EDUCACIÓN Universidad de Almería\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "ESCUELA DE INGENIERÍA NAVAL Y OCEÁNICA Universidad de Cádiz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q131152459",
+      "name": "Escuela de Ingeniería Naval y Oceánica de la Universidad de Cádiz",
+      "types": [
+        "Q180958"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Escuela de Ingeniería Naval y Oceánica de la Universidad de Cádiz (Q131152459) para las celdas que contienen \"ESCUELA DE INGENIERÍA NAVAL Y OCEÁNICA Universidad de Cádiz\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE CIENCIAS DE LA SALUD Universidad de Almería",
+    "judgment": "matched",
+    "match": {
+      "id": "Q111225153",
+      "name": "Facultad de Ciencias de la Educacion Enfermeria y Fisioterapia",
+      "types": [
+        "Q180958"
+      ],
+      "score": 56
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias de la Educacion Enfermeria y Fisioterapia (Q111225153) para las celdas que contienen \"FACULTAD DE CIENCIAS DE LA SALUD Universidad de Almería\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE CIENCIAS ECONÓMICAS Y EMPRESARIALES Universidad de Cádiz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q123614010",
+      "name": "Facultad de Ciencias Económicas y Empresariales",
+      "types": [
+        "Q180958"
+      ],
+      "score": 82
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias Económicas y Empresariales (Q123614010) para las celdas que contienen \"FACULTAD DE CIENCIAS ECONÓMICAS Y EMPRESARIALES Universidad de Cádiz\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE CIENCIAS Universidad de Cádiz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q131191806",
+      "name": "Facultad de Ciencias del Mar y Ambientales UCA",
+      "types": [
+        "Q180958"
+      ],
+      "score": 67
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias del Mar y Ambientales UCA (Q131191806) para las celdas que contienen \"FACULTAD DE CIENCIAS Universidad de Cádiz\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE CIENCIAS DEL MAR Y AMBIENTALES Universidad de Cádiz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q131191806",
+      "name": "Facultad de Ciencias del Mar y Ambientales UCA",
+      "types": [
+        "Q180958"
+      ],
+      "score": 83
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias del Mar y Ambientales UCA (Q131191806) para las celdas que contienen \"FACULTAD DE CIENCIAS DEL MAR Y AMBIENTALES Universidad de Cádiz\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE DERECHO Universidad de Cádiz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q131143840",
+      "name": "Facultad de Derecho de la Universidad de Cádiz",
+      "types": [
+        "Q180958"
+      ],
+      "score": 93
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Derecho de la Universidad de Cádiz (Q131143840) para las celdas que contienen \"FACULTAD DE DERECHO Universidad de Cádiz\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE CIENCIAS DE LA EDUCACIÓN Universidad de Cádiz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q130332679",
+      "name": "Facultad de Ciencias de la Educación",
+      "types": [
+        "Q180958"
+      ],
+      "score": 77
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias de la Educación (Q130332679) para las celdas que contienen \"FACULTAD DE CIENCIAS DE LA EDUCACIÓN Universidad de Cádiz\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE ENFERMERÍA Y FISIOTERAPIA Universidad de Cádiz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q131176586",
+      "name": "Facultad de Enfermería y Fisioterapia UCA",
+      "types": [
+        "Q180958"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Enfermería y Fisioterapia UCA (Q131176586) para las celdas que contienen \"FACULTAD DE ENFERMERÍA Y FISIOTERAPIA Universidad de Cádiz\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE CIENCIAS SOCIALES Y DE LA COMUNICACIÓN (JEREZ) Universidad de Cádiz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q131143403",
+      "name": "Facultad de Ciencias Sociales y de la comunicación (UCA)",
+      "types": [
+        "Q180958"
+      ],
+      "score": 81
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias Sociales y de la comunicación (UCA) (Q131143403) para las celdas que contienen \"FACULTAD DE CIENCIAS SOCIALES Y DE LA COMUNICACIÓN (JEREZ) Universidad de Cádiz\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "ESCUELA SUPERIOR DE INGENIERÍA Universidad de Cádiz",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5838902",
+      "name": "Escuela Superior de Ingeniería",
+      "types": [
+        "Q180958"
+      ],
+      "score": 87
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Escuela Superior de Ingeniería (Q5838902) para las celdas que contienen \"ESCUELA SUPERIOR DE INGENIERÍA Universidad de Cádiz\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE CIENCIAS DE LA EDUCACIÓN Universidad de Granada",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5854761",
+      "name": "Facultad de Ciencias de la Educación",
+      "types": [
+        "Q180958",
+        "Q7432532"
+      ],
+      "score": 89
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias de la Educación (Q5854761) para las celdas que contienen \"FACULTAD DE CIENCIAS DE LA EDUCACIÓN Universidad de Granada\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE FARMACIA Universidad de Granada",
+    "judgment": "matched",
+    "match": {
+      "id": "Q10989145",
+      "name": "Facultad de Farmacia",
+      "types": [
+        "Q180958",
+        "Q45400320",
+        "Q294422"
+      ],
+      "score": 63
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Farmacia (Q10989145) para las celdas que contienen \"FACULTAD DE FARMACIA Universidad de Granada\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE COMUNICACIÓN Y DOCUMENTACIÓN Universidad de Granada",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5854800",
+      "name": "Facultad de Comunicación y Documentación (Universidad de Granada)",
+      "types": [
+        "Q180958",
+        "Q11302565"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Comunicación y Documentación (Universidad de Granada) (Q5854800) para las celdas que contienen \"FACULTAD DE COMUNICACIÓN Y DOCUMENTACIÓN Universidad de Granada\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "ESCUELA DE INGENIERÍAS INDUSTRIALES Universidad de Málaga",
+    "judgment": "matched",
+    "match": {
+      "id": "Q132135183",
+      "name": "Escuela de Ingenierias Industriales",
+      "types": [
+        ""
+      ],
+      "score": 38
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Escuela de Ingenierias Industriales (Q132135183) para las celdas que contienen \"ESCUELA DE INGENIERÍAS INDUSTRIALES Universidad de Málaga\" en la columna wer"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "wer",
+    "similarValue": "FACULTAD DE COMUNICACIÓN Universidad de Sevilla",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5854755",
+      "name": "Facultad de Ciencias de la Comunicación (Universidad de Sevilla)",
+      "types": [
+        "Q180958"
+      ],
+      "score": 86
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Facultad de Ciencias de la Comunicación (Universidad de Sevilla) (Q5854755) para las celdas que contienen \"FACULTAD DE COMUNICACIÓN Universidad de Sevilla\" en la columna wer"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "wer",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_faculty",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna same_as_wikidata_faculty en el índice 4 basada en la columna wer usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "wer",
+    "description": "Eliminar columna wer"
+  }
+]

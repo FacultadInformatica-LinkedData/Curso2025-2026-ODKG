@@ -4,7 +4,7 @@
 @prefix gtfs:  <http://vocab.gtfs.org/terms#> .
 @prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix schema: <http://schema.org/> .
-@prefix dbr:   <http://dbpedia.org/resource/> .
+@prefix wd:    <https://www.wikidata.org/entity/> .
 @prefix ex:    <http://group06.linkeddata.es/ontology/madridbus/> .
 @prefix area:  <http://group06.linkeddata.es/resource/area/> .
 @prefix route: <http://group06.linkeddata.es/resource/route/> .
@@ -18,14 +18,14 @@
 @prefix shapepoint: <http://group06.linkeddata.es/resource/shapepoint/> .
 
 #################################################################
-# LOCAL AREA (linked to DBpedia)
+# LOCAL AREA (linked to Wikidata)
 #################################################################
 
-area:aranjuez a ex:LocalArea ;
-    rdfs:label "Aranjuez"@es ;
-    ex:areaCode "ARJ" ;
-    owl:sameAs dbr:Aranjuez ;
-    ex:containsStop stop:par_8_09568 , stop:par_8_09572 .
+area:par_8_09569 a ex:LocalArea ;
+    rdfs:label "olmo del Camino de la Estación"@es ;
+    ex:areaCode "Q54824016" ;
+    owl:sameAs wd:Q54824016 ;
+    ex:containsStop stop:par_8_09569.
 
 #################################################################
 # BUS ROUTE (from final dataset)
@@ -48,15 +48,15 @@ stop:par_8_09568 a ex:BusStop ;
     geo:lat "40.0345268"^^xsd:float ;
     geo:long "-3.6178372"^^xsd:float ;
     gtfs:wheelchairBoarding "2"^^xsd:integer ;
-    ex:locatedInArea area:aranjuez .
+    ex:locatedInArea area:par_8_09568 .
 
-stop:par_8_09572 a ex:BusStop ;
-    gtfs:code "09572" ;
-    rdfs:label "ABASTOS-FLORIDA"@es ;
-    geo:lat "40.0320511"^^xsd:float ;
-    geo:long "-3.6070321"^^xsd:float ;
+stop:par_8_09570 a ex:BusStop ;
+    gtfs:code "09570" ;
+    rdfs:label "ESCUADRA-POL.IND.PIRELLI"@es ;
+    geo:lat "40.0312000"^^xsd:float ;
+    geo:long "-3.6176314"^^xsd:float ;
     gtfs:wheelchairBoarding "2"^^xsd:integer ;
-    ex:locatedInArea area:aranjuez .
+    ex:locatedInArea area:par_8_09570 .
 
 #################################################################
 # TRIP (from final dataset)

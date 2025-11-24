@@ -1,0 +1,182 @@
+@prefix rr:   <http://www.w3.org/ns/r2rml#> .
+@prefix rml:  <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:   <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo:  <http://www.opengis.net/ont/geosparql#> .
+
+@prefix co:   <https://iamabsa.github.io/ontology/ChargingOntology#> .
+
+@base <https://iamabsa.github.io/resource/> .
+
+#######################################################################
+# TriplesMap: Charging Station
+#######################################################################
+
+<#TriplesMap_Station> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/resource/ChargingStation#{EVSEID}" ;
+    rr:class co:ChargingStation
+  ] ;
+
+  # Literals / attributes
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "DESIGNATION" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate co:evseId ;
+    rr:objectMap [ rml:reference "EVSEID" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate co:address ;
+    rr:objectMap [ rml:reference "ADDRESS" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate co:countryCode ;
+    rr:objectMap [ rml:reference "COUNTRYCODE" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate co:directPayment ;
+    rr:objectMap [ rml:reference "DIRECTPAYMENT" ; rr:datatype xsd:boolean ]
+  ] ;
+
+  # Link to District
+  rr:predicateObjectMap [
+    rr:predicate co:isInDistrict ;
+    rr:objectMap [
+      rr:template "https://iamabsa.github.io/resource/District#{CITY}-{BEZIRK}" ;
+      rr:termType rr:IRI
+    ]
+  ] ;
+
+  # GeoSPARQL link: station -> geometry node
+  rr:predicateObjectMap [
+    rr:predicate geo:hasGeometry ;
+    rr:objectMap [
+      rr:template "https://iamabsa.github.io/resource/Geometry#{EVSEID}" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+#######################################################################
+# TriplesMap: Geometry
+#######################################################################
+
+<#TriplesMap_Geometry> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/resource/Geometry#{EVSEID}" ;
+    rr:class geo:Geometry
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate geo:asWKT ;
+    rr:objectMap [
+      rml:reference "SHAPE" ;
+      rr:datatype geo:wktLiteral
+    ]
+  ] .
+
+#######################################################################
+# TriplesMap: Operator
+#######################################################################
+
+<#TriplesMap_Operator> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/resource/Operator#{OPERATORNAME}" ;
+    rr:class co:Operator
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "OPERATORNAME" ]
+  ] .
+
+#######################################################################
+# TriplesMap: District  (links to City)
+#######################################################################
+
+<#TriplesMap_District> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/resource/District#{CITY}-{BEZIRK}" ;
+    rr:class co:District
+  ] ;
+  
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "BEZIRK" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate co:districtCity ;
+    rr:objectMap [
+      rr:template "https://iamabsa.github.io/resource/City#{CITY}" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+#######################################################################
+# TriplesMap: City  (links to Country)
+#######################################################################
+
+<#TriplesMap_City> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/resource/City#{CITY}" ;
+    rr:class co:City
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "CITY" ]
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate co:isCityOf ;
+    rr:objectMap [
+      rr:template "https://iamabsa.github.io/resource/Country#{COUNTRYCODE}" ;
+      rr:termType rr:IRI
+    ]
+  ] .
+
+#######################################################################
+# TriplesMap: Country
+#######################################################################
+
+<#TriplesMap_Country> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "CSV/ELADESTELLEOGD-updated.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+
+  rr:subjectMap [
+    rr:template "https://iamabsa.github.io/resource/Country#{COUNTRYCODE}" ;
+    rr:class co:Country
+  ] ;
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ rml:reference "COUNTRYCODE" ]
+  ] .

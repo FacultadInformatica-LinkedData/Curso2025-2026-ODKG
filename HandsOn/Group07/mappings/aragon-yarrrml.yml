@@ -10,8 +10,8 @@ prefixes:
   ql: http://semweb.mmlab.be/ns/ql#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   vocab: http://example.org#
-  lude: https://spanishuniversities.data/ontology/lude#
-  id: https://spanishuniversities.data/id/lude/
+  lude: http://spanishuniversities.data.es/lude/ontology#
+  id: http://spanishuniversities.data.es/lude/resource/
   
 mappings:
   aragonUniversityUF:
@@ -40,7 +40,7 @@ mappings:
 
   aragonFacultyUF:
     sources:
-      - [Aragon-Faculty-20232024-updated.csv~csv]
+      - [Aragon_NotasCorte_20232024-Faculty-updated.csv~csv]
     s: id:Faculty/$(FacultyId)
     po:
       - [rdf:type, lude:Faculty]
@@ -72,7 +72,7 @@ mappings:
 
   aragonDegreeUD:
     sources:
-      - [Aragon-Degrees-20232024-updated.csv~csv]
+      - [Aragon_NotasCorte_20232024-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -83,7 +83,7 @@ mappings:
 
   aragonDegreeDK:
     sources:
-      - [Aragon-Degrees-20232024-updated.csv~csv]
+      - [Aragon_NotasCorte_20232024-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -103,7 +103,7 @@ mappings:
               
   aragonKnowledgeDK:
     sources:
-      - [ambit-otros.csv~csv]
+      - [ambit-updated.csv~csv]
     s: id:KnowledgeArea/$(id)
     po:
       - [rdf:type, lude:KnowledgeArea]
@@ -111,7 +111,7 @@ mappings:
       
   aragonDegreeDF:
     sources:
-      - [Aragon-Degrees-20232024-updated.csv~csv]
+      - [Aragon_NotasCorte_20232024-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -130,15 +130,15 @@ mappings:
               
   aragonFacultyDF:
     sources:
-      - [Aragon-Faculty-20232024-updated.csv~csv]
+      - [Aragon_NotasCorte_20232024-Faculty-updated.csv~csv]
     s: id:Faculty/$(FacultyId)
     po:
       - [rdf:type, lude:Faculty]
       - [rdfs:label,$(Faculty),xsd:string] 
 
-  aragonDegreeDK:
+  aragonDegreeDL:
     sources:
-      - [Aragon-Degrees-20232024-updated.csv~csv]
+      - [Aragon_NotasCorte_20232024-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -148,7 +148,7 @@ mappings:
       - [lude:cuffoffGrade,$(Cut Off Grade),xsd:float]
       - p: lude:hasAcademicLevel
         o:
-          mapping: aragonLevelDK
+          mapping: aragonLevelDL
           condition:
             function: equal
             parameters:
@@ -156,7 +156,7 @@ mappings:
               - [str2, $(AcademicLevelID)]
 
               
-  aragonLevelDK:
+  aragonLevelDL:
     sources:
       - [academic_level-updated.csv~csv]
     s: id:AcademicLevel/$(AcademicLevelID)

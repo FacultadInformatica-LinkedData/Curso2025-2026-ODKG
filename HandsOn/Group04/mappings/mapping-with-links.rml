@@ -1,0 +1,44 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xml: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/rml/CitiesTriplesMap>
+    a rml:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "zones-updated-with-links.csv" ;
+        rml:referenceFormulation ql:CSV
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://example.com/ontology/city/{id}" ;
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:id ;
+        rr:objectMap [ rml:reference "id" ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:name ;
+        rr:objectMap [ rml:reference "name" ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate schema:population ;
+        rr:objectMap [
+            rml:reference "population" ;
+            rr:datatype xml:int
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs ;
+        rr:objectMap [
+            rr:template "https://www.wikidata.org/entity/{wikidata_id}"
+        ]
+    ] .

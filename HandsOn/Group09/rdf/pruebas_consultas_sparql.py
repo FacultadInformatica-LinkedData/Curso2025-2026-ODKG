@@ -1,17 +1,22 @@
 from rdflib import Graph
 
 g = Graph()
-g.parse("C:/Users/paula/Desktop/Master/Primer_cuatri/Open Data and Knowledge Graphs/Curso2025-2026-ODKG/HandsOn/Group09/rdf/pedestrian-counting-system-sensor-locations-enriched-updated.ttl", format="ttl")
+g.parse("C:/Users/paula/Desktop/Master/Primer_cuatri/Open Data and Knowledge Graphs/Curso2025-2026-ODKG/HandsOn/Group09/rdf/microclimate-sensors-data-enriched-updated-with-links.ttl", format="ttl")
 
 q = """
-PREFIX wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX schema: <http://schema.org/>
 PREFIX us: <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
+PREFIX wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?location ?lat ?long
+SELECT ?loc ?lat ?long ?city
 WHERE {
-  ?location a us:Location ;
-            wgs84_pos:lat ?lat ;
-            wgs84_pos:long ?long .
+  ?loc a us:Location ;
+       wgs84_pos:lat ?lat ;
+       wgs84_pos:long ?long ;
+       schema:addressLocality ?city .
 }
 LIMIT 5
 """

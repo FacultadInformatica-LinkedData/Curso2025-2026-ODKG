@@ -1,6 +1,501 @@
-area_id,area_name,area_code,dbpedia_uri,area_lat,area_lon,description
-area_aranjuez,Aranjuez,ARJ,http://dbpedia.org/resource/Aranjuez,40.0333,-3.603,"Historic town south of Madrid, UNESCO World Heritage Site"
-area_pinto,Pinto,PIN,"http://dbpedia.org/resource/Pinto,_Madrid",40.2431,-3.6996,Municipality in the Community of Madrid
-area_valdemoro,Valdemoro,VAL,http://dbpedia.org/resource/Valdemoro,40.1919,-3.6739,Town in the southern area of the Community of Madrid
-area_leganes,Leganés,LEG,http://dbpedia.org/resource/Legan%C3%A9s,40.3267,-3.7636,City in the Community of Madrid
-area_getafe,Getafe,GET,http://dbpedia.org/resource/Getafe,40.3057,-3.7327,City in the south of the Community of Madrid
+stop_id,area_name,area_code
+par_8_06002,Moncloa,Q2449141
+par_8_06003,Monumento a las víctimas de la Aviación Militar Española,Q110747776
+par_8_06005,Biblioteca Municipal - Ricardo de la Vega,Q85696324
+par_8_06012,Parque Deportivo Puerta de Hierro,Q66607283
+par_8_06015,Ermita de Nuestra Señora del Buen Camino,Q110749205
+par_8_06026,Hostal Aravaca Garden,Q111111737
+par_8_06029,Capilla de Nuestra Señora de las Angustias (Colonia San José),Q132817711
+par_8_06032,Biblioteca Municipal - D. José de Vicente Muñoz,Q85699117
+par_8_06034,Torrelodones,Q23991207
+par_8_06036,Biblioteca Municipal - Miguel Hernández,Q85696194
+par_8_06037,Biblioteca de la Universidad Antonio de Nebrija - Biblioteca del Campus de La Berzosa,Q85696348
+par_8_06038,Biblioteca de la Universidad Antonio de Nebrija - Biblioteca del Campus de La Berzosa,Q85696348
+par_8_06039,La Berzosa,Q5962205
+par_8_06040,La Berzosa,Q5962205
+par_8_06041,La Berzosa,Q5962205
+par_8_06042,La Berzosa,Q5962205
+par_8_06043,La Berzosa,Q5962205
+par_8_06044,plaza de toros de Hoyo de Manzanares,Q101998684
+par_8_06045,Hoyo de Manzanares,Q24012733
+par_8_06046,Charcas de Los Camorchos,Q107737967
+par_8_06047,Biblioteca de la Academia de Ingenieros,Q85696343
+par_8_06048,plaza de toros de Hoyo de Manzanares,Q101998684
+par_8_06049,La Berzosa,Q5962205
+par_8_06050,La Berzosa,Q5962205
+par_8_06051,La Berzosa,Q5962205
+par_8_06052,La Berzosa,Q5962205
+par_8_06053,La Berzosa,Q5962205
+par_8_06054,Biblioteca de la Universidad Antonio de Nebrija - Biblioteca del Campus de La Berzosa,Q85696348
+par_8_06055,Biblioteca de la Universidad Antonio de Nebrija - Biblioteca del Campus de La Berzosa,Q85696348
+par_8_06057,Arroyo de Peregrinos,Q23993765
+par_8_06058,Biblioteca Municipal - Casa de Cultura,Q85699111
+par_8_06060,Arroyo de Peregrinos,Q23993765
+par_8_06061,campus de la Universidad Nebrija en Hoyo de Manzanares,Q28736348
+par_8_06062,puente de la Alcanzorla,Q6091482
+par_8_06063,puente de la Alcanzorla,Q6091482
+par_8_06064,puente de la Navata,Q115656507
+par_8_06065,estación de Galapagar-La Navata,Q2085120
+par_8_06066,La Navata,Q4251716
+par_8_06067,La Navata,Q4251716
+par_8_06068,La Navata,Q4251716
+par_8_06069,iglesia de la Asunción,Q5117764
+par_8_06070,Galapagar,Q1615953
+par_8_06071,Biblioteca Municipal - Casa de Cultura,Q85699111
+par_8_06072,M-519,Q56260935
+par_8_06073,Galapagar,Q1615953
+par_8_06074,Biblioteca Municipal - Ricardo León,Q85696293
+par_8_06075,Cuenca del Guadarrama,Q2565642
+par_8_06077,Galapagar,Q1615953
+par_8_06078,M-519,Q56260935
+par_8_06079,Biblioteca Municipal - Casa de Cultura,Q85699111
+par_8_06082,La Navata,Q4251716
+par_8_06083,La Navata,Q4251716
+par_8_06084,La Navata,Q4251716
+par_8_06085,estación de Galapagar-La Navata,Q2085120
+par_8_06086,puente de la Navata,Q115656507
+par_8_06087,puente de la Navata,Q115656507
+par_8_06088,puente de la Alcanzorla,Q6091482
+par_8_06089,campus de la Universidad Nebrija en Hoyo de Manzanares,Q28736348
+par_8_06090,Arroyo de Peregrinos,Q23993765
+par_8_06091,Arroyo de Peregrinos,Q23993765
+par_8_06092,Biblioteca Municipal - Casa de Cultura,Q85699111
+par_8_06093,Atalaya de Torrelodones,Q11680036
+par_8_06094,Torrelodones,Q23991207
+par_8_06096,casa consistorial de Torrelodones,Q126830231
+par_8_06098,apeadero de Las Rozas,Q1975280
+par_8_06103,apeadero de Las Rozas,Q1975280
+par_8_06104,puente Puerta de Las Rozas,Q6091256
+par_8_06105,puente Puerta de Las Rozas,Q6091256
+par_8_06106,Las Rozas The Style Outlets,Q129035294
+par_8_06107,Parque Central de Bomberos de Las Rozas,Q113299553
+par_8_06108,Estación de Las Matas-Clasificación,Q96386476
+par_8_06109,Biblioteca del Centro Universitario de Tecnología y Arte Digital - U-TAD,Q85696356
+par_8_06111,Exe Gran Hotel Almenar,Q111409069
+par_8_06113,Exe Gran Hotel Almenar,Q111409069
+par_8_06114,estación de Las Matas,Q8840909
+par_8_06115,Hotel Plaza Las Matas,Q111872299
+par_8_06117,Biblioteca Municipal - Las Matas Marga Gil Roësset,Q85696360
+par_8_06118,Las Matas,Q5970566
+par_8_06119,estación de Las Matas,Q8840909
+par_8_06120,estación de Las Matas,Q8840909
+par_8_06121,Exe Gran Hotel Almenar,Q111409069
+par_8_06123,estación de Los Peñascales,Q92101032
+par_8_06125,puente Puerta de las Matas,Q52636026
+par_8_06126,Biblioteca del Centro Universitario de Tecnología y Arte Digital - U-TAD,Q85696356
+par_8_06127,Estación de Las Matas-Clasificación,Q96386476
+par_8_06128,Las Rozas The Style Outlets,Q129035294
+par_8_06129,Dehesa de Navalcarbón,Q5801461
+par_8_06130,puente Puerta de Las Rozas,Q6091256
+par_8_06131,puente Puerta de Las Rozas,Q6091256
+par_8_06132,apeadero de Las Rozas,Q1975280
+par_8_06133,apeadero de Las Rozas,Q1975280
+par_8_06136,Biblioteca Municipal - León Tolstoi,Q85696363
+par_8_06137,Biblioteca Municipal - León Tolstoi,Q85696363
+par_8_06138,parque París,Q24024722
+par_8_06140,parque París,Q24024722
+par_8_06141,parque París,Q24024722
+par_8_06142,parque París,Q24024722
+par_8_06145,Las Rozas de Madrid,Q592747
+par_8_06146,apeadero de Las Rozas,Q1975280
+par_8_06147,Biblioteca Municipal - León Tolstoi,Q85696363
+par_8_06149,Las Rozas de Madrid,Q24012694
+par_8_06150,Cumbre,Q115502673
+par_8_06152,embalse de Molino de la Hoz,Q51164219
+par_8_06153,Puerto de Galapagar,Q6092281
+par_8_06154,Galapagar,Q1615953
+par_8_06155,Galapagar,Q1615953
+par_8_06156,Ayuntamiento de Galapagar,Q60051754
+par_8_06157,Ayuntamiento de Galapagar,Q60051754
+par_8_06158,Biblioteca Municipal - Ricardo León,Q85696293
+par_8_06159,M-852,Q56380987
+par_8_06160,Puerto de Galapagar,Q6092281
+par_8_06161,embalse de Molino de la Hoz,Q51164219
+par_8_06163,Cumbre,Q115502673
+par_8_06164,Las Rozas de Madrid,Q24012694
+par_8_06165,Estación Sur de Autobuses,Q16564381
+par_8_06166,Biblioteca Municipal - León Tolstoi,Q85696363
+par_8_06170,Biblioteca Municipal - León Tolstoi,Q85696363
+par_8_06173,iglesia de San Miguel Arcángel,Q52635201
+par_8_06174,Biblioteca Municipal - León Tolstoi,Q85696363
+par_8_06175,Biblioteca Municipal - León Tolstoi,Q85696363
+par_8_06176,Majadahonda,Q24012728
+par_8_06177,Casa de Cultura Carmen Conde,Q16544067
+par_8_06178,Hostal Doña Isabel,Q111117109
+par_8_06179,Villafranca del Castillo,Q9094006
+par_8_06180,Villafranca del Castillo,Q9094006
+par_8_06181,Villafranca del Castillo,Q9094006
+par_8_06182,Biblioteca de la Universidad Camilo José Cela,Q85699174
+par_8_06183,Biblioteca de la Universidad Camilo José Cela,Q85699174
+par_8_06184,iglesia de Santa María de la Soledad Torres Acosta (Villafranca del Castillo),Q110136489
+par_8_06185,Mocha,Q115506201
+par_8_06186,Mocha,Q115506201
+par_8_06187,iglesia de Santa María de la Soledad Torres Acosta (Villafranca del Castillo),Q110136489
+par_8_06188,iglesia de Santa María de la Soledad Torres Acosta (Villafranca del Castillo),Q110136489
+par_8_06189,Biblioteca de la Universidad Camilo José Cela,Q85699174
+par_8_06192,Villafranca del Castillo,Q9094006
+par_8_06193,Parque del Sol,Q31919438
+par_8_06196,Villanueva del Pardillo,Q24012653
+par_8_06197,Villanueva de la Cañada,Q24012654
+par_8_06198,Villanueva del Pardillo,Q24012653
+par_8_06199,Parque Rosalía de Castro,Q31919506
+par_8_06200,Parque Rosalía de Castro,Q31919506
+par_8_06201,Parque del Sol,Q31919438
+par_8_06203,Hostal Doña Isabel,Q111117109
+par_8_06205,Majadahonda,Q24012728
+par_8_06206,estación de Los Peñascales,Q92101032
+par_8_06208,iglesia de San Miguel Arcángel,Q52635201
+par_8_06211,Majadahonda,Q24012728
+par_8_06212,Majadahonda,Q24012728
+par_8_06215,Majadahonda,Q24012728
+par_8_06216,Majadahonda,Q24012728
+par_8_06218,apeadero de Majadahonda,Q2263478
+par_8_06225,calle de Gerda Taro,Q30339411
+par_8_06226,El Plantío,Q3773742
+par_8_06227,El Plantío,Q3773742
+par_8_06228,Hostal Aravaca Garden,Q111111737
+par_8_06229,Hostal Aravaca Garden,Q111111737
+par_8_06230,apeadero de Majadahonda,Q2263478
+par_8_06232,MEC,Q33122139
+par_8_06233,Biblioteca Municipal - Francisco Umbral,Q85698734
+par_8_06234,Biblioteca Municipal - Francisco Umbral,Q85698734
+par_8_06235,Auditorio Alfredo Kraus,Q5711411
+par_8_06236,Majadahonda,Q24012728
+par_8_06237,Majadahonda,Q24012728
+par_8_06238,iglesia de San Miguel Arcángel,Q52635201
+par_8_06240,Hostal Doña Isabel,Q111117109
+par_8_06242,Hostal Doña Isabel,Q111117109
+par_8_06244,Batalla de Majadahonda,Q4871641
+par_8_06245,"Ermita del Santísimo Cristo de los Remedios, Majadahonda",Q136461362
+par_8_06248,Biblioteca Municipal - León Tolstoi,Q85696363
+par_8_06249,Majadahonda,Q24012728
+par_8_06250,Majadahonda,Q24012728
+par_8_06251,Auditorio Alfredo Kraus,Q5711411
+par_8_06252,Biblioteca Municipal - Francisco Umbral,Q85698734
+par_8_06253,Biblioteca Municipal - Francisco Umbral,Q85698734
+par_8_06254,MEC,Q33122139
+par_8_06255,calle de Gerda Taro,Q30339411
+par_8_06256,apeadero de Majadahonda,Q2263478
+par_8_06257,Hostal Aravaca Garden,Q111111737
+par_8_06258,Colegio Japonés de Madrid,Q16258633
+par_8_06259,Colegio Japonés de Madrid,Q16258633
+par_8_06260,El Plantío,Q3773742
+par_8_06261,calle de Gerda Taro,Q30339411
+par_8_06262,Barranco del Rufo,Q24021402
+par_8_06268,Ermita de Nuestra Señora del Buen Camino,Q110749205
+par_8_06272,Cruceiro de la Ermita de Nuestra Señora del Buen Camino,Q110746608
+par_8_06275,Capilla de Nuestra Señora de las Angustias (Colonia San José),Q132817711
+par_8_06276,Capilla de Nuestra Señora de las Angustias (Colonia San José),Q132817711
+par_8_06277,estación de Pozuelo,Q5846969
+par_8_06278,Arroyo de las Cárcabas,Q24021392
+par_8_06279,Arroyo de Bularas,Q24021386
+par_8_06280,Cerro Perdigones Park,Q24023148
+par_8_06281,casa consistorial de Pozuelo de Alarcón,Q126830182
+par_8_06283,Unidad de Investigación en Salud Digital,Q108737740
+par_8_06284,estación de Pozuelo,Q5846969
+par_8_06285,"iglesia de Nuestra Señora del Carmen, Pozuelo de Alarcón",Q48876010
+par_8_06286,ESIC Universidad,Q20977975
+par_8_06287,casa consistorial de Pozuelo de Alarcón,Q126830182
+par_8_06289,casa consistorial de Pozuelo de Alarcón,Q126830182
+par_8_06291,Arroyo de Bularas,Q24021386
+par_8_06292,Biblioteca de los Misioneros Oblatos de María Inmaculada,Q85698899
+par_8_06293,Arroyo de las Cárcabas,Q24021392
+par_8_06294,ESIC Universidad,Q20977975
+par_8_06295,"iglesia de Nuestra Señora del Carmen, Pozuelo de Alarcón",Q48876010
+par_8_06296,estación de Pozuelo,Q5846969
+par_8_06297,estación de Pozuelo,Q5846969
+par_8_06298,Capilla de Nuestra Señora de las Angustias (Colonia San José),Q132817711
+par_8_06299,Capilla de Nuestra Señora de las Angustias (Colonia San José),Q132817711
+par_8_06301,sede de la Audiencia Nacional en San Fernando de Henares,Q83057064
+par_8_06347,Torreón de Pinto,Q9089137
+par_8_06348,Cine Palacio,Q26186444
+par_8_06349,Biblioteca Municipal - Volturno,Q85698926
+par_8_06352,Aravaca,Q3314682
+par_8_06354,estación de Villalba,Q931922
+par_8_06368,Parque de bomberos de Collado Villalba,Q113372086
+par_8_06391,Biblioteca de la Universidad a Distancia de Madrid (UDIMA) - Biblioteca Hipatia,Q85696189
+par_8_06405,estación de Los Negrales,Q5846633
+par_8_06413,plaza de toros de Las Rozas,Q101998685
+par_8_06414,Biblioteca del Centro Asociado de la UNED de Madrid - Centro de Zona de Las Rozas,Q85696353
+par_8_06415,Ciudad del Fútbol de Las Rozas,Q1094390
+par_8_06416,Lazarejo 2000,Q115505136
+par_8_06417,Lazarejo 2000,Q115505136
+par_8_06418,Las Rozas de Madrid,Q24012694
+par_8_06419,Las Rozas de Madrid,Q24012694
+par_8_06420,Centro Universitario de Tecnología y Arte Digital,Q30297171
+par_8_06421,Centro Universitario de Tecnología y Arte Digital,Q30297171
+par_8_06424,Hostal Doña Isabel,Q111117109
+par_8_06429,Biblioteca Municipal - Francisco Umbral,Q85698734
+par_8_06444,Pozuelo de Alarcón,Q24012704
+par_8_06445,casa consistorial de Pozuelo de Alarcón,Q126830182
+par_8_06446,M-508,Q56260932
+par_8_06447,M-508,Q56260932
+par_8_06457,Biblioteca Municipal - Rosalía de Castro,Q85698923
+par_8_06458,Biblioteca Municipal - Rosalía de Castro,Q85698923
+par_8_06466,Observatorio Pozuelo,Q115250729
+par_8_06468,Observatorio Pozuelo,Q115250729
+par_8_06475,Parque Fuente de la Salud,Q24023147
+par_8_06476,Unidad de Investigación en Salud Digital,Q108737740
+par_8_06478,Pozuelo de Alarcón,Q24012704
+par_8_06479,Unidad de Investigación en Salud Digital,Q108737740
+par_8_06480,Primera batalla de la carretera de La Coruña,Q2890637
+par_8_06496,Estación de Berna,Q3638652
+par_8_06507,Instituto de Estudios Bursátiles,Q5917314
+par_8_06508,Cerro de Valdecaondi,Q24021382
+par_8_06510,Zielo Shopping Pozuelo,Q5687741
+par_8_06511,Instituto de Estudios Bursátiles,Q5917314
+par_8_06513,plaza de toros de Las Rozas,Q101998685
+par_8_06514,plaza de toros de Las Rozas,Q101998685
+par_8_06515,iglesia de Nuestra Señora del Camino,Q26879840
+par_8_06516,Biblioteca Municipal - Miguel Hernández,Q85696194
+par_8_06518,Hostal Doña Isabel,Q111117109
+par_8_06530,Biblioteca del Centro Penitenciario de Madrid II,Q85695986
+par_8_06531,Biblioteca del Centro Penitenciario de Madrid II,Q85695986
+par_8_06536,casa consistorial de Meco,Q126830144
+par_8_06537,casa consistorial de Meco,Q126830144
+par_8_06547,Cerro Perdigones Park,Q24023148
+par_8_06549,Cerro Perdigones Park,Q24023148
+par_8_06563,Las bodas de Sálvame,Q5803061
+par_8_06565,estación de Diputación,Q129571482
+par_8_06566,Colegio de San Fernando,Q62933868
+par_8_06567,Hospital Dr. R. Lafora,Q87762021
+par_8_06568,Hospital Cantoblanco,Q87762013
+par_8_06569,Instituto IMDEA Alimentación,Q30274457
+par_8_06570,Residencia Universitaria Erasmo,Q111111732
+par_8_06571,Colección museográfica de Material Pesado,Q30751566
+par_8_06572,Biblioteca de la Universidad Autónoma de Madrid - Biblioteca de Ciencias Fernando González Bernáldez,Q85696840
+par_8_06573,Tres Cantos,Q115510827
+par_8_06574,Instituto de Micro y Nanotecnología,Q30266894
+par_8_06575,Soto de Viñuelas,Q6132665
+par_8_06576,Instituto de Micro y Nanotecnología,Q30266894
+par_8_06625,Biblioteca Municipal - Miguel de Cervantes,Q85696214
+par_8_06627,Biblioteca Municipal - Miguel de Cervantes,Q85696214
+par_8_06635,La Granja,Q8779955
+par_8_06636,In Vitro Testing Industrial Platform,Q30257028
+par_8_06637,In Vitro Testing Industrial Platform,Q30257028
+par_8_06638,Centro de Humanización de la Salud,Q107313510
+par_8_06639,Centro de Humanización de la Salud,Q107313510
+par_8_06640,Centro San Camilo,Q107313605
+par_8_06641,Centro San Camilo,Q107313605
+par_8_06642,Biblioteca de la comandancia de la Guardia Civil de Tres Cantos,Q85699123
+par_8_06643,Biblioteca de la comandancia de la Guardia Civil de Tres Cantos,Q85699123
+par_8_06644,Chicharronian 3C Observatory,Q115633545
+par_8_06647,Centro Español de Metrología,Q30284579
+par_8_06648,Biblioteca Municipal - Lope de Vega,Q5727797
+par_8_06649,Biblioteca Municipal - Lope de Vega,Q5727797
+par_8_06650,Biblioteca Municipal - Lope de Vega,Q5727797
+par_8_06651,Biblioteca Municipal - Lope de Vega,Q5727797
+par_8_06652,Biblioteca Municipal - Lope de Vega,Q5727797
+par_8_06653,Biblioteca Municipal - Lope de Vega,Q5727797
+par_8_06654,Tres Cantos,Q24012644
+par_8_06655,Tres Cantos,Q24012644
+par_8_06656,Recinto Ferial de Tres Cantos,Q115122647
+par_8_06657,Recinto Ferial de Tres Cantos,Q115122647
+par_8_06658,In Vitro Testing Industrial Platform,Q30257028
+par_8_06660,Biblioteca Municipal Fundación Caja Madrid,Q85699126
+par_8_06661,Biblioteca Municipal Fundación Caja Madrid,Q85699126
+par_8_06664,Colección museográfica de Material Pesado,Q30751566
+par_8_06665,Residencia Universitaria Erasmo,Q111111732
+par_8_06666,Hospital Hestia Madrid,Q87762046
+par_8_06667,"Biblioteca y Centro de Documentación en Salud Mental del Hospital Dr. R. Lafora,",Q85698014
+par_8_06669,Colegio de San Fernando,Q62933868
+par_8_06672,Ermita de Valverde,Q18173163
+par_8_06673,IECISA Informática El Corte Inglés,Q48782317
+par_8_06680,Ermita de San Isidro (Villanueva de la Cañada),Q110147960
+par_8_06681,La Granja,Q8779955
+par_8_06682,Instituto Europeo de Posgrado,Q24938079
+par_8_06684,Barrio del Soto,Q5721116
+par_8_06686,NH Madrid Las Tablas,Q111389675
+par_8_06687,iglesia de San Pedro Mártir,Q26834156
+par_8_06688,MB One,Q63959577
+par_8_06689,Colegio Suizo de Madrid,Q25064035
+par_8_06690,Amura Alcobendas,Q111409068
+par_8_06691,Menina de Alcobendas,Q52637345
+par_8_06692,Museo Bonsái Luis Vallejo,Q22127099
+par_8_06693,San Sebastián de los Reyes,Q484717
+par_8_06694,San Sebastián de los Reyes The Style Outlets,Q129030236
+par_8_06695,San Sebastián de los Reyes The Style Outlets,Q129030236
+par_8_06697,Fuente del Fresno,Q20021411
+par_8_06698,Desert City,Q48781865
+par_8_06700,1980 Spanish Grand Prix,Q2561109
+par_8_06701,Circuito del Jarama,Q172897
+par_8_06703,Arroyo de la Fresnera,Q24000928
+par_8_06704,casa consistorial de San Agustín del Guadalix,Q126830203
+par_8_06705,casa consistorial de San Agustín del Guadalix,Q126830203
+par_8_06706,Carrera y Carrera,Q18285689
+par_8_06707,Arroyo de la Fresnera,Q24000928
+par_8_06709,Circuito del Jarama,Q172897
+par_8_06710,Circuito del Jarama,Q172897
+par_8_06711,Circuito del Jarama,Q172897
+par_8_06712,Salomón,Q115509177
+par_8_06713,Salomón,Q115509177
+par_8_06714,Salomón,Q115509177
+par_8_06715,Salomón,Q115509177
+par_8_06716,Arroyo de la Fresnera,Q24000928
+par_8_06717,Circuito del Jarama,Q172897
+par_8_06718,Circuito del Jarama,Q172897
+par_8_06719,Circuito del Jarama,Q172897
+par_8_06720,1980 Spanish Grand Prix,Q2561109
+par_8_06722,Desert City,Q48781865
+par_8_06723,Fuente del Fresno,Q20021411
+par_8_06724,Fuente del Fresno,Q20021411
+par_8_06725,Fuente del Fresno,Q20021411
+par_8_06726,Fuente del Fresno,Q20021411
+par_8_06727,Fuente del Fresno,Q20021411
+par_8_06728,Fuente del Fresno,Q20021411
+par_8_06729,Fuente del Fresno,Q20021411
+par_8_06730,Fuente del Fresno,Q20021411
+par_8_06731,Fuente del Fresno,Q20021411
+par_8_06732,Fuente del Fresno,Q20021411
+par_8_06733,Fuente del Fresno,Q20021411
+par_8_06734,Fuente del Fresno,Q20021411
+par_8_06735,Fuente del Fresno,Q20021411
+par_8_06736,Arroyo de Paeque,Q23994209
+par_8_06737,M-106,Q5988059
+par_8_06738,Cobeña,Q659582
+par_8_06739,Arroyo de la Cerrada,Q24002019
+par_8_06740,Algete,Q472604
+par_8_06741,iglesia de la Asunción de Nuestra Señora,Q5117768
+par_8_06743,Biblioteca Municipal de Algete - Miguel de Cervantes,Q85696087
+par_8_06744,Algete,Q472604
+par_8_06745,Arroyo de la Cerrada,Q24002019
+par_8_06746,M-106,Q5988059
+par_8_06747,Arroyo de Paeque,Q23994209
+par_8_06749,San Sebastián de los Reyes The Style Outlets,Q129030236
+par_8_06750,San Sebastián de los Reyes The Style Outlets,Q129030236
+par_8_06751,San Sebastián de los Reyes,Q484717
+par_8_06752,Museo Bonsái Luis Vallejo,Q22127099
+par_8_06753,Ermita de San Isidro (Villanueva de la Cañada),Q110147960
+par_8_06755,Alcobendas,Q24012785
+par_8_06756,Marqués de la Valdavia,Q3849824
+par_8_06757,Biblioteca de los Laboratorios Lilly,Q85696037
+par_8_06758,Parque de Cataluña,Q31919335
+par_8_06759,Mediateca Municipal - Pablo Iglesias,Q85696054
+par_8_06761,Biblioteca de los Laboratorios Lilly,Q85696037
+par_8_06762,Ayuntamiento de Alcobendas,Q46358256
+par_8_06763,Ayuntamiento de Alcobendas,Q46358256
+par_8_06766,Mediateca Municipal - Pablo Iglesias,Q85696054
+par_8_06767,Parque de Cataluña,Q31919335
+par_8_06768,Marqués de la Valdavia,Q3849824
+par_8_06769,Estación de Alcobendas-San Sebastián de los Reyes,Q1882520
+par_8_06770,Mediateca Municipal - Pablo Iglesias,Q85696054
+par_8_06771,Altos de Alcobendas,Q115499151
+par_8_06772,Altos de Alcobendas,Q115499151
+par_8_06773,Mediateca Municipal - Pablo Iglesias,Q85696054
+par_8_06777,Liceo Francés Internacional Molière de Madrid,Q25057863
+par_8_06778,Estación de Alcobendas-San Sebastián de los Reyes,Q1882520
+par_8_06780,Mediateca Municipal - Centro de Arte,Q85696047
+par_8_06782,Biblioteca Municipal - Plaza de La Iglesia,Q85699047
+par_8_06787,Biblioteca Municipal - Plaza de La Iglesia,Q85699047
+par_8_06788,Biblioteca Municipal - Plaza de La Iglesia,Q85699047
+par_8_06790,Biblioteca Municipal - Plaza de La Iglesia,Q85699047
+par_8_06791,Estación de Alcobendas-San Sebastián de los Reyes,Q1882520
+par_8_06792,Estación de Alcobendas-San Sebastián de los Reyes,Q1882520
+par_8_06794,Biblioteca Municipal Marcos Ana,Q85699053
+par_8_06795,Biblioteca Municipal Marcos Ana,Q85699053
+par_8_06796,Biblioteca Municipal Marcos Ana,Q85699053
+par_8_06797,Biblioteca Municipal Marcos Ana,Q85699053
+par_8_06803,La Granja,Q8779955
+par_8_06804,Baunatal,Q3636954
+par_8_06805,San Sebastián de los Reyes,Q24012689
+par_8_06806,San Sebastián de los Reyes,Q24012689
+par_8_06807,Dehesa Boyal de San Sebastián de los Reyes,Q5801448
+par_8_06808,Colegio Suizo de Madrid,Q25064035
+par_8_06809,Instituto Europeo de Posgrado,Q24938079
+par_8_06810,Instituto Europeo de Posgrado,Q24938079
+par_8_06811,Campo de rugby Las Terrazas,Q281841
+par_8_06812,Campo de rugby Las Terrazas,Q281841
+par_8_06813,Runnymede College,Q7380072
+par_8_06814,Campo de rugby Las Terrazas,Q281841
+par_8_06815,International College Spain,Q17073922
+par_8_06817,Colegio Suizo de Madrid,Q25064035
+par_8_06818,Colegio Suizo de Madrid,Q25064035
+par_8_06819,Instituto Europeo de Posgrado,Q24938079
+par_8_06821,Runnymede College,Q7380072
+par_8_06823,Centro de Estudios Ibn Gabirol - Colegio Estrella Toledano,Q136556215
+par_8_06825,Centro de Estudios Ibn Gabirol - Colegio Estrella Toledano,Q136556215
+par_8_06827,Centro de Estudios Ibn Gabirol - Colegio Estrella Toledano,Q136556215
+par_8_06829,Eurostars Madrid Congress,Q111389676
+par_8_06831,Red Eléctrica de España,Q1551220
+par_8_06832,Red Eléctrica de España,Q1551220
+par_8_06836,Biblioteca de los Laboratorios Lilly,Q85696037
+par_8_06838,Eurostars Madrid Congress,Q111389676
+par_8_06839,Colegio Suizo de Madrid,Q25064035
+par_8_06840,Eurostars Madrid Congress,Q111389676
+par_8_06841,Eurostars Madrid Congress,Q111389676
+par_8_06842,Fenwick Iribarren Architects,Q111663169
+par_8_06843,La Granja,Q8779955
+par_8_06859,Cerro Perdigones Park,Q24023148
+par_8_06860,Iglesia de Santa María de Caná,Q26879539
+par_8_06861,Fenwick Iribarren Architects,Q111663169
+par_8_06862,International College Spain,Q17073922
+par_8_06863,Colegio Suizo de Madrid,Q25064035
+par_8_06864,MB One,Q63959577
+par_8_06865,Anillo Verde Ciclista,Q24036428
+par_8_06878,Las Villas de Nuevo Baztán,Q5561427
+par_8_06879,Cotos,Q115502301
+par_8_06880,Cotos,Q115502301
+par_8_06881,Nuevo Baztán,Q921352
+par_8_06882,Pozuelo de Alarcón,Q24012704
+par_8_06883,Pozuelo de Alarcón,Q24012704
+par_8_06884,Estación de Bélgica,Q3647031
+par_8_06885,Mediateca Municipal - Pablo Iglesias,Q85696054
+par_8_06888,Biblioteca Municipal Central - Federico García Lorca,Q85699092
+par_8_06889,Biblioteca Municipal Central - Federico García Lorca,Q85699092
+par_8_06890,Parque de Las Veredillas,Q24021201
+par_8_06891,Biblioteca Municipal Central - Federico García Lorca,Q85699092
+par_8_06892,Parque de Las Veredillas,Q24021201
+par_8_06893,Parque de Las Veredillas,Q24021201
+par_8_06894,Parque de Las Veredillas,Q24021201
+par_8_06895,Agua Park,Q24023286
+par_8_06896,Agua Park,Q24023286
+par_8_06897,Biblioteca Municipal - Gabriel Celaya,Q85699090
+par_8_06898,Biblioteca Municipal - Gabriel Celaya,Q85699090
+par_8_06899,Biblioteca Municipal - Gabriel Celaya,Q85699090
+par_8_06900,Biblioteca Municipal - Gabriel Celaya,Q85699090
+par_8_06901,La Casa Grande,Q5962737
+par_8_06902,La Casa Grande,Q5962737
+par_8_06903,La Casa Grande,Q5962737
+par_8_06904,La Casa Grande,Q5962737
+par_8_06906,sede de la Audiencia Nacional en San Fernando de Henares,Q83057064
+par_8_06907,sede de la Audiencia Nacional en San Fernando de Henares,Q83057064
+par_8_06908,Hostal Plaza Mayor,Q112012021
+par_8_06909,Hostal Plaza Mayor,Q112012021
+par_8_06912,Museo de la Ciudad de Torrejón de Ardoz,Q6034222
+par_8_06913,Museo de la Ciudad de Torrejón de Ardoz,Q6034222
+par_8_06914,Sala de Lectura del Parque y Centro de Mantenimiento de Vehículos de Rueda nº 1 (PCMVR 1),Q85699095
+par_8_06915,plaza de toros de Torrejón de Ardoz,Q101998863
+par_8_06916,Torrejón de Ardoz,Q24012681
+par_8_06918,Torrejón de Ardoz,Q24012681
+par_8_06919,"La Caja del Arte, Torrejón de Ardoz",Q52379425
+par_8_06920,"La Caja del Arte, Torrejón de Ardoz",Q52379425
+par_8_06921,"La Caja del Arte, Torrejón de Ardoz",Q52379425
+par_8_06922,"La Caja del Arte, Torrejón de Ardoz",Q52379425
+par_8_06923,"La Caja del Arte, Torrejón de Ardoz",Q52379425
+par_8_06927,Arroyo de Pelayo,Q23993678
+par_8_06929,Parque Europa (Torrejón de Ardoz),Q6062179
+par_8_06930,Parque Europa (Torrejón de Ardoz),Q6062179
+par_8_06931,Biblioteca Municipal Juvenil - La Isla Misteriosa,Q85699093
+par_8_06932,Biblioteca Municipal Juvenil - La Isla Misteriosa,Q85699093
+par_8_06935,Biblioteca Municipal Juvenil - La Isla Misteriosa,Q85699093
+par_8_06936,Biblioteca Municipal Juvenil - La Isla Misteriosa,Q85699093
+par_8_06937,Biblioteca Municipal Juvenil - La Isla Misteriosa,Q85699093
+par_8_06938,Biblioteca Municipal Juvenil - La Isla Misteriosa,Q85699093
+par_8_06939,Avenida de la Constitución,Q5693674
+par_8_06940,Avenida de la Constitución,Q5693674
+par_8_06941,Biblioteca Municipal Central - Federico García Lorca,Q85699092
+par_8_06942,Avenida de la Constitución,Q5693674
+par_8_06943,Biblioteca Municipal - Enrique Tierno Galván,Q85699088
+par_8_06944,Biblioteca Municipal - Enrique Tierno Galván,Q85699088
+par_8_06946,Museo de la Ciudad de Torrejón de Ardoz,Q6034222
+par_8_06948,Paseo de la Estación,Q56713687
+par_8_06949,Central Eléctrica Complutense,Q112081080
+par_8_06950,Central Eléctrica Complutense,Q112081080
+par_8_06952,Instituto de Educación Secundaria Antonio Machado,Q111434661
+par_8_06953,Aeródromo del Campo del Ángel,Q66386462
+par_8_06954,Aeródromo del Campo del Ángel,Q66386462
+par_8_06960,Aeródromo del Campo del Ángel,Q66386462
+par_8_06961,Aeródromo del Campo del Ángel,Q66386462
+par_8_06964,Biblioteca Pública Municipal - Rafael Alberti. Distrito II,Q85696020
+par_8_06965,Monumento a Manuel Azaña en Alcalá de Henares,Q81222478
+par_8_06967,Monumento a Manuel Azaña en Alcalá de Henares,Q81222478

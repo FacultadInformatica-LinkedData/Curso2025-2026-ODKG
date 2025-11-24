@@ -50,3 +50,27 @@ WHERE {
 }
 GROUP BY ?station
 ORDER BY DESC(?numViajes)
+
+
+###
+##  WikiData Querys
+###
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX ex: <http://example.org/ns#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+SELECT * WHERE {
+
+  ?address a ex:Address ;
+    owl:sameAs ?wiki
+    
+    SERVICE <https://query.wikidata.org/sparql> {
+        ?wiki wdt:P31 wd:Q79007 ;
+         wdt:P18 ?photo ;
+         wdt:P625 ?coordenates .
+    }
+
+}

@@ -1,0 +1,87 @@
+# SPARQL Queries for Madrid Bus Network WITH Wikidata Links
+# Group 06 — GTFS Madrid (with Wikidata links)
+# Validation queries for external links (owl:sameAs)
+
+PREFIX ex:   <http://group06.linkeddata.es/ontology/madridbus/>
+PREFIX res:  <http://group06.linkeddata.es/resource/>
+PREFIX gtfs: <http://vocab.gtfs.org/terms#>
+PREFIX geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# ========================================================================
+# QUERY 1: Count LocalAreas linked to Wikidata
+# ========================================================================
+SELECT (COUNT(DISTINCT ?area) AS ?areasLinked)
+WHERE {
+  ?area a ex:LocalArea ; owl:sameAs ?wd .
+  FILTER(STRSTARTS(STR(?wd), "http://www.wikidata.org/entity/"))
+}
+
+# ========================================================================
+# QUERY 2: Sample LocalAreas with their Wikidata links
+# ========================================================================
+SELECT ?area ?name ?code ?wd
+WHERE {
+  ?area a ex:LocalArea ;
+        rdfs:label ?name ;
+        ex:areaCode ?code ;
+        owl:sameAs ?wd .
+  FILTER(STRSTARTS(STR(?wd), "http://www.wikidata.org/entity/"))
+}
+LIMIT 20
+
+# ========================================================================
+# QUERY 3: Verify owl:sameAs points to valid Wikidata URIs
+# ========================================================================
+SELECT ?area ?wd
+WHERE {
+  ?area a ex:LocalArea ; owl:sameAs ?wd .
+  FILTER(STRSTARTS(STR(?wd), "http://www.wikidata.org/entity/Q"))
+}
+LIMIT 20
+
+# ========================================================================
+# QUERY 4: Resource type counts (sanity check)
+# ========================================================================
+SELECT ?type (COUNT(*) AS ?count)
+WHERE { ?s a ?type }
+GROUP BY ?type
+ORDER BY DESC(?count)
+
+# ========================================================================
+# QUERY 5: Find stops in areas with Wikidata context (application query)
+# ========================================================================
+SELECT ?stop ?stopName ?area ?areaName ?wikidata
+WHERE {
+  ?stop a ex:BusStop ;
+        rdfs:label ?stopName ;
+        ex:locatedInArea ?area .
+  
+  ?area a ex:LocalArea ;
+        rdfs:label ?areaName ;
+        owl:sameAs ?wikidata .
+  
+  FILTER(STRSTARTS(STR(?wikidata), "http://www.wikidata.org/entity/"))
+}
+LIMIT 20
+
+# ========================================================================
+# QUERY 6: Get complete context for a specific bus stop (app use case)
+# ========================================================================
+# This query retrieves all information needed for the quiz application
+# when a user is at a specific bus stop (e.g., par_8_09765)
+SELECT ?stopName ?areaName ?areaCode ?wikidata
+WHERE {
+  <http://group06.linkeddata.es/resource/stop/par_8_09765> a ex:BusStop ;
+                       rdfs:label ?stopName ;
+                       ex:locatedInArea ?area .
+  
+  ?area a ex:LocalArea ;
+        rdfs:label ?areaName ;
+        ex:areaCode ?areaCode ;
+        owl:sameAs ?wikidata .
+  
+  FILTER(STRSTARTS(STR(?wikidata), "http://www.wikidata.org/entity/"))
+}

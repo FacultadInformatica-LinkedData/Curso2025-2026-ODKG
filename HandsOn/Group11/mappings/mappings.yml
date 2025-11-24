@@ -156,8 +156,8 @@ mappings:
       - [ont:operatesOnFriday, $(friday), xsd:integer]
       - [ont:operatesOnSaturday, $(saturday), xsd:integer]
       - [ont:operatesOnSunday, $(sunday), xsd:integer]
-      - [ont:startDate, $(start_date), xsd:string]
-      - [ont:endDate, $(end_date), xsd:string]
+      - [ont:startDate, $(start_date), xsd:date]
+      - [ont:endDate, $(end_date), xsd:date]
 
   calendar_is_calendar_of:
     sources:
@@ -176,8 +176,8 @@ mappings:
     po:
       - [a, ont:Shape]
       - [ont:shapeId, $(shape_id), xsd:string]
-      - [geo:lat, $(shape_pt_lat), xsd:decimal]
-      - [geo:long, $(shape_pt_lon), xsd:decimal]
+      - [geo:lat, $(shape_pt_lat), xsd:float]
+      - [geo:long, $(shape_pt_lon), xsd:float]
       - [ont:shapeSequence, $(shape_pt_sequence), xsd:integer]
       - [ont:shapeDistTraveled, $(shape_dist_traveled), xsd:decimal]
 

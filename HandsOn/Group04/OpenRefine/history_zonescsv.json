@@ -1,0 +1,57 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "population",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Transformer le texte sur les cellules de la colonne population à laide de lexpression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "El Franco",
+          "Franco, El"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "El Franco"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne name"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "name",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Alcúdia",
+          "Alcúdia, l'"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Alcúdia"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne name"
+  }
+]

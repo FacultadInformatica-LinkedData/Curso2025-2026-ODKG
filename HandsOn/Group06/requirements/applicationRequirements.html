@@ -36,16 +36,16 @@
   <header>
     <h1>Application Requirements — Madrid Bus Companion</h1>
     <p class="dim small">
-      A simple bus navigation app with an educational twist. Find your bus route, discover your wait time, and learn about Madrid while you wait through location-based quizzes powered by linked DBpedia entities.
+      A simple bus navigation app with an educational twist. Find your bus route, discover your wait time, and learn about Madrid while you wait through location-based quizzes powered by linked Wikidata entities.
     </p>
   </header>
 
   <section class="card">
     <h2>App Concept</h2>
-    <p><span class="highlight">Madrid Bus Companion</span> helps users navigate Madrid's bus network while making wait times more engaging. Users enter their destination, see the nearest bus stop and route information, and pass the waiting time with an educational quiz game about nearby places. The app demonstrates linked data by using geographic proximity to query DBpedia for cultural/historical information about places near bus stops.</p>
+    <p><span class="highlight">Madrid Bus Companion</span> helps users navigate Madrid's bus network while making wait times more engaging. Users enter their destination, see the nearest bus stop and route information, and pass the waiting time with an educational quiz game about nearby places. The app demonstrates linked data by using geographic proximity to query Wikidata for cultural/historical information about places near bus stops.</p>
     
     <div class="callout small">
-      <strong>Core Value:</strong> Practical bus navigation + Educational entertainment + Demonstration of how geographic coordinates enable linking bus stops with local knowledge from DBpedia.
+      <strong>Core Value:</strong> Practical bus navigation + Educational entertainment + Demonstration of how geographic coordinates enable linking bus stops with local knowledge from Wikidata.
     </div>
   </section>
 
@@ -63,11 +63,11 @@
       </div>
       <div>
         <h3 style="color:#fff;font-size:1rem;margin:8px 0">3. Play Location Quiz</h3>
-        <p>While waiting, user can play a Kahoot-style quiz about the local area. Questions are dynamically fetched from DBpedia based on nearby places (landmarks, history, culture).</p>
+        <p>While waiting, user can play a Kahoot-style quiz about the local area. Questions are dynamically fetched from Wikidata based on nearby places (landmarks, history, culture).</p>
       </div>
       <div>
         <h3 style="color:#fff;font-size:1rem;margin:8px 0">4. Learn & Discover</h3>
-        <p>Each quiz answer shows linked data from DBpedia, teaching users about their surroundings and demonstrating the power of linked open data.</p>
+        <p>Each quiz answer shows linked data from Wikidata, teaching users about their surroundings and demonstrating the power of linked open data.</p>
       </div>
     </div>
   </section>
@@ -81,7 +81,7 @@
     <div class="data-flow">
       <div class="data-flow-item">
         <div class="data-flow-icon">📍</div>
-        <div><code>gtfs_merged_for_rdf.csv</code> — Find nearest bus stops to user's GPS location (<code>stop_lat</code>, <code>stop_lon</code>, <code>stop_name</code>)</div>
+        <div><code>df_final.csv</code> — Find nearest bus stops to user's GPS location (<code>stop_lat</code>, <code>stop_lon</code>, <code>stop_name</code>)</div>
       </div>
       <div class="data-flow-item">
         <div class="data-flow-icon">🚌</div>
@@ -101,26 +101,26 @@
       </div>
     </div>
 
-    <h3 style="color:#fff;font-size:1.05rem;margin:24px 0 8px">DBpedia Runtime Queries</h3>
+    <h3 style="color:#fff;font-size:1.05rem;margin:24px 0 8px">Wikidata Runtime Queries</h3>
     <p>Geographic coordinates enable runtime linking to nearby cultural/historical entities:</p>
     
     <div class="data-flow">
       <div class="data-flow-item">
         <div class="data-flow-icon">🔗</div>
-        <div>Bus stop coordinates (<code>stop_lat</code>, <code>stop_lon</code>) used to query nearby DBpedia entities (landmarks, monuments, museums)</div>
+        <div>Bus stop coordinates (<code>stop_lat</code>, <code>stop_lon</code>) used to query nearby Wikidata entities (landmarks, monuments, museums)</div>
       </div>
       <div class="data-flow-item">
         <div class="data-flow-icon">🌐</div>
-        <div>Runtime SPARQL queries to DBpedia using geographic proximity filters</div>
+        <div>Runtime SPARQL queries to Wikidata using geographic proximity filters</div>
       </div>
       <div class="data-flow-item">
         <div class="data-flow-icon">❓</div>
-        <div>App dynamically fetches DBpedia information for quiz questions based on current bus stop location</div>
+        <div>App dynamically fetches Wikidata information for quiz questions based on current bus stop location</div>
       </div>
     </div>
 
     <div class="callout small">
-      <strong>Linked Data Demonstration:</strong> Our RDF dataset provides bus stop geocoordinates that enable runtime geographic queries to DBpedia. This demonstrates how standardized coordinates facilitate linking across distributed RDF datasets.
+      <strong>Linked Data Demonstration:</strong> Our RDF dataset provides bus stop geocoordinates that enable runtime geographic queries to Wikidata. This demonstrates how standardized coordinates facilitate linking across distributed RDF datasets.
     </div>
   </section>
 
@@ -137,7 +137,7 @@
       <div>
         <h3 style="color:#fff;font-size:1.05rem;margin:0 0 12px;text-align:center">Location Quiz Screen</h3>
         <img src="Screenshot2.png" alt="Kahoot-style quiz interface with local questions" class="screenshot" />
-        <p class="small" style="text-align:center;margin-top:12px">Kahoot-style quiz interface presents questions about the local area. Users select answers and learn interesting facts about nearby landmarks, history, and culture sourced from DBpedia.</p>
+        <p class="small" style="text-align:center;margin-top:12px">Kahoot-style quiz interface presents questions about the local area. Users select answers and learn interesting facts about nearby landmarks, history, and culture sourced from Wikidata.</p>
       </div>
     </div>
   </section>
@@ -149,8 +149,8 @@
       <li><strong>GPS-Based Stop Detection:</strong> Automatic nearest bus stop finding using geocoordinates from merged GTFS dataset</li>
       <li><strong>Route Visualization:</strong> Map shows bus route paths using shape geometry data</li>
       <li><strong>Schedule-Aware Calculation:</strong> Respects service calendars (weekday/weekend, exceptions) for accurate bus wait times</li>
-      <li><strong>Runtime DBpedia Integration:</strong> Geographic coordinates enable dynamic SPARQL queries to DBpedia for nearby landmarks</li>
-      <li><strong>Linked Data Demonstration:</strong> Shows how standardized geographic coordinates facilitate linking across distributed RDF datasets (GTFS + DBpedia)</li>
+      <li><strong>Runtime Wikidata Integration:</strong> Geographic coordinates enable dynamic SPARQL queries to Wikidata for nearby landmarks</li>
+      <li><strong>Linked Data Demonstration:</strong> Shows how standardized geographic coordinates facilitate linking across distributed RDF datasets (GTFS + Wikidata)</li>
       <li><strong>Educational Content:</strong> Users learn about their surroundings while waiting for the bus</li>
       <li><strong>Mobile-First Design:</strong> Clean, simple interface optimized for on-the-go use</li>
     </ul>

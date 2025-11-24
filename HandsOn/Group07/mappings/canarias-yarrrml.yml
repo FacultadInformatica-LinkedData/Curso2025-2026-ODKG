@@ -10,13 +10,13 @@ prefixes:
   ql: http://semweb.mmlab.be/ns/ql#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   vocab: http://example.org#
-  lude: https://spanishuniversities.data/ontology/lude#
-  id: https://spanishuniversities.data/id/lude/
+  lude: http://spanishuniversities.data.es/lude/ontology#
+  id: http://spanishuniversities.data.es/lude/resource/
   
 mappings:
-  canaryDegreeDK:
+  canaryDegreeDL:
     sources:
-      - [Canarias-Degrees-updated.csv~csv]
+      - [Canarias_listaestudios-Canarias-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -25,7 +25,7 @@ mappings:
       - [lude:academicYear,$(Academic Year),xsd:string]
       - p: lude:hasAcademicLevel
         o:
-          mapping: canaryLevelDK
+          mapping: canaryLevelDL
           condition:
             function: equal
             parameters:
@@ -33,7 +33,7 @@ mappings:
               - [str2, $(AcademicLevelID)]
 
               
-  canaryLevelDK:
+  canaryLevelDL:
     sources:
       - [academic_level-updated.csv~csv]
     s: id:AcademicLevel/$(AcademicLevelID)
@@ -41,9 +41,9 @@ mappings:
       - [rdf:type, lude:AcademicLevel]
       - [rdfs:label,$(Academic Level),xsd:string] 
 
-  canaryDegreeUD:
+  canaryDegreeDK:
     sources:
-      - [Canarias-Degrees-updated.csv~csv]
+      - [Canarias_listaestudios-Canarias-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -62,7 +62,7 @@ mappings:
               
   canariasKnowledgeDK:
     sources:
-      - [ambit-otros.csv~csv]
+      - [ambit-updated.csv~csv]
     s: id:KnowledgeArea/$(id)
     po:
       - [rdf:type, lude:KnowledgeArea]
@@ -95,7 +95,7 @@ mappings:
 
   canaryDegreeUD:
     sources:
-      - [Canarias-Degrees-updated.csv~csv]
+      - [Canarias_listaestudios-Canarias-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]

@@ -25,4 +25,3 @@
 
 All CSVs were cleaned (ids, string trim, date encoding) and mapped to ontology classes/properties.  
 The datasets meet requirements and are ready for RDF transformation.
-local_areas-updated.csv was created empty because its instances will be created on runtime.

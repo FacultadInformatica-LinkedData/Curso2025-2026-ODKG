@@ -1,0 +1,210 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q11862829",
+        "name": "academic discipline"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Degree to type Q11862829"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ciencias de la Actividad Física y del Deporte",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1298380",
+      "name": "sports science",
+      "types": [
+        "Q1665984",
+        "Q1047113",
+        "Q2465832",
+        "Q11862829",
+        "Q4671286",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item sports science (Q1298380) for cells containing \"Ciencias de la Actividad Física y del Deporte\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Economía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q8134",
+      "name": "economics",
+      "types": [
+        "Q11862829",
+        "Q4671286",
+        "Q2267705"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item economics (Q8134) for cells containing \"Economía\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Eléctrica y Electrónica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q43035",
+      "name": "electrical engineering",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item electrical engineering (Q43035) for cells containing \"Ingeniería Eléctrica y Electrónica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería en Diseño Mecánico",
+    "judgment": "matched",
+    "match": {
+      "id": "Q101333",
+      "name": "mechanical engineering",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item mechanical engineering (Q101333) for cells containing \"Ingeniería en Diseño Mecánico\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería en Tecnologías de Telecomunicación",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1061219",
+      "name": "telecommunications engineering",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item telecommunications engineering (Q1061219) for cells containing \"Ingeniería en Tecnologías de Telecomunicación\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Térmica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2585592",
+      "name": "thermal engineering",
+      "types": [
+        "Q11862829"
+      ],
+      "score": 94
+    },
+    "shareNewTopics": false,
+    "description": "Match item thermal engineering (Q2585592) for cells containing \"Ingeniería Térmica\" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería de Materiales y Fabricación ",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5916079",
+      "name": "metallurgical engineering",
+      "types": [
+        "Q11862829",
+        "Q12015335",
+        "Q4671286",
+        "Q1047113"
+      ],
+      "score": 53
+    },
+    "shareNewTopics": false,
+    "description": "Match item metallurgical engineering (Q5916079) for cells containing \"Ingeniería de Materiales y Fabricación \" in column Degree"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Degree",
+    "similarValue": "Ingeniería Mecánica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q101333",
+      "name": "mechanical engineering",
+      "types": [
+        "Q12015335",
+        "Q11862829",
+        "Q268592"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item mechanical engineering (Q101333) for cells containing \"Ingeniería Mecánica\" in column Degree"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 3,
+    "description": "Create column same_as_wikidata_degree at index 3 based on column Degree using expression grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  }
+]

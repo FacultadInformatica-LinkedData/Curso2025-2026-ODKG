@@ -1,0 +1,15 @@
+{
+    "@context": {
+        "@vocab": "http://example.org/resource/"
+    },
+    "@type": "Organization",
+    "name": "European Data Portal",
+    "dataset": {
+        "@type": "Dataset",
+        "name": "Public Transport Data",
+        "distribution": {
+            "@type": "Distribution",
+            "downloadURL": "https://data.europa.eu/data/public-transport.csv"
+        }
+    }
+}

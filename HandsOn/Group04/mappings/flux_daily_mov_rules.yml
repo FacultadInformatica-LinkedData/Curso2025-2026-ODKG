@@ -1,0 +1,92 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  rml: http://semweb.mmlab.be/ns/rml#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  dcterms: http://purl.org/dc/terms/
+  schema: http://schema.org/
+  ex: http://example.com/ontology/mobility/
+  data: http://example.com/data/mobility/
+
+sources:
+  csv_data:
+    access: ../csv/flux_sample_updated.csv
+    referenceFormulation: csv
+    iterator: $ # This means iterate over every row
+
+mappings:
+  # --- 1. The Main Observation Mapping (from each row) ---
+  ObservationMap:
+    sources:
+      - csv_data
+    # This creates a blank node subject for each row
+    subject: ~bnode
+    po:
+      - [a, ex:MovilityObservation] # 'a' is a shortcut for rdf:type
+      - [dcterms:date, $(date)~xsd:date]
+      - [ex:hour, $(hour)~xsd:integer]
+      - [ex:numberOfTrips, $(n_trips)~xsd:double]
+      - [ex:totalTripsLengthKm, $(trips_total_length_km)~xsd:double]
+
+      # --- Links to other entities (Join Conditions) ---
+      - p: ex:concernsDemographicGroup
+        o:
+          mapping: DemographicGroupMap
+          join:
+            - [income, income]
+            - [age, age]
+            - [gender, gender]
+      - p: ex:hasOrigin
+        o:
+          mapping: LocationMap
+          join: [origin_name, id]
+      - p: ex:hasDestination
+        o:
+          mapping: LocationMap
+          join: [destination_name, id]
+      - p: ex:hasOriginActivity
+        o:
+          mapping: ActivityMap
+          join: [activity_origin, type]
+      - p: ex:hasDestinationActivity
+        o:
+          mapping: ActivityMap
+          join: [activity_destination, type]
+
+  # --- 2. Demographic Group Mapping ---
+  # This map creates the unique demographic groups.
+  DemographicGroupMap:
+    sources:
+      - csv_data
+    # The subject is built from the column values to ensure de-duplication
+    subject: data:demo_$(income)_$(age)_$(gender)
+    po:
+      - [a, ex:DemographicGroup]
+      - [ex:incomeRange, $(income)]
+      - [ex:ageRange, $(age)]
+      - [schema:gender, $(gender)]
+
+  # --- 3. Location Mapping ---
+  # We only need ONE map for locations. YARRRML is smart enough
+  # to handle being joined from 'origin_name' and 'destination_name'.
+  LocationMap:
+    sources:
+      - csv_data
+    # We define a 'placeholder' variable 'id' that can be filled
+    # by either 'origin_name' or 'destination_name' from the join.
+    subject: data:location_$(id)
+    po:
+      - [a, schema:City]
+      - [schema:name, $(id)]
+
+  # --- 4. Activity Mapping ---
+  # Same logic as locations. One map for all activities.
+  ActivityMap:
+    sources:
+      - csv_data
+    # 'type' is the placeholder for 'activity_origin' or 'activity_destination'
+    subject: data:activity_$(type)
+    po:
+      - [a, ex:Activity]
+      - [ex:activityType, $(type)]

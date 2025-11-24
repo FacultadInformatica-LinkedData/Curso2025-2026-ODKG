@@ -1,0 +1,178 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix rml:   <http://w3id.org/rml/> .
+@prefix ql:    <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix lude:  <http://spanishuniversities.data.es/lude/ontology#> .
+@prefix id:    <http://spanishuniversities.data.es/lude/resource/> .
+@prefix map:   <http://mapping.example.com/> .
+
+map:catalunyaDegreeUD a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [
+    rr:template "http://spanishuniversities.data.es/lude/resource/Degree/{DegreeID}"
+  ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:Degree ] ,
+    [ rr:predicate rdfs:label ;
+      rr:objectMap [ rml:reference "Degree" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate lude:academicYear ;
+      rr:objectMap [ rml:reference "Academic Year" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate owl:sameAs ;
+      rr:objectMap [ rml:reference "Same _as _Wikidata _degree" ; rr:termType rr:IRI ]
+    ] ,
+    [ rr:predicate lude:hasAcademicLevel ;
+      rr:objectMap [
+        rr:parentTriplesMap map:catalunyaLevelDK ;
+        rr:joinCondition [
+          rr:child  "Academic Level ID" ;
+          rr:parent "Academic Level ID"
+        ]
+      ]
+    ] ,
+    [ rr:predicate lude:hasKnowledgeArea ;
+      rr:objectMap [
+        rr:parentTriplesMap map:catalunyaKnowledgeDK ;
+        rr:joinCondition [
+          rr:child  "Knowledge Area ID" ;
+          rr:parent "Knowledge Area ID"
+        ]
+      ]
+    ] .
+
+
+map:catalunyaLevelDK a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [
+    rr:template "http://spanishuniversities.data.es/lude/resource/AcademicLevel/{Academic Level ID}"
+  ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:academicLevel ] ,
+    [ rr:predicate rdfs:label ;
+      rr:objectMap [ rml:reference "Academic Level" ; rr:datatype xsd:string ]
+    ] .
+
+
+map:catalunyaKnowledgeDK a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [
+    rr:template "http://spanishuniversities.data.es/lude/resource/KnowledgeArea/{Knowledge Area ID}"
+  ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:KnowledgeArea ] ,
+    [ rr:predicate rdfs:label ;
+      rr:objectMap [ rml:reference "Knowledge Area" ; rr:datatype xsd:string ]
+    ] .
+
+
+map:catalunyaDegreeDF a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [
+    rr:template "http://spanishuniversities.data.es/lude/resource/Degree/{DegreeID}"
+  ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:Degree ] ,
+    [ rr:predicate rdfs:label ;
+      rr:objectMap [ rml:reference "Degree" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate lude:academicYear ;
+      rr:objectMap [ rml:reference "Academic Year" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate lude:deliveredAt ;
+      rr:objectMap [
+        rr:parentTriplesMap map:catalunyaFacultyDF ;
+        rr:joinCondition [
+          rr:child  "Faculty ID" ;
+          rr:parent "Faculty ID"
+        ]
+      ]
+    ] .
+
+
+
+map:catalunyaFacultyDF a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [
+    rr:template "http://spanishuniversities.data.es/lude/resource/Faculty/{Faculty ID}"
+  ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:Faculty ] ,
+    [ rr:predicate rdfs:label ;
+      rr:objectMap [ rml:reference "Faculty" ; rr:datatype xsd:string ]
+    ] .
+
+
+map:catalunyaUniversityUD a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [
+    rr:template "http://spanishuniversities.data.es/lude/resource/University/{UniversityID}"
+  ] ;
+  rr:predicateObjectMap
+    [ rr:predicate rdf:type ; rr:object lude:University ] ,
+    [ rr:predicate rdfs:label ;
+      rr:objectMap [ rml:reference "University" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate lude:acronym ;
+      rr:objectMap [ rml:reference "Acronymn" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate lude:type ;
+      rr:objectMap [ rml:reference "Type" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate lude:modality ;
+      rr:objectMap [ rml:reference "Modality" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate owl:sameAs ;
+      rr:objectMap [ rml:reference "Same _as _Wikidata _University" ; rr:termType rr:IRI ]
+    ] ,
+    [ rr:predicate lude:offers ;
+      rr:objectMap [
+        rr:parentTriplesMap map:catalunyaDegreeUD ;
+        rr:joinCondition [
+          rr:child  "UniversityID" ;
+          rr:parent "UniversityID"
+        ]
+      ]
+    ] .
+
+
+
+map:catalunyaDegreeQuota a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "Catalunya-Notes-de-tall-d-acc-s-als-estudis-universitaris-convocat-ries-de-juny-2023-actualitat-i-nombre-de-places-updated-with-links.csv" ;
+    rml:referenceFormulation ql:CSV
+  ] ;
+  rr:subjectMap [
+    rr:template "http://spanishuniversities.data.es/lude/resource/Degree/{DegreeID}"
+  ] ;
+  rr:predicateObjectMap
+    [ rr:predicate lude:admissionPathway ;
+      rr:objectMap [ rml:reference "Via dâ€™accÃ©s" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate lude:cutoffGrade ;
+      rr:objectMap [ rml:reference "Cut-Off" ; rr:datatype xsd:string ]
+    ] ,
+    [ rr:predicate lude:seatsAvailable ;
+      rr:objectMap [ rml:reference "Number of Places" ; rr:datatype xsd:integer ]
+    ] .

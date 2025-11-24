@@ -25,3 +25,4 @@
 CSV files were too big to push to repo so we left only initial rows as representation.
 Now we are using data from the city of Madrid.
 The decisions made can suffer changes in the future if a better solution is found.
+We will use latitude/longitude to reconcile each stop with Wikidata.

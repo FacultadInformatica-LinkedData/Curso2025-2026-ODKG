@@ -1,0 +1,27 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/resource/> .
+
+:Organization01
+   a rdfs:Class ;
+   rdfs:label "European Data Portal" ;
+   rdfs:member :Dataset01 .
+
+:Dataset01
+   a rdfs:Resource ;
+   rdfs:label "Public Transport Data" ;
+   rdfs:comment "Open dataset about public transportation routes in Spain" ;
+   rdfs:seeAlso :Distribution01 ;
+   rdfs:isDefinedBy :Organization01 .
+
+:Distribution01
+   a rdfs:Resource ;
+   rdfs:label "Public Transport CSV File" ;
+   rdfs:comment "Contains transport data in CSV format" ;
+   rdfs:isDefinedBy "2025-10-30T10:00:00"^^xsd:dateTime ;
+   rdfs:seeAlso :DownloadLink01 .
+
+:DownloadLink01
+   a rdfs:Resource ;
+   rdfs:label "Download Link" ;
+   rdfs:comment "https://data.europa.eu/data/public-transport.csv" .

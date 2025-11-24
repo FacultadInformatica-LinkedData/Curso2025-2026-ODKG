@@ -10,13 +10,13 @@ prefixes:
   ql: http://semweb.mmlab.be/ns/ql#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   vocab: http://example.org#
-  lude: https://spanishuniversities.data/ontology/lude#
-  id: https://spanishuniversities.data/id/lude/
+  lude: http://spanishuniversities.data.es/lude/ontology#
+  id: http://spanishuniversities.data.es/lude/resource/
   
 mappings:
   andaluciaDegreeUD:
     sources:
-      - [Andalucia-Degrees-2024-updated.csv~csv]
+      - [Andalucia_NotasdeCorte_2024-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -42,7 +42,7 @@ mappings:
 
   andaluciaDegreeDF:
     sources:
-      - [Andalucia-Degrees-2024-updated.csv~csv]
+      - [Andalucia_NotasdeCorte_2024-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -59,7 +59,7 @@ mappings:
               
   andaluciaFacultyDF:
     sources:
-      - [Andalucia-Faculties-2024-updated.csv~csv]
+      - [Andalucia_NotasdeCorte_2024-Faculties-updated.csv~csv]
     s: id:Faculty/$(FacultyId)
     po:
       - [rdf:type, lude:Faculty]
@@ -67,7 +67,7 @@ mappings:
 
   andaluciaDegreeDK:
     sources:
-      - [Andalucia-Degrees-2024-updated.csv~csv]
+      - [Andalucia_NotasdeCorte_2024-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -85,7 +85,7 @@ mappings:
               
   andaluciaKnowledgeDK:
     sources:
-      - [ambit-otros.csv~csv]
+      - [ambit-updated.csv~csv]
     s: id:KnowledgeArea/$(id)
     po:
       - [rdf:type, lude:KnowledgeArea]
@@ -115,9 +115,9 @@ mappings:
               - [str1, $(UniversityID)]
               - [str2, $(UniversityId)]
 
-  andaluciaDegreeUD:
+  andaluciaDegreeUF:
     sources:
-      - [Andalucia-Degrees-2024-updated.csv~csv]
+      - [Andalucia_NotasdeCorte_2024-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -150,7 +150,7 @@ mappings:
 
   andaluciaFacultyUF:
     sources:
-      - [Andalucia-Faculties-2024-updated.csv~csv]
+      - [Andalucia_NotasdeCorte_2024-Faculties-updated.csv~csv]
     s: id:Faculty/$(FacultyId)
     po:
       - [rdf:type, lude:Faculty]

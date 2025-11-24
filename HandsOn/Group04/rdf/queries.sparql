@@ -1,0 +1,189 @@
+# --- Required Prefixes ---
+# These must match the prefixes you defined in your RML file.
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <http://schema.org/>
+PREFIX ex: <http://example.com/ontology/mobility/>
+PREFIX data: <http://example.com/data/mobility/>
+
+# -----------------------------------------------------------------
+# QUERY 1: CLASS COUNT VERIFICATION
+# Purpose: Were the different "things" (classes) created?
+# This checks that the Observation, Group, Location, and Activity mappings all ran.
+# -----------------------------------------------------------------
+SELECT 
+    (COUNT(DISTINCT ?obs) AS ?totalObservations)
+    (COUNT(DISTINCT ?demo) AS ?totalDemographicGroups)
+    (COUNT(DISTINCT ?loc) AS ?totalLocations)
+    (COUNT(DISTINCT ?act) AS ?totalActivities)
+WHERE {
+    { ?obs a ex:MovilityObservation }
+    UNION
+    { ?demo a ex:DemographicGroup }
+    UNION
+    { ?loc a schema:City }
+    UNION
+    { ?act a ex:Activity }
+}
+
+# -----------------------------------------------------------------
+# QUERY 2: DATA AND LINK VERIFICATION (SPOT CHECK)
+# Purpose: Are the literal data (numbers, dates) and the links (relationships)
+# correctly connected to an observation?
+#
+# This selects 10 observations and "jumps" across their links 
+# to get the properties of the related entities.
+# -----------------------------------------------------------------
+SELECT ?date ?trips ?age ?gender ?originLocationID ?originActivityType
+WHERE {
+    ?obs a ex:MovilityObservation ;
+         dcterms:date ?date ;
+         ex:numberOfTrips ?trips ;
+         ex:concernsDemographicGroup ?demo ;
+         ex:hasOrigin ?originLoc ;
+         ex:hasOriginActivity ?originAct .
+    
+    ?demo schema:gender ?gender ;
+          ex:ageRange ?age .
+    
+    ?originLoc schema:name ?originLocationID .
+    ?originAct ex:activityType ?originActivityType .
+}
+LIMIT 10
+
+# -----------------------------------------------------------------
+# QUERY 3: AGGREGATION AND DATATYPE VERIFICATION
+# Purpose: Are the numbers actually numbers?
+#
+# This query tests that `ex:numberOfTrips` was mapped as an `xsd:integer`.
+# If it weren't a number, the SUM() function would fail.
+# This answers a business question: "How many total trips did males aged 25-45 make?"
+# -----------------------------------------------------------------
+SELECT (SUM(?trips) AS ?totalTrips_Male_25_45)
+WHERE {
+    ?obs a ex:MovilityObservation ;
+         ex:numberOfTrips ?trips ;
+         ex:concernsDemographicGroup ?demo .
+         
+    ?demo ex:ageRange "25-45" ;
+          schema:gender "male" .
+}
+
+# -----------------------------------------------------------------
+# QUERY 4: DE-DUPLICATION VERIFICATION (LOCATIONS)
+# Purpose: Was only ONE entity created for location "Madrid", 
+# even though it appears in many CSV rows?
+#
+# If this returns 1 row with an `observationCount` > 1, de-duplication worked!
+# -----------------------------------------------------------------
+SELECT ?location ?locationID (COUNT(?obs) AS ?observationCount)
+WHERE {
+    # Find the Location entity with Location "Madrid"
+    ?location a schema:City ;
+              schema:name "Madrid" .
+    
+    # Find all observations that have it as an ORIGIN
+    # (We could also search for it as a destination using ex:hasDestination)
+    ?obs ex:hasOrigin ?location .
+}
+GROUP BY ?location ?locationID
+
+# -----------------------------------------------------------------
+# QUERY 5: DE-DUPLICATION VERIFICATION (ACTIVITIES)
+# Purpose: How many observations have "home" as their destination activity?
+# This checks the mapping and de-duplication of the "Activity" entity.
+# -----------------------------------------------------------------
+SELECT (COUNT(?obs) AS ?observationsEndingAtHome)
+WHERE {
+    ?act a ex:Activity ;
+         ex:activityType "home" .
+         
+    ?obs ex:hasDestinationActivity ?act .
+}
+
+SELECT ?cityName (SUM(?trips) AS ?totalTrips)
+WHERE {
+  # Filter by exact date and hour
+  ?obs dcterms:date "2025-06-02"^^xsd:date .
+  
+  # Get the trips and the destionation city
+  ?obs ex:numberOfTrips ?trips .
+  ?obs ex:hasDestination ?city .
+  
+  # Get the city's name
+  ?city schema:name ?cityName .
+}
+GROUP BY ?cityName
+ORDER BY DESC(?totalTrips)
+LIMIT 20
+
+
+SELECT ?originName ?destinationName (SUM(?trips) AS ?totalFlow)
+WHERE {
+  # Filter by the date range
+  ?obs dcterms:date ?date .
+  FILTER(?date >= "2025-06-02"^^xsd:date && ?date <= "2025-06-08"^^xsd:date)
+
+  # Get the trips and the cities
+  ?obs ex:numberOfTrips ?trips .
+  ?obs ex:hasOrigin ?originCity .
+  ?obs ex:hasDestination ?destinationCity .
+  
+  # Get the names
+  ?originCity schema:name ?originName .
+  ?destinationCity schema:name ?destinationName .
+  
+  # Filter out internal trips (if not relevant)
+  FILTER(?originName != ?destinationName) 
+}
+GROUP BY ?originName ?destinationName
+ORDER BY DESC(?totalFlow)
+LIMIT 20
+
+# ZONES
+# ---
+# Query 1: Count all transformed zones
+# (Verifies that the expected number of rows has been processed)
+# ---
+SELECT (COUNT(?zone) AS ?totalZones)
+WHERE {
+  ?zone a schema:AdministrativeArea .
+}
+
+# ---
+# Query 2: Get details for a specific zone
+# (Verifies that properties are mapped correctly)
+# ---
+SELECT ?name ?population
+WHERE {
+  ?zone a schema:AdministrativeArea ;
+        schema:identifier "01059" ; # ID for Vitoria-Gasteiz
+        schema:name ?name ;
+        schema:population ?population .
+}
+
+# ---
+# Query 3: Find the 5 most populated zones
+# (Verifies that the 'population' datatype is numeric and sortable)
+# ---
+SELECT ?name ?population
+WHERE {
+  ?zone a schema:AdministrativeArea ;
+        schema:name ?name ;
+        schema:population ?population .
+}
+ORDER BY DESC(?population)
+LIMIT 5
+
+# ---
+# Query 4: Find all "agregaciones de municipios"
+# (Verifies string mapping and the use of filters)
+# ---
+SELECT ?name
+WHERE {
+  ?zone a schema:AdministrativeArea ;
+        schema:name ?name .
+  FILTER(CONTAINS(LCASE(?name), "agregacion de municipios"))
+}

@@ -1,0 +1,1322 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q79007",
+        "name": "street"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Street to type Q79007"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Elizabeth Street",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Elizabeth Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Bourke Street Mall",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Bourke Street Mall\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Swanston Street",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Swanston Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Collins Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2796839",
+      "name": "Collins Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Collins Street (Q2796839) para las celdas que contienen \"Collins Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Bourke Street Mall",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Bourke Street Mall\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Bourke Street Mall",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Bourke Street Mall\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Swanston Street",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Swanston Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Swanston Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q109284110",
+      "name": "Swanston Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Swanston Street (Q109284110) para las celdas que contienen \"Swanston Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Bourke Street Mall",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1951720",
+      "name": "Bourke Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bourke Street (Q1951720) para las celdas que contienen \"Bourke Street Mall\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Bourke Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1951720",
+      "name": "Bourke Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bourke Street (Q1951720) para las celdas que contienen \"Bourke Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q79007",
+        "name": "street"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Street to type Q79007"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Bourke Street Mall",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1951720",
+      "name": "Bourke Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bourke Street (Q1951720) para las celdas que contienen \"Bourke Street Mall\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Swanston Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1087653",
+      "name": "Swanston Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Swanston Street (Q1087653) para las celdas que contienen \"Swanston Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Newquay Promenade",
+    "judgment": "matched",
+    "match": {
+      "id": "Q112824899",
+      "name": "NewQuay Prom/Docklands Dr (Docklands)",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento NewQuay Prom/Docklands Dr (Docklands) (Q112824899) para las celdas que contienen \"Newquay Promenade\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Collins Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2796839",
+      "name": "Collins Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Collins Street (Q2796839) para las celdas que contienen \"Collins Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Lygon Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56655",
+      "name": "Lygon Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Lygon Street (Q56655) para las celdas que contienen \"Lygon Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Alfred Place",
+    "judgment": "matched",
+    "match": {
+      "id": "Q120204519",
+      "name": "Alfred Place",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Alfred Place (Q120204519) para las celdas que contienen \"Alfred Place\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Alfred Place",
+    "judgment": "matched",
+    "match": {
+      "id": "Q120204519",
+      "name": "Alfred Place",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Alfred Place (Q120204519) para las celdas que contienen \"Alfred Place\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Balston Street",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Balston Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Banana Alley Wharf",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4853815",
+      "name": "Banana Alley",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Banana Alley (Q4853815) para las celdas que contienen \"Banana Alley Wharf\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Batman Avenue",
+    "judgment": "matched",
+    "match": {
+      "id": "Q119148000",
+      "name": "Batman Avenue",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Batman Avenue (Q119148000) para las celdas que contienen \"Batman Avenue\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Birrarung Marr",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2904546",
+      "name": "Birrarung Marr",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Birrarung Marr (Q2904546) para las celdas que contienen \"Birrarung Marr\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Birrarung Marr Walk",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2904546",
+      "name": "Birrarung Marr",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Birrarung Marr (Q2904546) para las celdas que contienen \"Birrarung Marr Walk\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Clarendon Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q24887244",
+      "name": "Clarendon Street Junction",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Clarendon Street Junction (Q24887244) para las celdas que contienen \"Clarendon Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Coverlid Place",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Coverlid Place\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Elizabeth Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2250700",
+      "name": "Elizabeth Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Elizabeth Street (Q2250700) para las celdas que contienen \"Elizabeth Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Errol Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q112824311",
+      "name": "Errol St/Victoria St (Melbourne City)",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Errol St/Victoria St (Melbourne City) (Q112824311) para las celdas que contienen \"Errol Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Balston Street",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Balston Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Exhibition Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1855279",
+      "name": "Exhibition Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Exhibition Street (Q1855279) para las celdas que contienen \"Exhibition Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Exhibition Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1855279",
+      "name": "Exhibition Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Exhibition Street (Q1855279) para las celdas que contienen \"Exhibition Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Flinders Lane",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5459412",
+      "name": "Flinders Lane",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Flinders Lane (Q5459412) para las celdas que contienen \"Flinders Lane\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Franklin Street",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Franklin Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Harbour Esplanade",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28943003",
+      "name": "Harbour Esplanade",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Harbour Esplanade (Q28943003) para las celdas que contienen \"Harbour Esplanade\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Spring Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1853763",
+      "name": "Spring Street",
+      "types": [
+        "Q79007"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Spring Street (Q1853763) para las celdas que contienen \"Spring Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "King Street",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"King Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Franklin Street",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Franklin Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Victoria Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3938308",
+      "name": "Victoria Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Victoria Street (Q3938308) para las celdas que contienen \"Victoria Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "William Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2287373",
+      "name": "William Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento William Street (Q2287373) para las celdas que contienen \"William Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Therry Street",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Therry Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "St Kilda Road",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2246383",
+      "name": "St Kilda Road",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento St Kilda Road (Q2246383) para las celdas que contienen \"St Kilda Road\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Little Lonsdale Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6650732",
+      "name": "Little Lonsdale Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Little Lonsdale Street (Q6650732) para las celdas que contienen \"Little Lonsdale Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Macaulay Road",
+    "judgment": "matched",
+    "match": {
+      "id": "Q55115653",
+      "name": "Macaulay Road",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Macaulay Road (Q55115653) para las celdas que contienen \"Macaulay Road\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Lonsdale Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2473914",
+      "name": "Lonsdale Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Lonsdale Street (Q2473914) para las celdas que contienen \"Lonsdale Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "La Trobe Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2272770",
+      "name": "La Trobe Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento La Trobe Street (Q2272770) para las celdas que contienen \"La Trobe Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Navigation Drive",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Navigation Drive\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Pelham Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q112824982",
+      "name": "Pelham St/Elizabeth St (Melbourne City)",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Pelham St/Elizabeth St (Melbourne City) (Q112824982) para las celdas que contienen \"Pelham Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Russell Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2430258",
+      "name": "Russell Street",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Russell Street (Q2430258) para las celdas que contienen \"Russell Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Queensberry Street",
+    "judgment": "matched",
+    "match": {
+      "id": "Q112825029",
+      "name": "Queensberry St/Swanston St (Carlton)",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Queensberry St/Swanston St (Carlton) (Q112825029) para las celdas que contienen \"Queensberry Street\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Southgate Avenue",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Southgate Avenue\" en la columna Street"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Street",
+    "similarValue": "Rebecca Walk",
+    "judgment": "new",
+    "shareNewTopics": true,
+    "description": "Marcar para crear un único elemento nuevo para todas las celdas que contienen \"Rebecca Walk\" en la columna Street"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Street",
+    "expression": "grel:\"http://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Same_As_Wikidata",
+    "columnInsertIndex": 12,
+    "description": "Crear la columna Same_As_Wikidata en el índice 12 basada en la columna Street usando la expresión grel:\"http://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q515",
+        "name": "city"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column City to type Q515"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "Melbourne",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3141",
+      "name": "Melbourne",
+      "types": [
+        "Q515",
+        "Q7309306",
+        "Q1549591",
+        "Q1907114",
+        "Q11271835",
+        "Q1066984",
+        "Q200250"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Melbourne (Q3141) para las celdas que contienen \"Melbourne\" en la columna City"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "Southbank",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1049218",
+      "name": "Southbank",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Southbank (Q1049218) para las celdas que contienen \"Southbank\" en la columna City"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "Docklands",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5287226",
+      "name": "Docklands",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Docklands (Q5287226) para las celdas que contienen \"Docklands\" en la columna City"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "South Wharf",
+    "judgment": "matched",
+    "match": {
+      "id": "Q12069696",
+      "name": "South Wharf",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento South Wharf (Q12069696) para las celdas que contienen \"South Wharf\" en la columna City"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "City: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "City",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "North Melbourne",
+    "judgment": "matched",
+    "match": {
+      "id": "Q7056074",
+      "name": "North Melbourne",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento North Melbourne (Q7056074) para las celdas que contienen \"North Melbourne\" en la columna City"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "City: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "City",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "Carlton",
+    "judgment": "matched",
+    "match": {
+      "id": "Q47002",
+      "name": "Carlton",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Carlton (Q47002) para las celdas que contienen \"Carlton\" en la columna City"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "City: juicio",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "City",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "similarValue": "Kensington",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2608078",
+      "name": "Kensington",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Kensington (Q2608078) para las celdas que contienen \"Kensington\" en la columna City"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "City",
+    "expression": "grel:\"http://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Same_As_Wikidata_City",
+    "columnInsertIndex": 16,
+    "description": "Crear la columna Same_As_Wikidata_City en el índice 16 basada en la columna City usando la expresión grel:\"http://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Same_As_Wikidata",
+    "newColumnName": "Same_As_Wikidata_Street",
+    "description": "Renombra la columna Same_As_Wikidata a Same_As_Wikidata_Street"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Country",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q3624078",
+        "name": "sovereign state"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Country to type Q3624078"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Country",
+    "expression": "grel:\"http://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Same_As_Wikidata_Country",
+    "columnInsertIndex": 18,
+    "description": "Crear la columna Same_As_Wikidata_Country en el índice 18 basada en la columna Country usando la expresión grel:\"http://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q35120",
+        "name": "entity"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Address to type Q35120"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Direction_1",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q23718",
+        "name": "cardinal direction"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Direction_1 to type Q23718"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Direction_2",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q23718",
+        "name": "cardinal direction"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Direction_2 to type Q23718"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "clearData": true,
+    "description": "Descartar juicios de cotejo y borrar datos de reconocimiento para celdas en la columna Address"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Direction_1",
+    "expression": "grel:\"http://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Same_As_Wikidata_Dir_1",
+    "columnInsertIndex": 8,
+    "description": "Crear la columna Same_As_Wikidata_Dir_1 en el índice 8 basada en la columna Direction_1 usando la expresión grel:\"http://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Direction_2",
+    "expression": "grel:\"http://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Same_As_Wikidata_Dir_2",
+    "columnInsertIndex": 10,
+    "description": "Crear la columna Same_As_Wikidata_Dir_2 en el índice 10 basada en la columna Direction_2 usando la expresión grel:\"http://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/recon-discard-judgments",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Direction_1",
+    "clearData": true,
+    "description": "Descartar juicios de cotejo y borrar datos de reconocimiento para celdas en la columna Direction_1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Same_As_Wikidata_Dir_1",
+    "description": "Eliminar columna Same_As_Wikidata_Dir_1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Same_As_Wikidata_Dir_2",
+    "description": "Eliminar columna Same_As_Wikidata_Dir_2"
+  }
+]

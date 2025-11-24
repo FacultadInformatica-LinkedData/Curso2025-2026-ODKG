@@ -1,6 +1,6 @@
 prefixes:
-  lude: https://linkeduniversities.es/vocab/
-  ex: https://linkeduniversities.es/resource/
+  lude: http://spanishuniversities.data.es/lude/ontology#
+  id: http://spanishuniversities.data.es/lude/resource/
   xsd: http://www.w3.org/2001/XMLSchema#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   rdfs: http://www.w3.org/2000/01/rdf-schema#
@@ -10,13 +10,13 @@ mappings:
   MadridDegreeMapping:
     sources:
       - [uc3m-urjc-ucm-uam-titulaciones-updated.csv~csv]
-    s: ex:Degree/$(DegreeID)
+    s: id:Degree/$(DegreeID)
     po:
       - [rdf:type, lude:Degree]
       - [rdfs:label, $(Degree)]
       - [lude:academicYear, $(Academic Year), xsd:string]
       - [lude:code, $(Code), xsd:string]
-      - [lude:ectsCredits, $(ectsCredits), xsd:integer]
+      - [lude:ectsCredits, $(ectsCredits), xsd:decimal]
       - [lude:teachingModality, $(teachingModality), xsd:string]
       - [lude:language, $(Language), xsd:string]
       - p: lude:hasAcademicLevel
@@ -46,7 +46,7 @@ mappings:
   AcademicLevelMapping:
     sources:
       - [academic_level-updated.csv~csv]
-    s: ex:AcademicLevel/$(AcademicLevelID)
+    s: id:AcademicLevel/$(AcademicLevelID)
     po:
       - [rdf:type, lude:AcademicLevel]
       - [rdfs:label, $(AcademicLevel)]
@@ -54,7 +54,7 @@ mappings:
   KnowledgeAreaMapping:
     sources:
       - [ambit-otros.csv~csv]
-    s: ex:KnowledgeArea/$(id)
+    s: id:KnowledgeArea/$(id)
     po:
       - [rdf:type, lude:KnowledgeArea]
       - [rdfs:label, $(ambit)]
@@ -62,7 +62,7 @@ mappings:
   FacultyMapping:
     sources:
       - [faculty-madrid.csv~csv] 
-    s: ex:Faculty/$(FacultyId)
+    s: id:Faculty/$(FacultyId)
     po:
       - [rdf:type, lude:Faculty]
       - [rdfs:label, $(Faculty)]
@@ -70,18 +70,18 @@ mappings:
   UniversityMapping:
     sources:
       - [universidades-updated.csv~csv]
-    s: ex:University/$(UniversityID)
+    s: id:University/$(UniversityID)
     po:
       - [rdf:type, lude:University]
       - [rdfs:label, $(University)]
       - [lude:updateDate, $(Year of Publication), xsd:gYear]
       - [lude:teachingModality, $(Modality), xsd:string]
-      - [lude:URL, $(URL), xsd:anyURI]
-      - [lude:Email, $(Email), xsd:string]
-      - [lude:Phone, $(Phone), xsd:string]
-      - [lude:CIF, $(CIF), xsd:string]
-      - [lude:Acronym, $(Acronym), xsd:string]
-      - [lude:Type, $(Type), xsd:string]
+      - [lude:url, $(URL), xsd:anyURI]
+      - [lude:email, $(Email), xsd:string]
+      - [lude:telephone, $(Phone), xsd:string]
+      - [lude:cif, $(CIF), xsd:string]
+      - [lude:acronym, $(Acronym), xsd:string]
+      - [lude:type, $(Type), xsd:string]
       - p: lude:offers
         o: 
           - mapping: MadridDegreeMapping

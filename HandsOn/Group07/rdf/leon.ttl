@@ -1,0 +1,2640 @@
+@prefix comp: <http://semweb.mmlab.be/ns/rml-compression#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+@prefix id: <http://spanishuniversities.data.es/lude/resource/> .
+@prefix lude: <http://spanishuniversities.data.es/lude/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a> a lude:AcademicLevel;
+  lude:code "d6d85d89b4612501521435bd3f620a9a";
+  rdfs:label "Grado" .
+
+<ex:AcademicLevel/eb0a191797624dd3a48fa681d3061212> a lude:AcademicLevel;
+  lude:code "eb0a191797624dd3a48fa681d3061212";
+  rdfs:label "Máster" .
+
+<ex:AcademicLevel/fba30e9ec1935ca7d36277ba76dddbba> a lude:AcademicLevel;
+  lude:code "fba30e9ec1935ca7d36277ba76dddbba";
+  rdfs:label "Doble Grado" .
+
+<ex:Degree/00094d1974700e275c0ffed461c7be52> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b09cc60ffab6c1b501bd6be27c9fc593>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Electrónica Industrial y Automática" .
+
+<ex:Degree/007d6e1ef120f2385a0304b8bfcf7f3a> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8d318407c4596aa8e2c7af34b1adf9f5>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Educación Social" .
+
+<ex:Degree/00b108b6fb607864b36b6bb759bc44ae> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/385523125b48d8f03dae99a8ca77c0c1>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Turismo" .
+
+<ex:Degree/012343a9925c5d7d90cd9e5ac9446c8c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Electrónica Industrial y Automática" .
+
+<ex:Degree/0162f5293f642374e3fa38fdc00707fe> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/0514b2c2384475c33f18e17f5a34a28e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Gestión de Pequeñas y Medianas Empresas" .
+
+<ex:Degree/025eac41d292572794f911b0065e2964> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fa97a8ea7278fa8686b8e6c6736860f0>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Forestal y del Medio Natural" .
+
+<ex:Degree/036a908061f2f375c5696e620b3cee8b> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ad8e9a7d8d7c49296c9a919248a3db1a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería en Electrónica Industrial y Automática" .
+
+<ex:Degree/045ff3af8160b019e1a1c30ffab210ba> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/826864c3f9cf213b2dfb13d2eb7010c1>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Ciencia y Tecnología de los Alimentos" .
+
+<ex:Degree/0582202eb0186f2ef275076f224b5f0f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/47067f6b754243f1a53069a9a7c03b11>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Óptica y Optometría" .
+
+<ex:Degree/067b0f56f40c16e212b0328c9a83f7ef> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/31ae09155e08904a62b953a3476bd843>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Comunicación Audiovisual" .
+
+<ex:Degree/071828997a550dc391fc7b19103a1b72> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/09975c2d372ec3198a55f6a065c3a205>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Biología" .
+
+<ex:Degree/071e80a69e7eb4845e487c67466aa4e5> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/3e4bb48648712c3477346224adffcfc4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Nutrición Humana y Dietética" .
+
+<ex:Degree/086b36fef9044f88064039da09eb36ff> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/20ceb88f79dfc21dddd297776048cd33>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Derecho y Ciencia Política y Administración Pública" .
+
+<ex:Degree/08b99dce63cbe81207d28830b9f259d8> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75>, <ex:Faculty/d041033ef410d0bf92f124356606f599>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Civil" .
+
+<ex:Degree/090eb052adc9aeb039243a2201066dc6> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6f1fd12a3e77e002f3966f645dafb14a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Antropología y Filosofía" .
+
+<ex:Degree/0c93e14ea09b650fc33ed02d1c7b8cac> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/62bb2b4ced5c6b99a3889d691506c75b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Información y Documentación y Ciencia Política y Administración Pública" .
+
+<ex:Degree/0c9659971419e88db4c0ae01af6587c7> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/af9148acb034809ec6579eb9971acdbf>, <ex:Faculty/c81ffdc31c5cda5406af9998bf51002c>,
+    <ex:Faculty/e63f0c07b952cdb2548981ddf60fa34e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Enfermería" .
+
+<ex:Degree/0cb585bbaa2318217056f287e72c1624> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Ingleses" .
+
+<ex:Degree/0eb2bd70ad563cf7956ee2d6b1533ec4> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fa97a8ea7278fa8686b8e6c6736860f0>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de las Industrias Agrarias y Alimentarias" .
+
+<ex:Degree/0eb40b543d3eef0ddd3deef88fd76fa0> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/1547076cf3f907a87ff796fb6de28439>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia" .
+
+<ex:Degree/0f54cad0f2f45fabc7209e43c948a079> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/09975c2d372ec3198a55f6a065c3a205>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Biotecnología" .
+
+<ex:Degree/10ebcef2143544faf2e628bec39e4ca9> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/e1093a1e338895b3aa7cc9fa53069d23>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Turismo" .
+
+<ex:Degree/111d4f3d601bd994f6c365c935336203> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/62bb2b4ced5c6b99a3889d691506c75b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Educación Social y Información y Documentación" .
+
+<ex:Degree/13e2613d13c90dcfb2ec70294c714e8f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/d041033ef410d0bf92f124356606f599>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Civil y Ingeniería de la Energía y Recursos Minerales" .
+
+<ex:Degree/1907a42ebc7e50ab5b87f2b1dd625d2e> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/15179a9e1b42ddc3ccc70f7626dc0ca2>, <ex:Faculty/22098430e05b5b783a5f995e3e8517c7>,
+    <ex:Faculty/2fa8c0e93e14be01a3292d681ca1741f>, <ex:Faculty/f58aecfd5d821b9678eb5a7448b28e8e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Enfermería" .
+
+<ex:Degree/19617310b7fcd93beda5f1bcd384ff0b> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/09a39c0b521c71ca08c9b5466e6f981e>, <ex:Faculty/37ed05782e1e8c35310b0f7db5977ef3>,
+    <ex:Faculty/385523125b48d8f03dae99a8ca77c0c1>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Relaciones Laborales y Recursos Humanos" .
+
+<ex:Degree/1a4f1b4ecfc93b15567b915219b0c4aa> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Portugueses y Brasileños" .
+
+<ex:Degree/1aa23874bdde3694d57a17792e946c2d> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b09cc60ffab6c1b501bd6be27c9fc593>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Mecánica y Ingeniería Electrónica Industrial y Automática" .
+
+<ex:Degree/1b6f0e081ab208a574c1112e7863dfda> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/9afb21bf82875e1e498644508e286549>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Trabajo Social" .
+
+<ex:Degree/1ba5fe21a0804252d15815a6b3bd3447> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/3e4bb48648712c3477346224adffcfc4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Logopedia" .
+
+<ex:Degree/1c2267798ce5f5ecb30f173520600009> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b09cc60ffab6c1b501bd6be27c9fc593>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Eléctrica y Ingeniería Mecánica" .
+
+<ex:Degree/1cac5d7ab4eafc1c9716cf01c6d03dfb> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/1547076cf3f907a87ff796fb6de28439>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Humanidades" .
+
+<ex:Degree/1e4e2be831543c5e97c12e242d22d9bd> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8d318407c4596aa8e2c7af34b1adf9f5>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Educación Infantil" .
+
+<ex:Degree/1f06ce1bb77757ae38a94d5fb3b5f23f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/48d729a2d82d7dfa63a093f960271a46>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Podología" .
+
+<ex:Degree/1f2e159298f3d0d817ec3caac858bb73> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fe2fbde5936b071cd86eec32718c53be>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Biotecnología" .
+
+<ex:Degree/20f27d43fafbe66227ad64a6c6775148> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/af9148acb034809ec6579eb9971acdbf>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Fisioterapia" .
+
+<ex:Degree/23737f3916e4933b5916213eac866fe7> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b6659d48fcabcfaf5be32a61923f391e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Antropología Social y Cultural" .
+
+<ex:Degree/23ac883debd3f27afc3740979639ef84> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/e1093a1e338895b3aa7cc9fa53069d23>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Administración y Dirección de Empresas" .
+
+<ex:Degree/25fec21fa1029e0dc79fca1e5f26b3ee> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/19379b73b3b7ab8db4d1b3b0b92c4e3f>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Forestal y del Medio Natural" .
+
+<ex:Degree/26c916db2c381540092fd031197985ae> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6d64844cfca517ac79edca8f5a67d914>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Traducción e Interpretación" .
+
+<ex:Degree/26e401d90774eded14f79f28c86f7d51> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/667199033383e345f66d924e153f7608>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Medicina" .
+
+<ex:Degree/27403aec059f74a213c53eb9512ad132> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ad8e9a7d8d7c49296c9a919248a3db1a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Mecánica" .
+
+<ex:Degree/27f73bc7449f36d4c1b113611ec6dc9e> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Desarrollo de Aplicaciones 3D Interactivas y Videojuegos" .
+
+<ex:Degree/28ca8eecdd60c8dc675ef3437c55d750> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/95c6e6249b07a4f2c6b5e4bbddd65332>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Química" .
+
+<ex:Degree/298216e1583e113d7a59e03a9e88bf08> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/98f394722d47c37452079e3e4377547a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Derecho" .
+
+<ex:Degree/29ac36fcfe7f1d213353dd71c0b00234> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/cb1839d202d3eda23b2cdc2b09cbe45c>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Economía" .
+
+<ex:Degree/2ab5ec0a1f770ab9251689f2c7cb628e> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/385523125b48d8f03dae99a8ca77c0c1>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Publicidad y Relaciones Públicas" .
+
+<ex:Degree/2ce31b094a1e3d3db75b16c92f5b9102> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/193c5d38f0565f9a97c3ca11208a2e49>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "PCEO Historia y Historia del Arte" .
+
+<ex:Degree/2e22fb822d95c5320aaec2e223a6aacb> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Filosofía" .
+
+<ex:Degree/316c8ec8abfc14372841a0aec8820dc9> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/85c7cf4d3a8616439a36a15f716bb6ff>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Bellas Artes" .
+
+<ex:Degree/31c105e19383e720bf2ca4e9bacd79d5> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6f1fd12a3e77e002f3966f645dafb14a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Sociología y Ciencia Política y Administración  Pública" .
+
+<ex:Degree/320e2308480c75123ff58a13c2e77a0c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/20ceb88f79dfc21dddd297776048cd33>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Derecho" .
+
+<ex:Degree/32d2b65d172a30c02b2488d2b54638f4> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios de Asia Oriental" .
+
+<ex:Degree/336b1b7b503732716deea8dbe63e1ceb> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/62bb2b4ced5c6b99a3889d691506c75b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Información y Documentación" .
+
+<ex:Degree/350393718b1a2d25b98c5522cf61ca56> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/d041033ef410d0bf92f124356606f599>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería en Geoinformación y Geomática" .
+
+<ex:Degree/359b49f74fe10bceff7c3dfc12351adb> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6f1fd12a3e77e002f3966f645dafb14a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Antropología" .
+
+<ex:Degree/35ccee599e64bb06ecf82960eb0637a2> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/08798eaf5fce6d61a1d600bb84c20771>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de Tecnologías de Telecomunicación" .
+
+<ex:Degree/38fa28a7a82c27b9d1d78b8744af4767> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/1547076cf3f907a87ff796fb6de28439>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia y Ciencias de la Música" .
+
+<ex:Degree/3a694e50fd1e016011fddd73110238f5> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/47067f6b754243f1a53069a9a7c03b11>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Química" .
+
+<ex:Degree/3b1d8db48d4939e1db91fe38268c0d55> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/667199033383e345f66d924e153f7608>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Odontología" .
+
+<ex:Degree/3b35664b0004761e23caa38dff409ff4> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ad8e9a7d8d7c49296c9a919248a3db1a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Eléctrica" .
+
+<ex:Degree/3d6454609e71dcf9bcc34489bec2c9b5> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de Empresa Digital" .
+
+<ex:Degree/3e41b18732c288cc4a0fbc07f00c6699> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Mecánica y Ingeniería Electrónica Industrial y Automática" .
+
+<ex:Degree/3f5adfe73711d81b5b07464249ebf151> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/f921a09e12f17ed6eeff834c0547457c>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Psicología" .
+
+<ex:Degree/3f819166d9b171acb9e771584ae6f2e1> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Filología Clásica" .
+
+<ex:Degree/417b4ddd79a55a9f57bea9f6ea629944> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Árabes e Islámicos" .
+
+<ex:Degree/462e597d1fbf6cb639832112a67a8055> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/0514b2c2384475c33f18e17f5a34a28e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Administración y Dirección de Empresas" .
+
+<ex:Degree/47211fc88d0ce3384e16c915063a3259> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fe8ea443c7900681952215f533745654>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Educación Social" .
+
+<ex:Degree/47c367d9466595c005782479136e6a51> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/5aa89c7c58e1f19101c5e8cc03b23372>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Ciencia y Tecnología de los Alimentos" .
+
+<ex:Degree/48a9aae495c2ca4f2d3398d0686cc994> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c53569948d193612ae9699e741d74ef2>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Terapia Ocupacional" .
+
+<ex:Degree/4a7918dea557cb39b8b67d5a3ed1e8af> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/3e4bb48648712c3477346224adffcfc4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Biomedicina y Terapias Avanzadas" .
+
+<ex:Degree/4ab2e0f4d6c07b682dabfbdcbd03da02> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/61484ca2077ed5641c3471001a312e8f>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Finanzas" .
+
+<ex:Degree/4c3ac3acae06b127f1a4e97ad8815e16> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/826864c3f9cf213b2dfb13d2eb7010c1>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Veterinaria" .
+
+<ex:Degree/4d7e3a794cbbdeb9341723a46d04a11a> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/0514b2c2384475c33f18e17f5a34a28e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Administración y Dirección de Empresas y Ingeniería Informática" .
+
+<ex:Degree/4e8f9ed1e1ce31649a21075600c90a0f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Español: Lengua y Literatura" .
+
+<ex:Degree/4f141334bce234d5ae41629737b83d1c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ad8e9a7d8d7c49296c9a919248a3db1a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Química" .
+
+<ex:Degree/4f66c43021a182470c243cfd32aaad99> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Agroalimentaria y del Medio Rural/Ingeniería de Organización Industrial" .
+
+<ex:Degree/5082634b0bbf98a1fc4af4bfc1b41147> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Lenguas Modernas y sus Literaturas" .
+
+<ex:Degree/514a5e10fca599ee82e8aa78dc1666f8> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/08798eaf5fce6d61a1d600bb84c20771>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de Tecnologías Específicas de Telecomunicación" .
+
+<ex:Degree/558359c20e2934ad05262135746abe57> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/20ceb88f79dfc21dddd297776048cd33>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Estudios Globales / Global Studies" .
+
+<ex:Degree/56d6af26dd9bad2fb889081e3a03ba5d> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/61484ca2077ed5641c3471001a312e8f>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Administración y Dirección de Empresas" .
+
+<ex:Degree/57c34628f4e2c43be3e1e7e92c48dc71> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería de Materiales y Ingeniería Mecánica" .
+
+<ex:Degree/5980124dc66f30d7e8fe7f74b335071b> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/0514b2c2384475c33f18e17f5a34a28e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Economía" .
+
+<ex:Degree/5ad76b65d119e89f70b9eb35569bb0d6> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b04ea75e4e7867de5ff40c48c1ed9e85>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Criminología" .
+
+<ex:Degree/5b63291e93f3ffefe908d3df7f28ff88> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/09a39c0b521c71ca08c9b5466e6f981e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Relaciones Laborales y Recursos Humanos y Administración y Dirección de Empresas" .
+
+<ex:Degree/5bfd41a1a773a9e135437fc047bdb614> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/a1849df95c0c502b7375204caa728d77>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Matemáticas" .
+
+<ex:Degree/5ea8ccd531232efc3cf7794860591621> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/0514b2c2384475c33f18e17f5a34a28e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Administración y Dirección de Empresas y Traducción e Interpretación" .
+
+<ex:Degree/5f01d2d076c38f691428dd302affae1c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/71e65021f1c5310652d72a264dd75418>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Comercio" .
+
+<ex:Degree/5ffe61cacb8cf7ccd5d7daf7721f6ca7> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/04899fbc8f3d8799cb62ae7d3c1bfd97>, <ex:Faculty/dcd7aba401c7dc4879a5c8628a85635a>,
+    <ex:Faculty/ed5cd854cc9ef4200b9a255c582b262b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Maestro en Educación Infantil" .
+
+<ex:Degree/628de1c7a1cb494d85178a960e4c2dca> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/31ae09155e08904a62b953a3476bd843>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia y Patrimonio" .
+
+<ex:Degree/629e30106776b58efb91f2fc2434bbff> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fa97a8ea7278fa8686b8e6c6736860f0>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería de las Industrias Agrarias y Alimentarias y Enología" .
+
+<ex:Degree/65014db29bf003c72fd77c8642423e1b> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b09cc60ffab6c1b501bd6be27c9fc593>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Eléctrica" .
+
+<ex:Degree/655a086c1ea4c02859461f5823d73e5f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c228aa01dd2fd6ae0ed513474c1fe569>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Ciencias de la Actividad Física y del Deporte" .
+
+<ex:Degree/65f3841a86b6734a49208e63ecb5adc9> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia del Arte" .
+
+<ex:Degree/668255b16a476d2c7c6cea802b860c63> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/71e65021f1c5310652d72a264dd75418>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Relaciones Internacionales" .
+
+<ex:Degree/66acab33e405982ab05feadb03b991f2> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fe8ea443c7900681952215f533745654>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Maestro de Educación Primaria" .
+
+<ex:Degree/67c25f454b13cfa0e74442ee9fcb5e03> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/48d729a2d82d7dfa63a093f960271a46>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Fisioterapia" .
+
+<ex:Degree/67e217a7b48c6baccb412d59e9c649d3> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fa97a8ea7278fa8686b8e6c6736860f0>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Agrícola y del Medio Rural y Ingeniería Forestal y del Medio Natural" .
+
+<ex:Degree/6835f712054ce2946c3c8d8bdee75452> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/47067f6b754243f1a53069a9a7c03b11>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Matemáticas" .
+
+<ex:Degree/69b003d6f1b5f650fcbde2daa581fe8c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fe2fbde5936b071cd86eec32718c53be>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Ciencias Ambientales" .
+
+<ex:Degree/6be35a2ebe29561a474849806d7cadd4> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fe2fbde5936b071cd86eec32718c53be>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Biología" .
+
+<ex:Degree/6e4549be039bba005cd23a772a95e850> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/525dd8cf5a08036b4415fa391175cd9a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Informática y Estadística" .
+
+<ex:Degree/6f5add6b845063d50d5e077e06079bef> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/1547076cf3f907a87ff796fb6de28439>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Geografía" .
+
+<ex:Degree/6fa73c6dd57267a597c2e0e98369e22d> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/0514b2c2384475c33f18e17f5a34a28e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Gestión de Pequeñas y Medianas Empresas y Relaciones Laborales y Recursos Humanos" .
+
+<ex:Degree/6fb84f86210ecfc0bb67ec4aafa47d86> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/f921a09e12f17ed6eeff834c0547457c>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Enfermería" .
+
+<ex:Degree/717e783a854536573cdd780cf766c07e> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/3bfd3c13054fe54f01dd772dc5cadbcb>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Agrícola" .
+
+<ex:Degree/7201b182d36b02599d207fcce8b60597> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/9afb21bf82875e1e498644508e286549>, <ex:Faculty/b6659d48fcabcfaf5be32a61923f391e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Educación Social" .
+
+<ex:Degree/724f161950ad55a4939e8a5481e85f9a> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/04899fbc8f3d8799cb62ae7d3c1bfd97>, <ex:Faculty/dcd7aba401c7dc4879a5c8628a85635a>,
+    <ex:Faculty/ed5cd854cc9ef4200b9a255c582b262b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Maestro en Educación Infantil y Maestro en Educación Primaria" .
+
+<ex:Degree/7370d50778a45b36001e7febfde005b0> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/19379b73b3b7ab8db4d1b3b0b92c4e3f>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Agraria" .
+
+<ex:Degree/74c1fadbd79d8a0b2194141c438179e8> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Informática" .
+
+<ex:Degree/770b2ef87a225bdd0b28e4df4bcc6ece> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/d4a0fc7db565bf0347c3c31da46a6ba6>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Derecho" .
+
+<ex:Degree/7901cf7ce1a6dd26739f63e1e65c40b2> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Civil" .
+
+<ex:Degree/7a19298335621a30942d29d551bbd6fb> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia" .
+
+<ex:Degree/7b426485a80628d6a96184ed8b424435> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/010a719fb876dabd413a8cdcd2521d8e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Ciencias de la Actividad Física y del Deporte" .
+
+<ex:Degree/7bc2e0e395f4a764d9a1a2d3d3896e28> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/61484ca2077ed5641c3471001a312e8f>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Comercio Internacional" .
+
+<ex:Degree/7becb9316da56e07afea7dfde989e31d> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/193c5d38f0565f9a97c3ca11208a2e49>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Lengua Española y su Literatura" .
+
+<ex:Degree/7c9fdc937019e6417b2f89648f2e9e67> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Franceses" .
+
+<ex:Degree/7dd9cfc4d91369b5acd5d4af54417f65> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/61484ca2077ed5641c3471001a312e8f>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Economía" .
+
+<ex:Degree/7ea90879dec7b4383584c305a182daaf> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/95c6e6249b07a4f2c6b5e4bbddd65332>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Química" .
+
+<ex:Degree/814d1bd73c7c69af1059ed899d6d3339> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Agroalimentaria y del Medio Rural" .
+
+<ex:Degree/834398a84f46fb8518f5100caf0f40d1> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6f1fd12a3e77e002f3966f645dafb14a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Comunicación y Creación Audiovisual" .
+
+<ex:Degree/84fde5bfa75e9c26c8e24afaadf98e93> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/09a39c0b521c71ca08c9b5466e6f981e>, <ex:Faculty/385523125b48d8f03dae99a8ca77c0c1>,
+    <ex:Faculty/cb1839d202d3eda23b2cdc2b09cbe45c>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Administración y Dirección de Empresas" .
+
+<ex:Degree/85a4f7c23fab88f2f98eccf263c6decf> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/dcd7aba401c7dc4879a5c8628a85635a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Gestión del Turismo" .
+
+<ex:Degree/85df8a5deff08962d08a6e078781ad38> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/525dd8cf5a08036b4415fa391175cd9a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Informática" .
+
+<ex:Degree/888f79581bf30292d2586c0bec7a5ecc> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/31ae09155e08904a62b953a3476bd843>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Español: Lengua y Literatura" .
+
+<ex:Degree/89ac9772677ab53ca94d18e3e0583763> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ad8e9a7d8d7c49296c9a919248a3db1a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Energética" .
+
+<ex:Degree/8b7a06f87169f364eb654ed25d4eb14d> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fe2fbde5936b071cd86eec32718c53be>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "PCEO Ingeniería Forestal y del Medio Natural y Grado Ciencias Ambientales" .
+
+<ex:Degree/8c65f68ec276691291411410655155af> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/71e65021f1c5310652d72a264dd75418>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Comercio y Relaciones Laborales y Recursos Humanos" .
+
+<ex:Degree/8c678b8ff045d0246f84c72e208664e3> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/9952fa217aab3225a9450c1dd24ff66b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Minera" .
+
+<ex:Degree/8fd6724206d49e270df79add90ecc5c9> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fa97a8ea7278fa8686b8e6c6736860f0>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Enología" .
+
+<ex:Degree/90baafdc33891d16dc4a23f719e2b29b> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/f921a09e12f17ed6eeff834c0547457c>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Terapia Ocupacional" .
+
+<ex:Degree/90fca4fc30a18ecc0aa1a44dab29deed> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8d318407c4596aa8e2c7af34b1adf9f5>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Educación Primaria" .
+
+<ex:Degree/92734f72eb1e427b54733e0a5f3fdae5> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b09cc60ffab6c1b501bd6be27c9fc593>, <ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Mecánica" .
+
+<ex:Degree/9433d31edd059d9a7a7ba69b334a6021> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ad8e9a7d8d7c49296c9a919248a3db1a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería en Tecnologías Industriales" .
+
+<ex:Degree/945daec1b320bfee1090b2e9b106d14f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ddca0f084c851a01517835d5bd122ecf>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Mecánica" .
+
+<ex:Degree/95bcf9755e97556e351930922d622953> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ddca0f084c851a01517835d5bd122ecf>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Eléctrica" .
+
+<ex:Degree/95eb184ef36cfad15934b6e8b2fc43e5> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/12ca7a59a88ed75e4a1a78c60ef11dba>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Estudios Policiales" .
+
+<ex:Degree/9616a4bb7211f00a3268eefa56dcecc3> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fe8ea443c7900681952215f533745654>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Pedagogía" .
+
+<ex:Degree/97767b235ebdb7346d22c332ac2b1188> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b04ea75e4e7867de5ff40c48c1ed9e85>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Derecho y Administración y Dirección de Empresas" .
+
+<ex:Degree/9928bdb1b90f5ce08899364de9673a3b> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/20ceb88f79dfc21dddd297776048cd33>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Ciencia Política y Administración Pública" .
+
+<ex:Degree/992d05f38094fb93743e86da7b795976> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fe8ea443c7900681952215f533745654>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Maestro de Educación Infantil" .
+
+<ex:Degree/998176ef8086578270ccd1ae783f3d2b> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8986862b928dd0b281889942854a3cbe>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Farmacia" .
+
+<ex:Degree/9cc3b88a0e412cd3edddbef7bca59d05> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/49f1becb705172968ad7b5dfb966b9e6>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Relaciones Laborales y Recursos Humanos" .
+
+<ex:Degree/9f8c1a50592cc172e61a5d9a8089ae86> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/193c5d38f0565f9a97c3ca11208a2e49>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Información y Documentación" .
+
+<ex:Degree/a27473718d0449f8edf443c5fea8ae15> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/62bb2b4ced5c6b99a3889d691506c75b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "PCEO Traducción e Interpretación y Derecho" .
+
+<ex:Degree/a2be5360c6084f3dc3f3b8c9bf5e152d> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/a1849df95c0c502b7375204caa728d77>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Estadística" .
+
+<ex:Degree/a32a2bdcfe2787abc391a8b03280ca44> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/9952fa217aab3225a9450c1dd24ff66b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Minera y Ingeniería de la Energía" .
+
+<ex:Degree/a36744ff54403c6f8d550a2459fe1a54> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/09975c2d372ec3198a55f6a065c3a205>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "PCEO Biotecnología y Farmacia" .
+
+<ex:Degree/a37ca9c7b7083942cfe74e441717e262> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/cb1839d202d3eda23b2cdc2b09cbe45c>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Finanzas, Banca y Seguros" .
+
+<ex:Degree/a3a3464314e68a0f29b5e6314ebaa690> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/385523125b48d8f03dae99a8ca77c0c1>, <ex:Faculty/b04ea75e4e7867de5ff40c48c1ed9e85>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Derecho" .
+
+<ex:Degree/a5ad1abe2fe8a9e241c6349864d6f3b0> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Lenguas, Literaturas y Culturas Románicas" .
+
+<ex:Degree/a6ec67f2d163c04213cc829817939113> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ddca0f084c851a01517835d5bd122ecf>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería en Electrónica Industrial y Automática" .
+
+<ex:Degree/a77287e77e45b039dc0c3a8d5037ede5> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fa97a8ea7278fa8686b8e6c6736860f0>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Agrícola y del Medio Rural y Ingeniería de las Industrias Agrarias y Alimentarias" .
+
+<ex:Degree/a7f522c3e91a158d9408cb5cef9451c7> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/7f47b3319134574d4ef3df2048c9858d>, <ex:Faculty/9afb21bf82875e1e498644508e286549>,
+    <ex:Faculty/b6659d48fcabcfaf5be32a61923f391e>, <ex:Faculty/c228aa01dd2fd6ae0ed513474c1fe569>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Educación Infantil" .
+
+<ex:Degree/a839182f33d5553e338a32ce99c8757a> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ddca0f084c851a01517835d5bd122ecf>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de Datos e Inteligencia Artificial" .
+
+<ex:Degree/aa65ea074e0750b788831bca194e43db> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Ingleses" .
+
+<ex:Degree/aaae7da672fadd4000ff3037d8071642> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/810d5ca3e71c60c2835746272d0f8aab>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Informática de Servicios y Aplicaciones" .
+
+<ex:Degree/ac0b986e9e9b73858fc7c30cb86693e3> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de Materiales" .
+
+<ex:Degree/af2ab7a1664d6cb56d2df21898937494> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/62bb2b4ced5c6b99a3889d691506c75b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Información y Documentación y Historia" .
+
+<ex:Degree/afb8c9e6943577267acce3f76c4d4a2f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b09cc60ffab6c1b501bd6be27c9fc593>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Eléctrica y Ingeniería Electrónica Industrial y Automática" .
+
+<ex:Degree/afc10d7a30e0abde2ee2815f9bf71228> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/3e4bb48648712c3477346224adffcfc4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Medicina" .
+
+<ex:Degree/afd65d2b5ffce1fc77dea1eac30b5a44> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/9952fa217aab3225a9450c1dd24ff66b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Eléctrica y Ingeniería de la Energía" .
+
+<ex:Degree/b08cef1380d36974437b30794389c7da> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/1547076cf3f907a87ff796fb6de28439>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia del Arte" .
+
+<ex:Degree/b2b69486d698dc751269e0d06ca7aea5> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/193c5d38f0565f9a97c3ca11208a2e49>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia del Arte" .
+
+<ex:Degree/b347273ed4a59af173806ef290b37b2f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ddca0f084c851a01517835d5bd122ecf>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Informática" .
+
+<ex:Degree/b4496399ce8303aa15977655e49edf21> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/98f394722d47c37452079e3e4377547a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Derecho y Ciencia Política y Gestión Pública" .
+
+<ex:Degree/b49c27e7a5e5855be828e49923551ec8> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8986862b928dd0b281889942854a3cbe>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "PCEO Farmacia y Gestión de Pequeñas y Medianas Empresas" .
+
+<ex:Degree/b509374062a9f5573470e0f7bcfa53a7> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/193c5d38f0565f9a97c3ca11208a2e49>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Geografía y Ordenación del Territorio" .
+
+<ex:Degree/b75dc9268d569c7a1c46d37049284196> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/47067f6b754243f1a53069a9a7c03b11>, <ex:Faculty/810d5ca3e71c60c2835746272d0f8aab>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>, <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "PCEO Matemáticas y Ingeniería Informática de Servicios y Aplicaciones" .
+
+<ex:Degree/b825aca4901e3483c4c5a6a2cd8c4064> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/7f47b3319134574d4ef3df2048c9858d>, <ex:Faculty/b6659d48fcabcfaf5be32a61923f391e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Educación Primaria y Educación Infantil" .
+
+<ex:Degree/b83d2a6d83a0ebd115fc1e0822564141> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c53569948d193612ae9699e741d74ef2>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Psicología" .
+
+<ex:Degree/b8c54bfd41682fb2c17eff3eec53a7c2> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Geografia y Planificación Territorial" .
+
+<ex:Degree/ba614f272610b1e107ac2176a25ddb2e> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/d041033ef410d0bf92f124356606f599>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Seguridad" .
+
+<ex:Degree/bae3781ed4086957ba358398ba38583a> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Hebreos y Arameos" .
+
+<ex:Degree/be97e70f1dd29f44c68ede44d35aa2f9> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/193c5d38f0565f9a97c3ca11208a2e49>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Filología Moderna, Inglés" .
+
+<ex:Degree/bff9c79cdd46869e716d32b5ec4a6a63> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Informática en Sistemas de Información" .
+
+<ex:Degree/c08ade1865d705c4f0299b189b38ba81> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/5aa89c7c58e1f19101c5e8cc03b23372>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Química" .
+
+<ex:Degree/c166c92468cbf8a0e3c732c4dd118612> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/9952fa217aab3225a9450c1dd24ff66b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de la Energía" .
+
+<ex:Degree/c1d0e034d53f90b547eb614b3a940588> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/98f394722d47c37452079e3e4377547a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Ciencia Política y Gestión Pública" .
+
+<ex:Degree/c20378b44f8288dbc1e8adf6c74f5142> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6f1fd12a3e77e002f3966f645dafb14a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Trabajo Social" .
+
+<ex:Degree/c21f8102c7be688ebdc891f2ae7f5b60> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/a1849df95c0c502b7375204caa728d77>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Informática" .
+
+<ex:Degree/c2f8c4a89b9a68051a91e9f4c3a383a0> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/62bb2b4ced5c6b99a3889d691506c75b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Pedagogía y Información y Documentación" .
+
+<ex:Degree/c4684ae58f2fcb3a8d744d2b5caa6221> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/193c5d38f0565f9a97c3ca11208a2e49>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia" .
+
+<ex:Degree/c569db23bc1d77b9118be7aa073d24ab> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/48d729a2d82d7dfa63a093f960271a46>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Enfermería" .
+
+<ex:Degree/caeea8c24932821a8a4a88a5a60118ac> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Civil/Arquitectura Técnica" .
+
+<ex:Degree/cb51252670d6c0947c594dd91b1253e1> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/e1093a1e338895b3aa7cc9fa53069d23>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Finanzas y Contabilidad" .
+
+<ex:Degree/cb900d1231ce52c4909694ed1cf6d066> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/7f47b3319134574d4ef3df2048c9858d>, <ex:Faculty/9afb21bf82875e1e498644508e286549>,
+    <ex:Faculty/b6659d48fcabcfaf5be32a61923f391e>, <ex:Faculty/c228aa01dd2fd6ae0ed513474c1fe569>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Educación Primaria" .
+
+<ex:Degree/cbe919f99b7485f7d660180d658f9c71> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Mecánica" .
+
+<ex:Degree/ce97a22695579b11f0e8f83e04fe7f55> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6f1fd12a3e77e002f3966f645dafb14a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Sociología" .
+
+<ex:Degree/ce9b0bd81440d662cc96fd877bcd0a1c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería Informática de Sistemas de Información y Información y Documentación" .
+
+<ex:Degree/cf274276628e8275bb52a2b889ee478f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/98f394722d47c37452079e3e4377547a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Relaciones Laborales y Recursos Humanos" .
+
+<ex:Degree/cf3131d93feb09a291bde4ba75464113> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8e888203488460cdd6b05cc549af38af>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Filosofía" .
+
+<ex:Degree/cf6da82048ee2b01af4560a57a32d36f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Clásicos" .
+
+<ex:Degree/cfe6b10de25b9368f89f9ec7a848ae23> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de Organización Industrial" .
+
+<ex:Degree/d17b1a432a4cbba2a466f1646fd2472c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/31ae09155e08904a62b953a3476bd843>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Diseño de Videojuegos" .
+
+<ex:Degree/d1b69d00e3e997d0210a5a3ddb78dcfe> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ddca0f084c851a01517835d5bd122ecf>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Aeroespacial" .
+
+<ex:Degree/d5b8925fa2b04db1b60d2be089409244> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Italianos" .
+
+<ex:Degree/d62e4605ea78b4f3ae8327bfc2275982> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6f1fd12a3e77e002f3966f645dafb14a>, <ex:Faculty/b693052e3fdc7cf3e502b113a7b22c82>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Relaciones Laborales y Recursos Humanos" .
+
+<ex:Degree/d682f629a6accface6ee4adeaedcf967> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Historia y Ciencias de la Música" .
+
+<ex:Degree/d70bda8c663c37e4bed3745385292999> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Filología Hispánica" .
+
+<ex:Degree/d7c633f6fe0e63a604182148c0732dd0> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Arquitectura Técnica" .
+
+<ex:Degree/d993f667e4d29aaf3a143903a50d1987> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/da5f17f56f91db0d2ceec1ae7ab979f5>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Piloto de Aviación Comercial y Operaciones Aéreas" .
+
+<ex:Degree/dc2f8fc44d0dc044d57c144bfc3e6bb8> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/04899fbc8f3d8799cb62ae7d3c1bfd97>, <ex:Faculty/dcd7aba401c7dc4879a5c8628a85635a>,
+    <ex:Faculty/ed5cd854cc9ef4200b9a255c582b262b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Maestro en Educación Primaria" .
+
+<ex:Degree/dcf20aaf06cef0ab9f71adf025763e06> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ed5cd854cc9ef4200b9a255c582b262b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Pedagogía" .
+
+<ex:Degree/de4bad3a3125427b70182fb81b9e2e13> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/47067f6b754243f1a53069a9a7c03b11>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Física" .
+
+<ex:Degree/de7661ebcfebf92b72870738c0da36c5> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/3bfd3c13054fe54f01dd772dc5cadbcb>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Ciencias Ambientales" .
+
+<ex:Degree/de7de6acf63036ce8ff518fef5a14657> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/20ceb88f79dfc21dddd297776048cd33>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Criminología" .
+
+<ex:Degree/de982187f5cc388460a2143c1f02d729> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/a1849df95c0c502b7375204caa728d77>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Física" .
+
+<ex:Degree/df2736ef7e3ee6ee96e15dfed4ecc702> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/3e4bb48648712c3477346224adffcfc4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Biomédica" .
+
+<ex:Degree/e13b5d4bf95c7d6362e90aaa006bf789> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/a1849df95c0c502b7375204caa728d77>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "PCEO Estadística y Ingeniería Informática" .
+
+<ex:Degree/e3d18ea8b7df2c70a85388f3879825e7> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/9952fa217aab3225a9450c1dd24ff66b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería en Geomática y Topografía" .
+
+<ex:Degree/e4a1e0d4fd871338237283a809125503> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/61484ca2077ed5641c3471001a312e8f>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Turismo" .
+
+<ex:Degree/e4b0df23d2e6a4ba7c49c6f881a8562c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/0514b2c2384475c33f18e17f5a34a28e>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Administración y Dirección de Empresas y Derecho" .
+
+<ex:Degree/e555435aeb0ffa20dc95c773533d63e8> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/15179a9e1b42ddc3ccc70f7626dc0ca2>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Fisioterapia" .
+
+<ex:Degree/e623b5d619288e8f15f132f0ce5d616a> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ad8e9a7d8d7c49296c9a919248a3db1a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería en Organización Industrial" .
+
+<ex:Degree/e652e9601807513648f3adc0895dd6a1> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/08798eaf5fce6d61a1d600bb84c20771>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "PCEO Ingeniería de Tecnologías de Telecomunicación y de Administración y Dirección de Empresas" .
+
+<ex:Degree/e924fb485f2c35da1ab034b3b0f3c609> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/a1849df95c0c502b7375204caa728d77>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "PCEO Física y Matemáticas" .
+
+<ex:Degree/eaee98edffb0a74266c6a39bb1e5aac4> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6e66f66a46d2c132fabfa72655ff15bd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Agraria y Energética" .
+
+<ex:Degree/eb431adea9f384274a0f1f09b6de9750> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/6e66f66a46d2c132fabfa72655ff15bd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Forestal: Industrias Forestales" .
+
+<ex:Degree/ebb7f267020b993d6ef06ecb481e566d> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/a1849df95c0c502b7375204caa728d77>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Geología" .
+
+<ex:Degree/ec4f224f2c9dd675a81a53454307d03b> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/e9adf88b14fb2f320240cd9892b53c60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Fundamentos de la Arquitectura" .
+
+<ex:Degree/eca61abb3b4d568075484f9af6b85438> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/d4a0fc7db565bf0347c3c31da46a6ba6>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Derecho y Administración y Dirección de Empresas" .
+
+<ex:Degree/ecdc524817b59432e893fcb5ee0f249f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/d041033ef410d0bf92f124356606f599>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de la Energía y Recursos Minerales" .
+
+<ex:Degree/ecf45883948cb896ebea586d04172fd2> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/b1bd7418e42f38955c538847bcbe22e4>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Periodismo" .
+
+<ex:Degree/eda211875383570bfa46c2baf63d8c06> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/8be98f813e5c23545ee97fc26563fe60>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Estudios Alemanes" .
+
+<ex:Degree/edf34a0e9007eac99a8e7ce06f1a56a4> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Arquitectura Técnica" .
+
+<ex:Degree/f0a1deb6592bc3d33990988e7fef523b> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/47bb3a3a9d09115de1b4c1b4cd407db0>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Trabajo Social" .
+
+<ex:Degree/f1ddac27ff887114cff7fedb6a2ac17f> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/fa97a8ea7278fa8686b8e6c6736860f0>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Agrícola y del Medio Rural" .
+
+<ex:Degree/f2cc1b56b84f35f69700f921fefd0c53> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/dcd7aba401c7dc4879a5c8628a85635a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Gestión de Turismo y Gestión de Pequeñas y Medianas Empresas" .
+
+<ex:Degree/f4090830c6dfe4184db53501241e9881> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/62bb2b4ced5c6b99a3889d691506c75b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8>;
+  rdfs:label "Traducción e Interpretación" .
+
+<ex:Degree/f6fbc0dc912e3a0713190bdfdc02e86c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/cb1839d202d3eda23b2cdc2b09cbe45c>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Marketing e Investigación de Mercados" .
+
+<ex:Degree/f71996e7a9335f8a0321fa34e38778a4> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/47067f6b754243f1a53069a9a7c03b11>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "Estadística" .
+
+<ex:Degree/f87c9ce47eebe680e2b6b9c18ae531b0> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/48d729a2d82d7dfa63a093f960271a46>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe>;
+  rdfs:label "Nutrición Humana y Dietética" .
+
+<ex:Degree/f96ac1b5e99d701e4a30617b58bb91a8> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/a1849df95c0c502b7375204caa728d77>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Geológica" .
+
+<ex:Degree/fac6e80078e9fcd178dd96f3798fb625> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería de la Salud" .
+
+<ex:Degree/fb66addd91c8563ba5fa6f4b97c5b990> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/61484ca2077ed5641c3471001a312e8f>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Marketing e Investigación de Mercados" .
+
+<ex:Degree/fb96b96068709fcf328cfc36f750dc1d> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/47067f6b754243f1a53069a9a7c03b11>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd>;
+  rdfs:label "PCEO Matemáticas y Física" .
+
+<ex:Degree/fd16017cc47f829d3dc88ec48801e1f4> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/20ceb88f79dfc21dddd297776048cd33>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Derecho y Criminología" .
+
+<ex:Degree/fd1b3d1972d98ec36ac4cb324ae9e5f2> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ed5cd854cc9ef4200b9a255c582b262b>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "Educación Social" .
+
+<ex:Degree/fd9be6ef1e4bf6a657a97261a6114b2e> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería Agroalimentaria" .
+
+<ex:Degree/fdad01d3c8eb42734455d33f4eb53daf> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/98f394722d47c37452079e3e4377547a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Derecho y Administración y Dirección de Empresas" .
+
+<ex:Degree/fe24f0053905e648f202aa6e16d3ac6c> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/385523125b48d8f03dae99a8ca77c0c1>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e>;
+  rdfs:label "PCEO Publicidad y Relaciones Públicas y Turismo" .
+
+<ex:Degree/ff1693e98a41dbaeca849977de9e6b95> a lude:Degree;
+  lude:academicYear "2023-2024";
+  lude:deliveredAt <ex:Faculty/ad8e9a7d8d7c49296c9a919248a3db1a>;
+  lude:hasAcademicLevel <ex:AcademicLevel/d6d85d89b4612501521435bd3f620a9a>;
+  lude:hasKnowledgeArea <ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025>;
+  rdfs:label "Ingeniería en Diseño Industrial y Desarrollo de Producto" .
+
+<ex:Faculty/010a719fb876dabd413a8cdcd2521d8e> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Facultad de Ciencias de la Actividad Física y del Deporte" .
+
+<ex:Faculty/04899fbc8f3d8799cb62ae7d3c1bfd97> a lude:Faculty;
+  lude:campus "Zamora";
+  rdfs:label "Escuela Universitaria de Magisterio" .
+
+<ex:Faculty/0514b2c2384475c33f18e17f5a34a28e> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Economía y Empresa" .
+
+<ex:Faculty/08798eaf5fce6d61a1d600bb84c20771> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Escuela Técnica Superiorde  Ingenieros de Telecomunicación" .
+
+<ex:Faculty/09975c2d372ec3198a55f6a065c3a205> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Biología" .
+
+<ex:Faculty/09a39c0b521c71ca08c9b5466e6f981e> a lude:Faculty;
+  lude:campus "Soria";
+  rdfs:label "Facultad de Ciencias Empresariales y del Trabajo de Soria" .
+
+<ex:Faculty/12ca7a59a88ed75e4a1a78c60ef11dba> a lude:Faculty;
+  lude:campus "Ávila";
+  rdfs:label "Centro Universitario de Formación de la Policía Nacional, O.A." .
+
+<ex:Faculty/15179a9e1b42ddc3ccc70f7626dc0ca2> a lude:Faculty;
+  lude:campus "Soria";
+  rdfs:label "Facultad de Ciencias de la Salud" .
+
+<ex:Faculty/1547076cf3f907a87ff796fb6de28439> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Geografía e Historia" .
+
+<ex:Faculty/19379b73b3b7ab8db4d1b3b0b92c4e3f> a lude:Faculty;
+  lude:campus "León", "Ponferrada";
+  rdfs:label "Escuela de Ingeniería Agraria y Forestal" .
+
+<ex:Faculty/193c5d38f0565f9a97c3ca11208a2e49> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Facultad de Filosofía y Letras" .
+
+<ex:Faculty/20ceb88f79dfc21dddd297776048cd33> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Derecho" .
+
+<ex:Faculty/22098430e05b5b783a5f995e3e8517c7> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Facultad de Enfermería" .
+
+<ex:Faculty/2fa8c0e93e14be01a3292d681ca1741f> a lude:Faculty;
+  lude:campus "Segovia";
+  rdfs:label "Facultad de Enfermería sede Segovia" .
+
+<ex:Faculty/31ae09155e08904a62b953a3476bd843> a lude:Faculty;
+  lude:campus "Burgos";
+  rdfs:label "Facultad de Humanidades y Comunicación" .
+
+<ex:Faculty/37ed05782e1e8c35310b0f7db5977ef3> a lude:Faculty;
+  lude:campus "Palencia";
+  rdfs:label "Facultad de Ciencias del Trabajo" .
+
+<ex:Faculty/385523125b48d8f03dae99a8ca77c0c1> a lude:Faculty;
+  lude:campus "Segovia";
+  rdfs:label "Facultad de Ciencias Sociales, Jurídicas y de la Comunicación" .
+
+<ex:Faculty/3bfd3c13054fe54f01dd772dc5cadbcb> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Ciencias Agrarias y Ambientales" .
+
+<ex:Faculty/3e4bb48648712c3477346224adffcfc4> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Facultad de Medicina" .
+
+<ex:Faculty/43342d8761b05d4e4f644f5ce364c7cd> a lude:Faculty;
+  lude:campus "Burgos";
+  rdfs:label "Escuela Politécnica Superior" .
+
+<ex:Faculty/47067f6b754243f1a53069a9a7c03b11> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Facultad de Ciencias" .
+
+<ex:Faculty/47bb3a3a9d09115de1b4c1b4cd407db0> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Escuela Universitaria de Trabajo Social" .
+
+<ex:Faculty/48d729a2d82d7dfa63a093f960271a46> a lude:Faculty;
+  lude:campus "León", "Ponferrada";
+  rdfs:label "Facultad de Ciencias de la Salud" .
+
+<ex:Faculty/49f1becb705172968ad7b5dfb966b9e6> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Facultad de Ciencias del Trabajo" .
+
+<ex:Faculty/525dd8cf5a08036b4415fa391175cd9a> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Escuela de Ingeniería Informática de Valladolid" .
+
+<ex:Faculty/5aa89c7c58e1f19101c5e8cc03b23372> a lude:Faculty;
+  lude:campus "Burgos";
+  rdfs:label "Facultad de Ciencias" .
+
+<ex:Faculty/61484ca2077ed5641c3471001a312e8f> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Facultad de Ciencias Económicas y Empresariales" .
+
+<ex:Faculty/62bb2b4ced5c6b99a3889d691506c75b> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Traducción y Documentación" .
+
+<ex:Faculty/667199033383e345f66d924e153f7608> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Medicina" .
+
+<ex:Faculty/6d64844cfca517ac79edca8f5a67d914> a lude:Faculty;
+  lude:campus "Soria";
+  rdfs:label "Facultad de Traducción e Interpretación" .
+
+<ex:Faculty/6e66f66a46d2c132fabfa72655ff15bd> a lude:Faculty;
+  lude:campus "Soria";
+  rdfs:label "Escuela de Ingeniería de la Industria Forestal, Agronómica y de la Bioenergía" .
+
+<ex:Faculty/6f1fd12a3e77e002f3966f645dafb14a> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Ciencias Sociales" .
+
+<ex:Faculty/71e65021f1c5310652d72a264dd75418> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Facultad de Comercio" .
+
+<ex:Faculty/7f47b3319134574d4ef3df2048c9858d> a lude:Faculty;
+  lude:campus "Segovia";
+  rdfs:label "Facultad de Educación de Segovia" .
+
+<ex:Faculty/810d5ca3e71c60c2835746272d0f8aab> a lude:Faculty;
+  lude:campus "Segovia";
+  rdfs:label "Escuela de Ingeniería Informática de Segovia" .
+
+<ex:Faculty/826864c3f9cf213b2dfb13d2eb7010c1> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Facultad de Veterinaria" .
+
+<ex:Faculty/85c7cf4d3a8616439a36a15f716bb6ff> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Bellas Artes" .
+
+<ex:Faculty/8986862b928dd0b281889942854a3cbe> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Farmacia" .
+
+<ex:Faculty/8be98f813e5c23545ee97fc26563fe60> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Filología" .
+
+<ex:Faculty/8d318407c4596aa8e2c7af34b1adf9f5> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Facultad de Educación" .
+
+<ex:Faculty/8e888203488460cdd6b05cc549af38af> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Filosofía" .
+
+<ex:Faculty/95c6e6249b07a4f2c6b5e4bbddd65332> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Ciencias Químicas" .
+
+<ex:Faculty/98f394722d47c37452079e3e4377547a> a lude:Faculty;
+  lude:campus "Burgos";
+  rdfs:label "Facultad de Derecho" .
+
+<ex:Faculty/9952fa217aab3225a9450c1dd24ff66b> a lude:Faculty;
+  lude:campus "León", "Ponferrada";
+  rdfs:label "Escuela Superior y Técnica de Ingenieros de Minas" .
+
+<ex:Faculty/9afb21bf82875e1e498644508e286549> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Facultad de Educación y Trabajo Social" .
+
+<ex:Faculty/a1849df95c0c502b7375204caa728d77> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Ciencias" .
+
+<ex:Faculty/ad8e9a7d8d7c49296c9a919248a3db1a> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Escuela de Ingenierías Industriales" .
+
+<ex:Faculty/af9148acb034809ec6579eb9971acdbf> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Enfermería y Fisioterapia" .
+
+<ex:Faculty/b04ea75e4e7867de5ff40c48c1ed9e85> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Facultad de Derecho" .
+
+<ex:Faculty/b09cc60ffab6c1b501bd6be27c9fc593> a lude:Faculty;
+  lude:campus "Béjar";
+  rdfs:label "Escuela Técnica Superior de Ingeniería Industrial" .
+
+<ex:Faculty/b1bd7418e42f38955c538847bcbe22e4> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Facultad de Filosofia  y Letras" .
+
+<ex:Faculty/b6659d48fcabcfaf5be32a61923f391e> a lude:Faculty;
+  lude:campus "Palencia";
+  rdfs:label "Facultad de Educación de Palencia" .
+
+<ex:Faculty/b693052e3fdc7cf3e502b113a7b22c82> a lude:Faculty;
+  lude:campus "Zamora";
+  rdfs:label "Escuela Universitaria de Relaciones Laborales" .
+
+<ex:Faculty/c228aa01dd2fd6ae0ed513474c1fe569> a lude:Faculty;
+  lude:campus "Soria";
+  rdfs:label "Facultad de Educación de Soria" .
+
+<ex:Faculty/c240b7563ffee4e24e404bf6d71e4f75> a lude:Faculty;
+  lude:campus "Zamora";
+  rdfs:label "Escuela Politécnica Superior de Zamora" .
+
+<ex:Faculty/c53569948d193612ae9699e741d74ef2> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Psicología" .
+
+<ex:Faculty/c81ffdc31c5cda5406af9998bf51002c> a lude:Faculty;
+  lude:campus "Zamora";
+  rdfs:label "Escuela Universitaria de Enfermería SACYL" .
+
+<ex:Faculty/cb1839d202d3eda23b2cdc2b09cbe45c> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Facultad de Ciencias Económicas y  Empresariales" .
+
+<ex:Faculty/d041033ef410d0bf92f124356606f599> a lude:Faculty;
+  lude:campus "Ávila";
+  rdfs:label "Escuela Politécnica Superior de Ávila" .
+
+<ex:Faculty/d4a0fc7db565bf0347c3c31da46a6ba6> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Facultad de Derecho" .
+
+<ex:Faculty/da5f17f56f91db0d2ceec1ae7ab979f5> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Escuela Aeronáutica Adventia (European College of Aeronautics)" .
+
+<ex:Faculty/dcd7aba401c7dc4879a5c8628a85635a> a lude:Faculty;
+  lude:campus "Ávila";
+  rdfs:label "Escuela Universitaria de Educación y Turismo" .
+
+<ex:Faculty/ddca0f084c851a01517835d5bd122ecf> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Escuela de Ingenierías Industrial, Informática y Aeroespacial" .
+
+<ex:Faculty/e1093a1e338895b3aa7cc9fa53069d23> a lude:Faculty;
+  lude:campus "Burgos";
+  rdfs:label "Facultad de Ciencias Económicas y Empresariales" .
+
+<ex:Faculty/e63f0c07b952cdb2548981ddf60fa34e> a lude:Faculty;
+  lude:campus "Ávila";
+  rdfs:label "Escuela Universitaria de Enfermería de Avila" .
+
+<ex:Faculty/e9adf88b14fb2f320240cd9892b53c60> a lude:Faculty;
+  lude:campus "Valladolid";
+  rdfs:label "Escuela Técnica Superior de Arquitectura" .
+
+<ex:Faculty/ed5cd854cc9ef4200b9a255c582b262b> a lude:Faculty;
+  lude:campus "Salamanca";
+  rdfs:label "Facultad de Educación" .
+
+<ex:Faculty/f58aecfd5d821b9678eb5a7448b28e8e> a lude:Faculty;
+  lude:campus "Palencia";
+  rdfs:label "Escuela Universitaria de Enfermería Dr.Dacio Crespo de Palencia (Adscrita a la UVa)" .
+
+<ex:Faculty/f921a09e12f17ed6eeff834c0547457c> a lude:Faculty;
+  lude:campus "Burgos";
+  rdfs:label "Facultad de Ciencias de la Salud" .
+
+<ex:Faculty/fa97a8ea7278fa8686b8e6c6736860f0> a lude:Faculty;
+  lude:campus "Palencia";
+  rdfs:label "Escuela Técnica Superior de Ingenierías Agrarias" .
+
+<ex:Faculty/fe2fbde5936b071cd86eec32718c53be> a lude:Faculty;
+  lude:campus "León";
+  rdfs:label "Facultad de Ciencias Biológicas y Ambientales" .
+
+<ex:Faculty/fe8ea443c7900681952215f533745654> a lude:Faculty;
+  lude:campus "Burgos";
+  rdfs:label "Facultad de Educación" .
+
+<ex:KnowledgeArea/03b7c4d6f22bd8efa1659d8e6a06d97e> a lude:KnowledgeArea;
+  lude:code "03b7c4d6f22bd8efa1659d8e6a06d97e";
+  rdfs:label "Ciencias Sociales y Jurídicas" .
+
+<ex:KnowledgeArea/0957ac6a7296b4e6ef4d4e8d25691025> a lude:KnowledgeArea;
+  lude:code "0957ac6a7296b4e6ef4d4e8d25691025";
+  rdfs:label "Ingeniería y Arquitectura" .
+
+<ex:KnowledgeArea/3a55b686cea34a8923b6ea395549772e> a lude:KnowledgeArea;
+  lude:code "3a55b686cea34a8923b6ea395549772e";
+  rdfs:label "Otros" .
+
+<ex:KnowledgeArea/72ceb55b13672d5fdbac7ce07f1e85a8> a lude:KnowledgeArea;
+  lude:code "72ceb55b13672d5fdbac7ce07f1e85a8";
+  rdfs:label "Artes y Humanidades" .
+
+<ex:KnowledgeArea/afc4b5d3b7e78e8fb66cf859c95aaefe> a lude:KnowledgeArea;
+  lude:code "afc4b5d3b7e78e8fb66cf859c95aaefe";
+  rdfs:label "Ciencias de la Salud" .
+
+<ex:KnowledgeArea/cca488c1d5d31aa9a4c4356b47f75ebd> a lude:KnowledgeArea;
+  lude:code "cca488c1d5d31aa9a4c4356b47f75ebd";
+  rdfs:label "Ciencias" .
+
+<ex:University/080475033eeb8f14c9bd1119f9fa6871> a lude:University;
+  lude:acronym "UNED";
+  lude:cif "Q2818016D";
+  lude:email "infouned@adm.uned.es";
+  lude:id "080475033eeb8f14c9bd1119f9fa6871";
+  lude:modality "No Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "91398600";
+  lude:type "Pública";
+  lude:url "www.uned.es";
+  rdfs:label "Universidad Nacional de Educación a Distancia" .
+
+<ex:University/094757ed9d7e9bb8929a087e18874962> a lude:University;
+  lude:acronym "UOV";
+  lude:cif "Q3318001I";
+  lude:email "rectorado@uniovi.es";
+  lude:id "094757ed9d7e9bb8929a087e18874962";
+  lude:modality "Presencial";
+  lude:publicationYear "1608";
+  lude:telephone "985104058";
+  lude:type "Pública";
+  lude:url "www.uniovi.es";
+  rdfs:label "Universidad de Oviedo" .
+
+<ex:University/15d26bf729b84e22210b99d94c66cd90> a lude:University;
+  lude:acronym "UVI";
+  lude:cif "Q8650002B";
+  lude:email "informacion@uvigo.es";
+  lude:id "15d26bf729b84e22210b99d94c66cd90";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "986812000";
+  lude:type "Pública";
+  lude:url "www.uvigo.es";
+  rdfs:label "Universidad de Vigo" .
+
+<ex:University/16249b9d3890e9951fa8dcc315733ea8> a lude:University;
+  lude:acronym "UEX";
+  lude:cif "Q0618001B";
+  lude:email "virtual@unex.es";
+  lude:id "16249b9d3890e9951fa8dcc315733ea8";
+  lude:modality "Presencial";
+  lude:publicationYear "1973";
+  lude:telephone "924289300";
+  lude:type "Pública";
+  lude:url "www.unex.es";
+  rdfs:label "Universidad de Extremadura" .
+
+<ex:University/17a1b9e0f1c1e0719761a30d50700965> a lude:University;
+  lude:acronym "UPGC";
+  lude:cif "Q3518001G";
+  lude:email "universidad@ulpgc.es";
+  lude:id "17a1b9e0f1c1e0719761a30d50700965";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "928451000";
+  lude:type "Pública";
+  lude:url "www.ulpgc.es";
+  rdfs:label "Universidad de Las Palmas de Gran Canaria" .
+
+<ex:University/186d47028db001c7a7d88906c21f5fee> a lude:University;
+  lude:acronym "UPC";
+  lude:cif "Q0818003F";
+  lude:email "info@upc.edu";
+  lude:id "186d47028db001c7a7d88906c21f5fee";
+  lude:modality "Presencial";
+  lude:publicationYear "1971";
+  lude:telephone "934016200";
+  lude:type "Pública";
+  lude:url "www.upc.es";
+  rdfs:label "Universidad Politécnica de Catalunya" .
+
+<ex:University/24e63f7c3d8596b44655e9ad9bfdf5f5> a lude:University;
+  lude:acronym "UZA";
+  lude:cif "Q5018001G";
+  lude:email "ciu@unizar.es";
+  lude:id "24e63f7c3d8596b44655e9ad9bfdf5f5";
+  lude:modality "Presencial";
+  lude:publicationYear "1542";
+  lude:telephone "976761001";
+  lude:type "Pública";
+  rdfs:label "Universidad de Zaragoza" .
+
+<ex:University/26e6f2790707f868f9d05141e6f2f906> a lude:University;
+  lude:acronym "UDG";
+  lude:cif "Q6750002E";
+  lude:email "informacio@udg.edu";
+  lude:id "26e6f2790707f868f9d05141e6f2f906";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "972418046";
+  lude:type "Pública";
+  rdfs:label "Universitat de Girona" .
+
+<ex:University/2ddd97caa885c032af0e206d1a7b5c85> a lude:University;
+  lude:acronym "UNIA";
+  lude:cif "Q7350007F";
+  lude:email "postgrado@unia.es";
+  lude:id "2ddd97caa885c032af0e206d1a7b5c85";
+  lude:modality "Especial";
+  lude:publicationYear "2013";
+  lude:telephone "954462299";
+  lude:type "Pública";
+  rdfs:label "Universidad Internacional de Andalucía" .
+
+<ex:University/2f0fa6cb7c08610911b3258fd5f2738a> a lude:University;
+  lude:acronym "UIB";
+  lude:cif "Q0718001A";
+  lude:email "informacio@uib.es";
+  lude:id "2f0fa6cb7c08610911b3258fd5f2738a";
+  lude:modality "Presencial";
+  lude:publicationYear "1978";
+  lude:telephone "971173000";
+  lude:type "Pública";
+  lude:url "www.uib.es/";
+  rdfs:label "Universitat de les Illes Balears" .
+
+<ex:University/30962703623f1f1d21c737a0c0673761> a lude:University;
+  lude:acronym "UMA";
+  lude:cif "Q2918001E";
+  lude:email "informacion@uma.es";
+  lude:id "30962703623f1f1d21c737a0c0673761";
+  lude:modality "Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "952131000";
+  lude:type "Pública";
+  lude:url "www.uma.es";
+  rdfs:label "Universidad de Málaga" .
+
+<ex:University/3105c9fd85b6cfd224f8d1b92970ab2f> a lude:University;
+  lude:acronym "UCN";
+  lude:cif "Q3918001C";
+  lude:email "acceso@unican.es";
+  lude:id "3105c9fd85b6cfd224f8d1b92970ab2f";
+  lude:modality "Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "942200984";
+  lude:type "Pública";
+  lude:url "www.unican.es";
+  rdfs:label "Universidad de Cantabria" .
+
+<ex:University/330a9bcca27a6c6e467081bfdc1e65cd> a lude:University;
+  lude:acronym "UAH";
+  lude:cif "Q2818018J";
+  lude:email "ciu@uah.es";
+  lude:id "330a9bcca27a6c6e467081bfdc1e65cd";
+  lude:modality "Presencial";
+  lude:publicationYear "1977";
+  lude:telephone "918854000";
+  lude:type "Pública";
+  lude:url "www.uah.es";
+  rdfs:label "Universidad de Alcalá" .
+
+<ex:University/3bd27a309cbe4e2d7f35ec99b74525c0> a lude:University;
+  lude:acronym "UPF";
+  lude:cif "Q5850017D";
+  lude:id "3bd27a309cbe4e2d7f35ec99b74525c0";
+  lude:modality "Presencial";
+  lude:publicationYear "1990";
+  lude:telephone "935422000";
+  lude:type "Pública";
+  lude:url "www.upf.edu";
+  rdfs:label "Universidad Pompeu Fabra" .
+
+<ex:University/4bf5231621b187a3ed12c5741fc3f19d> a lude:University;
+  lude:acronym "UPM";
+  lude:cif "Q2818015F";
+  lude:email "gabinete.rector@upm.es";
+  lude:id "4bf5231621b187a3ed12c5741fc3f19d";
+  lude:modality "Presencial";
+  lude:publicationYear "1971";
+  lude:telephone "913366200";
+  lude:type "Pública";
+  lude:url "www.upm.es";
+  rdfs:label "Universidad Politécnica de Madrid" .
+
+<ex:University/4d9d7d9cad3c91e4f4fff77c396ee9ee> a lude:University;
+  lude:acronym "UPV";
+  lude:cif "Q4618002B";
+  lude:email "informacion@upv.es";
+  lude:id "4d9d7d9cad3c91e4f4fff77c396ee9ee";
+  lude:modality "Presencial";
+  lude:publicationYear "1971";
+  lude:telephone "963877000";
+  lude:type "Pública";
+  lude:url "www.upv.es";
+  rdfs:label "Universitat Politècnica de València" .
+
+<ex:University/51dcd00716a08519e65a732cb87c3b71> a lude:University;
+  lude:acronym "USAL";
+  lude:cif "Q3718001E";
+  lude:email "infogral@usal.es";
+  lude:id "51dcd00716a08519e65a732cb87c3b71";
+  lude:modality "Presencial";
+  lude:publicationYear "1218";
+  lude:telephone "923294400";
+  lude:type "Pública";
+  lude:url "www.usal.es";
+  rdfs:label "Universidad de Salamanca" .
+
+<ex:University/64597f645a8194bb9beed6a3aa675d5b> a lude:University;
+  lude:acronym "ULL";
+  lude:cif "Q3818001D";
+  lude:email "prensa1@ull.es";
+  lude:id "64597f645a8194bb9beed6a3aa675d5b";
+  lude:modality "Presencial";
+  lude:publicationYear "1792";
+  lude:telephone "922319000";
+  lude:type "Pública";
+  lude:url "www.ull.es";
+  rdfs:label "Universidad de La Laguna" .
+
+<ex:University/703d90006d377d97e3212ab3312a4e0d> a lude:University;
+  lude:acronym "USC";
+  lude:cif "Q1518001A";
+  lude:email "reitor@usc.es";
+  lude:id "703d90006d377d97e3212ab3312a4e0d";
+  lude:modality "Presencial";
+  lude:publicationYear "1504";
+  lude:telephone "981563100";
+  lude:type "Pública";
+  lude:url "www.usc.es";
+  rdfs:label "Universidad de Santiago de Compostela" .
+
+<ex:University/79c02c40f6f40e7dbda1c9193c995152> a lude:University;
+  lude:acronym "UPO";
+  lude:cif "Q9150016E";
+  lude:id "79c02c40f6f40e7dbda1c9193c995152";
+  lude:modality "Presencial";
+  lude:publicationYear "1997";
+  lude:telephone "954349200";
+  lude:type "Pública";
+  lude:url "www.upo.es";
+  rdfs:label "Universidad Pablo de Olavide" .
+
+<ex:University/7a90ec99428048f3a58539d18c749ea7> a lude:University;
+  lude:acronym "URJC";
+  lude:cif "Q2803011B";
+  lude:email "info@urjc.es";
+  lude:id "7a90ec99428048f3a58539d18c749ea7";
+  lude:modality "Presencial";
+  lude:publicationYear "1996";
+  lude:telephone "916655060";
+  lude:type "Pública";
+  lude:url "www.urjc.es";
+  rdfs:label "Universidad Rey Juan Carlos" .
+
+<ex:University/7ce4c67f7247673210d9b6d8aa5e7570> a lude:University;
+  lude:acronym "UBA";
+  lude:cif "Q0818001J";
+  lude:email "comunicacio@ub.edu";
+  lude:id "7ce4c67f7247673210d9b6d8aa5e7570";
+  lude:modality "Presencial";
+  lude:publicationYear "1450";
+  lude:telephone "934035417";
+  lude:type "Pública";
+  lude:url "www.ub.es";
+  rdfs:label "Universidad de Barcelona" .
+
+<ex:University/871a4d42a733c080da0f1935663a2f05> a lude:University;
+  lude:acronym "UIMP";
+  lude:cif "Q2818022B";
+  lude:id "871a4d42a733c080da0f1935663a2f05";
+  lude:modality "Especial";
+  lude:publicationYear "1945";
+  lude:telephone "915920600";
+  lude:type "Pública";
+  lude:url "www.uimp.es";
+  rdfs:label "Universidad Internacional Menéndez Pelayo" .
+
+<ex:University/8841d88268e139663a8723e418715e78> a lude:University;
+  lude:acronym "URV";
+  lude:cif "Q9350003A";
+  lude:email "info@urv.cat";
+  lude:id "8841d88268e139663a8723e418715e78";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "977558000";
+  lude:type "Pública";
+  lude:url "www.urv.cat/ca";
+  rdfs:label "Universidad Rovira i Virgili" .
+
+<ex:University/91aa5268851f200c64bd1a238ed37fcf> lude:acronym "UAB";
+  lude:cif "Q0818002H";
+  lude:email "informacio@uab.es";
+  lude:id "91aa5268851f200c64bd1a238ed37fcf";
+  lude:modality "Presencial";
+  lude:publicationYear "1968";
+  lude:telephone "935811000";
+  lude:type "Pública";
+  lude:url "www.uab.es";
+  a lude:University;
+  rdfs:label "Universidad Autónoma de Barcelona" .
+
+<ex:University/92c081b3e4299316155ea45962241086> a lude:University;
+  lude:acronym "UVA";
+  lude:cif "Q4718001C";
+  lude:email "valladolid@uva.es";
+  lude:id "92c081b3e4299316155ea45962241086";
+  lude:modality "Presencial";
+  lude:publicationYear "1241";
+  lude:telephone "983423000";
+  lude:type "Pública";
+  rdfs:label "Universidad de Valladolid" .
+
+<ex:University/92c852850da0a33857691151f42ac19a> a lude:University;
+  lude:acronym "UJI";
+  lude:cif "Q6250003H";
+  lude:email "info@uji.es";
+  lude:id "92c852850da0a33857691151f42ac19a";
+  lude:modality "Presencial";
+  lude:publicationYear "1991";
+  lude:telephone "964728000";
+  lude:type "Pública";
+  lude:url "www.uji.es";
+  rdfs:label "Universidad Jaume I de Castellón" .
+
+<ex:University/9d791fc58c21adf30d157657e55c4355> a lude:University;
+  lude:acronym "UCA";
+  lude:cif "Q1132001G";
+  lude:email "relaciones.institucionales@uca.es";
+  lude:id "9d791fc58c21adf30d157657e55c4355";
+  lude:modality "Presencial";
+  lude:publicationYear "1979";
+  lude:telephone "956015033";
+  lude:type "Pública";
+  lude:url "www.uca.es";
+  rdfs:label "Universidad de Cádiz" .
+
+<ex:University/a0b65722ec5194abfd7f9ba621a7dd1d> a lude:University;
+  lude:acronym "UJA";
+  lude:cif "Q7350006H";
+  lude:id "a0b65722ec5194abfd7f9ba621a7dd1d";
+  lude:modality "Presencial";
+  lude:publicationYear "1993";
+  lude:telephone "953212121";
+  lude:type "Pública";
+  lude:url "www.ujaen.es";
+  rdfs:label "Universidad de Jaén" .
+
+<ex:University/a62a164f781be26dd225dfda47b78c12> a lude:University;
+  lude:acronym "UCLM";
+  lude:cif "Q1368009E";
+  lude:email "webmaster@uclm.es";
+  lude:id "a62a164f781be26dd225dfda47b78c12";
+  lude:modality "Presencial";
+  lude:publicationYear "1982";
+  lude:telephone "902204100";
+  lude:type "Pública";
+  lude:url "www.uclm.es";
+  rdfs:label "Universidad de Castilla-La Mancha" .
+
+<ex:University/aeaa439db599d073395f84fb7fa10a54> a lude:University;
+  lude:acronym "UPNA";
+  lude:cif "Q3150012G";
+  lude:email "infoweb@unavarra.es";
+  lude:id "aeaa439db599d073395f84fb7fa10a54";
+  lude:modality "Presencial";
+  lude:publicationYear "1987";
+  lude:telephone "948169000";
+  lude:type "Pública";
+  lude:url "www.unavarra.es";
+  rdfs:label "Universidad Pública de Navarra" .
+
+<ex:University/bd5d3da0c4dfc8205ca85ea0c1699a62> a lude:University;
+  lude:acronym "UMH";
+  lude:cif "Q5350015C";
+  lude:email "info@umh.es";
+  lude:id "bd5d3da0c4dfc8205ca85ea0c1699a62";
+  lude:modality "Presencial";
+  lude:publicationYear "1996";
+  lude:telephone "966658500";
+  lude:type "Pública";
+  lude:url "www.umh.es";
+  rdfs:label "Universidad Miguel Hernández de Elche" .
+
+<ex:University/bf0d31e1fd4ee242c0fe00c2ee08b759> a lude:University;
+  lude:acronym "UDL";
+  lude:cif "Q7550001G";
+  lude:email "info@udl.cat";
+  lude:id "bf0d31e1fd4ee242c0fe00c2ee08b759";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "973702000";
+  lude:type "Pública";
+  lude:url "www.udl.es/ca/es/";
+  rdfs:label "Universidad de Lleida" .
+
+<ex:University/c50901012309aca2785eb50ea4c8f87b> a lude:University;
+  lude:acronym "UCAR";
+  lude:cif "Q2818029G";
+  lude:email "futurosestudiantes@uc3m.es";
+  lude:id "c50901012309aca2785eb50ea4c8f87b";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "916249500";
+  lude:type "Pública";
+  lude:url "www.uc3m.es";
+  rdfs:label "Universidad Carlos III de Madrid" .
+
+<ex:University/c6abab9cddd0b921adc603debfcca50e> a lude:University;
+  lude:acronym "UAL";
+  lude:cif "Q5450008G";
+  lude:email "gprensa@ual.es";
+  lude:id "c6abab9cddd0b921adc603debfcca50e";
+  lude:modality "Presencial";
+  lude:publicationYear "1993";
+  lude:telephone "950015570";
+  lude:type "Pública";
+  lude:url "www.ual.es";
+  rdfs:label "Universidad de Almería" .
+
+<ex:University/c73f658b0a9e2a5097a9ae889dd56474> a lude:University;
+  lude:acronym "UV";
+  lude:cif "Q4618001D";
+  lude:email "servei.estudiants@uv.es";
+  lude:id "c73f658b0a9e2a5097a9ae889dd56474";
+  lude:modality "Presencial";
+  lude:publicationYear "1502";
+  lude:telephone "963864100";
+  lude:type "Pública";
+  lude:url "www.uv.es";
+  rdfs:label "Universitat de València" .
+
+<ex:University/c8b4be930789e86c8d8b17d773af6d7e> a lude:University;
+  lude:acronym "ULE";
+  lude:cif "Q2432001B";
+  lude:email "webmaster@unileon.es";
+  lude:id "c8b4be930789e86c8d8b17d773af6d7e";
+  lude:modality "Presencial";
+  lude:publicationYear "1979";
+  lude:telephone "987291000";
+  lude:type "Pública";
+  lude:url "www.unileon.es";
+  rdfs:label "Universidad de León" .
+
+<ex:University/d30bbd19fa77d8470334a259e060006e> a lude:University;
+  lude:acronym "EHU";
+  lude:cif "Q4818001B";
+  lude:email "rgzadmin@lg.ehu.es";
+  lude:id "d30bbd19fa77d8470334a259e060006e";
+  lude:modality "Presencial";
+  lude:publicationYear "1968";
+  lude:telephone "946012000";
+  lude:type "Pública";
+  lude:url "www.ehu.es";
+  rdfs:label "Universidad del País Vasco/Euskal Herriko Unibertsitatea" .
+
+<ex:University/d4092e4beec5ade3eb17379b7450f0b9> a lude:University;
+  lude:acronym "UCO";
+  lude:cif "Q1418001B";
+  lude:email "informacion@uco.es";
+  lude:id "d4092e4beec5ade3eb17379b7450f0b9";
+  lude:modality "Presencial";
+  lude:publicationYear "1972";
+  lude:telephone "957218000";
+  lude:type "Pública";
+  lude:url "www.uco.es";
+  rdfs:label "Universidad de Córdoba" .
+
+<ex:University/dbca02858a647c576208370194649766> a lude:University;
+  lude:acronym "UGR";
+  lude:cif "Q1818002F";
+  lude:email "csirc@ugr.es";
+  lude:id "dbca02858a647c576208370194649766";
+  lude:modality "Presencial";
+  lude:publicationYear "1531";
+  lude:telephone "958243000";
+  lude:type "Pública";
+  lude:url "www.ugr.es";
+  rdfs:label "Universidad de Granada" .
+
+<ex:University/dcbcd7e79ed9bec816e6a427d84bbf64> a lude:University;
+  lude:acronym "UR";
+  lude:cif "Q2618002F";
+  lude:email "sec.general@unirioja.es";
+  lude:id "dcbcd7e79ed9bec816e6a427d84bbf64";
+  lude:modality "Presencial";
+  lude:publicationYear "1992";
+  lude:telephone "941299104";
+  lude:type "Pública";
+  lude:url "www.unirioja.es";
+  rdfs:label "Universidad de La Rioja" .
+
+<ex:University/e00161d1619c9c29b683d70c49b1341c> a lude:University;
+  lude:acronym "UA";
+  lude:cif "Q0332001G";
+  lude:email "informacio@ua.es";
+  lude:id "e00161d1619c9c29b683d70c49b1341c";
+  lude:modality "Presencial";
+  lude:publicationYear "1979";
+  lude:telephone "965903400";
+  lude:type "Pública";
+  lude:url "www.ua.es/";
+  rdfs:label "Universidad de Alicante" .
+
+<ex:University/e2aed65db4fa77f98f5f2990371c7a23> a lude:University;
+  lude:acronym "UCM";
+  lude:cif "Q2818014I";
+  lude:email "infocom@ucm.es";
+  lude:id "e2aed65db4fa77f98f5f2990371c7a23";
+  lude:modality "Presencial";
+  lude:publicationYear "1836";
+  lude:telephone "914520400";
+  lude:type "Pública";
+  lude:url "www.ucm.es";
+  rdfs:label "Universidad Complutense de Madrid" .
+
+<ex:University/e4aee90dd75f5fd5dc35bc4653bd9065> a lude:University;
+  lude:acronym "UPCT";
+  lude:cif "Q8050013E";
+  lude:email "gestion.academica@upct.es";
+  lude:id "e4aee90dd75f5fd5dc35bc4653bd9065";
+  lude:modality "Presencial";
+  lude:publicationYear "1998";
+  lude:telephone "968325400";
+  lude:type "Pública";
+  lude:url "www.upct.es";
+  rdfs:label "Universidad Politécnica de Cartagena" .
+
+<ex:University/e97892b0ccf3c19ce40f9ef9d8ac91ef> a lude:University;
+  lude:acronym "UDC";
+  lude:cif "Q6550005J";
+  lude:email "reitor@udc.es";
+  lude:id "e97892b0ccf3c19ce40f9ef9d8ac91ef";
+  lude:modality "Presencial";
+  lude:publicationYear "1989";
+  lude:telephone "981167000";
+  lude:type "Pública";
+  lude:url "www.udc.es";
+  rdfs:label "Universidad de A Coruña" .
+
+<ex:University/f5636bc297db763f969bab88b5492ba3> a lude:University;
+  lude:acronym "UMU";
+  lude:cif "Q3018001B";
+  lude:email "rector@um.es";
+  lude:id "f5636bc297db763f969bab88b5492ba3";
+  lude:modality "Presencial";
+  lude:publicationYear "1272";
+  lude:telephone "968363000";
+  lude:type "Pública";
+  lude:url "www.um.es";
+  rdfs:label "Universidad de Murcia" .
+
+<ex:University/f6ce2593f6cfc9e08dc9effe2e0077e9> a lude:University;
+  lude:acronym "UHU";
+  lude:cif "Q7150008F";
+  lude:email "www@uhu.es";
+  lude:id "f6ce2593f6cfc9e08dc9effe2e0077e9";
+  lude:modality "Presencial";
+  lude:publicationYear "1993";
+  lude:telephone "959218000";
+  lude:type "Pública";
+  lude:url "www.uhu.es";
+  rdfs:label "Universidad de Huelva" .
+
+<ex:University/f8c4e120daa6420626c03e582958ebd3> a lude:University;
+  lude:acronym "USE";
+  lude:cif "Q4118001I";
+  lude:email "gabiprensa@us.es";
+  lude:id "f8c4e120daa6420626c03e582958ebd3";
+  lude:modality "Presencial";
+  lude:publicationYear "1505";
+  lude:telephone "954551000";
+  lude:type "Pública";
+  lude:url "www.us.es";
+  rdfs:label "Universidad de Sevilla" .
+
+<ex:University/f9d30a624b678c838a4bb422a0bc148b> a lude:University;
+  lude:acronym "UAM";
+  lude:cif "Q2818013A";
+  lude:email "informacion.general@uam.es";
+  lude:id "f9d30a624b678c838a4bb422a0bc148b";
+  lude:modality "Presencial";
+  lude:publicationYear "1968";
+  lude:telephone "914975000";
+  lude:type "Pública";
+  lude:url "www.uam.es";
+  rdfs:label "Universidad Autónoma de Madrid" .
+
+<ex:University/f9f0a05fbac13ce20a2af52247c2b93f> a lude:University;
+  lude:acronym "UBU";
+  lude:cif "Q0968272E";
+  lude:email "ubuestudiantes@ubu.es";
+  lude:id "f9f0a05fbac13ce20a2af52247c2b93f";
+  lude:modality "Presencial";
+  lude:publicationYear "1994";
+  lude:telephone "947258700";
+  lude:type "Pública";
+  lude:url "www.ubu.es";
+  rdfs:label "Universidad de Burgos" .

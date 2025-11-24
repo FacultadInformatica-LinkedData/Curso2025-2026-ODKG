@@ -1,0 +1,10 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?property (COUNT(DISTINCT ?value) AS ?numDistinctValues)
+WHERE {
+  ?politician a <http://dbpedia.org/ontology/Politician> ;
+              ?property ?value .
+  FILTER(?property != rdf:type)
+}
+GROUP BY ?property
+ORDER BY DESC(?numDistinctValues)

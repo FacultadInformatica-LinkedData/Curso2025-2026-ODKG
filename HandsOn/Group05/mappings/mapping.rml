@@ -4,6 +4,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ns: <http://example.org/ns#> .
+@prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
 @base <http://example.org/mapping/> .
 
 <#AddressMapping>
@@ -23,7 +26,14 @@
       rml:reference "Address" ;
       rr:datatype xsd:string
     ]
-  ] .
+  ] ;
+  
+  rr:predicateObjectMap [
+	 rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ];
+	 rr:objectMap [
+	 rr:template "http://www.wikidata.org/entity/{Address-ID}";
+	 rr:termType rr:IRI ]
+  ].
 
 <#StationMapping>
   rml:logicalSource [

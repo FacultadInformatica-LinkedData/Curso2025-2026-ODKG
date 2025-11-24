@@ -1,0 +1,89 @@
+{{
+  "@context": {
+    "schema": "https://schema.org/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "address": "schema:address",
+    "alumniOf": "schema:alumniOf",
+    "parent": "schema:parent",
+    "course": "schema:Course",
+    "teacher": "schema:instructor",
+    "age": "schema:age"
+  },
+  "@type": "schema:Person",
+  "@id": "person:your-identifier-here",
+  "name": "André Paredes",
+  "hometown": {
+    "@type": "schema:City",
+    "name": "Salamanca",
+    "addressRegion": "Guanajuato",
+    "addressCountry": "Mexico"
+  },
+  "age": 23,
+  "alumniOf": {
+    "@type": "schema:EducationalOrganization",
+    "name": "Tec de Monterrey",
+  },
+  "parent": [
+    {
+      "@type": "schema:Person",
+      "name": "César",
+      "additionalType": "schema:Parent"
+    },
+    {
+      "@type": "schema:Person",
+      "name": "Saraí",
+      "additionalType": "schema:Parent"
+    }
+  ],
+  "course": [
+    {
+      "@type": "schema:Course",
+      "name": "Open Data and Knowledge Graphs",
+      "teacher": [
+        {
+          "@type": "schema:Person",
+          "name": "Oscar Corcho"
+        },
+        {
+          "@type": "schema:Person",
+          "name": "Daniel Garijo"
+        }
+      ],
+      "description": "Understanding and applying principles of open data and knowledge graphs."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Data Visualization",
+      "teacher": [
+        {
+          "@type": "schema:Person",
+          "name": "Pablo Toharia"
+        }
+      ],
+      "description": "Understanding and selecting visual resources, including charts, graphs, and maps, using various tools and libraries."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Machine Learning",
+      "teacher": [
+        {
+          "@type": "schema:Person",
+          "name": "Pedro Larrañaga"
+        }
+      ],
+      "description": "Understanding and applying machine learning algorithms."
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Generative AI & LMs",
+      "teacher": [
+        {
+          "@type": "schema:Person",
+          "name": "Emilio Fernández"
+        }
+      ],
+      "description": "Understanding and applying generative AI techniques."
+    }
+  ]
+}

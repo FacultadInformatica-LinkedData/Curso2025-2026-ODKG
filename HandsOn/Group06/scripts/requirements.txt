@@ -1,0 +1,15 @@
+et_xmlfile
+networkx
+numpy
+openpyxl
+pandas
+pillow
+python-dateutil
+pytz
+six
+tzdata
+lightrdf
+certifi
+rdflib
+morph-kgc
+SPARQLWrapper

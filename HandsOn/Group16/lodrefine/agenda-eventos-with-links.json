@@ -1,0 +1,1643 @@
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q1329623",
+        "name": "cultural center"
+      },
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE-INSTALACION to type Q1329623"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "autoMatch": true,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column NOMBRE-INSTALACION to type null"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Matadero Madrid",
+    "judgment": "matched",
+    "match": {
+      "id": "Q4043800",
+      "name": "Matadero Madrid",
+      "types": [
+        "Q385557",
+        "Q2190251",
+        "Q1497375",
+        "Q117531692"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Matadero Madrid (Q4043800) for cells containing \"Matadero Madrid\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal José Saramago (Fuencarral-El Pardo)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697927",
+      "name": "Biblioteca Pública Municipal - José Saramago",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 81
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - José Saramago (Q85697927) for cells containing \"Biblioteca Pública Municipal José Saramago (Fuencarral-El Pardo)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Centro Cultural Casa de Vacas (Retiro)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q108328073",
+      "name": "Centro Cultural Casa de Vacas",
+      "types": [
+        "Q1329623",
+        "Q327333"
+      ],
+      "score": 89
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro Cultural Casa de Vacas (Q108328073) for cells containing \"Centro Cultural Casa de Vacas (Retiro)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Hemeroteca Municipal",
+    "judgment": "matched",
+    "match": {
+      "id": "Q5893994",
+      "name": "Municipal Newspaper Library of Madrid",
+      "types": [
+        "Q137655",
+        "Q12317349"
+      ],
+      "score": 80
+    },
+    "shareNewTopics": false,
+    "description": "Match item Municipal Newspaper Library of Madrid (Q5893994) for cells containing \"Hemeroteca Municipal\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal San Fermín (Usera)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q111257503",
+      "name": "Biblioteca Pública Municipal de San Fermín",
+      "types": [
+        "Q28564",
+        "Q11396180",
+        "Q2326815"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal de San Fermín (Q111257503) for cells containing \"Biblioteca Pública Municipal San Fermín (Usera)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Iván de Vargas (Centro)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2886368",
+      "name": "Biblioteca Pública Municipal Iván de Vargas",
+      "types": [
+        "Q11396180"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal Iván de Vargas (Q2886368) for cells containing \"Biblioteca Pública Municipal Iván de Vargas (Centro)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Ángel González (Latina)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697883",
+      "name": "Biblioteca Pública Municipal - Ángel González",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Ángel González (Q85697883) for cells containing \"Biblioteca Pública Municipal Ángel González (Latina)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Eugenio Trías. Casa de Fieras de El Retiro (Retiro)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697904",
+      "name": "Biblioteca Pública Municipal - Eugenio Trías. Casa de Fieras de El Retiro",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 95
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Eugenio Trías. Casa de Fieras de El Retiro (Q85697904) for cells containing \"Biblioteca Pública Municipal Eugenio Trías. Casa de Fieras de El Retiro (Retiro)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Parque Entrevías Forestal",
+    "judgment": "matched",
+    "match": {
+      "id": "Q18746308",
+      "name": "Parque Forestal de Entrevías",
+      "types": [
+        "Q22746"
+      ],
+      "score": 94
+    },
+    "shareNewTopics": false,
+    "description": "Match item Parque Forestal de Entrevías (Q18746308) for cells containing \"Parque Entrevías Forestal\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Mario Vargas Llosa (Centro)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q63191732",
+      "name": "Municipal Public Library Mario Vargas Llosa",
+      "types": [
+        "Q28564",
+        "Q856584",
+        "Q11396180"
+      ],
+      "score": 93
+    },
+    "shareNewTopics": false,
+    "description": "Match item Municipal Public Library Mario Vargas Llosa (Q63191732) for cells containing \"Biblioteca Pública Municipal Mario Vargas Llosa (Centro)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Gloria Fuertes (Barajas)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697917",
+      "name": "Biblioteca Pública Municipal - Gloria Fuertes",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Gloria Fuertes (Q85697917) for cells containing \"Biblioteca Pública Municipal Gloria Fuertes (Barajas)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Teatro Circo Price",
+    "judgment": "matched",
+    "match": {
+      "id": "Q48868396",
+      "name": "Teatro Circo Price",
+      "types": [
+        ""
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Teatro Circo Price (Q48868396) for cells containing \"Teatro Circo Price\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal José Hierro (San Blas-Canillejas)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697922",
+      "name": "Biblioteca Pública Municipal - José Hierro",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 80
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - José Hierro (Q85697922) for cells containing \"Biblioteca Pública Municipal José Hierro (San Blas-Canillejas)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Francisco Ayala (Vicálvaro)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697910",
+      "name": "Biblioteca Pública Municipal - Francisco Ayala",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Francisco Ayala (Q85697910) for cells containing \"Biblioteca Pública Municipal Francisco Ayala (Vicálvaro)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Gabriel García Márquez (Usera)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q42268564",
+      "name": "Biblioteca Pública Municipal Gabriel García Márquez",
+      "types": [
+        "Q7075",
+        "Q11396180"
+      ],
+      "score": 94
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal Gabriel García Márquez (Q42268564) for cells containing \"Biblioteca Pública Municipal Gabriel García Márquez (Usera)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Francisco Ibáñez (Chamartín)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697912",
+      "name": "Biblioteca Pública Municipal - Francisco Ibañez",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Francisco Ibañez (Q85697912) for cells containing \"Biblioteca Pública Municipal Francisco Ibáñez (Chamartín)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Aluche (Latina)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697879",
+      "name": "Biblioteca Pública Municipal - Aluche",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 91
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Aluche (Q85697879) for cells containing \"Biblioteca Pública Municipal Aluche (Latina)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Manuel Vázquez Montalbán (Tetuán)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697940",
+      "name": "Biblioteca Pública Municipal - Manuel Vázquez Montalbán",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 94
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Manuel Vázquez Montalbán (Q85697940) for cells containing \"Biblioteca Pública Municipal Manuel Vázquez Montalbán (Tetuán)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Gerardo Diego (Villa de Vallecas)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697914",
+      "name": "Biblioteca Pública Municipal - Gerardo Diego",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 82
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Gerardo Diego (Q85697914) for cells containing \"Biblioteca Pública Municipal Gerardo Diego (Villa de Vallecas)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal San Blas (San Blas-Canillejas)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697960",
+      "name": "Biblioteca Pública Municipal - San Blas",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 79
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - San Blas (Q85697960) for cells containing \"Biblioteca Pública Municipal San Blas (San Blas-Canillejas)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Centro Cultural Casa del Reloj (Arganzuela)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q56426877",
+      "name": "Centro Cultural Casa del Reloj",
+      "types": [
+        "Q1329623"
+      ],
+      "score": 85
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro Cultural Casa del Reloj (Q56426877) for cells containing \"Centro Cultural Casa del Reloj (Arganzuela)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Museo de Historia de Madrid",
+    "judgment": "matched",
+    "match": {
+      "id": "Q876383",
+      "name": "Museo de Historia de Madrid",
+      "types": [
+        "Q16735822",
+        "Q33506"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Museo de Historia de Madrid (Q876383) for cells containing \"Museo de Historia de Madrid\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal La Elipa (Ciudad Lineal)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697932",
+      "name": "Biblioteca Pública Municipal - La Elipa",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 84
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - La Elipa (Q85697932) for cells containing \"Biblioteca Pública Municipal La Elipa (Ciudad Lineal)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Parroquia Nuestra Señora de Belén",
+    "judgment": "matched",
+    "match": {
+      "id": "Q120868235",
+      "name": "Parroquia de Nuestra Señora de Belén",
+      "types": [
+        "Q16970"
+      ],
+      "score": 96
+    },
+    "shareNewTopics": false,
+    "description": "Match item Parroquia de Nuestra Señora de Belén (Q120868235) for cells containing \"Parroquia Nuestra Señora de Belén\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Centro Cultural Buenavista (Salamanca)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q47012449",
+      "name": "Centro Cultural Buenavista, Madrid",
+      "types": [
+        "Q1329623",
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 84
+    },
+    "shareNewTopics": false,
+    "description": "Match item Centro Cultural Buenavista, Madrid (Q47012449) for cells containing \"Centro Cultural Buenavista (Salamanca)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Parroquia Natividad de Nuestra Señora",
+    "judgment": "matched",
+    "match": {
+      "id": "Q28934966",
+      "name": "Iglesia de la Natividad de Nuestra Señora, Moratalaz, Madrid",
+      "types": [
+        "Q41176"
+      ],
+      "score": 92
+    },
+    "shareNewTopics": false,
+    "description": "Match item Iglesia de la Natividad de Nuestra Señora, Moratalaz, Madrid (Q28934966) for cells containing \"Parroquia Natividad de Nuestra Señora\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Plaza de Daoíz y Velarde",
+    "judgment": "matched",
+    "match": {
+      "id": "Q68240345",
+      "name": "Plaza de Daoíz y Velarde, Madrid",
+      "types": [
+        "Q174782"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Plaza de Daoíz y Velarde, Madrid (Q68240345) for cells containing \"Plaza de Daoíz y Velarde\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Teatro Español",
+    "judgment": "matched",
+    "match": {
+      "id": "Q3891573",
+      "name": "Teatro Español",
+      "types": [
+        "Q24354"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Teatro Español (Q3891573) for cells containing \"Teatro Español\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal La Chata (Carabanchel)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697929",
+      "name": "Biblioteca Pública Municipal - La Chata",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 86
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - La Chata (Q85697929) for cells containing \"Biblioteca Pública Municipal La Chata (Carabanchel)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal María Lejárraga (Hortaleza)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697942",
+      "name": "Biblioteca Pública Municipal - María Lejárraga",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - María Lejárraga (Q85697942) for cells containing \"Biblioteca Pública Municipal María Lejárraga (Hortaleza)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Miguel Delibes (Moratalaz)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697948",
+      "name": "Biblioteca Pública Municipal - Miguel Delibes",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 90
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Miguel Delibes (Q85697948) for cells containing \"Biblioteca Pública Municipal Miguel Delibes (Moratalaz)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Ana María Matute (Carabanchel)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q70135254",
+      "name": "Ana María Matute Municipal Public Library",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 88
+    },
+    "shareNewTopics": false,
+    "description": "Match item Ana María Matute Municipal Public Library (Q70135254) for cells containing \"Biblioteca Pública Municipal Ana María Matute (Carabanchel)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Centro Cultural Puerta de Toledo (Centro)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2657591",
+      "name": "Gate of Toledo",
+      "types": [
+        "Q82117",
+        "Q143912"
+      ],
+      "score": 58
+    },
+    "shareNewTopics": false,
+    "description": "Match item Gate of Toledo (Q2657591) for cells containing \"Centro Cultural Puerta de Toledo (Centro)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Biblioteca Pública Municipal Pío Baroja (Arganzuela)",
+    "judgment": "matched",
+    "match": {
+      "id": "Q85697953",
+      "name": "Biblioteca Pública Municipal - Pío Baroja",
+      "types": [
+        "Q28564",
+        "Q11396180"
+      ],
+      "score": 88
+    },
+    "shareNewTopics": false,
+    "description": "Match item Biblioteca Pública Municipal - Pío Baroja (Q85697953) for cells containing \"Biblioteca Pública Municipal Pío Baroja (Arganzuela)\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Parque Enrique Tierno Galván",
+    "judgment": "matched",
+    "match": {
+      "id": "Q6062644",
+      "name": "Enrique Tierno Galván Park",
+      "types": [
+        "Q22698"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Enrique Tierno Galván Park (Q6062644) for cells containing \"Parque Enrique Tierno Galván\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Matadero Medialab",
+    "judgment": "matched",
+    "match": {
+      "id": "Q110610911",
+      "name": "Medialab-Matadero",
+      "types": [
+        "Q1329623",
+        "Q43229"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Medialab-Matadero (Q110610911) for cells containing \"Matadero Medialab\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Museo ABC",
+    "judgment": "matched",
+    "match": {
+      "id": "Q21564330",
+      "name": "Museo ABC",
+      "types": [
+        "Q33506"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Match item Museo ABC (Q21564330) for cells containing \"Museo ABC\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "NOMBRE-INSTALACION: judgment",
+          "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+          "columnName": "NOMBRE-INSTALACION",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "none",
+                "l": "none"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "NOMBRE-INSTALACION",
+    "similarValue": "Jardines de El Buen Retiro",
+    "judgment": "matched",
+    "match": {
+      "id": "Q1131807",
+      "name": "El Retiro Park",
+      "types": [
+        "Q22746",
+        "Q22698",
+        "Q1200957",
+        "Q14946335",
+        "Q570116"
+      ],
+      "score": 96
+    },
+    "shareNewTopics": false,
+    "description": "Match item El Retiro Park (Q1131807) for cells containing \"Jardines de El Buen Retiro\" in column NOMBRE-INSTALACION"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE-INSTALACION",
+    "expression": "grel:if(cell.recon != null, cell.recon.match.id, null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Matched_URL",
+    "columnInsertIndex": 7,
+    "description": "Create column Matched_URL at index 7 based on column NOMBRE-INSTALACION using expression grel:if(cell.recon != null, cell.recon.match.id, null)"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "NOMBRE-INSTALACION",
+    "expression": "grel:if(cell.recon != null, \"https://www.wikidata.org/wiki/\" + cell.recon.match.id, null)",
+    "onError": "set-to-blank",
+    "newColumnName": "Matched",
+    "columnInsertIndex": 7,
+    "description": "Create column Matched at index 7 based on column NOMBRE-INSTALACION using expression grel:if(cell.recon != null, \"https://www.wikidata.org/wiki/\" + cell.recon.match.id, null)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Matched_URL",
+    "newColumnName": "Matched_ID",
+    "description": "Rename column Matched_URL to Matched_ID"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Matched",
+    "newColumnName": "Matched_URL",
+    "description": "Rename column Matched to Matched_URL"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Matched_ID",
+    "description": "Remove column Matched_ID"
+  }
+]

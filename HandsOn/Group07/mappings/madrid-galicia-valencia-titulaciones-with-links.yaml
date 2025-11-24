@@ -1,0 +1,133 @@
+prefixes:
+  lude: http://spanishuniversities.data.es/lude/ontology#
+  id: http://spanishuniversities.data.es/lude/resource/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  owl: http://www.w3.org/2002/07/owl#
+
+mappings:
+
+  DegreeMapping:
+    sources:
+      - [galicia-valencia-upm-uah-titulaciones-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+     
+      - p: lude:hasAcademicLevel
+        o: 
+          - mapping: AcademicLevelMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelID)]
+                - [str2, $(AcademicLevelID)]
+      - p: lude:hasKnowledgeArea
+        o: 
+          - mapping: KnowledgeAreaMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AmbitId)]
+                - [str2, $(id)]
+  MadridDegreeMapping:
+    sources:
+      - [uc3m-urjc-ucm-uam-titulaciones-updated-with-links.csv~csv]
+    s: id:Degree/$(DegreeID)
+    po:
+      - [rdf:type, lude:Degree]
+      - [rdfs:label, $(Degree)]
+      - [lude:academicYear, $(Academic Year), xsd:string]
+      - [lude:code, $(Code), xsd:string]
+      - [lude:ectsCredits, $(ectsCredits), xsd:decimal]
+      - [lude:teachingModality, $(teachingModality), xsd:string]
+      - [lude:language, $(Language), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_degree)~iri]
+      
+      - p: lude:hasAcademicLevel
+        o: 
+          - mapping: AcademicLevelMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AcademicLevelId)]
+                - [str2, $(AcademicLevelID)]
+      - p: lude:hasKnowledgeArea
+        o: 
+          - mapping: KnowledgeAreaMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(AmbitId)]
+                - [str2, $(id)]
+      - p: lude:deliveredAt
+        o: 
+          - mapping: FacultyMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(FacultyId)]
+                - [str2, $(FacultyId)]
+  AcademicLevelMapping:
+    sources:
+      - [academic_level-updated-with-links.csv~csv]
+    s: id:AcademicLevel/$(AcademicLevelID)
+    po:
+      - [rdf:type, lude:AcademicLevel]
+      - [rdfs:label, $(Academic Level)]
+      - [owl:sameAs, $(same_as_wikidata_academiclevel)~iri]
+  KnowledgeAreaMapping:
+    sources:
+      - [ambit-otros-with-links.csv~csv]
+    s: id:KnowledgeArea/$(id)
+    po:
+      - [rdf:type, lude:KnowledgeArea]
+      - [rdfs:label, $(ambit)]
+      - [owl:sameAs, $(same_as_wikidata_ambit)~iri]
+      
+  FacultyMapping:
+    sources:
+      - [faculty-madrid.csv~csv] 
+    s: id:Faculty/$(FacultyId)
+    po:
+      - [rdf:type, lude:Faculty]
+      - [rdfs:label, $(Faculty)]
+      - [lude:campus, $(Campus)]
+  UniversityMapping:
+    sources:
+      - [universidades-updated-with-links.csv~csv]
+    s: id:University/$(UniversityID)
+    po:
+      - [rdf:type, lude:University]
+      - [rdfs:label, $(University)]
+      - [lude:updateDate, $(Year of Publication), xsd:gYear]
+      - [lude:teachingModality, $(Modality), xsd:string]
+      - [lude:url, $(URL), xsd:anyURI]
+      - [lude:email, $(Email), xsd:string]
+      - [lude:telephone, $(Phone), xsd:string]
+      - [lude:cif, $(CIF), xsd:string]
+      - [lude:acronym, $(Acronym), xsd:string]
+      - [lude:type, $(Type), xsd:string]
+      - [owl:sameAs, $(same_as_wikidata_university)~iri]
+      - p: lude:offers
+        o: 
+          - mapping: MadridDegreeMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+          - mapping: DegreeMapping
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(UniversityID)]
+                - [str2, $(UniversityID)]
+  
+  
+      

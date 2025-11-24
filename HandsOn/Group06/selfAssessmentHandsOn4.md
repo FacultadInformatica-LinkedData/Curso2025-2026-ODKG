@@ -4,8 +4,8 @@
 
 **Every RDF file:**
 
-- [x] Uses the .nt extension
-- [x] Is serialized in the NTriples format
+- [x] Uses the .ttl extension
+- [x] Is serialized in the Turtle format
 - [x] Follows the resource naming strategy
 - [x] Uses class and property URIs that are the same as those used in the ontology
 
@@ -28,4 +28,6 @@
 - [x] Uses the correct datatype (e.g., values of 0-1 may be booleans and not integers, not every string made of numbers is a number)
 
 ## Comments on the self-assessment
+
+
 

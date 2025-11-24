@@ -37,8 +37,8 @@ stop:intercambiador-legazpi a ont:Stop ;
   ont:stopId "station-legazpi" ;
   ont:stopCode "17513" ;
   schema:name "Intercambiador de Legazpi" ;
-  geo:lat "40.3901"^^xsd:decimal ;
-  geo:long "-3.6965"^^xsd:decimal ;
+  geo:lat "40.3901"^^xsd:float ;
+  geo:long "-3.6965"^^xsd:float ;
   ont:zoneId "A" ;
   ont:locationType 1 .
 
@@ -49,8 +49,8 @@ stop:legazpi-darsena a ont:Stop ;
   ont:stopDescNumber "17513" ;
   ont:stopDescName "Paseo de la Chopera - Plaza de Legazpi" ;
   ont:stopTimeZone "Europe/Madrid" ;
-  geo:lat "40.3905"^^xsd:decimal ;
-  geo:long "-3.6955"^^xsd:decimal ;
+  geo:lat "40.3905"^^xsd:float ;
+  geo:long "-3.6955"^^xsd:float ;
   ont:zoneId "A" ;
   ont:locationType 0 ;
   ont:wheelChairBoarding 1 ;
@@ -60,8 +60,8 @@ stop:pinto-terreros a ont:Stop ;
   ont:stopId "stop-pinto-terreros" ;
   ont:stopCode "16834" ;
   schema:name "Av. España - Terreros (Pinto)" ;
-  geo:lat "40.2450"^^xsd:decimal ;
-  geo:long "-3.7001"^^xsd:decimal ;
+  geo:lat "40.2450"^^xsd:float ;
+  geo:long "-3.7001"^^xsd:float ;
   ont:zoneId "B2" ;
   ont:locationType 0 ;
   ont:wheelChairBoarding 1 .
@@ -70,8 +70,8 @@ stop:valdemoro-estacion a ont:Stop ;
   ont:stopId "stop-valdemoro-estacion" ;
   ont:stopCode "10878" ;
   schema:name "Av. Andalucía - P.º Estación (Valdemoro)" ;
-  geo:lat "40.1873"^^xsd:decimal ;
-  geo:long "-3.6765"^^xsd:decimal ;
+  geo:lat "40.1873"^^xsd:float ;
+  geo:long "-3.6765"^^xsd:float ;
   ont:zoneId "B3" ;
   ont:locationType 0 ;
   ont:wheelChairBoarding 1 .
@@ -126,18 +126,18 @@ shape:s422-vuelta a ont:Shape ;
 
 shape:s422-vuelta-p1 a ont:Shape ;
   ont:shapeId "shape-422-vuelta" ;
-  geo:lat "40.1873"^^xsd:decimal ;
-  geo:long "-3.6765"^^xsd:decimal ;
+  geo:lat "40.1873"^^xsd:float ;
+  geo:long "-3.6765"^^xsd:float ;
   ont:shapeSequence 1 .
 
 shape:s422-vuelta-p2 a ont:Shape ;
   ont:shapeId "shape-422-vuelta" ;
-  geo:lat "40.2450"^^xsd:decimal ;
-  geo:long "-3.7001"^^xsd:decimal ;
+  geo:lat "40.2450"^^xsd:float ;
+  geo:long "-3.7001"^^xsd:float ;
   ont:shapeSequence 2 .
 
 shape:s422-vuelta-p3 a ont:Shape ;
   ont:shapeId "shape-422-vuelta" ;
-  geo:lat "40.3905"^^xsd:decimal ;
-  geo:long "-3.6955"^^xsd:decimal ;
+  geo:lat "40.3905"^^xsd:float ;
+  geo:long "-3.6955"^^xsd:float ;
   ont:shapeSequence 3 .

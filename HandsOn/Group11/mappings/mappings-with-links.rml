@@ -1,0 +1,523 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix map: <http://mapping.example.com/> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix base: <http://crtm-urban-buses.org/opendata/handsOn/group11/> .
+@prefix ont: <http://crtm-urban-buses.org/opendata/handsOn/group11/ontology#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix mod: <http://w3id.org/mod#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+map:map_agency_000 rml:logicalSource map:source_000 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "agency" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/{agency_id}" ;
+		rr:class ont:Agency
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:agencyId ;
+		rr:objectMap [
+			rml:reference "agency_id" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate schema:name ;
+		rr:objectMap [
+			rml:reference "agency_name" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate schema:url ;
+		rr:objectMap [
+			rml:reference "agency_url" ;
+			rr:datatype xsd:anyURI
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:timezone ;
+		rr:objectMap [
+			rml:reference "agency_timezone" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate schema:inLanguage ;
+		rr:objectMap [
+			rml:reference "agency_lang" ;
+			rr:datatype xsd:string
+		]
+	] .
+
+map:map_agency_operates_route_000 rml:logicalSource map:source_002 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "agency_operates_route" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/{agency_id}"
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:operatesRoute ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}" ;
+			rr:termType rr:IRI
+		]
+	] .
+
+map:map_bus_route_has_trip_000 rml:logicalSource map:source_004 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "bus_route_has_trip" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}"
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:hasTrip ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" ;
+			rr:termType rr:IRI
+		]
+	] .
+
+map:map_busroute_000 rml:logicalSource map:source_001 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "busroute" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}" ;
+		rr:class ont:BusRoute
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:routeId ;
+		rr:objectMap [
+			rml:reference "route_id" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:routeShortName ;
+		rr:objectMap [
+			rml:reference "route_short_name" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:routeLongName ;
+		rr:objectMap [
+			rml:reference "route_long_name" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate schema:url ;
+		rr:objectMap [
+			rml:reference "route_url" ;
+			rr:datatype xsd:anyURI
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:operatedBy ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/agency/{agency_id}" ;
+			rr:termType rr:IRI
+		]
+	] .
+
+map:map_calendar_000 rml:logicalSource map:source_008 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "calendar" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/{service_id}" ;
+		rr:class ont:CalendarService
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:serviceId ;
+		rr:objectMap [
+			rml:reference "service_id" ;
+			rr:termType rr:Literal
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:operatesOnMonday ;
+		rr:objectMap [
+			rml:reference "monday" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:operatesOnTuesday ;
+		rr:objectMap [
+			rml:reference "tuesday" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:operatesOnWednesday ;
+		rr:objectMap [
+			rml:reference "wednesday" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:operatesOnThursday ;
+		rr:objectMap [
+			rml:reference "thursday" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:operatesOnFriday ;
+		rr:objectMap [
+			rml:reference "friday" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:operatesOnSaturday ;
+		rr:objectMap [
+			rml:reference "saturday" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:operatesOnSunday ;
+		rr:objectMap [
+			rml:reference "sunday" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:startDate ;
+		rr:objectMap [
+			rml:reference "start_date" ;
+			rr:datatype xsd:date
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:endDate ;
+		rr:objectMap [
+			rml:reference "end_date" ;
+			rr:datatype xsd:date
+		]
+	] .
+
+map:map_calendar_is_calendar_of_000 rml:logicalSource map:source_009 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "calendar_is_calendar_of" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/{service_id}"
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:isCalendarOf ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" ;
+			rr:termType rr:IRI
+		]
+	] .
+
+map:map_stop_000 rml:logicalSource map:source_005 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "stop" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{stop_id}" ;
+		rr:class ont:Stop
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:stopId ;
+		rr:objectMap [
+			rml:reference "stop_id" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:stopCode ;
+		rr:objectMap [
+			rml:reference "stop_code" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate schema:name ;
+		rr:objectMap [
+			rml:reference "stop_name" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate schema:description ;
+		rr:objectMap [
+			rml:reference "stop_desc" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:stopDescNumber ;
+		rr:objectMap [
+			rml:reference "stop_desc_number" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:stopDescName ;
+		rr:objectMap [
+			rml:reference "stop_desc_name" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate geo:lat ;
+		rr:objectMap [
+			rml:reference "stop_lat" ;
+			rr:datatype xsd:float
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate geo:long ;
+		rr:objectMap [
+			rml:reference "stop_lon" ;
+			rr:datatype xsd:float
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:zoneId ;
+		rr:objectMap [
+			rml:reference "zone_id" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate schema:url ;
+		rr:objectMap [
+			rml:reference "stop_url" ;
+			rr:datatype xsd:anyURI
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:locationType ;
+		rr:objectMap [
+			rml:reference "location_type" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:stopTimeZone ;
+		rr:objectMap [
+			rml:reference "stop_timezone" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:wheelChairBoarding ;
+		rr:objectMap [
+			rml:reference "wheelchair_boarding" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:parentStation ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{parent_station}" ;
+			rr:termType rr:IRI
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:hasChildStop ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{stop_id}" ;
+			rr:termType rr:IRI
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs ;
+		rr:objectMap [
+			rml:reference "same_as_wikidata_stop_desc_name" ;
+			rr:termType rr:IRI
+		]
+	] .
+
+map:map_stoptime_000 rml:logicalSource map:source_006 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "stoptime" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stoptime/{trip_id}_{stop_sequence}" ;
+		rr:class ont:StopTime
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:arrivalTime ;
+		rr:objectMap [
+			rml:reference "arrival_time" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:departureTime ;
+		rr:objectMap [
+			rml:reference "departure_time" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:stopSequence ;
+		rr:objectMap [
+			rml:reference "stop_sequence" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:belongsToTrip ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" ;
+			rr:termType rr:IRI
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:refersToStop ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stop/{stop_id}" ;
+			rr:termType rr:IRI
+		]
+	] .
+
+map:map_trip_000 rml:logicalSource map:source_003 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "trip" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}" ;
+		rr:class ont:Trip
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:tripId ;
+		rr:objectMap [
+			rml:reference "trip_id" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:tripHeadsignComplete ;
+		rr:objectMap [
+			rml:reference "trip_headsign_complete" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:tripHeadsign ;
+		rr:objectMap [
+			rml:reference "trip_headsign" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:tripShortName ;
+		rr:objectMap [
+			rml:reference "trip_short_name" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:busNumber ;
+		rr:objectMap [
+			rml:reference "bus_number" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:directionId ;
+		rr:objectMap [
+			rml:reference "direction_id" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:blockId ;
+		rr:objectMap [
+			rml:reference "block_id" ;
+			rr:datatype xsd:string
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:wheelChairAccessible ;
+		rr:objectMap [
+			rml:reference "wheelchair_accessible" ;
+			rr:datatype xsd:integer
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:belongsToRoute ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/route/{route_id}" ;
+			rr:termType rr:IRI
+		]
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:hasCalendar ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/calendar/{service_id}" ;
+			rr:termType rr:IRI
+		]
+	] .
+
+map:map_trip_has_stop_time_000 rml:logicalSource map:source_007 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "trip_has_stop_time" ;
+	rr:subjectMap [
+		rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/trip/{trip_id}"
+	] ;
+	rr:predicateObjectMap [
+		rr:predicate ont:hasStopTime ;
+		rr:objectMap [
+			rr:template "http://crtm-urban-buses.org/opendata/handsOn/group11/resource/stoptime/{trip_id}_{stop_sequence}" ;
+			rr:termType rr:IRI
+		]
+	] .
+
+map:source_000 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/agency-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_001 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/routes-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_002 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/routes-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_003 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/trips-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_004 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/trips-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_005 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/stops-updated-with-links.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_006 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/stop-times-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_007 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/stop-times-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_008 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/calendar-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_009 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/trips-updated.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_011 rml:referenceFormulation ql:CSV ;
+	rml:source "csv/trips-updated.csv" ;
+	rdf:type rml:LogicalSource .

@@ -1,0 +1,109 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", sans-serif; }
+
+    body { display: flex; height: 100vh; overflow: hidden; }
+
+    .sidebar {
+      width: 30%;
+      min-width: 300px;
+      background: white;
+      padding: 2rem;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .sidebar h2 { margin-bottom: 0.5rem; color: #222; }
+    .sidebar p { margin-bottom: 1.5rem; color: #666; }
+
+    .form-group { margin-bottom: 1.2rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.4rem; }
+
+    select {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #2e7d32;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover { background-color: #1b5e20; }
+
+    #map { flex: 1; height: 100%; width: 100%; z-index: 0; }
+
+    @media (max-width: 768px) {
+      body { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; }
+    }
+
+    .autocomplete input {
+        width: 100%;
+        padding: 0.6rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    .autocomplete { position: relative; }
+    .autocomplete-dropdown {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        right: 0;
+        background: white;
+        border: 1px solid rgba(0,0,0,0.08);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        max-height: 220px;
+        overflow: auto;
+        z-index: 2000;
+        border-radius: 8px;
+        padding: 6px 4px;
+    }
+    .autocomplete-dropdown.hidden { display: none; }
+
+    .autocomplete-item {
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        cursor: pointer;
+        display: block;         
+        font-size: 0.95rem;
+        color: #111;
+    }
+    .autocomplete-item:hover,
+    .autocomplete-item.active {
+        background: rgba(46,125,50,0.08);
+    }
+    .autocomplete-item .match {
+        font-weight: 700;
+    }
+    .autocomplete-noresults {
+        padding: 0.5rem 0.75rem;
+        color: #666;
+        font-size: 0.95rem;
+    }
+
+    .route-info {
+      margin-top: 15px;
+      padding: 10px;
+      background: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .route-info.hidden {
+      display: none;
+    }
+
+    

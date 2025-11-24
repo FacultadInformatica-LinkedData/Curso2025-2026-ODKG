@@ -30,20 +30,23 @@
   <section class="card">
     <h2>1. Dataset Analysis</h2>
     <p>The dataset is a curated subset of the General Transit Feed Specification (GTFS) for Madrid's public transportation, obtained from the Mobility Database feed
-    (<a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank">mdb-2820</a>).
-    The objective is to produce a compact table (<code>df_clean</code>) where each row represents a <strong>scheduled stop event</strong> (a particular trip arriving at a particular stop at a planned time). This dataset supports the development of the Madrid Bus Companion application, which provides bus navigation and location-based educational content through runtime DBpedia queries based on stop location.</p>
+    (<a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank" rel="noopener noreferrer">mdb-2820</a>).
+    The objective is to produce a compact table (<code>df_final-updated</code>) where each row represents a <strong>scheduled stop event</strong> (a particular trip arriving at a particular stop at a planned time). This dataset supports the development of the Madrid Bus Companion application, which provides bus navigation and location-based educational content through runtime Wikidata queries based on stop location.</p>
 
     <h3>1.1 Data Processing</h3>
     <ul>
-      <li>Loaded five GTFS source files: <code>routes.txt</code>, <code>trips.txt</code>, <code>stop_times.txt</code>, <code>stops.txt</code>, and <code>shapes.txt</code>.</li>
-      <li>Excluded <code>shapes.txt</code> for this stage (geometry not needed).</li>
-      <li>Removed empty columns (<code>route_desc</code>, <code>block_id</code>) and handled null values.</li>
-      <li>Merged tables in the order <code>routes → trips → stop_times → stops</code> using keys <code>route_id</code>, <code>trip_id</code>, and <code>stop_id</code>.</li>
-      <li>Kept only essential attributes: route info, trip info, stop info, arrival times, and accessibility.</li>
-      <li>Verified referential integrity and consistent keys.</li>
+      <li><strong>Preprocessing pipeline:</strong> <code>scripts/preprocessing.py</code> converts every GTFS <code>.txt</code> file (routes, trips, stops, stop_times, calendar, calendar_dates, shapes, agency) into <code>data/processed/*.csv</code> so the heavy data never lives in the repository.</li>
+      <li><strong>Integrity + time fix:</strong> The script validates all foreign keys (routes ↔ trips ↔ stop_times ↔ stops) and normalizes extended GTFS times (e.g., <code>25:30:00 → 01:30:00</code>) so Morph-KGC and RML processors do not fail.</li>
+      <li><strong>Merged dataset:</strong> Routes → trips → stop_times → stops are joined into <code>df_final.csv</code> (~1.75 M scheduled stop events) that carries the attributes required by the ontology (trip metadata, stops, WGS84 coordinates, accessibility flags).</li>
+      <li><strong>Supporting tables:</strong> <code>calendar.csv</code>, <code>calendar_dates.csv</code>, and <code>shapes.csv</code> are copied to <code>data/processed/</code> for subsequent cleaning.</li>
+      <li><strong>Assignment 3 cleanup:</strong> <code>scripts/assignment3.py</code> trims every string column, converts all GTFS dates to ISO 8601, removes accidental indices, and writes the final <code>*-updated.csv</code> plus 500-row samples under <code>csv/</code>.</li>
+      <li><strong>Local area placeholders:</strong> the same script now builds <code>local_areas-updated.csv</code> with one row per <code>stop_id</code> and empty columns (<code>area_name</code>, <code>wikidata_same_link</code>, <code>area_code</code>) so Wikidata reconciliation can be injected without touching the main dataset.</li>
     </ul>
 
     <h3>1.2 Final Schema</h3>
+    <p>The cleaned deliverables consist of five CSV files stored under <code>data/processed/</code> (full data) and <code>csv/</code> (500-row samples). The primary fact table is <code>df_final-updated.csv</code>, which describes every scheduled stop event.</p>
+
+    <h4>df_final-updated.csv (scheduled stop events)</h4>
     <table>
       <thead><tr><th>Column</th><th>Description</th></tr></thead>
       <tbody>
@@ -66,6 +69,33 @@
     <div class="callout small">
       <strong>Quantitative summary:</strong> 460 routes · 69,370 trips · 8,295 stops · ≈1.75 M scheduled stop-times.
     </div>
+
+    <h4>Supporting CSV outputs</h4>
+    <table>
+      <thead><tr><th>Dataset</th><th>Key columns</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>calendar-updated.csv</code></td>
+          <td><code>service_id</code>, weekday flags, <code>start_date</code>, <code>end_date</code> (ISO 8601)</td>
+          <td>Defines recurring service patterns for each GTFS service.</td>
+        </tr>
+        <tr>
+          <td><code>calendar_dates-updated.csv</code></td>
+          <td><code>service_id</code>, <code>date</code> (ISO 8601), <code>exception_type</code></td>
+          <td>Lists additions/removals to specific days (holidays, strikes, etc.).</td>
+        </tr>
+        <tr>
+          <td><code>shapes-updated.csv</code></td>
+          <td><code>shape_id</code>, <code>shape_pt_lat</code>, <code>shape_pt_lon</code>, <code>shape_pt_sequence</code></td>
+          <td>Polyline geometry for route visualization; coordinates kept as float64.</td>
+        </tr>
+        <tr>
+          <td><code>local_areas-updated.csv</code></td>
+          <td><code>stop_id</code>, <code>area_name</code>, <code>wikidata_same_link</code>, <code>area_code</code></td>
+          <td>Placeholder per stop to store reconciled Wikidata metadata and compact codes.</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3>1.4 DataFrame Information</h3>
     <p>The <code>df_clean.info()</code> output below summarizes the dataset structure, including data types and non‑null counts.</p>
@@ -110,7 +140,7 @@ max    4.113160e+01 -2.825500e+00   1.617000e+03
     <p class="small">The geographic coverage extends beyond Madrid city proper to include the entire metropolitan region served by CRTM (Consorcio Regional de Transportes de Madrid), spanning approximately 39.6°N to 41.1°N latitude and 4.6°W to 2.8°W longitude.</p>
     
     <div class="callout small">
-      <p><strong>Data Structure Note:</strong> The maximum stop_sequence of 1,617 reflects CRTM's GTFS encoding approach where multiple daily service runs are represented under single trip_ids. For example, Route 250 (ALCALÁ DE HENARES-MECO) contains 37 sequential service runs through a 44-stop route, resulting in 1,617 total stop-time records. This pattern also appears in routes 312, FS2, 224, and 352. Each individual stop-time record represents a valid scheduled bus arrival and is preserved in our dataset for the Madrid Transit Companion application's "next bus" queries. The median (13 stops) and mean (16.3 stops) accurately reflect typical single-run operations, while individual intercity routes may have up to 140-165 stops per run. The dataset is sourced from the <a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank">CRTM bus network GTFS feed</a>, which specifically covers buses (Metro and Cercanías rail have separate feeds).
+      <p><strong>Data Structure Note:</strong> The maximum stop_sequence of 1,617 reflects CRTM's GTFS encoding approach where multiple daily service runs are represented under single trip_ids. For example, Route 250 (ALCALÁ DE HENARES-MECO) contains 37 sequential service runs through a 44-stop route, resulting in 1,617 total stop-time records. This pattern also appears in routes 312, FS2, 224, and 352. Each individual stop-time record represents a valid scheduled bus arrival and is preserved in our dataset for the Madrid Transit Companion application's "next bus" queries. The median (13 stops) and mean (16.3 stops) accurately reflect typical single-run operations, while individual intercity routes may have up to 140-165 stops per run. The dataset is sourced from the <a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank" rel="noopener noreferrer">CRTM bus network GTFS feed</a>, which specifically covers buses (Metro and Cercanías rail have separate feeds).
     </div>
   </section>
 
@@ -119,8 +149,8 @@ max    4.113160e+01 -2.825500e+00   1.617000e+03
     
     <h3>2.1 Source Data License</h3>
     <p><strong>Publisher and Rightsholder:</strong> Consorcio Regional de Transportes de Madrid (CRTM)</p>
-    <p><strong>Distribution:</strong> Via Mobility Database (<a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank">mdb-2820</a>)</p>
-    <p><strong>License:</strong> <a href="https://www.crtm.es/licencia-de-uso" target="_blank">Licencia de Datos Abiertos y Estáticos (LDA) del CRTM</a></p>
+    <p><strong>Distribution:</strong> Via Mobility Database (<a href="https://mobilitydatabase.org/feeds/gtfs/mdb-2820" target="_blank" rel="noopener noreferrer">mdb-2820</a>)</p>
+    <p><strong>License:</strong> <a href="https://www.crtm.es/licencia-de-uso" target="_blank" rel="noopener noreferrer">Licencia de Datos Abiertos y Estáticos (LDA) del CRTM</a></p>
     
     <p>This license allows reuse of static public data for both commercial and non‑commercial purposes, under specific obligations:</p>
     <ul>
@@ -136,7 +166,7 @@ max    4.113160e+01 -2.825500e+00   1.617000e+03
     <p><strong>RDF Transformation:</strong> © Group 06 (2025), released under <strong>Creative Commons Attribution 4.0 International (CC-BY 4.0)</strong></p>
     
     <div class="callout small">
-      <p><strong>License URI:</strong> <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">https://creativecommons.org/licenses/by/4.0/</a></p>
+      <p><strong>License URI:</strong> <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">https://creativecommons.org/licenses/by/4.0/</a></p>
       <p><strong>Required Attribution:</strong> "Original GTFS data from Consorcio Regional de Transportes de Madrid (CRTM) - https://www.crtm.es/. RDF transformation by Group 06."</p>
       <p><strong>Rationale:</strong> CC-BY 4.0 is compatible with the source license (LDA allows derivative works), widely recognized, and promotes open data reuse while requiring proper attribution.</p>
     </div>
@@ -183,8 +213,8 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
       </tr>
       <tr>
         <td>LocalArea</td>
-        <td><code>http://group06.linkeddata.es/resource/area/{area_name}</code></td>
-        <td><code>/resource/area/aranjuez</code></td>
+        <td><code>http://group06.linkeddata.es/resource/local-area/{stop_id}</code></td>
+        <td><code>/resource/local-area/par_8_09568</code></td>
       </tr>
       <tr>
         <td>Service</td>
@@ -228,7 +258,7 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
 <section class="card">
   <h2>4. Lightweight Ontology</h2>
   <p>
-    The <strong>Madrid Bus Network Ontology</strong> extends the GTFS vocabulary (<a href="https://vocab.gtfs.org/terms" target="_blank">vocab.gtfs.org/terms</a>) 
+    The <strong>Madrid Bus Network Ontology</strong> extends the GTFS vocabulary (<a href="https://vocab.gtfs.org/terms" target="_blank" rel="noopener noreferrer">vocab.gtfs.org/terms</a>) 
     to model Madrid's bus network. Following best practices for ontology reuse, we import existing vocabularies and add only minimal 
     bus-specific extensions and geographic area linking needed for our application.
   </p>
@@ -240,7 +270,6 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
       <tr><td>GTFS Vocabulary</td><td><code>gtfs:</code></td><td><code>Route</code>, <code>Stop</code>, <code>Trip</code>, <code>StopTime</code>, <code>Service</code>, <code>CalendarRule</code>, <code>Shape</code>, <code>ShapePoint</code>, <code>shortName</code>, <code>arrivalTime</code>, etc.</td></tr>
       <tr><td>WGS84 Geo</td><td><code>geo:</code></td><td><code>lat</code>, <code>long</code></td></tr>
       <tr><td>Schema.org</td><td><code>schema:</code></td><td><code>Place</code> (superclass for LocalArea), <code>startDate</code>, <code>endDate</code></td></tr>
-      <tr><td>DBpedia Ontology</td><td><code>dbo:</code></td><td><code>Place</code> (superclass for LocalArea)</td></tr>
       <tr><td>Dublin Core</td><td><code>dcterms:</code></td><td><code>title</code>, <code>creator</code>, <code>created</code>, <code>license</code>, <code>source</code></td></tr>
       <tr><td>OWL</td><td><code>owl:</code></td><td><code>Ontology</code>, <code>Class</code>, <code>ObjectProperty</code>, <code>sameAs</code>, <code>inverseOf</code>, <code>disjointWith</code></td></tr>
     </tbody>
@@ -270,17 +299,17 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
   </table>
 
   <h4>ex:LocalArea (Class)</h4>
-  <p class="small">A named geographic area in Madrid (neighborhood, district, landmark zone) that contains one or more bus stops. Instances are linked to corresponding DBpedia resources via <code>owl:sameAs</code> to enable retrieval of cultural, historical, and touristic information.</p>
+  <p class="small">A named geographic area in Madrid (neighborhood, district, landmark zone) that contains one or more bus stops. Instances are linked to corresponding Wikidata entities via <code>owl:sameAs</code> to enable retrieval of cultural, historical, and touristic information.</p>
   <table class="small">
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td><code>rdfs:subClassOf</code></td><td><code>schema:Place</code>, <code>dbo:Place</code></td></tr>
+      <tr><td><code>rdfs:subClassOf</code></td><td><code>schema:Place</code>,
       <tr><td><code>owl:disjointWith</code></td><td><code>ex:BusRoute</code>, <code>ex:BusStop</code></td></tr>
     </tbody>
   </table>
 
   <h4>ex:areaCode (Datatype Property)</h4>
-  <p class="small">A short alphanumeric code identifying the local area (e.g., 'ARJ' for Aranjuez, 'CHB' for Chamberí). Used for compact area identification in the application.</p>
+  <p class="small">Wikidata Q-identifier for the local area. This code enables semantic linking and allows applications to retrieve additional information from Wikidata about the area.</p>
   <table class="small">
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
@@ -290,7 +319,7 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
   </table>
 
   <h4>ex:locatedInArea (Object Property)</h4>
-  <p class="small">Links a bus stop to the local geographic area (neighborhood, district) where it is located. This enables the application to retrieve area-specific quiz content from DBpedia.</p>
+  <p class="small">Links a bus stop to the local geographic area (neighborhood, district) where it is located. This enables the application to retrieve area-specific quiz content from Wikidata.</p>
   <table class="small">
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
@@ -315,8 +344,8 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
   <div class="callout small">
     <p><strong>Vocabulary Reuse:</strong> We reuse the official GTFS vocabulary instead of recreating Route, Stop, Trip, and StopTime classes.</p>
     <p><strong>Bus-Specific Subclasses:</strong> <code>ex:BusRoute</code> and <code>ex:BusStop</code> provide domain specificity for Madrid's bus network while maintaining compatibility with the GTFS standard.</p>
-    <p><strong>Geographic Linking:</strong> <code>ex:LocalArea</code> enables proper semantic linking between bus stops and geographic regions. Each LocalArea instance uses <code>owl:sameAs</code> to link to its corresponding DBpedia entity (e.g., <code>dbr:Aranjuez</code>). The <code>ex:areaCode</code> datatype property provides compact area identification.</p>
-    <p><strong>Runtime DBpedia Integration:</strong> The application uses bus stop coordinates to query DBpedia at runtime for cultural/historical content about nearby areas. The <code>ex:locatedInArea</code> relationship provides the semantic bridge for this linking.</p>
+    <p><strong>Geographic Linking:</strong> <code>ex:LocalArea</code> enables proper semantic linking between bus stops and geographic regions. Each LocalArea instance uses <code>owl:sameAs</code> to link to its corresponding Wikidata entity (e.g., <code>wd:Q152867</code> for Aranjuez). The <code>ex:areaCode</code> datatype property provides compact area identification.</p>
+    <p><strong>Runtime Wikidata Integration:</strong> The application uses bus stop coordinates to query Wikidata at runtime for cultural/historical content about nearby areas. The <code>ex:locatedInArea</code> relationship provides the semantic bridge for this linking.</p>
     <p><strong>Disjointness Constraints:</strong> All three custom classes are mutually disjoint, preventing logical errors where an entity could be simultaneously a route, stop, and area.</p>
     <p><strong>Inverse Relationships:</strong> <code>ex:locatedInArea</code> and <code>ex:containsStop</code> are explicitly declared as inverses, enabling bidirectional queries.</p>
   </div>
@@ -330,8 +359,7 @@ Ontology terms:  http://group06.linkeddata.es/ontology/
       <tr><td><code>gtfs:</code></td><td><code>http://vocab.gtfs.org/terms#</code></td><td>GTFS vocabulary (imported)</td></tr>
       <tr><td><code>geo:</code></td><td><code>http://www.w3.org/2003/01/geo/wgs84_pos#</code></td><td>WGS84 coordinates</td></tr>
       <tr><td><code>schema:</code></td><td><code>http://schema.org/</code></td><td>Schema.org vocabulary</td></tr>
-      <tr><td><code>dbo:</code></td><td><code>http://dbpedia.org/ontology/</code></td><td>DBpedia ontology</td></tr>
-      <tr><td><code>dbr:</code></td><td><code>http://dbpedia.org/resource/</code></td><td>DBpedia resources (for <code>owl:sameAs</code> links)</td></tr>
+      <tr><td><code>wd:</code></td><td><code>https://www.wikidata.org/entity/</code></td><td>Wikidata resources referenced via <code>owl:sameAs</code></td></tr>
       <tr><td><code>dcterms:</code></td><td><code>http://purl.org/dc/terms/</code></td><td>Dublin Core metadata</td></tr>
       <tr><td><code>owl:</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td><td>OWL constructs</td></tr>
       <tr><td><code>rdfs:</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td><td>RDF Schema</td></tr>

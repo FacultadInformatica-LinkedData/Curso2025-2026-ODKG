@@ -54,12 +54,42 @@ GROUP BY ?university
 ORDER BY DESC(?numDegrees)
 
 ###########################################################
-# 5. Degrees grouped by academic ambit (field)
+# 5. Degrees info
 ###########################################################
-SELECT ?ambit (COUNT(DISTINCT ?degree) AS ?numDegrees)
+PREFIX lude:  <http://spanishuniversities.data.es/lude/ontology#>
+PREFIX id:    <http://spanishuniversities.data.es/lude/resource/>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+
+SELECT ?degree ?degreeLabel ?academicYear ?degreeWikidata
+       ?faculty ?facultyLabel ?facultyWikidata
+       ?level ?levelLabel ?levelWikidata
 WHERE {
-  ?degree rdf:type lude:Degree ;
-          lude:hasAmbit ?ambit .
+  # Todos los Degrees
+  ?degree a lude:Degree .
+
+  # Nombre del grado
+  OPTIONAL { ?degree rdfs:label ?degreeLabel . }
+
+  # Año académico
+  OPTIONAL { ?degree lude:academicYear ?academicYear . }
+
+  # Enlace a Wikidata del degree
+  OPTIONAL { ?degree owl:sameAs ?degreeWikidata . }
+
+  # Faculty donde se imparte
+  OPTIONAL {
+    ?degree lude:deliveredAt ?faculty .
+    OPTIONAL { ?faculty rdfs:label ?facultyLabel . }
+    OPTIONAL { ?faculty owl:sameAs ?facultyWikidata . }
+  }
+
+  # Nivel académico (Grado / Máster, etc.)
+  OPTIONAL {
+    ?degree lude:hasAcademicLevel ?level .
+    OPTIONAL { ?level rdfs:label ?levelLabel . }
+    OPTIONAL { ?level owl:sameAs ?levelWikidata . }
+  }
 }
-GROUP BY ?ambit
-ORDER BY DESC(?numDegrees)
+ORDER BY ?degree

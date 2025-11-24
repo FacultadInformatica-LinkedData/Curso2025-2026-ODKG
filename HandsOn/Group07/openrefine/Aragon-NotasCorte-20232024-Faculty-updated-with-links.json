@@ -1,0 +1,151 @@
+[
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Faculty",
+    "description": "Vaciar las celdas en la columna Faculty"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Faculty",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "f",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna f en el índice 3 basada en la columna Faculty usando la expresión grel:value"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "f",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q180958",
+        "name": "faculty"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column f to type Q180958"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Faculty",
+          "expression": "value",
+          "columnName": "Faculty",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "f",
+    "similarValue": "Facultad de Ciencias Sociales y Humanas de Teruel",
+    "judgment": "matched",
+    "match": {
+      "id": "Q104176988",
+      "name": "Faculty of Social and Human Sciences of Teruel",
+      "types": [
+        "Q180958"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Faculty of Social and Human Sciences of Teruel (Q104176988) para las celdas que contienen \"Facultad de Ciencias Sociales y Humanas de Teruel\" en la columna f"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Faculty",
+    "description": "Vaciar las celdas en la columna Faculty"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Faculty",
+    "description": "Rellenar las celdas en la columna Faculty"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "f",
+    "description": "Rellenar las celdas en la columna f"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "f",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_faculty",
+    "columnInsertIndex": 4,
+    "description": "Crear la columna same_as_wikidata_faculty en el índice 4 basada en la columna f usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "f",
+    "description": "Eliminar columna f"
+  }
+]

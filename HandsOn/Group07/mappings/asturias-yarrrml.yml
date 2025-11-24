@@ -10,8 +10,8 @@ prefixes:
   ql: http://semweb.mmlab.be/ns/ql#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   vocab: http://example.org#
-  lude: https://spanishuniversities.data/ontology/lude#
-  id: https://spanishuniversities.data/id/lude/
+  lude: http://spanishuniversities.data.es/lude/ontology#
+  id: http://spanishuniversities.data.es/lude/resource/
   
 mappings:
   asturiasUniversityUD:
@@ -40,7 +40,7 @@ mappings:
 
   asturiasDegreeUD:
     sources:
-      - [Asturias-Degrees-updated.csv~csv]
+      - [Asturias_listaestudios-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -50,7 +50,7 @@ mappings:
 
   asturiasDegreeDK:
     sources:
-      - [Asturias-Degrees-updated.csv~csv]
+      - [Asturias_listaestudios-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -69,15 +69,15 @@ mappings:
               
   asturiasKnowledgeDK:
     sources:
-      - [ambit-otros.csv~csv]
+      - [ambit-updated.csv~csv]
     s: id:KnowledgeArea/$(id)
     po:
       - [rdf:type, lude:KnowledgeArea]
       - [rdfs:label,$(ambit),xsd:string] 
 
-  asturiasDegreeDK:
+  asturiasDegreeDL:
     sources:
-      - [Asturias-Degrees-updated.csv~csv]
+      - [Asturias_listaestudios-Degrees-updated.csv~csv]
     s: id:Degree/$(DegreeId)
     po:
       - [rdf:type,lude:Degree]
@@ -86,7 +86,7 @@ mappings:
       - [lude:academicYear,$(Academic Year),xsd:string]
       - p: lude:hasAcademicLevel
         o:
-          mapping: asturiasLevelDK
+          mapping: asturiasLevelDL
           condition:
             function: equal
             parameters:
@@ -94,7 +94,7 @@ mappings:
               - [str2, $(AcademicLevelID)]
 
               
-  asturiasLevelDK:
+  asturiasLevelDL:
     sources:
       - [academic_level-updated.csv~csv]
     s: id:AcademicLevel/$(AcademicLevelID)

@@ -1,0 +1,1476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Urban Sensors — Pedestrians & Microclimate (+ Wikidata Tram Stops)</title>
+
+<style>
+  :root{
+    --ink:#0f172a;--muted:#64748b;--bg:#f8fafc;--card:#ffffff;
+    --line:#e5e7eb;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font:14px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,sans-serif;
+  }
+  header{
+    padding:14px 18px;border-bottom:1px solid var(--line);
+    background:#fff;position:sticky;top:0;z-index:10;
+  }
+  h1{margin:0 0 4px;font-size:18px}
+  .wrap{max-width:1200px;margin:0 auto;padding:14px}
+  .panel{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:12px;
+  }
+  .grid{display:grid;gap:12px}
+  .g2{grid-template-columns:1.35fr 1fr}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .controls{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;align-items:end}
+  label{font-size:11px;color:var(--muted);display:block;margin:0 0 3px}
+  input,select,button{width:100%;padding:8px 9px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px}
+  button{background:#0f172a;color:#fff;border-color:transparent;cursor:pointer;transition:background .15s,transform .05s}
+  button:hover{background:#111827}
+  button:active{transform:scale(.98)}
+  .files{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  /* .pill ya no se usa, la podrías borrar si quieres, pero no molesta */
+  .pill{font-size:10px;padding:4px 9px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+  .pill b{color:var(--ink);font-weight:600}
+  .pill input{display:none}
+  .note{font-size:10px;color:var(--muted)}
+  .stat{background:#eef2ff;border:1px solid #e5e7ff;border-radius:12px;padding:6px 8px;text-align:center}
+  .stat span{font-size:10px;color:var(--muted)}
+  .stat b{font-size:18px;display:block;margin-top:4px}
+  #map{height:430px;border-radius:12px}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;font-size:10px;color:var(--muted)}
+  .list{max-height:150px;overflow:auto;margin-top:4px}
+  .row{display:flex;justify-content:space-between;gap:8px;padding:4px 0;border-bottom:1px dashed var(--line);font-size:12px;cursor:pointer}
+  .row:last-child{border-bottom:none}
+  .row:hover{background:#f9fafb}
+  code{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:9px}
+  canvas{background:#fff;border-radius:12px;border:1px solid var(--line)}
+  /* Smaller, wrapped tram tooltip */
+  .tram-tip{max-width: 220px;white-space: normal;font-size: 11px;line-height: 1.25;padding: 6px 8px;}
+
+  /* Optional: scrollable popup for full details on click */
+  .tram-pop .leaflet-popup-content{
+    max-width: 260px;
+    max-height: 140px;
+    overflow: auto;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  @media(max-width:900px){.g2{grid-template-columns:1fr}.controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/n3@1.17.3/browser/n3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="wrap" style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap">
+    <div>
+      <h1>Urban Sensors — Pedestrians &amp; Microclimate</h1>
+      <div class="note">Client-side exploration strictly based on your ontology &amp; RML mappings (with Wikidata tram stops).</div>
+    </div>
+
+    <!-- AQUÍ SOLO DEJAMOS EL ESTADO, SIN BOTONES DE TTL -->
+    <div class="files">
+      <span id="fileStatus" class="note"></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap grid g2">
+  <section class="panel">
+    <div class="controls">
+      <div>
+        <label for="fromDate">From date</label>
+        <input id="fromDate" type="date">
+      </div>
+      <div>
+        <label for="toDate">To date</label>
+        <input id="toDate" type="date">
+      </div>
+      <div>
+        <label for="hourSel">Hour</label>
+        <select id="hourSel"><option value="all">All day</option></select>
+      </div>
+      <div>
+        <label for="sensorSel">Pedestrian sensor</label>
+        <select id="sensorSel"><option value="all">All</option></select>
+      </div>
+      <div>
+        <label for="weatherSel">Microclimate metric</label>
+        <select id="weatherSel"><option value="none">None</option></select>
+      </div>
+      <div>
+        <label>&nbsp;</label>
+        <button id="applyBtn" type="button">Apply filters</button>
+      </div>
+      <div>
+        <label for="wikidataBtn">Wikidata</label>
+        <button id="wikidataBtn" type="button" title="Fetch tram stops from Wikidata for linked items">Load tram stops</button>
+      </div>
+    </div>
+
+    <div class="grid g3" style="margin:8px 0 8px">
+      <div class="stat">
+        <span>Avg pedestrians / h (filtered)</span>
+        <b id="avgStat">—</b>
+      </div>
+      <div class="stat">
+        <span id="sensorStatLabel">Pedestrian sensors with data</span>
+        <b id="sensorStat">0</b>
+      </div>
+      <div class="stat"><span>Date range in view</span><b id="rangeStat">—</b></div>
+    </div>
+
+    <div id="map"></div>
+    <div class="legend">
+      <span>● Blue: pedestrian sensor (size = pedestrian count)</span>
+      <span>● Red: microclimate sensor (only associated when a sensor is selected)</span>
+      <span>● Green: tram stop from Wikidata (name, coordinates, connecting line)</span>
+      <span>Microclimate tooltip = avg of selected metric in current filter.</span>
+    </div>
+  </section>
+
+  <aside class="panel grid" style="grid-template-rows:auto 160px 160px 1fr">
+    <div>
+      <h3 style="margin:0 0 4px">Sensor detail</h3>
+      <div id="detailBox" class="note">
+        Upload TTLs, choose filters, then click a pedestrian marker or select a sensor.
+      </div>
+    </div>
+    <div>
+      <div class="note">Pedestrian trend (current selection / all)</div>
+      <canvas id="trend" height="150"></canvas>
+    </div>
+    <div>
+      <div class="note">Microclimate trend — <span id="microMetricLabel">no metric selected</span></div>
+      <canvas id="microTrend" height="150"></canvas>
+    </div>
+    <div>
+      <div class="note" style="margin-bottom:4px">Sensors ranked by pedestrian count in current filter</div>
+      <div id="sensorList" class="list"></div>
+    </div>
+  </aside>
+</div>
+
+<script>
+/* ==== PREFIXES & CONSTANTS ==== */
+const P = {
+  sosa: 'http://www.w3.org/ns/sosa/',
+  us:   'https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#',
+  wgs:  'http://www.w3.org/2003/01/geo/wgs84_pos#',
+  rdfs: 'http://www.w3.org/2000/01/rdf-schema#',
+  rdf:  'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+  owl:  'http://www.w3.org/2002/07/owl#',
+  schema: 'http://schema.org/'
+};
+
+const SPARQL_ENDPOINT = 'http://localhost:9000/sparql';
+
+const CONSTRUCT_ALL = `
+  CONSTRUCT { ?s ?p ?o }
+  WHERE { ?s ?p ?o }
+`;
+
+const CONSTRUCT_STATIC = `
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX us:   <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
+PREFIX wgs:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT {
+  # Pedestrian sensors + FOI coords + closest microclimate
+  ?ps a us:PedestrianSensor ;
+      rdfs:label ?psLabel ;
+      us:locatedAt ?pFoi ;
+      us:closestMicroclimateSensor ?closestMicro .
+  ?pFoi rdfs:label ?pFoiLabel ;
+        wgs:lat ?pLat ;
+        wgs:long ?pLon .
+
+  # Microclimate sensors + FOI coords + closest pedestrian
+  ?ms a us:MicroclimateSensor ;
+      rdfs:label ?msLabel ;
+      us:locatedAt ?mFoi ;
+      us:closestPedestrianSensor ?closestPed .
+  ?mFoi rdfs:label ?mFoiLabel ;
+        wgs:lat ?mLat ;
+        wgs:long ?mLon .
+
+  # Sensor descriptions (para QIDs de Wikidata)
+  ?desc a us:SensorDescription ;
+        ?pd ?od .
+
+  # Todas las localizaciones conocidas (rescate general de FOIs)
+  ?anyFoi rdfs:label ?anyLabel ;
+          wgs:lat ?anyLat ;
+          wgs:long ?anyLon .
+
+  # Enlaces owl:sameAs (ej. Same_As_Wikidata_Country)
+  ?entity owl:sameAs ?wikidata .
+}
+WHERE {
+  {
+    ?ps a us:PedestrianSensor .
+    OPTIONAL { ?ps rdfs:label ?psLabel }
+    OPTIONAL { ?ps us:locatedAt ?pFoi .
+               OPTIONAL { ?pFoi rdfs:label ?pFoiLabel }
+               OPTIONAL { ?pFoi wgs:lat ?pLat }
+               OPTIONAL { ?pFoi wgs:long ?pLon } }
+    OPTIONAL { ?ps us:closestMicroclimateSensor ?closestMicro }
+  }
+  UNION
+  {
+    ?ms a us:MicroclimateSensor .
+    OPTIONAL { ?ms rdfs:label ?msLabel }
+    OPTIONAL { ?ms us:locatedAt ?mFoi .
+               OPTIONAL { ?mFoi rdfs:label ?mFoiLabel }
+               OPTIONAL { ?mFoi wgs:lat ?mLat }
+               OPTIONAL { ?mFoi wgs:long ?mLon } }
+    OPTIONAL { ?ms us:closestPedestrianSensor ?closestPed }
+  }
+  UNION
+  {
+    ?desc a us:SensorDescription ;
+          ?pd ?od .
+  }
+  UNION
+  {
+    {
+      ?anyFoi a sosa:FeatureOfInterest .
+    } UNION {
+      ?anyFoi a us:Location .
+    }
+    OPTIONAL { ?anyFoi rdfs:label ?anyLabel }
+    OPTIONAL { ?anyFoi wgs:lat ?anyLat }
+    OPTIONAL { ?anyFoi wgs:long ?anyLon }
+  }
+  UNION
+  {
+    # Captura cualquier recurso con owl:sameAs (ej. calles con QIDs de país)
+    ?entity owl:sameAs ?wikidata .
+  }
+}
+`;
+
+const METRIC_QUERY = `
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX us:   <https://smartcity.linkeddata.es/lcc/ontology/urban-sensors#>
+SELECT DISTINCT ?prop WHERE {
+  ?s a us:MicroclimateSensor .
+  ?obs sosa:hasResult ?res . 
+  ?res sosa:observedProperty ?prop .
+}
+`;
+
+async function initMetrics(){
+  try {
+    const data = await runSparqlRaw(METRIC_QUERY, 'application/sparql-results+json');
+    for(const b of data.results.bindings){
+      const iri = b.prop.value;
+      if(!DB.microProps.has(iri)){
+        DB.microProps.set(iri, { iri, label: shortLabel(iri) });
+      }
+    }
+    refreshWeatherOptions();
+  } catch(e){
+    console.error("Error loading metrics", e);
+  }
+}
+
+
+// Ejecutar SPARQL y devolver texto o JSON según Accept
+async function runSparqlRaw(query, accept = 'application/sparql-results+json') {
+  const res = await fetch(SPARQL_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      'Accept': accept
+    },
+    body: new URLSearchParams({ query })
+  });
+  if (!res.ok) {
+    throw new Error('SPARQL error ' + res.status);
+  }
+  return accept === 'text/turtle' ? res.text() : res.json();
+}
+
+// === DATA TIME ZONE (Melbourne, summer ~ UTC+11) ===
+const DATA_TZ = '+11:00';
+
+function getDataTzOffsetMinutes() {
+  const m = DATA_TZ.match(/([+-])(\d{2}):(\d{2})/);
+  if (!m) return 0;
+  const sign = m[1] === '-' ? -1 : 1;
+  const hh = parseInt(m[2], 10);
+  const mm = parseInt(m[3], 10);
+  return sign * (hh * 60 + mm);
+}
+const DATA_TZ_OFFSET_MIN = getDataTzOffsetMinutes();
+
+/** Devuelve la fecha/hora en la zona de los datos, como string. */
+function formatDataLocal(d, withTime = true) {
+  if (!d) return '—';
+  const shifted = new Date(d.getTime() + DATA_TZ_OFFSET_MIN * 60000);
+  const y = shifted.getUTCFullYear();
+  const m = String(shifted.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(shifted.getUTCDate()).padStart(2, '0');
+  if (!withTime) return `${y}-${m}-${day}`;
+  const h = String(shifted.getUTCHours()).padStart(2, '0');
+  return `${y}-${m}-${day} ${h}:00`;
+}
+
+/** Clave de agrupación por hora en la zona de datos. */
+function dataLocalHourKey(d) {
+  return formatDataLocal(d, true); // "YYYY-MM-DD HH:00"
+}
+
+/** Hora (0–23) en la zona de los datos (Melbourne, +11) */
+function dataLocalHour(d) {
+  const shifted = new Date(d.getTime() + DATA_TZ_OFFSET_MIN * 60000);
+  return shifted.getUTCHours();
+}
+
+const MICRO_SENSOR_BASE =
+  'https://smartcity.linkeddata.es/lcc/resource/microclimate/sensor/';
+
+const US_WIKIDATA_PRED = P.us + 'Same_As_Wikidata_Sensor_Description';
+
+const DB = {
+  fois: new Map(),
+  pedSensors: new Map(),
+  pedObs: [],
+  microSensors: new Map(),
+  microObs: [],
+  microProps: new Map(),
+  wikidataItems: new Set(),
+  tramStops: new Map(),
+  tramLinks: new Map(),
+  wikidataSubjects: new Map(),
+  foiWikidata: new Map()
+};
+
+const State = {
+  range: [null,null],
+  hour: 'all',
+  selectedSensor: null,
+  metric: 'none',
+  tramLoaded: false
+};
+
+/* ==== UI SETUP ==== */
+(function initHours(){
+  const sel = document.getElementById('hourSel');
+  for(let h=0; h<24; h++){
+    const v = String(h).padStart(2,'0') + ':00';
+    const o = document.createElement('option');
+    o.value = v; o.textContent = v; sel.appendChild(o);
+  }
+})();
+
+const map = L.map('map').setView([-37.814,144.96332], 12);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+  maxZoom:19, attribution:'© OpenStreetMap contributors'
+}).addTo(map);
+const pedLayer = L.layerGroup().addTo(map);
+const microLayer = L.layerGroup().addTo(map);
+const tramLayer = L.layerGroup().addTo(map);
+
+const trendChart = new Chart(document.getElementById('trend'),{
+  type:'line',
+  data:{labels:[],datasets:[{label:'Pedestrians',data:[],tension:0.25}]},
+  options:{responsive:true,maintainAspectRatio:false,layout:{padding:{bottom:12}},
+    plugins:{legend:{display:false}},
+    scales:{x:{ticks:{maxRotation:0,autoSkip:true,font:{size:8}}},
+            y:{ticks:{font:{size:8}}}}}
+});
+
+const microTrendChart = new Chart(document.getElementById('microTrend'),{
+  type:'line',
+  data:{labels:[],datasets:[{label:'Microclimate',data:[],tension:0.25,borderColor:'#dc2626',backgroundColor:'rgba(220,38,38,0.15)'}]},
+  options:{responsive:true,maintainAspectRatio:false,layout:{padding:{bottom:18}},
+    plugins:{legend:{display:false}},
+    scales:{x:{ticks:{maxRotation:0,autoSkip:true,font:{size:8}}},
+            y:{ticks:{font:{size:8}}}}}
+});
+
+/* ==== HELPERS ==== */
+const fmt = n => (n==null || Number.isNaN(n)) ? '—' : new Intl.NumberFormat().format(n);
+function parseXSDDateTime(lex){
+  try{
+    let s = lex;
+    if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$/.test(lex)) {
+      s = lex + DATA_TZ;
+    }
+    const d = new Date(s);
+    return isNaN(d.getTime()) ? null : d;
+  }catch(e){
+    return null;
+  }
+}
+function objValue(o){ return o.termType === 'Literal' ? o.value : o.id; }
+function shortLabel(iri){ const frag = iri.split(/[\/#]/).pop() || iri; return frag.replace(/[_\-]/g,' '); }
+
+function iriToQID(iri){
+  const m = iri && iri.match(/(?:^|\/)(Q\d+)(?:[#/?]|$)/);
+  return m ? m[1] : null;
+}
+
+// Extrae QIDs y códigos desde sensor-description
+function collectSensorDescriptionQIDs(quads){
+  let added = 0;
+
+  for(const {s,p,o} of quads){
+    if(!s || !p) continue;
+
+    if (p === P.owl + 'sameAs' || p === US_WIKIDATA_PRED){
+      const target = objValue(o);
+      const qid = iriToQID(target);
+      if(!qid) continue;
+
+      let subjSet = DB.wikidataSubjects.get(s);
+      if(!subjSet){
+        subjSet = new Set();
+        DB.wikidataSubjects.set(s, subjSet);
+      }
+      if(!subjSet.has(qid)){
+        subjSet.add(qid);
+        added++;
+      }
+
+      DB.wikidataItems.add(qid);
+
+      const isSensorDesc = /\/resource\/sensor-description\//.test(s);
+      if(isSensorDesc){
+        const code = (s.split('/').pop() || '').trim();
+        if(code){
+          if(!DB.tramLinks.has(qid)) DB.tramLinks.set(qid, new Set());
+          DB.tramLinks.get(qid).add(code);
+        }
+      }
+    }
+  }
+
+  const fs = document.getElementById('fileStatus');
+  if(fs){
+    const prev = fs.textContent || '';
+    const tag  = `Linked Wikidata QIDs (candidates): ${DB.wikidataItems.size}`;
+    fs.textContent = prev ? `${prev} — ${tag}` : tag;
+  }
+  const btn = document.getElementById('wikidataBtn');
+  if(btn){
+    btn.disabled = DB.wikidataItems.size === 0;
+    btn.textContent = `Load tram stops (from ${DB.wikidataItems.size} QIDs)`;
+  }
+  console.log('[Wikidata] QIDs collected in TTLs (candidates):', added,
+              '| total unique QIDs:', DB.wikidataItems.size);
+}
+
+async function parseTTL(text){
+  let cleaned = text.replace(/^\uFEFF/, '').replace(/^\u00EF\u00BB\u00BF/, '').replace(/\u221A/g, '')
+                    .replace(/[\u0000-\u0008\u000B-\u000C\u000E-\u001F\u007F]/g, '');
+  const parser = new N3.Parser();
+  const quads = parser.parse(cleaned);
+  return quads.map(q => ({
+    s: N3.Util.isNamedNode(q.subject)?q.subject.id:q.subject.id,
+    p: q.predicate.id,
+    o: q.object
+  }));
+}
+
+function upsertFoi(iri, patch){
+  const cur = DB.fois.get(iri) || { iri, microCodes:new Set() };
+  if(patch.microCodes && cur.microCodes){
+    patch.microCodes.forEach(c => cur.microCodes.add(c));
+    delete patch.microCodes;
+  }
+  Object.assign(cur, patch); DB.fois.set(iri, cur);
+}
+function upsertPedSensor(iri, patch){ DB.pedSensors.set(iri, Object.assign(DB.pedSensors.get(iri)||{iri}, patch)); }
+function upsertMicroSensor(iri, patch){ DB.microSensors.set(iri, Object.assign(DB.microSensors.get(iri)||{iri}, patch)); }
+
+/* ==== 1) PEDESTRIAN SENSOR LOCATIONS ==== */
+function buildFromPedSensorLocations(quads){
+  const types = new Map(); const sensorHints = new Set(); const foiHints = new Set();
+  for(const {s,p,o} of quads){
+    if(p === P.rdf + 'type'){
+      const t = objValue(o);
+      if(!types.has(s)) types.set(s,new Set());
+      types.get(s).add(t);
+    }
+    if(p === P.us + 'direction1' || p === P.us + 'direction2' || p === P.us + 'locatedAt'){
+      sensorHints.add(s);
+    }
+    if(p === P.wgs + 'lat' || p === P.wgs + 'long'){
+      foiHints.add(s);
+    }
+  }
+
+  for(const {s,p,o} of quads){
+    const tset = types.get(s) || new Set();
+    const val = objValue(o);
+    const isPedSensor =
+      (
+        tset.has(P.us + 'PedestrianSensor') ||
+        tset.has(P.us + 'PedestrianCounter') ||
+        sensorHints.has(s)
+      )
+      && !tset.has(P.us + 'MicroclimateSensor');
+
+    const isLocation =
+      tset.has(P.us + 'Location') ||
+      tset.has(P.sosa + 'FeatureOfInterest') ||
+      foiHints.has(s);
+
+    if (isPedSensor) {
+      if (
+        p === P.rdfs + 'label' ||
+        p === P.schema + 'name' ||
+        p === P.us + 'sensorName'
+      ) {
+        upsertPedSensor(s, { name: val });
+      } else if (p === P.schema + 'description') {
+        upsertPedSensor(s, { description: val });
+      } else if (p === P.us + 'direction1') {
+        upsertPedSensor(s, { dir1: val });
+      } else if (p === P.us + 'direction2') {
+        upsertPedSensor(s, { dir2: val });
+      } else if (p === P.us + 'locatedAt') {
+        upsertPedSensor(s, { foi: val });
+      } else if (p === P.us + 'closestMicroclimateSensor') {
+        upsertPedSensor(s, { closestMicroCode: val.trim() });
+      } else if (p === P.owl + 'sameAs' || p === US_WIKIDATA_PRED) {
+        const qid = iriToQID(val);
+        if (qid) {
+          const cur = DB.pedSensors.get(s) || { iri: s };
+          cur.sameAs = [...(cur.sameAs || []), val];
+          DB.pedSensors.set(s, cur);
+          DB.wikidataItems.add(qid);
+        }
+      }
+    } else if(isLocation){
+      if(p === P.rdfs + 'label'){
+        upsertFoi(s,{label:val});
+      } else if(p === P.wgs + 'lat'){
+        const num = Number(val); if(!isNaN(num)) upsertFoi(s,{lat:num});
+      } else if(p === P.wgs + 'long'){
+        const num = Number(val); if(!isNaN(num)) upsertFoi(s,{long:num});
+      } else if(p === P.us + 'MicroclimateSensor'){
+        const code = val.trim();
+        if(code){
+          const foi = DB.fois.get(s) || {iri:s,microCodes:new Set()};
+          (foi.microCodes || (foi.microCodes=new Set())).add(code);
+          DB.fois.set(s,foi);
+        }
+      }
+
+      const qset = DB.wikidataSubjects.get(s);
+      if(qset && qset.size){
+        DB.foiWikidata.set(s, new Set(qset));
+      }
+    }
+  }
+}
+
+/* ==== 2) PEDESTRIAN OBSERVATIONS ==== */
+function buildFromPedObservations(quads){
+  
+  const madeBy   = P.sosa + 'madeBySensor';
+  const atLoc    = P.sosa + 'hasFeatureOfInterest';
+  const rt       = P.sosa + 'resultTime';
+  const resVal   = P.sosa + 'hasSimpleResult';
+  const obsProp  = P.sosa + 'observedProperty';
+  const BASE     = 'https://smartcity.linkeddata.es/lcc/resource/';
+
+  const obs = new Map();
+  const get = iri => (obs.has(iri) ? obs.get(iri) : obs.set(iri,{iri}).get(iri));
+
+  for(const {s,p,o} of quads){
+    const v = objValue(o);
+    const r = get(s);
+
+    if(p === madeBy){
+      if(o.termType === 'Literal') r.sensorCode = v.trim();
+      else r.sensorIRI = v;
+    } else if(p === atLoc){
+      if(o.termType === 'Literal') r.locationId = v.trim();
+      else r.foiIRI = v;
+    } else if(p === rt){
+      r.time = parseXSDDateTime(v);
+    } else if(p === resVal){
+      const num = Number(v);
+      if(!Number.isNaN(num)) r.total = num;
+    } else if(p === obsProp){
+      r.prop = v;
+    }
+  }
+
+  for(const r of obs.values()){
+    if(r.prop && r.prop !== P.us + 'pedestrianCount') continue;
+
+    if(!r.sensorIRI && r.sensorCode){
+      r.sensorIRI = BASE + 'sensor/' + encodeURIComponent(r.sensorCode);
+      if(!DB.pedSensors.has(r.sensorIRI)) upsertPedSensor(r.sensorIRI,{label:r.sensorCode});
+    }
+    if(!r.foiIRI && r.locationId){
+      r.foiIRI = BASE + 'location/' + encodeURIComponent(r.locationId);
+    }
+    if(r.sensorIRI && r.foiIRI){
+      const s = DB.pedSensors.get(r.sensorIRI) || {iri:r.sensorIRI};
+      if(!s.foi) upsertPedSensor(r.sensorIRI,{foi:r.foiIRI});
+    }
+
+    if(r.total == null){
+      const d1 = Number.isFinite(r.d1)?r.d1:null;
+      const d2 = Number.isFinite(r.d2)?r.d2:null;
+      if(d1!=null || d2!=null) r.total = (d1||0)+(d2||0);
+    }
+
+    if(!r.sensorIRI && r.foiIRI){
+      for(const [sid,s] of DB.pedSensors){
+        if(s.foi === r.foiIRI){ r.sensorIRI=sid; break; }
+      }
+    }
+    if(r.sensorIRI && r.time && !isNaN(r.time) && r.total != null){
+      DB.pedObs.push(r);
+    }
+  }
+  //DB.pedObs = []
+}
+
+/* ==== 3) MICROCLIMATE SENSORS & OBS ==== */
+function buildFromMicroclimate(quads){
+  const types = new Map();
+  for(const {s,p,o} of quads){
+    if(p === P.rdf + 'type'){
+      const t = objValue(o);
+      if(!types.has(s)) types.set(s,new Set());
+      types.get(s).add(t);
+    }
+  }
+
+  for(const {s,p,o} of quads){
+    const v = objValue(o);
+    const tset = types.get(s) || new Set();
+
+    if (p === P.owl + 'sameAs' || p === US_WIKIDATA_PRED) {
+      const qid = iriToQID(v);
+      if (qid) DB.wikidataItems.add(qid);
+    }
+
+    if(tset.has(P.us + 'MicroclimateSensor')){
+      if(p === P.us + 'locatedAt'){
+        upsertMicroSensor(s,{foi:v});
+      } else if(p === P.rdfs + 'label'){
+        upsertMicroSensor(s,{label:v});
+      } else if(p === P.owl + 'sameAs' || p === US_WIKIDATA_PRED){
+        const qid = iriToQID(v);
+        if(qid){
+          const cur = DB.microSensors.get(s) || {iri:s};
+          cur.sameAs = [...(cur.sameAs||[]), v];
+          DB.microSensors.set(s,cur);
+          DB.wikidataItems.add(qid);
+        }
+      }
+    }
+
+    if(p === P.wgs + 'lat'){
+      const num = Number(v); if(!isNaN(num)) upsertFoi(s,{lat:num});
+    }
+    if(p === P.wgs + 'long'){
+      const num = Number(v); if(!isNaN(num)) upsertFoi(s,{long:num});
+    }
+  }
+}
+
+/* ==== METRIC DROPDOWN ==== */
+function refreshWeatherOptions(){
+  const sel = document.getElementById('weatherSel');
+  const keep = sel.value;
+  sel.innerHTML = '';
+  const none = document.createElement('option');
+  none.value = 'none';
+  none.textContent = 'None';
+  sel.appendChild(none);
+  for(const [iri,meta] of DB.microProps){
+    const opt = document.createElement('option');
+    opt.value = iri;
+    opt.textContent = meta.label;
+    sel.appendChild(opt);
+  }
+  if(keep && (keep === 'none' || DB.microProps.has(keep))){
+    sel.value = keep;
+  } else {
+    sel.value = 'none';
+  }
+}
+
+/* ==== LINK PED SENSOR -> MICRO FoIs ==== */
+function microFoIsForPedSensor(sensorIRI){
+  const s = DB.pedSensors.get(sensorIRI);
+  const foiset = new Set();
+
+  if(s && s.closestMicroCode){
+    const code = s.closestMicroCode.trim();
+    if(code){
+      const msIRI = MICRO_SENSOR_BASE + encodeURIComponent(code);
+      const ms = DB.microSensors.get(msIRI);
+      if(ms && ms.foi){
+        foiset.add(ms.foi);
+      }
+    }
+  }
+
+  if(s && s.foi){
+    const foi = DB.fois.get(s.foi);
+    if(foi && foi.microCodes && foi.microCodes.size){
+      foi.microCodes.forEach(code => {
+        const msIRI = MICRO_SENSOR_BASE + encodeURIComponent(code);
+        const ms = DB.microSensors.get(msIRI);
+        if(ms && ms.foi){
+          foiset.add(ms.foi);
+        }
+      });
+    }
+  }
+  return Array.from(foiset);
+}
+
+/* ==== METRIC AGGREGATION ==== */
+function avgMetricAtFoi(foiIRI, propIri, range, hourVal){
+  const [from,to] = range;
+  const h = hourVal;
+
+  const hm = d => {
+    if (h === 'all') return true;
+    const targetHour = Number(h.slice(0, 2));
+    return dataLocalHour(d) === targetHour;
+  };
+
+  const vals = DB.microObs
+    .filter(m =>
+      m.foiIRI === foiIRI &&
+      (!from || m.time >= from) &&
+      (!to || m.time <= to) &&
+      hm(m.time) &&
+      m.metrics[propIri] != null
+    )
+    .map(m => m.metrics[propIri]);
+
+  if(!vals.length) return null;
+  const sum = vals.reduce((a,b)=>a+b,0);
+  return sum / vals.length;
+}
+
+function avgMetricForSensor(sensorIRI, propIri){
+  const foIs = microFoIsForPedSensor(sensorIRI);
+  const vals = [];
+  foIs.forEach(f => {
+    const v = avgMetricAtFoi(f, propIri, State.range, State.hour);
+    if(v != null) vals.push(v);
+  });
+  if(!vals.length){
+    const s = DB.pedSensors.get(sensorIRI);
+    if(s && s.foi){
+      const v = avgMetricAtFoi(s.foi, propIri, State.range, State.hour);
+      if(v != null) vals.push(v);
+    }
+  }
+  if(!vals.length) return null;
+  const sum = vals.reduce((a,b)=>a+b,0);
+  return sum/vals.length;
+}
+
+/* ==== UI HELPERS ==== */
+function refreshSensorSelect(){
+  const sel = document.getElementById('sensorSel');
+  const prev = sel.value || 'all';
+  sel.innerHTML = '<option value="all">All</option>';
+
+  [...DB.pedSensors.entries()]
+    .filter(([iri, s]) => {
+      // Deben tener FOI con coordenadas
+      const foi = s.foi && DB.fois.get(s.foi);
+      const hasLocation =
+        !!foi &&
+        Number.isFinite(foi.lat) &&
+        Number.isFinite(foi.long);
+
+      if (!hasLocation) return false;
+
+      // Deben estar asociados a algún microclimate
+      const hasMicro =
+        !!s.closestMicroCode ||
+        (foi && foi.microCodes && foi.microCodes.size > 0);
+
+      return hasMicro;
+    })
+    .sort((a, b) => (a[1].label || a[0]).localeCompare(b[1].label || b[0]))
+    .forEach(([iri, s]) => {
+      const o = document.createElement('option');
+      o.value = iri;
+      o.textContent = s.label || iri.split('/').pop();
+      sel.appendChild(o);
+    });
+
+  const hasPrev = Array.from(sel.options).some(o => o.value === prev);
+  sel.value = hasPrev ? prev : 'all';
+}
+
+
+
+async function applyFilters(){
+  const f = document.getElementById('fromDate').value;
+  const t = document.getElementById('toDate').value;
+  const sensorValue = document.getElementById('sensorSel').value;
+  const metricValue = document.getElementById('weatherSel').value;
+
+  State.range = [
+    f ? new Date(f + 'T00:00:00' + DATA_TZ) : null,
+    t ? new Date(t + 'T23:59:59' + DATA_TZ) : null
+  ];
+
+  State.hour   = document.getElementById('hourSel').value;
+  State.metric = metricValue;
+
+  // ✅ si hay un sensor elegido en el combo, lo mantenemos como “foco”
+  State.selectedSensor = (sensorValue === 'all') ? null : sensorValue;
+
+  document.getElementById('fileStatus').textContent =
+    "⏳ Loading observations from GraphDB...";
+
+  const fromLex = f ? f + "T00:00:00" + DATA_TZ : null;
+  const toLex   = t ? t + "T23:59:59" + DATA_TZ : null;
+
+  const timeFilter =
+    (fromLex ? `FILTER (?when >= "${fromLex}"^^xsd:dateTime)` : '') +
+    (toLex   ? ` FILTER (?when <= "${toLex}"^^xsd:dateTime)` : '');
+
+  const hourFilter = (State.hour !== 'all')
+    ? `FILTER (SUBSTR(STR(?when), 12, 2) = "${State.hour.slice(0,2)}")`
+    : '';
+
+  const microBlock = (State.metric !== 'none') ? `
+    UNION {
+      ?microObs us:observedAtLocation ?microFoi ;
+                sosa:resultTime ?when ;
+                sosa:hasResult ?res .
+      ?res sosa:observedProperty ?prop ;
+           sosa:hasSimpleResult ?val .
+      VALUES ?prop { <${State.metric}> }
+    }` : '';
+
+  const query = `
+  PREFIX sosa: <${P.sosa}>
+  PREFIX us:   <${P.us}>
+  PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+  SELECT ?obs ?sensor ?foi ?when ?count ?microObs ?microFoi ?prop ?val WHERE {
+    {
+      ?obs sosa:madeBySensor ?sensor ;
+          sosa:hasFeatureOfInterest ?foi ;
+          sosa:resultTime ?when ;
+          sosa:hasSimpleResult ?count ;
+          sosa:observedProperty us:pedestrianCount .
+    }
+    ${microBlock}
+    ${timeFilter}
+    ${hourFilter}
+  }`;
+
+  try {
+    const data = await runSparqlRaw(query, 'application/sparql-results+json');
+
+    // 🔄 Reiniciamos arrays de observaciones
+    DB.pedObs = [];
+    DB.microObs = [];
+    // ⚠️ No borramos DB.microProps aquí
+
+    for(const b of data.results.bindings){
+      // Peatones
+      if(b.count){
+        DB.pedObs.push({
+          iri: b.obs.value,
+          sensorIRI: b.sensor.value,
+          foiIRI: b.foi.value,
+          time: parseXSDDateTime(b.when.value),
+          total: Number(b.count.value)
+        });
+      }
+      // Microclima
+      if(b.val){
+        DB.microObs.push({
+          iri: b.microObs.value,
+          foiIRI: b.microFoi.value,
+          time: parseXSDDateTime(b.when.value),
+          metrics: { [b.prop.value]: Number(b.val.value) }
+        });
+        if(!DB.microProps.has(b.prop.value)){
+          DB.microProps.set(b.prop.value, { iri: b.prop.value, label: shortLabel(b.prop.value) });
+        }
+      }
+    }
+  
+    refreshWeatherOptions();
+    refreshSensorSelect();
+
+    document.getElementById('fileStatus').textContent =
+      `✔ Loaded ${DB.pedObs.length} pedestrian obs and ${DB.microObs.length} micro obs.`;
+
+    aggregateAndRender();
+  } catch(e){
+    console.error("SPARQL error", e);
+    document.getElementById('fileStatus').textContent = '❌ SPARQL error: ' + e;
+  }
+}
+
+function asRouteLabel(s){
+  if(!s) return null;
+  const m = s.match(/\b(route|line|línea|tram route)\s*([0-9]+(?:[a-z]|[0-9a-z]?\/[0-9a-z]+)?)/i);
+  if(!m) return null;
+  const raw = m[2].toLowerCase();
+  const parts = raw.includes('/') ? raw.split('/') : [raw];
+  return parts.map(p => `route ${p}`);
+}
+
+/* ==== WIKIDATA ==== */
+async function loadWikidataTramStops(){
+  const qids = [...DB.wikidataItems];
+  if(!qids.length){
+    alert('No Wikidata links found. Carga un TTL con owl:sameAs en sensor-description.');
+    return;
+  }
+
+  const chunks = [];
+  const size = 40;
+  for (let i = 0; i < qids.length; i += size) chunks.push(qids.slice(i, i + size));
+
+  for (const chunk of chunks){
+    const values = chunk.map(q => `wd:${q}`).join(' ');
+    const sparql = `
+SELECT ?item ?itemLabel ?coord ?line ?lineLabel WHERE {
+  VALUES ?item { ${values} }
+  ?item wdt:P31/wdt:P279* wd:Q2175765 .
+  OPTIONAL { ?item wdt:P625 ?coord }
+  OPTIONAL { ?item wdt:P81  ?line }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,es". }
+}`;
+    const url = 'https://query.wikidata.org/sparql?format=json&query=' + encodeURIComponent(sparql);
+    const res = await fetch(url, { headers: { 'Accept': 'application/sparql-results+json' } });
+    if(!res.ok){
+      console.warn('Wikidata query failed', res.status);
+      continue;
+    }
+
+    const data = await res.json();
+    for (const b of data.results.bindings){
+      const qid   = b.item.value.split('/').pop();
+      const label = b.itemLabel?.value || qid;
+
+      let lat = null, lon = null;
+      if (b.coord){
+        const m = b.coord.value.match(/Point\(([-0-9.]+) ([-0-9.]+)\)/);
+        if (m){
+          lon = parseFloat(m[1]);
+          lat = parseFloat(m[2]);
+        }
+      }
+
+      const lineQ     = b.line?.value?.split('/').pop();
+      const lineLabel = b.lineLabel?.value;
+
+      const cur = DB.tramStops.get(qid) || { qid, label, lat, lon, lines: [], codes: new Set() };
+
+      if (label) { cur.label = label; }
+      if (Number.isFinite(lat) && Number.isFinite(lon)) { cur.lat = lat; cur.lon = lon; }
+      if (lineQ && lineLabel && !cur.lines.find(x => x.qid === lineQ)) {
+        cur.lines.push({ qid: lineQ, label: lineLabel });
+      }
+
+      const codes = DB.tramLinks.get(qid);
+      if (codes) codes.forEach(c => cur.codes.add(c));
+
+      DB.tramStops.set(qid, cur);
+    }
+  }
+
+  const withCoords = [...DB.tramStops.values()]
+    .filter(t => Number.isFinite(t.lat) && Number.isFinite(t.lon)).length;
+
+  const btn2 = document.getElementById('wikidataBtn');
+  if (btn2) {
+    btn2.textContent = `Show tram stops (${withCoords})`;
+  }
+
+  const fs2 = document.getElementById('fileStatus');
+  if (fs2) {
+    const base = fs2.textContent.split(' — ')[0] || '';
+    const extra = `Tram stops from Wikidata: ${withCoords} with coordinates (from ${DB.wikidataItems.size} linked QIDs)`;
+    fs2.textContent = base ? `${base} — ${extra}` : extra;
+  }
+
+  console.log('[Wikidata] tram stops with coords:', withCoords,
+              '| from QIDs:', DB.wikidataItems.size);
+
+  State.tramLoaded = true;
+  aggregateAndRender();
+}
+
+/* ==== MAIN RENDER ==== */
+function aggregateAndRender(){
+  const [from,to] = State.range;
+  const h = State.hour;
+  const metric = State.metric;
+
+  const inRange = d => (!from || d>=from) && (!to || d<=to);
+  const hm = d => {
+    if (h === 'all') return true;
+    const targetHour = Number(h.slice(0, 2));
+    return dataLocalHour(d) === targetHour;
+  };
+
+  // ✅ siempre todas las obs en rango/horario
+  const filtered = DB.pedObs.filter(o =>
+    o.time && inRange(o.time) && hm(o.time)
+  );
+
+  // ✅ el foco es solo el sensor seleccionado
+  const scope = State.selectedSensor;
+
+  const bySensor = new Map();
+  for(const o of filtered){
+    if(!o.sensorIRI || o.total==null) continue;
+    bySensor.set(o.sensorIRI,(bySensor.get(o.sensorIRI)||0)+o.total);
+  }
+
+  pedLayer.clearLayers();
+  microLayer.clearLayers();
+  tramLayer.clearLayers();
+  const bounds = [];
+
+  // PEDESTRIAN MARKERS
+  for (const [iri, sum] of bySensor) {
+    // 🔹 If a sensor is selected, only show that one
+    if (scope && iri !== scope) continue;
+
+    const s = DB.pedSensors.get(iri);
+    if(!s || !s.foi || !DB.fois.get(s.foi)) continue;
+    const foi = DB.fois.get(s.foi);
+    const lat = foi.lat, lng = foi.long;
+    if(!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+
+    const radius = 6 + Math.min(30, Math.sqrt(sum));
+    const marker = L.circleMarker([lat,lng],{
+      radius,
+      color:'#2563eb',
+      fillColor:'#3b82f6',
+      weight:1,
+      fillOpacity:0.75
+    }).addTo(pedLayer);
+
+
+    let tip = (s.label || iri.split('/').pop()) + '<br/>Pedestrians: '+fmt(sum);
+    if(metric !== 'none' && DB.microObs.length && DB.microProps.has(metric)){
+      const mVal = avgMetricForSensor(iri, metric);
+      if(mVal != null){
+        const label = DB.microProps.get(metric).label || 'Metric';
+        tip += `<br/>${label}: ${mVal.toFixed(2)}`;
+      }
+    }
+    if(s.sameAs && s.sameAs.length){
+      tip += `<br/><span class="note">Wikidata: ${
+        s.sameAs.map(u=>`<a href='${u}' target='_blank'>${u.split('/').pop()}</a>`).join(', ')
+      }</span>`;
+    }
+    marker.bindTooltip(tip,{direction:'top'});
+    marker.on('click',()=>selectSensor(iri));
+    bounds.push([lat,lng]);
+  }
+
+  // MICROCLIMATE MARKERS
+  let allowedMicroFoIs = null;
+  if(scope){
+    const mappedFoIs = microFoIsForPedSensor(scope);
+    if(mappedFoIs.length){
+      allowedMicroFoIs = new Set(mappedFoIs);
+    }else{
+      const s = DB.pedSensors.get(scope);
+      if(s && s.foi) allowedMicroFoIs = new Set([s.foi]);
+    }
+  }
+
+  const byFoi = new Map();
+  for(const [msIRI,ms] of DB.microSensors){
+    if(!ms.foi) continue;
+    if(allowedMicroFoIs && !allowedMicroFoIs.has(ms.foi)) continue;
+    if(!byFoi.has(ms.foi)) byFoi.set(ms.foi,[]);
+    byFoi.get(ms.foi).push({iri:msIRI,label:ms.label,sameAs:ms.sameAs});
+  }
+
+  for(const [foiIRI,sensors] of byFoi){
+    const foi = DB.fois.get(foiIRI);
+    if(!foi) continue;
+    const lat = foi.lat, lng = foi.long;
+    if(!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+
+    const names = sensors.map(ms => ms.label || shortLabel(ms.iri));
+    const nameText = names.length ? names.join(', ') : 'Microclimate sensor';
+
+    const wikidataLinks = sensors
+      .flatMap(ms=>ms.sameAs||[])
+      .filter(u=>u.includes('wikidata.org/entity/'));
+    const wdHtml = wikidataLinks.length
+      ? `<br/><span class="note">Wikidata: ${
+          wikidataLinks.map(u=>`<a href='${u}' target='_blank'>${u.split('/').pop()}</a>`).join(', ')
+        }</span>`
+      : '';
+
+    let line = '';
+    if(metric !== 'none' && DB.microProps.has(metric)){
+      const avg = avgMetricAtFoi(foiIRI, metric, State.range, State.hour);
+      if(avg != null){
+        const label = DB.microProps.get(metric).label;
+        line = `<br/>Avg ${label}: ${avg.toFixed(2)}`;
+      }
+    }
+
+    const microMarker = L.circleMarker([lat,lng],{
+      radius:8,
+      color:'#dc2626',
+      fillColor:'#ef4444',
+      weight:1,
+      fillOpacity:0.9
+    }).addTo(microLayer);
+    microMarker.bindTooltip(`${nameText}${line}${wdHtml}`,{direction:'bottom'});
+    bounds.push([lat,lng]);
+  }
+
+  // TRAM STOPS
+  const tramBounds = [];
+  let allowedQids = null;
+
+  if (scope) {
+    const ps = DB.pedSensors.get(scope);
+    const qidSet = new Set();
+
+    if (ps && ps.foi) {
+      const foiQids = DB.foiWikidata.get(ps.foi);
+      if (foiQids) {
+        foiQids.forEach(q => qidSet.add(q));
+      }
+    }
+
+    const codes = new Set();
+    if (ps && ps.closestMicroCode) {
+      codes.add(ps.closestMicroCode.trim());
+    }
+    if (ps && ps.foi) {
+      const foi = DB.fois.get(ps.foi);
+      if (foi && foi.microCodes) {
+        foi.microCodes.forEach(c => codes.add(c));
+      }
+    }
+    if (codes.size) {
+      for (const [qid, codeSet] of DB.tramLinks) {
+        for (const c of codeSet) {
+          if (codes.has(c)) {
+            qidSet.add(qid);
+            break;
+          }
+        }
+      }
+    }
+
+    if (qidSet.size) {
+      allowedQids = qidSet;
+    }
+  }
+
+  if (State.tramLoaded) {
+    for (const [qid, t] of DB.tramStops) {
+      if (!(Number.isFinite(t.lat) && Number.isFinite(t.lon))) continue;
+      if (allowedQids && !allowedQids.has(qid)) continue;
+
+      const marker = L.circleMarker([t.lat, t.lon], {
+        radius: 7, color: '#15803d', fillColor: '#22c55e', weight: 1, fillOpacity: 0.9
+      }).addTo(tramLayer);
+
+      const linesArrRaw = (t.lines || []).map(l => l.label);
+      const exploded = linesArrRaw.flatMap(asRouteLabel).filter(Boolean);
+      const linesArr = [...new Set(exploded)];
+      const shown = linesArr.slice(0, 4);
+      const more  = Math.max(0, linesArr.length - shown.length);
+      const title  = t.label || qid;
+      const coords = `${t.lat.toFixed(5)}, ${t.lon.toFixed(5)}`;
+
+      const fullHtml =
+        `<div><b>${title}</b></div>` +
+        (linesArr.length ? `<div><b>Lines</b>: ${linesArr.join(', ')}</div>` : '') +
+        `<div><b>Coords</b>: ${coords}</div>` +
+        `<div style="margin-top:4px"><a href="https://www.wikidata.org/wiki/${qid}" target="_blank">Open in Wikidata</a></div>`;
+
+      marker.bindPopup(fullHtml, { className: 'tram-pop', autoPan: false, closeButton: true });
+      marker.on('mouseover', () => marker.openPopup());
+
+      tramBounds.push([t.lat, t.lon]);
+    }
+  }
+
+  bounds.push(...tramBounds);
+  if(bounds.length) map.fitBounds(bounds,{padding:[20,20]});
+
+  // STATS
+  const total = filtered.reduce((a,b)=>a+(b.total||0),0);
+  const hours = new Set(filtered.map(o => dataLocalHourKey(o.time))).size;
+  const avg = hours ? Math.round(total/hours) : null;
+  avgStat.textContent = fmt(avg);
+  const sensorStatLabel = document.getElementById('sensorStatLabel');
+
+  const currentIRI = State.selectedSensor;
+  if (currentIRI) {
+    const s = DB.pedSensors.get(currentIRI) || {};
+    const name = s.label || currentIRI.split('/').pop();
+    sensorStatLabel.textContent = 'Current pedestrian sensor';
+    sensorStat.textContent = name;
+  } else {
+    sensorStatLabel.textContent = 'Pedestrian sensors with data';
+    sensorStat.textContent = bySensor.size;
+  }
+
+  rangeStat.textContent =
+    (from ? formatDataLocal(from, false) : '—') +
+    ' → ' +
+    (to ? formatDataLocal(to, false)   : '—');
+
+  // SENSOR RANK LIST
+  const list = document.getElementById('sensorList');
+  list.innerHTML = '';
+
+  // 🔹 If a sensor is selected, only show that one in the ranking
+  const entries = [...bySensor.entries()]
+    .filter(([iri]) => !scope || iri === scope)
+    .sort((a, b) => b[1] - a[1]);
+
+  entries.forEach(([iri, sum]) => {
+    const s = DB.pedSensors.get(iri) || {};
+    const row = document.createElement('div');
+    row.className = 'row';
+    row.innerHTML = `<span>${s.label || iri.split('/').pop()}</span><b>${fmt(sum)}</b>`;
+    row.onclick = () => selectSensor(iri);
+    list.appendChild(row);
+  });
+
+
+  // PEDESTRIAN TREND
+  const pedGrouped = new Map();
+  for (const o of filtered) {
+    if (scope && o.sensorIRI !== scope) continue;
+    const key = dataLocalHourKey(o.time);
+    pedGrouped.set(key, (pedGrouped.get(key) || 0) + (o.total || 0));
+  }
+  const pedLabels = [...pedGrouped.keys()].sort();
+  trendChart.data.labels = pedLabels;
+  trendChart.data.datasets[0].data = pedLabels.map(k=>pedGrouped.get(k));
+  trendChart.update();
+
+  // MICROCLIMATE TREND
+  const microLabelSpan = document.getElementById('microMetricLabel');
+  if(metric === 'none' || !DB.microProps.has(metric)){
+    microLabelSpan.textContent = 'no metric selected';
+    microTrendChart.data.labels = [];
+    microTrendChart.data.datasets[0].data = [];
+    microTrendChart.data.datasets[0].label = 'Microclimate';
+    microTrendChart.update();
+  } else {
+    const labelText = DB.microProps.get(metric).label || 'metric';
+    let labels = [];
+    let data = [];
+    if(scope){
+      let foiSet = null;
+      const mappedFoIs = microFoIsForPedSensor(scope);
+      if(mappedFoIs.length){
+        foiSet = new Set(mappedFoIs);
+      } else {
+        const s = DB.pedSensors.get(scope);
+        if(s && s.foi) foiSet = new Set([s.foi]);
+      }
+      microLabelSpan.textContent = `${labelText} at linked microclimate sensor(s) for selected pedestrian sensor`;
+
+      const microGrouped = new Map();
+      for(const m of DB.microObs){
+        if(foiSet && !foiSet.has(m.foiIRI)) continue;
+        if(!inRange(m.time) || !hm(m.time)) continue;
+        const val = m.metrics[metric];
+        if(val == null) continue;
+        const key = dataLocalHourKey(m.time);
+        if(!microGrouped.has(key)) microGrouped.set(key,[]);
+        microGrouped.get(key).push(val);
+      }
+      const allKeys = new Set([...pedLabels, ...microGrouped.keys()]);
+      labels = [...allKeys].sort();
+      data = labels.map(k=>{
+        const arr = microGrouped.get(k);
+        if(!arr || !arr.length) return null;
+        const sum = arr.reduce((a,b)=>a+b,0);
+        return sum/arr.length;
+      });
+      microTrendChart.data.datasets[0].label = `${labelText} (selected location)`;
+    } else {
+      microLabelSpan.textContent = `${labelText} across all microclimate sensors`;
+      const grouped = new Map();
+      for(const m of DB.microObs){
+        if(!inRange(m.time) || !hm(m.time)) continue;
+        const val = m.metrics[metric];
+        if(val == null) continue;
+        const key = dataLocalHourKey(m.time);
+        if(!grouped.has(key)) grouped.set(key,[]);
+        grouped.get(key).push(val);
+      }
+      labels = [...grouped.keys()].sort();
+      data = labels.map(k=>{
+        const arr = grouped.get(k);
+        const sum = arr.reduce((a,b)=>a+b,0);
+        return sum/arr.length;
+      });
+      microTrendChart.data.datasets[0].label = `${labelText} (network avg)`;
+    }
+    microTrendChart.data.labels = labels;
+    microTrendChart.data.datasets[0].data = data;
+    microTrendChart.data.datasets[0].borderColor = '#dc2626';
+    microTrendChart.data.datasets[0].backgroundColor = 'rgba(220,38,38,0.15)';
+    microTrendChart.update();
+  }
+
+  if(State.selectedSensor){
+    updateDetailBox(State.selectedSensor, bySensor.get(State.selectedSensor)||0);
+  } else {
+    detailBox.innerHTML =
+    'Choose a date range, hour and (optionally) a metric, then click a pedestrian marker ' +
+    'on the map or pick one in the selector to see its details and linked microclimate.';
+  }
+
+}
+
+/* ==== DETAIL BOX ==== */
+function updateDetailBox(iri,sum){
+  const s = DB.pedSensors.get(iri)||{};
+  const name = s.label || iri.split('/').pop();
+  const dir = [s.dir1,s.dir2].filter(Boolean).join(' / ');
+  let html = `<div><b>${name}</b></div>`;
+  html += `<div class="note">Sensor IRI: <code>${iri}</code></div>`;
+  if(dir) html += `<div class="note">Directions: ${dir}</div>`;
+  if(sum!=null) html += `<div class="note">Pedestrians in current filter: ${fmt(sum)}</div>`;
+  if(s.closestMicroCode){
+    html += `<div class="note">Closest microclimate sensor code: ${s.closestMicroCode}</div>`;
+  }
+  if(s.foi && DB.fois.get(s.foi)){
+    const foi = DB.fois.get(s.foi);
+    if(Number.isFinite(foi.lat) && Number.isFinite(foi.long)){
+      html += `<div class="note">FoI coords: ${foi.lat.toFixed(5)}, ${foi.long.toFixed(5)}</div>`;
+    }
+    if(foi.label){
+      html += `<div class="note">FoI label: ${foi.label}</div>`;
+    }
+    if(foi.microCodes && foi.microCodes.size){
+      html += `<div class="note">Linked microclimate sensor(s): ${[...foi.microCodes].join(', ')}</div>`;
+    }
+  }
+  if(s.sameAs && s.sameAs.length){
+    html += `<div class="note">Wikidata link(s): ${
+      s.sameAs.map(u=>`<a href='${u}' target='_blank'>${u.split('/').pop()}</a>`).join(', ')
+    }</div>`;
+  }
+  if(DB.microObs.length && State.metric !== 'none' && DB.microProps.has(State.metric)){
+    const val = avgMetricForSensor(iri, State.metric);
+    const label = DB.microProps.get(State.metric).label;
+    if(val != null){
+      html += `<div class="note" style="margin-top:4px"><b>${label} (avg in filter, linked microclimate):</b> ${val.toFixed(2)}</div>`;
+    }
+  }
+  detailBox.innerHTML = html;
+}
+
+/* ==== SELECTION ==== */
+function selectSensor(iri){
+  State.selectedSensor = iri;
+  document.getElementById('sensorSel').value = iri;
+  aggregateAndRender();
+}
+
+/* ==== CARGA DESDE GRAPHDB (sin archivos locales) ==== */
+async function loadAllFromGraphDB() {
+  try {
+    if (typeof fileStatus !== 'undefined') {
+      fileStatus.textContent = 'Loading data from GraphDB...';
+    }
+
+    DB.fois.clear();
+    DB.pedSensors.clear();
+    DB.pedObs = [];
+    DB.microSensors.clear();
+    DB.microObs = [];
+    DB.microProps.clear();
+    DB.wikidataItems.clear();
+    DB.tramStops.clear();
+    DB.tramLinks.clear();
+    DB.wikidataSubjects.clear();
+    DB.foiWikidata.clear();
+
+    const ttlText = await runSparqlRaw(CONSTRUCT_STATIC, 'text/turtle');
+    const quads = await parseTTL(ttlText);
+
+    collectSensorDescriptionQIDs(quads);   // Wikidata links
+    buildFromPedSensorLocations(quads);   // Peatones + FOIs
+    buildFromPedObservations(quads);
+    buildFromMicroclimate(quads);         // Microclimate sensors + métricas
+    await initMetrics();
+
+    refreshSensorSelect();
+    refreshWeatherOptions();
+    aggregateAndRender();
+
+    if (typeof fileStatus !== 'undefined') {
+      fileStatus.textContent =
+        `Loaded from GraphDB: ${DB.pedSensors.size} pedestrian sensors, ` +
+        `${DB.pedObs.length} pedestrian obs, ${DB.microObs.length} microclimate obs.`;
+    }
+    console.log('[GraphDB] Data loaded from repository urban-sensors');
+  } catch (e) {
+    console.error(e);
+    if (typeof fileStatus !== 'undefined') {
+      fileStatus.textContent = 'Error loading from GraphDB (see console).';
+    }
+    detailBox.textContent = 'Error loading from GraphDB. Check console.';
+  }
+}
+
+/* ==== WIRING ==== */
+applyBtn.addEventListener('click', applyFilters);
+wikidataBtn.addEventListener('click', loadWikidataTramStops);
+sensorSel.addEventListener('change', e => {
+  State.selectedSensor = e.target.value === 'all' ? null : e.target.value;
+});
+weatherSel.addEventListener('change', () => {
+  State.metric = weatherSel.value;
+});
+
+/* Default filter: Dec 2024 */
+(function(){
+  fromDate.value = '2024-12-01';
+  toDate.value   = '2024-12-31';
+})();
+
+// Cargar datos desde GraphDB cuando se carga la página
+loadAllFromGraphDB();
+</script>
+</body>
+</html>

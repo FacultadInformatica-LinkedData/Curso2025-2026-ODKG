@@ -6,56 +6,61 @@
 
 # Classes
 ns:Address rdf:type owl:Class .
-ns:Station rdf:type owl:Class .
-ns:Travel rdf:type owl:Class .
-ns:Bicycle rdf:type owl:Class .
+ns:Bike_Station rdf:type owl:Class .
+ns:Trip rdf:type owl:Class .
+ns:Bike rdf:type owl:Class .
 
 # Data Properties
-ns:address_name rdf:type owl:DatatypeProperty ;
+ns:hasAddress_name rdf:type owl:DatatypeProperty ;
     rdfs:domain ns:Address ;
     rdfs:range xsd:string .
 
-ns:station_name rdf:type owl:DatatypeProperty ;
-    rdfs:domain ns:Station ;
+ns:hasStation_name rdf:type owl:DatatypeProperty ;
+    rdfs:domain ns:Bike_Station ;
     rdfs:range xsd:string .
 
-ns:coord_x rdf:type owl:DatatypeProperty ;
-    rdfs:domain ns:Station ;
+ns:hasCoord_x rdf:type owl:DatatypeProperty ;
+    rdfs:domain ns:Bike_Station ;
     rdfs:range xsd:float .
 
-ns:coord_y rdf:type owl:DatatypeProperty ;
-    rdfs:domain ns:Station ;
+ns:hasCoord_y rdf:type owl:DatatypeProperty ;
+    rdfs:domain ns:Bike_Station ;
     rdfs:range xsd:float .
 
-ns:capacity rdf:type owl:DatatypeProperty ;
-    rdfs:domain ns:Station ;
+ns:hasCapacity rdf:type owl:DatatypeProperty ;
+    rdfs:domain ns:Bike_Station ;
     rdfs:range xsd:int .
 
-ns:duration rdf:type owl:DatatypeProperty ;
-    rdfs:domain ns:Travel ;
+ns:hasDuration rdf:type owl:DatatypeProperty ;
+    rdfs:domain ns:Trip ;
     rdfs:range xsd:float .
 
-ns:unLockDate rdf:type owl:DatatypeProperty ;
-    rdfs:domain ns:Travel ;
+ns:hasUnLock_date rdf:type owl:DatatypeProperty ;
+    rdfs:domain ns:Trip ;
     rdfs:range xsd:date .
 
-ns:lockDate rdf:type owl:DatatypeProperty ;
-    rdfs:domain ns:Travel ;
+ns:hasLock_date rdf:type owl:DatatypeProperty ;
+    rdfs:domain ns:Trip ;
     rdfs:range xsd:date .
 
 # Object Properties
 ns:hasAddress rdf:type owl:ObjectProperty ;
-    rdfs:domain ns:Station ;
+    rdfs:domain ns:Bike_Station ;
     rdfs:range ns:Address .
 
 ns:hasLockStation rdf:type owl:ObjectProperty ;
-    rdfs:domain ns:Travel ;
-    rdfs:range ns:Station .
+    rdfs:domain ns:Trip ;
+    rdfs:range ns:Bike_Station .
 
 ns:hasUnLockStation rdf:type owl:ObjectProperty ;
-    rdfs:domain ns:Travel ;
-    rdfs:range ns:Station .
+    rdfs:domain ns:Trip ;
+    rdfs:range ns:Bike_Station .
 
 ns:hasBike rdf:type owl:ObjectProperty ;
-    rdfs:domain ns:Travel ;
-    rdfs:range ns:Bicycle .
+    rdfs:domain ns:Trip ;
+    rdfs:range ns:Bike .
+
+# Wikidata reference
+ns:sameAs rdf:type owl:ObjectProperty ;
+    rdfs:domain ns:Address ;
+    rdfs:range rdfs:Resource .

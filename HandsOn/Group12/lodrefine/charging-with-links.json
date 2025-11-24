@@ -1,0 +1,210 @@
+[
+    {
+        "op": "core/recon",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "CITY",
+        "config": {
+            "mode": "standard-service",
+            "service": "https://wikidata.reconci.link/en/api",
+            "identifierSpace": "http://www.wikidata.org/entity/",
+            "schemaSpace": "http://www.wikidata.org/prop/direct/",
+            "type": {
+                "id": "Q667509",
+                "name": "municipality of Austria"
+            },
+            "autoMatch": true,
+            "batchSize": 10,
+            "columnDetails": [],
+            "limit": 0
+        },
+        "description": "Reconcile cells in column CITY to type Q667509"
+    },
+    {
+        "op": "core/recon",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "BEZIRK",
+        "config": {
+            "mode": "standard-service",
+            "service": "https://wikidata.reconci.link/en/api",
+            "identifierSpace": "http://www.wikidata.org/entity/",
+            "schemaSpace": "http://www.wikidata.org/prop/direct/",
+            "type": {
+                "id": "Q1741",
+                "name": "Vienna"
+            },
+            "autoMatch": false,
+            "batchSize": 10,
+            "columnDetails": [],
+            "limit": 0
+        },
+        "description": "Reconcile cells in column BEZIRK to type Q1741"
+    },
+    {
+        "op": "core/recon-judge-similar-cells",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "BEZIRK",
+        "similarValue": "21",
+        "judgment": "matched",
+        "match": {
+            "id": "Q261023",
+            "name": "district of Vienna",
+            "types": [
+                ""
+            ],
+            "score": 100
+        },
+        "shareNewTopics": false,
+        "description": "Match item district of Vienna (Q261023) for cells containing \"21\" in column BEZIRK"
+    },
+    {
+        "op": "core/recon",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "BEZIRK",
+        "config": {
+            "mode": "standard-service",
+            "service": "https://wikidata.reconci.link/en/api",
+            "identifierSpace": "http://www.wikidata.org/entity/",
+            "schemaSpace": "http://www.wikidata.org/prop/direct/",
+            "type": {
+                "id": "Q654812",
+                "name": "Mariahilf"
+            },
+            "autoMatch": true,
+            "batchSize": 10,
+            "columnDetails": [],
+            "limit": 0
+        },
+        "description": "Reconcile cells in column BEZIRK to type Q654812"
+    },
+    {
+        "op": "core/recon",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "BEZIRK",
+                    "expression": "value",
+                    "columnName": "BEZIRK",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "6",
+                                "l": "6"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "BEZIRK",
+        "config": {
+            "mode": "standard-service",
+            "service": "https://wikidata.reconci.link/en/api",
+            "identifierSpace": "http://www.wikidata.org/entity/",
+            "schemaSpace": "http://www.wikidata.org/prop/direct/",
+            "type": {
+                "id": "Q654812",
+                "name": "Mariahilf"
+            },
+            "autoMatch": false,
+            "batchSize": 10,
+            "columnDetails": [],
+            "limit": 0
+        },
+        "description": "Reconcile cells in column BEZIRK to type Q654812"
+    },
+    {
+        "op": "core/recon-judge-similar-cells",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "BEZIRK",
+                    "expression": "value",
+                    "columnName": "BEZIRK",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": "6",
+                                "l": "6"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "columnName": "BEZIRK",
+        "similarValue": "6",
+        "judgment": "matched",
+        "match": {
+            "id": "Q654812",
+            "name": "Mariahilf",
+            "types": [
+                ""
+            ],
+            "score": 100
+        },
+        "shareNewTopics": false,
+        "description": "Match item Mariahilf (Q654812) for cells containing \"6\" in column BEZIRK"
+    },
+    {
+        "op": "core/recon",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "COUNTRYCODE",
+        "config": {
+            "mode": "standard-service",
+            "service": "https://wikidata.reconci.link/en/api",
+            "identifierSpace": "http://www.wikidata.org/entity/",
+            "schemaSpace": "http://www.wikidata.org/prop/direct/",
+            "type": {
+                "id": "Q3624078",
+                "name": "sovereign state"
+            },
+            "autoMatch": true,
+            "batchSize": 10,
+            "columnDetails": [],
+            "limit": 0
+        },
+        "description": "Reconcile cells in column COUNTRYCODE to type Q3624078"
+    },
+    {
+        "op": "core/column-addition",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "baseColumnName": "COUNTRYCODE",
+        "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+        "onError": "set-to-blank",
+        "newColumnName": "COUNTRYCODE URL",
+        "columnInsertIndex": 9,
+        "description": "Créer la colonne COUNTRYCODE URL à lindex {1} sur la base de la colonne {2} à laide de lexpression {3}"
+    }
+]

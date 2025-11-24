@@ -1,0 +1,228 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Degree",
+    "expression": "grel:\"Grado en \"+value",
+    "onError": "set-to-blank",
+    "newColumnName": "d",
+    "columnInsertIndex": 2,
+    "description": "Crear la columna d en el índice 2 basada en la columna Degree usando la expresión grel:\"Grado en \"+value"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "d",
+    "description": "Vaciar las celdas en la columna d"
+  },
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "d",
+          "expression": "value",
+          "columnName": "d",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "d",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wikidata.reconci.link/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q189533",
+        "name": "academic degree"
+      },
+      "autoMatch": false,
+      "batchSize": 10,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column d to type Q189533"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "d",
+          "expression": "value",
+          "columnName": "d",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "d",
+    "similarValue": "Grado en Bellas Artes",
+    "judgment": "matched",
+    "match": {
+      "id": "Q2878277",
+      "name": "Bachelor of Fine Arts",
+      "types": [
+        "Q117146794"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Bachelor of Fine Arts (Q2878277) para las celdas que contienen \"Grado en Bellas Artes\" en la columna d"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "d",
+          "expression": "value",
+          "columnName": "d",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "d",
+    "similarValue": "Grado en Filosofía",
+    "judgment": "matched",
+    "match": {
+      "id": "Q50357727",
+      "name": "Licentiate in Philosophy",
+      "types": [
+        "Q189533"
+      ],
+      "score": 70
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento Licentiate in Philosophy (Q50357727) para las celdas que contienen \"Grado en Filosofía\" en la columna d"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "d",
+          "expression": "value",
+          "columnName": "d",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "d",
+    "similarValue": "Grado en Filología Hispánica",
+    "judgment": "matched",
+    "match": {
+      "id": "Q50357241",
+      "name": "degree in Hispanic philology",
+      "types": [
+        "Q189533"
+      ],
+      "score": 70
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento degree in Hispanic philology (Q50357241) para las celdas que contienen \"Grado en Filología Hispánica\" en la columna d"
+  },
+  {
+    "op": "core/recon-judge-similar-cells",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "d",
+          "expression": "value",
+          "columnName": "d",
+          "invert": true,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "d",
+    "similarValue": "Grado en Historia",
+    "judgment": "matched",
+    "match": {
+      "id": "Q72317748",
+      "name": "grado en historia",
+      "types": [
+        "Q189533"
+      ],
+      "score": 100
+    },
+    "shareNewTopics": false,
+    "description": "Emparejar el elemento grado en historia (Q72317748) para las celdas que contienen \"Grado en Historia\" en la columna d"
+  },
+  {
+    "op": "core/blank-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "d",
+    "description": "Vaciar las celdas en la columna d"
+  },
+  {
+    "op": "core/fill-down",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "d",
+    "description": "Rellenar las celdas en la columna d"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "d",
+    "expression": "grel:\"https://wikidata.org/entity/\"+cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "same_as_wikidata_degree",
+    "columnInsertIndex": 3,
+    "description": "Crear la columna same_as_wikidata_degree en el índice 3 basada en la columna d usando la expresión grel:\"https://wikidata.org/entity/\"+cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "d",
+    "description": "Eliminar columna d"
+  }
+]

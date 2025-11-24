@@ -62,12 +62,12 @@
     <p><strong>Why we selected Madrid CRTM GTFS:</strong></p>
     <ul class="small">
       <li><strong>Application Alignment:</strong> Our bus navigation app requires detailed stop locations, schedules, and routes — GTFS provides exactly this structured data.</li>
-      <li><strong>Geographic Linkability:</strong> 8,295 bus stops with precise coordinates enable runtime geographic queries to DBpedia for our location-based quiz feature.</li>
+      <li><strong>Geographic Linkability:</strong> 8,295 bus stops with precise coordinates enable runtime geographic queries to Wikidata for our location-based quiz feature.</li>
       <li><strong>Standard Format:</strong> GTFS is a well-documented, internationally recognized standard, simplifying RDF transformation and ensuring quality.</li>
       <li><strong>Official Source:</strong> Data maintained by CRTM (official transport authority) ensures accuracy and reliability.</li>
       <li><strong>Open License:</strong> Clear legal framework permits publication and reuse for educational purposes.</li>
       <li><strong>Real-World Data:</strong> Actual operational bus schedules (not synthetic) across Madrid's metropolitan area.</li>
-      <li><strong>Local Relevance:</strong> Madrid provides rich cultural and historical context for DBpedia integration in our quiz game.</li>
+      <li><strong>Local Relevance:</strong> Madrid provides rich cultural and historical context for Wikidata integration in our quiz game.</li>
     </ul>
   </section>
 
@@ -122,7 +122,7 @@
     </div>
 
     <h3>R4. Data can be easily linked with generic real-world entities <span class="badge ok">Satisfied</span></h3>
-    <p>The feed includes <code>stop_lat</code>/<code>stop_lon</code> and human-readable names for bus stops, which can be aligned to generic entities such as places in OpenStreetMap, DBpedia, or GeoNames. Bus routes can be linked to organization and transport entities. Dates in the calendar files can be linked to standard time ontologies.</p>
+    <p>The feed includes <code>stop_lat</code>/<code>stop_lon</code> and human-readable names for bus stops, which can be aligned to generic entities such as places in OpenStreetMap, Wikidata, or GeoNames. Our <code>local_areas-updated.csv</code> placeholder reuses every <code>stop_id</code> so we can attach Wikidata URIs, labels, and compact area codes directly in RDF. Bus routes can be linked to organization and transport entities, and dates in the calendar files can be connected to standard time ontologies or official-holiday knowledge graphs.</p>
 
     <h3>R5. Documentation exists for the data (optional) <span class="badge ok">Satisfied</span></h3>
     <p>GTFS has extensive public documentation (schema, field constraints, examples) and a well-maintained open-source validator with transparent rules:
@@ -131,7 +131,7 @@
       The publisher's portal usually includes a short dataset description and version/date.</p>
 
     <h3>R6. Data can come from multiple data sources (optional) <span class="badge ok">Satisfied / Optional</span></h3>
-    <p>The same GTFS model exists for many cities worldwide. We can potentially combine data from different Spanish cities or merge with complementary smart-city datasets (traffic counts, air quality, weather) using spatial joins. For this assignment we focus on Madrid's CRTM feed; adding more cities later is straightforward.</p>
+    <p>Besides the GTFS static feed, we integrate Wikidata as a second source to retrieve cultural, historical, and administrative metadata about each stop area. The cleaned CSVs reserve columns (<code>area_name</code>, <code>wikidata_same_link</code>, <code>area_code</code>) to store those reconciled values. Additional smart-city datasets (traffic counts, air quality, weather) or GTFS feeds from other Spanish cities can be merged later using the same workflow.</p>
   </section>
 
 </main>
